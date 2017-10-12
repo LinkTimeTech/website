@@ -1,0 +1,338 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>UNITIMES</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="UNITIMES"/>
+    <meta name="keywords" content="UNITIMES"/>
+    <meta name="author" content="Wade"/>
+
+    <!-- Facebook and Twitter integration -->
+    <meta property="og:title" content=""/>
+    <meta property="og:image" content=""/>
+    <meta property="og:url" content=""/>
+    <meta property="og:site_name" content=""/>
+    <meta property="og:description" content=""/>
+    <meta name="twitter:title" content=""/>
+    <meta name="twitter:image" content=""/>
+    <meta name="twitter:url" content=""/>
+    <meta name="twitter:card" content=""/>
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Crimson+Text:400,400i|Roboto+Mono"/>
+    <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900,100italic,300italic,400italic,700italic,900italic"/>
+
+    <!-- Animate.css -->
+    <link rel="stylesheet" href="css/animate.css">
+    <!-- Icomoon Icon Fonts-->
+    <link rel="stylesheet" href="css/icomoon.css">
+    <!-- Bootstrap  -->
+    <link rel="stylesheet" href="css/bootstrap.css">
+
+    <!-- Magnific Popup -->
+    <link rel="stylesheet" href="css/magnific-popup.css">
+
+    <!-- Theme style  -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Modernizr JS -->
+    <script src="js/modernizr-2.6.2.min.js"></script>
+    <!-- FOR IE9 below -->
+    <!--[if lt IE 9]-->
+    <script src="js/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+<body>
+
+<div class="gtco-loader"></div>
+
+<div id="page">
+    <nav class="gtco-nav" role="navigation">
+
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-2 text-left">
+                    <div id="gtco-logo"><a href="index.html"><img class="logoimg" src="images/logo_white.svg"
+                                                                  alt=""></a></div>
+                </div>
+                <div class="col-xs-10 text-right menu-1">
+                    <ul>
+                        <li><a href="index.html">HOME</a></li>
+                        <li><a href="interview.html">Unitalks</a></li>
+                        <li><a href="news.html">News</a></li>
+                        <li><a href="knowledge.html">Knowledge</a></li>
+                        <li><a href="events.html">Events</a></li>
+                        <li><a href="about.html">UNITIMES</a></li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+    </nav>
+
+    <header id="gtco-header" class="gtco-cover" role="banner" style="background-image:url(images/img_4.jpg);"
+            data-stellar-background-ratio="1.0">
+        <div class="overlay"></div>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8 text-left">
+                    <div class="display-t">
+                        <div class="display-tc animate-box" data-animate-effect="fadeInUp">
+                            <!--<span class="date-post">11 / 9 / 2017</span>-->
+                            <h1 class="mb30"><a href="#"> An Update on Integrating Zcash on Ethereum (ZoE)
+
+                            </a></h1>
+                            <span class="date-post">9 / 3 / 2017</span>
+                            <p style="color: white;">Author : <a href="#" class="text-link" style="color: white;">
+                                Christian Reitwiessner
+                            </a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div id="gtco-maine">
+        <div class="container">
+            <div class="row row-pb-md">
+                <div class="col-md-12">
+                    <article class="mt-negative">
+                        <div class="text-left content-article">
+                            <div class="row">
+                                <div class="cp-r animate-box">
+                                    <h1>An Update on Integrating Zcash on Ethereum (ZoE)
+
+                                    </h1>
+                                    <p>
+                                        By Christian Reitwiessner 
+                                        <br>
+                                        9 / 3 / 2017
+                                    </p>
+
+                                    <img class="img_1" src="images/z5.png" alt="">
+
+
+                                    <p> Members of the Ethereum R&D team and the Zcash Company are collaborating on a
+                                        research project addressing the combination of programmability and privacy in
+                                        blockchains. This joint post is being concurrently posted on the Zcash blog, and
+                                        is coauthored by Ariel Gabizon (Zcash) and Christian Reitwiessner (Ethereum).
+                                        Ethereum’s flexible smart contract interface enables a large variety of
+                                        applications, many of which have probably not yet been conceived. The
+                                        possibilities grow considerably when adding the capacity for privacy. Imagine,
+                                        for example, an election or auction conducted on the blockchain via a smart
+                                        contract such that the results can be verified by any observer of the
+                                        blockchain, but the individual votes or bids are not revealed. Another possible
+                                        scenario may involve selective disclosure where users would have the ability to
+                                        prove they are in a certain city without disclosing their exact location. The
+                                        key to adding such capabilities to Ethereum is zero-knowledge succinct
+                                        non-interactive arguments of knowledge (zk-SNARKs) – precisely the cryptographic
+                                        engine underlying Zcash.
+                                        One of the goals of the Zcash company, codenamed Project Alchemy, is to enable a
+                                        direct decentralized exchange between Ethereum and Zcash. Connecting these two
+                                        blockchains and technologies, one focusing on programmability and the other on
+                                        privacy, is a natural way to facilitate the development of applications
+                                        requiring both.
+                                    </p>
+
+                                    <img class="article-imgs" src="img/f2.png" style="margin: auto;"/>
+                                    <br>
+
+                                    <p> As part of the Zcash/Ethereum technical collaboration, Ariel Gabizon from Zcash
+                                        visited Christian Reitwiessner from the Ethereum hub at Berlin a few weeks ago.
+                                        The highlight of the visit is a proof of concept implementation of a zk-SNARK
+                                        verifier written in Solidity, based on pre-compiled Ethereum contracts
+                                        implemented for the Ethereum C++ client. This work complements Baby ZoE , where
+                                        a zk-SNARK precompiled contract was written for Parity (the Ethereum Rust
+                                        client). The updates we’ve made involved adding tiny cryptographic primitives
+                                        (elliptic curve multiplication, addition and pairing) and implementing the rest
+                                        in Solidity, all of which allows for a greater flexibility and enables using a
+                                        variety of zk-SNARK constructions without requiring a hard fork. Details will be
+                                        shared as they are available later. We tested the new code by successfully
+                                        verifying a real privacy-preserving Zcash transaction on a testnet of the
+                                        Ethereum blockchain.
+                                        The verification took only 42 milliseconds, which shows that such precompiled
+                                        contracts can be added, and the gas costs for using them can be made to be quite
+                                        affordable.
+                                    </p><br>
+                                    <h3> What can be done with such a system</h3>
+                                    <p> The Zcash system can be reused on Ethereum to create shielded custom tokens.
+                                        Such tokens already allow many applications like voting, (see below) or simple
+                                        blind auctions where participants make bids without the knowledge of the amounts
+                                        bid by others.
+                                        If you want to try compiling the proof of concept, you can use the following
+                                        commands. If you need help, see <a
+                                                href="https://gitter.im/ethereum/privacy-tech">https://gitter.im/ethereum/privacy-tech</a> 
+                                    </p>
+                                    <p><i> git clone https://github.com/scipr-lab/libsnark.git <br>
+                                        cd libsnark<br>
+                                        sudo PREFIX=/usr/local make NO_PROCPS=1 NO_GTEST=1 NO_DOCS=1 \<br>
+                                        CURVE=ALT_BN128 \<br>
+                                           FEATUREFLAGS="-DBINARY_OUTPUT=1 -DMONTGOMERY_OUTPUT=1 \<br>
+                                        -DNO_PT_COMPRESSION=1" \<br>
+                                           lib install<br>
+                                        cd ..<br>
+                                        git clone --recursive -b snark https://github.com/ethereum/cpp-ethereum.git<br>
+                                        cd cpp-ethereum<br>
+                                        ./scripts/install_deps.sh && cmake . -DEVMJIT=0 -DETHASHCL=0 && make eth<br>
+                                        cd ..<br>
+                                        git clone --recursive -b snarks https://github.com/ethereum/solidity.git<br>
+                                        cd solidity<br>
+                                        ./scripts/install_deps.sh && cmake . && make soltest<br>
+                                        cd ..<br>
+                                        ./cpp-ethereum/eth/eth --test -d /tmp/test<br>
+                                        # And on a second terminal:<br>
+                                        ./solidity/test/soltest -t "*/snark" -- --ipcpath   /tmp/test/geth.ipc
+                                         --show-messages<br>
+                                    </i>
+                                    </p>
+
+                                    <p> We also discussed various aspects of integrating zk-SNARKs into the Ethereum
+                                        blockchain, upon which we now expand.</p>
+                                    <h3> Deciding what precompiled contracts to define</h3>
+                                    <p> Recall that a SNARK is a short proof of some property, and what is needed for
+                                        adding the privacy features to the Ethereum blockchain are clients that have the
+                                        ability to verify such a proof.
+                                        In all recent constructions, the verification procedure consisted solely of
+                                        operations on elliptic curves. Specifically, the verifier requires scalar
+                                        multiplication and addition on an elliptic curve group, and would also require a
+                                        heavier operation called a bilinear pairing.
+                                        As mentioned here, implementing these operations directly in the EVM is too
+                                        costly. Thus, we would want to implement pre-compiled contracts that perform
+                                        these operations. Now, the question debated is: what level of generality should
+                                        these pre-compiled contracts aim for.
+                                        The security level of the SNARK corresponds to the parameters of the curve.
+                                        Roughly, the larger the curve order is, and the larger something called the
+                                        embedding degree is, and the more secure the SNARK based on this curve is. On
+                                        the other hand, the larger these quantities are, naturally the more costly the
+                                        operations on the corresponding curve are. Thus, a contract designer using
+                                        SNARKs may wish to choose these parameters according to their own desired
+                                        efficiency/security tradeoff. This tradeoff is one reason for implementing a
+                                        pre-compiled contract with a high level of generality, where the contract
+                                        designer can choose from a large family of curves. We indeed began by aiming for
+                                        a high level of generality, where the description of the curve is given as part
+                                        of the input to the contract. In such a case, a smart contract would be able to
+                                        perform addition in any elliptic curve group.
+                                        A complication with this approach is assigning gas cost to the operation. You
+                                        must assess, merely from the description of the curve, and with no access to a
+                                        specific implementation, how expensive a group operation on that curve would be
+                                        in the worst case. A somewhat less general approach is to allow all curves from
+                                        a given family. We noticed that when working with the Barreto-Naehrig (BN)
+                                        family of curves, one can assess roughly how expensive the pairing operation
+                                        will be, given the curve parameters, as all such curves support a specific kind
+                                        of optimal Ate pairing. Here’s a sketch of how such a precompile would work and
+                                        how the gas cost would be computed.
+                                        We learned a lot from this debate, but ultimately, decided to “keep it simple”
+                                        for this proof of concept: we chose to implement contracts for the specific
+                                        curve currently used by Zcash. We did this by using wrappers of the
+                                        corresponding functions in the libsnark library, which is also used by Zcash.
+                                        Note that we could have simply used a wrapper for the entire SNARK verification
+                                        function currently used by Zcash, as was done in the above mentioned Baby ZoE
+                                        project. However, the advantage of explicitly defining elliptic curve operations
+                                        is enabling using a wide variety of SNARK constructions which, again, all have a
+                                        verifier working by some combination of the three previously mentioned elliptic
+                                        curve operations.
+                                    </p>
+                                    <h3> Reusing the Zcash setup for new anonymous tokens and other applications</h3>
+
+                                    <p> As you may have heard, using SNARKs requires a complex setup phase in which the
+                                        so-called public parameters of the system are constructed. The fact that these
+                                        public parameters need to be generated in a secure way every time we want to use
+                                        a SNARK for a particular circuit significantly, hinders the usability of SNARKs.
+                                        Simplifying this setup phase is an important goal that we have given thought to,
+                                        but haven’t had any success in so far.
+                                        The good news is that someone desiring to issue a token supporting
+                                        privacy-preserving transactions can simply reuse the public parameters that have
+                                        already been securely generated by Zcash. It can be reused because the circuit
+                                        used to verify privacy-preserving transactions is not inherently tied to one
+                                        currency or blockchain. Rather, one of its explicit inputs is the root of a
+                                        Merkle tree that contains all the valid notes of the currency. Thus, this input
+                                        can be changed according to the currency one wishes to work with. Moreover, if
+                                        it is easy to start a new anonymous token. You can already accomplish many tasks
+                                        that do not look like tokens at first glance. For example, suppose we wish to
+                                        conduct an anonymous election to choose a preferred option amongst two. We can
+                                        issue an anonymous custom token for the vote, and send one coin to each voting
+                                        party. Since there is no “mining”, it will not be possible to generate tokens
+                                        any other way. Now each party sends their coin to one of two addresses according
+                                        to their vote. The address with a larger final balance corresponds to the
+                                        election result.
+                                    </p>
+                                    <h3> Other applications</h3>
+                                    <p> A non-token-based system that is fairly simple to build and allows for
+                                        “selective disclosure” follows. You can, for example, post an encrypted message
+                                        in regular intervals, containing your physical location to the blockchain
+                                        (perhaps with other people’s signatures to prevent spoofing). If you use a
+                                        different key for each message, you can reveal your location only at a certain
+                                        time by publishing the key. However, with zk-SNARKs you can additionally prove
+                                        that you were in a certain area without revealing exactly where you were. Inside
+                                        the zk-SNARK, you decrypt your location and check that it is inside the area.
+                                        Because of the zero-knowledge property, everyone can verify that check, but
+                                        nobody will be able to retrieve your actual location.
+                                    </p>
+                                    <h3> The work ahead</h3>
+                                    Achieving the mentioned functionalities – creating anonymous tokens and verifying
+                                    Zcash transactions on the Ethereum blockchain, will require implementing other
+                                    elements used by Zcash in Solidity.
+                                    For the first functionality, we must have an implementation of tasks performed by
+                                    nodes on the Zcash network such as updating the note commitment tree.
+                                    For the second functionality, we need an implementation of the equihash proof of
+                                    work algorithm used by Zcash in Solidity. Otherwise, transactions can be verified as
+                                    valid in themselves, but we do not know whether the transaction was actually
+                                    integrated into the Zcash blockchain.
+                                    Fortunately, such an implementation was written; however, its efficiency needs to be
+                                    improved in order to be used in practical applications.
+                                    </p>
+                                    <p> Acknowledgement: We thank Sean Bowe for technical assistance. We also thank Sean
+                                        and Vitalik Buterin for helpful comments, and Ming Chan for editing.
+                                    </p>
+
+                                    <p>Source: <a
+                                            href="https://blog.ethereum.org/2017/01/19/update-integrating-zcash-ethereum/">https://blog.ethereum.org/2017/01/19/update-integrating-zcash-ethereum/</a>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+    <footer id="gtco-footer" role="contentinfo">
+        <div class="container">
+            <div class="row copyright">
+                <div class="col-md-12 text-center">
+                    <div class="copyrighttxt">&copy; UNITIMES. All Rights Reserved.</div>
+
+                </div>
+            </div>
+
+        </div>
+    </footer>
+</div>
+
+<div class="gototop js-top">
+    <a href="#" class="js-gotop"><i class="icon-arrow-up"></i></a>
+</div>
+
+<!-- jQuery -->
+<script src="js/jquery.min.js"></script>
+<!-- jQuery Easing -->
+<script src="js/jquery.easing.1.3.js"></script>
+<!-- Bootstrap -->
+<script src="js/bootstrap.min.js"></script>
+<!-- Waypoints -->
+<script src="js/jquery.waypoints.min.js"></script>
+<!-- Stellar -->
+<script src="js/jquery.stellar.min.js"></script>
+<!-- Main -->
+<script src="js/main.js"></script>
+
+</body>
+</html>
+
