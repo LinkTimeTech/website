@@ -50,9 +50,11 @@
             if ($(window).scrollTop() > 50) {
                 $('body').addClass('scrolled');
                 $('.logoimg')[0].src = 'images/logo_color.svg';
+                $('.gtco-nav-toggle').removeClass('gtco-nav-white');
             } else {
                 $('body').removeClass('scrolled');
                 $('.logoimg')[0].src = 'images/logo_white.svg';
+                $('.gtco-nav-toggle').addClass('gtco-nav-white');
 
             }
         });
