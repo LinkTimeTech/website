@@ -47,20 +47,23 @@
     var scrollNavBar = function () {
 
         $(window).scroll(function () {
-            if ($(window).scrollTop() > 50) {
+            if ($(window).scrollTop() > 50) {//下拉
 
                 $('body').addClass('scrolled');
+                $('.gtco-nav-toggle').removeClass('gtco-nav-white');
 
                 if ($('.logoimg-article').length > 0) {
-                    $('.logoimg-article')[0].src = 'images/logo_color.svg';
-                    $('.gtco-nav-toggle').removeClass('gtco-nav-white');
+                    $('.logoimg-article')[0].src = 'images/logo_black.svg';
 
                 } else {
-                    $('.logoimg')[0].src = 'images/logo_color.svg';
-                    $('.gtco-nav-toggle').removeClass('gtco-nav-white');
+                    $('.logoimg')[0].src = 'images/logo_black.svg';
+                    $('.search-nav-icon')[1].src = 'images/search.svg';
                 }
 
-            } else {
+                $('.u-share').length > 0 ? $('.u-share').addClass('show') : '';
+
+
+            } else {//到顶部
 
                 $('body').removeClass('scrolled');
 
@@ -71,14 +74,40 @@
                 } else {
                     $('.logoimg')[0].src = 'images/logo_white.svg';
                     $('.gtco-nav-toggle').addClass('gtco-nav-white');
+                    $('.search-nav-icon')[1].src = 'images/search_white.svg';
 
                 }
+
+                $('.u-share').length > 0 ? $('.u-share').removeClass('show') : '';
 
             }
         });
 
 
     };
+
+    var showSearch = function () {
+        $('.search-btn').click(function () {
+            if ($('.s').hasClass('show')) {
+
+                $('.s').removeClass('show');
+
+                $('.index-nav').length > 0 ? $('.index-nav')[0].style = 'height: 80px' : '';
+                $('.intro-nav').length > 0 ? $('.intro-nav')[0].style = 'height: 130px' : '';
+                $('.article-nav').length > 0 ? $('.article-nav')[0].style = 'height: 80px' : '';
+
+            } else {
+                $('.s').addClass('show');//显示搜索框
+
+                $('.index-nav').length > 0 ? $('.index-nav')[0].style = 'height: 130px' : '';
+                $('.intro-nav').length > 0 ? $('.intro-nav')[0].style = 'height: 170px' : '';
+                $('.article-nav').length > 0 ? $('.article-nav')[0].style = 'height: 130px' : '';
+
+            }
+        })
+    };
+
+
 
     var offcanvasMenu = function () {
 
@@ -262,7 +291,7 @@
 
     $(function () {
         mobileMenuOutsideClick();
-        scrollNavBar();
+        // scrollNavBar();
         offcanvasMenu();
         burgerMenu();
         contentWayPoint();
@@ -271,6 +300,7 @@
         loaderPage();
         counterWayPoint();
         parallax();
+        // showSearch();
     });
 
 
