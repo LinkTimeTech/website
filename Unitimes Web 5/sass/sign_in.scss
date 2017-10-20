@@ -18,7 +18,6 @@ $screen-xs: 480px;
   -o-transform: translateX($translatex);
   transform: translateX($translatex);
 }
-
 @mixin transition($transition, $ease: 'ease') {
   -moz-transition: all $transition unquote($ease);
   -o-transition: all $transition unquote($ease);
@@ -26,27 +25,25 @@ $screen-xs: 480px;
   -ms-transition: all $transition unquote($ease);
   transition: all $transition unquote($ease);
 }
-
 @mixin inline-block() {
   display: -moz-inline-stack;
   display: inline-block;
   zoom: 1;
   *display: inline;
 }
-
 @mixin border-radius($radius) {
   -webkit-border-radius: $radius;
   -moz-border-radius: $radius;
   -ms-border-radius: $radius;
   border-radius: $radius;
 }
-
 @mixin box-shadow-none() {
   -webkit-box-shadow: none;
   -moz-box-shadow: none;
   -o-box-shadow: none;
   box-shadow: none;
 }
+
 
 /* =======================================================
 *
@@ -75,7 +72,6 @@ body {
     background: $brand-white url(../images/geometry2.png) repeat;
   }
 }
-
 a {
   color: $brand-primary;
   @include transition(.3s);
@@ -83,7 +79,6 @@ a {
     color: darken($brand-primary, 10%);
   }
 }
-
 .menu {
   padding: 0;
   margin: 30px 0 0 0;

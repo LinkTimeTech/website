@@ -11,7 +11,6 @@ body {
     color: #848484;
     background-color: #f0f0f0;
 }
-
 body.style-2 {
     background-color: #ffffff;
     background-size: cover;
@@ -20,7 +19,6 @@ body.style-2 {
     background-image: url(../images/bg_2.jpg);
     height: 100%;
 }
-
 body.style-3 {
     background: #ffffff url(../images/geometry2.png) repeat;
 }
@@ -33,7 +31,6 @@ a {
     -ms-transition: all 0.3s ease;
     transition: all 0.3s ease;
 }
-
 a:hover {
     color: #43c3ea;
 }
@@ -42,7 +39,6 @@ a:hover {
     padding: 0;
     margin: 30px 0 0 0;
 }
-
 .menu li {
     list-style: none;
     margin-bottom: 10px;
@@ -51,11 +47,9 @@ a:hover {
     zoom: 1;
     *display: inline;
 }
-
 .menu li a {
     padding: 5px;
 }
-
 .menu li.active a {
     color: #b3b3b3;
 }
@@ -69,20 +63,17 @@ a:hover {
     box-shadow: -4px 7px 46px 2px rgba(0, 0, 0, 0.1);
     background: #ffffff;
 }
-
 .style-2 .fh5co-form {
     -webkit-box-shadow: -4px 7px 46px 2px rgba(0, 0, 0, 0.1);
     -moz-box-shadow: -4px 7px 46px 2px rgba(0, 0, 0, 0.1);
     -o-box-shadow: -4px 7px 46px 2px rgba(0, 0, 0, 0.1);
     box-shadow: -4px 7px 46px 2px rgba(0, 0, 0, 0.1);
 }
-
 @media screen and (max-width: 768px) {
     .fh5co-form {
         padding: 15px;
     }
 }
-
 .fh5co-form h2 {
     text-transform: uppercase;
     letter-spacing: 2px;
@@ -90,27 +81,22 @@ a:hover {
     margin: 0 0 30px 0;
     color: #000000;
 }
-
 .fh5co-form .form-group {
     margin-bottom: 30px;
 }
-
 .fh5co-form .form-group p {
     font-size: 14px;
     color: #9f9f9f;
     font-weight: 300;
 }
-
 .fh5co-form .form-group p a {
     color: #000000;
 }
-
 .fh5co-form label {
     font-weight: 300;
     font-size: 14px;
     font-weight: 300;
 }
-
 .fh5co-form .form-control {
     font-size: 16px;
     font-weight: 300;
@@ -133,17 +119,14 @@ a:hover {
     -ms-transition: all 0.3s ease;
     transition: all 0.3s ease;
 }
-
 .fh5co-form .form-control::-webkit-input-placeholder {
     color: rgba(0, 0, 0, 0.3);
     text-transform: uppercase;
 }
-
 .fh5co-form .form-control::-moz-placeholder {
     color: rgba(0, 0, 0, 0.3);
     text-transform: uppercase;
 }
-
 .fh5co-form .form-control:-ms-input-placeholder {
     color: rgba(0, 0, 0, 0.3);
     text-transform: uppercase;
@@ -156,12 +139,10 @@ a:hover {
     font-size: 0;
     overflow: hidden;
 }
-
 .fh5co-form .form-control:-moz-placeholder {
     color: rgba(0, 0, 0, 0.3);
     text-transform: uppercase;
 }
-
 .fh5co-form .form-control:focus, .fh5co-form .form-control:active {
     border-bottom: 1px solid rgba(0, 0, 0, 0.4);
 }
@@ -178,7 +159,6 @@ a:hover {
     -o-box-shadow: -2px 10px 20px -1px rgba(55, 184, 223, 0.4);
     box-shadow: -2px 10px 20px -1px rgba(55, 184, 223, 0.4);
 }
-
 .btn-primary:hover, .btn-primary:focus, .btn-primary:active {
     color: #ffffff;
     background: #43c3ea !important;
@@ -205,12 +185,10 @@ input, textarea {
     padding: 0px;
     /*text-align: center;*/
 }
-
 ul.social-agileinfo li {
     display: inline-block;
     margin: 0;
 }
-
 ul.social-agileinfo li a i.fa {
     width: 40px;
     height: 40px;

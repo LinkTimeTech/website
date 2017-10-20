@@ -5505,11 +5505,11 @@ main {
 }
 
 .u-fontSize11 {
-    font-size: 15px !important
+    font-size: 12px !important
 }
 
 .u-fontSize12 {
-    font-size: 15px !important
+    font-size: 13px !important
 }
 
 .u-fontSize13 {
@@ -5603,6 +5603,14 @@ main {
 }
 
 @media screen and (max-width: 767px) {
+    .u-xs-fontSize10 {
+        font-size: 13px !important
+    }
+
+    .u-xs-fontSize11 {
+        font-size: 14px !important
+    }
+
     .u-xs-fontSize12 {
         font-size: 15px !important
     }
@@ -5659,7 +5667,6 @@ main {
 }
 
 .u-fontWeightThin {
-    font-weight: 300 !important;
     font-weight: 400 !important
 }
 
@@ -5668,7 +5675,6 @@ main {
 }
 
 .u-fontWeightMedium {
-    font-weight: 500 !important;
     font-weight: 400 !important
 }
 
@@ -5677,7 +5683,6 @@ main {
 }
 
 .u-fontWeightBold {
-    font-weight: 700 !important;
     font-weight: 600 !important
 }
 
@@ -10765,7 +10770,8 @@ body.is-zoomableActive .postActionsBar.is-visible .postActionsBar-content {
 }
 
 .postMetaInline-authorLockup {
-    font-size: 16px;
+    /*font-size: 16px;*/
+    font-size: 13px;
     line-height: 1.4;
     padding-left: 10px;
     text-rendering: auto
@@ -17959,7 +17965,6 @@ hr.section-divider:before {
     --x-height-multiplier: 0.342;
     --baseline-multiplier: 0.22;
     font-family: medium-content-sans-serif-font, "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Arial, sans-serif;
-    letter-spacing: -.02em;
     font-weight: 300;
     font-style: normal;
     font-feature-settings: "liga" on, "lnum" on;
@@ -17968,7 +17973,7 @@ hr.section-divider:before {
     font-size: 16px;
     line-height: 1.4;
     color: rgba(0, 0, 0, .68);
-    letter-spacing: 0
+    letter-spacing: 0;
 }
 
 .v-glyph--m2 .graf--sectionCaption, .v-glyph--m2 .imageCaption {
@@ -19670,7 +19675,6 @@ section.is-darkBackgrounded .markup--highlight {
     --x-height-multiplier: 0.375;
     --baseline-multiplier: 0.17;
     font-family: medium-content-serif-font, Georgia, Cambria, "Times New Roman", Times, serif;
-    letter-spacing: .01rem;
     font-weight: 400;
     font-style: normal;
     font-size: 20px;

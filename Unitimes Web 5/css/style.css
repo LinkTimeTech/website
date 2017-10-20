@@ -70,7 +70,6 @@ p {
     -webkit-line-clamp: 2;
     -webkit-box-orient: vertical;
 }
-
 .keeponeline {
     display: flex;
 
@@ -96,7 +95,6 @@ p {
     line-height: 1.6;
     font-size: 2.1rem;
 }
-
 .article-box-cn {
     font-size: 1.8rem;
 
@@ -289,6 +287,7 @@ p {
     text-decoration: none !important;
 }
 
+
 /* =======================================================
 *
 *   aside Style
@@ -302,12 +301,10 @@ p {
     text-align: center;
     display: none;
 }
-
 .u-share ul {
     list-style-type: none;
     padding: 0;
 }
-
 .u-share a {
     font-size: 2.5rem;
     border: none;
@@ -354,7 +351,6 @@ body {
     left: -1px;
     border-radius: 0;
 }
-
 .search-icon {
     position: relative;
     bottom: 2px;
@@ -503,7 +499,6 @@ h1, h2, h3, h4, h5, h6, figure {
 .menu-1 ul li {
     display: inline;
 }
-
 .gtco-nav ul li {
     margin: 0;
     padding: 0;
@@ -524,18 +519,15 @@ h1, h2, h3, h4, h5, h6, figure {
 .article-nav ul li > a {
     color: #373a3c;
 }
-
 .intro-nav ul li > a {
     color: #373a3c;
 }
 .gtco-nav ul li > a:hover, .gtco-nav ul li > a:focus, .gtco-nav ul li > a:active {
     color: white;
 }
-
 .article-nav ul li > a:hover, .article-nav ul li > a:focus, .article-nav ul li > a:active {
     color: #37b8df;
 }
-
 .intro-nav ul li > a:hover, .intro-nav ul li > a:focus, .intro-nav ul li > a:active {
     color: #37b8df;
 }
@@ -714,7 +706,6 @@ h1, h2, h3, h4, h5, h6, figure {
 .article-nav, .index-nav, .intro-nav {
     height: 80px;
 }
-
 .intro-nav {
     /*height: 130px;*/
     background-color: #fff;
@@ -723,7 +714,6 @@ h1, h2, h3, h4, h5, h6, figure {
 .active-nav a {
     color: #37b8df !important;
 }
-
 .navbar-inner {
 
 }
@@ -753,7 +743,6 @@ h1, h2, h3, h4, h5, h6, figure {
         /*height: 105px;*/
 
     }
-
     .gtco-nav {
         /*height:3.4rem;*/
     }
@@ -2578,11 +2567,9 @@ article .gtco-highlight p {
         display: block;
     }
 }
-
 .active-dropdown {
     padding-right: 10px;
 }
-
 .btn-dropdown {
     border: none;
     color: #37b8df;
@@ -2590,20 +2577,17 @@ article .gtco-highlight p {
     margin: 5px auto;
     width: 160px;
 }
-
 .btn-dropdown:hover, .btn-dropdown:focus, .btn-dropdown:active {
     border-color: none !important;
     background: none !important;
     color: #37b8df;
 }
-
 ul.dropdown-menu {
     margin: auto;
     width: 160px;
     position: static;
     float: none;
 }
-
 .dropdown-menu li {
     padding: 5px 10px !important;
 }
@@ -2827,6 +2811,7 @@ ul.dropdown-menu {
     border-bottom-left-radius: 0 !important;
 }
 
+
 /*comment*/
 .comments {
     padding: 0 3em;
@@ -2948,16 +2933,13 @@ ul.dropdown-menu {
 .leave-coment-form input[type="submit"]:hover {
     background: #212121;
 }
-
 .leave-coment-form form {
     margin: 3em 0 0;
 }
-
 /*-- //single --*/
 .agileits_w3layouts_work_grid {
     padding-left: 0;
 }
-
 /*-- start-responsive-design --*/
 @media (max-width: 1080px) {
     .single-left1 h3 {
@@ -2965,7 +2947,6 @@ ul.dropdown-menu {
         letter-spacing: 1px;
         font-size: 1.3em;
     }
-
     .leave-coment-form input[type="text"], .leave-coment-form input[type="email"], .leave-coment-form textarea {
         width: 48.56%;
     }
@@ -2976,7 +2957,6 @@ ul.dropdown-menu {
         float: left;
         width: 50%;
     }
-
     .leave-coment-form input[type="text"], .leave-coment-form input[type="email"], .leave-coment-form textarea {
         width: 48.75%;
     }
@@ -2986,7 +2966,6 @@ ul.dropdown-menu {
     .single-left1 h3 {
         font-size: 1.2em;
     }
-
     .leave-coment-form input[type="text"], .leave-coment-form input[type="email"], .leave-coment-form textarea {
         width: 48.4%;
     }
@@ -2996,33 +2975,26 @@ ul.dropdown-menu {
     .single-left {
         padding: 0;
     }
-
     .single-left1 h3 {
         font-size: 1.1em;
         letter-spacing: 0;
     }
-
     .single-left2-left {
         float: none;
         width: 100%;
     }
-
     .comments-grid-right h4 a {
         font-size: .8em;
     }
-
     .comments-grid-left {
         width: 20%;
     }
-
     .leave-coment-form input[type="text"], .leave-coment-form input[type="email"], .leave-coment-form textarea {
         width: 100%;
     }
-
     .leave-coment-form input[type="email"] {
         margin: 1em 0 0;
     }
-
     .leave-coment-form input[type="submit"] {
         width: 100%;
     }
@@ -3030,7 +3002,6 @@ ul.dropdown-menu {
     .leave-coment-form form, .leave-coment-form {
         margin: 2em 0 0;
     }
-
     .agileits_map iframe {
         min-height: 250px;
     }
@@ -3040,31 +3011,24 @@ ul.dropdown-menu {
     p, ul li, ol li, .comments-grid-right p {
         font-size: 13px;
     }
-
     .single-left1 ul li {
         margin-right: 0.4em;
     }
-
     .single-left1 p {
         margin: 1em 0;
     }
-
     .single-left2-left {
         padding: 0;
     }
-
     .comments-grids {
         margin: 2em 0 0;
     }
-
     .comments-grid-left {
         width: 30%;
     }
-
     .comments-grid-right {
         width: 65%;
     }
-
     .comments-grid-right ul li i {
         margin: 0 0.4em;
     }
