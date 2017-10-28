@@ -1,0 +1,2316 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css"/>
+    <link rel="stylesheet" type="text/css" href="css/pagination.css"/>
+    <script src="js/jquery-3.1.1.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/bootstrap.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/jquery.pagination.js" type="text/javascript" charset="utf-8"></script>
+    <script src="http://gosspublic.alicdn.com/aliyun-oss-sdk-4.4.4.min.js"></script>
+    <style type="text/css">
+        #all_table, #start_table, #talent_table, #investor_table, #speak_table, #contact_table, #user_table {
+            width: 98%;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        #all_table td, #start_table td, #talent_table td, #investor_table td, #speak_table td, #contact_table td, #user_table td {
+            height: 40px;
+        }
+
+        .th td {
+            font-weight: 700;
+            color: #168BD5;
+        }
+
+        .lis_class {
+            background-color: #c8cae3;
+        }
+
+        .btn {
+            background-color: #168bd5;
+            color: #ffffff;
+        }
+
+        .btn0 {
+            background-color: #CCCCCC;
+            color: #000000;
+        }
+
+        #coin_rate th {
+            text-align: center;
+            border: 1px solid #E5E5E5;
+            padding: 15px;
+        }
+
+        #coin_rate td {
+            border: 1px solid #E5E5E5;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+<div class="container" style="border: 1px solid #000000;text-align: center;margin-top: 30px;padding-bottom: 30px;">
+    <h1>报名名单(<span id="DB"></span>)</h1>
+    <button style="margin-top: 15px; margin-right: 10px;width: 100px;height: 34px;border: none;background-color: #168BD5;color: #FFFFFF;border-radius: 8px;"
+            onclick="back()">返回登录
+    </button>
+    <div style="width: 90%;margin: 0px auto;height: 1px;background-color: #000000;margin-bottom: 30px;margin-top: 30px;">
+
+    </div>
+
+    <div style="padding-left: 70px;padding-right: 70px;" class="row">
+        <div class="col-md-6 col-lg-6">
+            普通支付地址 <input type="" class="form-control" disabled="disabled" name="" id="a1" placeholder=""/>
+        </div>
+        <div class="col-md-6 col-lg-6">
+            BTC收款地址 <input type="" class="form-control" disabled="disabled" name="" id="a2" placeholder=""/>
+        </div>
+        <div class="col-md-6 col-lg-6">
+            VIP支付地址 <input type="" class="form-control" disabled="disabled" name="" id="a3" placeholder=""/>
+        </div>
+        <div class="col-md-6 col-lg-6">
+            ETH收款地址 <input type="" class="form-control" disabled="disabled" name="" id="a4" placeholder=""/>
+        </div>
+        <div class="col-md-12 col-lg-12">
+            反馈邮件模板 <textarea type="" class="form-control" disabled="disabled" name="" id="a5" placeholder=""
+                             style="resize: none;"/></textarea>
+        </div>
+        <button style="margin-top: 10px;width: 80px;height: 34px;border: none;background-color: #168BD5;color: #FFFFFF;border-radius: 8px;"
+                id="8">修改
+        </button>
+        <button style="display: none;margin-top: 10px;width: 80px;height: 34px;border: none;background-color: #168BD5;color: #FFFFFF;border-radius: 8px;"
+                id="7">保存
+        </button>
+    </div>
+
+    <div style="width: 90%;margin: 0px auto;height: 1px;background-color: #000000;margin-bottom: 30px;margin-top: 30px;">
+
+    </div>
+    <div style="width: 90%;margin: 0px auto;">
+        <table id="coin_rate" style="width: 100%;text-align: center;">
+            <tr>
+                <th>货币</th>
+                <th>汇率(人民币)</th>
+            </tr>
+            <tr>
+                <td>比特币</td>
+                <td id="btc_rate"></td>
+            </tr>
+            <tr>
+                <td>以太币</td>
+                <td id="eth_rate"></td>
+            </tr>
+            <tr>
+                <td>欧元</td>
+                <td id="eur_rate"></td>
+            </tr>
+            <tr>
+                <td colspan="2"><span>最后更新时间 :<p id="rate_time" style="display: inline-block;"></p></span>
+                    <button id="rate_btn" onclick="rateRefresh()"
+                            style="padding: 5px 10px 5px 10px; border: none;background-color: #168BD5;color: #FFFFFF;border-radius: 8px;margin-left: 15px;">
+                        刷新
+                    </button>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div style="width: 90%;margin: 0px auto;height: 1px;background-color: #000000;margin-bottom: 30px;margin-top: 30px;">
+
+    </div>
+    <div style="width: 90%;margin: 0px auto;" role="tabpanel" class="tab-pane" id="ser">
+        <div style="text-align: left;margin-top: 15px;margin-bottom: 15px;">
+            <!--<span>当前数据库 ：</span><select onchange="changemysql()" style="width: 150px;display: inline-block;" class="form-control"  id="mysql">
+					    	<option  value="visa" >亚洲数据库</option>
+					    	<option value="eurp" >欧洲数据库</option>
+					    </select>-->
+
+            <span style="margin-left: 10px;display: inline-block;">人员类型 ：</span><select
+                style="width: 150px;display: inline-block;" class="form-control" name="" id="type">
+            <option value="5" selected="selected">Paying user</option>
+            <option value="1">Startups</option>
+            <option value="2">Developer</option>
+            <option value="3">Investor</option>
+            <option value="4">Speaker</option>
+            <option value="6">Contact us</option>
+            <option value="7">Volunteer and media passes</option>
+        </select>
+
+            <span style="margin-left: 10px;">过滤 ：</span><input style="display: inline-block;width: 300px;" type="text"
+                                                               class="form-control" id="val" placeholder="姓名/电话/邮箱">
+            <button style="margin-left: 10px;margin-right: 10px;width: 80px;height: 34px;border: none;background-color: #168BD5;color: #FFFFFF;border-radius: 8px;"
+                    id="6">查询
+            </button>
+            <br/>
+
+            <button style="margin-top: 15px; margin-right: 10px;width: 100px;height: 34px;border: none;background-color: #168BD5;color: #FFFFFF;border-radius: 8px;"
+                    id="handlepay">导入在线支付
+            </button>
+            <button style="margin-top: 15px; margin-right: 10px;width: 100px;height: 34px;border: none;background-color: #168BD5;color: #FFFFFF;border-radius: 8px;"
+                    id="handlepay1">导入
+            </button>
+            <input style="display: inline-block;width: 200px;" type="file" class="form-control" name="" id="file"
+                   value=""/>
+            <button style="margin-top: 15px; margin-right: 10px;height: 34px;border: none;background-color: #168BD5;color: #FFFFFF;border-radius: 8px;margin-left: 15px;"
+                    onclick="stateRefresh()" id="state_btn">获取最新支付状态
+            </button>
+            <a href="PDF/pdf.php" target="_blank">
+                <button style="margin-top: 15px; margin-right: 10px;height: 34px;border: none;background-color: #168BD5;color: #FFFFFF;border-radius: 8px;margin-left: 15px;">
+                    导出PDF报名名单
+                </button>
+            </a>
+        </div>
+        <table border="" id="all_table">
+
+        </table>
+        <div id="Pagination" class="pagination" style="text-align: center;"></div>
+
+
+    </div>
+</div>
+
+<div class="modal fade bs-example-modal-sm" id="succ0" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+     aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span
+                        class="sr-only">Close</span></button>
+                <h4 class="modal-title" id="myModalLabel"></h4>
+            </div>
+            <div class="modal-body">
+                发送失败！
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade bs-example-modal-sm" id="succ" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+     aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span
+                        class="sr-only">Close</span></button>
+                <h4 class="modal-title" id="myModalLabel"></h4>
+            </div>
+            <div class="modal-body">
+                发送成功！
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal fade bs-example-modal-sm" id="succ_1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+     aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span
+                        class="sr-only">Close</span></button>
+                <h4 class="modal-title" id="myModalLabel"></h4>
+            </div>
+            <div id="ms0" class="modal-body">
+
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!--<img id="login" style="position: absolute;left: 45%;top: 40%;display: none;" src="img/login.gif"/>-->
+</body>
+<script type="text/javascript">
+    $(function () {
+        if (sessionStorage.getItem('meeting_act') == null || sessionStorage.getItem('metting_pwd') == null || sessionStorage.getItem('metting_pwd') == '' || sessionStorage.getItem('meeting_act') == '') {
+            location.href = 'admin_login.html';
+            return
+        } else {
+            console.log(sessionStorage.getItem('meeting_act'));
+        }
+        $.ajax({
+            type: "post",
+            url: "http://www.ethcloud.net/FranceWebsite/handle/getCoin.php",
+            dataType: 'json',
+            timeout: 10000,
+            success: function (data) {
+                if (data.code == "200") {
+                    console.log(JSON.stringify(data));
+//							document.getElementById("rate").innerText=data.data.cur
+                    document.getElementById("btc_rate").innerText = data.data.btc;
+                    document.getElementById("eth_rate").innerText = data.data.eth;
+                    document.getElementById("eur_rate").innerText = data.data.cur;
+                    document.getElementById("rate_time").innerText = data.data.last_time;
+                } else {
+                    console.log(JSON.stringify(data));
+                }
+            },
+            error: function (xhr, type, errorThrown) {
+
+
+            }
+        });
+        $.ajax({
+            type: "post",
+            url: "http://www.ethcloud.net/FranceWebsite/common/getDb.php",
+            dataType: 'json',
+            timeout: 10000,
+            success: function (data) {
+                if (data.code == "200") {
+                    console.log(JSON.stringify(data));
+                    var obj = document.getElementById("mysql");
+
+                    if (data.data == 1) {
+                        document.getElementById("DB").innerText = '亚洲';
+//								obj.options[0].selected=true;
+                    } else {
+                        document.getElementById("DB").innerText = '欧洲';
+//								obj.options[1].selected=true;
+                    }
+                } else {
+                    console.log(JSON.stringify(data));
+                }
+            },
+            error: function (xhr, type, errorThrown) {
+
+
+            }
+        });
+        $.ajax({
+            type: "post",
+            url: "http://www.ethcloud.net/FranceWebsite/handle/getAllNum.php",
+            dataType: 'json',
+            timeout: 10000,
+            success: function (data) {
+                if (data.code == "200") {
+                    var num = data.data.userPay_num;
+//						console.log(num);
+                    num_entries = Math.ceil(num / 10);
+                    $("#Pagination").pagination(num_entries, {
+                        num_edge_entries: 1, //边缘页数
+                        num_display_entries: 5, //主体页数
+                        callback: pageselectCallback5,
+                        items_per_page: 1, //每页显示1项
+                        prev_text: "前一页",
+                        next_text: "后一页"
+                    });
+
+
+                } else {
+                    console.log(JSON.stringify(data));
+                }
+            },
+            error: function (xhr, type, errorThrown) {
+
+
+            }
+        });
+
+        $.ajax({
+            type: "post",
+            url: "http://www.ethcloud.net/FranceWebsite/handle/getCom.php",
+            success: function (data) {
+                if (JSON.parse(data).code == '200') {
+                    var btc = JSON.parse(data).data.btcAddr;
+                    var eth = JSON.parse(data).data.ethAddr;
+                    var Standard = JSON.parse(data).data.payStandard;
+                    var payVip = JSON.parse(data).data.payVip;
+                    var emailExample = JSON.parse(data).data.emailExample;
+                    document.getElementById("a1").value = Standard;
+                    document.getElementById("a2").value = btc;
+                    document.getElementById("a3").value = payVip;
+                    document.getElementById("a4").value = eth;
+                    document.getElementById("a5").value = emailExample;
+                } else {
+                    console.log(data);
+                }
+
+            },
+            error: function (xhr, type, errorThrown) {
+
+                console.log('未进接口');
+            }
+        });
+    })
+    document.getElementById("6").addEventListener('click', function () {
+        var values = document.getElementById("val").value;
+        var type = document.getElementById("type").value;
+        document.getElementById("all_table").innerHTML = '';
+        console.log(type);
+        if (type == '5') {
+
+            document.getElementById("all_table").innerHTML = '<tr class="th"><td>Name</td><td>Company</td><td>Email</td><td>Phone</td><td>paytype</td><td>Ticket type</td><td>Money</td><td>card</td><td>支付状态</td><td>发送邮件</td></tr>';
+            if (values == '') {
+
+                $.ajax({
+                    type: "post",
+                    url: "http://www.ethcloud.net/FranceWebsite/handle/getAllNum.php",
+                    dataType: 'json',
+                    timeout: 10000,
+                    success: function (data) {
+                        if (data.code == "200") {
+                            var num = data.data.userPay_num;
+//						console.log(JSON.stringify(data));
+                            num_entries = Math.ceil(num / 10);
+                            $("#Pagination").pagination(num_entries, {
+                                num_edge_entries: 1, //边缘页数
+                                num_display_entries: 5, //主体页数
+                                callback: pageselectCallback5,
+                                items_per_page: 1, //每页显示1项
+                                prev_text: "前一页",
+                                next_text: "后一页"
+                            });
+
+
+                        } else {
+                            console.log(JSON.stringify(data));
+                        }
+                    },
+                    error: function (xhr, type, errorThrown) {
+
+
+                    }
+                });
+
+
+            } else {
+                document.getElementById("Pagination").style.display = 'none';
+                $.ajax({
+                    type: "post",
+                    url: "http://www.ethcloud.net/FranceWebsite/handle/searchUser.php",
+                    data: {
+                        values: values,
+                        itype: type
+                    },
+                    dataType: 'json',
+                    timeout: 10000,
+                    success: function (data) {
+                        if (data.code == "200") {
+                            console.log(JSON.stringify(data));
+                            var div = document.getElementById("all_table");
+                            for (var i = 0; i < data.data.length; i++) {
+                                var lis = document.createElement("tr");
+                                var id = data.data[i].user_id;
+                                var name = data.data[i].name;
+                                var company = data.data[i].u_company;
+                                var pay = data.data[i].u_coinType;
+                                var ticket = data.data[i].pay_type;
+                                if (ticket == '1') {
+                                    ticket = '普通票';
+                                } else if (ticket == '2') {
+                                    ticket = 'VIP票';
+                                } else {
+                                    ticket = '无';
+                                }
+                                if (pay == 1) {
+                                    var paytype = 'VISA';
+                                } else if (pay == 4) {
+                                    var paytype = 'ETH';
+                                } else {
+                                    var paytype = 'BTC';
+                                }
+                                var email = data.data[i].email;
+                                var txid = data.data[i].txid;
+                                if (txid != null && txid != '' && txid != undefined) {
+                                    var tx = txid.substring(0, 15) + '......';
+                                }
+                                else {
+                                    var txid = '无';
+                                }
+                                var phone = data.data[i].phone;
+                                var message = data.data[i].u_coinAddress;
+                                var succ = data.data[i].is_success == 1 ? "已付款" : "未付款";
+                                console.log(pay);
+                                var num = data.data[i].is_success;
+                                var money = data.data[i].money;
+                                if (money == null) {
+                                    money = '无';
+                                }
+                                if (num == 0) {
+                                    if (pay == 1) {
+                                        lis.innerHTML = "<td>" + name + "  </td><td>" + company + "</td><td>" + email + " </td><td>" + phone + " </td><td>" + paytype + " </td><td>" + ticket + " </td><td>" + money + "</td><td>" + message + "</td><td>" + succ + "</td> " + "<td><button disabled='disabled'  class='btn btn0'>发送邮件</button></td>";
+                                    } else if (pay == 4) {
+                                        lis.innerHTML = "<td>" + name + "  </td><td>" + company + "</td><td>" + email + " </td><td>" + phone + " </td><td>" + paytype + " </td><td>" + ticket + " </td><td>" + money + "</td><td>无</td><td>" + succ + "</td> " + "<td><button  disabled='disabled' class='btn btn0'>发送邮件</button></td>";
+                                    } else if (pay == 5) {
+                                        lis.innerHTML = "<td>" + name + "  </td><td>" + company + "</td><td>" + email + " </td><td>" + phone + " </td><td>" + paytype + " </td><td>" + ticket + " </td><td>" + money + "</td><td>无</td><td>" + succ + "</td> " + "<td><button  disabled='disabled' class='btn btn0'>发送邮件</button></td>";
+
+                                    }
+                                } else {
+                                    if (pay == 1) {
+                                        lis.innerHTML = "<td>" + name + "  </td><td>" + company + "</td><td>" + email + " </td><td>" + phone + " </td><td>" + paytype + " </td><td>" + ticket + " </td><td>" + money + "</td><td>" + message + "</td><td>" + succ + "</td> " + "<td><button class='btn'>发送邮件</button></td>";
+                                    } else if (pay == 4) {
+                                        lis.innerHTML = "<td>" + name + "  </td><td>" + company + "</td><td>" + email + " </td><td>" + phone + " </td><td>" + paytype + " </td><td>" + ticket + " </td><td>" + money + " ETH</td><td>无</td><td>" + succ + "</td> " + "<td><button class='btn'>发送邮件</button></td>";
+                                    } else if (pay == 5) {
+                                        lis.innerHTML = "<td>" + name + "  </td><td>" + company + "</td><td>" + email + " </td><td>" + phone + " </td><td>" + paytype + " </td><td>" + ticket + " </td><td>" + money + " BTC</td><td>无</td><td>" + succ + "</td> " + "<td><button class='btn'>发送邮件</button></td>";
+
+                                    }
+                                }
+
+
+                                div.appendChild(lis);
+                                lis.id = data.data[i].user_id;
+                                lis.name = data.data[i].name;
+                                lis.succ = data.data[i].is_success;
+                                lis.email = data.data[i].email;
+                                lis.getElementsByClassName('btn')[0].addEventListener('click', function () {
+                                    var email = this.parentNode.parentNode.email;
+                                    var succ = this.parentNode.parentNode.succ;
+                                    if (succ == '0') {
+                                        $('#succ_1').modal();
+                                        document.getElementById("ms0").innerText = '此用户未付款！';
+                                    } else {
+                                        $.ajax({
+                                            type: "post",
+                                            url: "http://www.ethcloud.net/FranceWebsite/Register/email.php",
+                                            data: {
+                                                email: email,
+                                            },
+                                            dataType: 'json',
+                                            timeout: 10000,
+                                            success: function (data) {
+                                                if (data.code == '200') {
+                                                    $('#succ').modal();
+                                                } else {
+                                                    $('#succ0').modal();
+                                                }
+                                            },
+                                            error: function (xhr, type, errorThrown) {
+
+
+                                            }
+                                        });
+                                    }
+
+                                });
+//						lis.addEventListener('click',function(){
+//							var user_id=this.id;
+//							var trs=this;
+//							if (this.succ==1) {
+//								$('#succ_1').modal();
+//								document.getElementById("ms0").innerText='ID: '+this.id+' / Name: '+this.name+' / 此用户已已付款！';
+//							} else{
+//								$('#succ_0').modal();
+//								document.getElementById("ms1").innerText='ID: '+this.id+' / Name: '+this.name+' / 请核对支付信息确认支付！！';
+//								document.getElementById("yes").addEventListener('click',function(){
+//									$.ajax({
+//										type:"post",
+//										url:"http://www.ethcloud.net/FranceWebsite/handle/handleApply.php",
+//										data:{
+//												userid:user_id,
+//												itype:5
+//											},
+//										dataType: 'json',
+//										timeout: 10000,
+//										success: function(data) {
+//											if(data.code == "200"){
+//												var childArrs=trs.children || trs.childNodes;
+//												childArrs[childArrs.length-1].innerText='已处理';
+//												$('#succ').modal();
+//													}else{
+//														console.log(JSON.stringify(data));
+//													}
+//												},
+//												error: function(xhr, type, errorThrown) {
+//
+//
+//												}
+//									});
+//								})
+//							}
+//
+//						})
+                            }
+                        } else if (data.code == "150") {
+                            $('#succ_1').modal();
+                            document.getElementById("ms0").innerText = '没此用户 请核对Email/phone';
+                        }
+                        else {
+                            console.log(JSON.stringify(data));
+                        }
+                    },
+                    error: function (xhr, type, errorThrown) {
+
+
+                    }
+                });
+            }
+        } else if (type == '4') {
+            document.getElementById("all_table").innerHTML = '<tr class="th"><td>Name</td><td>company</td><td>title</td><td>professional</td><td>topic</td><td>phone</td><td>email</td><td>notes</td><td>发送邮件</td></tr>';
+            if (values == '') {
+                $.ajax({
+                    type: "post",
+                    url: "http://www.ethcloud.net/FranceWebsite/handle/getAllNum.php",
+                    dataType: 'json',
+                    timeout: 10000,
+                    success: function (data) {
+                        if (data.code == "200") {
+                            var num = data.data.speaker_num;
+//						console.log(JSON.stringify(data));
+                            num_entries = Math.ceil(num / 10);
+                            $("#Pagination").pagination(num_entries, {
+                                num_edge_entries: 1, //边缘页数
+                                num_display_entries: 5, //主体页数
+                                callback: pageselectCallback3,
+                                items_per_page: 1, //每页显示1项
+                                prev_text: "前一页",
+                                next_text: "后一页"
+                            });
+
+
+                        } else {
+                            console.log(JSON.stringify(data));
+                        }
+                    },
+                    error: function (xhr, type, errorThrown) {
+
+
+                    }
+                });
+            }
+            else {
+                document.getElementById("Pagination").style.display = 'none';
+                $.ajax({
+                    type: "post",
+                    url: "http://www.ethcloud.net/FranceWebsite/handle/searchUser.php",
+                    data: {
+                        values: values,
+                        itype: type
+                    },
+                    dataType: 'json',
+                    timeout: 10000,
+                    success: function (data) {
+                        if (data.code == "200") {
+                            console.log(JSON.stringify(data));
+                            var div = document.getElementById("all_table");
+                            for (var i = 0; i < data.data.length; i++) {
+                                var lis = document.createElement("tr");
+                                var id = data.data[i].user_id;
+                                var name = data.data[i].name;
+                                var CI = data.data[i].sp_CI;
+                                var TP = data.data[i].sp_TP;
+                                var professional = data.data[i].sp_professional;
+                                var topic = data.data[i].sp_topic;
+                                var phone = data.data[i].phone;
+                                var email = data.data[i].email;
+                                var notes = data.data[i].sp_notes;
+                                var succ = data.data[i].is_success == 1 ? "已处理" : "未处理";
+                                lis.innerHTML = "<td>" + name + "  </td><td>" + CI + "</td><td>" + TP + " </td><td>" + professional + " </td><td>" + topic + " </td><td>" + phone + " </td><td>" + email + " </td><td>" + notes + "  </td>" + "<td><button class='btn'>发送邮件</button></td>";
+                                div.appendChild(lis);
+                                lis.id = data.data[i].user_id;
+
+                                lis.succ = data.data[i].is_success;
+                                lis.email = data.data[i].email;
+                                lis.getElementsByClassName('btn')[0].addEventListener('click', function () {
+                                    var email = this.parentNode.parentNode.email;
+                                    var succ = this.parentNode.parentNode.succ;
+                                    if (succ == '0') {
+                                        $('#succ_1').modal();
+                                        document.getElementById("ms0").innerText = '此用户未付款！';
+                                    } else {
+                                        $.ajax({
+                                            type: "post",
+                                            url: "http://www.ethcloud.net/FranceWebsite/Register/email.php",
+                                            data: {
+                                                email: email,
+                                            },
+                                            dataType: 'json',
+                                            timeout: 10000,
+                                            success: function (data) {
+                                                if (data.code == '200') {
+                                                    $('#succ').modal();
+                                                } else {
+                                                    $('#succ0').modal();
+                                                }
+                                            },
+                                            error: function (xhr, type, errorThrown) {
+
+
+                                            }
+                                        });
+                                    }
+                                });
+//						lis.addEventListener('click',function(){
+//							var user_id=this.id;
+//							var trs=this;
+//							if (this.succ==1) {
+//								$('#succ_1').modal();
+//								document.getElementById("ms0").innerText='ID:'+this.id+' 此用户已处理！';
+//							} else{
+//								$('#succ_0').modal();
+//								document.getElementById("ms1").innerText='ID:'+this.id+' 请核对信息确认处理！！';
+//								document.getElementById("yes").addEventListener('click',function(){
+//									$.ajax({
+//										type:"post",
+//										url:"http://www.ethcloud.net/FranceWebsite/handle/handleApply.php",
+//										data:{
+//												userid:user_id,
+//												itype:4
+//											},
+//										dataType: 'json',
+//										timeout: 10000,
+//										success: function(data) {
+//											if(data.code == "200"){
+//												var childArrs=trs.children || trs.childNodes;
+//												childArrs[childArrs.length-1].innerText='已处理';
+//												$('#succ').modal();
+//													}else{
+//														console.log(JSON.stringify(data));
+//													}
+//												},
+//												error: function(xhr, type, errorThrown) {
+//
+//
+//												}
+//									});
+//								})
+//							}
+//
+//						})
+                            }
+                        }
+                        else if (data.code == "150") {
+                            $('#succ_1').modal();
+                            document.getElementById("ms0").innerText = '没此用户 请核对Email/phone';
+                        }
+                        else {
+                            console.log(JSON.stringify(data));
+                        }
+                    },
+                    error: function (xhr, type, errorThrown) {
+
+
+                    }
+                });
+            }
+        }
+        else if (type == '3') {
+            document.getElementById("all_table").innerHTML = '<tr class="th"><td>Companyname</td><td>address</td><td>website</td><td>phone</td><td>email</td><td>field</td><td>发送邮件</td></tr>';
+            if (values == '') {
+                $.ajax({
+                    type: "post",
+                    url: "http://www.ethcloud.net/FranceWebsite/handle/getAllNum.php",
+                    dataType: 'json',
+                    timeout: 10000,
+                    success: function (data) {
+                        if (data.code == "200") {
+                            var num = data.data.investor_num;
+//						console.log(JSON.stringify(data));
+                            num_entries = Math.ceil(num / 10);
+                            $("#Pagination").pagination(num_entries, {
+                                num_edge_entries: 1, //边缘页数
+                                num_display_entries: 5, //主体页数
+                                callback: pageselectCallback2,
+                                items_per_page: 1, //每页显示1项
+                                prev_text: "前一页",
+                                next_text: "后一页"
+                            });
+
+
+                        } else {
+                            console.log(JSON.stringify(data));
+                        }
+                    },
+                    error: function (xhr, type, errorThrown) {
+
+
+                    }
+                });
+            }
+            else {
+                document.getElementById("Pagination").style.display = 'none';
+                $.ajax({
+                    type: "post",
+                    url: "http://www.ethcloud.net/FranceWebsite/handle/searchUser.php",
+                    data: {
+                        values: values,
+                        itype: type
+                    },
+                    dataType: 'json',
+                    timeout: 10000,
+                    success: function (data) {
+                        if (data.code == "200") {
+//					console.log(JSON.stringify(data));
+                            var div = document.getElementById("all_table");
+                            for (var i = 0; i < data.data.length; i++) {
+                                var lis = document.createElement("tr");
+                                var id = data.data[i].user_id;
+                                var name = data.data[i].name;
+                                var address = data.data[i].i_address;
+                                var web = data.data[i].i_website;
+                                var phone = data.data[i].phone;
+                                var email = data.data[i].email;
+                                var project = data.data[i].i_project;
+                                var field = data.data[i].i_field;
+                                var type = data.data[i].i_coinType;
+                                var coin = data.data[i].i_coinAddress;
+                                var succ = data.data[i].is_success == 1 ? "已处理" : "未处理";
+                                lis.innerHTML = "<td>" + name + "  </td><td>" + address + "</td><td>" + web + " </td><td>" + phone + " </td><td>" + email + " </td><td>" + field + "  </td>" + "<td><button class='btn'>发送邮件</button></td>";
+                                div.appendChild(lis);
+                                lis.id = data.data[i].user_id;
+                                lis.name = data.data[i].name;
+                                lis.succ = data.data[i].is_success;
+                                lis.email = data.data[i].email;
+                                lis.getElementsByClassName('btn')[0].addEventListener('click', function () {
+                                    var email = this.parentNode.parentNode.email;
+                                    var succ = this.parentNode.parentNode.succ;
+                                    if (succ == '0') {
+                                        $('#succ_1').modal();
+                                        document.getElementById("ms0").innerText = '此用户未付款！';
+                                    } else {
+                                        $.ajax({
+                                            type: "post",
+                                            url: "http://www.ethcloud.net/FranceWebsite/Register/email.php",
+                                            data: {
+                                                email: email,
+                                            },
+                                            dataType: 'json',
+                                            timeout: 10000,
+                                            success: function (data) {
+                                                if (data.code == '200') {
+                                                    $('#succ').modal();
+                                                } else {
+                                                    $('#succ0').modal();
+                                                }
+                                            },
+                                            error: function (xhr, type, errorThrown) {
+
+
+                                            }
+                                        });
+                                    }
+                                });
+//						lis.addEventListener('click',function(){
+//							var user_id=this.id;
+//							var trs=this;
+//							if (this.succ==1) {
+//								$('#succ_1').modal();
+//								document.getElementById("ms0").innerText='ID: '+this.id+' / Companyname: '+this.name+' / 此用户已处理！';
+//							} else{
+//								$('#succ_0').modal();
+//								document.getElementById("ms1").innerText='ID: '+this.id+' / Companyname: '+this.name+' / 请核对信息确认处理！！';
+//								document.getElementById("yes").addEventListener('click',function(){
+//									$.ajax({
+//										type:"post",
+//										url:"http://www.ethcloud.net/FranceWebsite/handle/handleApply.php",
+//										data:{
+//												userid:user_id,
+//												itype:3
+//											},
+//										dataType: 'json',
+//										timeout: 10000,
+//										success: function(data) {
+//											if(data.code == "200"){
+//												var childArrs=trs.children || trs.childNodes;
+//												childArrs[childArrs.length-1].innerText='已处理';
+//												$('#succ').modal();
+//
+//													}else{
+//														console.log(JSON.stringify(data));
+//													}
+//												},
+//												error: function(xhr, type, errorThrown) {
+//
+//
+//												}
+//									});
+//								})
+//							}
+//
+//						})
+                            }
+                        }
+                        else if (data.code == "150") {
+                            $('#succ_1').modal();
+                            document.getElementById("ms0").innerText = '没此用户 请核对Email/phone';
+                        }
+                        else {
+                            console.log(JSON.stringify(data));
+                        }
+                    },
+                    error: function (xhr, type, errorThrown) {
+
+
+                    }
+                });
+            }
+        }
+        else if (type == '2') {
+            document.getElementById("all_table").innerHTML = '<tr class="th"><td>Name</td><td>gender</td><td>birth</td><td>city</td><td>language</td><td>phone</td><td>email</td><td>project</td><td>发送邮件</td></tr>';
+            if (values == '') {
+                $.ajax({
+                    type: "post",
+                    url: "http://www.ethcloud.net/FranceWebsite/handle/getAllNum.php",
+                    dataType: 'json',
+                    timeout: 10000,
+                    success: function (data) {
+                        if (data.code == "200") {
+                            var num = data.data.developer_num;
+//						console.log(JSON.stringify(data));
+                            num_entries = Math.ceil(num / 10);
+                            $("#Pagination").pagination(num_entries, {
+                                num_edge_entries: 1, //边缘页数
+                                num_display_entries: 5, //主体页数
+                                callback: pageselectCallback1,
+                                items_per_page: 1, //每页显示1项
+                                prev_text: "前一页",
+                                next_text: "后一页"
+                            });
+
+
+                        } else {
+                            console.log(JSON.stringify(data));
+                        }
+                    },
+                    error: function (xhr, type, errorThrown) {
+
+
+                    }
+                });
+            }
+            else {
+                document.getElementById("Pagination").style.display = 'none';
+                $.ajax({
+                    type: "post",
+                    url: "http://www.ethcloud.net/FranceWebsite/handle/searchUser.php",
+                    data: {
+                        values: values,
+                        itype: type
+                    },
+                    dataType: 'json',
+                    timeout: 10000,
+                    success: function (data) {
+                        if (data.code == "200") {
+                            console.log(JSON.stringify(data));
+                            var div = document.getElementById("all_table");
+                            for (var i = 0; i < data.data.length; i++) {
+                                var lis = document.createElement("tr");
+                                var id = data.data[i].user_id;
+                                var name = data.data[i].name;
+                                var gendar = data.data[i].d_gendar;
+                                var birth = data.data[i].d_birth;
+                                var city = data.data[i].d_city;
+                                var language = data.data[i].d_language;
+                                var phone = data.data[i].phone;
+                                var email = data.data[i].email;
+                                var education = data.data[i].d_education;
+                                var project = data.data[i].d_project;
+                                var resume = data.data[i].d_resume;
+                                var cointype = data.data[i].d_coinType;
+                                var coinAddress = data.data[i].d_coinAddress;
+                                var succ = data.data[i].is_success == 1 ? "已处理" : "未处理";
+                                lis.innerHTML = "<td>" + name + "  </td><td>" + gendar + "</td><td>" + birth + " </td><td>" + city + " </td><td>" + language + " </td><td>" + phone + " </td><td>" + email + "  </td><td>" + project + "</td>" + "<td><button class='btn'>发送邮件</button></td>";
+                                div.appendChild(lis);
+                                lis.id = data.data[i].user_id;
+                                lis.name = data.data[i].name;
+                                lis.succ = data.data[i].is_success;
+                                lis.email = data.data[i].email;
+                                lis.getElementsByClassName('btn')[0].addEventListener('click', function () {
+                                    var email = this.parentNode.parentNode.email;
+                                    var succ = this.parentNode.parentNode.succ;
+                                    if (succ == '0') {
+                                        $('#succ_1').modal();
+                                        document.getElementById("ms0").innerText = '此用户未付款！';
+                                    } else {
+                                        $.ajax({
+                                            type: "post",
+                                            url: "http://www.ethcloud.net/FranceWebsite/Register/email.php",
+                                            data: {
+                                                email: email,
+                                            },
+                                            dataType: 'json',
+                                            timeout: 10000,
+                                            success: function (data) {
+                                                if (data.code == '200') {
+                                                    $('#succ').modal();
+                                                } else {
+                                                    $('#succ0').modal();
+                                                }
+                                            },
+                                            error: function (xhr, type, errorThrown) {
+
+
+                                            }
+                                        });
+                                    }
+                                });
+//						lis.addEventListener('click',function(){
+//							var user_id=this.id;
+//							var trs=this;
+//							if (this.succ==1) {
+//								$('#succ_1').modal();
+//								document.getElementById("ms0").innerText='ID: '+this.id+' / Name: '+this.name+' / 此用户已处理！';
+//							} else{
+//								$('#succ_0').modal();
+//								document.getElementById("ms1").innerText='ID: '+this.id+' / Name: '+this.name+' / 请核对信息确认处理！！';
+//								document.getElementById("yes").addEventListener('click',function(){
+//									$.ajax({
+//										type:"post",
+//										url:"http://www.ethcloud.net/FranceWebsite/handle/handleApply.php",
+//										data:{
+//												userid:user_id,
+//												itype:2
+//											},
+//										dataType: 'json',
+//										timeout: 10000,
+//										success: function(data) {
+//											if(data.code == "200"){
+//												var childArrs=trs.children || trs.childNodes;
+//												childArrs[childArrs.length-1].innerText='已处理';
+//												$('#succ').modal();
+//													}else{
+//														console.log(JSON.stringify(data));
+//													}
+//												},
+//												error: function(xhr, type, errorThrown) {
+//
+//
+//												}
+//									});
+//								})
+//							}
+//
+//						})
+                            }
+                        }
+                        else if (data.code == "150") {
+                            $('#succ_1').modal();
+                            document.getElementById("ms0").innerText = '没此用户 请核对Email/phone';
+                        }
+                        else {
+                            console.log(JSON.stringify(data));
+                        }
+                    },
+                    error: function (xhr, type, errorThrown) {
+
+
+                    }
+                });
+            }
+        }
+        else if (type == '1') {
+            document.getElementById("all_table").innerHTML = '<tr class="th"><td>Companyname</td><td>country</td><td>website</td><td>phone</td><td>email</td><td>Project Description</td><td>发送邮件</td></tr>';
+            if (values == '') {
+                $.ajax({
+                    type: "post",
+                    url: "http://www.ethcloud.net/FranceWebsite/handle/getAllNum.php",
+                    dataType: 'json',
+                    timeout: 10000,
+                    success: function (data) {
+                        if (data.code == "200") {
+                            var num = data.data.startups_num;
+                            console.log(num);
+                            num_entries = Math.ceil(num / 10);
+                            $("#Pagination").pagination(num_entries, {
+                                num_edge_entries: 1, //边缘页数
+                                num_display_entries: 5, //主体页数
+                                callback: pageselectCallback,
+                                items_per_page: 1, //每页显示1项
+                                prev_text: "前一页",
+                                next_text: "后一页"
+                            });
+
+
+                        } else {
+                            console.log(JSON.stringify(data));
+                        }
+                    },
+                    error: function (xhr, type, errorThrown) {
+
+
+                    }
+                });
+            }
+            else {
+                document.getElementById("Pagination").style.display = 'none';
+                $.ajax({
+                    type: "post",
+                    url: "http://www.ethcloud.net/FranceWebsite/handle/searchUser.php",
+                    data: {
+                        values: values,
+                        itype: type
+                    },
+                    dataType: 'json',
+                    timeout: 10000,
+                    success: function (data) {
+                        if (data.code == "200") {
+                            console.log(JSON.stringify(data));
+                            var div = document.getElementById("all_table");
+                            for (var i = 0; i < data.data.length; i++) {
+                                var lis = document.createElement("tr");
+                                var id = data.data[i].user_id;
+                                var name = data.data[i].name;
+                                var address = data.data[i].s_address;
+                                var web = data.data[i].s_website;
+                                var phone = data.data[i].phone;
+                                var email = data.data[i].email;
+                                var project = data.data[i].s_project;
+                                var field = data.data[i].s_field;
+                                var type = data.data[i].s_coinType;
+                                var coin = data.data[i].s_coinAddress;
+                                var succ = data.data[i].is_success == 1 ? "已处理" : "未处理";
+                                lis.innerHTML = "<td>" + name + "  </td><td>" + address + "</td><td>" + web + " </td><td>" + phone + " </td><td>" + email + " </td><td>" + field + "  </td>" + "<td><button class='btn'>发送邮件</button></td>";
+                                div.appendChild(lis);
+                                lis.id = data.data[i].user_id;
+                                lis.name = data.data[i].name;
+                                lis.succ = data.data[i].is_success;
+                                lis.email = data.data[i].email;
+                                lis.getElementsByClassName('btn')[0].addEventListener('click', function () {
+                                    var email = this.parentNode.parentNode.email;
+                                    var succ = this.parentNode.parentNode.succ;
+                                    if (succ == '0') {
+                                        $('#succ_1').modal();
+                                        document.getElementById("ms0").innerText = '此用户未付款！';
+                                    } else {
+                                        $.ajax({
+                                            type: "post",
+                                            url: "http://www.ethcloud.net/FranceWebsite/Register/email.php",
+                                            data: {
+                                                email: email,
+                                            },
+                                            dataType: 'json',
+                                            timeout: 10000,
+                                            success: function (data) {
+                                                if (data.code == '200') {
+                                                    $('#succ').modal();
+                                                } else {
+                                                    $('#succ0').modal();
+                                                }
+                                            },
+                                            error: function (xhr, type, errorThrown) {
+
+
+                                            }
+                                        });
+                                    }
+                                });
+//						lis.addEventListener('click',function(){
+//							console.log(this.name);
+//							var user_id=this.id;
+//							var trs=this;
+////							console.log(this.type);
+//							if (this.succ==1) {
+//								$('#succ_1').modal();
+//								document.getElementById("ms0").innerText='ID:'+this.id+' / Companyname: '+this.name+' / 此用户已处理！';
+//							} else{
+//								$('#succ_0').modal();
+//								document.getElementById("ms1").innerText='ID: '+this.id+' / Companyname: '+this.name+' / 请核对信息确认处理！！';
+//								document.getElementById("yes").addEventListener('click',function(){
+//									console.log(user_id);
+//									$.ajax({
+//										type:"post",
+//										url:"http://www.ethcloud.net/FranceWebsite/handle/handleApply.php",
+//										data:{
+//												userid:user_id,
+//												itype:1
+//											},
+//										dataType: 'json',
+//										timeout: 10000,
+//										success: function(data) {
+//											if(data.code == "200"){
+//												var childArrs=trs.children || trs.childNodes;
+//												childArrs[childArrs.length-1].innerText='已处理';
+//												$('#succ').modal();
+//													}else{
+//														console.log(JSON.stringify(data));
+//													}
+//												},
+//												error: function(xhr, type, errorThrown) {
+//
+//
+//												}
+//									});
+//								})
+//							}
+//
+//						})
+                            }
+                        }
+                        else if (data.code == "150") {
+                            $('#succ_1').modal();
+                            document.getElementById("ms0").innerText = '没此用户 请核对Email/phone';
+                        }
+                        else {
+                            console.log(JSON.stringify(data));
+                        }
+                    },
+                    error: function (xhr, type, errorThrown) {
+
+
+                    }
+                });
+            }
+        } else if (type == '6') {
+            $.ajax({
+                type: "post",
+                url: "http://www.ethcloud.net/FranceWebsite/handle/getAllNum.php",
+                dataType: 'json',
+                timeout: 10000,
+                success: function (data) {
+                    if (data.code == "200") {
+                        var num = data.data.contact_num;
+                        console.log(num);
+                        num_entries = Math.ceil(num / 10);
+                        $("#Pagination").pagination(num_entries, {
+                            num_edge_entries: 1, //边缘页数
+                            num_display_entries: 5, //主体页数
+                            callback: pageselectCallback4,
+                            items_per_page: 1, //每页显示1项
+                            prev_text: "前一页",
+                            next_text: "后一页"
+                        });
+
+
+                    } else {
+                        console.log(JSON.stringify(data));
+                    }
+                },
+                error: function (xhr, type, errorThrown) {
+
+
+                }
+            });
+        } else if (type == '7') {
+            $.ajax({
+                type: "post",
+                url: "http://www.ethcloud.net/FranceWebsite/handle/getAllNum.php",
+                dataType: 'json',
+                timeout: 10000,
+                success: function (data) {
+                    if (data.code == "200") {
+                        var num = data.data.volunteer_num;
+                        console.log(num);
+                        num_entries = Math.ceil(num / 10);
+                        $("#Pagination").pagination(num_entries, {
+                            num_edge_entries: 1, //边缘页数
+                            num_display_entries: 5, //主体页数
+                            callback: pageselectCallback7,
+                            items_per_page: 1, //每页显示1项
+                            prev_text: "前一页",
+                            next_text: "后一页"
+                        });
+                    } else {
+                        console.log(JSON.stringify(data));
+                    }
+                },
+                error: function (xhr, type, errorThrown) {
+
+                }
+            });
+        }
+
+
+    });
+
+    function pageselectCallback5(page_index, jq) {
+        console.log(page_index);
+        var start;
+        var count = 10;
+        document.getElementById("all_table").innerHTML = '<tr class="th"><td>Name</td><td>Company</td><td>Email</td><td>Phone</td><td>paytype</td><td>Ticket type</td><td>money</td><td>card</td><td>支付状态</td><td>发送邮件</td></tr>';
+        if (page_index == 0) {
+            start = 0;
+        } else if (page_index >= 1) {
+            start = page_index * 10;
+        }
+        $.ajax({
+            type: "post",
+            data: {
+                start: start,
+                count: count
+            },
+            url: "http://www.ethcloud.net/FranceWebsite/Register/getUserPay.php",
+            dataType: 'json',
+            timeout: 10000,
+            success: function (data) {
+                if (data.code == "200") {
+                    console.log(JSON.stringify(data));
+                    var div = document.getElementById("all_table");
+                    for (var i = 0; i < data.data.length; i++) {
+                        var lis = document.createElement("tr");
+                        (i % 2 == 0) ? lis.className = "lis_class" : lis.className = "";
+                        var id = data.data[i].user_id;
+                        var name = data.data[i].name;
+                        var company = data.data[i].u_company;
+                        var email = data.data[i].email;
+                        var phone = data.data[i].phone;
+                        var pay = data.data[i].u_coinType;
+                        var ticket = data.data[i].pay_type;
+
+                        if (ticket == '1') {
+                            ticket = '普通票';
+                        } else if (ticket == '2') {
+                            ticket = 'VIP票';
+                        } else {
+                            ticket = '无';
+                        }
+                        if (pay == 1) {
+                            var paytype = 'VISA';
+                        } else if (pay == 4) {
+                            var paytype = 'ETH';
+                        } else {
+                            var paytype = 'BTC';
+                        }
+                        var txid = data.data[i].txid;
+                        if (txid != null && txid != '' && txid != undefined) {
+                            var tx = txid.substring(0, 15) + '......';
+                        }
+                        else {
+                            var txid = '无';
+                        }
+
+                        var message = data.data[i].u_coinAddress;
+                        var succ = data.data[i].is_success == 1 ? "已付款" : "未付款";
+                        var num = data.data[i].is_success;
+                        var money = data.data[i].money;
+                        if (money == null) {
+                            money = '无';
+                        }
+                        if (num == 0) {
+                            if (pay == 1) {
+                                lis.innerHTML = "<td>" + name + "  </td><td>" + company + "</td><td>" + email + " </td><td>" + phone + " </td><td>" + paytype + " </td><td>" + ticket + " </td><td>" + money + "</td><td>" + message + "</td><td>" + succ + "</td> " + "<td><button disabled='disabled'  class='btn btn0'>发送邮件</button></td>";
+                            } else if (pay == 4) {
+                                lis.innerHTML = "<td>" + name + "  </td><td>" + company + "</td><td>" + email + " </td><td>" + phone + " </td><td>" + paytype + " </td><td>" + ticket + " </td><td>" + money + "</td><td>无</td><td>" + succ + "</td> " + "<td><button  disabled='disabled' class='btn btn0'>发送邮件</button></td>";
+                            } else if (pay == 5) {
+                                lis.innerHTML = "<td>" + name + "  </td><td>" + company + "</td><td>" + email + " </td><td>" + phone + " </td><td>" + paytype + " </td><td>" + ticket + " </td><td>" + money + "</td><td>无</td><td>" + succ + "</td> " + "<td><button  disabled='disabled' class='btn btn0'>发送邮件</button></td>";
+
+                            }
+                        } else {
+                            if (pay == 1) {
+                                lis.innerHTML = "<td>" + name + "  </td><td>" + company + "</td><td>" + email + " </td><td>" + phone + " </td><td>" + paytype + " </td><td>" + ticket + " </td><td>" + money + "</td><td>" + message + "</td><td>" + succ + "</td> " + "<td><button class='btn'>发送邮件</button></td>";
+                            } else if (pay == 4) {
+                                lis.innerHTML = "<td>" + name + "  </td><td>" + company + "</td><td>" + email + " </td><td>" + phone + " </td><td>" + paytype + " </td><td>" + ticket + " </td><td>" + money + " ETH</td><td>无</td><td>" + succ + "</td> " + "<td><button class='btn'>发送邮件</button></td>";
+                            } else if (pay == 5) {
+                                lis.innerHTML = "<td>" + name + "  </td><td>" + company + "</td><td>" + email + " </td><td>" + phone + " </td><td>" + paytype + " </td><td>" + ticket + " </td><td>" + money + " BTC</td><td>无</td><td>" + succ + "</td> " + "<td><button class='btn'>发送邮件</button></td>";
+
+                            }
+                        }
+                        div.appendChild(lis);
+                        lis.id = data.data[i].user_id;
+                        lis.name = data.data[i].name;
+                        lis.succ = data.data[i].is_success;
+                        lis.email = data.data[i].email;
+                        lis.getElementsByClassName('btn')[0].addEventListener('click', function () {
+                            var email = this.parentNode.parentNode.email;
+                            var succ = this.parentNode.parentNode.succ;
+                            if (succ == '0') {
+                                $('#succ_1').modal();
+                                document.getElementById("ms0").innerText = '此用户未付款！';
+                            } else {
+                                $.ajax({
+                                    type: "post",
+                                    url: "http://www.ethcloud.net/FranceWebsite/Register/email.php",
+                                    data: {
+                                        email: email,
+                                    },
+                                    dataType: 'json',
+                                    timeout: 10000,
+                                    success: function (data) {
+                                        if (data.code == '200') {
+                                            $('#succ').modal();
+                                        } else {
+                                            console.log(JSON.stringify(data));
+                                            $('#succ0').modal();
+                                        }
+                                    },
+                                    error: function (xhr, type, errorThrown) {
+
+
+                                    }
+                                });
+                            }
+                        });
+//						lis.addEventListener('click',function(){
+//							var user_id=this.id;
+//							var trs=this;
+//							if (this.succ==1) {
+//								$('#succ_1').modal();
+//								document.getElementById("ms0").innerText='ID: '+this.id+' / Name: '+this.name+' / 此用户已已付款！';
+//							} else{
+//								$('#succ_0').modal();
+//								document.getElementById("ms1").innerText='ID: '+this.id+' / Name: '+this.name+' / 请核对支付信息确认支付！！';
+//								document.getElementById("yes").addEventListener('click',function(){
+//									$.ajax({
+//										type:"post",
+//										url:"http://www.ethcloud.net/FranceWebsite/handle/handleApply.php",
+//										data:{
+//												userid:user_id,
+//												itype:5
+//											},
+//										dataType: 'json',
+//										timeout: 10000,
+//										success: function(data) {
+//											if(data.code == "200"){
+//												var childArrs=trs.children || trs.childNodes;
+//												childArrs[childArrs.length-1].innerText='已处理';
+//												$('#succ').modal();
+//													}else{
+//														console.log(JSON.stringify(data));
+//													}
+//												},
+//												error: function(xhr, type, errorThrown) {
+//
+//
+//												}
+//									});
+//								})
+//							}
+//
+//						})
+                    }
+                } else {
+                    console.log(JSON.stringify(data));
+                }
+            },
+            error: function (xhr, type, errorThrown) {
+
+
+            }
+        });
+
+    }
+
+    function pageselectCallback(page_index, jq) {
+        console.log(page_index);
+        var start;
+        var count = 10;
+        document.getElementById("all_table").innerHTML = '<tr class="th"><td>Companyname</td><td>country</td><td>website</td><td>phone</td><td>email</td><td>Project Description</td><td>发送邮件</td></tr>';
+        if (page_index == 0) {
+            start = 0;
+        } else if (page_index >= 1) {
+            start = page_index * 10;
+        }
+        $.ajax({
+            type: "post",
+            data: {
+                start: start,
+                count: count
+            },
+            url: "http://www.ethcloud.net/FranceWebsite/Register/getStartups.php",
+            dataType: 'json',
+            timeout: 10000,
+            success: function (data) {
+                if (data.code == "200") {
+                    console.log(JSON.stringify(data));
+                    var div = document.getElementById("all_table");
+                    for (var i = 0; i < data.data.length; i++) {
+                        var lis = document.createElement("tr");
+                        (i % 2 == 0) ? lis.className = "lis_class" : lis.className = "";
+                        var id = data.data[i].user_id;
+                        var name = data.data[i].name;
+                        var address = data.data[i].s_address;
+                        var web = data.data[i].s_website;
+                        var phone = data.data[i].phone;
+                        var email = data.data[i].email;
+                        var project = data.data[i].s_project;
+                        var field = data.data[i].s_field;
+                        var type = data.data[i].s_coinType;
+                        var coin = data.data[i].s_coinAddress;
+                        var succ = data.data[i].is_success == 1 ? "已处理" : "未处理";
+                        lis.innerHTML = "<td>" + name + "  </td><td>" + address + "</td><td>" + web + " </td><td>" + phone + " </td><td>" + email + " </td><td>" + field + "  </td>" + "<td><button class='btn'>发送邮件</button></td>";
+                        div.appendChild(lis);
+                        lis.id = data.data[i].user_id;
+                        lis.name = data.data[i].name;
+                        lis.succ = data.data[i].is_success;
+                        lis.email = data.data[i].email;
+                        lis.getElementsByClassName('btn')[0].addEventListener('click', function () {
+                            var email = this.parentNode.parentNode.email;
+                            var succ = this.parentNode.parentNode.succ;
+                            if (succ == '0') {
+                                $('#succ_1').modal();
+                                document.getElementById("ms0").innerText = '此用户未付款！';
+                            } else {
+                                $.ajax({
+                                    type: "post",
+                                    url: "http://www.ethcloud.net/FranceWebsite/Register/email.php",
+                                    data: {
+                                        email: email,
+                                    },
+                                    dataType: 'json',
+                                    timeout: 10000,
+                                    success: function (data) {
+                                        if (data.code == '200') {
+                                            $('#succ').modal();
+                                        } else {
+                                            $('#succ0').modal();
+                                        }
+                                    },
+                                    error: function (xhr, type, errorThrown) {
+
+
+                                    }
+                                });
+                            }
+                        });
+//						lis.addEventListener('click',function(){
+//							console.log(this.name);
+//							var user_id=this.id;
+//							var trs=this;
+////							console.log(this.type);
+//							if (this.succ==1) {
+//								$('#succ_1').modal();
+//								document.getElementById("ms0").innerText='ID:'+this.id+' / Companyname: '+this.name+' / 此用户已处理！';
+//							} else{
+//								$('#succ_0').modal();
+//								document.getElementById("ms1").innerText='ID: '+this.id+' / Companyname: '+this.name+' / 请核对信息确认处理！！';
+//								document.getElementById("yes").addEventListener('click',function(){
+//									console.log(user_id);
+//									$.ajax({
+//										type:"post",
+//										url:"http://www.ethcloud.net/FranceWebsite/handle/handleApply.php",
+//										data:{
+//												userid:user_id,
+//												itype:1
+//											},
+//										dataType: 'json',
+//										timeout: 10000,
+//										success: function(data) {
+//											if(data.code == "200"){
+//												var childArrs=trs.children || trs.childNodes;
+//												childArrs[childArrs.length-1].innerText='已处理';
+//												$('#succ').modal();
+//													}else{
+//														console.log(JSON.stringify(data));
+//													}
+//												},
+//												error: function(xhr, type, errorThrown) {
+//
+//
+//												}
+//									});
+//								})
+//							}
+//
+//						})
+                    }
+                } else {
+                    console.log(JSON.stringify(data));
+                }
+            },
+            error: function (xhr, type, errorThrown) {
+
+
+            }
+        });
+
+    }
+
+    function pageselectCallback1(page_index, jq) {
+        console.log(page_index);
+        var start;
+        var count = 10;
+        document.getElementById("all_table").innerHTML = '<tr class="th"><td>Name</td><td>gender</td><td>birth</td><td>city</td><td>language</td><td>phone</td><td>email</td><td>project</td><td>发送邮件</td></tr>';
+        if (page_index == 0) {
+            start = 0;
+        } else if (page_index >= 1) {
+            start = page_index * 10;
+        }
+        $.ajax({
+            type: "post",
+            data: {
+                start: start,
+                count: count
+            },
+            url: "http://www.ethcloud.net/FranceWebsite/Register/getDeveloper.php",
+            dataType: 'json',
+            timeout: 10000,
+            success: function (data) {
+                if (data.code == "200") {
+                    console.log(JSON.stringify(data));
+                    var div = document.getElementById("all_table");
+                    for (var i = 0; i < data.data.length; i++) {
+                        var lis = document.createElement("tr");
+                        (i % 2 == 0) ? lis.className = "lis_class" : lis.className = "";
+                        var id = data.data[i].user_id;
+                        var name = data.data[i].name;
+                        var gendar = data.data[i].d_gendar;
+                        var birth = data.data[i].d_birth;
+                        var city = data.data[i].d_city;
+                        var language = data.data[i].d_language;
+                        var phone = data.data[i].phone;
+                        var email = data.data[i].email;
+                        var education = data.data[i].d_education;
+                        var project = data.data[i].d_project;
+                        var resume = data.data[i].d_resume;
+                        var cointype = data.data[i].d_coinType;
+                        var coinAddress = data.data[i].d_coinAddress;
+                        var succ = data.data[i].is_success == 1 ? "已处理" : "未处理";
+                        lis.innerHTML = "<td>" + name + "  </td><td>" + gendar + "</td><td>" + birth + " </td><td>" + city + " </td><td>" + language + " </td><td>" + phone + " </td><td>" + email + "  </td><td>" + project + "</td>" + "<td><button class='btn'>发送邮件</button></td>";
+                        div.appendChild(lis);
+                        lis.id = data.data[i].user_id;
+                        lis.name = data.data[i].name;
+                        lis.succ = data.data[i].is_success;
+                        lis.email = data.data[i].email;
+                        lis.getElementsByClassName('btn')[0].addEventListener('click', function () {
+                            var email = this.parentNode.parentNode.email;
+                            var succ = this.parentNode.parentNode.succ;
+                            if (succ == '0') {
+                                $('#succ_1').modal();
+                                document.getElementById("ms0").innerText = '此用户未付款！';
+                            } else {
+                                $.ajax({
+                                    type: "post",
+                                    url: "http://www.ethcloud.net/FranceWebsite/Register/email.php",
+                                    data: {
+                                        email: email,
+                                    },
+                                    dataType: 'json',
+                                    timeout: 10000,
+                                    success: function (data) {
+                                        if (data.code == '200') {
+                                            $('#succ').modal();
+                                        } else {
+                                            $('#succ0').modal();
+                                        }
+                                    },
+                                    error: function (xhr, type, errorThrown) {
+
+
+                                    }
+                                });
+                            }
+                        });
+//						lis.addEventListener('click',function(){
+//							var user_id=this.id;
+//							var trs=this;
+//							if (this.succ==1) {
+//								$('#succ_1').modal();
+//								document.getElementById("ms0").innerText='ID: '+this.id+' / Name: '+this.name+' / 此用户已处理！';
+//							} else{
+//								$('#succ_0').modal();
+//								document.getElementById("ms1").innerText='ID: '+this.id+' / Name: '+this.name+' / 请核对信息确认处理！！';
+//								document.getElementById("yes").addEventListener('click',function(){
+//									$.ajax({
+//										type:"post",
+//										url:"http://www.ethcloud.net/FranceWebsite/handle/handleApply.php",
+//										data:{
+//												userid:user_id,
+//												itype:2
+//											},
+//										dataType: 'json',
+//										timeout: 10000,
+//										success: function(data) {
+//											if(data.code == "200"){
+//												var childArrs=trs.children || trs.childNodes;
+//												childArrs[childArrs.length-1].innerText='已处理';
+//												$('#succ').modal();
+//													}else{
+//														console.log(JSON.stringify(data));
+//													}
+//												},
+//												error: function(xhr, type, errorThrown) {
+//
+//
+//												}
+//									});
+//								})
+//							}
+//
+//						})
+                    }
+                } else {
+                    console.log(JSON.stringify(data));
+                }
+            },
+            error: function (xhr, type, errorThrown) {
+
+
+            }
+        });
+
+    }
+
+    function pageselectCallback2(page_index, jq) {
+        console.log(page_index);
+        var start;
+        var count = 10;
+        document.getElementById("all_table").innerHTML = '<tr class="th"><td>Companyname</td><td>address</td><td>website</td><td>phone</td><td>email</td><td>field</td><td>发送邮件</td></tr>';
+        if (page_index == 0) {
+            start = 0;
+        } else if (page_index >= 1) {
+            start = page_index * 10;
+        }
+        $.ajax({
+            type: "post",
+            data: {
+                start: start,
+                count: count
+            },
+            url: "http://www.ethcloud.net/FranceWebsite/Register/getInvestor.php",
+            dataType: 'json',
+            timeout: 10000,
+            success: function (data) {
+                if (data.code == "200") {
+//					console.log(JSON.stringify(data));
+                    var div = document.getElementById("all_table");
+                    for (var i = 0; i < data.data.length; i++) {
+                        var lis = document.createElement("tr");
+                        (i % 2 == 0) ? lis.className = "lis_class" : lis.className = "";
+                        var id = data.data[i].user_id;
+                        var name = data.data[i].name;
+                        var address = data.data[i].i_address;
+                        var web = data.data[i].i_website;
+                        var phone = data.data[i].phone;
+                        var email = data.data[i].email;
+                        var project = data.data[i].i_project;
+                        var field = data.data[i].i_field;
+                        var type = data.data[i].i_coinType;
+                        var coin = data.data[i].i_coinAddress;
+                        var succ = data.data[i].is_success == 1 ? "已处理" : "未处理";
+                        lis.innerHTML = "<td>" + name + "  </td><td>" + address + "</td><td>" + web + " </td><td>" + phone + " </td><td>" + email + " </td><td>" + field + "  </td>" + "<td><button class='btn'>发送邮件</button></td>";
+                        div.appendChild(lis);
+                        lis.id = data.data[i].user_id;
+                        lis.name = data.data[i].name;
+                        lis.succ = data.data[i].is_success;
+                        lis.email = data.data[i].email;
+                        lis.getElementsByClassName('btn')[0].addEventListener('click', function () {
+                            var email = this.parentNode.parentNode.email;
+                            var succ = this.parentNode.parentNode.succ;
+                            if (succ == '0') {
+                                $('#succ_1').modal();
+                                document.getElementById("ms0").innerText = '此用户未付款！';
+                            } else {
+                                $.ajax({
+                                    type: "post",
+                                    url: "http://www.ethcloud.net/FranceWebsite/Register/email.php",
+                                    data: {
+                                        email: email,
+                                    },
+                                    dataType: 'json',
+                                    timeout: 10000,
+                                    success: function (data) {
+                                        if (data.code == '200') {
+                                            $('#succ').modal();
+                                        } else {
+                                            $('#succ0').modal();
+                                        }
+                                    },
+                                    error: function (xhr, type, errorThrown) {
+
+
+                                    }
+                                });
+                            }
+                        });
+//						lis.addEventListener('click',function(){
+//							var user_id=this.id;
+//							var trs=this;
+//							if (this.succ==1) {
+//								$('#succ_1').modal();
+//								document.getElementById("ms0").innerText='ID: '+this.id+' / Companyname: '+this.name+' / 此用户已处理！';
+//							} else{
+//								$('#succ_0').modal();
+//								document.getElementById("ms1").innerText='ID: '+this.id+' / Companyname: '+this.name+' / 请核对信息确认处理！！';
+//								document.getElementById("yes").addEventListener('click',function(){
+//									$.ajax({
+//										type:"post",
+//										url:"http://www.ethcloud.net/FranceWebsite/handle/handleApply.php",
+//										data:{
+//												userid:user_id,
+//												itype:3
+//											},
+//										dataType: 'json',
+//										timeout: 10000,
+//										success: function(data) {
+//											if(data.code == "200"){
+//												var childArrs=trs.children || trs.childNodes;
+//												childArrs[childArrs.length-1].innerText='已处理';
+//												$('#succ').modal();
+//
+//													}else{
+//														console.log(JSON.stringify(data));
+//													}
+//												},
+//												error: function(xhr, type, errorThrown) {
+//
+//
+//												}
+//									});
+//								})
+//							}
+//
+//						})
+                    }
+                } else {
+                    console.log(JSON.stringify(data));
+                }
+            },
+            error: function (xhr, type, errorThrown) {
+
+
+            }
+        });
+
+    }
+
+
+    function pageselectCallback3(page_index, jq) {
+        console.log(page_index);
+        var start;
+        var count = 10;
+        document.getElementById("all_table").innerHTML = '<tr class="th"><td>Name</td><td>company</td><td>title</td><td>professional</td><td>topic</td><td>phone</td><td>email</td><td>notes</td><td>发送邮件</td></tr>';
+        if (page_index == 0) {
+            start = 0;
+        } else if (page_index >= 1) {
+            start = page_index * 10;
+        }
+        $.ajax({
+            type: "post",
+            data: {
+                start: start,
+                count: count
+            },
+            url: "http://www.ethcloud.net/FranceWebsite/Register/getSpeaker.php",
+            dataType: 'json',
+            timeout: 10000,
+            success: function (data) {
+                if (data.code == "200") {
+                    console.log(JSON.stringify(data));
+                    var div = document.getElementById("all_table");
+                    for (var i = 0; i < data.data.length; i++) {
+                        var lis = document.createElement("tr");
+                        (i % 2 == 0) ? lis.className = "lis_class" : lis.className = "";
+                        var id = data.data[i].user_id;
+                        var name = data.data[i].name;
+                        var CI = data.data[i].sp_CI;
+                        var TP = data.data[i].sp_TP;
+                        var professional = data.data[i].sp_professional;
+                        var topic = data.data[i].sp_topic;
+                        var phone = data.data[i].phone;
+                        var email = data.data[i].email;
+                        var notes = data.data[i].sp_notes;
+                        var succ = data.data[i].is_success == 1 ? "已处理" : "未处理";
+                        lis.innerHTML = "<td>" + name + "  </td><td>" + CI + "</td><td>" + TP + " </td><td>" + professional + " </td><td>" + topic + " </td><td>" + phone + " </td><td>" + email + " </td><td>" + notes + "  </td>" + "<td><button class='btn'>发送邮件</button></td>";
+                        div.appendChild(lis);
+                        lis.id = data.data[i].user_id;
+
+                        lis.succ = data.data[i].is_success;
+                        lis.email = data.data[i].email;
+                        lis.getElementsByClassName('btn')[0].addEventListener('click', function () {
+                            var email = this.parentNode.parentNode.email;
+                            var succ = this.parentNode.parentNode.succ;
+                            if (succ == '0') {
+                                $('#succ_1').modal();
+                                document.getElementById("ms0").innerText = '此用户未付款！';
+                            } else {
+                                $.ajax({
+                                    type: "post",
+                                    url: "http://www.ethcloud.net/FranceWebsite/Register/email.php",
+                                    data: {
+                                        email: email,
+                                    },
+                                    dataType: 'json',
+                                    timeout: 10000,
+                                    success: function (data) {
+                                        if (data.code == '200') {
+                                            $('#succ').modal();
+                                        } else {
+                                            $('#succ0').modal();
+                                        }
+                                    },
+                                    error: function (xhr, type, errorThrown) {
+
+
+                                    }
+                                });
+                            }
+                        });
+//						lis.addEventListener('click',function(){
+//							var user_id=this.id;
+//							var trs=this;
+//							if (this.succ==1) {
+//								$('#succ_1').modal();
+//								document.getElementById("ms0").innerText='ID:'+this.id+' 此用户已处理！';
+//							} else{
+//								$('#succ_0').modal();
+//								document.getElementById("ms1").innerText='ID:'+this.id+' 请核对信息确认处理！！';
+//								document.getElementById("yes").addEventListener('click',function(){
+//									$.ajax({
+//										type:"post",
+//										url:"http://www.ethcloud.net/FranceWebsite/handle/handleApply.php",
+//										data:{
+//												userid:user_id,
+//												itype:4
+//											},
+//										dataType: 'json',
+//										timeout: 10000,
+//										success: function(data) {
+//											if(data.code == "200"){
+//												var childArrs=trs.children || trs.childNodes;
+//												childArrs[childArrs.length-1].innerText='已处理';
+//												$('#succ').modal();
+//													}else{
+//														console.log(JSON.stringify(data));
+//													}
+//												},
+//												error: function(xhr, type, errorThrown) {
+//
+//
+//												}
+//									});
+//								})
+//							}
+//
+//						})
+                    }
+                } else {
+                    console.log(JSON.stringify(data));
+                }
+            },
+            error: function (xhr, type, errorThrown) {
+
+
+            }
+        });
+
+    }
+
+
+    function pageselectCallback4(page_index, jq) {
+        console.log(page_index);
+        var start;
+        var count = 10;
+        document.getElementById("all_table").innerHTML = '<tr class="th"><td>Name</td><td>email</td><td>message</td></tr>';
+        if (page_index == 0) {
+            start = 0;
+        } else if (page_index >= 1) {
+            start = page_index * 10;
+        }
+        $.ajax({
+            type: "post",
+            data: {
+                start: start,
+                count: count
+            },
+            url: "http://www.ethcloud.net/FranceWebsite/contactUs/getContact.php",
+            dataType: 'json',
+            timeout: 10000,
+            success: function (data) {
+                if (data.code == "200") {
+                    console.log(JSON.stringify(data));
+                    var div = document.getElementById("all_table");
+                    for (var i = 0; i < data.data.length; i++) {
+                        var lis = document.createElement("tr");
+                        (i % 2 == 0) ? lis.className = "lis_class" : lis.className = "";
+                        var id = data.data[i].id;
+                        var name = data.data[i].name;
+                        var email = data.data[i].email;
+                        var message = data.data[i].message;
+                        var succ = data.data[i].is_success == 1 ? "已处理" : "未处理";
+                        lis.innerHTML = "<td>" + name + "  </td><td>" + email + "</td><td>" + message + " </td>";
+                        div.appendChild(lis);
+                        lis.id = data.data[i].id;
+
+                        lis.succ = data.data[i].is_success;
+                        lis.email = data.data[i].email;
+                    }
+                } else {
+                    console.log(JSON.stringify(data));
+                }
+            },
+            error: function (xhr, type, errorThrown) {
+
+
+            }
+        });
+    }
+
+    /**
+     * Volunteer and media passes
+     * @param {Object} page_index
+     * @param {Object} jq
+     */
+    function pageselectCallback7(page_index, jq) {
+        console.log(page_index);
+        var start;
+        var count = 10;
+        document.getElementById("all_table").innerHTML = '<tr class="th"><td>Name</td><td>Organization/Institution/Company</td><td>Position/Title</td><td>Fields of Interest</td><td>Telephone</td><td>Email</td><td>Notes</td></tr>';
+        if (page_index == 0) {
+            start = 0;
+        } else if (page_index >= 1) {
+            start = page_index * 10;
+        }
+        $.ajax({
+            type: "post",
+            data: {
+                start: start,
+                count: count
+            },
+            url: "http://www.ethcloud.net/FranceWebsite/Register/getVolunteer.php",
+            dataType: 'json',
+            timeout: 10000,
+            success: function (data) {
+                if (data.code == "200") {
+                    console.log(JSON.stringify(data));
+                    var div = document.getElementById("all_table");
+                    for (var i = 0; i < data.data.length; i++) {
+                        var lis = document.createElement("tr");
+                        (i % 2 == 0) ? lis.className = "lis_class" : lis.className = "";
+                        var id = data.data[i].user_id;
+                        var name = data.data[i].name;
+                        var v_CI = data.data[i].v_CI;
+                        var v_TP = data.data[i].v_TP;
+                        var v_professional = data.data[i].v_professional;
+                        var phone = data.data[i].phone;
+                        var email = data.data[i].email;
+                        var v_notes = data.data[i].v_notes;
+                        var succ = data.data[i].is_success == 1 ? "已处理" : "未处理";
+                        lis.innerHTML = "<td>" + name + "  </td><td>" + v_CI + "</td><td>" + v_TP + " </td><td>" + v_professional + "</td><td>" + phone + "</td><td>" + email + "</td><td>" + v_notes + "</td>";
+                        div.appendChild(lis);
+                        lis.id = data.data[i].id;
+
+                        lis.succ = data.data[i].is_success;
+                        lis.email = data.data[i].email;
+                    }
+                } else {
+                    console.log(JSON.stringify(data));
+                }
+            },
+            error: function (xhr, type, errorThrown) {
+
+
+            }
+        });
+
+    }
+
+    document.getElementById("handlepay").addEventListener('click', function () {
+        var files = document.getElementById("file").value;
+        var filestype = files.slice(files.lastIndexOf(".") + 1).toLowerCase();
+        if (filestype == "csv") {
+            var client = new OSS.Wrapper({
+                region: 'oss-cn-shanghai',
+                accessKeyId: '3mF1hC6UIidCr7tD',
+                accessKeySecret: 'SG9EBz9G6AaEgrVGIWi7NdeEanqPZ2',
+                bucket: 'ethtesting'
+            });
+            var date = new Date();
+//
+            var month = date.getMonth() + 1;
+            var strDate = date.getDate();
+            if (month >= 1 && month <= 9) {
+                month = "0" + month;
+            }
+            if (strDate >= 0 && strDate <= 9) {
+                strDate = "0" + strDate;
+            }
+            var newtime = date.getFullYear() + month + strDate
+                + date.getHours() + date.getMinutes()
+                + date.getSeconds();
+
+
+            var file_name = newtime + "." + filestype;
+            console.log(file_name);
+            var subfile = document.getElementById("file").files[0];
+            var aliyunUrl;
+            client.multipartUpload(file_name, subfile).then(function (result) {
+//					      	console.log('111111111');
+                if (result.res.status == "200") {
+                    aliyunUrl = "http://ethtesting.oss-cn-shanghai.aliyuncs.com/" + file_name;
+                    console.log(aliyunUrl);
+                    $.ajax({
+                        type: "post",
+                        url: "http://www.ethcloud.net/FranceWebsite/Register/handlePay.php",
+                        data: {
+                            urls: aliyunUrl,
+                        },
+                        dataType: 'json',
+                        timeout: 10000,
+                        success: function (data) {
+                            console.log(JSON.stringify(data));
+                            if (data.code == '200') {
+                                $('#succ_1').modal();
+                                document.getElementById("ms0").innerText = '导入成功';
+                                setTimeout(function () {
+                                    location = location;
+                                }, 500);
+                            } else if (data.code == '300') {
+                                $('#succ_1').modal();
+                                document.getElementById("ms0").innerText = '已是最新数据';
+                            } else if (data.code == '150') {
+                                $('#succ_1').modal();
+                                document.getElementById("ms0").innerText = '没有未付款用户';
+                            }
+                        },
+                        error: function (xhr, type, errorThrown) {
+
+                            console.log(JSON.stringify(data));
+                        }
+                    });
+                }
+            }).catch(function (err) {
+                console.log(err);
+            });
+
+        } else {
+            $('#succ_1').modal();
+            document.getElementById("ms0").innerText = '文件 格式不对！';
+        }
+    });
+
+    document.getElementById("handlepay1").addEventListener('click', function () {
+        var files = document.getElementById("file").value;
+        var filestype = files.slice(files.lastIndexOf(".") + 1).toLowerCase();
+        if (filestype == "json") {
+            var client = new OSS.Wrapper({
+                region: 'oss-cn-shanghai',
+                accessKeyId: '3mF1hC6UIidCr7tD',
+                accessKeySecret: 'SG9EBz9G6AaEgrVGIWi7NdeEanqPZ2',
+                bucket: 'ethtesting'
+            });
+            var date = new Date();
+//
+            var month = date.getMonth() + 1;
+            var strDate = date.getDate();
+            if (month >= 1 && month <= 9) {
+                month = "0" + month;
+            }
+            if (strDate >= 0 && strDate <= 9) {
+                strDate = "0" + strDate;
+            }
+            var newtime = date.getFullYear() + month + strDate
+                + date.getHours() + date.getMinutes()
+                + date.getSeconds();
+
+
+            var file_name = newtime + "." + filestype;
+            console.log(file_name);
+            var subfile = document.getElementById("file").files[0];
+            var aliyunUrl;
+            client.multipartUpload(file_name, subfile).then(function (result) {
+//					      	console.log('111111111');
+                if (result.res.status == "200") {
+                    aliyunUrl = "http://ethtesting.oss-cn-shanghai.aliyuncs.com/" + file_name;
+                    console.log(aliyunUrl);
+                    $.ajax({
+                        type: "post",
+                        url: "http://www.ethcloud.net/FranceWebsite/Register/handlePayCoin.php",
+                        data: {
+                            urls: aliyunUrl,
+                        },
+                        dataType: 'json',
+                        timeout: 10000,
+                        success: function (data) {
+                            console.log(JSON.stringify(data));
+                            if (data.code == '200') {
+                                $('#succ_1').modal();
+                                document.getElementById("ms0").innerText = '导入成功';
+                                setTimeout(function () {
+                                    location = location;
+                                }, 500);
+                            } else if (data.code == '300') {
+                                $('#succ_1').modal();
+                                document.getElementById("ms0").innerText = '已是最新数据';
+                            } else if (data.code == '150') {
+                                $('#succ_1').modal();
+                                document.getElementById("ms0").innerText = '没有未付款用户';
+                            }
+                        },
+                        error: function (xhr, type, errorThrown) {
+
+                            console.log(JSON.stringify(data));
+                        }
+                    });
+                }
+            }).catch(function (err) {
+                console.log(err);
+            });
+
+        } else {
+            $('#succ_1').modal();
+            document.getElementById("ms0").innerText = '文件 格式不对！';
+        }
+    });
+
+    document.getElementById("7").addEventListener('click', function () {
+        document.getElementById("7").style.display = 'none';
+        document.getElementById("8").style.display = '';
+        var stand = document.getElementById("a1").value;
+        var BTC = document.getElementById("a2").value;
+        var VIP = document.getElementById("a3").value;
+        var ETH = document.getElementById("a4").value;
+        var mail = document.getElementById("a5").value;
+        if (stand == '' && BTC == '' && VIP == '' && ETH == '' && mail == '') {
+            $('#succ_1').modal();
+            document.getElementById("ms0").innerText = '至少输入一项内容！';
+        } else {
+            $.ajax({
+                type: "post",
+                url: "http://www.ethcloud.net/FranceWebsite/handle/changeCommon.php",
+                data: {
+                    payStandard: stand,
+                    payVip: VIP,
+                    btcAddr: BTC,
+                    ethAddr: ETH,
+                    emailExample: mail
+                },
+                dataType: 'json',
+                timeout: 10000,
+                success: function (data) {
+                    if (data.code == '200') {
+                        $('#succ_1').modal();
+                        document.getElementById("ms0").innerText = '保存成功！';
+                        document.getElementById("a1").disabled = "disabled";
+                        document.getElementById("a2").disabled = "disabled";
+                        document.getElementById("a3").disabled = "disabled";
+                        document.getElementById("a4").disabled = "disabled";
+                        document.getElementById("a5").disabled = "disabled";
+                    } else {
+                        $('#succ_1').modal();
+                        document.getElementById("ms0").innerText = '保存失败！';
+                        console.log(JSON.stringify(data));
+                    }
+                },
+                error: function (xhr, type, errorThrown) {
+
+
+                }
+            });
+        }
+    });
+    document.getElementById("8").addEventListener('click', function () {
+        document.getElementById("a1").disabled = "";
+        document.getElementById("a2").disabled = "";
+        document.getElementById("a3").disabled = "";
+        document.getElementById("a4").disabled = "";
+        document.getElementById("a5").disabled = "";
+        document.getElementById("7").style.display = '';
+        document.getElementById("8").style.display = 'none';
+    });
+
+    //		function changemysql(){
+    //			console.log($('#mysql').val());
+    //			var mysql=$('#mysql').val();
+    //			if(mysql=="eurp"){
+    //				console.log("1111111111");
+    //				$.ajax({
+    //				type:"post",
+    //				url:"http://www.ethcloud.net/FranceWebsite/common/selectDB.php",
+    //					data:{
+    //						db:"2"
+    //					},
+    //					dataType: 'json',
+    //					timeout: 10000,
+    //					success: function(data) {
+    //						if (data.code=='200') {
+    //							$('#succ_1').modal();
+    //							document.getElementById("ms0").innerText='选择数据库成功,当前选择为欧洲数据库';
+    //							} else{
+    //							$('#succ_1').modal();
+    //							document.getElementById("ms0").innerText='选择失败！';
+    //							console.log(JSON.stringify(data));
+    //						}
+    //					},
+    //					error: function(xhr, type, errorThrown) {
+    //
+    //
+    //					}
+    //				});
+    //			}else{
+    //				$.ajax({
+    //				type:"post",
+    //				url:"http://www.ethcloud.net/FranceWebsite/common/selectDB.php",
+    //					data:{
+    //						db:"1"
+    //					},
+    //					dataType: 'json',
+    //					timeout: 10000,
+    //					success: function(data) {
+    //						if (data.code=='200') {
+    //							$('#succ_1').modal();
+    //							document.getElementById("ms0").innerText='选择数据库成功,当前选择为亚洲数据库';
+    //							} else{
+    //							$('#succ_1').modal();
+    //							document.getElementById("ms0").innerText='选择失败！';
+    //							console.log(JSON.stringify(data));
+    //						}
+    //					},
+    //					error: function(xhr, type, errorThrown) {
+    //
+    //
+    //						}
+    //				});
+    //			}
+    //		}
+    function rateRefresh() {
+        document.getElementById("rate_btn").innerText = "正在刷新...";
+        document.getElementById("rate_btn").disabled = "disabled";
+        $.ajax({
+            type: "post",
+            url: "http://www.ethcloud.net/FranceWebsite/handle/refreshCoin.php",
+            data: {
+                db: "2"
+            },
+            dataType: 'json',
+            timeout: 10000,
+            success: function (data) {
+                if (data.code == '200') {
+
+                    console.log(JSON.stringify(data));
+                    document.getElementById("btc_rate").innerText = data.data.btc;
+                    document.getElementById("eth_rate").innerText = data.data.eth;
+                    document.getElementById("eur_rate").innerText = data.data.cur;
+                    document.getElementById("rate_time").innerText = data.data.last_time;
+                    document.getElementById("rate_btn").innerText = "刷新";
+                    document.getElementById("rate_btn").disabled = "";
+                } else {
+
+                    console.log(JSON.stringify(data));
+                }
+            },
+            error: function (xhr, type, errorThrown) {
+
+
+            }
+        });
+    }
+
+    function stateRefresh() {
+        document.getElementById("state_btn").innerText = "正在获取...";
+        document.getElementById("state_btn").disabled = "disabled";
+        $.ajax({
+            type: "post",
+            url: "http://www.ethcloud.net/FranceWebsite/handle/refreshRegister.php",
+            data: {
+                db: "2"
+            },
+            dataType: 'json',
+            timeout: 10000,
+            success: function (data) {
+                if (data.code == '200') {
+                    $('#succ_1').modal();
+                    document.getElementById("ms0").innerText = '数据更新成功！';
+                    location.reload();
+                } else if (data.code == '300') {
+                    $('#succ_1').modal();
+                    document.getElementById("ms0").innerText = '已是最新数据！';
+                    console.log(JSON.stringify(data));
+                    document.getElementById("state_btn").innerText = "获取最新支付状态";
+                    document.getElementById("state_btn").disabled = "";
+                } else {
+                    $('#succ_1').modal();
+                    document.getElementById("ms0").innerText = '没有未付款用户！';
+                    document.getElementById("state_btn").innerText = "获取最新支付状态";
+                    document.getElementById("state_btn").disabled = "";
+                }
+            },
+            error: function (xhr, type, errorThrown) {
+
+
+            }
+        });
+    }
+
+    function back() {
+        sessionStorage.setItem('meeting_act', '');
+        sessionStorage.setItem('metting_pwd', '');
+        location.href = 'admin_login.html';
+    }
+</script>
+</html>

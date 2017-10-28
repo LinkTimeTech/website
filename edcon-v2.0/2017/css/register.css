@@ -1,0 +1,192 @@
+#res_1:hover, #res_2:hover, #res_4:hover {
+    cursor: pointer;
+}
+
+.icon-bar, .icon-bar:hover {
+    background-color: #FFFFFF;
+}
+
+.navbar-toggle, .navbar-toggle:hover {
+    background-color: #333;
+}
+
+.scrolla {
+    color: #FFFFFF;
+}
+
+.scrolla:hover {
+    color: #1D78CB;
+}
+
+.active a {
+    background-color: #FFFFFF;
+    color: #1D78CB;
+}
+
+.navbar-nav {
+    float: right;
+}
+
+h2 {
+    padding-left: 15px
+}
+
+@media only screen and (min-width: 768px ) {
+    .scrolla {
+        border-radius: 20px;
+        height: 30px;
+        margin-top: 10px;
+        margin-right: 10px;
+
+    }
+
+    .navbar-nav > li > a {
+        padding: 5px 10px 5px 10px;
+    }
+}
+
+.navbar {
+    margin-bottom: 0px;
+}
+
+.li li {
+    margin-bottom: 20px;
+}
+
+.a li {
+    list-style-type: none;
+}
+
+.a li a {
+    border: 1px solid #262626;
+    display: block;
+    width: 100%;
+    height: 40px;
+    line-height: 40px;
+    padding-left: 20px;
+    color: #262626;
+}
+
+.a li a:hover {
+    border: 1px solid #4299f1;
+    display: block;
+    width: 100%;
+    height: 40px;
+    line-height: 40px;
+    padding-left: 20px;
+    color: #4299f1;
+    text-decoration: none;
+}
+
+.form-group {
+    margin: 0px;
+}
+
+label {
+    color: #4299f1;
+}
+
+@media only screen and (min-width: 960px ) {
+    #s-- {
+        padding: 0px;
+        margin-left: 100px;
+    }
+
+    .col-sm-8 {
+        padding-left: 50px;
+    }
+}
+
+@media only screen and (max-width: 960px ) {
+    #logo {
+        display: none;
+    }
+
+    #res_1, #res_2, #res_4 {
+        display: none;
+    }
+}
+
+@media only screen and (min-width: 600px) and (max-width: 767px) {
+    #s-- {
+        padding: 0px;
+        margin-left: 100px;
+    }
+
+    .ul_li {
+        width: 100%;
+    }
+
+    .navbar-collapse {
+        padding: 0px;
+
+    }
+
+    /*.ull{
+        padding: 0px;
+    }*/
+    .ul_l {
+        width: 100%;
+        margin: 0px;
+        padding: 0px;
+    }
+
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1000px) {
+    #s-- {
+        padding: 0px;
+        margin-left: 0px;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    #s-- {
+        padding: 0px;
+        margin: 0px;
+    }
+
+    .ul_li {
+        width: 100%;
+    }
+
+    .navbar-collapse {
+        padding: 0px;
+    }
+
+    .ul_l {
+        width: 100%;
+        margin: 0px;
+        padding: 0px;
+    }
+}
+
+input[type="text"] {
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    padding: 0px;
+}
+
+input[type=number] {
+    -moz-appearance: textfield;
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+#s-- img {
+
+    height: 35px;
+    margin-top: 7.5px;
+}
+
+.table {
+    margin-bottom: 0px;
+}
+			

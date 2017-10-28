@@ -1,0 +1,1390 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>EDCON Conference</title>
+    <link rel="shortcut icon" href=""/>
+    <link rel="stylesheet" href="css/style.css"/>
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="css/main.css"/>
+    <link rel="stylesheet" href="css/register.css"/>
+    <link rel="icon" href="img/favicon.ico" type="image/x-icon">
+    <script src="js/jquery-3.1.1.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/bootstrap.min.js" type="text/javascript" charset="utf-8"></script>
+    <style type="text/css">
+        #login {
+            position: absolute;
+            z-index: 100;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            background-color: #000000;
+            color: #FFFFFF;
+            opacity: 0.4;
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+<div id="login"><img id="" style="position: fixed;left: 50%;top: 45%;z-index: 101;" src="img/login.gif" height="40"/>
+</div>
+
+<nav style="background-color: #1d438a;" class="navbar " role="navigation">
+    <div class="container-fluid ull">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                    data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a id="s--" class="navbar-brand" href="index.html"><span class="yellow">E</span>DCON</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav ul_l">
+                <li class="ul_li"><a class="scrolla" href="index.html#index">Home</a></li>
+                <li class="ul_li"><a class="scrolla" href="index.html#about">About EDCON</a></li>
+                <li class="ul_li"><a class="scrolla" href="index.html#why">Why attend</a></li>
+                <li class="ul_li"><a class="scrolla" href="index.html#main">Agenda</a></li>
+                <li class="ul_li"><a class="scrolla" href="index.html#vip">Speakers</a></li>
+                <li class="ul_li"><a class="scrolla" href="index.html#venue">Venue</a></li>
+                <li class="ul_li"><a class="scrolla" href="index.html#organizers">Org.</a></li>
+                <li class="ul_li"><a class="scrolla" href="index.html#contact">Contact</a></li>
+                <li class="ul_li"><a class="scrolla" href="index.html#sponsors">Sponsors</a></li>
+                <li class="ul_li"><a class="scrolla register" href="register.html">Register</a></li>
+            </ul>
+
+        </div><!-- /.navbar-collapse -->
+    </div><!-- /.container-fluid -->
+
+</nav>
+
+
+<!--<button id="r" style="background-color: rgba(66,153,241,0.7);border: none;color: #FFFFFF;padding: 10px 10px 10px 10px;font-size: 20px;position: fixed;top: 10%;right: 2%;border-radius: 60px;">Register</button>-->
+<ul style="padding-left: 10%;padding-top: 30px;" class="nav nav-tabs" role="tablist" id="myTab">
+    <li role="presentation" class="active"><a href="#home" role="tab" data-toggle="tab">Register and Pay</a></li>
+    <li role="presentation"><a href="#profile" role="tab" data-toggle="tab">To be a sponsor</a></li>
+    <li role="presentation"><a href="#speak" role="tab" data-toggle="tab">To be a speaker</a></li>
+    <li role="presentation"><a href="#slack" role="tab" data-toggle="tab">Join EthereumGlobal on slack</a></li>
+</ul>
+
+<div class="tab-content">
+    <div role="tabpanel" class="tab-pane active" id="home">
+        <div id="register" class="container-fluid">
+            <div class="row">
+                <div style="" class="col-sm-offset-1 col-sm-10">
+                    <h2 style="color: #4299f1;"></h2>
+                    <div class="row">
+                        <div class="col-md-6 col-lg-6">
+                            <form style="" role="form">
+                                <div class="form-group">
+                                    <label for="exampleInputEmail1">Full Name (Please enter the valid information so we
+                                        can follow up)</label>
+                                    <input type="text" class="form-control" id="name" placeholder="">
+                                </div>
+                                <div class="form-group">
+                                    <label for="exampleInputPassword1">Company (Please enter the valid information so we
+                                        can follow up)</label>
+                                    <input type="text" class="form-control" id="company">
+                                </div>
+                                <div class="form-group">
+                                    <label for="exampleInputPassword1">Email (Please enter the valid information so we
+                                        can follow up)</label>
+                                    <input type="text" class="form-control" id="email" placeholder="">
+                                </div>
+                                <div class="form-group">
+                                    <label for="exampleInputPassword1">Phone (Please enter the valid information so we
+                                        can follow up)</label>
+                                    <input style="margin: 0px;padding: 0px;" onkeyup="value=value.replace(/[^\d]/g,'') "
+                                           onbeforepaste="clipboardData.setData('text',clipboardData.getData('text').replace(/[^\d]/g,''))"
+                                           class="form-control" id="phone" placeholder="">
+                                </div>
+                            </form>
+                        </div>
+                        <div style="opacity: 0.8;" class="col-md-6 col-lg-6">
+                            To Participants:<br/>
+                            Thank you for supporting EDCON, we have decided that if the conference is profitable, we
+                            will be donating 20% of the profits to the Ethereum Foundation, 25% to Ethereum communities
+                            in each country in proportion to the revenue (tickets+sponsors) that we get from each
+                            country, and 10% for blockchain talent building programs including training and
+                            education.<br/>
+
+                            If you are interested in Ethereum or other bleeding-edge blockchain technologies, EDCON will
+                            not let you down!! We hope that this will be a great feast of ideas and inspiration, and
+                            that we will catch a glimpse into the future of blockchain and Ethereum. We sincerely
+                            welcome your participation and assistance in the following days. Together, we will make the
+                            conference a big success!!!
+                        </div>
+                    </div>
+                    <table style="background-color: #F3F3F3;margin-bottom: 5px;text-align: center;margin-top: 15px;"
+                           class="table table-bordered">
+                        <tr>
+                            <td>Standard Ticket (300 Only)</td>
+                            <td>Main Conference ticket and Community event for 17th-18th Feb(Including lunch)</td>
+                            <td><font id="350" style="color: red;text-align: center;">€ 380.00</font></td>
+                        </tr>
+                        <tr>
+                            <td>VIP Ticket (100 Only)</td>
+                            <td>Main Conference, Subconference ticket and Cocktail Party for 17th-18th Feb(Including
+                                lunch and cocktail party ticket)
+                            </td>
+                            <td><font id="550" style="color: red;text-align: center;">€ 680.00</font></td>
+                        </tr>
+                    </table>
+                    <div class="form-group" style="background-color: #F3F3F3;padding: 10px;margin-top: 15px;">
+                        <label>Ticket type</label><br/>
+                        <label style="margin-right: 30px;"><input type="radio" name="ticket" id="stand_tic" value="1"/>
+                            <img src="img/pay2.png" height="30"/></label>
+                        <label><input type="radio" name="ticket" id="vip_tic" value="2"/> <img src="img/pay1.png"
+                                                                                               height="30"/></label>
+                        <div class="form-group" style="background-color: #F3F3F3;padding: 10px;margin-top: 15px;">
+                            <label>Payment type</label><br/>
+                            <label id="curr_visa" style="margin-right: 30px;"><input type="radio" name="curr" id=""
+                                                                                     value="1"/> <img src="img/aa1.jpg"
+                                                                                                      height="30"/></label>
+                            <label id="curr_btc" style="margin-right: 30px;"><input type="radio" name="curr" id=""
+                                                                                    value="5"/> <img src="img/aa2.jpg"
+                                                                                                     height="30"/></label>
+                            <label id="curr_eth"><input type="radio" name="curr" id="" value="4"/> <img
+                                    src="img/aa3.jpg" height="30"/></label>
+                        </div>
+                        <div id="four" style="display: none;">
+                            <label id="infor" for="exampleInputPassword1">Visa card number</label>
+                            <input type="text" maxlength="4" onkeyup="value=value.replace(/[^\d]/g,'') "
+                                   onbeforepaste="clipboardData.setData('text',clipboardData.getData('text').replace(/[^\d]/g,''))"
+                                   class="form-control" id="Startups_coinAddress"
+                                   placeholder="The last four digits of your Visa card number">
+                        </div>
+                    </div>
+                    <div style="padding: 10px;">
+                        <div style="margin-top: 10px;font-size: 15px;">
+                            If you have any questions, please feel free to contact us at <font style="color: red;">contact@linktimetech.com</font>.
+                        </div>
+                    </div>
+
+
+                    <div class="form-group" style="margin-left: 17px;margin-bottom: 30px;">
+                        <button id="submit"
+                                style="background-color: #4299F1;border: none;color: #FFFFFF;padding: 5px 50px 5px 50px;margin-top: 20px;font-size: 20px;">
+                            Pay
+                        </button>
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+
+        <div id="pay" class="container-fluid" style="display: none;">
+            <div class="row">
+                <div style="" class=" col-sm-8 col-md-9 col-lg-9 ">
+
+                    <table style="background-color: #F3F3F3;margin-bottom: 25px;margin-top: 50px;text-align: center;"
+                           class="table table-bordered">
+                        <tr id="st" style="display: none;">
+                            <td>Standard Ticket (300 Only)</td>
+                            <td>Main Conference ticket and Community event for 17th-18th Feb(Including lunch)</td>
+                            <td><font id="3502" style="color: red;text-align: center;">€ 380.00</font></td>
+                        </tr>
+                        <tr id="vi" style="display: none;">
+                            <td>VIP Ticket (100 Only)</td>
+                            <td>Main Conference, Subconference ticket and Cocktail Party for 17th-18th Feb(Including
+                                lunch and cocktail party ticket)
+                            </td>
+                            <td><font id="5502" style="color: red;text-align: center;">€ 680.00</font></td>
+                        </tr>
+                    </table>
+                    <a id="visa" style="display: none;">
+                        <button style="background-color: #4299F1;border: none;color: #FFFFFF;padding: 5px 30px 5px 30px;font-size: 20px;">
+                            Go to pay
+                        </button>
+                    </a>
+                    <form id="san" style="display: none;" action="https://www.coinpayments.net/index.php" method="post">
+                        <input type="hidden" name="cmd" value="_pay_simple">
+                        <input type="hidden" name="reset" value="1">
+                        <input type="hidden" name="merchant" value="b2b62073c565f6e883bc5373ea11e934">
+                        <input type="hidden" name="item_name" value="ECOND Standard Ticket">
+                        <input type="hidden" name="item_desc" value="ECOND Standard Ticket">
+                        <input type="hidden" name="currency" value="EUR">
+                        <input type="hidden" name="amountf" value="380.00000000">
+                        <input type="hidden" name="want_shipping" value="0">
+                        <input type="hidden" name="taxf" value="76.00000000">
+                        <input type="hidden" name="success_url" value="https://edcon.io/succses.html">
+                        <input type="hidden" name="cancel_url" value="https://edcon.io/fail.html">
+                        <input type="image" src="https://www.coinpayments.net/images/pub/buynow-wide-blue.png"
+                               alt="与 CoinPayments.net 立即购买">
+                    </form>
+
+                    <form id="wu" style="display: none;" action="https://www.coinpayments.net/index.php" method="post">
+                        <input type="hidden" name="cmd" value="_pay_simple">
+                        <input type="hidden" name="reset" value="1">
+                        <input type="hidden" name="merchant" value="b2b62073c565f6e883bc5373ea11e934">
+                        <input type="hidden" name="item_name" value="ECOND Vip Ticket">
+                        <input type="hidden" name="item_desc" value="ECOND Vip Ticket">
+                        <input type="hidden" name="currency" value="EUR">
+                        <input type="hidden" name="amountf" value="680.00000000">
+                        <input type="hidden" name="want_shipping" value="0">
+                        <input type="hidden" name="taxf" value="136.00000000">
+                        <input type="hidden" name="success_url" value="https://edcon.io/succses.html">
+                        <input type="hidden" name="cancel_url" value="https://edcon.io/fail.html">
+                        <input type="image" src="https://www.coinpayments.net/images/pub/buynow-wide-blue.png"
+                               alt="与 CoinPayments.net 立即购买">
+                    </form>
+                    <br/><img style="margin: 10px  0px 10px 0px;" src="img/er.jpg" width="150"/><br/>
+                    <span style="margin-bottom: 30px;display: block;">We suggest Chinese participant register and pay through WeChat for more convenience. Please scan the QR code above.</span>
+                    <!--<div class="form-group" style="background-color: #F3F3F3;padding: 10px;margin-top: 15px;">-->
+                    <!--<label  >Ticket type</label><br />-->
+                    <!--<label id="stand_tic" style="margin-right: 30px;"><input type="radio" name="ticket" id="" value="1" checked="checked" /> <img src="img/pay2.png" height="30"/></label>
+                    <label id="vip_tic" ><input type="radio" name="ticket" id="" value="2" /> <img src="img/pay1.png" height="30"/></label>-->
+                    <!--</div>-->
+
+
+                    <!--<div  class="form-group ">-->
+
+                    <!--<h4 id="btc" style="display: none;">BTC Transaction address:<br /><font color="#269ABC" style="font-size: 15px;">1LKCBi4DosV8sneYajACsWpq9CksxFVFXV</font></h4>
+                    <h4 id="eth" style="display: none;">ETH Transaction address:<br /><font color="#269ABC" style="font-size: 15px;">0xe8c0b3943030f894ac3c0a492463b40ab949e015</font></h4>-->
+                    <!--<h4>Linktime Tech Bank Account Information:</h4>
+                  <font color="#003333" style="font-size: 15px;">Receiver’s Bank: </font><font color="#269ABC" style="font-size: 15px;">China CITIC Bank H.O.General Banking, Beijing,China</font><br />
+                  <font color="#003333" style="font-size: 15px;">SWIFT Code: </font><font color="#269ABC" style="font-size: 15px;">CIBKCNBJ100</font><br />
+                    <font color="#003333" style="font-size: 15px;">Company Account: </font><font color="#269ABC" style="font-size: 15px;">8110 7010 1310 0521 122</font><br />
+                    <font color="#003333" style="font-size: 15px;">Bank Address: </font><font color="#269ABC" style="font-size: 15px;">Zhejiang Building, No,26, 3Block Anzhenxili, Chaoyang District, Beijing, China</font><br />
+                    <font color="#003333" style="font-size: 15px;">Company name: </font><font color="#269ABC" style="font-size: 15px;">Beijing Linktime Information Technology Ltd.</font><br />
+                    <font color="#003333" style="font-size: 15px;">Company Address: </font><font color="#269ABC" style="font-size: 15px;">China Railway Construction Plaza No. 611, 4 Block,  Beiyuan East Road, Chaoyang District, Beijing, China</font><br />
+                    <font color="#003333" style="font-size: 15px;">Company Phone: </font><font color="#269ABC" style="font-size: 15px;">(086)010-68778887-8002</font><br />
+                    <font color="#003333" style="font-size: 15px;">If in doubt, please contact</font> <font style="color: red;">payment@linktimetech.com</font><br />-->
+                    <!--<div class="row">
+                        <h4 style="margin-left: 15px;" id="shuo">For further verification, please enter the valid information. Thank you!</h4>
+                       <div id="four"  class="  col-sm-6 col-md-6 col-lg-6">
+
+                       </div>
+                       <div style="display: none;" id="adr" class="  col-sm-6 col-md-6 col-lg-6">
+                            <label id="infor"  for="exampleInputPassword1">To fill in the bitcoin/ethereum TXID so that we can verify it.</label>
+                   <input type="text"  class="form-control" id="Startups_coinAddress4" placeholder="">
+                       </div>
+                       <div id="bank_name"   class="  col-sm-6 col-md-6 col-lg-6">
+                            <label   for="exampleInputPassword1">Name of account</label>
+                   <input type="text" id="b_name" class="form-control" id="Startups_name" placeholder="Name of account">
+                       </div>
+
+                   </div>-->
+                    <!--</div>-->
+                    <!--<h4 id="shuo">Our payments API setup is currently being tested; for the time being prices will be charged in Thai baht.<br /> (380 EUR = 14300 B, 680 EUR = 25500 B)</h4>-->
+                    <!--<button id="up"  style="background-color: #4299F1;border: none;color: #FFFFFF;padding: 5px 30px 5px 30px;font-size: 20px;margin-right: 10px;" >Previous</button>-->
+                    <!--<button id="submit"  style="background-color: #4299F1;border: none;color: #FFFFFF;padding: 5px 30px 5px 30px;font-size: 20px;" >Register and pay</button>-->
+
+
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+    <div role="tabpanel" class="tab-pane" id="slack">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-sm-offset-1 col-sm-10">
+                    <div class="embed-responsive embed-responsive-4by3">
+                        <iframe class="embed-responsive-item" src="https://edcon.herokuapp.com/"
+                                scrolling="no"></iframe>
+                    </div>
+                </div>
+                <div style="margin-top: 0px;" class=" col-sm-5 col-md-5 col-lg-5 li">
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div role="tabpanel" class="tab-pane" id="profile">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-sm-offset-1 col-sm-10">
+                    <h2 style="color: #4299f1;"></h2>
+                    Holding such a great conference in Europe is not easy, and we need your support to make it a
+                    success! The conference will provide you a valuable opportunity to meet talented people worldwide
+                    and to make your ideas or your company known. If you are interested in being a sponsor, please
+                    email <font color="#0062CC">sponsor@linktimetech.com</font>, your support will be highly
+                    appreciated.
+                </div>
+                <div style="margin-top: 0px;" class=" col-sm-5 col-md-5 col-lg-5 li">
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div role="tabpanel" class="tab-pane" id="speak">
+        <div class="container-fluid">
+            <div class="row">
+                <div style="" class="col-sm-offset-1 col-sm-10">
+                    <h2 style="color: #4299f1;">Speaker</h2>
+                    <form style="padding-left: 16px;" role="form">
+                        <div class="form-group">
+                            <label for="exampleInputEmail1">Full Name</label>
+                            <input type="text" class="form-control" id="Speaker_name" placeholder="">
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleInputPassword1">Organization / Institution / Company</label>
+                            <input type="text" class="form-control" id="Speaker_company">
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleInputPassword1">Position / Title</label>
+                            <input type="text" class="form-control" id="Speaker_title" placeholder="">
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleInputPassword1">Fields of Interest</label>
+                            <input type="text" class="form-control" id="Speaker_field" placeholder="">
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleInputPassword1">Topic</label>
+                            <input type="text" class="form-control" id="Speaker_topic" placeholder="">
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleInputPassword1">Telephone</label>
+                            <input style="margin: 0px;padding: 0px;" onkeyup="value=value.replace(/[^\d]/g,'') "
+                                   onbeforepaste="clipboardData.setData('text',clipboardData.getData('text').replace(/[^\d]/g,''))"
+                                   class="form-control" id="Speaker_phone" placeholder="">
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleInputPassword1">Email</label>
+                            <input type="text" class="form-control" id="Speaker_email" placeholder="">
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleInputPassword1">Notes</label>
+                            <textarea id="Speaker_notes"
+                                      style="width: 100%;height: 100px;resize: none;border-radius: 5px;border-color: #CCCCCC;"></textarea>
+                        </div>
+                        <div style="margin-top: 10px;font-size: 15px;">
+                            If you are interested in Ethereum and Blockchain Technology, and if you would like to make a
+                            speech or participate in a panel and make your ideas known, please feel free to contact us.
+                            Email <font style="color: red;">speakers@linktimetech.com</font> if necessary.
+                        </div>
+                    </form>
+                    <div class="form-group" style="margin-bottom: 30px;margin-left: 17px;">
+                        <button id="speak_submit"
+                                style="background-color: #4299F1;border: none;color: #FFFFFF;padding: 5px 30px 5px 30px;margin-top: 20px;font-size: 20px;">
+                            Submit
+                        </button>
+                    </div>
+
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+</div>
+
+
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span
+                        class="sr-only">Close</span></button>
+                <h4 class="modal-title" id="myModalLabel"></h4>
+            </div>
+            <div class="modal-body">
+                Join the talent database?
+            </div>
+            <div class="modal-footer">
+                <button id="no" type="button" class="btn btn-default" data-dismiss="modal">No</button>
+                <button id="yes" type="button" class="btn btn-primary">Yes</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade bs-example-modal-sm" id="miss" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+     aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span
+                        class="sr-only">Close</span></button>
+                <h4 class="modal-title" id="myModalLabel">Alert!</h4>
+            </div>
+            <div class="modal-body">
+                Please enter the valid information!
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade bs-example-modal-sm" id="miss5" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+     aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span
+                        class="sr-only">Close</span></button>
+                <h4 class="modal-title" id="myModalLabel">Alert!</h4>
+            </div>
+            <div class="modal-body">
+                Please choose payment type!
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade bs-example-modal-sm" id="succ" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+     aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span
+                        class="sr-only">Close</span></button>
+                <h4 class="modal-title" id="myModalLabel">Successful!</h4>
+            </div>
+            <div class="modal-body">
+                Success! We will send you the Eticket once the payment information was verified.
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade bs-example-modal-sm" id="pay1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+     aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span
+                        class="sr-only">Close</span></button>
+                <h4 class="modal-title" id="myModalLabel">Congratulations!</h4>
+            </div>
+            <div class="modal-body">
+                You have registered successfully! Please click here and move to the payment page.
+            </div>
+            <div class="modal-footer">
+                <a id="stand" class="btn btn-default" href="" target="_blank">Pay</a>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal fade bs-example-modal-sm" id="pay2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+     aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span
+                        class="sr-only">Close</span></button>
+                <h4 class="modal-title" id="myModalLabel">Successful!</h4>
+            </div>
+            <div class="modal-body">
+                Registration success！Please go to payment page!
+            </div>
+            <div class="modal-footer">
+                <a id="vip1" class="btn btn-default" href="" target="_blank">Pay</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade bs-example-modal-sm" id="succ_1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+     aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span
+                        class="sr-only">Close</span></button>
+                <h4 class="modal-title" id="myModalLabel"></h4>
+            </div>
+            <div id="ms0" class="modal-body">
+
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade bs-example-modal-sm" id="fail" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+     aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span
+                        class="sr-only">Close</span></button>
+                <h4 class="modal-title" id="myModalLabel">Fail!</h4>
+            </div>
+            <div class="modal-body">
+                Invalid transaction ID!
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade bs-example-modal-sm" id="s_succ" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+     aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span
+                        class="sr-only">Close</span></button>
+                <h4 class="modal-title" id="myModalLabel">Congratulations!</h4>
+            </div>
+            <div class="modal-body">
+                You have registered successfully! We will get back to you as soon as possible!
+            </div>
+            <div class="modal-footer">
+                <button id="close" type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal fade bs-example-modal-sm" id="zheng" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+     aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span
+                        class="sr-only">Close</span></button>
+                <h4 class="modal-title" id="myModalLabel">Warning!</h4>
+            </div>
+            <div class="modal-body">
+                Please check your TXID!
+            </div>
+            <div class="modal-footer">
+                <button id="close" type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+</body>
+<script src="js/pikaday.js" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript">
+    //	$(function(){
+    //		$.ajax({
+    //			type:"post",
+    //			url:"https://edcon.io/FranceWebsite/handle/getCom.php",
+    //			timeout: 30000,
+    //			success: function(data) {
+    //				if (JSON.parse(data).code=='200') {
+    //					var	btc = JSON.parse(data).data.btcAddr;
+    //					var	eth = JSON.parse(data).data.ethAddr;
+    //					document.getElementById("btc").innerText='BTC Transaction address: '+btc;
+    //					document.getElementById("eth").innerText='ETH Transaction address: '+eth;
+    //				} else{
+    //					console.log(data);
+    //				}
+    //
+    //					},
+    //					error: function(xhr, type, errorThrown) {
+    //
+    //						console.log('未进接口');
+    //					}
+    //		});
+    //
+    //	});
+    //	$(function(){
+    //		$.ajax({
+    //			type:"post",
+    //			url:"https://edcon.io/GetCoinPrice/coinPrice.php",
+    //			dataType: 'json',
+    //			timeout: 30000,
+    //				success: function(data) {
+    //						if (data.code=="200") {
+    //							console.log(data.data.eur);
+    //							console.log(JSON.parse(data.data.coin).btccny.last);
+    //							console.log(JSON.parse(data.data.coin).ethcny.last);
+    //							var eurp=data.data.eur;
+    //							var btcp=JSON.parse(data.data.coin).btccny.last;
+    //							var ethp=JSON.parse(data.data.coin).ethcny.last;
+    //							var btc3=380*eurp/btcp;
+    //							var btc5=680*eurp/btcp;
+    //							var eth3=380*eurp/ethp;
+    //							var eth5=680*eurp/ethp;
+    //							document.getElementById("350").innerText="14300 ฿(THB) or 380 €(EUR) or "+btc3.toFixed(4)+" BTC or "+eth3.toFixed(4)+" ETH";
+    //							document.getElementById("550").innerText="25500 ฿(THB) or 680 €(EUR) or "+btc5.toFixed(4)+" BTC or "+eth5.toFixed(4)+" ETH";
+    //							document.getElementById("3502").innerText="14300 ฿(THB) or 380 €(EUR) or "+btc3.toFixed(4)+" BTC or "+eth3.toFixed(4)+" ETH";
+    //							document.getElementById("5502").innerText="25500 ฿(THB) or 680 €(EUR) or "+btc5.toFixed(4)+" BTC or "+eth5.toFixed(4)+" ETH";
+    //						} else{
+    //							console.log(JSON.stringify(data));
+    //						}
+    //
+    //					},
+    //					error: function(xhr, type, errorThrown) {
+    //						document.getElementById("350").innerText="Unable to connect, please refresh the page and try it again!";
+    //							document.getElementById("550").innerText="Unable to connect, please refresh the page and try it again!";
+    //							document.getElementById("3502").innerText="Unable to connect, please refresh the page and try it again!";
+    //							document.getElementById("5502").innerText="Unable to connect, please refresh the page and try it again!";
+    //						console.log('未进接口');
+    //					}
+    // 			});
+    //	});
+    //	var picker = new Pikaday(
+    //  {
+    //      field: document.getElementById('datepicker'),
+    //      firstDay: 1,
+    //      minDate: new Date('2000-01-01'),
+    //      maxDate: new Date('2020-12-31'),
+    //      yearRange: [2000,2020]
+    //  });
+    //  $(function(){
+    //		$('#logo').fadeIn(1000);
+    $('#myTab li:eq(2) a').tab('show');
+    //	});
+    //		document.getElementById("up").addEventListener('click',function(){
+    //			$('#register').show();
+    //			$('#pay').hide();
+    //		});
+    //		document.getElementById("next").addEventListener('click',function(){
+    //			 var name=document.getElementById("name").value;
+    //			 var company=document.getElementById("company").value;
+    //			 var email=document.getElementById("email").value;
+    //			 var phone=document.getElementById("phone").value;
+    //			  var paytype=$("input[name='ticket']:checked").val();
+    //			  var re = /^(\w-*\.*)+@(\w-?)+(\.\w{2,})+$/
+    //			  if(re.test(email)){
+    //			    }else{
+    //			        $('#succ_1').modal();
+    //					document.getElementById("ms0").innerText='Invalid email address!';
+    //					return;
+    //			    }
+    //			if (name==''||company==''||email==''||phone==''||paytype==undefined) {
+    //				$('#miss').modal();
+    //			} else{
+    //				$('#pay').show();
+    //			$('#register').hide();
+    //			}
+    //
+    //		});
+    document.getElementById("curr_btc").addEventListener('click', function () {
+//			document.getElementById("Startups_coinAddress4").placeholder='Transaction ID format: 0125e313408247b28f4e1006d6a17b26309329248b3cd440b888c763e46f925a';
+//			document.getElementById("Startups_coinAddress4").value='';
+//			document.getElementById("btc").style.display='';
+//			document.getElementById("eth").style.display='none';
+//			document.getElementById("infor").innerText='To fill in the bitcoin/ethereum TXID so that we can verify it. Thank you very much!';
+//			document.getElementById("bank_name").style.display='none';
+        document.getElementById("four").style.display = 'none';
+//			document.getElementById("shuo").style.display='none';
+//			document.getElementById("adr").style.display='';
+    });
+    document.getElementById("curr_visa").addEventListener('click', function () {
+//			document.getElementById("btc").style.display='none';
+//			document.getElementById("eth").style.display='none';
+//			document.getElementById("infor").innerText='To fill in your bank account number after four digits. Thank you very much!';
+//			document.getElementById("bank_name").style.display='';
+//			document.getElementById("shuo").style.display='';
+        document.getElementById("four").style.display = '';
+//			document.getElementById("adr").style.display='none';
+    });
+    document.getElementById("curr_eth").addEventListener('click', function () {
+//			document.getElementById("Startups_coinAddress4").placeholder='Transaction ID format: 0xe9efb175e3fa5a68f9a8871dff85fd8624f5ecad4cb4079409704ccdb82d290a';
+//			document.getElementById("Startups_coinAddress4").value='';
+//			document.getElementById("eth").style.display='';
+//			document.getElementById("btc").style.display='none';
+//			document.getElementById("shuo").style.display='none';
+//			document.getElementById("infor").innerText='To fill in the bitcoin/ethereum TXID so that we can verify it. Thank you very much!';
+//			document.getElementById("bank_name").style.display='none';
+        document.getElementById("four").style.display = 'none';
+//			document.getElementById("adr").style.display='';
+    });
+    //		document.getElementById("res_1").addEventListener('click',function(){
+    //			location.href='register.html';
+    //		});
+    //		document.getElementById("res_2").addEventListener('click',function(){
+    //			location.href='register.html';
+    //		});
+    ////		document.getElementById("res_3").addEventListener('click',function(){
+    ////			location.href='startup.html';
+    ////		});
+    //		document.getElementById("res_4").addEventListener('click',function(){
+    //			location.href='register.html';
+    //		});
+
+
+    document.getElementById("submit").addEventListener('click', function () {
+        document.getElementById("login").style.display = 'block';
+        var name = document.getElementById("name").value;
+        var company = document.getElementById("company").value;
+        var email = document.getElementById("email").value;
+        var phone = document.getElementById("phone").value;
+        var paytype = $("input[name='ticket']:checked").val();
+//			var bank_name=document.getElementById("b_name").value;
+        var coinType = $("input[name='curr']:checked").val();
+        var coinAddress = document.getElementById("Startups_coinAddress").value += "";
+//			 var coinAddress4=document.getElementById("Startups_coinAddress4").value+="";
+        var re = /^(\w-*\.*)+@(\w-?)+(\.\w{2,})+$/
+        if (re.test(email)) {
+        } else {
+            document.getElementById("login").style.display = 'none';
+            $('#succ_1').modal();
+            document.getElementById("ms0").innerText = 'Invalid email address!';
+            return;
+        }
+//			 con	sole.log(paytype);
+        if (name == '' || company == '' || email == '' || phone == '') {
+            document.getElementById("login").style.display = 'none';
+            $('#miss').modal();
+        } else if (paytype == undefined || coinType == undefined) {
+            document.getElementById("login").style.display = 'none';
+            $('#miss5').modal();
+        } else if (paytype == '1') {
+            if (coinType == '1') {
+                if (coinAddress == '') {
+                    document.getElementById("login").style.display = 'none';
+                    $('#succ_1').modal();
+                    document.getElementById("ms0").innerText = 'Pleas fill the Visa card number!';
+                } else {
+                    $.ajax({
+                        type: "post",
+                        url: "https://edcon.io/FranceWebsite/Register/userPay.php",
+                        data: {
+                            name: name,
+                            company: company,
+                            email: email,
+                            phone: phone,
+                            coinType: coinType,
+                            coinAddress: coinAddress,
+                            holdername: 1,
+                            paytype: paytype
+                        },
+                        timeout: 30000,
+                        success: function (data) {
+                            if (JSON.parse(data).code == '200') {
+                                document.getElementById("login").style.display = 'none';
+                                document.getElementById("name").value = '';
+                                document.getElementById("company").value = '';
+                                document.getElementById("email").value = '';
+                                document.getElementById("phone").value = '';
+                                document.getElementById("Startups_coinAddress").value = '';
+                                $("input[name='ticket']:checked").val() == 1 ? document.getElementById("stand_tic").checked = "" : document.getElementById("vip_tic").checked = "";
+                                $('#pay').show();
+                                $('#register').hide();
+                                document.getElementById("visa").style.display = '';
+                                document.getElementById("visa").href = 'https://edcon.io/omise/charge.html';
+                                document.getElementById("st").style.display = '';
+                                document.getElementById("san").style.display = 'none';
+                                document.getElementById("vi").style.display = 'none';
+                                document.getElementById("wu").style.display = 'none';
+                            }
+                            else if (JSON.parse(data).code == '310') {
+                                document.getElementById("login").style.display = 'none';
+                                $('#succ_1').modal();
+                                document.getElementById("ms0").innerText = 'You have already registered, please complete the payment!';
+                            }
+                            else {
+                                console.log(data);
+                            }
+
+                        },
+                        error: function (xhr, type, errorThrown) {
+                            document.getElementById("login").style.display = 'none';
+                            $('#succ_1').modal();
+                            document.getElementById("ms0").innerText = 'Connection timed out!';
+                            console.log('未进接口');
+                        }
+                    });
+                }
+
+            } else {
+                $.ajax({
+                    type: "post",
+                    url: "https://edcon.io/FranceWebsite/Register/userPay.php",
+                    data: {
+                        name: name,
+                        company: company,
+                        email: email,
+                        phone: phone,
+                        coinType: coinType,
+                        coinAddress: 1,
+                        holdername: 1,
+                        paytype: paytype
+                    },
+                    timeout: 30000,
+                    success: function (data) {
+                        if (JSON.parse(data).code == '200') {
+                            document.getElementById("login").style.display = 'none';
+                            document.getElementById("name").value = '';
+                            document.getElementById("company").value = '';
+                            document.getElementById("email").value = '';
+                            document.getElementById("phone").value = '';
+                            document.getElementById("Startups_coinAddress").value = '';
+                            $("input[name='ticket']:checked").val() == 1 ? document.getElementById("stand_tic").checked = "" : document.getElementById("vip_tic").checked = "";
+                            $('#pay').show();
+                            $('#register').hide();
+                            document.getElementById("st").style.display = '';
+                            document.getElementById("san").style.display = '';
+                            document.getElementById("vi").style.display = 'none';
+                            document.getElementById("wu").style.display = 'none';
+                        }
+                        else if (JSON.parse(data).code == '310') {
+                            document.getElementById("login").style.display = 'none';
+                            $('#succ_1').modal();
+                            document.getElementById("ms0").innerText = 'You have already registered, please complete the payment!';
+                        }
+                        else {
+                            console.log(data);
+                        }
+
+                    },
+                    error: function (xhr, type, errorThrown) {
+                        document.getElementById("login").style.display = 'none';
+                        $('#succ_1').modal();
+                        document.getElementById("ms0").innerText = 'Connection timed out!';
+                        console.log('未进接口');
+                    }
+                });
+            }
+        } else if (paytype == '2') {
+            if (coinType == '1') {
+                if (coinAddress == '') {
+                    document.getElementById("login").style.display = 'none';
+                    $('#succ_1').modal();
+                    document.getElementById("ms0").innerText = 'Pleas fill the Visa card number!';
+                } else {
+                    $.ajax({
+                        type: "post",
+                        url: "https://edcon.io/FranceWebsite/Register/userPay.php",
+                        data: {
+                            name: name,
+                            company: company,
+                            email: email,
+                            phone: phone,
+                            coinType: coinType,
+                            coinAddress: coinAddress,
+                            holdername: 1,
+                            paytype: paytype
+                        },
+                        timeout: 30000,
+                        success: function (data) {
+                            if (JSON.parse(data).code == '200') {
+                                document.getElementById("login").style.display = 'none';
+                                document.getElementById("name").value = '';
+                                document.getElementById("company").value = '';
+                                document.getElementById("email").value = '';
+                                document.getElementById("phone").value = '';
+                                document.getElementById("Startups_coinAddress").value = '';
+                                $("input[name='ticket']:checked").val() == 1 ? document.getElementById("stand_tic").checked = "" : document.getElementById("vip_tic").checked = "";
+                                $('#pay').show();
+                                $('#register').hide();
+                                document.getElementById("visa").style.display = '';
+                                document.getElementById("visa").href = 'https://edcon.io/omise/charge_vip.html';
+                                document.getElementById("st").style.display = 'none';
+                                document.getElementById("san").style.display = 'none';
+                                document.getElementById("vi").style.display = '';
+                                document.getElementById("wu").style.display = 'none';
+                            }
+                            else if (JSON.parse(data).code == '310') {
+                                document.getElementById("login").style.display = 'none';
+                                $('#succ_1').modal();
+                                document.getElementById("ms0").innerText = 'You have already registered, please complete the payment!';
+                            }
+                            else {
+                                console.log(data);
+                            }
+
+                        },
+                        error: function (xhr, type, errorThrown) {
+                            document.getElementById("login").style.display = 'none';
+                            $('#succ_1').modal();
+                            document.getElementById("ms0").innerText = 'Connection timed out!';
+                            console.log('未进接口');
+                        }
+                    });
+                }
+
+            } else {
+                $.ajax({
+                    type: "post",
+                    url: "https://edcon.io/FranceWebsite/Register/userPay.php",
+                    data: {
+                        name: name,
+                        company: company,
+                        email: email,
+                        phone: phone,
+                        coinType: coinType,
+                        coinAddress: 1,
+                        holdername: 1,
+                        paytype: paytype
+                    },
+                    timeout: 30000,
+                    success: function (data) {
+                        if (JSON.parse(data).code == '200') {
+                            document.getElementById("login").style.display = 'none';
+                            document.getElementById("name").value = '';
+                            document.getElementById("company").value = '';
+                            document.getElementById("email").value = '';
+                            document.getElementById("phone").value = '';
+                            document.getElementById("Startups_coinAddress").value = '';
+                            $("input[name='ticket']:checked").val() == 1 ? document.getElementById("stand_tic").checked = "" : document.getElementById("vip_tic").checked = "";
+                            $('#pay').show();
+                            $('#register').hide();
+                            document.getElementById("vi").style.display = '';
+                            document.getElementById("wu").style.display = '';
+                            document.getElementById("st").style.display = 'none';
+                            document.getElementById("san").style.display = 'none';
+                        }
+                        else if (JSON.parse(data).code == '310') {
+                            document.getElementById("login").style.display = 'none';
+                            $('#succ_1').modal();
+                            document.getElementById("ms0").innerText = 'You have already registered, please complete the payment!';
+                        }
+                        else {
+                            console.log(data);
+                        }
+
+                    },
+                    error: function (xhr, type, errorThrown) {
+                        document.getElementById("login").style.display = 'none';
+                        $('#succ_1').modal();
+                        document.getElementById("ms0").innerText = 'Connection timed out!';
+                        console.log('未进接口');
+                    }
+                });
+            }
+        }
+//			 if (name==''||company==''||email==''||phone==''||coinType=='') {
+//			 	$('#miss').modal();
+//			 } else{
+//			 	if (coinType=='1') {
+//			 	document.getElementById("login").style.display='';
+//			 	console.log(bank_name);
+//			 	if (coinAddress==''  || bank_name=='') {
+//			 		document.getElementById("login").style.display='none';
+//			 		$('#miss').modal();
+//			 		
+//			 	} else{
+//			 		$.ajax("https://edcon.io/FranceWebsite/Register/userPay.php",{
+// 				data:{
+// 					name:name,
+// 					company:company,
+// 					email:email,
+// 					phone:phone,
+// 					coinType:coinType,
+// 					coinAddress:coinAddress,
+// 					holdername:bank_name
+// 				},
+// 				type:"post",
+// 				dataType: 'json', 
+//				timeout: 30000, 
+//				success: function(data) { 
+//						if (data.code=="200") {
+//							
+//							if(coinType=='1'){
+////								var newTab=window.open('about:blank');
+//								if ($("input[name='ticket']:checked").val()=='1') {
+//									$.ajax({
+//									type:"post", 
+//									url:"https://edcon.io/FranceWebsite/handle/getCom.php",
+//									success: function(data) { 
+//										if (JSON.parse(data).code=='200') {
+//											var Standard=JSON.parse(data).data.payStandard;
+//											document.getElementById("stand").href=Standard;
+//											document.getElementById("login").style.display='none';	
+//												$('#pay1').modal();
+//										} else{
+//											document.getElementById("login").style.display='none';
+//											console.log(data);
+//										}
+//											
+//											},
+//											error: function(xhr, type, errorThrown) {  
+//												document.getElementById("login").style.display='none';
+//												console.log('未进接口'); 
+//											} 
+//								});
+//									
+//								
+//									
+//									return false;
+//							} else if($("input[name='ticket']:checked").val()=='2'){
+//								$.ajax({
+//									type:"post", 
+//									url:"https://edcon.io/FranceWebsite/handle/getCom.php",
+//									success: function(data) { 
+//										if (JSON.parse(data).code=='200') {
+//											var payVip=JSON.parse(data).data.payVip;
+//											document.getElementById("vip1").href=payVip;
+//										document.getElementById("login").style.display='none';
+//														$('#pay2').modal();
+//										} else{
+//											document.getElementById("login").style.display='none';
+//											console.log(data);
+//										}
+//											
+//											},
+//											error: function(xhr, type, errorThrown) {  
+//												document.getElementById("login").style.display='none';
+//												console.log('未进接口'); 
+//											} 
+//								});
+//								
+//									
+//							}
+//							}
+//							else{
+//								document.getElementById("login").style.display='none';
+//								$('#succ').modal();
+//							}
+//							
+//						} 
+//						else if(data.code=="300"){
+//							document.getElementById("login").style.display='none';
+//							$('#fail').modal();
+//						}
+//						else if(data.code=="310"){
+//							document.getElementById("login").style.display='none';
+//							$('#succ_1').modal();
+//							document.getElementById("ms0").innerText='The query is less than trading address！';
+//						}
+//						else if(data.code=="320"){
+//							document.getElementById("login").style.display='none';
+//							$('#succ_1').modal();
+//							document.getElementById("ms0").innerText='The ID has been registered！';
+//							
+//						}
+//						else{
+//							document.getElementById("login").style.display='none';
+//							console.log(JSON.stringify(data));
+//						}
+//						
+//					},
+//					error: function(xhr, type, errorThrown) {
+//						document.getElementById("login").style.display='none';
+//						console.log('1');
+//					} 
+// 			});
+//			 	}
+//			 	
+//			 	} else if(coinType=='4'){
+//			
+//			 		console.log( Startups_coinAddress4.value[0]);
+//			 		if(Startups_coinAddress4.value.length!=66 || Startups_coinAddress4.value[0]!='0'||Startups_coinAddress4.value[1]!='x'){
+//			 			$('#zheng').modal();
+//			 			return;
+//			 		}
+//			 		
+//			 		document.getElementById("login").style.display='';
+//			 	$.ajax("https://edcon.io/FranceWebsite/Register/userPay.php",{
+// 				data:{
+// 					name:name,
+// 					company:company,
+// 					email:email,
+// 					phone:phone,
+// 					coinType:coinType,
+// 					coinAddress:coinAddress4,
+// 					holdername:'a'
+// 				},
+// 				type:"post",
+// 				dataType: 'json', 
+//				timeout: 30000, 
+//				success: function(data) { 
+//						if (data.code=="200") {
+//							
+//							if(coinType=='1'){
+////								var newTab=window.open('about:blank');
+//								if ($("input[name='ticket']:checked").val()=='1') {
+//									document.getElementById("login").style.display='none';
+//									$('#pay1').modal();
+//								
+//									
+//									return false;
+//							} else if($("input[name='ticket']:checked").val()=='2'){
+//								document.getElementById("login").style.display='none';
+//								$('#pay2').modal();									
+//							}
+//							}
+//							else{
+//								document.getElementById("login").style.display='none';
+//								$('#succ').modal();
+//							}
+//							
+//						} 
+//						else if(data.code=="300"){
+//							document.getElementById("login").style.display='none';
+//							$('#fail').modal();
+//						}
+//						else if(data.code=="310"){
+//							document.getElementById("login").style.display='none';
+//							$('#succ_1').modal();
+//							document.getElementById("ms0").innerText='The query is less than trading address！';
+//						}
+//						else if(data.code=="320"){
+//							document.getElementById("login").style.display='none';
+//							$('#succ_1').modal();
+//							document.getElementById("ms0").innerText='The ID has been registered！';
+//							
+//						}
+//						else{
+//							document.getElementById("login").style.display='none';
+//							console.log(JSON.stringify(data));
+//						}
+//						
+//					},
+//					error: function(xhr, type, errorThrown) {
+//						document.getElementById("login").style.display='none';
+//						console.log('1');
+//					} 
+// 			});
+//			 	}
+//			 	else{
+//			 		
+//			 		if(Startups_coinAddress4.value.length!=64 ){
+//			 			$('#zheng').modal();
+//			 			return;
+//			 		}
+//			 		document.getElementById("login").style.display='';
+//			 	$.ajax("https://edcon.io/FranceWebsite/Register/userPay.php",{
+// 				data:{
+// 					name:name,
+// 					company:company,
+// 					email:email,
+// 					phone:phone,
+// 					coinType:coinType,
+// 					coinAddress:coinAddress4,
+// 					holdername:'a'
+// 				},
+// 				type:"post",
+// 				dataType: 'json', 
+//				timeout: 30000, 
+//				success: function(data) { 
+//						if (data.code=="200") {
+//							
+//							if(coinType=='1'){
+//
+//								if ($("input[name='ticket']:checked").val()=='1') {
+//									document.getElementById("login").style.display='none';
+//									$('#pay1').modal();
+////									newTab.location.href="https://link.omise.co/DFEC5B13";
+//								
+//									
+//									return false;
+//							} else if($("input[name='ticket']:checked").val()=='2'){
+//								document.getElementById("login").style.display='none';
+//								$('#pay2').modal();
+////								newTab.location.href="https://link.omise.co/7E56EE2D";
+//									
+//							}
+//							}
+//							else{
+//								document.getElementById("login").style.display='none';
+//								$('#succ').modal();
+//							}
+//							
+//						} 
+//						else if(data.code=="300"){
+//							document.getElementById("login").style.display='none';
+//							$('#fail').modal();
+//						}
+//						else if(data.code=="310"){
+//							document.getElementById("login").style.display='none';
+//							$('#succ_1').modal();
+//							document.getElementById("ms0").innerText='The query is less than trading address！';
+//						}
+//						else if(data.code=="320"){
+//							document.getElementById("login").style.display='none';
+//							$('#succ_1').modal();
+//							document.getElementById("ms0").innerText='The ID has been registered！';
+//							
+//						}
+//						else{
+//							document.getElementById("login").style.display='none';
+//							console.log(JSON.stringify(data));
+//						}
+//						
+//					},
+//					error: function(xhr, type, errorThrown) {
+//						document.getElementById("login").style.display='none';
+//						console.log('1');
+//					} 
+// 			});
+//			 	}
+//			 }
+    });
+
+    //		document.getElementById("talent_submit").addEventListener('click',function(){
+    //
+    //			 var name1=document.getElementById("Developer_name").value;
+    //			 var gendar1=document.getElementById("Developer_gendar").value;
+    //			 var birth1=document.getElementById("datepicker").value;
+    //			 var city1=document.getElementById("Developer_city").value;
+    //			 var language1=document.getElementById("Developer_language").value;
+    //			 var phone1=document.getElementById("Developer_phone").value;
+    //			 var email1=document.getElementById("Developer_email").value;
+    //			 var education1=document.getElementById("Developer_education").value;
+    //			 var project1=document.getElementById("Developer_porject").value;
+    //			 var resume1=document.getElementById("Developer_resume").value;
+    //			 var coinType1=document.getElementById("Developer_currency").value;
+    //			 var coinAddress1=document.getElementById("Developer_coinAddress").value;
+    //			 if (name1==''||gendar1==''||birth1==''||city1==''||language1==''||phone1==''||email1==''||education1==''||project1==''||resume1==''||coinType1==''||coinAddress1=='') {
+    //			 	$('#miss').modal();
+    //			 } else{
+    //			 	$.ajax("https://edcon.io/FranceWebsite/Register/developer.php",{
+    // 				data:{
+    // 					name:name1,
+    // 					gendar:gendar1,
+    // 					birth:birth1,
+    // 					city:city1,
+    // 					language:language1,
+    // 					phone:phone1,
+    // 					email:email1,
+    // 					education:education1,
+    // 					project:project1,
+    // 					resume:resume1,
+    // 					coinType:coinType1,
+    // 					coinAddress:coinAddress1,
+    // 				},
+    // 				type:"post",
+    // 				dataType: 'json',
+    //				timeout: 30000,
+    //				success: function(data) {
+    //						if (data.code=="200") {
+    //							$('#succ').modal();
+    //						} else{
+    //							console.log('接口错误');
+    //						}
+    //
+    //					},
+    //					error: function(xhr, type, errorThrown) {
+    //
+    //						console.log('未进接口');
+    //					}
+    // 			});
+    //			 }
+    //		});
+
+    //		document.getElementById("investor_submit").addEventListener('click',function(){
+    //
+    //			 var company=document.getElementById("Investor_company").value;
+    //			 var address=document.getElementById("Investor_adress").value;
+    //			 var website=document.getElementById("Investor_website").value;
+    //			 var phone=document.getElementById("Investor_phone").value;
+    //			 var email=document.getElementById("Investor_email").value;
+    //			 var project=document.getElementById("Investor_porject").value;
+    //			 var field=document.getElementById("Investor_field").value;
+    //			 var coinType=document.getElementById("Investor_currency").value;
+    //			 var coinAddress=document.getElementById("Investor_coinAddress").value;
+    //			 if (company==''||address==''||website==''||phone==''||email==''||project==''||field==''||coinType==''||coinAddress=='') {
+    //			 	$('#miss').modal();
+    //			 } else{
+    //			 	$.ajax("https://edcon.io/FranceWebsite/Register/investor.php",{
+    // 				data:{
+    // 					company:company,
+    // 					address:address,
+    // 					website:website,
+    // 					phone:phone,
+    // 					email:email,
+    // 					project:project,
+    // 					field:field,
+    // 					coinType:coinType,
+    // 					coinAddress:coinAddress
+    // 				},
+    // 				type:"post",
+    // 				dataType: 'json',
+    //				timeout: 30000,
+    //				success: function(data) {
+    //						if (data.code=="200") {
+    //							$('#succ').modal();
+    //						} else{
+    //							console.log('接口错误');
+    //						}
+    //
+    //					},
+    //					error: function(xhr, type, errorThrown) {
+    //
+    //						console.log('未进接口');
+    //					}
+    // 			});
+    //			 }
+    //		});
+
+    document.getElementById("speak_submit").addEventListener('click', function () {
+        document.getElementById("login").style.display = 'block';
+        var name = document.getElementById("Speaker_name").value;
+        var CI = document.getElementById("Speaker_company").value;
+        var PT = document.getElementById("Speaker_title").value;
+        var professional = document.getElementById("Speaker_field").value;
+        var topic = document.getElementById("Speaker_topic").value;
+        var telephone = document.getElementById("Speaker_phone").value;
+        var email = document.getElementById("Speaker_email").value;
+        var notes = document.getElementById("Speaker_notes").value;
+        var re = /^(\w-*\.*)+@(\w-?)+(\.\w{2,})+$/
+        if (re.test(email)) {
+        } else {
+            document.getElementById("login").style.display = 'none';
+            $('#succ_1').modal();
+            document.getElementById("ms0").innerText = 'Invalid email address!';
+            return;
+        }
+
+        if (name == '' || CI == '' || PT == '' || professional == '' || topic == '' || telephone == '' || email == '' || notes == '') {
+            document.getElementById("login").style.display = 'none';
+            $('#miss').modal();
+        } else {
+            $.ajax("https://edcon.io/FranceWebsite/Register/speaker.php", {
+                data: {
+                    name: name,
+                    CI: CI,
+                    TP: PT,
+                    professional: professional,
+                    topic: topic,
+                    telephone: telephone,
+                    email: email,
+                    notes: notes
+                },
+                type: "post",
+                dataType: 'json',
+                timeout: 30000,
+                success: function (data) {
+                    if (data.code == "200") {
+                        document.getElementById("login").style.display = 'none';
+                        document.getElementById("Speaker_name").value = '';
+                        document.getElementById("Speaker_company").value = '';
+                        document.getElementById("Speaker_title").value = '';
+                        document.getElementById("Speaker_field").value = '';
+                        document.getElementById("Speaker_topic").value = '';
+                        document.getElementById("Speaker_phone").value = '';
+                        document.getElementById("Speaker_email").value = '';
+                        document.getElementById("Speaker_notes").value = '';
+                        $('#s_succ').modal();
+                    } else {
+                        document.getElementById("login").style.display = 'none';
+                        console.log(JSON.stringify(data));
+                    }
+
+                },
+                error: function (xhr, type, errorThrown) {
+                    document.getElementById("login").style.display = 'none';
+                    $('#succ_1').modal();
+                    document.getElementById("ms0").innerText = 'Connection timed out!';
+                    console.log('未进接口');
+                }
+            });
+        }
+    });
+    //		document.getElementById("close").addEventListener('click',function(){
+    //		location.href='index.html#contact'
+    //	});
+
+
+</script>
+</html>
+	

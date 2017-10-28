@@ -1,0 +1,651 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>EDCON</title>
+    <meta name="description"
+          content="The EDCON (European Ethereum Development Conference) is a conference that will take place in Paris at the Ecole Supérieure de Commerce de Paris - Europe (ESCP) on 17-18 February 2017. The conference will cover Ethereum technology and research (PoS, Scalability, Privacy) as well as Ethereum-based applications.">
+    <meta name="keywords" content="EDCON,edcon"/>
+
+    <link rel="stylesheet" href="css/pikaday.css">
+    <link rel="stylesheet" href="css/site.css">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css"/>
+    <link rel="icon" href="img/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" type="text/css" href="css/cat.css"/>
+    <script src="js/jquery-3.1.1.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/bootstrap.min.js" type="text/javascript" charset="utf-8"></script>
+    <style type="text/css">
+        .navbar-brand {
+            font-size: 30px;
+            color: white;
+            line-height: 50px;
+        }
+
+        .navbar-brand .yellow {
+            color: #ffb30f;
+        }
+
+        .navbar-brand:hover {
+            color: #ffb30f;
+        }
+
+        .navbar .register:hover {
+            color: white;
+            background: #f9b30f;
+        }
+
+        #res:hover {
+            cursor: pointer;
+        }
+
+        .icon-bar, .icon-bar:hover {
+            background-color: #FFFFFF;
+        }
+
+        .navbar-toggle, .navbar-toggle:hover {
+            background-color: #333;
+        }
+
+        .scrolla {
+            color: #FFFFFF;
+        }
+
+        .scrolla:hover {
+            color: #1D78CB;
+        }
+
+        .active a {
+            background-color: #FFFFFF;
+            color: #1D78CB;
+        }
+
+        .navbar-nav {
+            float: right;
+        }
+
+        h2 {
+            padding-left: 15px
+        }
+
+        @media only screen and (min-width: 768px ) {
+            .scrolla {
+                border-radius: 20px;
+                height: 30px;
+                margin-top: 10px;
+                margin-right: 10px;
+
+            }
+
+            .navbar-nav > li > a {
+                padding: 5px 10px 5px 10px;
+            }
+        }
+
+        .navbar {
+            margin-bottom: 0px;
+        }
+
+        .li li {
+            margin-bottom: 20px;
+        }
+
+        .a li {
+            list-style-type: none;
+        }
+
+        .a li a {
+            border: 1px solid #262626;
+            display: block;
+            width: 100%;
+            height: 40px;
+            line-height: 40px;
+            padding-left: 20px;
+            color: #262626;
+        }
+
+        .a li a:hover {
+            border: 1px solid #4299f1;
+            display: block;
+            width: 100%;
+            height: 40px;
+            line-height: 40px;
+            padding-left: 20px;
+            color: #4299f1;
+            text-decoration: none;
+        }
+
+        .form-group {
+            margin: 0px;
+        }
+
+        label {
+            color: #4299f1;
+        }
+
+        @media only screen and (min-width: 960px ) {
+            #s-- {
+                padding: 0px;
+                margin-left: 100px;
+            }
+
+            .col-sm-8 {
+                padding-left: 50px;
+            }
+        }
+
+        @media only screen and (max-width: 960px ) {
+            #logo {
+                display: none;
+            }
+
+            #res {
+                display: none;
+            }
+        }
+
+        @media only screen and (min-width: 600px) and (max-width: 767px) {
+            #s-- {
+                padding: 0px;
+                margin-left: 100px;
+            }
+
+            .ul_li {
+                width: 100%;
+            }
+
+            .navbar-collapse {
+                padding: 0px;
+
+            }
+
+            .ul_l {
+                width: 100%;
+                margin: 0px;
+                padding: 0px;
+            }
+
+        }
+
+        @media only screen and (min-width: 768px) and (max-width: 1000px) {
+            #s-- {
+                padding: 0px;
+                margin-left: 0px;
+            }
+        }
+
+        @media only screen and (max-width: 600px) {
+            #s-- {
+                padding: 0px;
+                margin: 0px;
+            }
+
+            .ul_li {
+                width: 100%;
+            }
+
+            .navbar-collapse {
+                padding: 0px;
+            }
+
+            .ul_l {
+                width: 100%;
+                margin: 0px;
+                padding: 0px;
+            }
+        }
+
+        input[type="text"] {
+            margin: 0px;
+            padding: 0px;
+        }
+
+        body {
+            padding: 0px;
+        }
+
+        input[type=number] {
+            -moz-appearance: textfield;
+        }
+
+        input[type=number]::-webkit-inner-spin-button,
+        input[type=number]::-webkit-outer-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+        }
+
+        #s-- img {
+
+            height: 35px;
+            margin-top: 7.5px;
+        }
+    </style>
+</head>
+
+<body>
+
+
+<nav style="background-color: #1d438a;" class="navbar " role="navigation">
+    <div class="container-fluid ull">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                    data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a id="s--" class="navbar-brand" href="index.html"><span class="yellow">E</span>DCON</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav ul_l">
+                <li class="ul_li"><a class="scrolla" href="index.html#index">Home</a></li>
+                <li class="ul_li"><a class="scrolla" href="index.html#about">About EDCON</a></li>
+                <li class="ul_li"><a class="scrolla" href="index.html#why">Why attend</a></li>
+                <li class="ul_li"><a class="scrolla" href="index.html#main">Agenda</a></li>
+                <li class="ul_li"><a class="scrolla" href="index.html#vip">Speakers</a></li>
+                <li class="ul_li"><a class="scrolla" href="index.html#venue">Venue</a></li>
+                <li class="ul_li"><a class="scrolla" href="index.html#organizers">Org.</a></li>
+                <li class="ul_li"><a class="scrolla" href="index.html#contact">Contact</a></li>
+                <li class="ul_li"><a class="scrolla" href="index.html#sponsors">Sponsors</a></li>
+                <li class="ul_li"><a class="scrolla register" href="register.html">Register</a></li>
+            </ul>
+
+        </div><!-- /.navbar-collapse -->
+    </div><!-- /.container-fluid -->
+
+</nav>
+
+<div class="container-fluid">
+    <div class="row">
+        <div class=" col-sm-8 col-md-9 col-lg-9 ">
+            <h2 style="color: #4299f1;">Developer</h2>
+            The registration has been closed, if you still want to buy ticket, please email at: contact@linktimetech.com
+            <!--<div class="col-sm-6 col-md-6 col-lg-6">
+                <form role="form">
+                  <div class="form-group">
+                    <label for="exampleInputEmail1">*Name ( * is necessary information.)</label>
+                    <input type="text" class="form-control" id="Developer_name" placeholder="">
+                  </div>
+                  <div class="form-group">
+                    <label for="exampleInputPassword1">*Birth</label>
+                    <input type="text" class="form-control" id="datepicker" >
+                  </div>
+                  <div class="form-group">
+                    <label for="exampleInputPassword1">*Language</label>
+                    <input type="text" class="form-control" id="Developer_language" placeholder="">
+                  </div>
+
+                </form>
+            </div>
+            <div class="col-sm-6 col-md-6 col-lg-6">
+                <form role="form">
+                  <div class="form-group">
+                    <label for="exampleInputEmail1">*Gender</label>
+                    <select style="margin: 0px;padding: 0px;" class="form-control" name="" id="Developer_gendar">
+                        <option value="male">male</option>
+                        <option value="female ">female </option>
+                    </select>
+                  </div>
+                  <div class="form-group">
+                    <label for="exampleInputPassword1">*City</label>
+                    <input type="text" class="form-control" id="Developer_city" placeholder="">
+                  </div>
+                  <div class="form-group">
+                    <label for="exampleInputPassword1">*Phone</label>
+                    <input style="margin: 0px;padding: 0px;" onkeyup="value=value.replace(/[^\d]/g,'') " onbeforepaste="clipboardData.setData('text',clipboardData.getData('text').replace(/[^\d]/g,''))" class="form-control" id="Developer_phone" placeholder="">
+                  </div>
+
+                </form>
+            </div>-->
+            <!--<form role="form" style="padding-left: 16px;padding-right: 14px;">
+                 <div class="form-group">
+                    <label for="exampleInputPassword1">*Email</label>
+                    <input type="text" class="form-control" id="Developer_email" placeholder="">
+                  </div>
+                  <div class="form-group">
+                    <label for="exampleInputEmail1">*Porject Experience</label>
+                    <input type="text" class="form-control" id="Developer_porject" placeholder="">
+                  </div>
+
+            </form>-->
+            <!--<div class="form-group" style="margin-bottom: 30px;margin-left: 17px;">
+              <button id="talent_submit" style="background-color: #4299F1;border: none;color: #FFFFFF;padding: 5px 30px 5px 30px;margin-top: 20px;font-size: 20px;" >Submit</button>
+          </div>-->
+
+        </div>
+        <span class="cat-thing">
+			<img id="logo" src="img/index_03.png"/>
+			<div id="res"></div>
+			
+		</span>
+    </div>
+</div>
+
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span
+                        class="sr-only">Close</span></button>
+                <h4 class="modal-title" id="myModalLabel"></h4>
+            </div>
+            <div class="modal-body">
+                Join the talent database?
+            </div>
+            <div class="modal-footer">
+                <button id="no" type="button" class="btn btn-default" data-dismiss="modal">No</button>
+                <button id="yes" type="button" class="btn btn-primary">Yes</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade bs-example-modal-sm" id="miss" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+     aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span
+                        class="sr-only">Close</span></button>
+                <h4 class="modal-title" id="myModalLabel">Warning!</h4>
+            </div>
+            <div class="modal-body">
+                Please fill the * information completely!
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade bs-example-modal-sm" id="succ" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+     aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span
+                        class="sr-only">Close</span></button>
+                <h4 class="modal-title" id="myModalLabel">Congratulations!</h4>
+            </div>
+            <div class="modal-body">
+                You have registered successfully! We will add your information into the talent database once being
+                confirmed.
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade bs-example-modal-sm" id="s_succ" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+     aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span
+                        class="sr-only">Close</span></button>
+                <h4 class="modal-title" id="myModalLabel">Success</h4>
+            </div>
+            <div class="modal-body">
+                Register was successful!Please contact us!
+            </div>
+            <div class="modal-footer">
+                <button id="close" type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade bs-example-modal-sm" id="succ_1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+     aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span
+                        class="sr-only">Close</span></button>
+                <h4 class="modal-title" id="myModalLabel"></h4>
+            </div>
+            <div id="ms0" class="modal-body">
+
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+<script src="js/pikaday.js" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript">
+    var picker = new Pikaday(
+        {
+            field: document.getElementById('datepicker'),
+            firstDay: 1,
+            minDate: new Date('2000-01-01'),
+            maxDate: new Date('2020-12-31'),
+            yearRange: [2000, 2020]
+        });
+    //  $(function(){
+    //		$('#logo').fadeIn(1000);
+    //$('#myTab li:eq(1) a').tab('show');
+    //	});
+    //document.getElementById("res_1").addEventListener('click',function(){
+    //			location.href='startup.html';
+    //		});
+    document.getElementById("res").addEventListener('click', function () {
+        location.href = 'register.html';
+    });
+    //		document.getElementById("res_3").addEventListener('click',function(){
+    //			location.href='startup.html';
+    //		});
+    //		document.getElementById("res_4").addEventListener('click',function(){
+    //			location.href='startup.html';
+    //		});
+
+
+    //		document.getElementById("startups_submit").addEventListener('click',function(){
+    //
+    //			 var company=document.getElementById("Startups_company").value;
+    //			 var address=document.getElementById("Startups_address").value;
+    //			 var website=document.getElementById("Startups_website").value;
+    //			 var phone=document.getElementById("Startups_phone").value;
+    //			 var email=document.getElementById("Startups_email").value;
+    //			 var project=document.getElementById("Startups_project").value;
+    //			 var field=document.getElementById("Startups_field").value;
+    //			 var coinType=document.getElementById("Startups_currency").value;
+    //			 var coinAddress=document.getElementById("Startups_coinAddress").value;
+    //			 if (company==''||address==''||website==''||phone==''||email==''||project==''||field==''||coinType==''||coinAddress=='') {
+    //			 	$('#miss').modal();
+    //			 } else{
+    //			 	$.ajax("https://edcon.io/FranceWebsite/Register/startUps.php",{
+    // 				data:{
+    // 					company:company,
+    // 					address:address,
+    // 					website:website,
+    // 					phone:phone,
+    // 					email:email,
+    // 					project:project,
+    // 					field:field,
+    // 					coinType:coinType,
+    // 					coinAddress:coinAddress
+    // 				},
+    // 				type:"post",
+    // 				dataType: 'json',
+    //				timeout: 30000,
+    //				success: function(data) {
+    //						if (data.code=="200") {
+    //							$('#succ').modal();
+    //						} else{
+    //							console.log('接口错误');
+    //						}
+    //
+    //					},
+    //					error: function(xhr, type, errorThrown) {
+    //
+    //						console.log('未进接口');
+    //					}
+    // 			});
+    //			 }
+    //		});
+
+    document.getElementById("talent_submit").addEventListener('click', function () {
+
+        var name1 = document.getElementById("Developer_name").value;
+        var gendar1 = document.getElementById("Developer_gendar").value;
+        var birth1 = document.getElementById("datepicker").value;
+        var city1 = document.getElementById("Developer_city").value;
+        var language1 = document.getElementById("Developer_language").value;
+        var phone1 = document.getElementById("Developer_phone").value;
+        var email1 = document.getElementById("Developer_email").value;
+        var project1 = document.getElementById("Developer_porject").value;
+        var re = /^(\w-*\.*)+@(\w-?)+(\.\w{2,})+$/
+        if (re.test(email1)) {
+        } else {
+            $('#succ_1').modal();
+            document.getElementById("ms0").innerText = 'Invalid email address!';
+            return;
+        }
+//			 var education1=document.getElementById("Developer_education").value;			 
+//			 var resume1=document.getElementById("Developer_resume").value;
+        if (name1 == '' || gendar1 == '' || birth1 == '' || city1 == '' || language1 == '' || phone1 == '' || email1 == '' || project1 == '') {
+            $('#miss').modal();
+        } else {
+            $.ajax("https://edcon.io/FranceWebsite/Register/developer.php", {
+                data: {
+                    name: name1,
+                    gendar: gendar1,
+                    birth: birth1,
+                    city: city1,
+                    language: language1,
+                    phone: phone1,
+                    email: email1,
+// 					education:education1,
+                    project: project1,
+// 					resume:resume1
+                },
+                type: "post",
+                dataType: 'json',
+                timeout: 30000,
+                success: function (data) {
+                    if (data.code == "200") {
+                        document.getElementById("Developer_name").value = '';
+                        document.getElementById("datepicker").value = '';
+                        document.getElementById("Developer_city").value = '';
+                        document.getElementById("Developer_language").value = '';
+                        document.getElementById("Developer_phone").value = '';
+                        document.getElementById("Developer_email").value = '';
+                        document.getElementById("Developer_porject").value = '';
+                        $('#succ').modal();
+                    } else {
+                        console.log(JSON.stringify(data));
+                    }
+
+                },
+                error: function (xhr, type, errorThrown) {
+
+                    console.log('未进接口');
+                }
+            });
+        }
+    });
+
+    //		document.getElementById("investor_submit").addEventListener('click',function(){
+    //
+    //			 var company=document.getElementById("Investor_company").value;
+    //			 var address=document.getElementById("Investor_adress").value;
+    //			 var website=document.getElementById("Investor_website").value;
+    //			 var phone=document.getElementById("Investor_phone").value;
+    //			 var email=document.getElementById("Investor_email").value;
+    //			 var project=document.getElementById("Investor_porject").value;
+    //			 var field=document.getElementById("Investor_field").value;
+    //			 var coinType=document.getElementById("Investor_currency").value;
+    //			 var coinAddress=document.getElementById("Investor_coinAddress").value;
+    //			 if (company==''||address==''||website==''||phone==''||email==''||project==''||field==''||coinType==''||coinAddress=='') {
+    //			 	$('#miss').modal();
+    //			 } else{
+    //			 	$.ajax("https://edcon.io/FranceWebsite/Register/investor.php",{
+    // 				data:{
+    // 					company:company,
+    // 					address:address,
+    // 					website:website,
+    // 					phone:phone,
+    // 					email:email,
+    // 					project:project,
+    // 					field:field,
+    // 					coinType:coinType,
+    // 					coinAddress:coinAddress
+    // 				},
+    // 				type:"post",
+    // 				dataType: 'json',
+    //				timeout: 30000,
+    //				success: function(data) {
+    //						if (data.code=="200") {
+    //							$('#succ').modal();
+    //						} else{
+    //							console.log('接口错误');
+    //						}
+    //
+    //					},
+    //					error: function(xhr, type, errorThrown) {
+    //
+    //						console.log('未进接口');
+    //					}
+    // 			});
+    //			 }
+    //		});
+    //
+    //		document.getElementById("speak_submit").addEventListener('click',function(){
+    //
+    //			 var name=document.getElementById("Speaker_name").value;
+    //			 var CI=document.getElementById("Speaker_company").value;
+    //			 var PT=document.getElementById("Speaker_title").value;
+    //			 var professional=document.getElementById("Speaker_field").value;
+    //			 var topic=document.getElementById("Speaker_topic").value;
+    //			 var telephone=document.getElementById("Speaker_phone").value;
+    //			 var email=document.getElementById("Speaker_email").value;
+    //			 var notes=document.getElementById("Speaker_notes").value;
+    //
+    //			 if (name==''||CI==''||PT==''||professional==''||topic==''||telephone==''||email==''||notes=='') {
+    //			 	$('#miss').modal();
+    //			 } else{
+    //			 	$.ajax("https://edcon.io/FranceWebsite/Register/speaker.php",{
+    // 				data:{
+    // 					name:name,
+    // 					CI:CI,
+    // 					TP:PT,
+    // 					professional:professional,
+    // 					topic:topic,
+    // 					telephone:telephone,
+    // 					email:email,
+    // 					notes:notes
+    // 				},
+    // 				type:"post",
+    // 				dataType: 'json',
+    //				timeout: 30000,
+    //				success: function(data) {
+    //						if (data.code=="200") {
+    //							$('#s_succ').modal();
+    //						} else{
+    //							console.log(JSON.stringify(data));
+    //						}
+    //
+    //					},
+    //					error: function(xhr, type, errorThrown) {
+    //
+    //						console.log('未进接口');
+    //					}
+    // 			});
+    //			 }
+    //		});
+    //		document.getElementById("close").addEventListener('click',function(){
+    //		location.href='index.html#contact'
+    //	});
+</script>
+</html>
+	

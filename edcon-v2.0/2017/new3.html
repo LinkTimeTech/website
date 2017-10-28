@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>EDCON</title>
+    <meta name="description"
+          content="The EDCON (European Ethereum Development Conference) is a conference that will take place in Paris at the Ecole Supérieure de Commerce de Paris - Europe (ESCP) on 17-18 February 2017. The conference will cover Ethereum technology and research (PoS, Scalability, Privacy) as well as Ethereum-based applications.">
+    <meta name="keywords" content="EDCON,edcon"/>
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css"/>
+    <link rel="icon" href="img/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" type="text/css" href="css/cat.css"/>
+    <script src="js/jquery-3.1.1.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/bootstrap.min.js" type="text/javascript" charset="utf-8"></script>
+    <style type="text/css">
+        .navbar-brand {
+            font-size: 30px;
+            color: white;
+            line-height: 50px;
+        }
+
+        .navbar-brand .yellow {
+            color: #ffb30f;
+        }
+
+        .navbar-brand:hover {
+            color: #ffb30f;
+        }
+
+        .navbar .register:hover {
+            color: white;
+            background: #f9b30f;
+        }
+
+        /*.navbar-inverse .navbar-nav>.active>a{
+            background-color: #5cddbf;
+
+        }
+        .navbar-inverse .navbar-nav>.active>a:hover{
+            background-color: #5cddbf;
+        }
+        .navbar-inverse .navbar-nav>.active>a:focus{
+            background-color: #5cddbf;
+        }
+        .navbar-inverse .navbar-nav>li>a{
+            color: #fff;
+        }
+        .navbar-inverse .navbar-nav>li>a:hover{
+            background-color: #5bc2aA;
+        }
+        .navbar-inverse .navbar-nav>li>a:focus{
+            background-color: #5cddbf;
+        }
+        .navbar-nav{
+            float: right;
+        }*/
+        #res:hover {
+            cursor: pointer;
+        }
+
+        .icon-bar, .icon-bar:hover {
+            background-color: #FFFFFF;
+        }
+
+        .navbar-toggle, .navbar-toggle:hover {
+            background-color: #333;
+        }
+
+        .scrolla {
+            color: #FFFFFF;
+        }
+
+        .scrolla:hover {
+            color: #1D78CB;
+        }
+
+        .active a {
+            background-color: #FFFFFF;
+            color: #1D78CB;
+        }
+
+        .navbar-nav {
+            float: right;
+        }
+
+        @media only screen and (min-width: 768px ) {
+            .scrolla {
+                border-radius: 20px;
+                height: 30px;
+                margin-top: 10px;
+                margin-right: 10px;
+
+            }
+
+            .navbar-nav > li > a {
+                padding: 5px 10px 5px 10px;
+            }
+        }
+
+        .navbar {
+            margin-bottom: 0px;
+        }
+
+        .li li {
+            margin-bottom: 20px;
+        }
+
+        .a li {
+            list-style-type: none;
+        }
+
+        .a li a {
+            border: 1px solid #262626;
+            display: block;
+            width: 100%;
+            height: 40px;
+            line-height: 40px;
+            padding-left: 20px;
+            color: #262626;
+        }
+
+        .a li a:hover {
+            border: 1px solid #4299f1;
+            display: block;
+            width: 100%;
+            height: 40px;
+            line-height: 40px;
+            padding-left: 20px;
+            color: #4299f1;
+            text-decoration: none;
+        }
+
+        @media only screen and (min-width: 960px ) {
+            #s-- {
+                padding: 0px;
+                margin-left: 100px;
+            }
+        }
+
+        @media only screen and (max-width: 960px ) {
+            #logo {
+                display: none;
+            }
+
+            #res {
+                display: none;
+            }
+        }
+
+        @media only screen and (min-width: 600px) and (max-width: 767px) {
+            #s-- {
+                padding: 0px;
+                margin-left: 100px;
+            }
+
+            .ul_li {
+                width: 100%;
+            }
+
+            .navbar-collapse {
+                padding: 0px;
+
+            }
+
+            /*.ull{
+                padding: 0px;
+            }*/
+            .ul_l {
+                width: 100%;
+                margin: 0px;
+                padding: 0px;
+            }
+
+        }
+
+        @media only screen and (min-width: 768px) and (max-width: 1000px) {
+            #s-- {
+                padding: 0px;
+                margin-left: 0px;
+            }
+        }
+
+        @media only screen and (max-width: 600px) {
+            #s-- {
+                padding: 0px;
+                margin: 0px;
+            }
+
+            .ul_li {
+                width: 100%;
+            }
+
+            .navbar-collapse {
+                padding: 0px;
+            }
+
+            .ul_l {
+                width: 100%;
+                margin: 0px;
+                padding: 0px;
+            }
+        }
+
+        .col-sm-12 a:hover {
+            text-decoration: none;
+            color: #000000;
+        }
+
+        .col-sm-12 a {
+            color: #000000;
+        }
+
+        #s-- img {
+
+            height: 35px;
+            margin-top: 7.5px;
+        }
+    </style>
+</head>
+
+<body>
+
+
+<nav style="background-color: #1d438a;" class="navbar  " role="navigation">
+    <div class="container-fluid ull">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                    data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a id="s--" class="navbar-brand" href="index.html"><span class="yellow">E</span>DCON</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav ul_l">
+                <li class="ul_li"><a class="scrolla" href="index.html#index">Home</a></li>
+                <li class="ul_li"><a class="scrolla" href="index.html#about">About EDCON</a></li>
+                <li class="ul_li"><a class="scrolla" href="index.html#why">Why attend</a></li>
+                <li class="ul_li"><a class="scrolla" href="index.html#main">Agenda</a></li>
+                <li class="ul_li"><a class="scrolla" href="index.html#vip">Speakers</a></li>
+                <li class="ul_li"><a class="scrolla" href="index.html#venue">Venue</a></li>
+                <li class="ul_li"><a class="scrolla" href="index.html#organizers">Org.</a></li>
+                <li class="ul_li"><a class="scrolla" href="index.html#contact">Contact</a></li>
+                <li class="ul_li"><a class="scrolla" href="index.html#sponsors">Sponsors</a></li>
+                <li class="ul_li"><a class="scrolla register" href="register.html">Register</a></li>
+            </ul>
+
+        </div><!-- /.navbar-collapse -->
+    </div><!-- /.container-fluid -->
+
+</nav>
+<div class="container-fluid">
+    <div class="row">
+        <div class=" col-sm-12 col-md-12 col-lg-12" style="padding-left: 50px;padding-top: 50px;">
+            <font style="color: #23527C;">Your Position: </font><a href="index.html">EDCON ></a> > <a
+                href="index.html#why">Why attend</a> > Blockchain Talent Database
+        </div>
+    </div>
+</div>
+<div class="container-fluid">
+    <div class="row">
+        <div class=" col-sm-8 col-md-9 col-lg-9 ">
+            <div style="padding-left: 50px;font-size: 15px;">
+                <h4 style="color: #4299f1;">Blockchain Talent Database</h4>
+                Blockchain technology is an interdisciplinary technology. It not only includes cryptography, big data
+                and many other fields in computer science, but also requires developers to deeply understand finance,
+                law and management. The shortage of talents with the interdisciplinary experience is hindering the
+                blockchain industry's development. Figuring out how to gather international talents is a very big
+                challenge for the industry, so this conference will set up a <font color="#D43F3A">Talent
+                Database</font> to strongly support companies' needs for talents.
+                <br/>
+                If you are a Talent, Join Us!
+                <br/>
+                If you need Geniuses, Join Us!
+                <br/>
+                <font color="#D43F3A">Waiting for you HERE!</font>
+                <br/>
+                <button id="rat"
+                        style="background-color: #ffa200;border: none;color: #FFFFFF;padding: 5px 10px 5px 10px;margin-top: 20px;">
+                    Register as a Talent
+                </button>
+            </div>
+
+        </div>
+        <span class="cat-thing">
+		<img id="logo" src="img/index_03.png"/>
+		<div id="res"></div>
+            <!--<div id="admin" style="position: fixed;bottom: 15%;right: 3%;width: 12%;height: 10%;"></div>-->
+	</span>
+    </div>
+</div>
+<!--<button id="r" style="background-color: rgba(66,153,241,0.7);border: none;color: #FFFFFF;padding: 10px 10px 10px 10px;font-size: 20px;position: fixed;top: 10%;right: 2%;border-radius: 60px;">Register</button>-->
+
+
+</body>
+<script type="text/javascript">
+    $(function () {
+//		$('#logo').fadeIn(1000);
+    });
+    document.getElementById("rat").addEventListener('click', function () {
+        location.href = 'talent.html';
+    });
+    document.getElementById("res").addEventListener('click', function () {
+        location.href = 'register.html';
+    });
+</script>
+</html>

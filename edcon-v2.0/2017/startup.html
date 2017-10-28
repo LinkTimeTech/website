@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>EDCON</title>
+    <meta name="description"
+          content="The EDCON (European Ethereum Development Conference) is a conference that will take place in Paris at the Ecole Supérieure de Commerce de Paris - Europe (ESCP) on 17-18 February 2017. The conference will cover Ethereum technology and research (PoS, Scalability, Privacy) as well as Ethereum-based applications.">
+    <meta name="keywords" content="EDCON,edcon"/>
+    <link rel="stylesheet" href="css/pikaday.css">
+    <link rel="stylesheet" href="css/site.css">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css"/>
+    <link rel="icon" href="img/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" type="text/css" href="css/cat.css"/>
+    <script src="js/jquery-3.1.1.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/bootstrap.min.js" type="text/javascript" charset="utf-8"></script>
+    <style type="text/css">
+        #res:hover {
+            cursor: pointer;
+        }
+
+        .icon-bar, .icon-bar:hover {
+            background-color: #FFFFFF;
+        }
+
+        .navbar-toggle, .navbar-toggle:hover {
+            background-color: #333;
+        }
+
+        .scrolla {
+            color: #FFFFFF;
+        }
+
+        .scrolla:hover {
+            color: #1D78CB;
+        }
+
+        .active a {
+            background-color: #FFFFFF;
+            color: #1D78CB;
+        }
+
+        .navbar-nav {
+            float: right;
+        }
+
+        h2 {
+            padding-left: 15px
+        }
+
+        @media only screen and (min-width: 768px ) {
+            .scrolla {
+                border-radius: 20px;
+                height: 30px;
+                margin-top: 10px;
+                margin-right: 10px;
+
+            }
+
+            .navbar-nav > li > a {
+                padding: 5px 10px 5px 10px;
+            }
+        }
+
+        .navbar {
+            margin-bottom: 0px;
+        }
+
+        .li li {
+            margin-bottom: 20px;
+        }
+
+        .a li {
+            list-style-type: none;
+        }
+
+        .a li a {
+            border: 1px solid #262626;
+            display: block;
+            width: 100%;
+            height: 40px;
+            line-height: 40px;
+            padding-left: 20px;
+            color: #262626;
+        }
+
+        .a li a:hover {
+            border: 1px solid #4299f1;
+            display: block;
+            width: 100%;
+            height: 40px;
+            line-height: 40px;
+            padding-left: 20px;
+            color: #4299f1;
+            text-decoration: none;
+        }
+
+        .form-group {
+            margin: 0px;
+        }
+
+        label {
+            color: #4299f1;
+        }
+
+        @media only screen and (min-width: 960px ) {
+            #s-- {
+                padding: 0px;
+                margin-left: 100px;
+            }
+
+            .col-sm-8 {
+                padding-left: 50px;
+            }
+        }
+
+        @media only screen and (max-width: 960px ) {
+            #logo {
+                display: none;
+            }
+
+            #res {
+                display: none;
+            }
+        }
+
+        @media only screen and (min-width: 600px) and (max-width: 767px) {
+            #s-- {
+                padding: 0px;
+                margin-left: 100px;
+            }
+
+            .ul_li {
+                width: 100%;
+            }
+
+            .navbar-collapse {
+                padding: 0px;
+
+            }
+
+            /*.ull{
+                padding: 0px;
+            }*/
+            .ul_l {
+                width: 100%;
+                margin: 0px;
+                padding: 0px;
+            }
+
+        }
+
+        @media only screen and (min-width: 768px) and (max-width: 1000px) {
+            #s-- {
+                padding: 0px;
+                margin-left: 0px;
+            }
+        }
+
+        @media only screen and (max-width: 600px) {
+            #s-- {
+                padding: 0px;
+                margin: 0px;
+            }
+
+            .ul_li {
+                width: 100%;
+            }
+
+            .navbar-collapse {
+                padding: 0px;
+            }
+
+            .ul_l {
+                width: 100%;
+                margin: 0px;
+                padding: 0px;
+            }
+        }
+
+        input[type="text"] {
+            margin: 0px;
+            padding: 0px;
+        }
+
+        body {
+            padding: 0px;
+        }
+
+        input[type=number] {
+            -moz-appearance: textfield;
+        }
+
+        input[type=number]::-webkit-inner-spin-button,
+        input[type=number]::-webkit-outer-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+        }
+
+        #s-- img {
+
+            height: 35px;
+            margin-top: 7.5px;
+        }
+
+        .navbar-brand {
+            font-size: 30px;
+            color: white;
+            line-height: 50px;
+        }
+
+        .navbar-brand .yellow {
+            color: #ffb30f;
+        }
+
+        .navbar-brand:hover {
+            color: #ffb30f;
+        }
+
+        .navbar .register:hover {
+            color: white;
+            background: #f9b30f;
+        }
+    </style>
+</head>
+
+<body>
+
+
+<nav style="background-color: #1d438a;" class="navbar " role="navigation">
+    <div class="container-fluid ull">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                    data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a id="s--" class="navbar-brand" href="index.html"><span class="yellow">E</span>DCON</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav ul_l">
+                <li class="ul_li"><a class="scrolla" href="index.html#index">Home</a></li>
+                <li class="ul_li"><a class="scrolla" href="index.html#about">About EDCON</a></li>
+                <li class="ul_li"><a class="scrolla" href="index.html#why">Why attend</a></li>
+                <li class="ul_li"><a class="scrolla" href="index.html#main">Agenda</a></li>
+                <li class="ul_li"><a class="scrolla" href="index.html#vip">Speakers</a></li>
+                <li class="ul_li"><a class="scrolla" href="index.html#venue">Venue</a></li>
+                <li class="ul_li"><a class="scrolla" href="index.html#organizers">Org.</a></li>
+                <li class="ul_li"><a class="scrolla" href="index.html#contact">Contact</a></li>
+                <li class="ul_li"><a class="scrolla" href="index.html#sponsors">Sponsors</a></li>
+                <li class="ul_li"><a class="scrolla register" href="register.html">Register</a></li>
+            </ul>
+
+        </div><!-- /.navbar-collapse -->
+    </div><!-- /.container-fluid -->
+
+</nav>
+
+
+<div class="container-fluid">
+    <div class="row">
+        <div style="" class=" col-sm-8 col-md-9 col-lg-9 ">
+            <h2 style="color: #4299f1;">Startup</h2>
+            <form style="padding-left: 16px;" role="form">
+                <!--<div class="form-group">
+                  <label for="exampleInputEmail1">*Company Name ( * is necessary information.)</label>
+                  <input type="text" class="form-control" id="Startups_company" placeholder="">
+                </div>
+                <div class="form-group">
+                  <label for="exampleInputPassword1">*Country</label>
+                  <input type="text" class="form-control" id="Startups_address" >
+                </div>
+                <div class="form-group">
+                  <label for="exampleInputPassword1">Website</label>
+                  <input type="text" class="form-control" id="Startups_website" placeholder="">
+                </div>
+                <div class="form-group">
+                  <label for="exampleInputPassword1">*Phone</label>
+                  <input style="margin: 0px;padding: 0px;" onkeyup="value=value.replace(/[^\d]/g,'') " onbeforepaste="clipboardData.setData('text',clipboardData.getData('text').replace(/[^\d]/g,''))" class="form-control" id="Startups_phone" placeholder="">
+                </div>
+                <div class="form-group">
+                  <label for="exampleInputPassword1">*Email</label>
+                  <input type="text" class="form-control" id="Startups_email" placeholder="">
+                </div>
+                <div class="form-group">
+                  <label for="exampleInputPassword1">*Project Description</label>
+                  <input type="text" class="form-control" id="Startups_field" placeholder="">
+                </div>-->
+                <div style="margin-top: 10px;font-size: 15px;">
+                    The registration has been closed, if you have any questions as a startup, please feel free to
+                    contact us at<font style="color: red;"> startups@linktimetech.com</font>
+                </div>
+
+            </form>
+            <!--<div class="form-group" style="margin-bottom: 30px;margin-left: 17px;">
+                <button id="startups_submit" style="background-color: #4299F1;border: none;color: #FFFFFF;padding: 5px 30px 5px 30px;margin-top: 20px;font-size: 20px;" >Submit</button>
+            </div>-->
+
+
+        </div>
+        <span class="cat-thing">
+			<img id="logo" src="img/index_03.png"/>
+			<div id="res"></div>
+            <!--<div id="admin" style="position: fixed;bottom: 15%;right: 3%;width: 12%;height: 10%;"></div>-->
+		</span>
+    </div>
+</div>
+
+
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span
+                        class="sr-only">Close</span></button>
+                <h4 class="modal-title" id="myModalLabel"></h4>
+            </div>
+            <div class="modal-body">
+                Join the talent database?
+            </div>
+            <div class="modal-footer">
+                <button id="no" type="button" class="btn btn-default" data-dismiss="modal">No</button>
+                <button id="yes" type="button" class="btn btn-primary">Yes</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade bs-example-modal-sm" id="miss" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+     aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span
+                        class="sr-only">Close</span></button>
+                <h4 class="modal-title" id="myModalLabel">Warning!</h4>
+            </div>
+            <div class="modal-body">
+                Please fill the * information completely!
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade bs-example-modal-sm" id="succ" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+     aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span
+                        class="sr-only">Close</span></button>
+                <h4 class="modal-title" id="myModalLabel">Congratulations!</h4>
+            </div>
+            <div class="modal-body">
+                You have registered successfully! We will get back to you as soon as possible!
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade bs-example-modal-sm" id="s_succ" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+     aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span
+                        class="sr-only">Close</span></button>
+                <h4 class="modal-title" id="myModalLabel">Successful!</h4>
+            </div>
+            <div class="modal-body">
+                Thank you for your cooperation.
+            </div>
+            <div class="modal-footer">
+                <button id="close" type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade bs-example-modal-sm" id="succ_1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+     aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span
+                        class="sr-only">Close</span></button>
+                <h4 class="modal-title" id="myModalLabel"></h4>
+            </div>
+            <div id="ms0" class="modal-body">
+
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+<script src="js/pikaday.js" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript">
+
+    document.getElementById("res").addEventListener('click', function () {
+        location.href = 'register.html';
+    });
+
+
+    document.getElementById("startups_submit").addEventListener('click', function () {
+
+        var company = document.getElementById("Startups_company").value;
+        var address = document.getElementById("Startups_address").value;
+        var website = document.getElementById("Startups_website").value;
+        var phone = document.getElementById("Startups_phone").value;
+        var email = document.getElementById("Startups_email").value;
+        var re = /^(\w-*\.*)+@(\w-?)+(\.\w{2,})+$/
+        if (re.test(email)) {
+        } else {
+            $('#succ_1').modal();
+            document.getElementById("ms0").innerText = 'Invalid email address!';
+            return;
+        }
+        var field = document.getElementById("Startups_field").value;
+        if (company == '' || address == '' || phone == '' || email == '' || field == '') {
+            $('#miss').modal();
+        } else {
+            $.ajax("https://edcon.io/FranceWebsite/Register/startUps.php", {
+                data: {
+                    company: company,
+                    address: address,
+                    website: website,
+                    phone: phone,
+                    email: email,
+                    field: field,
+                },
+                type: "post",
+                dataType: 'json',
+                timeout: 30000,
+                success: function (data) {
+                    if (data.code == "200") {
+                        document.getElementById("Startups_company").value = '';
+                        document.getElementById("Startups_address").value = '';
+                        document.getElementById("Startups_website").value = '';
+                        document.getElementById("Startups_phone").value = '';
+                        document.getElementById("Startups_email").value = '';
+                        document.getElementById("Startups_field").value = '';
+                        $('#succ').modal();
+                    } else {
+                        console.log(JSON.stringify(data));
+                    }
+
+                },
+                error: function (xhr, type, errorThrown) {
+
+                    console.log('未进接口');
+                }
+            });
+        }
+    });
+</script>
+</html>
+	

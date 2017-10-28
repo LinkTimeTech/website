@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css"/>
+    <script src="js/jquery-3.1.1.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/bootstrap.min.js" type="text/javascript" charset="utf-8"></script>
+    <style type="text/css">
+        body {
+            background-color: #EEEEEE;
+            background-image: url(img/QQ图片20161125190856.jpg);
+            background-repeat: repeat-y;
+            background-size: cover;
+        }
+
+        .navbar-inverse .navbar-nav > .active > a {
+            background-color: #5cddbf;
+
+        }
+
+        .navbar-inverse .navbar-nav > .active > a:hover {
+            background-color: #5cddbf;
+        }
+
+        .navbar-inverse .navbar-nav > .active > a:focus {
+            background-color: #5cddbf;
+        }
+
+        .navbar-inverse .navbar-nav > li > a {
+            color: #fff;
+        }
+
+        .navbar-inverse .navbar-nav > li > a:hover {
+            background-color: #5bc2aA;
+        }
+
+        .navbar-inverse .navbar-nav > li > a:focus {
+            background-color: #5cddbf;
+        }
+
+        .navbar-nav {
+            float: right;
+        }
+
+    </style>
+</head>
+
+<body>
+
+
+<nav class="navbar navbar-inverse" role="navigation">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                    data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a style="margin: 0px;padding: 0px;margin-left: 100px;" class="navbar-brand" href="#"><img src="img/1.png"
+                                                                                                       height="50"/></a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav">
+                <li><a href="home.html">Home</a></li>
+                <li><a href="why.html">Why attend</a></li>
+                <li><a href="main.html">Agenda</a></li>
+                <li><a href="#">Venue&Travel</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li class="active"><a href="register.html">Register</a></li>
+            </ul>
+
+        </div><!-- /.navbar-collapse -->
+    </div><!-- /.container-fluid -->
+
+</nav>
+<div class="container">
+    <div style="font-size: 80px;color: #FFFFFF;text-align: center;margin-top: 100px;" class="container">
+        EDVON&nbsp;
+    </div>
+    <div style="width: 280px;height: 270px;background-color: rgba(29,67,138,0.7);text-align: center;" class="container">
+        <button id="re"
+                style="width: 220px;height: 50px;margin-top: 40px;color: #FFFFFF;background-color: #ffb30f;border: none;font-size: 20px;">
+            Register
+        </button>
+        <button id="td"
+                style="width: 220px;height: 50px;margin-top: 30px;color: #FFFFFF;background-color: #ffb30f;border: none;font-size: 20px;">
+            Talent Database
+        </button>
+        <div style="width: 280px;color: #FFFFFF;margin-top: 10px;">
+            <img src="img/4.png" width="30"/>18<sup>th</sup>-19<sup>th</sup> Feb
+        </div>
+        <div style="width: 280px;color: #FFFFFF;margin-top: 10px">
+            <img src="img/5.png" width="30"/>Paris&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        </div>
+    </div>
+</div>
+</body>
+<script type="text/javascript">
+    document.getElementById("re").addEventListener('click', function () {
+        location.href = 'register.html';
+    });
+    document.getElementById("td").addEventListener('click', function () {
+        location.href = 'talent.html';
+    });
+</script>
+</html>

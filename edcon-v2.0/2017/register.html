@@ -1,0 +1,879 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>EDCON Conference</title>
+    <meta name="description"
+          content="The EDCON (European Ethereum Development Conference) is a conference that will take place in Paris at the Ecole Supérieure de Commerce de Paris - Europe (ESCP) on 17-18 February 2017. The conference will cover Ethereum technology and research (PoS, Scalability, Privacy) as well as Ethereum-based applications.">
+    <meta name="keywords" content="EDCON,edcon"/>
+    <link rel="shortcut icon" href=""/>
+    <link rel="stylesheet" href="css/style.css"/>
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="css/main.css"/>
+    <link rel="stylesheet" href="css/register.css"/>
+    <link rel="icon" href="img/favicon.ico" type="image/x-icon">
+    <script src="js/jquery-3.1.1.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/bootstrap.min.js" type="text/javascript" charset="utf-8"></script>
+    <style type="text/css">
+        #login {
+            position: absolute;
+            z-index: 100;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            background-color: #000000;
+            color: #FFFFFF;
+            opacity: 0.4;
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+<div id="login"><img id="" style="position: fixed;left: 50%;top: 45%;z-index: 101;" src="img/login.gif" height="40"/>
+</div>
+
+<nav style="background-color: #1d438a;" class="navbar " role="navigation">
+    <div class="container-fluid ull">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                    data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a id="s--" class="navbar-brand" href="index.html"><span class="yellow">E</span>DCON</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav ul_l">
+                <li class="ul_li"><a class="scrolla" href="index.html#index">Home</a></li>
+                <li class="ul_li"><a class="scrolla" href="index.html#about">About EDCON</a></li>
+                <li class="ul_li"><a class="scrolla" href="index.html#why">Why attend</a></li>
+                <li class="ul_li"><a class="scrolla" href="index.html#main">Agenda</a></li>
+                <li class="ul_li"><a class="scrolla" href="index.html#vip">Speakers</a></li>
+                <li class="ul_li"><a class="scrolla" href="index.html#venue">Venue</a></li>
+                <li class="ul_li"><a class="scrolla" href="index.html#organizers">Org.</a></li>
+                <li class="ul_li"><a class="scrolla" href="index.html#contact">Contact</a></li>
+                <li class="ul_li"><a class="scrolla" href="index.html#sponsors">Sponsors</a></li>
+                <li class="ul_li"><a class="scrolla register" href="register.html">Register</a></li>
+            </ul>
+
+        </div><!-- /.navbar-collapse -->
+    </div><!-- /.container-fluid -->
+
+</nav>
+
+
+<!--<button id="r" style="background-color: rgba(66,153,241,0.7);border: none;color: #FFFFFF;padding: 10px 10px 10px 10px;font-size: 20px;position: fixed;top: 10%;right: 2%;border-radius: 60px;">Register</button>-->
+<ul style="padding-left: 10%;padding-top: 30px;" class="nav nav-tabs" role="tablist" id="myTab">
+    <li role="presentation" class="active"><a href="#home" role="tab" data-toggle="tab">Register and Pay</a></li>
+    <li role="presentation"><a href="#profile" role="tab" data-toggle="tab">To be a sponsor</a></li>
+    <!--<li role="presentation"><a href="#speak" role="tab" data-toggle="tab">To be a speaker</a></li>-->
+    <li role="presentation"><a href="#Volunteer" role="tab" data-toggle="tab">Volunteer and media passes</a></li>
+    <li role="presentation"><a href="#slack" role="tab" data-toggle="tab">Join EthereumGlobal on slack</a></li>
+</ul>
+
+<div class="tab-content">
+    <div role="tabpanel" class="tab-pane active" id="home">
+        <div id="register" class="container-fluid">
+            <div class="row">
+                <div style="" class="col-sm-offset-1 col-sm-10">
+                    <h2 style="color: #4299f1;"></h2>
+                    <!--<div class="row">
+                        <div class="col-md-6 col-lg-6">
+                            <form style="" role="form">
+                              <div class="form-group">
+                                <label for="exampleInputEmail1">Full Name (Please enter the valid information so we can follow up)</label>
+                                <input type="text" class="form-control" id="name" placeholder="">
+                              </div>
+                              <div class="form-group">
+                                <label for="exampleInputPassword1">Company (Please enter the valid information so we can follow up)</label>
+                                <input type="text" class="form-control" id="company" >
+                              </div>
+                              <div class="form-group">
+                                <label for="exampleInputPassword1">Email (Please enter the valid information so we can follow up)</label>
+                                <input type="text" class="form-control" id="email" placeholder="">
+                              </div>
+                              <div class="form-group">
+                                <label for="exampleInputPassword1">Phone (Please enter the valid information so we can follow up)</label>
+                                <input style="margin: 0px;padding: 0px;" onkeyup="value=value.replace(/[^\d]/g,'') " onbeforepaste="clipboardData.setData('text',clipboardData.getData('text').replace(/[^\d]/g,''))" class="form-control" id="phone" placeholder="">
+                              </div>
+                            </form>
+                        </div>
+                        <div style="opacity: 0.8;" class="col-md-6 col-lg-6">
+                            To Participants:<br />
+                            Thank you for supporting EDCON. If you are interested in Ethereum or other bleeding-edge blockchain technologies, the EDCON is the place to be. We will catch together a glimpse of the future of blockchain and Ethereum technologies.<br /><br />
+
+
+                            Please note that 20% of the profits of the Conference will be donated to the Ethereum Foundation and 25% to Ethereum communities in each country in proportion to the revenue (tickets + sponsors) that we get from each country, and 10% for blockchain talent building programs including training and education.
+                        </div>
+                    </div>-->
+                    <!--<table style="background-color: #F3F3F3;margin-bottom: 5px;text-align: center;margin-top: 15px;" class="table table-bordered">
+                        <tr><td>Standard Ticket (300 Only)</td><td>Main Conference ticket and Community event for 17th-18th Feb(Including lunch)</td><td><font id="350" style="color: red;text-align: center;">456 € (380€+20 % VAT included)</font></td></tr>
+                        <tr><td>VIP Ticket (100 Only)</td><td>Main Conference, Subconference ticket and Cocktail Party for 17th-18th Feb(Including lunch and cocktail party ticket)</td><td><font id="550" style="color: red;text-align: center;">816 € (680€+20 % VAT included)</font></td></tr>
+                    </table>-->
+                    <!--<div class="form-group" style="background-color: #F3F3F3;padding: 10px;margin-top: 15px;">
+                        <label  >Ticket type</label><br />
+                        <label  style="margin-right: 30px;"><input type="radio" name="ticket" id="stand_tic" value="1"  /> <img src="img/pay2.png" height="30"/></label>
+                        <label  ><input type="radio" name="ticket" id="vip_tic" value="2" /> <img src="img/pay1.png" height="30"/></label>
+                        <div class="form-group" style="background-color: #F3F3F3;padding: 10px;margin-top: 15px;">
+                            <label  >Payment type</label><br />
+                            <label id="curr_visa" style="margin-right: 30px;"><input type="radio" name="curr" id="" value="1"  /> <img src="img/aa1.jpg" height="30"/></label>
+                            <label id="curr_btc" style="margin-right: 30px;"><input type="radio" name="curr" id="" value="5" /> <img src="img/aa2.jpg" height="30"/></label>
+                            <label id="curr_eth" ><input type="radio" name="curr" id="" value="4" /> <img src="img/aa3.jpg" height="30"/></label>
+                        </div>
+                        <div id="four" style="display: none;">
+                            <label id="infor"  for="exampleInputPassword1">Visa card number</label>
+                            <input type="text" maxlength="4"  onkeyup="value=value.replace(/[^\d]/g,'') " onbeforepaste="clipboardData.setData('text',clipboardData.getData('text').replace(/[^\d]/g,''))" class="form-control" id="Startups_coinAddress" placeholder="The last four digits of your Visa card number">
+                        </div>
+                    </div>
+                    <div style="padding: 10px;">
+                        <div style="margin-top: 10px;font-size: 15px;">
+                            If you have any questions, please feel free to contact us at <font style="color: red;">contact@linktimetech.com</font>.
+                        </div>
+                    </div>
+                    <div class="form-group" style="margin-left: 17px;margin-bottom: 30px;">
+                        <button  id="submit" style="background-color: #4299F1;border: none;color: #FFFFFF;padding: 5px 50px 5px 50px;margin-top: 20px;font-size: 20px;" >Pay</button>
+                    </div>-->
+                    <table style="background-color: #F3F3F3;margin-bottom: 5px;text-align: center;margin-top: 15px;"
+                           class="table table-bordered">
+                        <tr>
+                            <td>Standard Ticket (300 Only)</td>
+                            <td>Main Conference ticket and Community event for 17th-18th Feb(Including lunch)</td>
+                            <td><font id="350" style="color: red;text-align: center;">456 € (380€+20 % VAT
+                                included)</font></td>
+                        </tr>
+                        <tr>
+                            <td>VIP Ticket (100 Only)</td>
+                            <td>Main Conference, Subconference ticket and Cocktail Party for 17th-18th Feb(Including
+                                lunch and cocktail party ticket)
+                            </td>
+                            <td><font id="550" style="color: red;text-align: center;">816 € (680€+20 % VAT
+                                included)</font></td>
+                        </tr>
+                    </table>
+                    The registration has been closed, if you still want to buy ticket, please email at:
+                    contact@linktimetech.com
+                </div>
+            </div>
+        </div>
+
+        <div id="pay" class="container-fluid" style="display: none;">
+            <div class="row">
+                <div style="" class=" col-sm-8 col-md-9 col-lg-9 ">
+
+                    <table style="background-color: #F3F3F3;margin-bottom: 25px;margin-top: 50px;text-align: center;"
+                           class="table table-bordered">
+                        <tr id="st" style="display: none;">
+                            <td>Standard Ticket (300 Only)</td>
+                            <td>Main Conference ticket and Community event for 17th-18th Feb(Including lunch)</td>
+                            <td><font id="3502" style="color: red;text-align: center;">456 € (380€+20 % VAT
+                                included)</font></td>
+                        </tr>
+                        <tr id="vi" style="display: none;">
+                            <td>VIP Ticket (100 Only)</td>
+                            <td>Main Conference, Subconference ticket and Cocktail Party for 17th-18th Feb(Including
+                                lunch and cocktail party ticket)
+                            </td>
+                            <td><font id="5502" style="color: red;text-align: center;">816 € (680€+20 % VAT
+                                included)</font></td>
+                        </tr>
+                    </table>
+                    <a id="visa" style="display: none;">
+                        <button style="background-color: #4299F1;border: none;color: #FFFFFF;padding: 5px 30px 5px 30px;font-size: 20px;">
+                            Go to pay
+                        </button>
+                    </a>
+                    <form id="san" style="display: none;" action="https://www.coinpayments.net/index.php" method="post">
+                        <input type="hidden" name="cmd" value="_pay_simple">
+                        <input type="hidden" name="reset" value="1">
+                        <input type="hidden" name="merchant" value="b2b62073c565f6e883bc5373ea11e934">
+                        <input type="hidden" name="item_name" value="ECOND Standard Ticket">
+                        <input type="hidden" name="item_desc" value="ECOND Standard Ticket">
+                        <input type="hidden" name="currency" value="EUR">
+                        <input type="hidden" name="amountf" value="380.00000000">
+                        <input type="hidden" name="want_shipping" value="0">
+                        <input type="hidden" name="taxf" value="76.00000000">
+                        <input type="hidden" name="success_url" value="https://edcon.io/succses.html">
+                        <input type="hidden" name="cancel_url" value="https://edcon.io/fail.html">
+                        <input type="image" src="https://www.coinpayments.net/images/pub/buynow-wide-blue.png"
+                               alt="与 CoinPayments.net 立即购买">
+                    </form>
+
+                    <form id="wu" style="display: none;" action="https://www.coinpayments.net/index.php" method="post">
+                        <input type="hidden" name="cmd" value="_pay_simple">
+                        <input type="hidden" name="reset" value="1">
+                        <input type="hidden" name="merchant" value="b2b62073c565f6e883bc5373ea11e934">
+                        <input type="hidden" name="item_name" value="ECOND Vip Ticket">
+                        <input type="hidden" name="item_desc" value="ECOND Vip Ticket">
+                        <input type="hidden" name="currency" value="EUR">
+                        <input type="hidden" name="amountf" value="680.00000000">
+                        <input type="hidden" name="want_shipping" value="0">
+                        <input type="hidden" name="taxf" value="136.00000000">
+                        <input type="hidden" name="success_url" value="https://edcon.io/succses.html">
+                        <input type="hidden" name="cancel_url" value="https://edcon.io/fail.html">
+                        <input type="image" src="https://www.coinpayments.net/images/pub/buynow-wide-blue.png"
+                               alt="与 CoinPayments.net 立即购买">
+                    </form>
+                    <br/><img style="margin: 10px  0px 10px 0px;" src="img/er.jpg" width="150"/><br/>
+                    <span style="margin-bottom: 30px;display: block;">We suggest Chinese participant register and pay through WeChat for more convenience. Please scan the QR code above.</span>
+                    <!--<div class="form-group" style="background-color: #F3F3F3;padding: 10px;margin-top: 15px;">-->
+                    <!--<label  >Ticket type</label><br />-->
+                    <!--<label id="stand_tic" style="margin-right: 30px;"><input type="radio" name="ticket" id="" value="1" checked="checked" /> <img src="img/pay2.png" height="30"/></label>
+                    <label id="vip_tic" ><input type="radio" name="ticket" id="" value="2" /> <img src="img/pay1.png" height="30"/></label>-->
+                    <!--</div>-->
+
+
+                    <!--<div  class="form-group ">-->
+
+                    <!--<h4 id="btc" style="display: none;">BTC Transaction address:<br /><font color="#269ABC" style="font-size: 15px;">1LKCBi4DosV8sneYajACsWpq9CksxFVFXV</font></h4>
+                    <h4 id="eth" style="display: none;">ETH Transaction address:<br /><font color="#269ABC" style="font-size: 15px;">0xe8c0b3943030f894ac3c0a492463b40ab949e015</font></h4>-->
+                    <!--<h4>Linktime Tech Bank Account Information:</h4>
+                  <font color="#003333" style="font-size: 15px;">Receiver’s Bank: </font><font color="#269ABC" style="font-size: 15px;">China CITIC Bank H.O.General Banking, Beijing,China</font><br />
+                  <font color="#003333" style="font-size: 15px;">SWIFT Code: </font><font color="#269ABC" style="font-size: 15px;">CIBKCNBJ100</font><br />
+                    <font color="#003333" style="font-size: 15px;">Company Account: </font><font color="#269ABC" style="font-size: 15px;">8110 7010 1310 0521 122</font><br />
+                    <font color="#003333" style="font-size: 15px;">Bank Address: </font><font color="#269ABC" style="font-size: 15px;">Zhejiang Building, No,26, 3Block Anzhenxili, Chaoyang District, Beijing, China</font><br />
+                    <font color="#003333" style="font-size: 15px;">Company name: </font><font color="#269ABC" style="font-size: 15px;">Beijing Linktime Information Technology Ltd.</font><br />
+                    <font color="#003333" style="font-size: 15px;">Company Address: </font><font color="#269ABC" style="font-size: 15px;">China Railway Construction Plaza No. 611, 4 Block,  Beiyuan East Road, Chaoyang District, Beijing, China</font><br />
+                    <font color="#003333" style="font-size: 15px;">Company Phone: </font><font color="#269ABC" style="font-size: 15px;">(086)010-68778887-8002</font><br />
+                    <font color="#003333" style="font-size: 15px;">If in doubt, please contact</font> <font style="color: red;">payment@linktimetech.com</font><br />-->
+                    <!--<div class="row">
+                        <h4 style="margin-left: 15px;" id="shuo">For further verification, please enter the valid information. Thank you!</h4>
+                       <div id="four"  class="  col-sm-6 col-md-6 col-lg-6">
+
+                       </div>
+                       <div style="display: none;" id="adr" class="  col-sm-6 col-md-6 col-lg-6">
+                            <label id="infor"  for="exampleInputPassword1">To fill in the bitcoin/ethereum TXID so that we can verify it.</label>
+                   <input type="text"  class="form-control" id="Startups_coinAddress4" placeholder="">
+                       </div>
+                       <div id="bank_name"   class="  col-sm-6 col-md-6 col-lg-6">
+                            <label   for="exampleInputPassword1">Name of account</label>
+                   <input type="text" id="b_name" class="form-control" id="Startups_name" placeholder="Name of account">
+                       </div>
+
+                   </div>-->
+                    <!--</div>-->
+                    <!--<h4 id="shuo">Our payments API setup is currently being tested; for the time being prices will be charged in Thai baht.<br /> (380 EUR = 14300 B, 680 EUR = 25500 B)</h4>-->
+                    <!--<button id="up"  style="background-color: #4299F1;border: none;color: #FFFFFF;padding: 5px 30px 5px 30px;font-size: 20px;margin-right: 10px;" >Previous</button>-->
+                    <!--<button id="submit"  style="background-color: #4299F1;border: none;color: #FFFFFF;padding: 5px 30px 5px 30px;font-size: 20px;" >Register and pay</button>-->
+
+
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+    <div role="tabpanel" class="tab-pane" id="slack">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-sm-offset-1 col-sm-10">
+                    <div class="embed-responsive embed-responsive-4by3">
+                        <iframe class="embed-responsive-item" src="https://edcon.herokuapp.com/"
+                                scrolling="no"></iframe>
+                    </div>
+                </div>
+                <div style="margin-top: 0px;" class=" col-sm-5 col-md-5 col-lg-5 li">
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div role="tabpanel" class="tab-pane" id="profile">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-sm-offset-1 col-sm-10">
+                    <h2 style="color: #4299f1;"></h2>
+                    Holding such a great conference in Europe is not easy, and we need your support to make it a
+                    success! The conference will provide you a valuable opportunity to meet talented people worldwide
+                    and to make your ideas or your company known. If you are interested in being a sponsor, please
+                    email <font color="#0062CC">sponsor@linktimetech.com</font>, your support will be highly
+                    appreciated.
+                </div>
+                <div style="margin-top: 0px;" class=" col-sm-5 col-md-5 col-lg-5 li">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--
+        作者：294174244@qq.com
+        时间：2017-01-02
+        描述：Volunteer and media passes
+    -->
+    <div role="tabpanel" class="tab-pane" id="Volunteer">
+        <div class="container-fluid">
+            <div class="row">
+                <div style="" class="col-sm-offset-1 col-sm-10">
+                    <h2 style="color: #4299f1;"></h2>
+                    The registration has been closed, if you still want to buy ticket, please email at:
+                    contact@linktimetech.com
+                    <!--<form style="padding-left: 16px;" role="form">
+                        <div style="margin-top: 10px;font-size: 15px;">
+                            To enrich EDCON and make it more successful, we are offering free/discounted tickets as follows:<br /><br />
+                            &nbsp;&nbsp;&bull;&nbsp;&nbsp;Representatives of media agencies or media personalities who are interested in covering the event. 10 tickets at most, 1 per agency.<br /><br />
+                            &nbsp;&nbsp;&bull;&nbsp;&nbsp;Ethereum community leaders/organizers interested in participating in the community sub-conference discussion on the second day, up to 10 tickets.<br /><br />
+                            &nbsp;&nbsp;&bull;&nbsp;&nbsp;Students at European universities can apply for a discounted ticket at 150 EUR + VAT; please email us with proof and we will handle the transaction individually.<br /><br />
+                            If you meet one of the above conditions, you can register here or email us directly at <font style="color: red;">contact@linktimetech.com</font>.<br /><br />
+
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleInputEmail1">Full Name</label>
+                            <input type="text" class="form-control" id="Volunteer_name" placeholder="">
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleInputPassword1">Organization / Institution / Company</label>
+                            <input type="text" class="form-control" id="Volunteer_company" >
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleInputPassword1">Position / Title</label>
+                            <input type="text" class="form-control" id="Volunteer_title" placeholder="">
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleInputPassword1">Fields of Interest</label>
+                            <input type="text" class="form-control" id="Volunteer_field" placeholder="">
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleInputPassword1">Telephone</label>
+                            <input style="margin: 0px;padding: 0px;" onkeyup="value=value.replace(/[^\d]/g,'') " onbeforepaste="clipboardData.setData('text',clipboardData.getData('text').replace(/[^\d]/g,''))" class="form-control" id="Volunteer_phone" placeholder="">
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleInputPassword1">Email</label>
+                            <input type="text" class="form-control" id="Volunteer_email" placeholder="">
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleInputPassword1">Notes</label>
+                            <textarea id="Volunteer_notes" style="width: 100%;height: 100px;resize: none;border-radius: 5px;border-color: #CCCCCC;"></textarea>
+                        </div>
+                    </form>
+                    <div class="form-group" style="margin-bottom: 30px;margin-left: 17px;">
+                        <button id="Volunteer_submit" style="background-color: #4299F1;border: none;color: #FFFFFF;padding: 5px 30px 5px 30px;margin-top: 20px;font-size: 20px;" >Submit</button>
+                    </div>-->
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span
+                        class="sr-only">Close</span></button>
+                <h4 class="modal-title" id="myModalLabel"></h4>
+            </div>
+            <div class="modal-body">
+                Join the talent database?
+            </div>
+            <div class="modal-footer">
+                <button id="no" type="button" class="btn btn-default" data-dismiss="modal">No</button>
+                <button id="yes" type="button" class="btn btn-primary">Yes</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade bs-example-modal-sm" id="miss" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+     aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span
+                        class="sr-only">Close</span></button>
+                <h4 class="modal-title" id="myModalLabel">Alert!</h4>
+            </div>
+            <div class="modal-body">
+                Please enter the valid information!
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade bs-example-modal-sm" id="miss5" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+     aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span
+                        class="sr-only">Close</span></button>
+                <h4 class="modal-title" id="myModalLabel">Alert!</h4>
+            </div>
+            <div class="modal-body">
+                Please choose payment type!
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade bs-example-modal-sm" id="succ" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+     aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span
+                        class="sr-only">Close</span></button>
+                <h4 class="modal-title" id="myModalLabel">Successful!</h4>
+            </div>
+            <div class="modal-body">
+                Success! We will send you the Eticket once the payment information was verified.
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade bs-example-modal-sm" id="pay1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+     aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span
+                        class="sr-only">Close</span></button>
+                <h4 class="modal-title" id="myModalLabel">Congratulations!</h4>
+            </div>
+            <div class="modal-body">
+                You have registered successfully! Please click here and move to the payment page.
+            </div>
+            <div class="modal-footer">
+                <a id="stand" class="btn btn-default" href="" target="_blank">Pay</a>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal fade bs-example-modal-sm" id="pay2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+     aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span
+                        class="sr-only">Close</span></button>
+                <h4 class="modal-title" id="myModalLabel">Successful!</h4>
+            </div>
+            <div class="modal-body">
+                Registration success！Please go to payment page!
+            </div>
+            <div class="modal-footer">
+                <a id="vip1" class="btn btn-default" href="" target="_blank">Pay</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade bs-example-modal-sm" id="succ_1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+     aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span
+                        class="sr-only">Close</span></button>
+                <h4 class="modal-title" id="myModalLabel"></h4>
+            </div>
+            <div id="ms0" class="modal-body">
+
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade bs-example-modal-sm" id="fail" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+     aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span
+                        class="sr-only">Close</span></button>
+                <h4 class="modal-title" id="myModalLabel">Fail!</h4>
+            </div>
+            <div class="modal-body">
+                Invalid transaction ID!
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade bs-example-modal-sm" id="s_succ" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+     aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span
+                        class="sr-only">Close</span></button>
+                <h4 class="modal-title" id="myModalLabel">Congratulations!</h4>
+            </div>
+            <div class="modal-body">
+                You have registered successfully! We will get back to you as soon as possible!
+            </div>
+            <div class="modal-footer">
+                <button id="close" type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal fade bs-example-modal-sm" id="zheng" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+     aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span
+                        class="sr-only">Close</span></button>
+                <h4 class="modal-title" id="myModalLabel">Warning!</h4>
+            </div>
+            <div class="modal-body">
+                Please check your TXID!
+            </div>
+            <div class="modal-footer">
+                <button id="close" type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+</body>
+<script src="js/pikaday.js" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript">
+    document.getElementById("curr_btc").addEventListener('click', function () {
+        document.getElementById("four").style.display = 'none';
+    });
+    document.getElementById("curr_visa").addEventListener('click', function () {
+        document.getElementById("four").style.display = '';
+    });
+    document.getElementById("curr_eth").addEventListener('click', function () {
+        document.getElementById("four").style.display = 'none';
+    });
+
+
+    //		document.getElementById("submit").addEventListener('click',function(){
+    //			document.getElementById("login").style.display='block';
+    //			 var name=document.getElementById("name").value;
+    //			 var company=document.getElementById("company").value;
+    //			 var email=document.getElementById("email").value;
+    //			 var phone=document.getElementById("phone").value;
+    //			 var paytype=$("input[name='ticket']:checked").val();
+    ////			var bank_name=document.getElementById("b_name").value;
+    //			 var coinType=$("input[name='curr']:checked").val();
+    //			 var coinAddress=document.getElementById("Startups_coinAddress").value+="";
+    ////			 var coinAddress4=document.getElementById("Startups_coinAddress4").value+="";
+    //			  var re = /^(\w-*\.*)+@(\w-?)+(\.\w{2,})+$/
+    //			  if(re.test(email)){
+    //			    }else{
+    //			    	document.getElementById("login").style.display='none';
+    //			        $('#succ_1').modal();
+    //					document.getElementById("ms0").innerText='Invalid email address!';
+    //					return;
+    //			    }
+    ////			 con	sole.log(paytype);
+    //				if (name==''||company==''||email==''||phone=='') {
+    //					document.getElementById("login").style.display='none';
+    //					$('#miss').modal();
+    //				} else if(paytype==undefined||coinType==undefined){
+    //					document.getElementById("login").style.display='none';
+    //					$('#miss5').modal();
+    //				} else if(paytype=='1'){
+    //					if (coinType=='1') {
+    //						if (coinAddress=='') {
+    //							document.getElementById("login").style.display='none';
+    //							$('#succ_1').modal();
+    //							document.getElementById("ms0").innerText='Pleas fill the Visa card number!';
+    //						} else{
+    //							$.ajax({
+    //						type:"post",
+    //						url:"https://edcon.io/FranceWebsite/Register/userPay.php",
+    //						data:{
+    //		   					name:name,
+    //		   					company:company,
+    //		   					email:email,
+    //		   					phone:phone,
+    //		   					coinType:coinType,
+    //		   					coinAddress:coinAddress,
+    //		   					holdername:1,
+    //		   					paytype:paytype
+    //		   				},
+    //						timeout: 30000,
+    //						success: function(data) {
+    //						if (JSON.parse(data).code=='200') {
+    //							document.getElementById("login").style.display='none';
+    //							document.getElementById("name").value='';
+    //							document.getElementById("company").value='';
+    //							document.getElementById("email").value='';
+    //							document.getElementById("phone").value='';
+    //							document.getElementById("Startups_coinAddress").value='';
+    //							$("input[name='ticket']:checked").val()==1 ?document.getElementById("stand_tic").checked="": document.getElementById("vip_tic").checked="";
+    //							$('#pay').show();
+    //							$('#register').hide();
+    //							document.getElementById("visa").style.display='';
+    //							document.getElementById("visa").href='https://edcon.io/omise/charge.html';
+    //							document.getElementById("st").style.display='';
+    //							document.getElementById("san").style.display='none';
+    //							document.getElementById("vi").style.display='none';
+    //							document.getElementById("wu").style.display='none';
+    //						}
+    //						else if(JSON.parse(data).code=='310'){
+    //							document.getElementById("login").style.display='none';
+    //							$('#succ_1').modal();
+    //							document.getElementById("ms0").innerText='You have already registered, please complete the payment!';
+    //						}
+    //						else{
+    //							console.log(data);
+    //						}
+    //
+    //							},
+    //							error: function(xhr, type, errorThrown) {
+    //								document.getElementById("login").style.display='none';
+    //								$('#succ_1').modal();
+    //								document.getElementById("ms0").innerText='Connection timed out!';
+    //								console.log('未进接口');
+    //							}
+    //								});
+    //						}
+    //
+    //					} else{
+    //						$.ajax({
+    //						type:"post",
+    //						url:"https://edcon.io/FranceWebsite/Register/userPay.php",
+    //						data:{
+    //		   					name:name,
+    //		   					company:company,
+    //		   					email:email,
+    //		   					phone:phone,
+    //		   					coinType:coinType,
+    //		   					coinAddress:1,
+    //		   					holdername:1,
+    //		   					paytype:paytype
+    //		   				},
+    //						timeout: 30000,
+    //						success: function(data) {
+    //						if (JSON.parse(data).code=='200') {
+    //							document.getElementById("login").style.display='none';
+    //							document.getElementById("name").value='';
+    //							document.getElementById("company").value='';
+    //							document.getElementById("email").value='';
+    //							document.getElementById("phone").value='';
+    //							document.getElementById("Startups_coinAddress").value='';
+    //							$("input[name='ticket']:checked").val()==1 ?document.getElementById("stand_tic").checked="": document.getElementById("vip_tic").checked="";
+    //							$('#pay').show();
+    //							$('#register').hide();
+    //							document.getElementById("st").style.display='';
+    //							document.getElementById("san").style.display='';
+    //							document.getElementById("vi").style.display='none';
+    //							document.getElementById("wu").style.display='none';
+    //						}
+    //						else if(JSON.parse(data).code=='310'){
+    //							document.getElementById("login").style.display='none';
+    //							$('#succ_1').modal();
+    //							document.getElementById("ms0").innerText='You have already registered, please complete the payment!';
+    //						}
+    //						else{
+    //							console.log(data);
+    //						}
+    //
+    //							},
+    //							error: function(xhr, type, errorThrown) {
+    //								document.getElementById("login").style.display='none';
+    //								$('#succ_1').modal();
+    //								document.getElementById("ms0").innerText='Connection timed out!';
+    //								console.log('未进接口');
+    //							}
+    //								});
+    //					}
+    //				} else if(paytype=='2') {
+    //					if (coinType=='1') {
+    //						if (coinAddress=='') {
+    //							document.getElementById("login").style.display='none';
+    //							$('#succ_1').modal();
+    //							document.getElementById("ms0").innerText='Pleas fill the Visa card number!';
+    //						} else{
+    //							$.ajax({
+    //						type:"post",
+    //						url:"https://edcon.io/FranceWebsite/Register/userPay.php",
+    //						data:{
+    //		   					name:name,
+    //		   					company:company,
+    //		   					email:email,
+    //		   					phone:phone,
+    //		   					coinType:coinType,
+    //		   					coinAddress:coinAddress,
+    //		   					holdername:1,
+    //		   					paytype:paytype
+    //		   				},
+    //						timeout: 30000,
+    //						success: function(data) {
+    //						if (JSON.parse(data).code=='200') {
+    //							document.getElementById("login").style.display='none';
+    //							document.getElementById("name").value='';
+    //							document.getElementById("company").value='';
+    //							document.getElementById("email").value='';
+    //							document.getElementById("phone").value='';
+    //							document.getElementById("Startups_coinAddress").value='';
+    //							$("input[name='ticket']:checked").val()==1 ?document.getElementById("stand_tic").checked="": document.getElementById("vip_tic").checked="";
+    //							$('#pay').show();
+    //							$('#register').hide();
+    //							document.getElementById("visa").style.display='';
+    //							document.getElementById("visa").href='https://edcon.io/omise/charge_vip.html';
+    //							document.getElementById("st").style.display='none';
+    //							document.getElementById("san").style.display='none';
+    //							document.getElementById("vi").style.display='';
+    //							document.getElementById("wu").style.display='none';
+    //						}
+    //						else if(JSON.parse(data).code=='310'){
+    //							document.getElementById("login").style.display='none';
+    //							$('#succ_1').modal();
+    //							document.getElementById("ms0").innerText='You have already registered, please complete the payment!';
+    //						}
+    //						else{
+    //							console.log(data);
+    //						}
+    //
+    //							},
+    //							error: function(xhr, type, errorThrown) {
+    //								document.getElementById("login").style.display='none';
+    //								$('#succ_1').modal();
+    //								document.getElementById("ms0").innerText='Connection timed out!';
+    //								console.log('未进接口');
+    //							}
+    //								});
+    //						}
+    //
+    //					} else{
+    //						$.ajax({
+    //						type:"post",
+    //						url:"https://edcon.io/FranceWebsite/Register/userPay.php",
+    //						data:{
+    //		   					name:name,
+    //		   					company:company,
+    //		   					email:email,
+    //		   					phone:phone,
+    //		   					coinType:coinType,
+    //		   					coinAddress:1,
+    //		   					holdername:1,
+    //		   					paytype:paytype
+    //		   				},
+    //						timeout: 30000,
+    //						success: function(data) {
+    //						if (JSON.parse(data).code=='200') {
+    //							document.getElementById("login").style.display='none';
+    //							document.getElementById("name").value='';
+    //							document.getElementById("company").value='';
+    //							document.getElementById("email").value='';
+    //							document.getElementById("phone").value='';
+    //							document.getElementById("Startups_coinAddress").value='';
+    //							$("input[name='ticket']:checked").val()==1 ?document.getElementById("stand_tic").checked="": document.getElementById("vip_tic").checked="";
+    //							$('#pay').show();
+    //							$('#register').hide();
+    //							document.getElementById("vi").style.display='';
+    //							document.getElementById("wu").style.display='';
+    //							document.getElementById("st").style.display='none';
+    //							document.getElementById("san").style.display='none';
+    //						}
+    //						else if(JSON.parse(data).code=='310'){
+    //							document.getElementById("login").style.display='none';
+    //							$('#succ_1').modal();
+    //							document.getElementById("ms0").innerText='You have already registered, please complete the payment!';
+    //						}
+    //						else{
+    //							console.log(data);
+    //						}
+    //
+    //							},
+    //							error: function(xhr, type, errorThrown) {
+    //								document.getElementById("login").style.display='none';
+    //								$('#succ_1').modal();
+    //								document.getElementById("ms0").innerText='Connection timed out!';
+    //								console.log('未进接口');
+    //							}
+    //								});
+    //					}
+    //				}
+    /**
+     * Volunteer and media passes
+     */
+    document.getElementById("Volunteer_submit").addEventListener('click', function () {
+        document.getElementById("login").style.display = 'block';
+        var name = document.getElementById("Volunteer_name").value;
+        var CI = document.getElementById("Volunteer_company").value;
+        var PT = document.getElementById("Volunteer_title").value;
+        var professional = document.getElementById("Volunteer_field").value;
+        var telephone = document.getElementById("Volunteer_phone").value;
+        var email = document.getElementById("Volunteer_email").value;
+        var notes = document.getElementById("Volunteer_notes").value;
+        var re = /^(\w-*\.*)+@(\w-?)+(\.\w{2,})+$/
+        if (re.test(email)) {
+
+        } else {
+            document.getElementById("login").style.display = 'none';
+            $('#succ_1').modal();
+            document.getElementById("ms0").innerText = 'Invalid email address!';
+            return;
+        }
+
+        if (name == '' || CI == '' || PT == '' || professional == '' || telephone == '' || email == '' || notes == '') {
+            document.getElementById("login").style.display = 'none';
+            $('#miss').modal();
+        } else {
+            $.ajax("https://edcon.io/FranceWebsite/Register/volunteer.php", {
+                data: {
+                    name: name,
+                    CI: CI,
+                    TP: PT,
+                    professional: professional,
+                    telephone: telephone,
+                    email: email,
+                    notes: notes
+                },
+                type: "post",
+                dataType: 'json',
+                timeout: 30000,
+                success: function (data) {
+                    if (data.code == "200") {
+                        document.getElementById("login").style.display = 'none';
+                        document.getElementById("Volunteer_name").value = '';
+                        document.getElementById("Volunteer_company").value = '';
+                        document.getElementById("Volunteer_title").value = '';
+                        document.getElementById("Volunteer_field").value = '';
+                        document.getElementById("Volunteer_phone").value = '';
+                        document.getElementById("Volunteer_email").value = '';
+                        document.getElementById("Volunteer_notes").value = '';
+                        $('#s_succ').modal();
+                    } else {
+                        document.getElementById("login").style.display = 'none';
+                        console.log(JSON.stringify(data));
+                    }
+
+                },
+                error: function (xhr, type, errorThrown) {
+                    document.getElementById("login").style.display = 'none';
+                    $('#succ_1').modal();
+                    document.getElementById("ms0").innerText = 'Connection timed out!';
+                    console.log('未进接口');
+                }
+            });
+        }
+    });
+</script>
+</html>
+	

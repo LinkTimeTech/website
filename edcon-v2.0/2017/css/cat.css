@@ -1,0 +1,19 @@
+.cat-thing #logo {
+    position: fixed;
+    bottom: -10px;
+    right: -10px;
+    max-width: 200px;
+    opacity: 0.1;
+}
+
+.cat-thing:hover #logo {
+    opacity: 0.9;
+}
+
+.cat-thing #res, .cat-thing #res_1 {
+    position: fixed;
+    bottom: 211px;
+    right: 50px;
+    width: 100px;
+    height: 60px;
+}
