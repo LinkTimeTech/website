@@ -1,11 +1,30 @@
-<!doctype html>
-<html lang="en">
+<!--
+	Author: W3layouts
+	Author URL: http://w3layouts.com
+	License: Creative Commons Attribution 3.0 Unported
+	License URL: http://creativecommons.org/licenses/by/3.0/
+-->
+<!DOCTYPE html>
+<html>
 <head>
-    <title>Registration</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>REGISTRATION</title>
+
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+    <link href="bower_components/font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css"
+          media="all"/>
+    <link href='//fonts.googleapis.com/css?family=Open+Sans:400,300italic,300,400italic,600,600italic,700,700italic,800,800italic'
+          rel='stylesheet' type='text/css'>
+    <link href='//fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300italic,400italic,500,500italic,700,900,700italic,900italic'
+          rel='stylesheet' type='text/css'>
+
+    <link rel="stylesheet" href="assets/css/registration.css">
+
+
+    <!-- For-Mobile-Apps-and-Meta-Tags -->
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <meta name="keywords"
-          content="Doctor Appointment Form Widget Responsive, Login form web template,Flat Pricing tables,Flat Drop downs  Sign up Web Templates, Flat Web Templates, Login signup Responsive web template, Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design"/>
+          content=""/>
     <script type="application/x-javascript"> addEventListener("load", function () {
         setTimeout(hideURLbar, 0);
     }, false);
@@ -13,136 +32,189 @@
     function hideURLbar() {
         window.scrollTo(0, 1);
     } </script>
-    <!-- font files -->
-    <link href="//fonts.googleapis.com/css?family=Spectral" rel="stylesheet">
-    <!-- /font files -->
-    <!-- css files -->
-    <link href="assets/css/registration.css" rel='stylesheet' type='text/css' media="all"/>
-    <!-- /css files -->
-    <link rel="stylesheet" href="bower_components/css/animate.css">
-    <link rel="stylesheet" href="bower_components/font-awesome-4.7.0/css/font-awesome.min.css">
+    <!-- //For-Mobile-Apps-and-Meta-Tags -->
 
 </head>
 <body>
-<div class="w3-banner-main">
-    <div class="center-container">
-        <h1 class="header-w3ls">Registration</h1>
-        <div class="row content-top">
-            <div class="col-md-12 text-center">
-                <ul class="menu">
-                    <li class="active"><a href="#">General participant</a></li>
-                    <li><a href="#">Speaker</a></li>
-                    <li><a href="#">Sponsor</a></li>
-                    <li><a href="#">Hackthon</a></li>
-                    <!--<li><a href="#">Join our community</a></li>-->
-                </ul>
-            </div>
-        </div>
-        <div class="content-top">
-            <div class="content-w3ls">
-                <div class="form-w3ls">
-                    <form action="#" method="post">
-                        <div class="content-wthree1">
-                            <div class="grid-agileits1">
-                                <div class="form-control">
-                                    <label class="header">Full Name <span>*</span></label>
-                                    <input type="text" id="name" name="name" placeholder="Name"
-                                           title="Please enter your Full Name" required="">
+<div class="register-box">
+    <h1>REGISTRATION</h1>
+    <div>
+
+        <div class="">
+            <ul class="nav nav-tabs" role="tablist">
+                <li role="presentation" class="active"><a href="#participant" aria-controls="home" role="tab"
+                                                          data-toggle="tab">Participant</a>
+                </li>
+                <li role="presentation"><a href="#speaker" aria-controls="profile" role="tab"
+                                           data-toggle="tab">Speaker</a></li>
+                <li role="presentation"><a href="#sponsor" aria-controls="messages" role="tab"
+                                           data-toggle="tab">Sponsor</a></li>
+                <li role="presentation"><a href="#hackathon" aria-controls="settings" role="tab" data-toggle="tab">Hackathon</a>
+                </li>
+            </ul>
+
+            <!-- Tab panes -->
+            <div class="tab-content">
+                <div role="tabpanel" class="tab-pane fade in active" id="participant">
+                    <div class="sign-up-agileinfo participant-box">
+                        <h3>Participant</h3>
+                        <form action="#" method="post">
+                            <div class="col-lg-6">
+                                <input type="text" class="full name" name="full name" placeholder="Full Name"
+                                       required="">
+                                <input type="text" class="country" name="country" placeholder="Country" required="">
+                                <input type="text" class="company" name="company" placeholder="Company" required="">
+                                <input type="text" class="email" name="email" placeholder="Email" required="">
+                                <input type="text" class="phone" name="phone" placeholder="Phone" required="">
+                            </div>
+                            <div class="col-lg-6 text-left">
+                                <h4 class="ticketype">Ticket type</h4>
+                                <div class="radio">
+                                    <label>
+                                        <input type="radio" name="tickets" id="bird" value="560"
+                                               checked>
+                                        <span class="input-text">
+                                        Standard Ticket: <span class="text-de">$700</span> $560 ( Early Bird )
+                                        </span>
+                                        <img src="assets/images/icon/card-ye.svg" alt="" height="25px">
+                                    </label>
+                                </div>
+                                <div class="radio">
+                                    <label>
+                                        <input type="radio" name="tickets" id="developers" value="350">
+                                        <span class="input-text">
+                                        Developers Ticket: $350
+                                        </span>
+                                        <img src="assets/images/icon/card-ye.svg" alt="" height="25px">
+                                    </label>
+                                </div>
+                                <div class="radio">
+                                    <label>
+                                        <input type="radio" name="tickets" id="student" value="210">
+                                        <span class="input-text">
+                                        Student Ticket: $210
+                                        </span>
+                                        <img src="assets/images/icon/card-ye.svg" alt="" height="25px">
+                                    </label>
                                 </div>
 
-                                <div class="form-control">
-                                    <label class="header">Phone Number <span>*</span></label>
-                                    <input type="text" id="name" name="phone number" placeholder="Phone Number"
-                                           title="Please enter your Phone Number" required="">
+                                <div class="checkstudent">
+                                    <div>
+                                        <input class="img-input" id="avatarSlect" type="file">
+                                        <img class="stucard center-block" id="avatarPreview"
+                                             src="assets/images/icon/studentid.svg">
+                                        <p class="stucard-info text-center">Upload picture of student card
+                                            <br>Please make sure the picture is clear enough, and do not cover the
+                                            important information on it.</p>
+                                    </div>
+                                    <input type="text" class="country text-capitalize" name="school"
+                                           placeholder="School" required="">
+
                                 </div>
-                                <div class="form-control">
-                                    <label class="header">Company <span>*</span></label>
-                                    <input type="text" id="name" name="company" placeholder="Company"
-                                           title="Please enter your Company" required="">
+
+                                <div class="checkdev">
+                                    <input type="text" class="repository" name="repository" placeholder="Repository"
+                                           required="">
+
                                 </div>
-                                <div class="form-control">
-                                    <label class="header">Email <span>*</span></label>
-                                    <input type="email" id="email" name="email" placeholder="Mail@example.com"
-                                           title="Please enter a Valid Email Address" required="">
+
+                                <h4 class="paytype">Payment type</h4>
+                                <div class="radio">
+                                    <label>
+                                        <input type="radio" name="payment" id="visa" value="visa"
+                                               checked>
+                                        <img height="25px" src="assets/images/icon/aa1.jpg" alt="VISA">
+                                    </label>
+                                </div>
+                                <div class="radio">
+                                    <label>
+                                        <input type="radio" name="payment" id="bitcooin" value="bitcooin">
+                                        <img height="25px" src="assets/images/icon/aa2.jpg" alt="bitcoin">
+                                    </label>
+                                </div>
+                                <div class="radio">
+                                    <label>
+                                        <input type="radio" name="payment" id="ether" value="ether">
+                                        <img height="25px" src="assets/images/icon/aa3.jpg" alt="Ether">
+                                    </label>
                                 </div>
 
                             </div>
-                        </div>
-                    </form>
+
+                            <p class="col-lg-12">If you have any questions, please feel free to contact us at
+                                contact@linktimetech.com.</p>
+                            <input type="submit" value="Pay">
+                        </form>
+                    </div>
 
                 </div>
-
-                <div class="form-w3ls-1">
-
-                    <form action="#" method="post">
-                        <div class="grid-w3layouts1">
-                            <div class="w3-agile1">
-                                <label class="rating">Ticket type <span>*</span></label>
-                                <ul>
-                                    <li>
-                                        <input type="radio" id="a-option" name="selector1">
-                                        <label for="a-option">Early Bird: $560</label>
-                                        <div class="check"></div>
-                                    </li>
-                                    <li>
-                                        <input type="radio" id="b-option" name="selector1">
-                                        <label for="b-option">Developers Ticket: $350</label>
-                                        <div class="check">
-                                            <div class="inside"></div>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <input type="radio" id="c-option" name="selector1">
-                                        <label for="c-option">Student Ticket: $210</label>
-                                        <div class="check">
-                                            <div class="inside"></div>
-                                        </div>
-                                    </li>
-                                </ul>
-                            </div>
-                            <div class="form-control  w3-visit">
-                                <label class="rating">Payment type <span>*</span></label>
-                                <ul>
-                                    <li>
-                                        <input type="radio" id="v-option" name="selector2">
-                                        <label for="v-option">VISA</label>
-                                        <div class="check"></div>
-                                    </li>
-                                    <li>
-                                        <input type="radio" id="bit-option" name="selector2">
-                                        <label for="bit-option">Bitcoin</label>
-                                        <div class="check">
-                                            <div class="inside"></div>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <input type="radio" id="e-option" name="selector2">
-                                        <label for="e-option">Ether</label>
-                                        <div class="check">
-                                            <div class="inside"></div>
-                                        </div>
-                                    </li>
-
-                                </ul>
-                            </div>
-
-                        </div>
-                    </form>
+                <div role="tabpanel" class="tab-pane fade " id="speaker">
+                    <div class="sign-up-agileinfo">
+                        <h3>Speaker</h3>
+                        <form action="#" method="post">
+                            <input type="text" class="full name" name="full name" placeholder="Full Name" required="">
+                            <input type="text" class="country" name="country" placeholder="Country" required="">
+                            <input type="text" class="company text-capitalize" name="company"
+                                   placeholder="company or project"
+                                   required="">
+                            <input type="text" class="title" name="title" placeholder="Title" required="">
+                            <input type="text" class="topic" name="topic" placeholder="Topic" required="">
+                            <input type="text" class="email" name="email" placeholder="Email" required="">
+                            <input type="text" class="phone" name="phone" placeholder="Phone" required="">
+                            <input class="text-capitalize" type="submit" value="register">
+                        </form>
+                    </div>
 
                 </div>
-                <div class="clear"></div>
+                <div role="tabpanel" class="tab-pane fade" id="sponsor">
+                    <div class="sign-up-agileinfo">
+                        <h3>Sponsor</h3>
+                        <form action="#" method="post">
+                            <input type="text" class="full name" name="full name" placeholder="Full Name" required="">
+                            <input type="text" class="country" name="country" placeholder="Country" required="">
+                            <input type="text" class="company" name="company" placeholder="Company" required="">
+                            <input type="text" class="email" name="email" placeholder="Email" required="">
+                            <input type="text" class="business introduction" name="business introduction"
+                                   placeholder="Business Introduction" required="">
+                            <input class="text-capitalize" type="submit" value="register">
+                        </form>
+                    </div>
 
-                <input type="submit" value="Pay">
+                </div>
+                <div role="tabpanel" class="tab-pane fade" id="hackathon">
+                    <div class="sign-up-agileinfo">
+                        <h3>Hackathon</h3>
+                        <form action="#" method="post">
+                            <input type="text" class="full name" name="full name" placeholder="Full Name" required="">
+                            <input type="text" class="country" name="country" placeholder="Country" required="">
+                            <input type="text" class="team text-capitalize" name="team" placeholder="team" required="">
+                            <input type="text" class="project text-capitalize" name="project" placeholder="project"
+                                   required="">
+                            <input type="text" class="email" name="email" placeholder="Email" required="">
+                            <input type="submit" value="Join">
+                        </form>
+                    </div>
 
-                <div class="clear"></div>
+                </div>
             </div>
-
         </div>
+    </div>
 
+
+</div>
+
+
+<div class="container">
+    <div class="clear"></div>
+    <div class="footer-agilew3">
+        <p>
+
+        </p>
     </div>
 </div>
 
 <script src="bower_components/jquery/dist/jquery.min.js"></script>
-
+<script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+<script src="assets/js/registration.js"></script>
 </body>
 </html>

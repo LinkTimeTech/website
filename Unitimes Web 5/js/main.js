@@ -44,7 +44,7 @@
     };
 
 
-    var scrollNavBar = function () {
+    /* var scrollNavBar = function () {
 
         $(window).scroll(function () {
             if ($(window).scrollTop() > 50) {//下拉
@@ -84,6 +84,44 @@
         });
 
 
+    }; */
+
+
+    var scrollNavBar = function () {
+        if ($('title')[0].innerText == 'UNITIMES' || $('title')[0].innerText == 'ABOUT' || $('title')[0].innerText == '关于') {
+            $(window).scroll(function () {
+                if ($(window).scrollTop() > 50) {
+                    $('.logoimg')[0].src = 'images/icon/logo_black.svg'
+
+                    $('.metabar')
+                    // .removeClass('bluenav')
+                        .addClass('u-textColorDarker u-backgroundTransparentWhiteDarkest u-boxShadowBottomThinLighter')
+
+                    // $('.metabar-navItem').addClass('u-textColorNormal').removeClass('u-textColorWhite')
+                    $('.metabar-navItem').addClass('u-textColorNormal').removeClass('u-textColorBlue')
+
+                    $('.is-inSiteNavBar, .navlistborder').addClass('button--dark button--primary').removeClass('u-textColorBlue u-borderBlue')
+
+                    // $('.navlist').addClass('metabar-block--below').removeClass('u-boxShadowWh')
+
+                } else {//到顶部
+                    $('.logoimg')[0].src = 'images/icon/logo_color.svg'
+
+                    $('.metabar')
+                    // .addClass('bluenav')
+                        .removeClass('u-textColorDarker u-backgroundTransparentWhiteDarkest u-boxShadowBottomThinLighter')
+
+                    // $('.metabar-navItem, .navlistborder').removeClass('u-textColorNormal').addClass('u-textColorWhite')
+                    $('.metabar-navItem, .navlistborder').removeClass('u-textColorNormal').addClass('u-textColorBlue')
+
+                    $('.is-inSiteNavBar').removeClass('button--dark button--primary').addClass('u-textColorBlue u-borderBlue')
+
+                    // $('.navlist').removeClass('metabar-block--below').addClass('u-boxShadowWh')
+
+                }
+            })
+
+        }
     };
 
     var showSearch = function () {
@@ -106,7 +144,6 @@
             }
         })
     };
-
 
 
     var offcanvasMenu = function () {
@@ -262,6 +299,12 @@
         $(".gtco-loader").fadeOut("slow");
     };
 
+    $(window).load(function () {
+        $('.gtco-loader').fadeOut('slow', function () {
+            $(this).remove();
+        });
+    });
+
     var counter = function () {
         $('.js-counter').countTo({
             formatter: function (value, options) {
@@ -291,13 +334,13 @@
 
     $(function () {
         mobileMenuOutsideClick();
-        // scrollNavBar();
-        offcanvasMenu();
+        scrollNavBar();
+        // offcanvasMenu();
         burgerMenu();
         contentWayPoint();
         dropdown();
         goToTop();
-        loaderPage();
+        // loaderPage();
         counterWayPoint();
         parallax();
         // showSearch();

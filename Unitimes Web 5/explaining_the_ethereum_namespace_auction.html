@@ -1,0 +1,628 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="referrer" content="always">
+    <meta name="robots" content="index, follow">
+
+    <title>
+        Explaining the Ethereum Namespace Auction
+    </title>
+
+    <meta name="title" content="Explaining the Ethereum Namespace Auction">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+
+    <link rel="stylesheet" type="text/css" href="css/article-font.css">
+    <link rel="stylesheet" href="css/article.css">
+</head>
+
+<body class="browser-chrome os-mac is-withMagicUnderlines v-glyph v-glyph--m2 v-enableBrandingButtons is-js postShowScreen">
+<div class="site-main surface-container">
+    <div class="surface">
+        <div class="screenContent surface-content">
+            <div class="metabar u-clearfix  u-boxShadowBottomThinLighter u-textColorDarker u-fixed u-backgroundTransparentWhiteDarkest u-xs-sizeFullViewportWidth u-tintBgColor u-tintSpectrum">
+                <div class="metabar-inner u-marginAuto u-maxWidth1000 u-flexCenter u-justifyContentSpaceBetween u-paddingLeft20 u-paddingRight20 u-height65 u-xs-height56">
+                    <div class="metabar-block u-flex1 u-flexCenter">
+                        <a href="index.html" class="link u-flex">
+                            <img src="images/icon/logo_black.svg" height="25px">
+                        </a>
+                    </div>
+                    <div class="metabar-block u-flex0 u-flexCenter">
+                        <div class="u-alignMiddle u-inlineBlock u-verticalAlignTop u-height65 u-xs-height56">
+                            <div class="u-alignBlock">
+                                <div class="buttonSet buttonSet--wide u-lineHeightInherit">
+                                    <!--<a class="button button&#45;&#45;primary button&#45;&#45;dark button&#45;&#45;chromeless u-accentColor&#45;&#45;buttonDark is-inSiteNavBar u-xs-hide js-signInButton" href="#">-->
+                                    <!--中文</a>-->
+                                    <a class="button button--primary button--dark button--withChrome u-accentColor--buttonDark is-inSiteNavBar"
+                                       href="explaining_the_ethereum_namespace_auction_cn.html" style="font-size: 14px">
+                                        中文</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="metabar-inner u-marginAuto u-maxWidth1000">
+                    <nav role="navigation" class="metabar-block metabar-block--below u-overflowHiddenY u-height40">
+                        <ul class="u-textAlignLeft u-noWrap u-overflowX u-paddingBottom100 u-sm-paddingLeft20 u-sm-paddingRight20">
+                            <li class="metabar-navItem u-uiTextMedium u-fontSize14 u-inlineBlock u-textUppercase u-letterSpacing003 u-textColorNormal u-xs-paddingRight12 u-xs-marginRight0 u-paddingTop5 u-xs-paddingTop10">
+                                <a class="link link--darken u-accentColor--textDarken  u-baseColor--link ui-linkSubtle"
+                                   href="index.html"> Home </a></li>
+                            <li class="metabar-navItem u-uiTextMedium u-fontSize14 u-inlineBlock u-textUppercase u-letterSpacing003 u-textColorNormal u-xs-paddingRight12 u-xs-marginRight0 u-paddingTop5 u-xs-paddingTop10">
+                                <a class="link link--darken u-accentColor--textDarken  u-baseColor--link ui-linkSubtle"
+                                   href="unitalks.html">
+                                    Unitalks
+                                </a>
+                            </li>
+                            <li class="metabar-navItem  u-uiTextMedium u-fontSize14 u-inlineBlock u-textUppercase u-letterSpacing003 u-textColorNormal u-xs-paddingRight12 u-xs-marginRight0 u-paddingTop5 u-xs-paddingTop10">
+                                <a class="link link--darken u-accentColor--textDarken link--noUnderline u-baseColor--link ui-linkSubtle"
+                                   href="news.html">
+                                    News
+                                </a>
+                            </li>
+                            <li class="metabar-navItem  u-uiTextMedium u-fontSize14 u-inlineBlock u-textUppercase u-letterSpacing003 u-textColorNormal u-xs-paddingRight12 u-xs-marginRight0 u-paddingTop5 u-xs-paddingTop10">
+                                <a class="link link--darker link--darken u-accentColor--textDarken link--noUnderline u-baseColor--link ui-linkSubtle"
+                                   href="knowledge.html">
+                                    Knowledge
+                                </a>
+                            </li>
+                            <li class="metabar-navItem  u-uiTextMedium u-fontSize14 u-inlineBlock u-textUppercase u-letterSpacing003 u-textColorNormal u-xs-paddingRight12 u-xs-marginRight0 u-paddingTop5 u-xs-paddingTop10">
+                                <a class="link link--darken u-accentColor--textDarken link--noUnderline u-baseColor--link ui-linkSubtle"
+                                   href="events.html">
+                                    Events
+                                </a>
+                            </li>
+                            <span class="u-borderLeft1 u-paddingLeft22 u-xs-paddingLeft12 u-baseColor--borderLight"></span>
+                            <li class="metabar-navItem  is-external u-uiTextMedium u-fontSize14 u-inlineBlock u-textUppercase u-letterSpacing003 u-textColorNormal u-xs-paddingRight12 u-xs-marginRight0 u-paddingTop5 u-xs-paddingTop10">
+                                <a class="link link--darkenOnHover u-accentColor--textDarken link--noUnderline u-baseColor--link ui-linkSubtle"
+                                   href="about.html">
+                                    Unitimes
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+            <div class="metabar metabar--spacer u-tintBgColor u-height105 u-xs-height95"></div>
+            <main role="main">
+                <article
+                        class="u-minHeight100vhOffset65 u-overflowHidden postArticle postArticle--full is-withAccentColors"
+                        lang="en" data-scroll="native">
+                    <header class="container u-maxWidth740">
+                        <div class="uiScale uiScale-ui--regular uiScale-caption--regular postMetaHeader u-paddingBottom10 row">
+                            <div class="col u-size12of12">
+                                <div class="uiScale uiScale-ui--regular uiScale-caption--regular postMetaLockup postMetaLockup--authorWithBio u-flexCenter">
+                                    <div class="u-flex0">
+                                        <!--<a class="link avatar u-baseColor&#45;&#45;link ui-linkSubtle" href="#">-->
+                                        <img src="images/knowledge/1-AW1mbHWcIh7sSOj4XJboOw(2).jpeg" width="50px"
+                                             height="50px" class="avatar-image">
+                                        <!--</a>-->
+                                    </div>
+                                    <div class="u-flex1 u-paddingLeft15 u-overflowHidden">
+                                        <div class="u-lineHeightTightest">
+                                            Maurelian
+                                        </div>
+                                        <div class="ui-caption postMetaInline">
+                                            <time>25 Oct, 2017</time>
+                                            <!--<span class="middotDivider u-fontSize12"></span>-->
+                                            <!--<span class="readingTime"title="3 min read"></span>-->
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </header>
+                    <div class="postArticle-content" data-scroll="native">
+                        <section class="section section--body section--first">
+                            <div class="section-content">
+                                <div class="section-inner sectionLayout--insetColumn">
+                                    <h1 class="graf graf--h3 graf--leading graf--title">
+                                        Explaining the Ethereum Namespace Auction
+                                    </h1>
+                                    <p class="graf graf--p graf-after--h3"><em class="markup--em markup--p-em">This post
+                                        is to meant to inform the Ethereum community and solicit feedback. Questions and
+                                        comments are very much appreciated and will be used to create a follow up FAQ.
+                                        The first portion of the post provides the motivation, if you just want the
+                                        nitty gritty, skip ahead to “</em><strong
+                                            class="markup--strong markup--p-strong">Ownership of names</strong><em
+                                            class="markup--em markup--p-em">”.</em></p>
+
+                                    <p class="graf graf--p graf-after--p"><strong
+                                            class="markup--strong markup--p-strong">Update: the </strong><a
+                                            href="https://github.com/ethereum/ens/wiki/Frequently-Asked-Questions"
+                                            class="markup--anchor markup--p-anchor"
+                                    ><strong class="markup--strong markup--p-strong">FAQ is
+                                        here</strong></a><strong class="markup--strong markup--p-strong">.</strong></p>
+                                    <img class="graf--p graf-image u-marginTop40"
+                                         src="images/knowledge/information_technology_thumb.jpg"
+                                         width="100%">
+
+                                    <h3 class="graf graf--h3 graf-after--p"><strong
+                                            class="markup--strong markup--h3-strong">Ethereum Addresses are a barrier to&nbsp;adoption</strong>
+                                    </h3>
+                                    <img class="graf--p graf-image"
+                                         src="images/knowledge/1-U-48MhnGYYpJkxZObAw20w(1).png" width="50%">
+                                    <p class="imageCaption">Welcome to Ethereum, here’s your name tag.</p>
+
+                                    <p class="graf graf--p graf-after--figure">Anyone reading this is used to typical
+                                        cryptocurrency addresses, and may even take them for granted. For normal humans
+                                        however, the experience of receiving your <em class="markup--em markup--p-em">very
+                                            own 160 bit hexadecimal encoded hash string</em> is not the ideal
+                                        on-boarding process.</p>
+                                    <img class="graf--p graf-image"
+                                         src="images/knowledge/1-ZGfCNSAG97RaOsI0fyewuw(1).png" width="50%">
+                                    <p class="imageCaption">Easy.</p>
+
+                                    <p class="graf graf--p graf-after--figure">Compare this to Coinbase, Circle, Paypal
+                                        or Venmo; where you can send money to someone just using their email address or
+                                        a username.</p>
+                                    <p class="graf graf--p graf-after--p">Now imagine sending ethereum transactions to
+                                        people and contracts just as easily in Mist or any other Ethereum service,
+                                        without relying on a centralized server to connect the name to the address.</p>
+                                    <h3 class="graf graf--h3 graf-after--p">How the Ethereum Name Service Fixes
+                                        Addresses</h3>
+                                    <p class="graf graf--p graf-after--h3">The Ethereum Name Service (outlined in <a
+                                            href="https://github.com/ethereum/EIPs/issues/137"
+                                            data-href="https://github.com/ethereum/EIPs/issues/137"
+                                            class="markup--anchor markup--p-anchor"
+                                    >EIP-137</a>) brings human readable names to Ethereum. It
+                                        will be the default name registry for the Mist wallet, and hopefully many other
+                                        service providers.</p>
+                                    <p class="graf graf--p graf-after--p">Names in the Ethereum Name Service (ENS) look
+                                        just like the familiar DNS addresses we use today, with “<strong
+                                                class="markup--strong markup--p-strong">.eth”</strong> initially being
+                                        the only top level domain (TLD) available. Just like you might browse to
+                                        “www.example.com” you could send money to “wallet.example.eth”.</p>
+                                    <p class="graf graf--p graf-after--p">From a high level view, the ENS consists of 3
+                                        unique types of contracts:</p>
+                                    <img class="graf--p graf-image"
+                                         src="images/knowledge/1-WfSYnum96UqchRJj83xZXA(1).png" width="100%">
+                                    <p class="imageCaption">From Nick Johnson’s <a
+                                            href="https://www.youtube.com/watch?v=pLDDbCZXvTE"
+                                            data-href="https://www.youtube.com/watch?v=pLDDbCZXvTE"
+                                            class="markup--anchor markup--figure-anchor"
+                                    >Devcon2 presentation</a>.</p>
+
+                                    <ol class="postList">
+                                        <li class="graf graf--li graf-after--figure"><strong
+                                                class="markup--strong markup--li-strong">The Registry contract</strong>
+                                            is the heart of the ENS, there is only one. It’s a simple contract;
+                                            basically a big mapping of registered names to the address of an owner, and
+                                            the address of a resolver contract.
+                                        </li>
+                                        <li class="graf graf--li graf-after--li"><strong
+                                                class="markup--strong markup--li-strong">Resolver contracts</strong> map
+                                            a name to a “resource” such as an Ethereum address, or Swarm or IPFS hash.
+                                            This is the contract Mist will get an address from when you say you want to
+                                            send money to wallet.example.eth. Only the owner of a name can update the
+                                            resolver’s records.
+                                        </li>
+                                        <li class="graf graf--li graf-after--li"><strong
+                                                class="markup--strong markup--li-strong">Registrar contracts</strong>
+                                            own domain names in the ENS registry, and are responsible for allocating
+                                            subdomain names within the namespace they control. The first ENS registrar
+                                            will be the owner of the “.eth” top level domain name in the ENS.
+                                        </li>
+                                    </ol>
+                                    <h3 class="graf graf--h3 graf-after--li">The challenges of registrar design</h3>
+                                    <p class="graf graf--p graf-after--h3">The <a
+                                            href="https://github.com/ethereum/ens/blob/master/HashRegistrarSimplified.sol"
+                                            data-href="https://github.com/ethereum/ens/blob/master/HashRegistrarSimplified.sol"
+                                            class="markup--anchor markup--p-anchor"
+                                    >registry contract</a>, and <a
+                                            href="https://github.com/ethereum/ens/blob/master/PublicResolver.sol"
+                                            data-href="https://github.com/ethereum/ens/blob/master/PublicResolver.sol"
+                                            class="markup--anchor markup--p-anchor"
+                                    >resolver contracts</a> are elegantly in their simplicity. If
+                                        you own a name, you can update their records for that name, otherwise they will
+                                        simply ignore you.</p>
+                                    <p class="graf graf--p graf-after--p">Designing a registrar on the other hand, isn’t
+                                        quite so straightforward. It involves subjective properties like user
+                                        experience, mechanism design, fairness, and governance.</p>
+                                    <p class="graf graf--p graf-after--p">In a namespace, each name can only have one
+                                        owner, making it a scarce, non-fungible property. Moreover, names are (usually)
+                                        made up of words, which are powerful symbols: they can represent a brand, a
+                                        movement, or your online identity across numerous platforms. It’s reasonable for
+                                        people to feel a sense of entitlement to ownership over certain names.</p>
+                                    <p class="graf graf--p graf-after--p">At the same time, end users looking up a
+                                        common, well known name generally expect it to belong to the entity they
+                                        associate it with. Who should control a name like <strong
+                                                class="markup--strong markup--p-strong">“microsoft.eth”</strong>,
+                                        <strong class="markup--strong markup--p-strong">“bankofamerica.eth”</strong>, or
+                                        <strong class="markup--strong markup--p-strong">“vitalik.eth”</strong>? How
+                                        should a registrar allocate these names? Should it be completely market driven,
+                                        or should there be a process for dispute resolution?</p>
+                                    <p class="graf graf--p graf-after--p">After much discussion, the chosen strategy for
+                                        allocating names is a compromise involving:</p>
+                                    <ul class="postList">
+                                        <li class="graf graf--li graf-after--p">an initially limited name space,</li>
+                                        <li class="graf graf--li graf-after--li">a fully market driven approach,</li>
+                                        <li class="graf graf--li graf-after--li graf--trailing"><strong
+                                                class="markup--strong markup--li-strong">an upgradeable Initial
+                                            Registrar contract providing the ability to introduce a dispute resolution
+                                            process in the future</strong>.
+                                        </li>
+                                    </ul>
+                                    <p class="graf graf--p graf--leading">The remainder of this article outlines the
+                                        Initial Registrar’s functionality, and what you will need to know in order to
+                                        register a name. I will point out the names of relevant functions in the Initial
+                                        Registrar contract’s interface. For the full interface refer to <a
+                                                href="https://github.com/ethereum/EIPs/issues/162"
+                                                data-href="https://github.com/ethereum/EIPs/issues/162"
+                                                class="markup--anchor markup--p-anchor"
+                                        >ERC-162</a>, and the full code in the <a
+                                                href="https://github.com/Arachnid/ens/blob/master/HashRegistrarSimplified.sol"
+                                                data-href="https://github.com/Arachnid/ens/blob/master/HashRegistrarSimplified.sol"
+                                                class="markup--anchor markup--p-anchor"
+                                        >github repository</a>.</p>
+                                    <p class="graf graf--p graf-after--p">There will also be an app available to reduce
+                                        the barriers to participation. You can view mockups of that <a
+                                                href="https://projects.invisionapp.com/share/FE93G2K3Y#/screens/200024092"
+                                                data-href="https://projects.invisionapp.com/share/FE93G2K3Y#/screens/200024092"
+                                                class="markup--anchor markup--p-anchor"
+                                        >app here</a>.</p>
+                                    <img class="graf--p graf-image"
+                                         src="images/knowledge/1-S1ytnJHWKCF9bQ08WPsuwQ(1).png" width="100%">
+
+                                    <h3 class="graf graf--h3 graf-after--figure">Ownership of&nbsp;names</h3>
+                                    <p class="graf graf--p graf-after--h3">Names will be auctioned according to a
+                                        process described below. The value paid by the winner will be <em
+                                                class="markup--em markup--p-em">held in a deed</em> in exchange for
+                                        ownership of the name. There is no recurring fee, or subscription required to
+                                        own a name. After 1 year of registration, the owner of a name is free to release
+                                        it, and the full value of the deed will be returned to them.</p>
+                                    <h4 class="graf graf--h4 graf-after--p"><strong
+                                            class="markup--strong markup--h4-strong">Registration does not guarantee
+                                        perpetual ownership</strong></h4>
+                                    <p class="graf graf--p graf-after--h4">The Initial Registrar will not include any
+                                        dispute resolution process. However, some form of dispute resolution <em
+                                                class="markup--em markup--p-em">may</em> be introduced in a permanent
+                                        registrar which succeeds it. There are many options for how dispute resolution
+                                        could be handled in the future, and new ones will certainly emerge after the
+                                        launch of the ENS.</p>
+                                    <p class="graf graf--p graf-after--p">One possible approach, for example, would
+                                        require domain holders to periodically adjust the value held in a deed to match
+                                        the average increase in value of all domain names.</p>
+                                    <p class="graf graf--p graf-after--p">This creates the possibility that ownership of
+                                        names may be revoked. Should that occur, <strong
+                                                class="markup--strong markup--p-strong">any funds held in the deed would
+                                            be returned to the owner.</strong></p>
+                                    <p class="graf graf--p graf-after--p">It is also possible that dispute resolution
+                                        will not be deemed beneficial, and changes introduced in the permanent registrar
+                                        would minimal, limited to tweaks to the auction process.</p>
+                                    <h4 class="graf graf--h4 graf-after--p">Transferring names</h4>
+                                    <p class="graf graf--p graf-after--h4">The owner of a name may transfer ownership,
+                                        along the ether held in the associated deed, to another account at any time.
+                                        This will allow for secondary markets to form, providing the ideal path for a
+                                        name to find an owner who can maximize the utility of a name.</p>
+                                    <h3 class="graf graf--h3 graf-after--p">Service life timeline of the Initial
+                                        Registrar</h3>
+                                    <p class="graf graf--p graf-after--h3">The release of the Ethereum Name Service,
+                                        including the Initial Registrar is planned for the first quarter 2017.</p>
+                                    <h4 class="graf graf--h4 graf-after--p">Upgrading</h4>
+                                    <p class="graf graf--p graf-after--h4">The Foundation will begin to accept proposals
+                                        for a permanent registrar one year after launch. The Initial Registrar is
+                                        expected to be replaced within 2 years of launch.</p>
+                                    <p class="graf graf--p graf-after--p">Owners of names in the Initial Registrar will
+                                        be responsible for transferring their deeds to the permanent registrar. Options
+                                        being considered to manage this transition include:</p>
+                                    <ol class="postList">
+                                        <li class="graf graf--li graf-after--p">Requiring owners to transfer their
+                                            ownership prior to a cutoff date in order to maintain ownership and/or
+                                            continue name resolution services.
+                                        </li>
+                                        <li class="graf graf--li graf-after--li">If the permanent registrar is lacking
+                                            an entry, have it query the Initial Registrar to identify the owner
+                                        </li>
+                                    </ol>
+                                    <h4 class="graf graf--h4 graf-after--li">Deadlines</h4>
+                                    <p class="graf graf--p graf-after--h4">The following events and times will be hard
+                                        coded into the contract:</p>
+                                    <ul class="postList">
+                                        <li class="graf graf--li graf-after--p"><strong
+                                                class="markup--strong markup--li-strong">After 4 years, the Initial
+                                            Registrar will refuse to register new names.</strong></li>
+                                        <li class="graf graf--li graf-after--li"><strong
+                                                class="markup--strong markup--li-strong">After 8 years, funds held by
+                                            the the Initial Registrar can no longer be released by owners, and will be
+                                            irretrievable.</strong></li>
+                                    </ul>
+                                    <p class="graf graf--p graf-after--li">Similar to Ethereum’s <a
+                                            href="http://ethereum.stackexchange.com/a/3819/4894"
+                                            data-href="http://ethereum.stackexchange.com/a/3819/4894"
+                                            class="markup--anchor markup--p-anchor"
+                                    >difficulty bomb</a>, these hard dates force action and
+                                        progress towards a permanent registrar.</p>
+                                    <h4 class="graf graf--h4 graf-after--p">Names restrictions</h4>
+                                    <p class="graf graf--p graf-after--h4">The only top level domain available will be
+                                        <strong class="markup--strong markup--p-strong">“.eth”</strong>. Subdomains will
+                                        be further <strong class="markup--strong markup--p-strong">limited to 7
+                                            characters or longer</strong>. For example:</p>
+                                    <ul class="postList">
+                                        <li class="graf graf--li graf--startsWithDoubleQuote graf-after--p"><strong
+                                                class="markup--strong markup--li-strong">“microsoft.eth”</strong> will
+                                            be <strong class="markup--strong markup--li-strong">valid</strong></li>
+                                        <li class="graf graf--li graf--startsWithDoubleQuote graf-after--li"><strong
+                                                class="markup--strong markup--li-strong">“google.eth”</strong> will be
+                                            <strong class="markup--strong markup--li-strong">invalid</strong></li>
+                                    </ul>
+                                    <img class="graf--p graf-image"
+                                         src="images/knowledge/1-53GnE0_hNmOEaORKKDegGw(1).png" width="100%">
+
+                                    <p class="graf graf--p graf-after--figure">Note that subdomains of registered names
+                                        have no restrictions. The owner of “<strong
+                                                class="markup--strong markup--p-strong">microsoft.eth”</strong> can thus
+                                        direct “<strong
+                                                class="markup--strong markup--p-strong">foo.microsoft.eth” </strong>however
+                                        they like.</p>
+                                    <p class="graf graf--p graf-after--p">This restriction reserves the shortest names
+                                        (which are scarce, and often most valuable) for a permanent registrar with an
+                                        improved approach to name allocation.</p>
+                                    <h3 class="graf graf--h3 graf-after--p">The Initial Registrar
+                                        auction&nbsp;process</h3>
+                                    <p class="graf graf--p graf-after--h3">Anyone can start an auction for a name they
+                                        are interested in by calling the registrar’s <strong
+                                                class="markup--strong markup--p-strong">startAuction() </strong>function.
+                                    </p>
+                                    <img class="graf--p graf-image"
+                                         src="images/knowledge/1-kCqAIRl1k-6TLaCtVpyQpw(1).png" width="100%">
+
+                                    <p class="graf graf--p graf-after--figure">The Initial Registrar will auction names
+                                        through a <a href="https://en.wikipedia.org/wiki/Vickrey_auction"
+                                                     data-href="https://en.wikipedia.org/wiki/Vickrey_auction"
+                                                     class="markup--anchor markup--p-anchor"
+                                        >Vickrey auction</a>; bids are submitted in a
+                                        “sealed envelope”, the highest bidder wins the auction, but pays the price of
+                                        the second highest bid. This format incentivizes bidders to bid what a name is
+                                        worth to them.</p>
+                                    <p class="graf graf--p graf-after--p">The parameters of a bid are:</p>
+                                    <ul class="postList">
+                                        <li class="graf graf--li graf-after--p">a name,</li>
+                                        <li class="graf graf--li graf-after--li">the value, in ETH, you are willing to
+                                            pay for ownership of the name,
+                                        </li>
+                                        <li class="graf graf--li graf-after--li">the address which will own the name.
+                                        </li>
+                                    </ul>
+                                    <p class="graf graf--p graf-after--li">These parameters are salted and hashed (using
+                                        <strong class="markup--strong markup--p-strong">shaBid()</strong>), and sent to
+                                        the Registrar with a payment of ETH (using <strong
+                                                class="markup--strong markup--p-strong">newBid()</strong>). Hashing the
+                                        parameters makes it impossible to discern discern which name a bid is for.</p>
+                                    <img class="graf--p graf-image"
+                                         src="images/knowledge/1-oXmeOlLhsiQ2R-WDr5yheQ(1).png" width="100%">
+
+                                    <h4 class="graf graf--h4 graf-after--figure">Minimum price</h4>
+                                    <p class="graf graf--p graf-after--h4">The minimum price to register a given name is
+                                        <strong class="markup--strong markup--p-strong">0.01 ETH</strong>. If no one
+                                        else bids against you, that is how much you will pay.</p>
+                                    <h4 class="graf graf--h4 graf-after--p">Auction durations</h4>
+                                    <p class="graf graf--p graf-after--h4">During the normal operation of the registrar,
+                                        the bidding period will last for 3 days. In order to allow people sufficient
+                                        time to prepare for bidding, all auctions started during the first 25 days of
+                                        the registrar’s life will extend until the end of the 28th day.</p>
+                                    <h4 class="graf graf--h4 graf-after--p">The reveal&nbsp;period</h4>
+                                    <p class="graf graf--p graf-after--h4">After the 3 days of bidding, is a 48 hour <em
+                                            class="markup--em markup--p-em">reveal period, </em>during which bidders
+                                        must submit the parameters of their bid (using <strong
+                                                class="markup--strong markup--p-strong">unsealBid()</strong>). New bids
+                                        are not accepted during the reveal period.</p>
+                                    <p class="graf graf--p graf-after--p">Bids revealed after the reveal period has
+                                        ended will be invalid, and the value of the deed will be lost.</p>
+                                    <p class="graf graf--p graf-after--p">After the reveal period has passed the winner
+                                        will be set as the owner of the name (using <strong
+                                                class="markup--strong markup--p-strong">finalizeAuction()</strong>).</p>
+                                    <p class="graf graf--p graf-after--p">In the event that two parties bid exactly the
+                                        same value, the first bid revealed will win.</p>
+                                    <h4 class="graf graf--h4 graf-after--p">Costs of&nbsp;bidding</h4>
+                                    <p class="graf graf--p graf-after--h4">Non-winning bidders will receive a 99.9%
+                                        refund on the value bid. The remaining 0.1% will be burned. This creates a real
+                                        cost to bidding on a large number of names, or highly valuable names.</p>
+                                    <h3 class="graf graf--h3 graf-after--p">Learn more</h3>
+                                    <p class="graf graf--p graf-after--h3">Have questions? <strong
+                                            class="markup--strong markup--p-strong">Please ask</strong> by highlighting
+                                        the relevant section, or commenting below.</p>
+                                    <h4 class="graf graf--h4 graf-after--p">Other resources</h4>
+                                    <ul class="postList">
+                                        <li class="graf graf--li graf-after--h4"><a
+                                                href="https://www.youtube.com/watch?v=pLDDbCZXvTE"
+                                                class="markup--anchor markup--li-anchor"
+                                        >Nick Johnson’s Devcon2 Talk</a> and <a
+                                                href="http://dev/"
+                                                class="markup--anchor markup--li-anchor"
+                                        >slides</a></li>
+                                        <li class="graf graf--li graf-after--li"><a
+                                                href="https://projects.invisionapp.com/share/FE93G2K3Y#/screens/200024092"
+                                                class="markup--anchor markup--li-anchor"
+                                        >Auction app mockups</a></li>
+                                        <li class="graf graf--li graf-after--li"><a
+                                                href="https://github.com/zigguratt/ens-in-lll"
+                                                class="markup--anchor markup--li-anchor"
+                                        >ENS implemented in LLL</a></li>
+                                        <li class="graf graf--li graf-after--li">ERC 137: <a
+                                                href="https://github.com/ethereum/EIPs/issues/137"
+                                                class="markup--anchor markup--li-anchor"
+                                        >Ethereum Name Service Spec</a></li>
+                                        <li class="graf graf--li graf-after--li">ERC 162: <a
+                                                href="https://github.com/ethereum/EIPs/issues/162"
+                                                class="markup--anchor markup--li-anchor"
+                                        >Hash Registrar Spec</a></li>
+                                    </ul>
+                                    <p class="graf graf--p graf-after--li graf--trailing"><em
+                                            class="markup--em markup--p-em">Thank you to </em><a
+                                            href="https://medium.com/@weka"
+                                            class="markup--p-user"
+                                    ><em class="markup--em markup--p-em">Nick Johnson</em></a><em
+                                            class="markup--em markup--p-em">, </em><a href="https://medium.com/@avsa"
+                                                                                      class="markup--p-user"
+                                    ><em
+                                            class="markup--em markup--p-em">Alex Van de Sande</em></a><em
+                                            class="markup--em markup--p-em"> for proposing and writing the ENS’
+                                        contracts. Thank you also to Nick, Alex, </em><a
+                                            href="https://medium.com/@jmiehau" data-href="https://medium.com/@jmiehau"
+                                            class="markup--p-user"
+                                    ><em class="markup--em markup--p-em">Jorge</em></a><em
+                                            class="markup--em markup--p-em"> and </em><a
+                                            href="https://medium.com/@eduardo" data-href="https://medium.com/@eduardo"
+                                            class="markup--p-user"
+                                    ><em class="markup--em markup--p-em">Edu</em></a><em
+                                            class="markup--em markup--p-em"> for reading and providing feedback.</em>
+                                    </p>
+                                </div>
+                            </div>
+                        </section>
+                        <!--<section name="5e3a"class="section section&#45;&#45;body section&#45;&#45;last"></section>-->
+                    </div>
+                    <footer class="u-paddingTop30">
+                        <div class="streamItem streamItem--placementCardGrid">
+                            <div class="u-clearfix u-backgroundGrayLightest">
+                                <div class="row u-marginAuto u-maxWidth1000 u-paddingTop30 u-paddingBottom20">
+
+                                    <div class="col u-padding8 u-xs-size12of12 u-size4of12">
+                                        <div class="uiScale uiScale-ui--small uiScale-caption--regular u-height280 u-sizeFullWidth u-backgroundWhite u-borderCardBorder u-boxShadow u-borderBox u-borderRadius4"
+                                             data-scroll="native">
+                                            <a class="link link--noUnderline u-baseColor--link ui-linkSubtle"
+                                               href="an_update_on_Integrating.html">
+                                                <div class="u-backgroundCover u-backgroundColorGrayLight u-height100 u-sizeFullWidth u-borderBottomLight u-borderRadiusTop4"
+                                                     style="background-image: url('images/knowledge/z5-thumb.jpg');"></div>
+                                            </a>
+                                            <div class="u-padding15 u-borderBox u-flexColumn u-height180">
+                                                <a class="link link--noUnderline u-flex1 u-baseColor--link ui-linkSubtle"
+                                                   href="an_update_on_Integrating.html">
+                                                    <div class="ui-caption postMetaInline u-noWrapWithEllipsis u-marginBottom7">
+                                                        Knowledge
+                                                    </div>
+                                                    <div class="ui-heading ui-clamp2 u-textColorDarkest u-contentSansBold u-fontSize24 u-maxHeight2LineHeightTighter u-lineClamp2 u-textOverflowEllipsis u-letterSpacingTight u-paddingBottom2">
+                                                        An Update on Integrating Zcash on Ethereum (ZoE)
+                                                    </div>
+                                                </a>
+                                                <div class="u-paddingTop10 u-flex0 u-flexCenter">
+                                                    <div class="u-flex1 u-minWidth0 u-marginRight10">
+                                                        <div class="u-flexCenter">
+                                                            <div class="postMetaInline-avatar u-flex0">
+                                                                <!--<a class="link avatar u-baseColor&#45;&#45;link ui-linkSubtle" href="#">-->
+                                                                <img src="images/knowledge/Christian-Reitwiessner.jpeg"
+                                                                     class="avatar-image u-size36x36 u-xs-size32x32">
+                                                                <!--</a>-->
+                                                            </div>
+                                                            <div class="postMetaInline postMetaInline-authorLockup u-flex1 u-noWrapWithEllipsis">
+                                                                <!--<a class="link link link&#45;&#45;darken link&#45;&#45;darker u-baseColor&#45;&#45;link ui-linkSubtle" href="#">-->
+                                                                Christian Reitwiessner
+                                                                <!--</a>-->
+                                                                <div class="u-fontSize12 u-baseColor--textNormal u-textColorNormal">
+                                                                    <time>9 Mar, 2017</time>
+                                                                    <!--<span class="readingTime u-textColorNormal" title="1 min read"></span>-->
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col u-padding8 u-xs-size12of12 u-size4of12">
+                                        <div class="uiScale uiScale-ui--small uiScale-caption--regular u-height280 u-sizeFullWidth u-backgroundWhite u-borderCardBorder u-boxShadow u-borderBox u-borderRadius4"
+                                             data-scroll="native">
+                                            <a class="link link--noUnderline u-baseColor--link ui-linkSubtle"
+                                               href="white_paper.html">
+                                                <div class="u-backgroundCover u-backgroundColorGrayLight u-height100 u-sizeFullWidth u-borderBottomLight u-borderRadiusTop4"
+                                                     style="background-image: url('images/knowledge/0-52_QQpw7YGDelBvo.jpeg');"></div>
+                                            </a>
+                                            <div class="u-padding15 u-borderBox u-flexColumn u-height180">
+                                                <a class="link link--noUnderline u-flex1 u-baseColor--link ui-linkSubtle"
+                                                   href="white_paper.html">
+                                                    <div class="ui-caption postMetaInline u-noWrapWithEllipsis u-marginBottom7">
+                                                        Knowledge
+                                                    </div>
+                                                    <div class="ui-heading ui-clamp2 u-textColorDarkest u-contentSansBold u-fontSize24 u-maxHeight2LineHeightTighter u-lineClamp2 u-textOverflowEllipsis u-letterSpacingTight u-paddingBottom2">
+                                                        White Paper
+                                                    </div>
+                                                </a>
+                                                <div class="u-paddingTop10 u-flex0 u-flexCenter">
+                                                    <div class="u-flex1 u-minWidth0 u-marginRight10">
+                                                        <div class="u-flexCenter">
+                                                            <div class="postMetaInline-avatar u-flex0">
+                                                                <!--<a class="link avatar u-baseColor&#45;&#45;link ui-linkSubtle" href="#">-->
+                                                                <img src="images/ethereum.jpg"
+                                                                     class="avatar-image u-size36x36 u-xs-size32x32">
+                                                                <!--</a>-->
+                                                            </div>
+                                                            <div class="postMetaInline postMetaInline-authorLockup u-flex1 u-noWrapWithEllipsis">
+                                                                <!--<a class="link link link&#45;&#45;darken link&#45;&#45;darker u-baseColor&#45;&#45;link ui-linkSubtle" href="#">-->
+                                                                Ethereum
+                                                                <!--</a>-->
+                                                                <div class="u-fontSize12 u-baseColor--textNormal u-textColorNormal">
+                                                                    <time>18 Jul, 2017</time>
+                                                                    <!--<span class="readingTime u-textColorNormal" title="1 min read"></span>-->
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col u-padding8 u-xs-size12of12 u-size4of12">
+                                        <div class="uiScale uiScale-ui--small uiScale-caption--regular u-height280 u-sizeFullWidth u-backgroundWhite u-borderCardBorder u-boxShadow u-borderBox u-borderRadius4"
+                                             data-scroll="native">
+                                            <a class="link link--noUnderline u-baseColor--link ui-linkSubtle"
+                                               href="explaining_the_ethereum_namespace_auction.html">
+                                                <div class="u-backgroundCover u-backgroundColorGrayLight u-height100 u-sizeFullWidth u-borderBottomLight u-borderRadiusTop4"
+                                                     style="background-image: url('images/knowledge/information_technology_767x400.jpg');"></div>
+                                            </a>
+                                            <div class="u-padding15 u-borderBox u-flexColumn u-height180">
+                                                <a class="link link--noUnderline u-flex1 u-baseColor--link ui-linkSubtle"
+                                                   href="explaining_the_ethereum_namespace_auction.html">
+                                                    <div class="ui-caption postMetaInline u-noWrapWithEllipsis u-marginBottom7">
+                                                        Knowledge
+                                                    </div>
+                                                    <div class="ui-heading ui-clamp2 u-textColorDarkest u-contentSansBold u-fontSize24 u-maxHeight2LineHeightTighter u-lineClamp2 u-textOverflowEllipsis u-letterSpacingTight u-paddingBottom2">
+                                                        Explaining the Ethereum Namespace Auction
+                                                    </div>
+                                                </a>
+                                                <div class="u-paddingTop10 u-flex0 u-flexCenter">
+                                                    <div class="u-flex1 u-minWidth0 u-marginRight10">
+                                                        <div class="u-flexCenter">
+                                                            <div class="postMetaInline-avatar u-flex0">
+                                                                <!--<a class="link avatar u-baseColor&#45;&#45;link ui-linkSubtle" href="#">-->
+                                                                <img src="images/knowledge/1-AW1mbHWcIh7sSOj4XJboOw(2).jpeg"
+                                                                     class="avatar-image u-size36x36 u-xs-size32x32">
+                                                                <!--</a>-->
+                                                            </div>
+                                                            <div class="postMetaInline postMetaInline-authorLockup u-flex1 u-noWrapWithEllipsis">
+                                                                <!--<a class="link link link&#45;&#45;darken link&#45;&#45;darker u-baseColor&#45;&#45;link ui-linkSubtle" href="#">-->
+                                                                Maurelian
+                                                                <!--</a>-->
+                                                                <div class="u-fontSize12 u-baseColor--textNormal u-textColorNormal">
+                                                                    <time>25 Oct, 2017</time>
+                                                                    <!--<span class="readingTime u-textColorNormal" title="1 min read"></span>-->
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <div class="u-textAlignCenter u-paddingBottom20 u-xs-fontSize10">&copy; UNITIMES. All
+                                    Rights Reserved.
+                                </div>
+                            </div>
+                        </div>
+                    </footer>
+
+                </article>
+            </main>
+        </div>
+    </div>
+</div>
+<div class="surface-scrollOverlay"></div>
+</body>
+
+</html>
