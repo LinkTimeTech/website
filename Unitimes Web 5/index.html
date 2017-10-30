@@ -20,6 +20,7 @@
     <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css"
           integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 
+    <link href="//vjs.zencdn.net/5.19/video-js.min.css" rel="stylesheet">
 
     <!-- Theme style  -->
     <link rel="stylesheet" href="css/style.css">
@@ -95,25 +96,40 @@
     </div>
     <div class="metabar metabar--spacer u-tintBgColor u-height105 u-xs-height95"></div>
 
-    <header id="gtco-header" class="gtco-cover" role="banner" style="background-image:url(images/bg01.jpg);"
-            data-stellar-background-ratio="1.0">
+    <header id="gtco-header" class="gtco-cover" role="banner" style=""
+            data-stellar-background-ratio="1">
+        <div>
+            <video id="my-player"
+                   class="video-js"
+                   preload="auto"
+                   loop
+                   data-setup={"controls":false,"autoplay":true,"muted":true,"fluid":true}>
+                <source src="video/sunset-cloud.mp4" type="video/mp4"></source>
+            </video>
+
+        </div>
+
         <div class="overlay"></div>
-        <div class="container u-maxWidth780">
+
+        <div class="container" style="position: absolute;top: 0;width: 100%;">
+
             <div class="row">
-                <div class="text-center">
-                    <div class="display-t">
+                <a href="welcome_to_unitimes_cn.html">
+
+                    <div class="text-center display-t">
                         <div class="display-tc animate-box" data-animate-effect="fadeInUp">
+                            <!--<span class="date-post">24 / 9 / 2017</span>-->
                             <h1>Unitimes is a new media
                                 to help you rethink：<span id="banner"></span></h1>
-                            <!--<span class="date-post">24 / 9 / 2017</span>-->
-                            <!--<p><a href="#" class="text-link">Read More</a></p>-->
-                        </div>
+                            <!--<p><a href="#" class="text-link">阅读全文</a></p>-->
                     </div>
                 </div>
+                </a>
+
             </div>
         </div>
-    </header>
 
+    </header>
 
     <div id="gtco-main">
         <div class="container u-maxWidth1000">
@@ -122,12 +138,10 @@
                     <ul id="gtco-post-list">
 
                         <li class="full entry animate-box" data-animate-effect="fadeIn">
-                            <a href="devcon3_2017_conference.html">
+                            <a href="the_boy_genius_vitalk_buterin.html">
                                 <div class="entry-img" style="background-image: url(images/tc.jpeg);"></div>
                                 <div class="entry-desc">
                                     <font size="5" face="lato">UNITALK: THE BOY GENIUS: VITALIK BUTERIN</font>
-                                    <h3>
-                                    </h3>
                                     <p>
                                         What did you do when you were 19 years old?
                                         <br>
@@ -138,99 +152,256 @@
                                         The youngest candidate of 40 Under 40 of Forbes<br>
 
                                         Founder of Ethereum, the world’s second-most valuable cryptocurrency network
-                                        behind Bitcoin
-                                        <br><br>
+                                        behind Bitcoin.
+                                        <br>
                                         We are honored to interview this “boy genius” founder of Ethereum, Vitalik
                                         Buterin, and introduce his life story with our audience.
+                                        <br><br>
+                                    </p>
+                                </div>
+                            </a>
+                            <a href="unitalks.html" class="post-meta">UNITALKS <span
+                                    class="date-posted">Sep 24, 2017</span></a>
+                        </li>
+
+                        <!--Red Belly Blockchain Boasts the Fastest Network Worldwide-->
+                        <li class="one-third entry animate-box" data-animate-effect="fadeIn">
+                            <a href="red_belly_blockchain_boasts_the_fastest_network_worldwide.html">
+                                <div class="entry-img" style="background-image: url(images/news/red_belly.jpg)"></div>
+
+                                <div class="entry-desc">
+                                    <h3 class="infocard-title">
+                                        Red Belly Blockchain Boasts the Fastest Network Worldwide
+                                    </h3>
+                                    <p class="infocard-content">
+                                        Red Belly Blockchain can process 660,000 transactions/sec in the latest tests,
+                                        much quicker than the Visa network and 50 percent faster than first anticipated.
 
                                     </p>
                                 </div>
                             </a>
-                            <a href="devcon3_2017_conference.html" class="post-meta">Unitalks <span
-                                    class="date-posted">24 / 9 / 2017</span></a>
+                            <a href="news.html" class="post-meta">NEWS
+                                <span class="date-posted">
+                                Oct 27, 2017
+                            </span></a>
                         </li>
 
-
+                        <!--NYU Professor：Bitcoin Should Be A Widely Used Currency-->
                         <li class="one-third entry animate-box" data-animate-effect="fadeIn">
-                            <a href="the_eu_has_invested_over_5_million.html">
-                                <div class="entry-img" style="background-image: url(images/news/c1.png)"></div>
+                            <a href="nyu_professor_bitcoin_should_be_a_widely_used_currency.html">
+                                <div class="entry-img"
+                                     style="background-image: url(images/news/nyu_Professor.jpg)"></div>
 
                                 <div class="entry-desc">
-                                    <h3 class="infocard-title">Chinese Internet Giant Tencent Issued Blockchain White
-                                        Paper</h3>
-                                    <p class="infocard-content">Chinese internet conglomerate Tencent issued a
-                                        blockchain white paper in the first half of this year, aiming at working with
-                                        its partners to push forward the development of a reliable internet and achieve
-                                        a win-win situation. Meanwhile, the Tencent bockchain industry solutions with
-                                        independent intellectual property rights was ...</p>
+                                    <h3 class="infocard-title">
+                                        NYU Professor：Bitcoin Should Be A Widely Used Currency
+                                    </h3>
+                                    <p class="infocard-content">
+                                        Bitcoin is a cryptocurrency, people should focus more on its value and daily
+                                        applications rather than the unstable price.
+                                    </p>
                                 </div>
                             </a>
-                            <a href="chinese_internet_giant_tencent_is_building_new_blockchain_services.html"
-                               class="post-meta">News <span
-                                    class="date-posted">11 / 9 / 2017</span></a>
+                            <a href="news.html" class="post-meta">NEWS
+                                <span class="date-posted">
+                                Oct 26, 2017
+                            </span></a>
                         </li>
 
-
+                        <!--Diploma On Blockchain!!!-->
                         <li class="one-third entry animate-box" data-animate-effect="fadeIn">
-                            <a href="china_bans_all_token_offering_financing_activities.html">
-                                <div class="entry-img" style="background-image: url(images/news/c2.png);"></div>
+                            <a href="diploma_on_blockchain.html">
+                                <div class="entry-img"
+                                     style="background-image: url(images/news/diploma_on_blockchain.jpg)"></div>
+
                                 <div class="entry-desc">
-                                    <h3 class="infocard-title">China Bans all&nbsp;Token Offering Financing
-                                        Activities...</h3>
-                                    <p class="infocard-content"> On Sept. 4th, 2017, seven government administrations
-                                        including the People’s Bank of China, China Securities Regulatory Commission,
-                                        China Banking Regulatory Commission and China Insurance Regulatory Commission
-                                        have all come together to issue a joint statement, echoing the committee’s
-                                        stance on how ICOs are a form of unauthorized illegal fund raising...</p>
+                                    <h3 class="infocard-title">
+                                        Diploma On Blockchain!!!
+                                    </h3>
+                                    <p class="infocard-content">
+                                        The Blockchain is penetrating into various currently. Isn’t it amazing to have
+                                        our diploma recorded on Blockchain for permanent storage? Of course it is, and
+                                        it is impossible to happen years ago.
+                                    </p>
                                 </div>
                             </a>
-                            <a href="china_bans_all_token_offering_financing_activities.html" class="post-meta">News
-                                <span class="date-posted">4 / 9 / 2017</span></a>
+                            <a href="news.html" class="post-meta">NEWS
+                                <span class="date-posted">
+                                Oct 25, 2017
+                            </span></a>
                         </li>
 
+                        <!--Australia Officially Ends Bitcoin GST-->
                         <li class="one-third entry animate-box" data-animate-effect="fadeIn">
-                            <a href="hong_kong_sfc_ico_tokens.html">
-                                <div class="entry-img" style="background-image: url(images/news/c3.png); "></div>
+                            <a href="australia_officially_ends_bitcoin_gst.html">
+                                <div class="entry-img"
+                                     style="background-image: url(images/news/australia_officially.jpg)"></div>
+
                                 <div class="entry-desc">
-                                    <h3 class="infocard-title">Hong Kong SFC: ICO Tokens “May be Securities” ....</h3>
-                                    <p class="infocard-content"> On September 5, 2017, Hong Kong Securities and Futures
-                                        Commission (SFC) released the Statement on Initial Coin Offerings, announcing
-                                        that certain ICO tokens might be securities as defined in the Securities and
-                                        Futures Ordinance (SFO), and subjected to the securities laws of Hong
-                                        Kong...</p>
+                                    <h3 class="infocard-title">
+                                        Australia Officially Ends Bitcoin GST
+                                    </h3>
+                                    <p class="infocard-content">
+                                        The end of Bitcoin GST will definitely be a good sign to cryptocurrency world.
+                                    </p>
                                 </div>
                             </a>
-                            <a href="hong_kong_sfc_ico_tokens.html" class="post-meta">News <span class="date-posted">4 / 9 / 2017</span></a>
+                            <a href="news.html" class="post-meta">NEWS
+                                <span class="date-posted">
+                                Oct 24, 2017
+                            </span></a>
+                        </li>
+
+                        <!--Kazakhstan Intends to Launch National Cryptocurrency Backed by Fiat-->
+                        <li class="one-third entry animate-box" data-animate-effect="fadeIn">
+                            <a href="kazakhstan_intends_to_launch_national_cryptocurrency_backed_by_fiat.html">
+                                <div class="entry-img"
+                                     style="background-image: url(images/news/kazakhstan_intends.jpg)"></div>
+
+                                <div class="entry-desc">
+                                    <h3 class="infocard-title">
+                                        Kazakhstan Intends to Launch National Cryptocurrency Backed by Fiat
+                                    </h3>
+                                    <p class="infocard-content">
+                                        Blcokchain and cryptocurrency are entering the mainstream of today’s economic
+                                        reality and supported by quite positive development environment
+                                    </p>
+                                </div>
+                            </a>
+                            <a href="news.html" class="post-meta">NEWS
+                                <span class="date-posted">
+                                Oct 23,2017
+                            </span></a>
+                        </li>
+
+                        <!--Switzerland Awards First AML/KYC Licence To Bitcoin Company-->
+                        <li class="one-third entry animate-box" data-animate-effect="fadeIn">
+                            <a href="switzerland_awards_first_aml_kyc_licence_to_bitcoin_company.html">
+                                <div class="entry-img"
+                                     style="background-image: url(images/news/switzerland_awards.jpg)"></div>
+
+                                <div class="entry-desc">
+                                    <h3 class="infocard-title">
+                                        Switzerland Awards First AML/KYC Licence To Bitcoin Company
+                                    </h3>
+                                    <p class="infocard-content">
+                                        Government licensing is quite important when establishing a payments business.
+                                        Official approval in a leading European financial center like Switzerland is a
+                                        key plus in the competitive environment.
+                                    </p>
+                                </div>
+                            </a>
+                            <a href="news.html" class="post-meta">NEWS
+                                <span class="date-posted">
+                               Oct 20, 2017
+                            </span></a>
+                        </li>
+
+                        <!--New Members Join Enterprise Ethereum Alliance-->
+                        <li class="one-third entry animate-box" data-animate-effect="fadeIn">
+                            <a href="new_members_join_enterprise_ethereum_alliance.html">
+                                <div class="entry-img" style="background-image: url(images/news/new_members.jpg)"></div>
+
+                                <div class="entry-desc">
+                                    <h3 class="infocard-title">
+                                        New Members Join Enterprise Ethereum Alliance
+                                    </h3>
+                                    <p class="infocard-content">
+                                        EEA is a nonprofit alliance with the objective of creating a series of standards
+                                        for Ethereum in terms of security, privacy, scalability and interoperability.
+                                    </p>
+                                </div>
+                            </a>
+                            <a href="news.html" class="post-meta">NEWS
+                                <span class="date-posted">
+                                 Oct 19, 2017
+                            </span></a>
+                        </li>
+
+                        <!--Blockchain Helps Refugees to Recreate Lost Identities.-->
+                        <li class="one-third entry animate-box" data-animate-effect="fadeIn">
+                            <a href="blockchain_helps_refugees_to_recreate_lost_identities.html">
+                                <div class="entry-img"
+                                     style="background-image: url(images/news/blockchain_helps.jpg)"></div>
+
+                                <div class="entry-desc">
+                                    <h3 class="infocard-title">
+                                        Blockchain Helps Refugees to Recreate Lost Identities
+                                    </h3>
+                                    <p class="infocard-content">
+                                        Blockchain technology is believed to be the best way to help refugees to
+                                        recreate their lost identities
+                                    </p>
+                                </div>
+                            </a>
+                            <a href="news.html" class="post-meta">NEWS
+                                <span class="date-posted">
+                                Oct 18,2017
+                            </span></a>
+                        </li>
+
+                        <!--Digital Asset Holdings LLC Completes Series B Fundraising-->
+                        <li class="one-third entry animate-box" data-animate-effect="fadeIn">
+                            <a href="digital_asset_holdings_llc_completes_series_b_fundraising.html">
+                                <div class="entry-img"
+                                     style="background-image: url(images/news/digital_asset.jpg)"></div>
+
+                                <div class="entry-desc">
+                                    <h3 class="infocard-title">
+                                        Digital Asset Holdings LLC Completes Series B Fundraising
+                                    </h3>
+                                    <p class="infocard-content">
+                                        DAH has raised $40 million in Series B round, bringing the its current total
+                                        funding to $110 million
+                                    </p>
+                                </div>
+                            </a>
+                            <a href="news.html" class="post-meta">NEWS
+                                <span class="date-posted">
+                                Oct 17, 2017
+                            </span></a>
                         </li>
 
                         <li class="two-third entry animate-box" data-animate-effect="fadeIn">
-                            <a href="knowledge.html">
+                            <a href="an_update_on_Integrating.html">
                                 <div class="entry-img"
-                                     style="background-image: url(images/knowledge/z2-thumb.jpg)"></div>
+                                     style="background-image: url(images/knowledge/z5-thumb.jpg)"></div>
                                 <div class="entry-desc">
-                                    <h3 class="infocard-title">Quadratic Arithmetic Programs: from Zero to Hero</h3>
-                                    <p class="infocard-content">There has been a lot of interest lately in the
-                                        technology behind zk-SNARKs, and people are increasingly trying to demystify
-                                        something that many have come to call “moon math” due to its perceived sheer
-                                        indecipherable complexity...</p>
+                                    <h3 class="infocard-title">
+                                        An Update on Integrating Zcash on Ethereum (ZoE)
+                                    </h3>
+                                    <p class="infocard-content">
+                                        Members of the Ethereum R&D team and the Zcash Company are collaborating on a
+                                        research project addressing the combination of programmability and privacy in
+                                        blockchains. This joint post is being concurrently posted on the Zcash blog, and
+                                        is coauthored by Ariel Gabizon (Zcash) and Christian Reitwiessner (Ethereum).
+                                    </p>
                                 </div>
                             </a>
-                            <a href="knowledge.html" class="post-meta">Knowledge <span
-                                    class="date-posted">3 / 9 / 2017</span></a>
+                            <a href="knowledge.html" class="post-meta">KNOWLEDGE
+                                <span class="date-posted">Jan 19, 2017</span></a>
                         </li>
 
 
+                        <!--Devcon3 | 2017 conference overview-->
                         <li class="one-third entry animate-box" data-animate-effect="fadeIn">
-                            <a href="events.html">
+                            <a href="devcon3_2017_conference.html">
                                 <div class="entry-img"
                                      style="background-image: url(images/events/devcon3-crop-1200.jpg)"></div>
                                 <div class="entry-desc">
-                                    <h3 class="infocard-title">Ethereum DEVCON 3</h3>
-                                    <p class="infocard-content">Ethereum Foundation is pleased to feature presentations
-                                        on research and development it supports throughout the agenda... </p>
+                                    <h3 class="infocard-title">Devcon3 | 2017 conference overview
+                                    </h3>
+                                    <p class="infocard-content">
+                                        For those of you who have experienced Devcon in the past and are looking forward
+                                        to this year’s event, it should be the best one to date! This year, the Ethereum
+                                        Foundation(organizer) has dedicated convention center space that accommodates
+                                        close to double the capacity as last year as well as a second hall to allow for
+                                        more presentations and formats.
+                                    </p>
                                 </div>
                             </a>
-                            <a href="events.html" class="post-meta">Events <span class="date-posted">1 / 9 / 2017</span></a>
+                            <a href="events.html" class="post-meta">EVENTS <span
+                                    class="date-posted">November 1-4, 2017</span></a>
                         </li>
 
 
@@ -274,6 +445,8 @@
 <script src="js/respond.min.js"></script><![endif]--><!-- Waypoints -->
 <script src="js/jquery.waypoints.min.js"></script><!-- Stellar -->
 <script src="js/jquery.stellar.min.js"></script><!-- Main -->
+<script src="//vjs.zencdn.net/5.19/video.min.js"></script>
+
 <script src="js/main.js"></script>
 
 

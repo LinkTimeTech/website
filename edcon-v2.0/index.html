@@ -13,13 +13,14 @@
     <meta name="keywords" content="EDCON,edcon"/>
     <link rel="icon" href="assets/images/favicon.ico" type="image/x-icon">
 
-    <title>EDCON Conference</title>
+    <title>Ethereum Development Conference 2018</title>
 
     <!-- css -->
-    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css"
+          integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <link rel="stylesheet" href="bower_components/ionicons/css/ionicons.min.css">
     <link rel="stylesheet" href="bower_components/css/animate.css">
-    <link rel="stylesheet" href="bower_components/font-awesome-4.7.0/css/font-awesome.min.css">
+    <link href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/main.css">
 
 </head>
@@ -76,7 +77,7 @@
 
         <p>slogan TBD</p>
 
-        <a class="btn btn-white" href="registration.html">Register Now</a>
+        <!--<a class="btn btn-white" href="#registration">Register Now</a>-->
 
     </div>
 </header>
@@ -118,7 +119,7 @@
                     </h3>
                     <p>
                         The tickets are different according to the identity of participants. You can click
-                        <a href="registration.html">registration</a>
+                        <a href="#registration">registration</a>
                         to find out more about the price and discounts. The earlier you buy the ticket, the more
                         discounts you will be provided.
                     </p>
@@ -292,6 +293,7 @@ Guest section
             </div>
         </div>
         <div id="row">
+            <!--Vitalik Buterin-->
             <div class="col-md-3 col-sm-6 team">
                 <div class="thumbnail"><img src="assets/images/speakers/501508833617_.pic.jpg" alt="Jessica Wally"
                                             class="img-circle team-img">
@@ -302,25 +304,8 @@ Guest section
                     </div>
                 </div>
             </div>
-            <div class="col-md-3 col-sm-6 team">
-                <div class="thumbnail"><img src="assets/images/speakers/1181509010954_.pic.jpg" alt="..."
-                                            class="img-circle team-img">
-                    <div class="caption">
-                        <h3>Jun Hasegawa</h3>
-                        <p>Founder of Omise <br></p>
-                    </div>
-                </div>
-            </div>
 
-            <div class="col-md-3 col-sm-6 team">
-                <div class="thumbnail"><img src="assets/images/speakers/521508833617_.pic_hd.jpg" alt="..."
-                                            class="img-circle team-img">
-                    <div class="caption">
-                        <h3>Loi Luu</h3>
-                        <p>Founder of SmartPool & KyberNetwork <br></p>
-                    </div>
-                </div>
-            </div>
+            <!--Karl Floersch-->
             <div class="col-md-3 col-sm-6 team">
                 <div class="thumbnail"><img src="assets/images/speakers/491508833617_.pic.jpg" alt="..."
                                             class="img-circle team-img">
@@ -330,6 +315,39 @@ Guest section
                     </div>
                 </div>
             </div>
+            <!--Joseph Poon-->
+            <div class="col-md-3 col-sm-6 team">
+                <div class="thumbnail"><img src="assets/images/speakers/1451509327679_.pic.jpg" alt="..."
+                                            class="img-circle team-img">
+                    <div class="caption">
+                        <h3>Joseph Poon</h3>
+                        <p>Co-author of Lightning network and Plasma</p>
+                    </div>
+                </div>
+            </div>
+
+            <!--Jun Hasegawa-->
+            <div class="col-md-3 col-sm-6 team">
+                <div class="thumbnail"><img src="assets/images/speakers/1181509010954_.pic.jpg" alt="..."
+                                            class="img-circle team-img">
+                    <div class="caption">
+                        <h3>Jun Hasegawa</h3>
+                        <p>Founder of Omise <br><br></p>
+                    </div>
+                </div>
+            </div>
+            <!--Loi Luu-->
+            <div class="col-md-3 col-sm-6 team">
+                <div class="thumbnail"><img src="assets/images/speakers/521508833617_.pic_hd.jpg" alt="..."
+                                            class="img-circle team-img">
+                    <div class="caption">
+                        <h3>Loi Luu</h3>
+                        <p>Founder of SmartPool & KyberNetwork <br></p>
+                    </div>
+                </div>
+            </div>
+
+            <!--William Mougayar-->
             <div class="col-md-3 col-sm-6 team">
                 <div class="thumbnail"><img src="assets/images/speakers/511508833617_.pic.jpg" alt="..."
                                             class="img-circle team-img">
@@ -341,7 +359,7 @@ Guest section
                 </div>
             </div>
 
-
+            <!--Jehan Chu-->
             <div class="col-md-3 col-sm-6 team">
                 <div class="thumbnail"><img src="assets/images/speakers/1191509010954_.pic_hd.jpg" alt="..."
                                             class="img-circle team-img">
@@ -351,6 +369,18 @@ Guest section
                     </div>
                 </div>
             </div>
+
+            <!--Jae Kwon-->
+            <div class="col-md-3 col-sm-6 team">
+                <div class="thumbnail"><img src="assets/images/speakers/1471509327710_.pic.jpg" alt="..."
+                                            class="img-circle team-img">
+                    <div class="caption">
+                        <h3>Jae Kwon</h3>
+                        <p>Founder of Tendermint & Cosmos<br><br></p>
+                    </div>
+                </div>
+            </div>
+
 
         </div>
     </div>
@@ -442,23 +472,27 @@ Guest section
             <div class="wow fadeInUp col-md-12 col-sm-12" data-wow-delay="0.9s">
                 <!-- Nav tabs -->
                 <ul class="nav nav-tabs" role="tablist">
-                    <li class="active"><a href="#fday" aria-controls="fday" role="tab" data-toggle="tab">1<sup>st</sup>
-                        DAY MAIN CONFERENCE</a>
+                    <li class="active"><a href="#fday" aria-controls="fday" role="tab" data-toggle="tab">
+                        <!--1<sup>st</sup>DAY -->
+                        MAIN CONFERENCE</a>
                     </li>
-                    <li><a href="#sday" aria-controls="sday" role="tab" data-toggle="tab">2<sup>nd</sup> DAY
+                    <li><a href="#sday" aria-controls="sday" role="tab" data-toggle="tab">
                         SUB-CONFERENCE</a></li>
-                    <li><a href="#tday" aria-controls="tday" role="tab" data-toggle="tab">3<sup>rd</sup> DAY HACKASON
+                    <li><a href="#tday" aria-controls="tday" role="tab" data-toggle="tab">
+                        HACKASON
                         COMPETITION</a></li>
+                    <li><a href="#wday" aria-controls="wday" role="tab" data-toggle="tab">
+                        SOCIAL</a></li>
                 </ul>
                 <!-- tab panes -->
                 <div class="tab-content">
 
                     <div role="tabpanel" class="tab-pane active" id="fday">
-                        <!-- program speaker here -->
-                        <div class="col-md-2 col-sm-2">
+                        <!-- program speaker here
+                         <div class="col-md-2 col-sm-2">
                             <img src="assets/images/photos/photos-2.jpg" class="img-responsive" alt="program">
-                        </div>
-                        <div class="col-md-10 col-sm-10">
+                        </div> -->
+                        <div class="col-md-12 col-sm-12">
                             <h6>
                                 <span><i class="fa fa-clock-o"></i> 09.00 AM</span>
                                 <span><i class="fa fa-map-marker"></i> Room 240</span>
@@ -472,10 +506,6 @@ Guest section
                         <!-- program divider -->
                         <div class="program-divider col-md-12 col-sm-12"></div>
 
-                        <!-- program speaker here -->
-                        <div class="col-md-2 col-sm-2">
-                            <img src="assets/images/photos/photos-2.jpg" class="img-responsive" alt="program">
-                        </div>
                         <div class="col-md-10 col-sm-10">
                             <h6>
                                 <span><i class="fa fa-clock-o"></i> 10.00 AM</span>
@@ -490,11 +520,7 @@ Guest section
                         <!-- program divider -->
                         <div class="program-divider col-md-12 col-sm-12"></div>
 
-                        <!-- program speaker here -->
-                        <div class="col-md-2 col-sm-2">
-                            <img src="assets/images/photos/photos-2.jpg" class="img-responsive" alt="program">
-                        </div>
-                        <div class="col-md-10 col-sm-10">
+                        <div class="col-md-12 col-sm-12">
                             <h6>
                                 <span><i class="fa fa-clock-o"></i> 11.00 AM</span>
                                 <span><i class="fa fa-map-marker"></i> Room 450</span>
@@ -507,11 +533,8 @@ Guest section
                     </div>
 
                     <div role="tabpanel" class="tab-pane" id="sday">
-                        <!-- program speaker here -->
-                        <div class="col-md-2 col-sm-2">
-                            <img src="assets/images/photos/photos-2.jpg" class="img-responsive" alt="program">
-                        </div>
-                        <div class="col-md-10 col-sm-10">
+                        <div class="col-md-12 col-sm-12">
+
                             <h6>
                                 <span><i class="fa fa-clock-o"></i> 11.00 AM</span>
                                 <span><i class="fa fa-map-marker"></i> Room 240</span>
@@ -526,11 +549,8 @@ Guest section
                         <!-- program divider -->
                         <div class="program-divider col-md-12 col-sm-12"></div>
 
-                        <!-- program speaker here -->
-                        <div class="col-md-2 col-sm-2">
-                            <img src="assets/images/photos/photos-2.jpg" class="img-responsive" alt="program">
-                        </div>
-                        <div class="col-md-10 col-sm-10">
+                        <div class="col-md-12 col-sm-12">
+
                             <h6>
                                 <span><i class="fa fa-clock-o"></i> 01.00 PM</span>
                                 <span><i class="fa fa-map-marker"></i> Room 450</span>
@@ -545,11 +565,8 @@ Guest section
                         <!-- program divider -->
                         <div class="program-divider col-md-12 col-sm-12"></div>
 
-                        <!-- program speaker here -->
-                        <div class="col-md-2 col-sm-2">
-                            <img src="assets/images/photos/photos-2.jpg" class="img-responsive" alt="program">
-                        </div>
-                        <div class="col-md-10 col-sm-10">
+                        <div class="col-md-12 col-sm-12">
+
                             <h6>
                                 <span><i class="fa fa-clock-o"></i> 03.00 PM</span>
                                 <span><i class="fa fa-map-marker"></i> Room 650</span>
@@ -562,11 +579,8 @@ Guest section
                     </div>
 
                     <div role="tabpanel" class="tab-pane" id="tday">
-                        <!-- program speaker here -->
-                        <div class="col-md-2 col-sm-2">
-                            <img src="assets/images/photos/photos-2.jpg" class="img-responsive" alt="program">
-                        </div>
-                        <div class="col-md-10 col-sm-10">
+                        <div class="col-md-12 col-sm-12">
+
                             <h6>
                                 <span><i class="fa fa-clock-o"></i> 03.00 PM</span>
                                 <span><i class="fa fa-map-marker"></i> Room 750</span>
@@ -581,11 +595,8 @@ Guest section
                         <!-- program divider -->
                         <div class="program-divider col-md-12 col-sm-12"></div>
 
-                        <!-- program speaker here -->
-                        <div class="col-md-2 col-sm-2">
-                            <img src="assets/images/photos/photos-2.jpg" class="img-responsive" alt="program">
-                        </div>
-                        <div class="col-md-10 col-sm-10">
+                        <div class="col-md-12 col-sm-12">
+
                             <h6>
                                 <span><i class="fa fa-clock-o"></i> 05.00 PM</span>
                                 <span><i class="fa fa-map-marker"></i> Room 850</span>
@@ -600,11 +611,54 @@ Guest section
                         <!-- program divider -->
                         <div class="program-divider col-md-12 col-sm-12"></div>
 
-                        <!-- program speaker here -->
-                        <div class="col-md-2 col-sm-2">
-                            <img src="assets/images/photos/photos-2.jpg" class="img-responsive" alt="program">
+                        <div class="col-md-12 col-sm-12">
+
+                            <h6>
+                                <span><i class="fa fa-clock-o"></i> 07.00 PM</span>
+                                <span><i class="fa fa-map-marker"></i> Room 750</span>
+                            </h6>
+                            <h3>Bootstrap UI Design</h3>
+                            <h4>By John David</h4>
+                            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod
+                                tincidunt ut laoreet. Dolore magna aliquam erat volutpat.</p>
                         </div>
-                        <div class="col-md-10 col-sm-10">
+                    </div>
+
+                    <div role="tabpanel" class="tab-pane" id="wday">
+                        <div class="col-md-12 col-sm-12">
+
+                            <h6>
+                                <span><i class="fa fa-clock-o"></i> 11.11 PM</span>
+                                <span><i class="fa fa-map-marker"></i> Room 750</span>
+                            </h6>
+                            <h3>Online Shopping Business</h3>
+                            <h4>By Michael Walker</h4>
+                            <p>Aliquam faucibus lobortis dolor, id pellentesque eros pretium in. Aenean in erat ut quam
+                                aliquet commodo. Vivamus aliquam pulvinar ipsum ut sollicitudin. Suspendisse quis
+                                sollicitudin mauris.</p>
+                        </div>
+
+                        <!-- program divider -->
+                        <div class="program-divider col-md-12 col-sm-12"></div>
+
+                        <div class="col-md-12 col-sm-12">
+
+                            <h6>
+                                <span><i class="fa fa-clock-o"></i> 05.00 PM</span>
+                                <span><i class="fa fa-map-marker"></i> Room 850</span>
+                            </h6>
+                            <h3>Introduction to Mobile App</h3>
+                            <h4>By Cherry Stella</h4>
+                            <p>Nunc eu nibh vel augue mollis tincidunt id efficitur tortor. Sed pulvinar est sit amet
+                                tellus iaculis hendrerit. Mauris justo erat, rhoncus in arcu at, scelerisque tempor
+                                erat.</p>
+                        </div>
+
+                        <!-- program divider -->
+                        <div class="program-divider col-md-12 col-sm-12"></div>
+
+                        <div class="col-md-12 col-sm-12">
+
                             <h6>
                                 <span><i class="fa fa-clock-o"></i> 07.00 PM</span>
                                 <span><i class="fa fa-map-marker"></i> Room 750</span>
@@ -631,11 +685,14 @@ Guest section
         <div class="row">
             <div class="col-md-12 animate-box">
                 <h3 class="section-title">REGISTRATION</h3>
+                <p class="text-uppercase">Coming soon...</p>
+
             </div>
         </div>
+
         <div class="row">
             <div class="col-md-4 animate-box">
-                <a href="registration.html" class="item-grid text-center">
+                <a href="#registration" class="item-grid text-center" data-toggle="modal" data-target="#myModal">
                     <div class="image" style="background-image: url(assets/images/photos/photos-4.jpg)"></div>
                     <div class="v-align">
                         <div class="v-align-middle">
@@ -650,7 +707,7 @@ Guest section
                 </a>
             </div>
             <div class="col-md-4 animate-box">
-                <a href="registration.html" class="item-grid text-center">
+                <a href="#registration" class="item-grid text-center" data-toggle="modal" data-target="#myModal">
                     <div class="image" style="background-image: url(assets/images/photos/photos-4.jpg)"></div>
                     <div class="v-align">
                         <div class="v-align-middle">
@@ -665,7 +722,7 @@ Guest section
                 </a>
             </div>
             <div class="col-md-4 animate-box">
-                <a href="registration.html" class="item-grid text-center">
+                <a href="#registration" class="item-grid text-center" data-toggle="modal" data-target="#myModal">
                     <div class="image" style="background-image: url(assets/images/photos/photos-4.jpg)"></div>
                     <div class="v-align">
                         <div class="v-align-middle">
@@ -687,6 +744,23 @@ Guest section
         </div>
     </div>
 </section>
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog modal-sm" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span>
+                </button>
+                <h4 class="modal-title" id="myModalLabel">Coming soon</h4>
+            </div>
+            <div class="modal-body">
+                Registration and payment channel will be open soon, please stay tuned.
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary" data-dismiss="modal">ok</button>
+            </div>
+        </div>
+    </div>
+</div>
 
 <!--FAQ section-->
 <div id="guide"></div>
@@ -738,7 +812,7 @@ Guest section
                              aria-labelledby="headingTwo">
                             <div class="panel-body">
                                 <p>
-                                    You can click <a href="registration.html">Here</a> to buy ticket and pay for it
+                                    You can click <a href="#registration">Here</a> to buy ticket and pay for it
                                     accordingly, or move to the registration page to find out more.
                                 </p>
                             </div>
@@ -978,6 +1052,9 @@ Guest section
             </div>
         </div>
         <div class="row">
+            <div class="col-md-12">
+                <h3 class="section-title">community</h3>
+            </div>
             <div class="col-sm-3">
                 <a class="partner-box partner-box-1"></a>
             </div>
@@ -992,7 +1069,10 @@ Guest section
             </div>
         </div>
 
-        <!-- <div class="row">
+        <div class="row">
+            <div class="col-md-12">
+                <h3 class="section-title">sponsors</h3>
+            </div>
             <div class="col-sm-3">
                 <a class="partner-box partner-box-5"></a>
             </div>
@@ -1005,7 +1085,7 @@ Guest section
             <div class="col-sm-3">
                 <a class="partner-box partner-box-8"></a>
             </div>
-        </div> -->
+        </div>
     </div>
 </section>
 
@@ -1020,12 +1100,13 @@ Guest section
                     developers and researchers, and it helps to advance the Ethereum ecosystem through technological
                     development, training and promotions.
                 </p>
-                <ul class="social-block">
+
+                <!-- <ul class="social-block">
                     <li><a href=""><i class="ion-social-twitter"></i></a></li>
                     <li><a href=""><i class="ion-social-facebook"></i></a></li>
                     <li><a href=""><i class="ion-social-linkedin-outline"></i></a></li>
                     <li><a href=""><i class="ion-social-googleplus"></i></a></li>
-                </ul>
+                </ul> -->
             </div>
         </div>
     </div>
@@ -1033,10 +1114,12 @@ Guest section
 
 <!-- script -->
 <script src="bower_components/jquery/dist/jquery.min.js"></script>
-<script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+<script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"
+        integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+        crossorigin="anonymous"></script>
 <script src="bower_components/smooth-scroll/dist/js/smooth-scroll.min.js"></script>
 <script src="bower_components/jquery.parallax.js"></script>
-<script src="bower_components/js/wow.min.js"></script>
+<script src="https://cdn.bootcss.com/wow/1.1.2/wow.min.js"></script>
 <script src="assets/js/main.js"></script>
 </body>
 </html>

@@ -21,6 +21,7 @@
     <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css"
           integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 
+    <link href="//vjs.zencdn.net/5.19/video-js.min.css" rel="stylesheet">
 
     <!-- Theme style  -->
     <link rel="stylesheet" href="css/style.css">
@@ -47,7 +48,7 @@
                             <!--中文</a>-->
                             <a class="button button--primary button--dark button--withChrome u-accentColor--buttonDark is-inSiteNavBar"
                                href="index.html">
-                                En</a>
+                                EN</a>
                         </div>
                     </div>
                 </div>
@@ -111,7 +112,7 @@
                         <li><a href="events_cn.html">活动</a></li>
                         <li><a href="about_cn.html">独角时代</a></li>
                         <li><a href="sign-up.html">登录</a></li>
-                        <li><a href="index.html">En</a></li>
+                        <li><a href="index.html">EN</a></li>
                         <li class="search-btn">
                             <img class="search-nav-icon" src="images/search_white.svg" width="20px">
                         </li>
@@ -131,22 +132,40 @@
         </div>
     </nav> -->
 
-    <header id="gtco-header" class="gtco-cover" role="banner" style="background-image:url(images/bg01.jpg);"
+    <header id="gtco-header" class="gtco-cover" role="banner" style=""
             data-stellar-background-ratio="1">
+        <div>
+            <video id="my-player"
+                   class="video-js"
+                   preload="auto"
+                   loop
+                   data-setup={"controls":false,"autoplay":true,"muted":true,"fluid":true}>
+                <source src="video/sunset-cloud.mp4" type="video/mp4"></source>
+            </video>
+
+        </div>
+
         <div class="overlay"></div>
-        <div class="container u-maxWidth570">
+
+        <div class="container" style="position: absolute;top: 0;width: 100%;">
+
             <div class="row">
-                <div class="text-center">
-                    <div class="display-t">
+                <a href="welcome_to_unitimes_cn.html">
+
+                    <div class="text-center display-t">
                         <div class="display-tc animate-box" data-animate-effect="fadeInUp">
                             <!--<span class="date-post">24 / 9 / 2017</span>-->
                             <h1>Unitimes 新媒体平台让你重新思考：<span id="banner" class="u-textUnderline"></span></h1>
                             <!--<p><a href="#" class="text-link">阅读全文</a></p>-->
                         </div>
+
                     </div>
-                </div>
+                </a>
+
             </div>
         </div>
+
+
     </header>
 
     <div id="gtco-main">
@@ -155,7 +174,7 @@
                 <div class="col-md-12">
                     <ul id="gtco-post-list">
                         <li class="full entry animate-box" data-animate-effect="fadeIn"><a
-                                href="devcon3_2017_conference_cn.html">
+                                href="the_boy_genius_vitalk_buterin_cn.html">
                             <div class="entry-img" style="background-image: url(images/tc.jpeg);"></div>
                             <div class="entry-desc">
                                 <h3>专访-天才少年：Vitalik Buterin
@@ -174,82 +193,222 @@
                                 </p>
                                 <p> 我们有幸采访到这个被国人誉为天才的创始人，也是众人眼中的V神，接下来让我们一起走进他的人生。</p>
                             </div>
-                        </a> <a href="devcon3_2017_conference_cn.html" class="post-meta">专访 <span
+                        </a> <a href="unitalks_cn.html" class="post-meta">专访 <span
                                 class="date-posted">24 / 9 / 2017</span></a></li>
 
+                        <!--Red Belly Blockchain Boasts the Fastest Network Worldwide-->
                         <li class="one-third entry animate-box" data-animate-effect="fadeIn">
-                            <a href="chinese_internet_giant_tencent_is_building_new_blockchain_services_cn.html">
-                                <div class="entry-img" style="background-image: url(images/news/c1.png)"></div>
+                            <a href="red_belly_blockchain_boasts_the_fastest_network_worldwide_cn.html">
+                                <div class="entry-img" style="background-image: url(images/news/red_belly.jpg)"></div>
 
                                 <div class="entry-desc">
                                     <h3 class="infocard-title">
-                                        腾讯发布区块链方案白皮书，打造区块链共赢生态
+                                        悉尼大学红腹区块链，交易处理速度全球领先
                                     </h3>
                                     <p class="infocard-content">
-                                        未来区块链将引领信息互联网走向价值互联网，实现互联网价值的真实体现与透明转移，构建全新的诚信社会
+                                        红腹区块链在最新测试中每秒处理了66万笔交易，远远超越了Visa的支付处理系统，也比预期速度超出50%。
                                     </p>
                                 </div>
                             </a>
-                            <a href="chinese_internet_giant_tencent_is_building_new_blockchain_services_cn.html"
-                               class="post-meta">News <span
-                                    class="date-posted">11 / 9 / 2017</span></a>
+                            <a href="news_cn.html" class="post-meta">新闻
+                                <span class="date-posted">
+                                2017.10.27
+                            </span></a>
                         </li>
 
+                        <!--NYU Professor：Bitcoin Should Be A Widely Used Currency-->
                         <li class="one-third entry animate-box" data-animate-effect="fadeIn">
+                            <a href="nyu_professor_bitcoin_should_be_a_widely_used_currency_cn.html">
+                                <div class="entry-img"
+                                     style="background-image: url(images/news/nyu_Professor.jpg)"></div>
 
-                            <a href="china_bans_all_token_offering_financing_activities_cn.html">
-                                <div class="entry-img" style="background-image: url(images/news/c2.png);"></div>
                                 <div class="entry-desc">
                                     <h3 class="infocard-title">
-                                        中国正式禁止各类代币发行融资活动，虚拟货币价格应声暴跌
+                                        纽约大学教授：比特币应该更多的用于日常交易
                                     </h3>
-                                    <p class="infocard-content">ICO在中国遭禁止，《公告》称，代币发行融资行为涉嫌非法集资、金融诈骗，传销等违法活动</p>
+                                    <p class="infocard-content">
+                                        比特币是一种加密货币，更多的焦点应该被放在它的价值及可能支持的日常应用上，而并非它本身的价格
+                                    </p>
                                 </div>
                             </a>
-                            <a href="china_bans_all_token_offering_financing_activities_cn.html" class="post-meta">News
-                                <span class="date-posted">4 / 9 / 2017</span></a>
-
+                            <a href="news_cn.html" class="post-meta">新闻
+                                <span class="date-posted">
+                                2017.10.26
+                            </span></a>
                         </li>
 
+                        <!--Diploma On Blockchain!!!-->
                         <li class="one-third entry animate-box" data-animate-effect="fadeIn">
+                            <a href="diploma_on_blockchain_cn.html">
+                                <div class="entry-img"
+                                     style="background-image: url(images/news/diploma_on_blockchain.jpg)"></div>
 
-                            <a href="hong_kong_sfc_ico_tokens_cn.html">
-                                <div class="entry-img" style="background-image: url(images/news/c3.png); "></div>
                                 <div class="entry-desc">
-                                    <h3 class="infocard-title">香港证监会：部分ICO代币属于“证券”，在港需受证券法例规管</h3>
-                                    <p class="infocard-content">香港证监会表示，部分ICO项目发行的代币可能属于证券</p>
+                                    <h3 class="infocard-title">
+                                        区块链上的数字毕业证！！!
+                                    </h3>
+                                    <p class="infocard-content">
+                                        区块链技术正逐渐渗透到各个行业，听说MIT利用区块链应用程序为学生颁发毕业证，小伙伴们都惊呆了！。
+                                    </p>
                                 </div>
                             </a>
-                            <a href="hong_kong_sfc_ico_tokens_cn.html" class="post-meta">News <span class="date-posted">4 / 9 / 2017</span></a>
+                            <a href="news_cn.html" class="post-meta">新闻
+                                <span class="date-posted">
+                                2017.10.25
+                            </span></a>
+                        </li>
 
+                        <!--Australia Officially Ends Bitcoin GST-->
+                        <li class="one-third entry animate-box" data-animate-effect="fadeIn">
+                            <a href="australia_officially_ends_bitcoin_gst_cn.html">
+                                <div class="entry-img"
+                                     style="background-image: url(images/news/australia_officially.jpg)"></div>
+
+                                <div class="entry-desc">
+                                    <h3 class="infocard-title">
+                                        澳大利亚正式取消比特币双重征税
+                                    </h3>
+                                    <p class="infocard-content">
+                                        取消比特币双重征税，对虚拟货币大环境来说无疑又是一大利好消息
+                                    </p>
+                                </div>
+                            </a>
+                            <a href="news_cn.html" class="post-meta">新闻
+                                <span class="date-posted">
+                                2017.10.24
+                            </span></a>
+                        </li>
+
+                        <!--Kazakhstan Intends to Launch National Cryptocurrency Backed by Fiat-->
+                        <li class="one-third entry animate-box" data-animate-effect="fadeIn">
+                            <a href="kazakhstan_intends_to_launch_national_cryptocurrency_backed_by_fiat_cn.html">
+                                <div class="entry-img"
+                                     style="background-image: url(images/news/kazakhstan_intends.jpg)"></div>
+
+                                <div class="entry-desc">
+                                    <h3 class="infocard-title">
+                                        哈萨克斯坦计划推出法币支撑的国家加密货币
+                                    </h3>
+                                    <p class="infocard-content">
+                                        区块链与加密货币正逐渐成为当今经济世界的主流技术，具有相当乐观的发展环境。
+                                    </p>
+                                </div>
+                            </a>
+                            <a href="news_cn.html" class="post-meta">新闻
+                                <span class="date-posted">
+                                2017.10.23
+                            </span></a>
+                        </li>
+
+                        <!--Switzerland Awards First AML/KYC Licence To Bitcoin Company-->
+                        <li class="one-third entry animate-box" data-animate-effect="fadeIn">
+                            <a href="switzerland_awards_first_aml_kyc_licence_to_bitcoin_company_cn.html">
+                                <div class="entry-img"
+                                     style="background-image: url(images/news/switzerland_awards.jpg)"></div>
+
+                                <div class="entry-desc">
+                                    <h3 class="infocard-title">
+                                        瑞士首家比特币合规企业出炉
+                                    </h3>
+                                    <p class="infocard-content">
+                                        对于支付企业来说，政府的许可证是很重要的。在竞争环境中，能够获得瑞士等欧洲顶尖金融中心政府的认可是一个关键优势。
+                                    </p>
+                                </div>
+                            </a>
+                            <a href="news_cn.html" class="post-meta">新闻
+                                <span class="date-posted">
+                               2017.10. 20
+                            </span></a>
+                        </li>
+
+                        <!--New Members Join Enterprise Ethereum Alliance-->
+                        <li class="one-third entry animate-box" data-animate-effect="fadeIn">
+                            <a href="new_members_join_enterprise_ethereum_alliance_cn.html">
+                                <div class="entry-img" style="background-image: url(images/news/new_members.jpg)"></div>
+
+                                <div class="entry-desc">
+                                    <h3 class="infocard-title">
+                                        企业以太坊联盟迎来新成员
+                                    </h3>
+                                    <p class="infocard-content">
+                                        EEA并非以营利为目的，其目标是为以太坊创建一系列关于最佳实践、安全性、隐私权、扩容性和互操作性的标准。
+                                    </p>
+                                </div>
+                            </a>
+                            <a href="news_cn.html" class="post-meta">新闻
+                                <span class="date-posted">
+                                  2017.10.19
+                            </span></a>
+                        </li>
+
+                        <!--Blockchain Helps Refugees to Recreate Lost Identities.-->
+                        <li class="one-third entry animate-box" data-animate-effect="fadeIn">
+                            <a href="blockchain_helps_refugees_to_recreate_lost_identities_cn.html">
+                                <div class="entry-img"
+                                     style="background-image: url(images/news/blockchain_helps.jpg)"></div>
+
+                                <div class="entry-desc">
+                                    <h3 class="infocard-title">
+                                        区块链可以为难民做些什么？
+                                    </h3>
+                                    <p class="infocard-content">
+                                        帮助难民重建丢失的身份，区块链技术无疑是最好的选择
+                                    </p>
+                                </div>
+                            </a>
+                            <a href="news_cn.html" class="post-meta">新闻
+                                <span class="date-posted">
+                                2017.10.18
+                            </span></a>
+                        </li>
+
+                        <!--Digital Asset Holdings LLC Completes Series B Fundraising-->
+                        <li class="one-third entry animate-box" data-animate-effect="fadeIn">
+                            <a href="digital_asset_holdings_llc_completes_series_b_fundraising_cn.html">
+                                <div class="entry-img"
+                                     style="background-image: url(images/news/digital_asset.jpg)"></div>
+
+                                <div class="entry-desc">
+                                    <h3 class="infocard-title">
+                                        数字资产公司（DAH）完成B轮4000万美元融资
+                                    </h3>
+                                    <p class="infocard-content">
+                                        DAH完成了B轮融资，筹得4000万美元，迄今为止，该企业获得的总融资额已经达到了1.1亿美元
+                                    </p>
+                                </div>
+                            </a>
+                            <a href="news_cn.html" class="post-meta">新闻
+                                <span class="date-posted">
+                                2017.10.17
+                            </span></a>
                         </li>
 
                         <li class="two-third entry animate-box" data-animate-effect="fadeIn">
-                            <a href="knowledge_cn.html">
+                            <a href="an_update_on_Integrating_cn.html">
                                 <div class="entry-img"
-                                     style="background-image: url(images/knowledge/z2-thumb.jpg)"></div>
+                                     style="background-image: url(images/knowledge/z5-thumb.jpg)"></div>
                                 <div class="entry-desc">
-                                    <h3 class="infocard-title">二次方程式算术的编程：从零到“灵”</h3>
+                                    <h3 class="infocard-title">以太坊整合Zcash技术的最新进展（ZoE）</h3>
                                     <p class="infocard-content">
-                                        最近，zk-SNARKs背后的技术引起了不少人的兴趣。越来越多的人想要去解开这一被誉为“月亮数学（因为它实在复杂得让人摸不着头脑）”的神秘面纱。</p>
+                                        以太坊研发团队的成员和Zcash公司正在一个研究项目上展开合作，该项目旨在解决区块链可编程性和隐私保护功能结合的难题。这篇联合文章由Ariel
+                                        Gabizon（Zcash）和Christian Reitwiessner（以太坊）合作完成，并同步发布在两家博客上。 </p>
                                 </div>
                             </a>
                             <a href="knowledge_cn.html" class="post-meta">知识库
-                                <span class="date-posted">3 / 9 / 2017</span></a>
+                                <span class="date-posted">2017.03.09</span></a>
                         </li>
 
                         <li class="one-third entry animate-box" data-animate-effect="fadeIn">
-                            <a href="events_cn.html">
+                            <a href="devcon3_2017_conference_cn.html">
                                 <div class="entry-img"
                                      style="background-image: url(images/events/devcon3-crop-1200.jpg)"></div>
                                 <div class="entry-desc">
-                                    <h3 class="infocard-title">第三届以太坊开发者大会</h3>
+                                    <h3 class="infocard-title">Devcon3 | 2017 以太坊开发者大会</h3>
                                     <p class="infocard-content">
-                                        以太坊开发者大会，即将在墨西哥坎昆隆重登场。由以太坊基金会主办的开发者大会…
-                                    </p>
+                                        对于参加过Devcon以往大会并期待今年活动的人来说，这会是迄今为止最棒的一次开发者大会！今年，会议主办方准备了专门的会议中心，可容纳较去年近多一倍的人数，并且另外准备了大厅来支持更多的演示并且用于其他安排。 </p>
                                 </div>
                             </a>
-                            <a href="events_cn.html" class="post-meta">活动 <span class="date-posted">11 / 1 / 2017 - 11 / 4 / 2017</span></a>
+                            <a href="events_cn.html" class="post-meta">活动 <span class="date-posted">2017.11.01 - 2017.11.04</span></a>
                         </li>
 
                     </ul>
@@ -294,6 +453,9 @@
 <script src="js/jquery.waypoints.min.js"></script>
 <!-- Stellar -->
 <script src="js/jquery.stellar.min.js"></script>
+
+<script src="//vjs.zencdn.net/5.19/video.min.js"></script>
+
 <!-- Main -->
 <script src="js/main.js"></script>
 
