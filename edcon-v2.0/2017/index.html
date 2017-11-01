@@ -1392,10 +1392,8 @@
 
 
 </body>
-<script type="text/javascript">
-    $(function () {
-        document.getElementById("index").style.height = (window.screen.availHeight - 50) + "px";
-    });
+<!-- <script type="text/javascript">
+
     /*
      * 动画
      */
@@ -1445,64 +1443,6 @@
         }
     };
 
-    document.getElementById("new1").addEventListener('click', function () {
-        location.href = 'new1.html';
-    });
-    document.getElementById("new2").addEventListener('click', function () {
-        location.href = 'new2.html';
-    });
-    document.getElementById("new3").addEventListener('click', function () {
-        location.href = 'new3.html';
-    });
-    document.getElementById("new4").addEventListener('click', function () {
-        location.href = 'new4.html';
-    });
-    document.getElementById("res").addEventListener('click', function () {
-        location.href = 'register.html';
-    });
-    document.getElementById("submit").addEventListener('click', function () {
-        var name = document.getElementById("name").value;
-        var email = document.getElementById("Email").value;
-        var message = document.getElementById("Message").value;
-        var re = /^(\w-*\.*)+@(\w-?)+(\.\w{2,})+$/
-        if (re.test(email)) {
 
-        } else {
-            $('#succ_1').modal();
-            document.getElementById("ms0").innerText = 'Invalid email address!';
-            return;
-        }
-        if (name == '' || email == '' || message == '') {
-            $('#myModal').modal();
-        } else {
-            $.ajax("https://edcon.io/FranceWebsite/contactUs/contact.php", {
-
-                data: {
-                    name: name,
-                    email: email,
-                    msg: message
-                },
-                type: "post",
-                dataType: 'json',
-                timeout: 30000,
-                success: function (data) {
-                    if (data.code == "200") {
-                        document.getElementById("name").value = '';
-                        document.getElementById("Email").value = '';
-                        document.getElementById("Message").value = '';
-                        $('#Success').modal();
-
-                    } else {
-                        console.log('接口错误');
-                    }
-
-                },
-                error: function (xhr, type, errorThrown) {
-
-                    console.log('未进接口');
-                }
-            });
-        }
-    });
-</script>
+</script> -->
 </html>

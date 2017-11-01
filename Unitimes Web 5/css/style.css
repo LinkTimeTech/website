@@ -22,6 +22,29 @@ figcaption b {
     height: 100%;
 }
 
+.centerall {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+
+    -webkit-box-align: center;
+    -moz-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+
+    justify-content: center;
+}
+
+.title-text {
+    color: #fff;
+    font-weight: 300;
+    font-size: 4.2rem;
+    line-height: 1.6;
+}
+
 a {
     text-decoration: none;
 }
@@ -310,6 +333,11 @@ p {
     width: 5rem;
     color: #373a3c;
 
+}
+
+.angle-down {
+    position: relative;
+    top: 30px;
 }
 
 /* =======================================================
@@ -724,7 +752,7 @@ h1, h2, h3, h4, h5, h6, figure {
     left: 0;
     z-index: 0;
     width: 100%;
-    background: rgba(0, 191, 255, .8);
+    background: rgba(0, 191, 255, .5);
 }
 
 .gtco-cover > .gtco-container {
@@ -751,14 +779,14 @@ h1, h2, h3, h4, h5, h6, figure {
     z-index: 9;
     display: table;
     width: 100%;
-    /*height: 675px;*/
-    height: 770px;
+    height: 550px;
+    /*height: 770px;*/
 }
 
 @media screen and (max-width: 768px) {
     .gtco-cover .display-t,
     .gtco-cover .display-tc {
-        height: 232px;
+        /*height: 232px;*/
     }
 }
 
@@ -821,7 +849,9 @@ h1, h2, h3, h4, h5, h6, figure {
 #gtco-main {
     float: left;
     width: 100%;
-    padding: 3em 0 !important;
+    padding: 3em 0;
+    clear: both;
+
 }
 
 #gtco-main .related-title {
@@ -920,7 +950,7 @@ article {
 and (min-device-width: 768px)
 and (max-device-width: 1024px) {
     .gtco-cover .display-t, .gtco-cover .display-tc {
-        height: 576px;
+        height: 424px;
     }
 }
 @media screen and (min-width: 768px) and (max-width: 992px) {
@@ -935,6 +965,16 @@ and (max-device-width: 1024px) {
 @media screen and (max-width: 768px) {
     article {
         margin-bottom: 40px;
+    }
+
+    .gtco-cover .display-t, .gtco-cover .display-tc {
+        height: 318px;
+        width: 750px;
+    }
+
+    .angle-down {
+        font-size: 12px;
+        display: none;
     }
 
 }
@@ -1424,7 +1464,8 @@ article .gtco-highlight p {
 #gtco-counter .display-tc h1,
 #gtco-counter .display-tc h2,
 .gtco-cover .display-tc h1,
-.gtco-cover .display-tc h2 {
+.gtco-cover .display-tc h2,
+.title-text {
     margin: 0;
     padding: 0;
     color: white;
@@ -1437,18 +1478,35 @@ article .gtco-highlight p {
     margin-bottom: 0;
     /*font-family: Lato, 微软雅黑, 'Microsoft Yahei', Serif, sans-serif;*/
     font-weight: 300;
-    font-size: 4.2rem;
+    /*font-size: 4.2rem;*/
     line-height: 1.6;
 }
 
 @media screen and (max-width: 768px) {
     #gtco-header .display-tc h1,
     #gtco-counter .display-tc h1,
-    .gtco-cover .display-tc h1 {
+    .gtco-cover .display-tc h1,
+    .title-text {
         font-size: 26px;
     }
 }
 
+/*iphone 5*/
+@media only screen
+and (min-device-width: 320px)
+and (max-device-width: 568px) {
+    .gtco-cover .display-t, .gtco-cover .display-tc {
+        height: 135px;
+    }
+
+    .angle-down {
+        display: none;
+    }
+
+    #gtco-header .display-tc h1, #gtco-counter .display-tc h1, .gtco-cover .display-tc h1, .title-text {
+        font-size: 16px;
+    }
+}
 #gtco-header .display-tc h2,
 #gtco-counter .display-tc h2,
 .gtco-cover .display-tc h2 {
@@ -1528,7 +1586,6 @@ article .gtco-highlight p {
 }
 
 #gtco-services,
-#gtco-main,
 #gtco-started,
 #gtco-testimonial,
 #gtco-blog,

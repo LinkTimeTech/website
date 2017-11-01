@@ -23,7 +23,6 @@
         }
     };
 
-
     var mobileMenuOutsideClick = function () {
 
         $(document).click(function (e) {
@@ -42,6 +41,13 @@
         });
 
     };
+
+//点击向下箭头到专栏
+    var goNext = function () {
+        $('.fa-angle-double-down').click(function () {
+            $('#gtco-main').css('padding-top', $('.metabar').height())
+        })
+    }
 
 
     /* var scrollNavBar = function () {
@@ -303,6 +309,7 @@
         $('.gtco-loader').fadeOut('slow', function () {
             $(this).remove();
         });
+
     });
 
     var counter = function () {
@@ -335,6 +342,7 @@
     $(function () {
         mobileMenuOutsideClick();
         scrollNavBar();
+        goNext();
         // offcanvasMenu();
         burgerMenu();
         contentWayPoint();

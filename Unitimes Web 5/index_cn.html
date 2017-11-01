@@ -13,6 +13,9 @@
     <meta name="description" content="">
     <meta name="keywords" content="">
 
+    <link rel="prefetch" href="video/ocean-wave.mp4">
+    <link rel="prerender" href="video/ocean-wave.mp4">
+
     <!-- Animate.css -->
     <link rel="stylesheet" href="css/animate.css">
     <!-- font-awesome-->
@@ -132,41 +135,41 @@
         </div>
     </nav> -->
 
-    <header id="gtco-header" class="gtco-cover" role="banner" style=""
-            data-stellar-background-ratio="1">
-        <div>
-            <video id="my-player"
-                   class="video-js"
-                   preload="auto"
-                   loop
-                   data-setup={"controls":false,"autoplay":true,"muted":true,"fluid":true}>
-                <source src="video/sunset-cloud.mp4" type="video/mp4"></source>
-            </video>
+    <a href="welcome_to_unitimes.html">
+        <header id="gtco-header" class="gtco-cover" role="banner" style="background-image:url('images/bg01.jpg')"
+                data-stellar-background-ratio="1">
+            <div>
+                <video id="my-player"
+                       class="video-js"
+                       preload="none"
+                       loop
+                       max-height="675px"
+                       data-setup={"controls":false,"autoplay":true,"muted":true,"fluid":true}>
+                    <source src="video/ocean-wave.mp4" type="video/mp4"></source>
+                </video>
+            </div>
 
-        </div>
+            <div class="overlay centerall">
 
-        <div class="overlay"></div>
-
-        <div class="container" style="position: absolute;top: 0;width: 100%;">
-
-            <div class="row">
-                <a href="welcome_to_unitimes_cn.html">
-
-                    <div class="text-center display-t">
-                        <div class="display-tc animate-box" data-animate-effect="fadeInUp">
-                            <!--<span class="date-post">24 / 9 / 2017</span>-->
-                            <h1>Unitimes 新媒体平台让你重新思考：<span id="banner" class="u-textUnderline"></span></h1>
-                            <!--<p><a href="#" class="text-link">阅读全文</a></p>-->
-                        </div>
-
-                    </div>
-                </a>
+                <h1 class="title-text u-maxWidth1000">Unitimes is a new media and community platform to keep you
+                    up-to-date with the latest in
+                    <span id="banner"></span></h1>
 
             </div>
-        </div>
+            <div class="container" style="position: absolute;top: 0;width: 100%;">
+                <div class="row">
 
+                    <div class="text-center display-t  center-block">
+                        <div class="display-tc animate-box" data-animate-effect="fadeInUp">
+                            <!--<span class="date-post">24 / 9 / 2017</span>-->
 
-    </header>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </header>
+    </a>
 
     <div id="gtco-main">
         <div class="container u-maxWidth1000">
@@ -480,7 +483,6 @@
             .addActor('banner')
 
         theater
-            .addScene('banner: 未来', 1500)
             .addScene('banner: 金融科技', 1500)
             .addScene('banner: 区块链', 1500)
             .addScene(theater.replay)
