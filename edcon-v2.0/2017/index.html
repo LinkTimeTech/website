@@ -7,13 +7,13 @@
     <meta name="description"
           content="The EDCON (European Ethereum Development Conference) is a conference that will take place in Paris at the Ecole Supérieure de Commerce de Paris - Europe (ESCP) on 17-18 February 2017. The conference will cover Ethereum technology and research (PoS, Scalability, Privacy) as well as Ethereum-based applications.">
     <meta name="keywords" content="EDCON,edcon"/>
-    <link rel="shortcut icon" href=""/>
+
+    <link rel="icon" href="img/favicon.ico" type="image/x-icon">
+
     <link rel="stylesheet" href="css/style.css"/>
     <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css"/>
     <link rel="stylesheet" href="css/main.css"/>
-    <link rel="icon" href="img/favicon.ico" type="image/x-icon">
-    <script src="js/jquery-3.1.1.js" type="text/javascript" charset="utf-8"></script>
-    <script src="js/bootstrap.min.js" type="text/javascript" charset="utf-8"></script>
+
 </head>
 
 
@@ -38,7 +38,6 @@
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav ul_l" id="mainmenu">
                 <li class="ul_li"><a class="scrolla" href="../index.html">EDCON 2018</a></li>
-                <li class="ul_li"><a class="scrolla" href="#abouta">About EDCON</a></li>
                 <li class="ul_li"><a class="scrolla" href="#main">Agenda</a></li>
                 <li class="ul_li"><a class="scrolla" href="#vip">Speakers</a></li>
                 <li class="ul_li"><a class="scrolla" href="#venue">Venue</a></li>
@@ -51,46 +50,10 @@
 
 </nav>
 
-<div id="abouta" style="width: 100%;background-color: #c8cae3;">
-    <div class="container">
-        <div class="row" style="margin-top: 50px;">
-            <div class="col-sm-12" style="text-align: center;">
-                <h2 style="color: #688ED5;">About EDCON</h2>
-                <img style="position: relative;top: 22px;z-index: 99;" src="img/a.png"/>
-            </div>
-        </div>
-        <div class="row">
-            <div style="background-color: #FFFFFF;padding: 30px;" class="col-sm-offset-1 col-sm-10 bgcolor">
-
-                <p class="p_1">Q: What is EDCON?</p>
-                <p class="p_2"><font color="ffd800">A:</font> The EDCON (European Ethereum Development Conference) is a
-                    conference that will take place in Paris at the Ecole Supérieure de Commerce de Paris - Europe
-                    (ESCP) on 17-18 February 2017. The conference will cover Ethereum technology and research (PoS,
-                    Scalability, Privacy) as well as Ethereum-based applications.</p>
-                <p class="p_1">Q: Who is organizing EDCON?</p>
-                <p class="p_2"><font color="ffd800">A:</font> EDCON is organized by LinkTime with the support and
-                    cooperation of developers from the Ethereum Foundation and the wider Ethereum community, as well as
-                    ADETIF, the Ecole Supérieure de Commerce de Paris - Europe (ESCP), the Asseth (French Ethereum,
-                    nonprofit), La ChainTech (French blockchain, nonprofit).</p>
-                <p class="p_1">Q: What topics will be discussed at EDCON?</p>
-                <p class="p_2"><font color="ffd800">A:</font> Talks will cover:<br/>&nbsp;&nbsp;&nbsp;&nbsp;* Ethereum
-                    base-layer technology<br/>&nbsp;&nbsp;&nbsp;&nbsp;* Ethereum research (PoS, scalability)<br/>&nbsp;&nbsp;&nbsp;&nbsp;*
-                    Privacy (eg. zero knowledge proofs)<br/>&nbsp;&nbsp;&nbsp;&nbsp;* Formal verification<br/>&nbsp;&nbsp;&nbsp;&nbsp;*
-                    Ethereum consortium chain development<br/>&nbsp;&nbsp;&nbsp;&nbsp;* Applications being built on
-                    Ethereum<br/>&nbsp;&nbsp;&nbsp;&nbsp;* Growing the Ethereum community<br/></p>
-
-                <p class="p_1">Q: How do I buy a ticket?</p>
-                <p class="p_2"><font color="ffd800">A:</font> There are two types of tickets: standard tickets and VIP
-                    tickets.<br/><br/>
-                    Standard Ticket: Able to attend the Main Conferences, morning community event and activities of
-                    Ethereum Community in Subconference.<br/><br/>
-                    VIP Ticket: 100 Tickets only. Able to attend the Main Conferences, Cocktail Party and activities of
-                    Ethereum Community in Sub-conference. VIPs are able to build deeper connections with core
-                    developers, investors and entrepreneurs. Highly recommended for those who want communicate more with
-                    core participants.<br/><br/>
-                </p>
-
-            </div>
+<div>
+    <div id="index" class="col-sm-12 col-md-12 col-lg-12">
+        <!--<img  src="img/2x.jpg"/>-->
+        <div class="row_1" style="width: 100%;">
         </div>
     </div>
 </div>
@@ -1390,59 +1353,7 @@
     </div>
 </div>
 
-
+<script src="js/jquery-3.1.1.js" type="text/javascript" charset="utf-8"></script>
+<script src="js/bootstrap.min.js" type="text/javascript" charset="utf-8"></script>
 </body>
-<!-- <script type="text/javascript">
-
-    /*
-     * 动画
-     */
-    $(document).ready(function () {
-        $("a.scrolla").click(function () {
-            console.log($($(this).attr("href")).offset().top + $(this).attr("href"));
-            if ($(this).attr("href") == "#abouta") {
-                var lis = document.getElementsByClassName("ul_li");
-                lis[0].className = "ul_li";
-                lis[1].className = "ul_li active";
-                $("html, body").animate({
-                    scrollTop: "700px"
-                }, {
-                    duration: 1000,
-                    easing: "swing"
-                });
-
-                return false;
-            } else {
-                $("html, body").animate({
-                    scrollTop: $($(this).attr("href")).offset().top + "px"
-                }, {
-                    duration: 1000,
-                    easing: "swing"
-                });
-
-                return false;
-            }
-
-        });
-    });
-    /*
-     * 滚动监听
-     */
-    window.onscroll = function () {
-        var winPos = window.scrollY;
-        var showheight = $('#why').offset().top;
-        if (winPos >= (showheight - 150)) {
-            $(function () {
-
-            });
-        } else {
-
-            $(function () {
-
-            });
-        }
-    };
-
-
-</script> -->
 </html>

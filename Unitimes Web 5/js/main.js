@@ -316,7 +316,7 @@
         $('.js-counter').countTo({
             formatter: function (value, options) {
                 return value.toFixed(options.decimals);
-            },
+            }
         });
     };
 
@@ -338,20 +338,25 @@
         }
     };
 
+    var lazyloadImg = function () {
+        const observer = lozad();
+        observer.observe();
+    }
 
     $(function () {
         mobileMenuOutsideClick();
-        scrollNavBar();
+        // scrollNavBar();
         goNext();
         // offcanvasMenu();
         burgerMenu();
-        contentWayPoint();
+        // contentWayPoint();
         dropdown();
         goToTop();
         // loaderPage();
         counterWayPoint();
-        parallax();
+        // parallax();
         // showSearch();
+        lazyloadImg();
     });
 
 
