@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="referrer" content="always">
     <meta name="robots" content="index, follow">
+    <link rel="icon" href="about:blank" type="image/x-icon">
 
     <title>UNITIMES</title>
 
@@ -22,7 +23,8 @@
 
     <link href="//vjs.zencdn.net/5.19/video-js.min.css" rel="stylesheet">
 
-    <!-- Theme style  -->
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+
     <link rel="stylesheet" href="css/style.css">
 
 
@@ -96,13 +98,12 @@
     </div>
     <div class="metabar metabar--spacer u-tintBgColor u-height105 u-xs-height95"></div>
 
-    <a href="welcome_to_unitimes.html">
-        <header id="gtco-header" class="gtco-cover lozad" role="banner" data-background-image="images/bg01.jpg"
-                data-stellar-background-ratio="1">
-            <div>
+    <header id="gtco-header" class="gtco-cover lozad" role="banner"
+            data-stellar-background-ratio="1">
+        <div class="my-vedio">
                 <video id="my-player"
                        class="video-js"
-                       preload="none"
+                       preload="metadata"
                        loop
                        max-height="675px"
                        data-setup={"controls":false,"autoplay":true,"muted":true,"fluid":true}>
@@ -114,7 +115,8 @@
 
                 <h1 class="title-text u-maxWidth1000">Unitimes is a new media and community platform to keep you
                     up-to-date with the latest in
-                    <span id="banner"></span></h1>
+                    <ins id="banner" class=""></ins>
+                </h1>
 
                 <!--<p><a href="#" class="text-link">阅读全文</a></p>-->
                 <!--<div class="angle-down">-->
@@ -130,7 +132,7 @@
                 <div class="row">
 
                     <div class="text-center display-t  center-block">
-                        <div class="display-tc animate-box" data-animate-effect="fadeInUp">
+                        <div class="display-tc wow fadeInUp">
                             <!--<span class="date-post">24 / 9 / 2017</span>-->
 
                         </div>
@@ -139,7 +141,6 @@
                 </div>
             </div>
         </header>
-    </a>
 
     <div id="gtco-main">
         <div class="container u-maxWidth1000">
@@ -147,255 +148,75 @@
                 <div class="col-md-12 col-lg-12">
                     <ul id="gtco-post-list">
 
-                        <li class="full entry animate-box" data-animate-effect="fadeIn">
-                            <a href="the_boy_genius_vitalk_buterin.html">
-                                <div class="entry-img lozad" data-background-image="images/tc.jpeg"></div>
+                        <li class="full entry">
+                            <a href="unitalk/welcome_to_unitimes.html">
+                                <div class="entry-img lozad" data-background-image="images/interview/welcome.jpg"></div>
                                 <div class="entry-desc">
-                                    <font size="5" face="lato">UNITALK: THE BOY GENIUS: VITALIK BUTERIN</font>
-                                    <p>
-                                        What did you do when you were 19 years old?
-                                        <br>
-                                        The followings are the achievements that a Russian Canadian gain for four years
-                                        since he was 19 years old:
-                                        <br>
-                                        Co-founder of the (Bitcoin Magazine)<br>
-                                        The youngest candidate of 40 Under 40 of Forbes<br>
-
-                                        Founder of Ethereum, the world’s second-most valuable cryptocurrency network
-                                        behind Bitcoin.
-                                        <br>
-                                        We are honored to interview this “boy genius” founder of Ethereum, Vitalik
-                                        Buterin, and introduce his life story with our audience.
-                                        <br><br>
-                                    </p>
+                                    <font style="font-size: 28px" face="lato">Welcome to Unitimes</font>
+                                    <div>
+                                        <p>Greetings from Unitimes! On this special day, we are happy to announce that
+                                            we are officially opening the site to the general public.</p>
+                                        <h4 class="u-marginTop15" style="color: #373a3c;">What is Unitimes?</h4>
+                                        <p class="u-marginTop15">Unitimes is a social media platform that will focus on
+                                            Ethereum, blockchain and fintech-related news. The site will include four
+                                            sections:</p>
+                                        <p> • Unitalk - interviews / AMAs</p>
+                                        <p> • News</p>
+                                        <p> • Knowledge - articles describing various technical topics</p>
+                                        <p> • Information about conferences, meetups and other global events</p>
+                                    </div>
                                 </div>
                             </a>
                             <a href="unitalks.html" class="post-meta">UNITALKS <span
-                                    class="date-posted">Sep 24, 2017</span></a>
+                                    class="date-posted">Nov 11, 2017</span></a>
                         </li>
 
-                        <!--Red Belly Blockchain Boasts the Fastest Network Worldwide-->
-                        <li class="one-third entry animate-box" data-animate-effect="fadeIn">
-                            <a href="red_belly_blockchain_boasts_the_fastest_network_worldwide.html">
-                                <div class="entry-img lozad" data-background-image="images/news/red_belly.jpg"></div>
+                        <template v-for="content in contents">
+                            <li class="one-third entry wow fadeInUp" data-wow-offset="30"
+                                v-if="content.type != 'knowledge'">
+                                <a :href="content.url">
+                                    <div class="entry-img lozad" :data-background-image="content.cover"></div>
 
-                                <div class="entry-desc">
-                                    <h3 class="infocard-title">
-                                        Red Belly Blockchain Boasts the Fastest Network Worldwide
-                                    </h3>
-                                    <p class="infocard-content">
-                                        Red Belly Blockchain can process 660,000 transactions/sec in the latest tests,
-                                        much quicker than the Visa network and 50 percent faster than first anticipated.
-
-                                    </p>
-                                </div>
-                            </a>
-                            <a href="news.html" class="post-meta">NEWS
-                                <span class="date-posted">
-                                Oct 27, 2017
+                                    <div class="entry-desc">
+                                        <h3 class="infocard-title">
+                                            {{ content.title }}
+                                        </h3>
+                                        <p class="infocard-content">
+                                            {{ content.intro }}
+                                        </p>
+                                    </div>
+                                </a>
+                                <a href="news.html" class="post-meta">NEWS
+                                    <span class="date-posted">
+                                    {{ content.date }}
                             </span></a>
-                        </li>
+                            </li>
 
-                        <!--NYU Professor：Bitcoin Should Be A Widely Used Currency-->
-                        <li class="one-third entry animate-box" data-animate-effect="fadeIn">
-                            <a href="nyu_professor_bitcoin_should_be_a_widely_used_currency.html">
-                                <div class="entry-img lozad"
-                                     data-background-image="images/news/nyu_Professor.jpg"></div>
+                            <li class="two-third entry wow fadeInUp" data-wow-offset="30"
+                                v-if="content.type == 'knowledge'">
+                                <a :href="content.url">
 
-                                <div class="entry-desc">
-                                    <h3 class="infocard-title">
-                                        NYU Professor：Bitcoin Should Be A Widely Used Currency
-                                    </h3>
-                                    <p class="infocard-content">
-                                        Bitcoin is a cryptocurrency, people should focus more on its value and daily
-                                        applications rather than the unstable price.
-                                    </p>
-                                </div>
-                            </a>
-                            <a href="news.html" class="post-meta">NEWS
-                                <span class="date-posted">
-                                Oct 26, 2017
-                            </span></a>
-                        </li>
+                                    <div class="entry-img lozad" :data-background-image="content.cover"></div>
+                                    <div class="entry-desc">
+                                        <h3 class="infocard-title">
+                                            {{ content.title }}
+                                        </h3>
+                                        <p class="infocard-content">
+                                            {{ content.intro }}
+                                        </p>
+                                    </div>
+                                </a>
+                                <a href="knowledge.html" class="post-meta">KNOWLEDGE
+                                    <span class="date-posted">{{ content.date }}</span></a>
+                            </li>
 
-                        <!--Diploma On Blockchain!!!-->
-                        <li class="one-third entry animate-box" data-animate-effect="fadeIn">
-                            <a href="diploma_on_blockchain.html">
-                                <div class="entry-img lozad"
-                                     data-background-image="images/news/diploma_on_blockchain.jpg"></div>
 
-                                <div class="entry-desc">
-                                    <h3 class="infocard-title">
-                                        Diploma On Blockchain!!!
-                                    </h3>
-                                    <p class="infocard-content">
-                                        The Blockchain is penetrating into various currently. Isn’t it amazing to have
-                                        our diploma recorded on Blockchain for permanent storage? Of course it is, and
-                                        it is impossible to happen years ago.
-                                    </p>
-                                </div>
-                            </a>
-                            <a href="news.html" class="post-meta">NEWS
-                                <span class="date-posted">
-                                Oct 25, 2017
-                            </span></a>
-                        </li>
-
-                        <!--Australia Officially Ends Bitcoin GST-->
-                        <li class="one-third entry animate-box" data-animate-effect="fadeIn">
-                            <a href="australia_officially_ends_bitcoin_gst.html">
-                                <div class="entry-img lozad"
-                                     data-background-image="images/news/australia_officially.jpg"></div>
-
-                                <div class="entry-desc">
-                                    <h3 class="infocard-title">
-                                        Australia Officially Ends Bitcoin GST
-                                    </h3>
-                                    <p class="infocard-content">
-                                        The end of Bitcoin GST will definitely be a good sign to cryptocurrency world.
-                                    </p>
-                                </div>
-                            </a>
-                            <a href="news.html" class="post-meta">NEWS
-                                <span class="date-posted">
-                                Oct 24, 2017
-                            </span></a>
-                        </li>
-
-                        <!--Kazakhstan Intends to Launch National Cryptocurrency Backed by Fiat-->
-                        <li class="one-third entry animate-box" data-animate-effect="fadeIn">
-                            <a href="kazakhstan_intends_to_launch_national_cryptocurrency_backed_by_fiat.html">
-                                <div class="entry-img lozad"
-                                     data-background-image="images/news/kazakhstan_intends.jpg"></div>
-
-                                <div class="entry-desc">
-                                    <h3 class="infocard-title">
-                                        Kazakhstan Intends to Launch National Cryptocurrency Backed by Fiat
-                                    </h3>
-                                    <p class="infocard-content">
-                                        Blcokchain and cryptocurrency are entering the mainstream of today’s economic
-                                        reality and supported by quite positive development environment
-                                    </p>
-                                </div>
-                            </a>
-                            <a href="news.html" class="post-meta">NEWS
-                                <span class="date-posted">
-                                Oct 23,2017
-                            </span></a>
-                        </li>
-
-                        <!--Switzerland Awards First AML/KYC Licence To Bitcoin Company-->
-                        <li class="one-third entry animate-box" data-animate-effect="fadeIn">
-                            <a href="switzerland_awards_first_aml_kyc_licence_to_bitcoin_company.html">
-                                <div class="entry-img lozad"
-                                     data-background-image="images/news/switzerland_awards.jpg"></div>
-
-                                <div class="entry-desc">
-                                    <h3 class="infocard-title">
-                                        Switzerland Awards First AML/KYC Licence To Bitcoin Company
-                                    </h3>
-                                    <p class="infocard-content">
-                                        Government licensing is quite important when establishing a payments business.
-                                        Official approval in a leading European financial center like Switzerland is a
-                                        key plus in the competitive environment.
-                                    </p>
-                                </div>
-                            </a>
-                            <a href="news.html" class="post-meta">NEWS
-                                <span class="date-posted">
-                               Oct 20, 2017
-                            </span></a>
-                        </li>
-
-                        <!--New Members Join Enterprise Ethereum Alliance-->
-                        <li class="one-third entry animate-box" data-animate-effect="fadeIn">
-                            <a href="new_members_join_enterprise_ethereum_alliance.html">
-                                <div class="entry-img lozad" data-background-image="images/news/new_members.jpg"></div>
-
-                                <div class="entry-desc">
-                                    <h3 class="infocard-title">
-                                        New Members Join Enterprise Ethereum Alliance
-                                    </h3>
-                                    <p class="infocard-content">
-                                        EEA is a nonprofit alliance with the objective of creating a series of standards
-                                        for Ethereum in terms of security, privacy, scalability and interoperability.
-                                    </p>
-                                </div>
-                            </a>
-                            <a href="news.html" class="post-meta">NEWS
-                                <span class="date-posted">
-                                 Oct 19, 2017
-                            </span></a>
-                        </li>
-
-                        <!--Blockchain Helps Refugees to Recreate Lost Identities.-->
-                        <li class="one-third entry animate-box" data-animate-effect="fadeIn">
-                            <a href="blockchain_helps_refugees_to_recreate_lost_identities.html">
-                                <div class="entry-img lozad"
-                                     data-background-image="images/news/blockchain_helps.jpg"></div>
-
-                                <div class="entry-desc">
-                                    <h3 class="infocard-title">
-                                        Blockchain Helps Refugees to Recreate Lost Identities
-                                    </h3>
-                                    <p class="infocard-content">
-                                        Blockchain technology is believed to be the best way to help refugees to
-                                        recreate their lost identities
-                                    </p>
-                                </div>
-                            </a>
-                            <a href="news.html" class="post-meta">NEWS
-                                <span class="date-posted">
-                                Oct 18,2017
-                            </span></a>
-                        </li>
-
-                        <!--Digital Asset Holdings LLC Completes Series B Fundraising-->
-                        <li class="one-third entry animate-box" data-animate-effect="fadeIn">
-                            <a href="digital_asset_holdings_llc_completes_series_b_fundraising.html">
-                                <div class="entry-img lozad"
-                                     data-background-image="images/news/digital_asset.jpg"></div>
-
-                                <div class="entry-desc">
-                                    <h3 class="infocard-title">
-                                        Digital Asset Holdings LLC Completes Series B Fundraising
-                                    </h3>
-                                    <p class="infocard-content">
-                                        DAH has raised $40 million in Series B round, bringing the its current total
-                                        funding to $110 million
-                                    </p>
-                                </div>
-                            </a>
-                            <a href="news.html" class="post-meta">NEWS
-                                <span class="date-posted">
-                                Oct 17, 2017
-                            </span></a>
-                        </li>
-
-                        <li class="two-third entry animate-box" data-animate-effect="fadeIn">
-                            <a href="an_update_on_Integrating.html">
-                                <div class="entry-img lozad"
-                                     data-background-image="images/knowledge/z5-thumb.jpg"></div>
-                                <div class="entry-desc">
-                                    <h3 class="infocard-title">
-                                        An Update on Integrating Zcash on Ethereum (ZoE)
-                                    </h3>
-                                    <p class="infocard-content">
-                                        Members of the Ethereum R&D team and the Zcash Company are collaborating on a
-                                        research project addressing the combination of programmability and privacy in
-                                        blockchains. This joint post is being concurrently posted on the Zcash blog, and
-                                        is coauthored by Ariel Gabizon (Zcash) and Christian Reitwiessner (Ethereum).
-                                    </p>
-                                </div>
-                            </a>
-                            <a href="knowledge.html" class="post-meta">KNOWLEDGE
-                                <span class="date-posted">Jan 19, 2017</span></a>
-                        </li>
+                        </template>
 
 
                         <!--Devcon3 | 2017 conference overview-->
-                        <li class="one-third entry animate-box" data-animate-effect="fadeIn">
-                            <a href="devcon3_2017_conference.html">
+                        <li class="one-third entry wow fadeInUp" data-wow-offset="30">
+                            <a href="events/devcon3_2017_conference.html">
                                 <div class="entry-img lozad"
                                      data-background-image="images/events/devcon3-crop-1200.jpg"></div>
                                 <div class="entry-desc">
@@ -445,6 +266,9 @@
     <a href="#" class="js-gotop"><i class="fa fa-arrow-up"></i></a>
 </div>
 
+<script src="https://cdn.jsdelivr.net/npm/vue"></script>
+<script src="js/indexcontent.js"></script>
+
 <!-- jQuery -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script><!-- jQuery Easing -->
 <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"
@@ -456,6 +280,8 @@
 <script src="https://cdn.jsdelivr.net/npm/lozad/dist/lozad.min.js"></script>
 
 <script src="//cdn.jsdelivr.net/npm/theaterjs@latest/dist/theater.min.js"></script>
+
+<script src="https://cdn.bootcss.com/wow/1.1.2/wow.min.js"></script>
 
 <script>
     var theater = theaterJS()
@@ -482,6 +308,9 @@
             .addScene(theater.replay)
 
     })
+
+    new WOW().init();
+
 </script>
 
 <script src="js/main.js"></script>

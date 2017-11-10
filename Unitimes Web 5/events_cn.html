@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="referrer" content="always">
     <meta name="robots" content="index, follow">
+    <link rel="icon" href="about:blank" type="image/x-icon">
 
     <title>
         活动
@@ -24,7 +25,7 @@
           integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 
 
-    <!-- Theme style  -->
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
 
 </head>
@@ -100,8 +101,10 @@
         <div class="container u-maxWidth1000">
             <div class="cards-box">
 
-                <div class="col-lg-6 col-md-6 col-sm-6 animate-box card-box-md">
-                    <a href="devcon3_2017_conference_cn.html" class="fh5co-project-item image-popup">
+                <div class="col-lg-6 col-md-6 col-sm-6 wow fadeInUp card-box-md" data-wow-offset="30"
+                     data-wow-delay="0.3s">
+
+                    <a href="events/devcon3_2017_conference_cn.html" class="fh5co-project-item image-popup">
 
                         <figure>
                             <div class="overlay item-center">
@@ -109,7 +112,7 @@
                                     对于参加过Devcon以往大会并期待今年活动的人来说，这会是迄今为止最棒的一次开发者大会！今年，会议主办方准备了专门的会议中心，可容纳较去年近多一倍的人数，并且另外准备了大厅来支持更多的演示并且用于其他安排。
                                 </p>
                             </div>
-                            <img src="images/events/devcon3-crop-1200.jpg" class="img-responsive">
+                            <img data-src="images/events/devcon3-crop-1200.jpg" class="img-responsive lozad">
                         </figure>
 
                         <div class="fh5co-text">
@@ -123,7 +126,7 @@
                 </div>
 
                 <div class="col-lg-4 col-md-4 col-sm-6 card-box" style="visibility: hidden">
-                    <a href="devcon3_2017_conference_cn.html" class="fh5co-project-item image-popup">
+                    <a href="events/devcon3_2017_conference_cn.html" class="fh5co-project-item image-popup">
 
                         <figure>
                             <div class="overlay item-center">
@@ -132,7 +135,7 @@
                                     今年，会议主办方准备了专门的会议中心，可容纳较去年近多一倍的人数，并且另外准备了大厅来支持更多的演示并且用于其他安排。
                                 </p>
                             </div>
-                            <img src="images/events/devcon3-crop-1200.jpg" class="img-responsive">
+                            <img data-src="images/events/devcon3-crop-1200.jpg" class="img-responsive lozad">
                         </figure>
 
                         <div class="fh5co-text">
@@ -180,7 +183,12 @@
         integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
         crossorigin="anonymous"></script>
 
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lozad/dist/lozad.min.js"></script>
+<script src="https://cdn.bootcss.com/wow/1.1.2/wow.min.js"></script>
 
+<script>
+    new WOW().init();
+</script>
 <!-- Main -->
 <script src="js/main.js"></script>
 

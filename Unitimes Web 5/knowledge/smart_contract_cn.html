@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="referrer" content="always">
+    <meta name="robots" content="index, follow">
+    <link rel="icon" href="about:blank" type="image/x-icon">
+
+    <title>
+        智能合约
+    </title>
+
+    <meta name="title" content="智能合约">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+
+    <link rel="stylesheet" type="text/css" href="../css/article-font.css">
+    <link rel="stylesheet" href="../css/article.min.css">
+</head>
+
+<body class="browser-chrome os-mac is-withMagicUnderlines v-glyph v-glyph--m2 v-enableBrandingButtons is-js postShowScreen">
+<div class="site-main surface-container">
+    <div class="surface">
+        <div class="screenContent surface-content">
+            <div class="metabar u-clearfix  u-boxShadowBottomThinLighter u-textColorDarker u-fixed u-backgroundTransparentWhiteDarkest u-xs-sizeFullViewportWidth u-tintBgColor u-tintSpectrum">
+                <div class="metabar-inner u-marginAuto u-maxWidth1000 u-flexCenter u-justifyContentSpaceBetween u-paddingLeft20 u-paddingRight20 u-height65 u-xs-height56">
+                    <div class="metabar-block u-flex1 u-flexCenter">
+                        <a href="../index_cn.html" class="link u-flex">
+                            <img src="../images/icon/logo_black.svg" height="25px">
+                        </a>
+                    </div>
+                </div>
+                <div class="metabar-inner u-marginAuto u-maxWidth1000">
+                    <nav role="navigation" class="metabar-block metabar-block--below u-overflowHiddenY u-height40">
+                        <ul class="u-textAlignLeft u-noWrap u-overflowX u-paddingBottom100 u-sm-paddingLeft20 u-sm-paddingRight20">
+                            <li class="metabar-navItem u-uiTextMedium u-xs-fontSize11 u-fontSize14 u-inlineBlock u-textUppercase u-letterSpacing003 u-textColorNormal u-xs-paddingRight12 u-xs-marginRight0 u-paddingTop5 u-xs-paddingTop10">
+                                <a class="link link--darken u-accentColor--textDarken  "
+                                   href="../unitalks_cn.html"> 独角访谈 </a></li>
+                            <li class="metabar-navItem  u-uiTextMedium u-xs-fontSize11 u-fontSize14 u-inlineBlock u-textUppercase u-letterSpacing003 u-textColorNormal u-xs-paddingRight12 u-xs-marginRight0 u-paddingTop5 u-xs-paddingTop10">
+                                <a class="link link--darken u-accentColor--textDarken link--noUnderline "
+                                   href="../news_cn.html"> 新闻 </a></li>
+                            <li class="metabar-navItem  u-uiTextMedium u-xs-fontSize11 u-fontSize14 u-inlineBlock u-textUppercase u-letterSpacing003 u-textColorNormal u-xs-paddingRight12 u-xs-marginRight0 u-paddingTop5 u-xs-paddingTop10">
+                                <a class="link link--darker link--darken u-accentColor--textDarken link--noUnderline "
+                                   href="../knowledge_cn.html"> 知识库 </a></li>
+                            <li class="metabar-navItem  u-uiTextMedium u-xs-fontSize11 u-fontSize14 u-inlineBlock u-textUppercase u-letterSpacing003 u-textColorNormal u-xs-paddingRight12 u-xs-marginRight0 u-paddingTop5 u-xs-paddingTop10">
+                                <a class="link link--darken u-accentColor--textDarken link--noUnderline "
+                                   href="../events_cn.html"> 活动 </a></li>
+                            <span class="u-borderLeft1 u-paddingLeft22 u-xs-paddingLeft12 u-baseColor--borderLight"></span>
+                            <li class="metabar-navItem  is-external u-uiTextMedium u-xs-fontSize11 u-fontSize14 u-inlineBlock u-textUppercase u-letterSpacing003 u-textColorNormal u-xs-paddingRight12 u-xs-marginRight0 u-paddingTop5 u-xs-paddingTop10">
+                                <a class="link link--darken u-accentColor--textDarken link--noUnderline "
+                                   href="../index_cn.html"> 首页 </a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+            <div class="metabar metabar--spacer u-tintBgColor u-height105 u-xs-height95"></div>
+            <main role="main">
+                <article
+                        class="u-minHeight100vhOffset65 u-overflowHidden postArticle postArticle--full is-withAccentColors"
+                        lang="cn" data-scroll="native">
+                    <!--<header class="container u-maxWidth740">-->
+                    <!--<div class="uiScale uiScale-ui&#45;&#45;regular uiScale-caption&#45;&#45;regular postMetaHeader u-paddingBottom10 row">-->
+                    <!--<div class="col u-size12of12">-->
+                    <!--<div class="uiScale uiScale-ui&#45;&#45;regular uiScale-caption&#45;&#45;regular postMetaLockup postMetaLockup&#45;&#45;authorWithBio u-flexCenter">-->
+                    <!--<div class="u-flex0">-->
+                    <!--&lt;!&ndash;<a class="link avatar u-baseColor&#45;&#45;link ui-linkSubtle" href="#">&ndash;&gt;-->
+                    <!--<img src="images/xue.jpg" width="50px" height="50px" class="avatar-image">-->
+                    <!--&lt;!&ndash;</a>&ndash;&gt;-->
+                    <!--</div>-->
+                    <!--<div class="u-flex1 u-paddingLeft15 u-overflowHidden">-->
+                    <!--<div class="u-lineHeightTightest u-xs-fontSize11 ">-->
+                    <!--徐雪-->
+                    <!--</div>-->
+                    <!--<div class="ui-caption postMetaInline">-->
+                    <!--<time>2017.04.11</time>-->
+                    <!--&lt;!&ndash;<span class="middotDivider u-fontSize12"></span>&ndash;&gt;-->
+                    <!--&lt;!&ndash;<span class="readingTime"title="3 min read"></span>&ndash;&gt;-->
+                    <!--</div>-->
+                    <!--</div>-->
+                    <!--</div>-->
+                    <!--</div>-->
+                    <!--</div>-->
+                    <!--</header>-->
+                    <div class="postArticle-content" data-scroll="native">
+                        <section class="section section--body section--first">
+                            <div class="section-content">
+                                <div class="section-inner sectionLayout--insetColumn">
+                                    <h1 class="u-marginTop40 graf graf--h3 graf--leading graf--title u-xs-fontSize24 u-fontSize30 u-lineHeightBase"
+                                        style="font-family: 'Microsoft Yahei';">
+                                        智能合约
+                                    </h1>
+
+                                    <img class="graf--p graf-image u-marginTop40"
+                                         src="../images/knowledge/3151510038262_.pic.jpg"
+                                         width="100%">
+
+                                    <p class="graf graf--p graf-after--p u-xs-fontSize12 u-fontSize15"
+                                       style="font-family: 'Microsoft Yahei';">智能合约是 1990s
+                                        年代由尼克萨博提出的理念，几乎与互联网同龄。由于缺少可信的执行环境，智能合约并没有被应用到实际产业中，自比特币诞生后，人们认识到比特币的底层技术区块链天生可以为智能合约提供可信的执行环境，以太坊首先看到了区块链和智能合约的契合，发布了白皮书《以太坊：下一代智能合约和去中心话应用平台》，并一直致力于将以太坊打造成最佳智能合约平台，所以比特币引领区块链，以太坊复活智能合约。
+                                    </p>
+                                    <p class="graf graf--p graf-after--p u-xs-fontSize12 u-fontSize15"
+                                       style="font-family: 'Microsoft Yahei';">
+                                        怎样向尚未接触过比特币理念的人介绍以太坊及智能合约在金融合约方面的应用？下面是一种尝试。首先介绍区块链，解释它为什么值得人们的信任，其次介绍智能合约，然后介绍以太坊系统，最后介绍智能合约与金融合约的结合。
+                                    </p>
+                                    <h4 class="graf graf--h4 graf-after--p u-xs-fontSize20 u-fontSize22">
+                                        <strong class="markup--strong markup--h4-strong">比特币的共识机制</strong>
+                                    </h4>
+                                    <p class="graf graf--p graf-after--p u-xs-fontSize12 u-fontSize15"
+                                       style="font-family: 'Microsoft Yahei';">比特币的核心技术区块链可以理解成可复制、共享的账本。
+                                    </p>
+                                    <p class="graf graf--p graf-after--p u-xs-fontSize12 u-fontSize15"
+                                       style="font-family: 'Microsoft Yahei';">比特币的最核心创新：它教会世界如何在不需要信任第三方的情况下远距离转移价值。
+                                    </p>
+                                    <p class="graf graf--p graf-after--p u-xs-fontSize12 u-fontSize15"
+                                       style="font-family: 'Microsoft Yahei';">
+                                        人们当然可以面对面地转移实体纸币，但是，在比特币出现以前，我们做不到：在不需要信任中心化第三方机构（邮局、银行等）的情况，远距离向某人转移价值。
+                                    </p>
+                                    <p class="graf graf--p graf-after--p u-xs-fontSize12 u-fontSize15"
+                                       style="font-family: 'Microsoft Yahei';">
+                                        就好像银行和支付系统的传统转账模式的基础设施被重构为点对点支付网络。这种转变如下图所示：
+                                    </p>
+
+
+                                    <img class="graf--p graf-image"
+                                         src="../images/knowledge/27d3bed9020839794dd4649413219691.png" width="100%">
+                                    <p class="graf graf--p graf-after--p u-xs-fontSize12 u-fontSize15"
+                                       style="font-family: 'Microsoft Yahei';">
+                                        比特币打开了点对点的电子价值转移模式的大门，完全不同于现在的银行系统、中央银行和支付系统。 但是，上面的图并没有解释比特币是怎样实现点对点价值转移的。
+                                    </p>
+                                    <p class="graf graf--p graf-after--p u-xs-fontSize12 u-fontSize15"
+                                       style="font-family: 'Microsoft Yahei';">
+                                        答案是：比特币系统建立在“可复制、共享的账本”之上。比特币网络中的每个参与者（完全节点）拥有一个完整的交易账本的副本，这一系统的神奇之处在于：它是如何做到使每个人的副本与其他人的副本保持一致的。
+                                    </p>
+                                    <p class="graf graf--p graf-after--p u-xs-fontSize12 u-fontSize15"
+                                       style="font-family: 'Microsoft Yahei';">
+                                        所以，正确的示意图应该是下图，每个参与者都能够从相同的可复制、共享的账本中获取信息。
+                                    </p>
+                                    <img class="graf--p graf-image"
+                                         src="../images/knowledge/eff079fb18d40f35c4715d7cbb748c50.png" width="100%">
+
+                                    <p class="graf graf--p graf-after--p u-xs-fontSize12 u-fontSize15"
+                                       style="font-family: 'Microsoft Yahei';">
+                                        比特币和其它去中心化共识系统的窍门在于：它们怎样保证每个有一个账本的副本，并使每个人确信自己的账本与别人的账本是同步的。
+                                    </p>
+                                    <p class="graf graf--p graf-after--p u-xs-fontSize12 u-fontSize15"
+                                       style="font-family: 'Microsoft Yahei';">
+                                        如果每个人拥有的账本的副本是相同的，那么人们就不再需要一个中心化的机构记录谁拥有什么。当你的账本更新，记录一笔新的资产所有权变动时，其他人的账本也会发生相同的变动。
+                                    </p>
+                                    <h4 class="graf graf--h4 graf-after--p u-xs-fontSize20 u-fontSize22">
+                                        <strong class="markup--strong markup--h4-strong">智能合约</strong>
+                                    </h4>
+
+                                    <p class="graf graf--p graf-after--p u-xs-fontSize12 u-fontSize15"
+                                       style="font-family: 'Microsoft Yahei';">
+                                        智能合约程序不只是一个可以自动执行的计算机程序：它自己就是一个系统参与者。它对接收到的信息进行回应，它可以接收和储存价值，也可以向外发送信息和价值。
+                                    </p>
+                                    <p class="graf graf--p graf-after--p u-xs-fontSize12 u-fontSize15"
+                                       style="font-family: 'Microsoft Yahei';">这个程序就像一个可以被信任的人，可以临时保管资产，总是按照事先的规则执行操作。
+                                    </p>
+                                    <p class="graf graf--p graf-after--p u-xs-fontSize12 u-fontSize15"
+                                       style="font-family: 'Microsoft Yahei';">
+                                        下面这个示意图就是一个智能合约模型：一段代码（智能合约），被部署在分享的、复制的账本上，它可以维持自己的状态，控制自己的资产和对接收到的外界信息或者资产进行回应。
+                                    </p>
+
+                                    <img class="graf--p graf-image"
+                                         src="../images/knowledge/f17718ce077c51dee077427549f46982.png" width="100%">
+                                    <p class="graf graf--p graf-after--p u-xs-fontSize12 u-fontSize15"
+                                       style="font-family: 'Microsoft Yahei';">
+                                        智能合约模型：它是运行在可复制、共享的账本上的计算机程序，可以处理信息，接收、储存和发送价值。
+                                    </p>
+                                    <h4 class="graf graf--h4 graf-after--p u-xs-fontSize20 u-fontSize22">
+                                        <strong class="markup--strong markup--h4-strong">以太坊系统</strong>
+                                    </h4>
+                                    <p class="graf graf--p graf-after--p u-xs-fontSize12 u-fontSize15"
+                                       style="font-family: 'Microsoft Yahei';">
+                                        以太坊项目借鉴了比特币区块链的技术，对它的应用范围进行了扩展。如果说比特币是利用区块链技术的专用计算器，那么以太坊就是利用区块链技术的通用计算机。简单地讲，以太坊
+                                        = 区块链 + 智能合约。
+                                    </p>
+                                    <p class="graf graf--p graf-after--p u-xs-fontSize12 u-fontSize15"
+                                       style="font-family: 'Microsoft Yahei';">
+                                        与比特币相比，以太坊最大的不同点是：它可以支持更加强大的脚本语言（用技术语言讲就是图灵完备的脚本语言），允许开发者在上面开发任意应用，实现任意智能合约，这也是以太坊的最强大之处。作为平台，以太坊可以类比于苹果的应用商店，任何开发者都可以在上面开发应用，并出售给用户。
+                                    </p>
+                                    <p class="graf graf--p graf-after--p u-xs-fontSize12 u-fontSize15"
+                                       style="font-family: 'Microsoft Yahei';">以太坊智能合约的金融应用
+                                    </p>
+                                    <p class="graf graf--p graf-after--p u-xs-fontSize12 u-fontSize15"
+                                       style="font-family: 'Microsoft Yahei';">每一类金融合约都可以程序代码的形式写成智能合约。
+                                    </p>
+                                    <p class="graf graf--p graf-after--p u-xs-fontSize12 u-fontSize15"
+                                       style="font-family: 'Microsoft Yahei';">差价合约
+                                    </p>
+                                    <p class="graf graf--p graf-after--p u-xs-fontSize12 u-fontSize15"
+                                       style="font-family: 'Microsoft Yahei';">
+                                        金融衍生品是“智能合约”的最普遍的应用，也是最易于用代码实现的之一。实现金融合约的主要挑战是它们中的大部分需要参照一个外部的价格发布器；例如，一个需求非常大的应用是一个用来对冲以太币（或其它密码学货币）相对美元价格波动的智能合约，但该合约需要知道以太币相对美元的价格。最简单的方法是
+                                        通过由某特定机构（例如纳斯达克）维护的“数据提供“合约进行，该合约的设计使得该机构能够根据需要更新合约，并提供一个接口使得其它合约能够通过发送一
+                                        个消息给该合约以获取包含价格信息的回复。
+                                    </p>
+                                    <p class="graf graf--p graf-after--p u-xs-fontSize12 u-fontSize15"
+                                       style="font-family: 'Microsoft Yahei';">当这些关键要素都齐备，对冲合约看起来会是下面的样子：
+                                    </p>
+                                    <p class="graf graf--p graf-after--p u-xs-fontSize12 u-fontSize15"
+                                       style="font-family: 'Microsoft Yahei';">等待A 输入1000以太币。
+                                    </p>
+                                    <p class="graf graf--p graf-after--p u-xs-fontSize12 u-fontSize15"
+                                       style="font-family: 'Microsoft Yahei';">等待B 输入1000以太币。
+                                    </p>
+                                    <p class="graf graf--p graf-after--p u-xs-fontSize12 u-fontSize15"
+                                       style="font-family: 'Microsoft Yahei';">通过查询数据提供合约，将1000以太币的美元价值，例如，x美元，记录至存储器。
+                                    </p>
+                                    <p class="graf graf--p graf-after--p u-xs-fontSize12 u-fontSize15"
+                                       style="font-family: 'Microsoft Yahei';">
+                                        30天后，允许A或B“重新激活“合约以发送价值x美元的以太币（重新查询数据提供合约，以获取新价格并计算）给A并将剩余的以太币发送给B。
+                                    </p>
+                                    <p class="graf graf--p graf-after--p u-xs-fontSize12 u-fontSize15"
+                                       style="font-family: 'Microsoft Yahei';">代币系统（token system）
+                                    </p>
+                                    <p class="graf graf--p graf-after--p u-xs-fontSize12 u-fontSize15"
+                                       style="font-family: 'Microsoft Yahei';">
+                                        区块链上代币系统有很多应用，从代表如美元或黄金等资产的子货币到公司股票，单独的代币代表智能资产，安全的不可伪造的优惠券，甚至与传统价值完全没有联系的用来进行积分奖励的代币系统。在以太坊中实施代币系统容易得让人吃惊。关键的一点是理解，所有的货币或者代币系统，从根本上来说是一个带有如下操作的数据库：从A中减去X单位并把X单位加到B上，前提条件是(1)A在交易之前有至少X单位以及(2)交易被A批准。实施一个代币系统就是把这样一个逻辑实施到一个合约中去。
+                                    </p>
+                                    <p class="graf graf--p graf-after--p u-xs-fontSize12 u-fontSize15"
+                                       style="font-family: 'Microsoft Yahei';">储蓄钱包
+                                    </p>
+                                    <p class="graf graf--p graf-after--p u-xs-fontSize12 u-fontSize15"
+                                       style="font-family: 'Microsoft Yahei';">
+                                        假设Alice想确保她的资金安全，但她担心丢失或者被黑客盗走私钥。她把以太币放到和Bob签订的一个合约里，如下所示，这合同是一个银行：
+                                    </p>
+                                    <p class="graf graf--p graf-after--p u-xs-fontSize12 u-fontSize15"
+                                       style="font-family: 'Microsoft Yahei';">Alice单独每天最多可提取1%的资金。
+                                    </p>
+                                    <p class="graf graf--p graf-after--p u-xs-fontSize12 u-fontSize15"
+                                       style="font-family: 'Microsoft Yahei';">
+                                        Bob单独每天最多可提取1%的资金，但Alice可以用她的私钥创建一个交易取消Bob的提现权限。
+                                    </p>
+                                    <p class="graf graf--p graf-after--p u-xs-fontSize12 u-fontSize15"
+                                       style="font-family: 'Microsoft Yahei';">Alice 和 Bob 一起可以任意提取资金。
+                                    </p>
+                                    <p class="graf graf--p graf-after--p u-xs-fontSize12 u-fontSize15"
+                                       style="font-family: 'Microsoft Yahei';">
+                                        一般来讲，每天1%对Alice足够了，如果Alice想提现更多她可以联系Bob寻求帮助。如果Alice的私钥被盗，她可以立即找到Bob把她
+                                        的资金转移到一个新合同里。如果她弄丢了她的私钥，Bob可以慢慢地把钱提出。如果Bob表现出了恶意，她可以关掉他的提现权限。
+                                    </p>
+                                    <p class="graf graf--p graf-after--p u-xs-fontSize12 u-fontSize15"
+                                       style="font-family: 'Microsoft Yahei';">作物保险
+                                    </p>
+                                    <p class="graf graf--p graf-after--p u-xs-fontSize12 u-fontSize15"
+                                       style="font-family: 'Microsoft Yahei';">
+                                        一个人可以很容易地以天气情况而不是任何价格指数作为数据输入来创建一个金融衍生品合约。如果一个爱荷华的农民购买了一个基于爱荷华的降雨情况进行反向赔付的金融衍生品，那么如果遇到干旱，该农民将自动地收到赔付资金而如果有足量的降雨他会很开心因为他的作物收成会很好。
+                                        多重签名智能契约
+                                    </p>
+                                    <p class="graf graf--p graf-after--p u-xs-fontSize12 u-fontSize15"
+                                       style="font-family: 'Microsoft Yahei';">多重签名智能合约
+                                    </p>
+                                    <p class="graf graf--p graf-after--p u-xs-fontSize12 u-fontSize15"
+                                       style="font-family: 'Microsoft Yahei';">
+                                        比特币允许基于多重签名的交易合约，例如，5把私钥里集齐3把就可以使用资金。以太坊可以做得更细化，例如，5把私钥里集齐4把可以花全部资金，如果只3把则每天最多花10%的资金，只有2把就只能每天花0.5%的资金。
+                                    </p>
+                                    <p class="graf graf--p graf-after--p u-xs-fontSize12 u-fontSize15"
+                                       style="font-family: 'Microsoft Yahei';">文章来源：<a
+                                            href="http://ethfans.org/wikis/智能合约">http://ethfans.org/wikis/智能合约</a></p>
+                                </div>
+                            </div>
+                        </section>
+                        <!--<section name="5e3a"class="section section&#45;&#45;body section&#45;&#45;last"></section>-->
+                    </div>
+                    <footer class="u-paddingTop30">
+                        <div class="streamItem streamItem--placementCardGrid">
+                            <div class="u-clearfix u-backgroundGrayLightest">
+                                <div class="row u-marginAuto u-maxWidth1000 u-paddingTop30 u-paddingBottom20">
+                                    <div class="col u-padding8 u-xs-size12of12 u-size4of12">
+                                        <div class="uiScale uiScale-ui--small uiScale-caption--regular u-height280 u-sizeFullWidth u-backgroundWhite u-borderCardBorder u-boxShadow u-borderBox u-borderRadius4"
+                                             data-scroll="native">
+                                            <a class="link link--noUnderline "
+                                               href="an_update_on_Integrating_cn.html">
+                                                <div class="u-backgroundCover u-backgroundColorGrayLight u-height100 u-sizeFullWidth u-borderBottomLight u-borderRadiusTop4"
+                                                     style="background-image: url('../images/knowledge/z5-thumb.jpg');"></div>
+                                            </a>
+                                            <div class="u-padding15 u-borderBox u-flexColumn u-height180">
+                                                <a class="link link--noUnderline u-flex1 "
+                                                   href="an_update_on_Integrating_cn.html">
+                                                    <div class="ui-caption postMetaInline u-noWrapWithEllipsis u-marginBottom7"
+                                                         style="font-size:15px !important;">
+                                                        知识库
+                                                    </div>
+                                                    <div class="ui-heading ui-clamp2 u-textColorDarkest u-contentSansBold u-maxHeight2LineHeightTighter u-lineClamp2 u-textOverflowEllipsis u-letterSpacingTight u-paddingBottom2"
+                                                         style="font-size: 17px !important;">
+                                                        以太坊整合Zcash技术的最新进展（ZoE）
+                                                    </div>
+                                                </a>
+                                                <div class="u-paddingTop10 u-flex0 u-flexCenter">
+                                                    <div class="u-flex1 u-minWidth0 u-marginRight10">
+                                                        <div class="u-flexCenter">
+                                                            <div class="postMetaInline-avatar u-flex0">
+                                                                <!--<a class="link avatar u-baseColor&#45;&#45;link ui-linkSubtle" href="#">-->
+                                                                <img src="../images/knowledge/Christian-Reitwiessner.jpeg"
+                                                                     class="avatar-image u-size36x36">
+                                                                <!--</a>-->
+                                                            </div>
+                                                            <div class="postMetaInline postMetaInline-authorLockup u-flex1 u-noWrapWithEllipsis u-xs-fontSize10">
+                                                                <!--<a class="link link link&#45;&#45;darken link&#45;&#45;darker u-baseColor&#45;&#45;link ui-linkSubtle" href="#">-->
+                                                                Christian Reitwiessner
+                                                                <!--</a>-->
+                                                                <div class="u-fontSize12 u-baseColor--textNormal u-textColorNormal">
+                                                                    <time>2017.03.09</time>
+                                                                    <!--<span class="readingTime u-textColorNormal" title="1 min read"></span>-->
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col u-padding8 u-xs-size12of12 u-size4of12">
+                                        <div class="uiScale uiScale-ui--small uiScale-caption--regular u-height280 u-sizeFullWidth u-backgroundWhite u-borderCardBorder u-boxShadow u-borderBox u-borderRadius4"
+                                             data-scroll="native"><a
+                                                class="link link--noUnderline "
+                                                href="../news/ethereum_erc-20_token_standard_cn.html">
+                                            <div class="u-backgroundCover u-backgroundColorGrayLight u-height100 u-sizeFullWidth u-borderBottomLight u-borderRadiusTop4"
+                                                 style="background-image: url('../images/news/w4-thumb.jpg');"></div>
+                                        </a>
+                                            <div class="u-padding15 u-borderBox u-flexColumn u-height180"><a
+                                                    class="link link--noUnderline u-flex1 "
+                                                    href="../news/ethereum_erc-20_token_standard_cn.html">
+                                                <div class="ui-caption postMetaInline u-noWrapWithEllipsis u-marginBottom7"
+                                                     style="font-size:15px !important;"> 新闻
+                                                </div>
+                                                <div class="ui-heading ui-clamp2 u-textColorDarkest u-contentSansBold u-maxHeight2LineHeightTighter u-lineClamp2 u-textOverflowEllipsis u-letterSpacingTight u-paddingBottom2"
+                                                     style="font-size: 17px !important;"> 以太坊ERC-20代币标准已正式确定
+                                                </div>
+                                            </a>
+                                                <div class="u-paddingTop10 u-flex0 u-flexCenter">
+                                                    <div class="u-flex1 u-minWidth0 u-marginRight10">
+                                                        <div class="u-flexCenter">
+                                                            <div class="postMetaInline-avatar u-flex0">
+                                                                <!--<a class="link avatar u-baseColor&#45;&#45;link ui-linkSubtle" href="#">-->
+                                                                <img src="../images/dog.jpg"
+                                                                     class="avatar-image u-size36x36">
+                                                                <!--</a>-->
+                                                            </div>
+                                                            <div class="postMetaInline postMetaInline-authorLockup u-flex1 u-noWrapWithEllipsis u-xs-fontSize10">
+                                                                <!--<a class="link link link&#45;&#45;darken link&#45;&#45;darker u-baseColor&#45;&#45;link ui-linkSubtle" href="#">-->
+                                                                浅汐
+                                                                <!--</a>-->
+                                                                <div class="u-fontSize12 u-baseColor--textNormal u-textColorNormal">
+                                                                    <time>2017.09.11</time>
+                                                                    <!--<span class="readingTime u-textColorNormal" title="1 min read"></span>-->
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col u-padding8 u-xs-size12of12 u-size4of12">
+                                        <div class="uiScale uiScale-ui--small uiScale-caption--regular u-height280 u-sizeFullWidth u-backgroundWhite u-borderCardBorder u-boxShadow u-borderBox u-borderRadius4"
+                                             data-scroll="native">
+                                            <a class="link link--noUnderline "
+                                               href="explaining_the_ethereum_namespace_auction_cn.html">
+                                                <div class="u-backgroundCover u-backgroundColorGrayLight u-height100 u-sizeFullWidth u-borderBottomLight u-borderRadiusTop4"
+                                                     style="background-image: url('../images/knowledge/information_technology_767x400.jpg');"></div>
+                                            </a>
+                                            <div class="u-padding15 u-borderBox u-flexColumn u-height180">
+                                                <a class="link link--noUnderline u-flex1 "
+                                                   href="explaining_the_ethereum_namespace_auction_cn.html">
+                                                    <div class="ui-caption postMetaInline u-noWrapWithEllipsis u-marginBottom7"
+                                                         style="font-size:15px !important;">
+                                                        知识库
+                                                    </div>
+                                                    <div class="ui-heading ui-clamp2 u-textColorDarkest u-contentSansBold u-maxHeight2LineHeightTighter u-lineClamp2 u-textOverflowEllipsis u-letterSpacingTight u-paddingBottom2"
+                                                         style="font-size: 17px !important;">
+                                                        最新以太坊 | 以太坊命名空间拍卖
+                                                    </div>
+                                                </a>
+                                                <div class="u-paddingTop10 u-flex0 u-flexCenter">
+                                                    <div class="u-flex1 u-minWidth0 u-marginRight10">
+                                                        <div class="u-flexCenter">
+                                                            <div class="postMetaInline-avatar u-flex0">
+                                                                <!--<a class="link avatar u-baseColor&#45;&#45;link ui-linkSubtle" href="#">-->
+                                                                <img src="../images/knowledge/1-AW1mbHWcIh7sSOj4XJboOw(2).jpeg"
+                                                                     class="avatar-image u-size36x36">
+                                                                <!--</a>-->
+                                                            </div>
+                                                            <div class="postMetaInline postMetaInline-authorLockup u-flex1 u-noWrapWithEllipsis u-xs-fontSize10">
+                                                                <!--<a class="link link link&#45;&#45;darken link&#45;&#45;darker u-baseColor&#45;&#45;link ui-linkSubtle" href="#">-->
+                                                                Maurelian
+                                                                <!--</a>-->
+                                                                <div class="u-fontSize12 u-baseColor--textNormal u-textColorNormal">
+                                                                    <time>2017.10.25</time>
+                                                                    <!--<span class="readingTime u-textColorNormal" title="1 min read"></span>-->
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="u-textAlignCenter u-paddingBottom20 u-xs-fontSize10">&copy; UNITIMES. All
+                                    Rights Reserved.
+                                </div>
+                            </div>
+                        </div>
+                    </footer>
+                </article>
+            </main>
+        </div>
+    </div>
+</div>
+<div class="surface-scrollOverlay"></div>
+
+</body>
+
+</html>

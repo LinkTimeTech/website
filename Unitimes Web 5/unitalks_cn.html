@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="referrer" content="always">
     <meta name="robots" content="index, follow">
+    <link rel="icon" href="about:blank" type="image/x-icon">
 
     <title>
         独角访谈
@@ -24,7 +25,7 @@
           integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 
 
-    <!-- Theme style  -->
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
 
 </head>
@@ -99,8 +100,52 @@
 
         <div class="container u-maxWidth1000">
             <div class="cards-box">
-                <div class="col-lg-6 col-md-6 col-sm-6 animate-box card-box">
-                    <a href="welcome_to_unitimes_cn.html" class="fh5co-project-item image-popup">
+
+                <template v-for="content in contents">
+                    <div class="col-lg-6 col-md-6 col-sm-6 wow fadeInUp card-box-md" data-wow-offset="30"
+                         v-if="content.top == 1">
+                        <a :href="content.urlcn"
+                           class="fh5co-project-item image-popup">
+                            <figure>
+                                <div class="overlay item-center">
+                                    <p class="card-intro">
+                                        {{ content.introcn }}
+                                    </p>
+                                </div>
+                                <img :data-src="content.cover" class="img-responsive lozad">
+                            </figure>
+                            <div class="fh5co-text">
+                                <h2 class="content-two-line">
+                                    {{ content.titlecn }}
+                                </h2>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="col-lg-4 col-md-4 col-sm-6 wow fadeInUp card-box" data-wow-offset="30" v-else>
+                        <a :href="content.urlcn"
+                           class="fh5co-project-item image-popup">
+                            <figure>
+                                <div class="overlay item-center">
+                                    <p class="card-intro">
+                                        {{ content.introcn }}
+                                    </p>
+                                </div>
+                                <img :data-src="content.cover" class="img-responsive lozad">
+                            </figure>
+                            <div class="fh5co-text">
+                                <h2 class="content-two-line">
+                                    {{ content.titlecn }}
+                                </h2>
+                            </div>
+                        </a>
+                    </div>
+                </template>
+
+                <div class="col-lg-4 col-md-4 col-sm-6  fadeInUp card-box-md" data-wow-offset="30"
+                     style="visibility: hidden;">
+
+                    <a href="unitalk/the_boy_genius_vitalk_buterin_cn.html" class="fh5co-project-item image-popup">
 
                         <figure>
                             <div class="overlay item-center">
@@ -108,29 +153,7 @@
                                     我们有幸采访到这个被国人誉为天才的创始人，也是众人眼中的V神，接下来让我们一起走进他的人生。
                                 </p>
                             </div>
-                            <img src="video/WX20171031-205845@2x1.jpg" class="img-responsive">
-                        </figure>
-
-                        <div class="fh5co-text">
-                            <h2 class="content-two-line">
-                                专访-天才少年：Vitalik Buterin
-                            </h2>
-                        </div>
-
-                    </a>
-                </div>
-
-                <div class="col-lg-6 col-md-6 col-sm-6 animate-box card-box-md">
-
-                    <a href="the_boy_genius_vitalk_buterin_cn.html" class="fh5co-project-item image-popup">
-
-                        <figure>
-                            <div class="overlay item-center">
-                                <p class="card-intro">
-                                    我们有幸采访到这个被国人誉为天才的创始人，也是众人眼中的V神，接下来让我们一起走进他的人生。
-                                </p>
-                            </div>
-                            <img src="images/tc.jpeg" class="img-responsive">
+                            <img data-src="images/tc.jpg" class="img-responsive lozad">
                         </figure>
 
                         <div class="fh5co-text">
@@ -171,6 +194,9 @@
     <a href="#" class="js-gotop"><i class="fa fa-arrow-up"></i></a>
 </div>
 
+<script src="https://cdn.jsdelivr.net/npm/vue"></script>
+<script src="js/unitalkcontent.js"></script>
+
 <!-- jQuery -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
 
@@ -179,7 +205,12 @@
         integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
         crossorigin="anonymous"></script>
 
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lozad/dist/lozad.min.js"></script>
 
+<script src="https://cdn.bootcss.com/wow/1.1.2/wow.min.js"></script>
+<script>
+    new WOW().init();
+</script>
 <!-- Main -->
 <script src="js/main.js"></script>
 

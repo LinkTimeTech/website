@@ -6,12 +6,12 @@
     src: url("../fonts/icomoon/icomoon.eot?srf3rx#iefix") format("embedded-opentype"), url("../fonts/icomoon/icomoon.ttf?srf3rx") format("truetype"), url("../fonts/icomoon/icomoon.woff?srf3rx") format("woff"), url("../fonts/icomoon/icomoon.svg?srf3rx#icomoon") format("svg");
 }
 
-@font-face {
-    font-weight: normal;
-    font-style: normal;
-    font-family: lato;
-    src: url("../fonts/lato/Lato-Regular.ttf");
-}
+/*@font-face {*/
+/*font-weight: normal;*/
+/*font-style: normal;*/
+/*font-family: lato;*/
+/*src: url("../fonts/lato/Lato-Regular.ttf");*/
+/*}*/
 
 figcaption b {
     color: #555555;
@@ -75,7 +75,6 @@ p {
 .logoimg, .logoimg-article {
     bottom: 5px;
     position: relative;
-    height: 30px;
 }
 
 .item-center {
@@ -96,6 +95,19 @@ p {
 .keeponeline {
     display: flex;
 }
+
+/*vedio*/
+.video-js .vjs-load-progress div, .video-js .vjs-big-play-button {
+    display: none !important;
+}
+
+.video-js .vjs-progress-holder .vjs-load-progress, .video-js .vjs-progress-holder .vjs-load-progress div, .video-js .vjs-progress-holder .vjs-play-progress, .video-js .vjs-progress-holder .vjs-tooltip-progress-bar {
+    display: none !important;
+
+}
+
+/*//vedio*/
+
 
 /* =======================================================
 *
@@ -266,7 +278,9 @@ p {
     color: #000;
     line-height: 22px;
     text-align: left;
-    min-height: 44px;
+    /*max-height: 44px;*/
+    height: 44px;
+    text-overflow: ellipsis;
 }
 
 .fh5co-project-item .fh5co-text span {
@@ -1263,6 +1277,7 @@ article .gtco-highlight p {
     padding: 30px;
     width: 50%;
     background: #fff;
+    line-height: 1.8;
 }
 
 @media screen and (max-width: 768px) {
@@ -2860,7 +2875,7 @@ ul.dropdown-menu {
     background: url(../images/loader.gif) center no-repeat #fff;
 }
 
-.js .animate-box {
+.js .wow {
     opacity: 0;
 }
 

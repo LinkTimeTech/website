@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="referrer" content="always">
+    <meta name="robots" content="index, follow">
+    <link rel="icon" href="about:blank" type="image/x-icon">
+
+    <title>
+        链中继技术：实现跨链交易的实用方案
+    </title>
+
+    <meta name="title" content="链中继技术：实现跨链交易的实用方案">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+
+    <link rel="stylesheet" type="text/css" href="../css/article-font.css">
+    <link rel="stylesheet" href="../css/article.min.css">
+</head>
+
+<body class="browser-chrome os-mac is-withMagicUnderlines v-glyph v-glyph--m2 v-enableBrandingButtons is-js postShowScreen">
+<div class="site-main surface-container">
+    <div class="surface">
+        <div class="screenContent surface-content">
+            <div class="metabar u-clearfix  u-boxShadowBottomThinLighter u-textColorDarker u-fixed u-backgroundTransparentWhiteDarkest u-xs-sizeFullViewportWidth u-tintBgColor u-tintSpectrum">
+                <div class="metabar-inner u-marginAuto u-maxWidth1000 u-flexCenter u-justifyContentSpaceBetween u-paddingLeft20 u-paddingRight20 u-height65 u-xs-height56">
+                    <div class="metabar-block u-flex1 u-flexCenter">
+                        <a href="../index_cn.html" class="link u-flex">
+                            <img src="../images/icon/logo_black.svg" height="25px">
+                        </a>
+                    </div>
+                    <div class="metabar-block u-flex0 u-flexCenter">
+                        <div class="u-alignMiddle u-inlineBlock u-verticalAlignTop u-height65 u-xs-height56">
+                            <div class="u-alignBlock">
+                                <div class="buttonSet buttonSet--wide u-lineHeightInherit">
+                                    <!--<a class="button button&#45;&#45;primary button&#45;&#45;dark button&#45;&#45;chromeless u-accentColor&#45;&#45;buttonDark is-inSiteNavBar u-xs-hide js-signInButton" href="#">-->
+                                    <!--中文</a>-->
+                                    <a class="button button--primary button--dark button--withChrome u-accentColor--buttonDark is-inSiteNavBar"
+                                       href="chain_relays_or_a_practical_approach_for_cross_chain_trades.html">
+                                        EN</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="metabar-inner u-marginAuto u-maxWidth1000">
+                    <nav role="navigation" class="metabar-block metabar-block--below u-overflowHiddenY u-height40">
+                        <ul class="u-textAlignLeft u-noWrap u-overflowX u-paddingBottom100 u-sm-paddingLeft20 u-sm-paddingRight20">
+                            <li class="metabar-navItem u-uiTextMedium u-xs-fontSize11 u-fontSize14 u-inlineBlock u-textUppercase u-letterSpacing003 u-textColorNormal u-xs-paddingRight12 u-xs-marginRight0 u-paddingTop5 u-xs-paddingTop10">
+                                <a class="link link--darken u-accentColor--textDarken  "
+                                   href="../unitalks_cn.html"> 独角访谈 </a></li>
+                            <li class="metabar-navItem  u-uiTextMedium u-xs-fontSize11 u-fontSize14 u-inlineBlock u-textUppercase u-letterSpacing003 u-textColorNormal u-xs-paddingRight12 u-xs-marginRight0 u-paddingTop5 u-xs-paddingTop10">
+                                <a class="link link--darken u-accentColor--textDarken link--noUnderline "
+                                   href="../news_cn.html"> 新闻 </a></li>
+                            <li class="metabar-navItem  u-uiTextMedium u-xs-fontSize11 u-fontSize14 u-inlineBlock u-textUppercase u-letterSpacing003 u-textColorNormal u-xs-paddingRight12 u-xs-marginRight0 u-paddingTop5 u-xs-paddingTop10">
+                                <a class="link link--darker link--darken u-accentColor--textDarken link--noUnderline "
+                                   href="../knowledge_cn.html"> 知识库 </a></li>
+                            <li class="metabar-navItem  u-uiTextMedium u-xs-fontSize11 u-fontSize14 u-inlineBlock u-textUppercase u-letterSpacing003 u-textColorNormal u-xs-paddingRight12 u-xs-marginRight0 u-paddingTop5 u-xs-paddingTop10">
+                                <a class="link link--darken u-accentColor--textDarken link--noUnderline "
+                                   href="../events_cn.html"> 活动 </a></li>
+                            <span class="u-borderLeft1 u-paddingLeft22 u-xs-paddingLeft12 u-baseColor--borderLight"></span>
+                            <li class="metabar-navItem  is-external u-uiTextMedium u-xs-fontSize11 u-fontSize14 u-inlineBlock u-textUppercase u-letterSpacing003 u-textColorNormal u-xs-paddingRight12 u-xs-marginRight0 u-paddingTop5 u-xs-paddingTop10">
+                                <a class="link link--darken u-accentColor--textDarken link--noUnderline "
+                                   href="../index_cn.html"> 首页 </a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+            <div class="metabar metabar--spacer u-tintBgColor u-height105 u-xs-height95"></div>
+            <main role="main">
+                <article
+                        class="u-minHeight100vhOffset65 u-overflowHidden postArticle postArticle--full is-withAccentColors"
+                        lang="cn" data-scroll="native">
+                    <header class="container u-maxWidth740">
+                        <div class="uiScale uiScale-ui--regular uiScale-caption--regular postMetaHeader u-paddingBottom10 row">
+                            <div class="col u-size12of12">
+                                <div class="uiScale uiScale-ui--regular uiScale-caption--regular postMetaLockup postMetaLockup--authorWithBio u-flexCenter">
+                                    <div class="u-flex0">
+                                        <!--<a class="link avatar u-baseColor&#45;&#45;link ui-linkSubtle" href="#">-->
+                                        <img src="../images/knowledge/loo.png" width="50px" height="50px"
+                                             class="avatar-image">
+                                        <!--</a>-->
+                                    </div>
+                                    <div class="u-flex1 u-paddingLeft15 u-overflowHidden">
+                                        <div class="u-lineHeightTightest u-xs-fontSize11 ">
+                                            Loi Luu
+                                        </div>
+                                        <div class="ui-caption postMetaInline">
+                                            <time>2017.7.27</time>
+                                            <!--<span class="middotDivider u-fontSize12"></span>-->
+                                            <!--<span class="readingTime"title="3 min read"></span>-->
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </header>
+                    <div class="postArticle-content" data-scroll="native">
+                        <section class="section section--body section--first">
+                            <div class="section-content">
+                                <div class="section-inner sectionLayout--insetColumn">
+                                    <h1 class="graf graf--h3 graf--leading graf--title u-xs-fontSize24 u-fontSize30 u-lineHeightBase"
+                                        style="font-family: 'Microsoft Yahei';">
+                                        链中继技术：实现跨链交易的实用方案
+                                    </h1>
+
+                                    <img class="graf--p graf-image u-marginTop40"
+                                         src="../images/knowledge/chain_Relays.jpg"
+                                         width="100%">
+
+                                    <p class="graf graf--p graf-after--p u-xs-fontSize12 u-fontSize15"
+                                       style="font-family: 'Microsoft Yahei';">关于KyberNetwork</p>
+                                    <p class="graf graf--p graf-after--p u-xs-fontSize12 u-fontSize15"
+                                       style="font-family: 'Microsoft Yahei';">
+
+                                    </p>
+                                    <p class="graf graf--p graf-after--p u-xs-fontSize12 u-fontSize15"
+                                       style="font-family: 'Microsoft Yahei';">
+                                        KyberNetwork是一个去中心化且无须信任的交易所。它可以支持加密资产的即时兑换并保证资产流动性，它将提供丰富的支付API以及新一代的合约钱包，来扩展KyberNetwork的整体交易能力。KyberNetwork协议将会是促进加密资产在区块链生态系统中的流动性的关键，并且提高更多公众对于代币作为可交易资产类别的认知。
+                                    </p>
+                                    <p class="graf graf--p graf-after--p u-xs-fontSize12 u-fontSize15"
+                                       style="font-family: 'Microsoft Yahei';">
+                                        KyberNetwork的长期愿景是支持不同加密数字货币之间的交易，比如BTC和ETH，或者ETC，以及其它任意以太坊上的代币。为了实现这一目标，需要依靠允许这些加密数字货币网络之间相互通信的技术和协议。本文讨论了一个在很大程度上被忽视了的实用解决方案，即链中继技术。原文引自KyberNetwork官方博客，同时文章也会阐述KyberNetwork将如何在其应用场景中使用并维护链中继技术。
+                                    </p>
+                                    <p class="graf graf--p graf-after--p u-xs-fontSize12 u-fontSize15"
+                                       style="font-family: 'Microsoft Yahei';">以下是原文翻译：
+                                    </p>
+                                    <h4 class="graf graf--h4 graf-after--p u-xs-fontSize20 u-fontSize22">
+                                        <strong class="markup--strong markup--h4-strong">什么是链中继技术？</strong>
+                                    </h4>
+                                    <p class="graf graf--p graf-after--p u-xs-fontSize12 u-fontSize15"
+                                       style="font-family: 'Microsoft Yahei';">
+                                        用于区块链X的链中继技术，简称X-Relay，是在以太坊智能合约中实施和维护区块链X轻客户端的一种方式。合约主要存储所有的区块头数据，这些区块头数据的大小比起区块链状态信息乃至整条区块链的完整数据信息都要小得多，故名轻客户端。只要拥有区块头数据，节点便能够验证交易是否已被打包，甚至——在区块头存储数据支持的前提下——验证区块链的状态。因此，X-Relay允许以太坊上的任意合约来验证交易，有时甚至可以通过使用轻客户端来验证区块链上的账户状态。
+                                    </p>
+                                    <h4 class="graf graf--h4 graf-after--p u-xs-fontSize20 u-fontSize22">
+                                        <strong class="markup--strong markup--h4-strong">为什么链中继技术如此强大？</strong>
+                                    </h4>
+                                    <p class="graf graf--p graf-after--p u-xs-fontSize12 u-fontSize15"
+                                       style="font-family: 'Microsoft Yahei';">
+                                        将加密数字货币X的轻客户端在以太坊上运行会使以太坊与所述加密货币间产生强大的互操作性。例如，某人可以通过创建智能合约并将合约中的地址修改为收款人的地址来接收加密货币X的付款。智能合约会通过X-Relay来验证每一笔交易，并查看一定数量的代币是否已经发送到了指定的地址。链中继技术简单地打破了不同加密数字货币/区块链间的界限，并且，更重要的是，不需要任何信任假设。
+                                    </p>
+                                    <h4 class="graf graf--h4 graf-after--p u-xs-fontSize20 u-fontSize22">
+                                        <strong class="markup--strong markup--h4-strong">现有链中继技术的发展状况如何？</strong>
+                                    </h4>
+                                    <p class="graf graf--p graf-after--p u-xs-fontSize12 u-fontSize15"
+                                       style="font-family: 'Microsoft Yahei';">第一个基于以太坊的链中继技术是Joseph
+                                        Chow开发的BTCRelay。你可以在这里观看他在Devcon
+                                        1的演讲。BTCRelay虽然旨在实现一些很有趣的应用，但目前这种方案尚未得到广泛的采用。在撰写本文时，最近一个被中继到合约的BTC区块已经是18天前的区块了。BTCRelay采用率低的一部分原因在于，这个中继是单向的，也就是说，我们没有办法把以太坊上的交易中继回比特币区块链。
+                                    </p>
+                                    <p class="graf graf--p graf-after--p u-xs-fontSize12 u-fontSize15"
+                                       style="font-family: 'Microsoft Yahei';">
+                                        最近，我参与开发了PeaceRelay。这个中继技术可以允许不同的基于以太坊的区块链（例如，以太坊和以太经典）进行跨链通信。目前，PeaceRelay已经发布了功能原型，该原型可实现ETC与以太坊区块链间进行交互。尽管高昂的gas成本使得维护PeaceRelay的费用十分昂贵，但现在PeaceRelay已经准备好投入实际应用了。
+                                    </p>
+                                    <p class="graf graf--p graf-after--p u-xs-fontSize12 u-fontSize15"
+                                       style="font-family: 'Microsoft Yahei';">
+                                        目前已经有团队着手在以太坊区块链上建立ZCash的ZECRelay。例如，BLAKE2哈希函数正被考虑应用在“大都市”（以太坊新版本Metropolis，编者注）硬分叉中。如果在“大都市”版本发布之前BLAKE2的EIP获得批准，鉴于zkSNARK已经被包含在该版本中，那么我们就可以在以太坊上高效构建ZECRelay。
+                                    </p>
+                                    <p class="graf graf--p graf-after--p u-xs-fontSize12 u-fontSize15"
+                                       style="font-family: 'Microsoft Yahei';">
+                                        相比之下，在以太坊上为诸如莱特币（LiteCoin）和狗狗币（DogeCoin）这类使用Scrypt工作量证明的加密数字货币搭建中继链的做法要复杂得多，因为验证/计算Scrypt哈希需要消耗大量的gas。有人提供1500ETH奖励金（以前是6000ETH）用于构建狗狗币-以太坊中继技术，但目前还没有人宣布构建成功。这类Scrypt-PoW加密数字货币的实际中继技术的可行性仍然是未知的。
+                                    </p>
+                                    <h4 class="graf graf--h4 graf-after--p u-xs-fontSize20 u-fontSize22">
+                                        <strong class="markup--strong markup--h4-strong">链中继技术对于像KyberNetwork这样的去中心化交易所有什么意义？</strong>
+                                    </h4>
+                                    <p class="graf graf--p graf-after--p u-xs-fontSize12 u-fontSize15"
+                                       style="font-family: 'Microsoft Yahei';">
+                                        通过简单的铸币过程，我们可以很容易地创造一种新的由加密货币X支撑的ERC-20代币（为了区分，我们称之为X-token）。具体而言，如果有人在区块链X上创建了一个把X代币存储到某个预定义地址的交易，那么ERC-20合约就会铸造新的X-token。由于ERC-20合约可以通过X-relay来验证交易的有效性，只要X区块链不易遭受51%
+                                        攻击（如果X区块链易受攻击，那么X代币就没有任何价值了），那么就可以保证已经存入了相应的X币来铸造特定数量的新代币。通过这种方式，任何人都可以在以太坊上进行X代币（例如比特币，ZCash，ETC）与以太坊上的任意ERC-20代币间的兑换。
+                                    </p>
+                                    <p class="graf graf--p graf-after--p u-xs-fontSize12 u-fontSize15"
+                                       style="font-family: 'Microsoft Yahei';">
+                                        到目前为止，一切都进展的很顺利。我们已经能够通过诸如KyberNetwork这样的链上交易所存储X代币，铸造相应的符合ERC-20标准的X-token，并在无须信任的前提下与其它ERC-20代币进行交易。但是，这里面还缺少一些东西。比如，我们怎么样把X-token转换回X代币？这是整个问题最棘手也最有趣的地方。一个很好的解决方案是在X链上部署ETH-Relay，从而在以太坊和X链间形成一个双向的中继通道。现在人们可以在以太坊上销毁X-token，并将证据提交给X链，以索取存入的X代币。这种方案的一个例子是以太坊和以太经典之间的双向中继，如下图所示。双向中继使得ETH和ETC之间的交易能够以无须信任的方式进行——即不需要可信的中介来撮合交易。
+                                    </p>
+                                    <img class="graf--p graf-image u-marginTop40"
+                                         src="images/knowledge/Moving_etc_cn.jpeg"
+                                         width="100%">
+                                    <p class="graf graf--p graf-after--p u-xs-fontSize12 u-fontSize15"
+                                       style="font-family: 'Microsoft Yahei';">
+                                        通过使用以太坊和以太经典之间的双向中继，实现ETC在以太坊区块链上无须信任的相互交易。铸币过程分为三个步骤（1，2和3），包括：1，将ETC锁定在ETC合约中；2，通过向运行在以太坊上的代币合约发送锁定的交易及其证明来铸造ETC-token；3，代币合约在铸造相应数量的ETC-token之前先通过ETC-Relay来验证锁定的交易。同理，通过三个类似的步骤（4,5和6），用户可以把ETC从相应的ETC-token中赎回。
+                                    </p>
+                                    <p class="graf graf--p graf-after--p u-xs-fontSize12 u-fontSize15"
+                                       style="font-family: 'Microsoft Yahei';">
+                                        双向中继还允许基于以太坊的私有链和公有链间进行跨链通信。EEA（欧洲经济区）最近成为了最大的区块链联盟，不难猜想，未来将会有更多的基于以太坊的私有区块链诞生。例如，MAS（新加坡金融监管局）——新加坡的央行——打算在其基于以太坊的私有链上将新加坡元代币化。SGD-Relay将允许用户在MAS私有链和以太坊公有链之间转移SGD，从而在未来实现加密代币与法币之间的链上交易。
+                                    </p>
+                                    <p class="graf graf--p graf-after--p u-xs-fontSize12 u-fontSize15"
+                                       style="font-family: 'Microsoft Yahei';">
+                                        然而，当X代币不支持像以太坊这类智能合约时，这一套关于X代币的理想解决方案就不起作用了。比方说，到目前为止，还没有人能够在比特币和以太坊之间，或者在ZCash和以太坊之间部署双向中继。此外，维护PeaceRelay的gas成本十分昂贵，因此在维持以太坊和以太经典间双向中继的前提下，验证所有区块头信息是不切实际的。接下来，我们要讨论KyberNetwork计划如何在实际中部署和维护这些中继链。
+                                    </p>
+                                    <h4 class="graf graf--h4 graf-after--p u-xs-fontSize20 u-fontSize22">
+                                        <strong class="markup--strong markup--h4-strong">KyberNetwork链中继技术实际部署方案</strong>
+                                    </h4>
+                                    <p class="graf graf--p graf-after--p u-xs-fontSize12 u-fontSize15"
+                                       style="font-family: 'Microsoft Yahei';">
+                                        我们必须要等到“大都会”硬分叉以后才能确定我们是否可以在以太坊上构建ZECRelay，尽管如此，我们现在已经可以部署并运行BTCRelay和PeaceRelay了。
+                                        KyberNetwork的愿景是维护这两个中继以支持BTC/ETC和ETH以及以太坊上的其它代币间的交易。但是，要实现这一愿景，还有两个亟待解决的问题。
+                                    </p>
+                                    <p class="graf graf--p graf-after--p u-xs-fontSize12 u-fontSize15"
+                                       style="font-family: 'Microsoft Yahei';">如何在无须为每个区块头支付260万gas的前提下维持PeaceRelay？
+                                    </p>
+                                    <p class="graf graf--p graf-after--p u-xs-fontSize12 u-fontSize15"
+                                       style="font-family: 'Microsoft Yahei';">如何在以太坊上销毁BTC-token并在比特币区块链上赎回相应数量的BTC？
+                                    </p>
+                                    <p class="graf graf--p graf-after--p u-xs-fontSize12 u-fontSize15"
+                                       style="font-family: 'Microsoft Yahei';">
+                                        为了解决第一个挑战，我们（即KyberNetwork）作为PeaceRelay的维护者，将继续中继ETC区块头信息。为了避免对所有的区块进行验证，我们在中继合约中存储一笔大额的安全保证金，如1000
+                                        ETH。如果有人发现当中出现有错误的区块头信息，他可以向合约提交证明并索取我们的存款作为奖励。这笔安全保证金从经济激励层面敦促我们不要提交错误的区块头信息，并激励他人检查我们已经提交的区块头数据。值得注意的是，检测出错误的区块头信息是很容易的，这个过程只需要通过一个简单的脚本来完成，这个脚本我们此后会公开发布。这种方法类似于TrueBit的赏金思想，目的是防止问题解决方提供错误的解决方案，并且激励他人检查已提交的解决方案。
+                                    </p>
+                                    <p class="graf graf--p graf-after--p u-xs-fontSize12 u-fontSize15"
+                                       style="font-family: 'Microsoft Yahei';">
+                                        第二个问题更加比较棘手，因为我们无法在比特币区块链上部署ETH-Relay或者任何锁定合约（见上图）。大家可以等到Rootstock发布以后，在ETH和Rootstock之间建立一个双向中继，以实现比特币和以太坊间的交互。另一个实际的解决方案是，让一批支持者接收BTC并将其ETH存入BTC-token合约中，以保证用户在销毁BTC代币时，这些支持者可以取回比特币。否则他们可以向合约提出申诉，并从储备中获得更多的ETH。为了鼓励支持者将其ETH作为储备，并且促使赎回过程更加便利，支持者可以从每次存储/赎回过程中获得手续费奖励。
+                                    </p>
+                                    <h4 class="graf graf--h4 graf-after--p u-xs-fontSize20 u-fontSize22">
+                                        <strong class="markup--strong markup--h4-strong">最后感想</strong>
+                                    </h4>
+                                    <p class="graf graf--p graf-after--p u-xs-fontSize12 u-fontSize15"
+                                       style="font-family: 'Microsoft Yahei';">
+                                        虽然我们目前主张并支持将链中继技术作为跨链交易的实用方案，但我们依然在寻找并且留意着各类解决方案的最新进展。我们的愿景是到2019年初，在KyberNetwork实现不同加密数字货币间无须信任的链上交易。在此之前，我们欢迎所有的建议。
+                                    </p>
+                                    <p class="graf graf--p graf-after--p u-xs-fontSize12 u-fontSize15"
+                                       style="font-family: 'Microsoft Yahei';">原文链接：<a
+                                            href="https://blog.kyber.network/chain-relays-or-a-practical-approach-for-cross-chain-trades-d0d7003f266b">https://blog.kyber.network/chain-relays-or-a-practical-approach-for-cross-chain-trades-d0d7003f266b</a>
+                                    </p>
+
+
+                                </div>
+                            </div>
+                        </section>
+                        <!--<section name="5e3a"class="section section&#45;&#45;body section&#45;&#45;last"></section>-->
+                    </div>
+                    <footer class="u-paddingTop30">
+                        <div class="streamItem streamItem--placementCardGrid">
+                            <div class="u-clearfix u-backgroundGrayLightest">
+                                <div class="row u-marginAuto u-maxWidth1000 u-paddingTop30 u-paddingBottom20">
+                                    <div class="col u-padding8 u-xs-size12of12 u-size4of12">
+                                        <div class="uiScale uiScale-ui--small uiScale-caption--regular u-height280 u-sizeFullWidth u-backgroundWhite u-borderCardBorder u-boxShadow u-borderBox u-borderRadius4"
+                                             data-scroll="native">
+                                            <a class="link link--noUnderline "
+                                               href="an_update_on_Integrating_cn.html">
+                                                <div class="u-backgroundCover u-backgroundColorGrayLight u-height100 u-sizeFullWidth u-borderBottomLight u-borderRadiusTop4"
+                                                     style="background-image: url('../images/knowledge/z5-thumb.jpg');"></div>
+                                            </a>
+                                            <div class="u-padding15 u-borderBox u-flexColumn u-height180">
+                                                <a class="link link--noUnderline u-flex1 "
+                                                   href="an_update_on_Integrating_cn.html">
+                                                    <div class="ui-caption postMetaInline u-noWrapWithEllipsis u-marginBottom7"
+                                                         style="font-size:15px !important;">
+                                                        知识库
+                                                    </div>
+                                                    <div class="ui-heading ui-clamp2 u-textColorDarkest u-contentSansBold u-maxHeight2LineHeightTighter u-lineClamp2 u-textOverflowEllipsis u-letterSpacingTight u-paddingBottom2"
+                                                         style="font-size: 17px !important;">
+                                                        以太坊整合Zcash技术的最新进展（ZoE）
+                                                    </div>
+                                                </a>
+                                                <div class="u-paddingTop10 u-flex0 u-flexCenter">
+                                                    <div class="u-flex1 u-minWidth0 u-marginRight10">
+                                                        <div class="u-flexCenter">
+                                                            <div class="postMetaInline-avatar u-flex0">
+                                                                <!--<a class="link avatar u-baseColor&#45;&#45;link ui-linkSubtle" href="#">-->
+                                                                <img src="../images/knowledge/Christian-Reitwiessner.jpeg"
+                                                                     class="avatar-image u-size36x36">
+                                                                <!--</a>-->
+                                                            </div>
+                                                            <div class="postMetaInline postMetaInline-authorLockup u-flex1 u-noWrapWithEllipsis u-xs-fontSize10">
+                                                                <!--<a class="link link link&#45;&#45;darken link&#45;&#45;darker u-baseColor&#45;&#45;link ui-linkSubtle" href="#">-->
+                                                                Christian Reitwiessner
+                                                                <!--</a>-->
+                                                                <div class="u-fontSize12 u-baseColor--textNormal u-textColorNormal">
+                                                                    <time>2017.03.09</time>
+                                                                    <!--<span class="readingTime u-textColorNormal" title="1 min read"></span>-->
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col u-padding8 u-xs-size12of12 u-size4of12">
+                                        <div class="uiScale uiScale-ui--small uiScale-caption--regular u-height280 u-sizeFullWidth u-backgroundWhite u-borderCardBorder u-boxShadow u-borderBox u-borderRadius4"
+                                             data-scroll="native"><a
+                                                class="link link--noUnderline "
+                                                href="../news/ethereum_erc-20_token_standard_cn.html">
+                                            <div class="u-backgroundCover u-backgroundColorGrayLight u-height100 u-sizeFullWidth u-borderBottomLight u-borderRadiusTop4"
+                                                 style="background-image: url('../images/news/w4-thumb.jpg');"></div>
+                                        </a>
+                                            <div class="u-padding15 u-borderBox u-flexColumn u-height180"><a
+                                                    class="link link--noUnderline u-flex1 "
+                                                    href="../news/ethereum_erc-20_token_standard_cn.html">
+                                                <div class="ui-caption postMetaInline u-noWrapWithEllipsis u-marginBottom7"
+                                                     style="font-size:15px !important;"> 新闻
+                                                </div>
+                                                <div class="ui-heading ui-clamp2 u-textColorDarkest u-contentSansBold u-maxHeight2LineHeightTighter u-lineClamp2 u-textOverflowEllipsis u-letterSpacingTight u-paddingBottom2"
+                                                     style="font-size: 17px !important;"> 以太坊ERC-20代币标准已正式确定
+                                                </div>
+                                            </a>
+                                                <div class="u-paddingTop10 u-flex0 u-flexCenter">
+                                                    <div class="u-flex1 u-minWidth0 u-marginRight10">
+                                                        <div class="u-flexCenter">
+                                                            <div class="postMetaInline-avatar u-flex0">
+                                                                <!--<a class="link avatar u-baseColor&#45;&#45;link ui-linkSubtle" href="#">-->
+                                                                <img src="../images/dog.jpg"
+                                                                     class="avatar-image u-size36x36">
+                                                                <!--</a>-->
+                                                            </div>
+                                                            <div class="postMetaInline postMetaInline-authorLockup u-flex1 u-noWrapWithEllipsis u-xs-fontSize10">
+                                                                <!--<a class="link link link&#45;&#45;darken link&#45;&#45;darker u-baseColor&#45;&#45;link ui-linkSubtle" href="#">-->
+                                                                浅汐
+                                                                <!--</a>-->
+                                                                <div class="u-fontSize12 u-baseColor--textNormal u-textColorNormal">
+                                                                    <time>2017.09.11</time>
+                                                                    <!--<span class="readingTime u-textColorNormal" title="1 min read"></span>-->
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col u-padding8 u-xs-size12of12 u-size4of12">
+                                        <div class="uiScale uiScale-ui--small uiScale-caption--regular u-height280 u-sizeFullWidth u-backgroundWhite u-borderCardBorder u-boxShadow u-borderBox u-borderRadius4"
+                                             data-scroll="native">
+                                            <a class="link link--noUnderline "
+                                               href="explaining_the_ethereum_namespace_auction_cn.html">
+                                                <div class="u-backgroundCover u-backgroundColorGrayLight u-height100 u-sizeFullWidth u-borderBottomLight u-borderRadiusTop4"
+                                                     style="background-image: url('../images/knowledge/information_technology_767x400.jpg');"></div>
+                                            </a>
+                                            <div class="u-padding15 u-borderBox u-flexColumn u-height180">
+                                                <a class="link link--noUnderline u-flex1 "
+                                                   href="explaining_the_ethereum_namespace_auction_cn.html">
+                                                    <div class="ui-caption postMetaInline u-noWrapWithEllipsis u-marginBottom7"
+                                                         style="font-size:15px !important;">
+                                                        知识库
+                                                    </div>
+                                                    <div class="ui-heading ui-clamp2 u-textColorDarkest u-contentSansBold u-maxHeight2LineHeightTighter u-lineClamp2 u-textOverflowEllipsis u-letterSpacingTight u-paddingBottom2"
+                                                         style="font-size: 17px !important;">
+                                                        最新以太坊 | 以太坊命名空间拍卖
+                                                    </div>
+                                                </a>
+                                                <div class="u-paddingTop10 u-flex0 u-flexCenter">
+                                                    <div class="u-flex1 u-minWidth0 u-marginRight10">
+                                                        <div class="u-flexCenter">
+                                                            <div class="postMetaInline-avatar u-flex0">
+                                                                <!--<a class="link avatar u-baseColor&#45;&#45;link ui-linkSubtle" href="#">-->
+                                                                <img src="../images/knowledge/1-AW1mbHWcIh7sSOj4XJboOw(2).jpeg"
+                                                                     class="avatar-image u-size36x36">
+                                                                <!--</a>-->
+                                                            </div>
+                                                            <div class="postMetaInline postMetaInline-authorLockup u-flex1 u-noWrapWithEllipsis u-xs-fontSize10">
+                                                                <!--<a class="link link link&#45;&#45;darken link&#45;&#45;darker u-baseColor&#45;&#45;link ui-linkSubtle" href="#">-->
+                                                                Maurelian
+                                                                <!--</a>-->
+                                                                <div class="u-fontSize12 u-baseColor--textNormal u-textColorNormal">
+                                                                    <time>2017.10.25</time>
+                                                                    <!--<span class="readingTime u-textColorNormal" title="1 min read"></span>-->
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="u-textAlignCenter u-paddingBottom20 u-xs-fontSize10">&copy; UNITIMES. All
+                                    Rights Reserved.
+                                </div>
+                            </div>
+                        </div>
+                    </footer>
+                </article>
+            </main>
+        </div>
+    </div>
+</div>
+<div class="surface-scrollOverlay"></div>
+
+</body>
+
+</html>

@@ -42,11 +42,11 @@
 
         <div class="">
             <ul class="nav nav-tabs" role="tablist">
-                <li role="presentation" class="active"><a href="#participant" aria-controls="home" role="tab"
+                <!-- <li role="presentation" class="active"><a href="#participant" aria-controls="home" role="tab"
                                                           data-toggle="tab">Participant</a>
-                </li>
-                <li role="presentation"><a href="#speaker" aria-controls="profile" role="tab"
-                                           data-toggle="tab">Speaker</a></li>
+                </li> -->
+                <li role="presentation" class="active"><a href="#speaker" aria-controls="profile" role="tab"
+                                                          data-toggle="tab">Speaker</a></li>
                 <li role="presentation"><a href="#sponsor" aria-controls="messages" role="tab"
                                            data-toggle="tab">Sponsor</a></li>
                 <li role="presentation"><a href="#hackathon" aria-controls="settings" role="tab" data-toggle="tab">Hackathon</a>
@@ -55,7 +55,7 @@
 
             <!-- Tab panes -->
             <div class="tab-content">
-                <div role="tabpanel" class="tab-pane fade in active" id="participant">
+                <!-- <div role="tabpanel" class="tab-pane fade in active" id="participant">
                     <div class="sign-up-agileinfo participant-box">
                         <h3>Participant</h3>
                         <form action="#" method="post">
@@ -64,6 +64,7 @@
                                        required="">
                                 <input type="text" class="country" name="country" placeholder="Country" required="">
                                 <input type="text" class="company" name="company" placeholder="Company" required="">
+                                <input type="text" class="title" name="title" placeholder="Title" required="">
                                 <input type="text" class="email" name="email" placeholder="Email" required="">
                                 <input type="text" class="phone" name="phone" placeholder="Phone" required="">
                             </div>
@@ -147,21 +148,32 @@
                         </form>
                     </div>
 
-                </div>
-                <div role="tabpanel" class="tab-pane fade " id="speaker">
+                </div> -->
+                <div role="tabpanel" class="tab-pane fade in active" id="speaker">
                     <div class="sign-up-agileinfo">
                         <h3>Speaker</h3>
                         <form action="#" method="post">
-                            <input type="text" class="full name" name="full name" placeholder="Full Name" required="">
-                            <input type="text" class="country" name="country" placeholder="Country" required="">
-                            <input type="text" class="company text-capitalize" name="company"
-                                   placeholder="company or project"
-                                   required="">
-                            <input type="text" class="title" name="title" placeholder="Title" required="">
-                            <input type="text" class="topic" name="topic" placeholder="Topic" required="">
-                            <input type="text" class="email" name="email" placeholder="Email" required="">
-                            <input type="text" class="phone" name="phone" placeholder="Phone" required="">
+                            <div class="col-lg-6">
+                                <input type="text" class="full name" name="full name" placeholder="Full Name"
+                                       required="">
+                                <input type="text" class="country" name="country" placeholder="Country" required="">
+                                <input type="text" class="company text-capitalize" name="company"
+                                       placeholder="company"
+                                       required="">
+                                <input type="text" class="Position" name="Position" placeholder="Position" required="">
+                                <input type="text" class="email" name="email" placeholder="Email" required="">
+                                <input type="text" class="phone" name="phone" placeholder="Phone" required="">
+                            </div>
+
+                            <div class="col-lg-6">
+                                <textarea rows="16" class="project" name="project"
+                                          placeholder="Please describe the details about your topic and attach the links of your Linkedin or Github"
+                                          required=""></textarea>
+                            </div>
+
+
                             <input class="text-capitalize" type="submit" value="register">
+
                         </form>
                     </div>
 
@@ -170,12 +182,21 @@
                     <div class="sign-up-agileinfo">
                         <h3>Sponsor</h3>
                         <form action="#" method="post">
-                            <input type="text" class="full name" name="full name" placeholder="Full Name" required="">
-                            <input type="text" class="country" name="country" placeholder="Country" required="">
-                            <input type="text" class="company" name="company" placeholder="Company" required="">
-                            <input type="text" class="email" name="email" placeholder="Email" required="">
-                            <input type="text" class="business introduction" name="business introduction"
-                                   placeholder="Business Introduction" required="">
+                            <div class="col-lg-6">
+                                <input type="text" class="full name" name="full name" placeholder="Full Name"
+                                       required="">
+                                <input type="text" class="country" name="country" placeholder="Country" required="">
+                                <input type="text" class="company" name="company" placeholder="Company" required="">
+                                <input type="text" class="email" name="email" placeholder="Email" required="">
+                                <input type="text" class="phone" name="phone" placeholder="Phone" required="">
+                            </div>
+
+                            <div class="col-lg-6">
+                                <textarea rows="15" class="business introduction" name="business introduction"
+                                          placeholder="Please describe your business and attach related links"
+                                          required=""></textarea>
+                            </div>
+
                             <input class="text-capitalize" type="submit" value="register">
                         </form>
                     </div>
@@ -185,13 +206,27 @@
                     <div class="sign-up-agileinfo">
                         <h3>Hackathon</h3>
                         <form action="#" method="post">
-                            <input type="text" class="full name" name="full name" placeholder="Full Name" required="">
-                            <input type="text" class="country" name="country" placeholder="Country" required="">
-                            <input type="text" class="team text-capitalize" name="team" placeholder="team" required="">
-                            <input type="text" class="project text-capitalize" name="project" placeholder="project"
-                                   required="">
-                            <input type="text" class="email" name="email" placeholder="Email" required="">
-                            <input type="submit" value="Join">
+                            <div class="col-lg-6">
+                                <input type="text" class="full name" name="full name" placeholder="Full Name"
+                                       required="">
+                                <input type="text" class="country" name="country" placeholder="Country" required="">
+                                <input type="text" class="team text-capitalize" name="team"
+                                       placeholder="Company / Project"
+                                       required="">
+                                <input type="text" class="email" name="email" placeholder="Email" required="">
+                                <input type="text" class="phone" name="phone" placeholder="Phone" required="">
+
+                            </div>
+
+                            <div class="col-lg-6">
+                            <textarea rows="15" class="project" name="project"
+                                      placeholder="Please describe more about yourself, your research or project. Please also attach the links of your Linkedin and GitHub"
+                                      required=""></textarea>
+                            </div>
+
+
+                            <input type="submit" value="Register">
+
                         </form>
                     </div>
 

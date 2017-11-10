@@ -1,8 +1,8 @@
 /*--
-	Author: W3layouts
-	Author URL: http://w3layouts.com
-	License: Creative Commons Attribution 3.0 Unported
-	License URL: http://creativecommons.org/licenses/by/3.0/
+    Author: W3layouts
+    Author URL: http://w3layouts.com
+    License: Creative Commons Attribution 3.0 Unported
+    License URL: http://creativecommons.org/licenses/by/3.0/
 --*/
 
 /*-- Reset-Code --*/
@@ -133,9 +133,10 @@ h1 {
 }
 
 .sign-up-agileinfo {
-    width: 65%;
+    width: 100%;
     background: rgba(0, 0, 0, 0.28);
     padding: 4%;
+    -webkit-box-shadow: 0 3px 18px 8px rgba(38, 24, 24, 0.25);
     box-shadow: 0 3px 18px 8px rgba(38, 24, 24, 0.25);
     text-align: center;
     position: relative;
@@ -151,6 +152,7 @@ h1 {
     float: left;
     padding: 4%;
     background: rgba(0, 0, 0, 0.28);
+    -webkit-box-shadow: 0 3px 18px 8px rgba(38, 24, 24, 0.25);
     box-shadow: 0 3px 18px 8px rgba(38, 24, 24, 0.25);
     text-align: center;
     position: relative;
@@ -167,16 +169,25 @@ h4 {
     font-size: 22px;
 }
 
-input[type="text"] {
+input[type="text"], textarea {
     padding: 13px;
-    width: 93%;
     background: none;
     border: none;
-    border-bottom: 1px solid #37b8df;
     outline: none;
     margin-bottom: 15px;
     font-family: 'Open Sans', sans-serif;
     color: #fff;
+}
+
+input[type="text"] {
+    border-bottom: 1px solid #37b8df;
+    width: 93%;
+
+}
+
+textarea {
+    border: 1px solid #37b8df;
+    width: 90%;
 }
 
 input[type="password"] {
@@ -250,6 +261,7 @@ input[type="submit"] {
     outline: none;
     cursor: pointer;
     margin-top: 20px;
+    -webkit-transition: 0.5s all;
     transition: 0.5s all;
     webkit-transition: 0.5s all;
     -moz-transition: 0.5s all;
@@ -264,7 +276,7 @@ input[type="submit"]:hover {
     background: #37b8df;
 }
 
-input::-webkit-input-placeholder {
+input::-webkit-input-placeholder, textarea::-webkit-input-placeholder {
     /* placeholder颜色  */
     color: rgba(255, 255, 255, 0.7);
 }
@@ -292,6 +304,7 @@ input::-webkit-input-placeholder {
     width: 20px;
     height: 20px;
     margin: 0px 3px;
+    -webkit-transition: 0.5s all;
     transition: 0.5s all;
     webkit-transition: 0.5s all;
     -moz-transition: 0.5s all;
@@ -336,6 +349,7 @@ input::-webkit-input-placeholder {
 
 .footer-agilew3 p a {
     color: #fff;
+    -webkit-transition: 0.5s all;
     transition: 0.5s all;
     webkit-transition: 0.5s all;
     -moz-transition: 0.5s all;
@@ -509,7 +523,7 @@ input::-webkit-input-placeholder {
         padding: 7%;
     }
 
-    input[type="text"], input[type="password"] {
+    input[type="text"], input[type="password"], textarea {
         width: 91%;
         font-size: 12px;
     }
@@ -599,7 +613,11 @@ input::-webkit-input-placeholder {
 }
 
 .nav-tabs {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
     border-bottom: none;
 }

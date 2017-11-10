@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="referrer" content="always">
+    <meta name="robots" content="index, follow">
+    <link rel="icon" href="about:blank" type="image/x-icon">
+
+    <title>
+        Chain Relays or a Practical Approach for Cross-chain Trades
+    </title>
+
+    <meta name="title" content="Chain Relays or a Practical Approach for Cross-chain Trades">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+
+    <link rel="stylesheet" type="text/css" href="../css/article-font.css">
+    <link rel="stylesheet" href="../css/article.min.css">
+</head>
+
+<body class="browser-chrome os-mac is-withMagicUnderlines v-glyph v-glyph--m2 v-enableBrandingButtons is-js postShowScreen">
+<div class="site-main surface-container">
+    <div class="surface">
+        <div class="screenContent surface-content">
+            <div class="metabar u-clearfix  u-boxShadowBottomThinLighter u-textColorDarker u-fixed u-backgroundTransparentWhiteDarkest u-xs-sizeFullViewportWidth u-tintBgColor u-tintSpectrum">
+                <div class="metabar-inner u-marginAuto u-maxWidth1000 u-flexCenter u-justifyContentSpaceBetween u-paddingLeft20 u-paddingRight20 u-height65 u-xs-height56">
+                    <div class="metabar-block u-flex1 u-flexCenter">
+                        <a href="../index.html" class="link u-flex">
+                            <img src="../images/icon/logo_black.svg" height="25px">
+                        </a>
+                    </div>
+                    <div class="metabar-block u-flex0 u-flexCenter">
+                        <div class="u-alignMiddle u-inlineBlock u-verticalAlignTop u-height65 u-xs-height56">
+                            <div class="u-alignBlock">
+                                <div class="buttonSet buttonSet--wide u-lineHeightInherit">
+                                    <!--<a class="button button&#45;&#45;primary button&#45;&#45;dark button&#45;&#45;chromeless u-accentColor&#45;&#45;buttonDark is-inSiteNavBar u-xs-hide js-signInButton" href="#">-->
+                                    <!--中文</a>-->
+                                    <a class="button button--primary button--dark button--withChrome u-accentColor--buttonDark is-inSiteNavBar"
+                                       href="chain_relays_or_a_practical_approach_for_cross_chain_trades_cn.html"
+                                       style="font-size: 14px">
+                                        中文</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="metabar-inner u-marginAuto u-maxWidth1000">
+                    <nav role="navigation" class="metabar-block metabar-block--below u-overflowHiddenY u-height40">
+                        <ul class="u-textAlignLeft u-noWrap u-overflowX u-paddingBottom100 u-sm-paddingLeft20 u-sm-paddingRight20">
+                            <li class="metabar-navItem u-uiTextMedium u-fontSize14 u-inlineBlock u-textUppercase u-letterSpacing003 u-textColorNormal u-xs-paddingRight12 u-xs-marginRight0 u-paddingTop5 u-xs-paddingTop10">
+                                <a class="link link--darken u-accentColor--textDarken  "
+                                   href="../unitalks.html"> Unitalks </a></li>
+                            <li class="metabar-navItem  u-uiTextMedium u-fontSize14 u-inlineBlock u-textUppercase u-letterSpacing003 u-textColorNormal u-xs-paddingRight12 u-xs-marginRight0 u-paddingTop5 u-xs-paddingTop10">
+                                <a class="link link--darken u-accentColor--textDarken link--noUnderline "
+                                   href="../news.html"> News </a></li>
+                            <li class="metabar-navItem  u-uiTextMedium u-fontSize14 u-inlineBlock u-textUppercase u-letterSpacing003 u-textColorNormal u-xs-paddingRight12 u-xs-marginRight0 u-paddingTop5 u-xs-paddingTop10">
+                                <a class="link link--darker link--darken u-accentColor--textDarken link--noUnderline "
+                                   href="../knowledge.html"> Knowledge </a></li>
+                            <li class="metabar-navItem  u-uiTextMedium u-fontSize14 u-inlineBlock u-textUppercase u-letterSpacing003 u-textColorNormal u-xs-paddingRight12 u-xs-marginRight0 u-paddingTop5 u-xs-paddingTop10">
+                                <a class="link link--darken u-accentColor--textDarken link--noUnderline "
+                                   href="../events.html"> Events </a></li>
+                            <span class="u-borderLeft1 u-paddingLeft22 u-xs-paddingLeft12 u-baseColor--borderLight"></span>
+                            <li class="metabar-navItem  is-external u-uiTextMedium u-fontSize14 u-inlineBlock u-textUppercase u-letterSpacing003 u-textColorNormal u-xs-paddingRight12 u-xs-marginRight0 u-paddingTop5 u-xs-paddingTop10">
+                                <a class="link link--darken u-accentColor--textDarken link--noUnderline "
+                                   href="../index.html"> Home </a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+            <div class="metabar metabar--spacer u-tintBgColor u-height105 u-xs-height95"></div>
+            <main role="main">
+                <article
+                        class="u-minHeight100vhOffset65 u-overflowHidden postArticle postArticle--full is-withAccentColors"
+                        lang="en" data-scroll="native">
+                    <header class="container u-maxWidth740">
+                        <div class="uiScale uiScale-ui--regular uiScale-caption--regular postMetaHeader u-paddingBottom10 row">
+                            <div class="col u-size12of12">
+                                <div class="uiScale uiScale-ui--regular uiScale-caption--regular postMetaLockup postMetaLockup--authorWithBio u-flexCenter">
+                                    <div class="u-flex0">
+                                        <!--<a class="link avatar u-baseColor&#45;&#45;link ui-linkSubtle" href="#">-->
+                                        <img src="../images/knowledge/loo.png" width="50px" height="50px"
+                                             class="avatar-image">
+                                        <!--</a>-->
+                                    </div>
+                                    <div class="u-flex1 u-paddingLeft15 u-overflowHidden">
+                                        <div class="u-lineHeightTightest">
+                                            Loi Luu
+                                        </div>
+                                        <div class="ui-caption postMetaInline">
+                                            <time>July 27, 2017</time>
+                                            <!--<span class="middotDivider u-fontSize12"></span>-->
+                                            <!--<span class="readingTime"title="3 min read"></span>-->
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </header>
+                    <div class="postArticle-content" data-scroll="native">
+                        <section class="section section--body section--first">
+                            <div class="section-content">
+                                <div class="section-inner sectionLayout--insetColumn">
+                                    <h1 class="graf graf--h3 graf--leading graf--title">
+                                        Chain Relays or a Practical Approach for Cross-chain Trades
+
+                                    </h1>
+
+                                    <img class="graf--p graf-image u-marginTop40"
+                                         src="../images/knowledge/chain_Relays.jpg"
+                                         width="100%">
+
+                                    <p class="graf graf--p graf-after--figure">KyberNetwork’s long term vision is to
+                                        support trading between different cryptocurrencies, e.g between BTC and ETH, ETC
+                                        and any ETH tokens. In order to do so, we rely on technology and protocols that
+                                        allow communication between these cryptocurrency networks. We are glad to see
+                                        many qualified teams including <a href="https://polkadot.io/"
+                                                                          data-href="https://polkadot.io"
+                                                                          class="markup--anchor markup--p-anchor"
+                                                                          rel="noopener" target="_blank">Polkadot</a>
+                                        and <a href="https://cosmos.network/" data-href="https://cosmos.network/"
+                                               class="markup--anchor markup--p-anchor" rel="noopener" target="_blank">Cosmos</a> — just
+                                        to name a few — working on the problem. Unfortunately, these projects are still
+                                        under heavy development and either have yet to announce any release date (e.g.
+                                        Polkadot) or only work for proof of stake-based blockchains (e.g. Cosmos). Thus,
+                                        a practical solution for interchain communication between existing blockchains
+                                        is still yet to be explored. In this post, we discuss a practical solution that
+                                        has been largely overlooked: chain relays. We conclude by describing how
+                                        KyberNetwork is planning to use and maintain chain relays for our use cases.</p>
+                                    <h3 class="graf graf--h3 graf-after--p">What is a Chain&nbsp;Relay?</h3>
+                                    <p class="graf graf--p graf-after--h3">A chain relay for a blockchain X, or X-relay
+                                        for brevity, is a way to implement and maintain light client for blockchain X
+                                        within an Ethereum smart contract. The contract essentially stores all block
+                                        headers which are much lighter than the size of the chain state or the entire
+                                        blockchain, hence the term light client. With the block headers, it is
+                                        sufficient to verify if a transaction has been included, or even the blockchain
+                                        state, depending on what are stored in a block header. Thus, X-relay allows any
+                                        contract in Ethereum to verify transactions, and sometimes even account states
+                                        of the blockchain X via the implemented light client.</p>
+                                    <h4 class="graf graf--h4 graf-after--p">Why Chain Relays Are Powerful?</h4>
+                                    <p class="graf graf--p graf-after--h4">Having a light client of a cryptocurrency X
+                                        running on Ethereum enables strong interoperability between Ethereum and the
+                                        said cryptocurrency. For example, one can create a contract to receive payment
+                                        in X-coin by fixing a beneficiary address in X that one controls. The contract
+                                        then verifies any transaction via X-relay to see if the exact amount has been
+                                        sent to the given address. Chain relays simply break the boundary between
+                                        different cryptocurrencies/ blockchains and, most importantly, does not require
+                                        any trust assumption.</p>
+                                    <h3 class="graf graf--h3 graf-after--p">What Are the States of Existing Chain&nbsp;Relays?</h3>
+                                    <p class="graf graf--p graf-after--h3">The first chain relay on Ethereum was
+                                        BTCRelay developed by Joseph Chow. You can watch to his talk in Devcon 1 <a
+                                                href="https://www.youtube.com/watch?v=5WGgoVmfIik"
+                                                data-href="https://www.youtube.com/watch?v=5WGgoVmfIik"
+                                                class="markup--anchor markup--p-anchor" rel="noopener" target="_blank">here</a>.
+                                        BTCRelay, though promises interesting applications, has not gained much adoption
+                                        yet. At the time of writing, the last BTC block relayed to the contract was 18
+                                        days ago. Part of the reasons for the low adoption was that the relay is one
+                                        way: one cannot relay Ethereum transaction back to Bitcoin.</p>
+                                    <p class="graf graf--p graf-after--p">Recently, I jointly developed <a
+                                            href="https://medium.com/@loiluu/peacerelay-connecting-the-many-ethereum-blockchains-22605c300ad3"
+                                            data-href="https://medium.com/@loiluu/peacerelay-connecting-the-many-ethereum-blockchains-22605c300ad3"
+                                            class="markup--anchor markup--p-anchor" target="_blank">PeaceRelay</a> to
+                                        allow interchain communication between different Ethereum based blockchains
+                                        (e.g. Ethereum and Ethereum Classic). A functional prototype has been <a
+                                                href="https://github.com/loiluu/peacerelay/"
+                                                data-href="https://github.com/loiluu/peacerelay/"
+                                                class="markup--anchor markup--p-anchor" rel="noopener" target="_blank">released</a>
+                                        that allows the moving of ETC to and from Ethereum blockchain. While it is still
+                                        expensive to naively maintain PeaceRelay (due to the high gas cost), PeaceRelay
+                                        is ready for practical uses today.</p>
+                                    <p class="graf graf--p graf-after--p">There has been some effort in building a
+                                        ZECRelay for ZCash on Ethereum. For example, <a
+                                                href="https://github.com/ethereum/EIPs/issues/152"
+                                                data-href="https://github.com/ethereum/EIPs/issues/152"
+                                                class="markup--anchor markup--p-anchor" rel="noopener" target="_blank">BLAKE2</a>
+                                        hash function is under consideration to be available in Metropolis hard fork. If
+                                        this EIP for BLAKE2 gets approved before Metropolis, and given that zkSNARK is
+                                        already included in Metropolis, ZECRelay on Ethereum can be built efficiently.
+                                    </p>
+                                    <p class="graf graf--p graf-after--p">Building relays on Ethereum for
+                                        cryptocurrencies like LiteCoin and DogeCoin that use <a
+                                                href="https://en.bitcoin.it/wiki/Scrypt_proof_of_work"
+                                                data-href="https://en.bitcoin.it/wiki/Scrypt_proof_of_work"
+                                                class="markup--anchor markup--p-anchor" rel="noopener" target="_blank">Scrypt</a>
+                                        proof of work is trickier as the gas required to verify/ compute a Scrypt hash
+                                        is enormous. There is an 1,5oo ETH <a
+                                                href="https://etherscan.io/address/0xdbf03b407c01e7cd3cbea99509d93f8dddc8c6fb"
+                                                data-href="https://etherscan.io/address/0xdbf03b407c01e7cd3cbea99509d93f8dddc8c6fb"
+                                                class="markup--anchor markup--p-anchor" rel="noopener" target="_blank">bounty</a>
+                                        for building Doge-Ethereum relay (used to be 6000 ETH), but no one has been able
+                                        to claim it so far. The feasibility of practical relays for these Scrypt-PoW
+                                        cryptocurrencies still remain unknown.</p>
+                                    <h3 class="graf graf--h3 graf-after--p"><strong
+                                            class="markup--strong markup--h3-strong">What Chain Relays Mean to
+                                        Decentralized Exchanges like KyberNetwork?</strong></h3>
+                                    <p class="graf graf--p graf-after--h3">One can easily create a new ERC-20 token
+                                        backed by X via a simple minting process. Specifically, the ERC-20 contract will
+                                        mint new X-token if one creates a transaction on blockchain X that deposits
+                                        X-coins to a predefined address. Since the ERC-20 contract can verify the
+                                        validity of the transaction via X-relay, it can be guaranteed that some X-coins
+                                        have been deposited in order to mint the corresponding amount of new tokens, as
+                                        long as X-chain is not vulnerable to 51% attacks (if it is, X is worthless
+                                        anyway). This allows anyone to trade X-coins (e.g. Bitcoin, ZCash, ETC) to any
+                                        ERC-20 tokens on Ethereum.</p>
+                                    <p class="graf graf--p graf-after--p">Things are great so far. We have been able to
+                                        deposit X-coins to mint ERC-20 X-tokens, trade X-tokens with others ERC-20
+                                        tokens trustlessly with on-chain exchanges like KyberNetwork. However, something
+                                        is still missing. How does one convert X-tokens back to X-coins? This is where
+                                        things go tricky but interesting. A good solution is to deploy ETH-Relay on X
+                                        chain, thus forming a 2-way relay between Ethereum and X chain. Now one can burn
+                                        X-tokens on Ethereum and submit the proof to X chain to claim the deposited
+                                        X-coins. An example of this scenario is the two-way relay between Ethereum and
+                                        Ethereum Classic, which is depicted in the figure below. Two-way relay enables a
+                                        great use-case in which trading between ETH and ETC can be done in a trustless
+                                        manner: no trusted intermediary is needed to facilitate the trade.</p>
+
+                                    <img class="graf--p graf-image u-marginTop40"
+                                         src="../images/knowledge/Moving_etc.jpeg"
+                                         width="100%">
+                                    <figcaption class="imageCaption">Moving ETC from/ to Ethereum blockchain trustlessly
+                                        by using 2-way relay between Ethereum and Ethereum Classic. The mint process
+                                        works in three steps (1, 2 and 3) including: 1. locking ETC in an ETC contract,
+                                        2. minting ETC token by send the locking transaction and a proof to the token
+                                        contract running on Ethereum, and 3. the token contract verifies the locking
+                                        transaction with ETC Relay before minting the corresponding amount of ETC
+                                        Tokens. The claiming process that allows users to withdraw ETC from their ETC
+                                        Token happens in three similar steps (4, 5 and&nbsp;6).
+                                    </figcaption>
+                                    <p class="graf graf--p graf-after--figure">The 2-way relay also allows interchain
+                                        communication between private and public Ethereum based blockchains. EEA has
+                                        recently become the <a
+                                                href="https://www.inc.com/brian-d-evans/the-enterprise-ethereum-alliance-just-got-a-whole-.html"
+                                                data-href="https://www.inc.com/brian-d-evans/the-enterprise-ethereum-alliance-just-got-a-whole-.html"
+                                                class="markup--anchor markup--p-anchor" rel="nofollow noopener noopener"
+                                                target="_blank">largest blockchain consortium</a>, one can predict that
+                                        many private blockchains based on Ethereum will be launched. As an example, MAS,
+                                        the central bank of Singapore, plans to <a
+                                                href="https://www.coindesk.com/tokenized-dollars-singapores-central-bank-details-new-blockchain-trial/"
+                                                data-href="https://www.coindesk.com/tokenized-dollars-singapores-central-bank-details-new-blockchain-trial/"
+                                                class="markup--anchor markup--p-anchor" rel="noopener" target="_blank">tokenize</a>
+                                        Singapore Dollars in its Ethereum based private chain. SGD-Relay will allow
+                                        users to move SGD between the MAS private chain and the Ethereum public chain,
+                                        thus allowing on-chain trading between crypto tokens and fiats in the future.
+                                    </p>
+                                    <p class="graf graf--p graf-after--p">However, the ideal solution for claiming
+                                        X-coins does not work when X does not support expressive smart contracts like
+                                        Ethereum. For example, one cannot yet deploy 2-way relay between Bitcoin and
+                                        Ethereum, or between ZCash and Ethereum. Further, the gas cost to maintain
+                                        PeaceRelay is expensive, making it impractical to verify all block headers while
+                                        maintaining the 2-way relay between Ethereum and Ethereum Classic. We next
+                                        discuss how KyberNetwork plans to deploy and maintain these relays in
+                                        practice.</p>
+                                    <h3 class="graf graf--h3 graf-after--p">KyberNetwork’s Practical Deployment of Chain&nbsp;Relays</h3>
+                                    <p class="graf graf--p graf-after--h3">Even though we have to wait until Metropolis
+                                        hard fork to determine if we can build ZECRelay on Ethereum, we can already
+                                        deploy and run BTCRelay and PeaceRelay today. KyberNetwork’s vision is to
+                                        maintain the two relays to support trading Bitcoin/ETC with ETH and Ethereum’s
+                                        tokens. However, there are still two remaining questions that we need to address
+                                        to achieve that vision.</p>
+                                    <ol class="postList">
+                                        <li class="graf graf--li graf-after--p">How to maintain PeaceRelay without
+                                            paying 2.6 millions of gas for each block header?
+                                        </li>
+                                        <li class="graf graf--li graf-after--li">How to withdraw BTC token on Ethereum
+                                            to claim BTC on Bitcoin?
+                                        </li>
+                                    </ol>
+                                    <p class="graf graf--p graf-after--li">To solve the first challenge, we (i.e.
+                                        KyberNetwork), as the maintainer of PeaceRelay, will keep relaying ETC block
+                                        headers. To avoid verifying all blocks, we put a side a large security deposit
+                                        of, say, 1000 ETH in the relay contract. If there is any wrong block header, one
+                                        can submit a proof to the contract and claim our deposit. This security deposit
+                                        disincentivizes us from submitting wrong block headers, and incentivizes others
+                                        to check our submitted block headers. It is worth noting that detecting wrong
+                                        block headers is easy, can be done by a simple script that we will make publicly
+                                        available. This approach resembles the the bounty idea used in <a
+                                                href="http://truebit.io/" data-href="http://truebit.io"
+                                                class="markup--anchor markup--p-anchor" rel="noopener" target="_blank">TrueBit</a>
+                                        to prevent solvers from providing wrong solutions and incentivize others to
+                                        check submitted solution.</p>
+                                    <p class="graf graf--p graf-after--p">The second question is trickier as we cannot
+                                        deploy ETHRelay or any locking contract (see the figure above) on Bitcoin. One
+                                        can wait until <a href="http://www.rsk.co/" data-href="http://www.rsk.co/"
+                                                          class="markup--anchor markup--p-anchor" rel="noopener"
+                                                          target="_blank">Rootstock</a> launch and build a 2-way relay
+                                        between ETH and Rootstock to move Bitcoin to and from Ethereum&nbsp;. Another
+                                        practical solution is to have a pool of backers who receive BTC and deposit
+                                        their ETH in the BTC token contract to guarantee that when users burn their BTC
+                                        Token, the backers will get back their Bitcoin. Otherwise they can complain to
+                                        the contract and get much more in ETH from the deposit pool. To incentivize the
+                                        backers to put their ETH as the deposit and to facilitate the withdrawals, the
+                                        backers can take fees per every deposit/ withdrawal.</p>
+                                    <h3 class="graf graf--h3 graf-after--p">Final thoughts</h3>
+                                    <p class="graf graf--p graf-after--h3 graf--trailing">Although we currently advocate
+                                        and support chain relays as our practical approach for cross-chain trading, we
+                                        are consistently searching and looking out for new developments of prospectus
+                                        solutions. Our vision is to have trustless and on-chain trading between
+                                        different cryptocurrencies on KyberNetwork in early 2019. Until then, we are
+                                        open to all candidates.</p>
+                                </div>
+                            </div>
+                        </section>
+                        <!--<section name="5e3a"class="section section&#45;&#45;body section&#45;&#45;last"></section>-->
+                    </div>
+                    <footer class="u-paddingTop30">
+                        <div class="streamItem streamItem--placementCardGrid">
+                            <div class="u-clearfix u-backgroundGrayLightest">
+                                <div class="row u-marginAuto u-maxWidth1000 u-paddingTop30 u-paddingBottom20">
+
+                                    <div class="col u-padding8 u-xs-size12of12 u-size4of12">
+                                        <div class="uiScale uiScale-ui--small uiScale-caption--regular u-height280 u-sizeFullWidth u-backgroundWhite u-borderCardBorder u-boxShadow u-borderBox u-borderRadius4"
+                                             data-scroll="native">
+                                            <a class="link link--noUnderline "
+                                               href="an_update_on_Integrating.html">
+                                                <div class="u-backgroundCover u-backgroundColorGrayLight u-height100 u-sizeFullWidth u-borderBottomLight u-borderRadiusTop4"
+                                                     style="background-image: url('../images/knowledge/z5-thumb.jpg');"></div>
+                                            </a>
+                                            <div class="u-padding15 u-borderBox u-flexColumn u-height180">
+                                                <a class="link link--noUnderline u-flex1 "
+                                                   href="an_update_on_Integrating.html">
+                                                    <div class="ui-caption postMetaInline u-noWrapWithEllipsis u-marginBottom7">
+                                                        Knowledge
+                                                    </div>
+                                                    <div class="ui-heading ui-clamp2 u-textColorDarkest u-contentSansBold u-fontSize24 u-maxHeight2LineHeightTighter u-lineClamp2 u-textOverflowEllipsis u-letterSpacingTight u-paddingBottom2">
+                                                        An Update on Integrating Zcash on Ethereum (ZoE)
+                                                    </div>
+                                                </a>
+                                                <div class="u-paddingTop10 u-flex0 u-flexCenter">
+                                                    <div class="u-flex1 u-minWidth0 u-marginRight10">
+                                                        <div class="u-flexCenter">
+                                                            <div class="postMetaInline-avatar u-flex0">
+                                                                <!--<a class="link avatar u-baseColor&#45;&#45;link ui-linkSubtle" href="#">-->
+                                                                <img src="../images/knowledge/Christian-Reitwiessner.jpeg"
+                                                                     class="avatar-image u-size36x36 u-xs-size32x32">
+                                                                <!--</a>-->
+                                                            </div>
+                                                            <div class="postMetaInline postMetaInline-authorLockup u-flex1 u-noWrapWithEllipsis">
+                                                                <!--<a class="link link link&#45;&#45;darken link&#45;&#45;darker u-baseColor&#45;&#45;link ui-linkSubtle" href="#">-->
+                                                                Christian Reitwiessner
+                                                                <!--</a>-->
+                                                                <div class="u-fontSize12 u-baseColor--textNormal u-textColorNormal">
+                                                                    <time>9 Mar, 2017</time>
+                                                                    <!--<span class="readingTime u-textColorNormal" title="1 min read"></span>-->
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col u-padding8 u-xs-size12of12 u-size4of12">
+                                        <div class="uiScale uiScale-ui--small uiScale-caption--regular u-height280 u-sizeFullWidth u-backgroundWhite u-borderCardBorder u-boxShadow u-borderBox u-borderRadius4"
+                                             data-scroll="native"><a
+                                                class="link link--noUnderline "
+                                                href="../news/ethereum_erc-20_token_standard.html">
+                                            <div class="u-backgroundCover u-backgroundColorGrayLight u-height100 u-sizeFullWidth u-borderBottomLight u-borderRadiusTop4"
+                                                 style="background-image: url('../images/news/w4-thumb.jpg');"></div>
+                                        </a>
+                                            <div class="u-padding15 u-borderBox u-flexColumn u-height180"><a
+                                                    class="link link--noUnderline u-flex1 "
+                                                    href="../news/ethereum_erc-20_token_standard.html">
+                                                <div class="ui-caption postMetaInline u-noWrapWithEllipsis u-marginBottom7">
+                                                    News
+                                                </div>
+                                                <div class="ui-heading ui-clamp2 u-textColorDarkest u-contentSansBold u-fontSize24 u-maxHeight2LineHeightTighter u-lineClamp2 u-textOverflowEllipsis u-letterSpacingTight u-paddingBottom2">
+                                                    Ethereum's ERC-20 Token Standard Has Been Finalized
+                                                </div>
+                                            </a>
+                                                <div class="u-paddingTop10 u-flex0 u-flexCenter">
+                                                    <div class="u-flex1 u-minWidth0 u-marginRight10">
+                                                        <div class="u-flexCenter">
+                                                            <div class="postMetaInline-avatar u-flex0">
+                                                                <!--<a class="link avatar u-baseColor&#45;&#45;link ui-linkSubtle" href="#">-->
+                                                                <img src="../images/dog.jpg"
+                                                                     class="avatar-image u-size36x36 u-xs-size32x32">
+                                                                <!--</a>-->
+                                                            </div>
+                                                            <div class="postMetaInline postMetaInline-authorLockup u-flex1 u-noWrapWithEllipsis">
+                                                                <!--<a class="link link link&#45;&#45;darken link&#45;&#45;darker u-baseColor&#45;&#45;link ui-linkSubtle" href="#">-->
+                                                                Qianxi
+                                                                <!--</a>-->
+                                                                <div class="u-fontSize12 u-baseColor--textNormal u-textColorNormal">
+                                                                    <time>11 Sept, 2017</time>
+                                                                    <!--<span class="readingTime u-textColorNormal" title="1 min read"></span>-->
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col u-padding8 u-xs-size12of12 u-size4of12">
+                                        <div class="uiScale uiScale-ui--small uiScale-caption--regular u-height280 u-sizeFullWidth u-backgroundWhite u-borderCardBorder u-boxShadow u-borderBox u-borderRadius4"
+                                             data-scroll="native">
+                                            <a class="link link--noUnderline "
+                                               href="explaining_the_ethereum_namespace_auction.html">
+                                                <div class="u-backgroundCover u-backgroundColorGrayLight u-height100 u-sizeFullWidth u-borderBottomLight u-borderRadiusTop4"
+                                                     style="background-image: url('../images/knowledge/information_technology_767x400.jpg');"></div>
+                                            </a>
+                                            <div class="u-padding15 u-borderBox u-flexColumn u-height180">
+                                                <a class="link link--noUnderline u-flex1 "
+                                                   href="explaining_the_ethereum_namespace_auction.html">
+                                                    <div class="ui-caption postMetaInline u-noWrapWithEllipsis u-marginBottom7">
+                                                        Knowledge
+                                                    </div>
+                                                    <div class="ui-heading ui-clamp2 u-textColorDarkest u-contentSansBold u-fontSize24 u-maxHeight2LineHeightTighter u-lineClamp2 u-textOverflowEllipsis u-letterSpacingTight u-paddingBottom2">
+                                                        Explaining the Ethereum Namespace Auction
+                                                    </div>
+                                                </a>
+                                                <div class="u-paddingTop10 u-flex0 u-flexCenter">
+                                                    <div class="u-flex1 u-minWidth0 u-marginRight10">
+                                                        <div class="u-flexCenter">
+                                                            <div class="postMetaInline-avatar u-flex0">
+                                                                <!--<a class="link avatar u-baseColor&#45;&#45;link ui-linkSubtle" href="#">-->
+                                                                <img src="../images/knowledge/1-AW1mbHWcIh7sSOj4XJboOw(2).jpeg"
+                                                                     class="avatar-image u-size36x36 u-xs-size32x32">
+                                                                <!--</a>-->
+                                                            </div>
+                                                            <div class="postMetaInline postMetaInline-authorLockup u-flex1 u-noWrapWithEllipsis">
+                                                                <!--<a class="link link link&#45;&#45;darken link&#45;&#45;darker u-baseColor&#45;&#45;link ui-linkSubtle" href="#">-->
+                                                                Maurelian
+                                                                <!--</a>-->
+                                                                <div class="u-fontSize12 u-baseColor--textNormal u-textColorNormal">
+                                                                    <time>25 Oct, 2017</time>
+                                                                    <!--<span class="readingTime u-textColorNormal" title="1 min read"></span>-->
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <div class="u-textAlignCenter u-paddingBottom20 u-xs-fontSize10">&copy; UNITIMES. All
+                                    Rights Reserved.
+                                </div>
+                            </div>
+                        </div>
+                    </footer>
+                </article>
+            </main>
+        </div>
+    </div>
+</div>
+<div class="surface-scrollOverlay"></div>
+</body>
+
+</html>

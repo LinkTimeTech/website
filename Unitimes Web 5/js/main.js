@@ -216,7 +216,7 @@
 
     var contentWayPoint = function () {
         var i = 0;
-        $('.animate-box').waypoint(function (direction) {
+        $('.wow ').waypoint(function (direction) {
 
             if (direction === 'down' && !$(this.element).hasClass('animated-fast')) {
 
@@ -225,7 +225,7 @@
                 $(this.element).addClass('item-animate');
                 setTimeout(function () {
 
-                    $('body .animate-box.item-animate').each(function (k) {
+                    $('body .wow .item-animate').each(function (k) {
                         var el = $(this);
                         setTimeout(function () {
                             var effect = el.data('animate-effect');
@@ -309,7 +309,6 @@
         $('.gtco-loader').fadeOut('slow', function () {
             $(this).remove();
         });
-
     });
 
     var counter = function () {

@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="referrer" content="always">
+    <meta name="robots" content="index, follow">
+    <link rel="icon" href="about:blank" type="image/x-icon">
+
+    <title>
+        State Channels
+    </title>
+
+    <meta name="title" content="Demo">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+
+    <link rel="stylesheet" type="text/css" href="../css/article-font.css">
+    <link rel="stylesheet" href="../css/article.min.css">
+</head>
+
+<body class="browser-chrome os-mac is-withMagicUnderlines v-glyph v-glyph--m2 v-enableBrandingButtons is-js postShowScreen">
+<div class="site-main surface-container">
+    <div class="surface">
+        <div class="screenContent surface-content">
+            <div class="metabar u-clearfix  u-boxShadowBottomThinLighter u-textColorDarker u-fixed u-backgroundTransparentWhiteDarkest u-xs-sizeFullViewportWidth u-tintBgColor u-tintSpectrum">
+                <div class="metabar-inner u-marginAuto u-maxWidth1000 u-flexCenter u-justifyContentSpaceBetween u-paddingLeft20 u-paddingRight20 u-height65 u-xs-height56">
+                    <div class="metabar-block u-flex1 u-flexCenter">
+                        <a href="../index.html" class="link u-flex">
+                            <img src="../images/icon/logo_black.svg" height="25px">
+                        </a>
+                    </div>
+                    <div class="metabar-block u-flex0 u-flexCenter">
+                        <div class="u-alignMiddle u-inlineBlock u-verticalAlignTop u-height65 u-xs-height56">
+                            <div class="u-alignBlock">
+                                <div class="buttonSet buttonSet--wide u-lineHeightInherit">
+                                    <!--<a class="button button&#45;&#45;primary button&#45;&#45;dark button&#45;&#45;chromeless u-accentColor&#45;&#45;buttonDark is-inSiteNavBar u-xs-hide js-signInButton" href="#">-->
+                                    <!--中文</a>-->
+                                    <a class="button button--primary button--dark button--withChrome u-accentColor--buttonDark is-inSiteNavBar"
+                                       href="state_channels_cn.html" style="font-size: 14px">
+                                        中文</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="metabar-inner u-marginAuto u-maxWidth1000">
+                    <nav role="navigation" class="metabar-block metabar-block--below u-overflowHiddenY u-height40">
+                        <ul class="u-textAlignLeft u-noWrap u-overflowX u-paddingBottom100 u-sm-paddingLeft20 u-sm-paddingRight20">
+                            <li class="metabar-navItem u-uiTextMedium u-fontSize14 u-inlineBlock u-textUppercase u-letterSpacing003 u-textColorNormal u-xs-paddingRight12 u-xs-marginRight0 u-paddingTop5 u-xs-paddingTop10">
+                                <a class="link link--darken u-accentColor--textDarken  "
+                                   href="../unitalks.html"> Unitalks </a></li>
+                            <li class="metabar-navItem  u-uiTextMedium u-fontSize14 u-inlineBlock u-textUppercase u-letterSpacing003 u-textColorNormal u-xs-paddingRight12 u-xs-marginRight0 u-paddingTop5 u-xs-paddingTop10">
+                                <a class="link link--darken u-accentColor--textDarken link--noUnderline "
+                                   href="../news.html"> News </a></li>
+                            <li class="metabar-navItem  u-uiTextMedium u-fontSize14 u-inlineBlock u-textUppercase u-letterSpacing003 u-textColorNormal u-xs-paddingRight12 u-xs-marginRight0 u-paddingTop5 u-xs-paddingTop10">
+                                <a class="link link--darker link--darken u-accentColor--textDarken link--noUnderline "
+                                   href="../knowledge.html"> Knowledge </a></li>
+                            <li class="metabar-navItem  u-uiTextMedium u-fontSize14 u-inlineBlock u-textUppercase u-letterSpacing003 u-textColorNormal u-xs-paddingRight12 u-xs-marginRight0 u-paddingTop5 u-xs-paddingTop10">
+                                <a class="link link--darken u-accentColor--textDarken link--noUnderline "
+                                   href="../events.html"> Events </a></li>
+                            <span class="u-borderLeft1 u-paddingLeft22 u-xs-paddingLeft12 u-baseColor--borderLight"></span>
+                            <li class="metabar-navItem  is-external u-uiTextMedium u-fontSize14 u-inlineBlock u-textUppercase u-letterSpacing003 u-textColorNormal u-xs-paddingRight12 u-xs-marginRight0 u-paddingTop5 u-xs-paddingTop10">
+                                <a class="link link--darken u-accentColor--textDarken link--noUnderline "
+                                   href="../index.html"> Home </a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+            <div class="metabar metabar--spacer u-tintBgColor u-height105 u-xs-height95"></div>
+            <main role="main">
+                <article
+                        class="u-minHeight100vhOffset65 u-overflowHidden postArticle postArticle--full is-withAccentColors"
+                        lang="en" data-scroll="native">
+                    <header class="container u-maxWidth740">
+                        <div class="uiScale uiScale-ui--regular uiScale-caption--regular postMetaHeader u-paddingBottom10 row">
+                            <div class="col u-size12of12">
+                                <div class="uiScale uiScale-ui--regular uiScale-caption--regular postMetaLockup postMetaLockup--authorWithBio u-flexCenter">
+                                    <div class="u-flex0">
+                                        <!--<a class="link avatar u-baseColor&#45;&#45;link ui-linkSubtle" href="#">-->
+                                        <img src="../images/person.svg" width="50px" height="50px" class="avatar-image">
+                                        <!--</a>-->
+                                    </div>
+                                    <div class="u-flex1 u-paddingLeft15 u-overflowHidden">
+                                        <div class="u-lineHeightTightest">
+                                            Jeff Coleman
+                                        </div>
+                                        <div class="ui-caption postMetaInline">
+                                            <time>Nov 6, 2015</time>
+                                            <!--<span class="middotDivider u-fontSize12"></span>-->
+                                            <!--<span class="readingTime"title="3 min read"></span>-->
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </header>
+                    <div class="postArticle-content" data-scroll="native">
+                        <section class="section section--body section--first">
+                            <div class="section-content">
+                                <div class="section-inner sectionLayout--insetColumn">
+                                    <h1 class="graf graf--h3 graf--leading graf--title">
+                                        State Channels
+                                    </h1>
+
+                                    <img class="graf--p graf-image u-marginTop40"
+                                         src="../images/knowledge/state_Channels.jpg"
+                                         width="100%">
+
+                                    <p class="graf graf--p graf-after--p">This post is the second in a series which aims
+                                        to clarify uncommon terms that I use. Like those that follow, this term has
+                                        proven useful in my own understanding of blockchains and blockchain-related
+                                        technologies. I hope that by clearly explaining it here, the term can become
+                                        useful for others as well.
+                                    </p>
+                                    <p class="graf graf--p graf-after--p">State channels are a very broad and simple way
+                                        to think about blockchain interactions which could occur on the blockchain, but
+                                        instead get conducted off of the blockchain, without significantly increasing
+                                        the risk of any participant. The most well known example of this strategy is the
+                                        idea of payment channels in Bitcoin, which allow for instant fee-less payments
+                                        to be sent directly between two parties.  State channels are the general form of
+                                        payment channels, applying the same idea to any kind of state-altering operation
+                                        normally performed on a blockchain. Moving these interactions off of the chain
+                                        without requiring any additional trust can lead to significant improvements in
+                                        cost and speed. State channels will be a critical part of scaling blockchain
+                                        technologies to support higher levels of use.
+                                    </p>
+                                    <p class="graf graf--p graf-after--p">The basic components of a state channel are
+                                        very simple:
+                                    </p>
+                                    <p class="graf graf--p graf-after--p">1. Part of the blockchain state is
+                                        locked via multisignature or some sort of smart contract, so that a specific set
+                                        of participants must completely agree with each other to update it. 
+                                    </p>
+                                    <p class="graf graf--p graf-after--p">2. Participants update the state amongst
+                                        themselves by constructing and signing transactions that could be submitted to
+                                        the blockchain, but instead are merely held onto for now. Each new update
+                                        "trumps" previous updates. 
+                                    </p>
+                                    <p class="graf graf--p graf-after--p">3. Finally, participants submit the state back
+                                        to the blockchain, which closes the state channel and unlocks the state again
+                                        (usually in a different configuration than it started with).
+                                    </p>
+                                    <p class="graf graf--p graf-after--p">That's it! If the "state" being updated
+                                        between participants was a digital currency balance, then we would have a
+                                        payment channel. Steps 1 and 3, which open and close the channel, involve
+                                        blockchain operations. But in step 2 an unlimited number of updates can be
+                                        rapidly made without the need to involve the blockchain at all--and this is
+                                        where the power of state channels comes into play, because only steps 1 and 3
+                                        need to be published to the network, pay fees, or wait for confirmations. In
+                                        fact, with careful planning and design, state channels can remain open almost
+                                        indefinitely, and be used as part of larger hub and spoke systems to power an
+                                        entire economy or ecosystem.
+                                    </p>
+                                    <p class="graf graf--p graf-after--p">Despite my simple description here,
+                                        state/payment channels have generally been perceived as quite complicated. There
+                                        are several reasons for this, and one of them is that there are some important
+                                        subtleties hidden in my phrasing of the three steps. Let's take a closer look at
+                                        what these simple phrases imply, starting with:
+                                    </p>
+                                    <p class="graf graf--p graf-after--p">could be submitted to the blockchain
+                                    </p>
+                                    <p class="graf graf--p graf-after--p">In order for state channels to work,
+                                        participants have to be assured that they could publish the current state of the
+                                        channel to the blockchain at any time. This results in some important
+                                        limitations, such as the fact that someone has to stay online to protect each
+                                        individual party's interests until the channel is closed.
+                                    </p>
+                                    <p class="graf graf--p graf-after--p">Imagine that when we initiated a payment
+                                        channel I started with 100 bitcoins and you started with 10. If we first sign an
+                                        update that transfers 10 of those bitcoins to me, and then later sign an update
+                                        that transfers 50 back to you, the later update is obviously more beneficial to
+                                        you than the earlier one is. If you were to unexpectedly lose internet access,
+                                        and I were to pretend the second update never happened, I might be able to
+                                        publish the first update to the blockchain and effectively steal 50 bitcoins
+                                        from you! What you need is somebody to stay online with a copy of that later
+                                        transaction so that they can "trump" the earlier one and make sure your bitcoins
+                                        are protected.  It doesn't have to be you--you could send a copy to many random
+                                        servers who agree via smart contract to publish it only if needed (for a small
+                                        fee of course). But however you do it, you need to be assured that the latest
+                                        signed update to the state is available to trump all others. Which leads us to
+                                        our next subtle phrase:
+                                    </p>
+                                    <p class="graf graf--p graf-after--p">Each new update "trumps" previous updates
+                                    </p>
+                                    <p class="graf graf--p graf-after--p">To make this part of the state channel
+                                        work, the locking and unlocking mechanisms have to be properly designed so that
+                                        old state updates submitted to the blockchain have a chance to be corrected by
+                                        the newer state updates which replaced them.  The simplest way is to have any
+                                        unlocking attempt start a timer, during which any newer update can replace the
+                                        old update (restarting the timer as well). When the timer completes, the channel
+                                        is closed and the state adjusted to reflect the last update received. The length
+                                        of the timer would be chosen for each state channel, balancing the inconvenience
+                                        of a long channel closing time with the increased safety it would provide
+                                        against internet connection or blockchain problems. Alternatively, you could
+                                        structure the channel with a financial penalty so that anyone publishing an
+                                        inaccurate update to the blockchain will lose more than they could gain by
+                                        pretending later transactions didn't happen.
+                                    </p>
+                                    <p class="graf graf--p graf-after--p">But the mechanism ends up not mattering very
+                                        much, because (going back to the previous point) the game theory of this
+                                        situation puts a twist on things.  As long as this mechanism is theoretically
+                                        sound, it will probably never have to be used. Actually going through the
+                                        timer/penalty process may introduce extra fees, delays, or other inconveniences;
+                                        given that forcing someone into the mechanism can't give you any advantage
+                                        anyways, parties to a state channel will probably just close the channel out by
+                                        mutually agreeing on a final channel state. This final close-out operation needs
+                                        to be fundamentally different from the normal "intermediate" updates (since it
+                                        will bypass the "trumping" mechanism above), so participants will only sign a
+                                        final close-out transaction once for each portion of the state locked within a
+                                        particular channel.
+                                    </p>
+                                    <p class="graf graf--p graf-after--p">The details of these "subtleties" aren't
+                                        especially important. What it all ultimately breaks down to is that participants
+                                        open the channel by setting up a "judge" smart contract, sign promises to each
+                                        other which the judge can enforce and adjudicate if necessary, and then close
+                                        the channel by agreeing amongst themselves so that the judge's adjudication
+                                        isn't needed. As long as the "judge" mechanism can be assumed to be reliable,
+                                        these promises can be counted as instant transfers, with the judge only appealed
+                                        to in exceptional circumstances, such as when one party disappears.
+                                    </p>
+                                    <p class="graf graf--p graf-after--p">Of course, these details are only part of the
+                                        reason people think that state/payment channels are complicated. A much bigger
+                                        one is that Bitcoin payment channels are complicated. Building a "judge"
+                                        mechanism in Bitcoin with even reasonably useful properties is surprisingly
+                                        intricate. But once you have a clear concept of state channels in general, you
+                                        can see that this only comes from trying to implement the idea in a constrained
+                                        context. Basic smart contract features like a timer mechanism and allowing two
+                                        different paths to be taken depending on the signed message submitted are just
+                                        plain harder to do in Bitcoin. Some of these features are being gradually added
+                                        or built. Personally I expect to see working Bitcoin payment channels within the
+                                        next 6 months. But by seeing that payment channels are only a special subcase of
+                                        the broader "state channel" idea, we realise that this is a much broader
+                                        technique, and that state channels can apply to any smart contract which deals
+                                        with frequent updates between a defined set of participants. You can anticipate
+                                        seeing this approach in many (if not most) distributed applications going
+                                        forward.
+                                    </p>
+                                    <p class="graf graf--p graf-after--p">That's all I have to say about state channels
+                                        for now! I hope this deeper clarification of the term proves useful to others.
+                                        My main purpose in publishing these terminology explanations is to more easily
+                                        refer to these ideas in the future. As I'm sure the reader can imagine, there
+                                        are a wide number of applications for state channels. Once I have laid down
+                                        enough vocabulary, I hope to describe some of the more interesting ones in more
+                                        detail.</p>
+                                    <p class="graf graf--p graf-after--p">Source：<a
+                                            href="http://www.jeffcoleman.ca/state-channels">http://www.jeffcoleman.ca/state-channels</a>
+                                    </p>
+
+                                </div>
+                            </div>
+                        </section>
+                        <!--<section name="5e3a"class="section section&#45;&#45;body section&#45;&#45;last"></section>-->
+                    </div>
+                    <footer class="u-paddingTop30">
+                        <div class="streamItem streamItem--placementCardGrid">
+                            <div class="u-clearfix u-backgroundGrayLightest">
+                                <div class="row u-marginAuto u-maxWidth1000 u-paddingTop30 u-paddingBottom20">
+
+                                    <div class="col u-padding8 u-xs-size12of12 u-size4of12">
+                                        <div class="uiScale uiScale-ui--small uiScale-caption--regular u-height280 u-sizeFullWidth u-backgroundWhite u-borderCardBorder u-boxShadow u-borderBox u-borderRadius4"
+                                             data-scroll="native">
+                                            <a class="link link--noUnderline "
+                                               href="an_update_on_Integrating.html">
+                                                <div class="u-backgroundCover u-backgroundColorGrayLight u-height100 u-sizeFullWidth u-borderBottomLight u-borderRadiusTop4"
+                                                     style="background-image: url('../images/knowledge/z5-thumb.jpg');"></div>
+                                            </a>
+                                            <div class="u-padding15 u-borderBox u-flexColumn u-height180">
+                                                <a class="link link--noUnderline u-flex1 "
+                                                   href="an_update_on_Integrating.html">
+                                                    <div class="ui-caption postMetaInline u-noWrapWithEllipsis u-marginBottom7">
+                                                        Knowledge
+                                                    </div>
+                                                    <div class="ui-heading ui-clamp2 u-textColorDarkest u-contentSansBold u-fontSize24 u-maxHeight2LineHeightTighter u-lineClamp2 u-textOverflowEllipsis u-letterSpacingTight u-paddingBottom2">
+                                                        An Update on Integrating Zcash on Ethereum (ZoE)
+                                                    </div>
+                                                </a>
+                                                <div class="u-paddingTop10 u-flex0 u-flexCenter">
+                                                    <div class="u-flex1 u-minWidth0 u-marginRight10">
+                                                        <div class="u-flexCenter">
+                                                            <div class="postMetaInline-avatar u-flex0">
+                                                                <!--<a class="link avatar u-baseColor&#45;&#45;link ui-linkSubtle" href="#">-->
+                                                                <img src="../images/knowledge/Christian-Reitwiessner.jpeg"
+                                                                     class="avatar-image u-size36x36 u-xs-size32x32">
+                                                                <!--</a>-->
+                                                            </div>
+                                                            <div class="postMetaInline postMetaInline-authorLockup u-flex1 u-noWrapWithEllipsis">
+                                                                <!--<a class="link link link&#45;&#45;darken link&#45;&#45;darker u-baseColor&#45;&#45;link ui-linkSubtle" href="#">-->
+                                                                Christian Reitwiessner
+                                                                <!--</a>-->
+                                                                <div class="u-fontSize12 u-baseColor--textNormal u-textColorNormal">
+                                                                    <time>9 Mar, 2017</time>
+                                                                    <!--<span class="readingTime u-textColorNormal" title="1 min read"></span>-->
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col u-padding8 u-xs-size12of12 u-size4of12">
+                                        <div class="uiScale uiScale-ui--small uiScale-caption--regular u-height280 u-sizeFullWidth u-backgroundWhite u-borderCardBorder u-boxShadow u-borderBox u-borderRadius4"
+                                             data-scroll="native"><a
+                                                class="link link--noUnderline "
+                                                href="../news/ethereum_erc-20_token_standard.html">
+                                            <div class="u-backgroundCover u-backgroundColorGrayLight u-height100 u-sizeFullWidth u-borderBottomLight u-borderRadiusTop4"
+                                                 style="background-image: url('../images/news/w4-thumb.jpg');"></div>
+                                        </a>
+                                            <div class="u-padding15 u-borderBox u-flexColumn u-height180"><a
+                                                    class="link link--noUnderline u-flex1 "
+                                                    href="../news/ethereum_erc-20_token_standard.html">
+                                                <div class="ui-caption postMetaInline u-noWrapWithEllipsis u-marginBottom7">
+                                                    News
+                                                </div>
+                                                <div class="ui-heading ui-clamp2 u-textColorDarkest u-contentSansBold u-fontSize24 u-maxHeight2LineHeightTighter u-lineClamp2 u-textOverflowEllipsis u-letterSpacingTight u-paddingBottom2">
+                                                    Ethereum's ERC-20 Token Standard Has Been Finalized
+                                                </div>
+                                            </a>
+                                                <div class="u-paddingTop10 u-flex0 u-flexCenter">
+                                                    <div class="u-flex1 u-minWidth0 u-marginRight10">
+                                                        <div class="u-flexCenter">
+                                                            <div class="postMetaInline-avatar u-flex0">
+                                                                <!--<a class="link avatar u-baseColor&#45;&#45;link ui-linkSubtle" href="#">-->
+                                                                <img src="../images/dog.jpg"
+                                                                     class="avatar-image u-size36x36 u-xs-size32x32">
+                                                                <!--</a>-->
+                                                            </div>
+                                                            <div class="postMetaInline postMetaInline-authorLockup u-flex1 u-noWrapWithEllipsis">
+                                                                <!--<a class="link link link&#45;&#45;darken link&#45;&#45;darker u-baseColor&#45;&#45;link ui-linkSubtle" href="#">-->
+                                                                Qianxi
+                                                                <!--</a>-->
+                                                                <div class="u-fontSize12 u-baseColor--textNormal u-textColorNormal">
+                                                                    <time>11 Sept, 2017</time>
+                                                                    <!--<span class="readingTime u-textColorNormal" title="1 min read"></span>-->
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col u-padding8 u-xs-size12of12 u-size4of12">
+                                        <div class="uiScale uiScale-ui--small uiScale-caption--regular u-height280 u-sizeFullWidth u-backgroundWhite u-borderCardBorder u-boxShadow u-borderBox u-borderRadius4"
+                                             data-scroll="native">
+                                            <a class="link link--noUnderline "
+                                               href="explaining_the_ethereum_namespace_auction.html">
+                                                <div class="u-backgroundCover u-backgroundColorGrayLight u-height100 u-sizeFullWidth u-borderBottomLight u-borderRadiusTop4"
+                                                     style="background-image: url('../images/knowledge/information_technology_767x400.jpg');"></div>
+                                            </a>
+                                            <div class="u-padding15 u-borderBox u-flexColumn u-height180">
+                                                <a class="link link--noUnderline u-flex1 "
+                                                   href="explaining_the_ethereum_namespace_auction.html">
+                                                    <div class="ui-caption postMetaInline u-noWrapWithEllipsis u-marginBottom7">
+                                                        Knowledge
+                                                    </div>
+                                                    <div class="ui-heading ui-clamp2 u-textColorDarkest u-contentSansBold u-fontSize24 u-maxHeight2LineHeightTighter u-lineClamp2 u-textOverflowEllipsis u-letterSpacingTight u-paddingBottom2">
+                                                        Explaining the Ethereum Namespace Auction
+                                                    </div>
+                                                </a>
+                                                <div class="u-paddingTop10 u-flex0 u-flexCenter">
+                                                    <div class="u-flex1 u-minWidth0 u-marginRight10">
+                                                        <div class="u-flexCenter">
+                                                            <div class="postMetaInline-avatar u-flex0">
+                                                                <!--<a class="link avatar u-baseColor&#45;&#45;link ui-linkSubtle" href="#">-->
+                                                                <img src="../images/knowledge/1-AW1mbHWcIh7sSOj4XJboOw(2).jpeg"
+                                                                     class="avatar-image u-size36x36 u-xs-size32x32">
+                                                                <!--</a>-->
+                                                            </div>
+                                                            <div class="postMetaInline postMetaInline-authorLockup u-flex1 u-noWrapWithEllipsis">
+                                                                <!--<a class="link link link&#45;&#45;darken link&#45;&#45;darker u-baseColor&#45;&#45;link ui-linkSubtle" href="#">-->
+                                                                Maurelian
+                                                                <!--</a>-->
+                                                                <div class="u-fontSize12 u-baseColor--textNormal u-textColorNormal">
+                                                                    <time>25 Oct, 2017</time>
+                                                                    <!--<span class="readingTime u-textColorNormal" title="1 min read"></span>-->
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <div class="u-textAlignCenter u-paddingBottom20 u-xs-fontSize10">&copy; UNITIMES. All
+                                    Rights Reserved.
+                                </div>
+                            </div>
+                        </div>
+                    </footer>
+                </article>
+            </main>
+        </div>
+    </div>
+</div>
+<div class="surface-scrollOverlay"></div>
+</body>
+
+</html>
