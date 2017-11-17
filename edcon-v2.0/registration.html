@@ -1,12 +1,17 @@
-<!--
-	Author: W3layouts
-	Author URL: http://w3layouts.com
-	License: Creative Commons Attribution 3.0 Unported
-	License URL: http://creativecommons.org/licenses/by/3.0/
--->
 <!DOCTYPE html>
 <html>
 <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="referrer" content="always">
+    <meta name="robots" content="index, follow">
+
+    <meta name="title" content="EDCON REGISTRATION">
+    <meta name="description"
+          content="">
+    <meta name="keywords" content="edcon"/>
+    <link rel="icon" href="assets/images/favicon.ico" type="image/x-icon">
+
     <title>REGISTRATION</title>
 
     <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
@@ -152,82 +157,92 @@
                 <div role="tabpanel" class="tab-pane fade in active" id="speaker">
                     <div class="sign-up-agileinfo">
                         <h3>Speaker</h3>
-                        <form action="#" method="post">
+                        <div>
                             <div class="col-lg-6">
-                                <input type="text" class="full name" name="full name" placeholder="Full Name"
+                                <input type="text" class="name goadd" name="speakername" placeholder="Full Name"
                                        required="">
-                                <input type="text" class="country" name="country" placeholder="Country" required="">
-                                <input type="text" class="company text-capitalize" name="company"
+                                <input type="text" class="country goadd" name="speakercountry" placeholder="Country"
+                                       required="">
+                                <input type="text" class="company text-capitalize goadd" name="speakercompany"
                                        placeholder="company"
                                        required="">
-                                <input type="text" class="Position" name="Position" placeholder="Position" required="">
-                                <input type="text" class="email" name="email" placeholder="Email" required="">
-                                <input type="text" class="phone" name="phone" placeholder="Phone" required="">
+                                <input type="text" class="Position goadd" name="speakerposition" placeholder="Position"
+                                       required="">
+                                <input type="text" class="email goadd" name="speakeremail" placeholder="Email"
+                                       required="">
+                                <input type="text" class="phone goadd" name="speakerphone" placeholder="Phone"
+                                       required="">
                             </div>
 
                             <div class="col-lg-6">
-                                <textarea rows="16" class="project" name="project"
+                                <textarea rows="16" class="project goadd" name="speakernote"
                                           placeholder="Please describe the details about your topic and attach the links of your Linkedin or Github"
                                           required=""></textarea>
                             </div>
 
+                            <input class="text-capitalize addSpeaker" type="submit" value="register">
 
-                            <input class="text-capitalize" type="submit" value="register">
-
-                        </form>
+                        </div>
                     </div>
 
                 </div>
                 <div role="tabpanel" class="tab-pane fade" id="sponsor">
                     <div class="sign-up-agileinfo">
                         <h3>Sponsor</h3>
-                        <form action="#" method="post">
+                        <div>
                             <div class="col-lg-6">
-                                <input type="text" class="full name" name="full name" placeholder="Full Name"
+                                <input type="text" class="full name goadd" name="sponsorname" placeholder="Full Name"
                                        required="">
-                                <input type="text" class="country" name="country" placeholder="Country" required="">
-                                <input type="text" class="company" name="company" placeholder="Company" required="">
-                                <input type="text" class="email" name="email" placeholder="Email" required="">
-                                <input type="text" class="phone" name="phone" placeholder="Phone" required="">
+                                <input type="text" class="country goadd" name="sponsorcountry" placeholder="Country"
+                                       required="">
+                                <input type="text" class="company goadd" name="sponsorcompany" placeholder="Company"
+                                       required="">
+                                <input type="text" class="email goadd" name="sponsoremail" placeholder="Email"
+                                       required="">
+                                <input type="text" class="phone goadd" name="sponsorphone" placeholder="Phone"
+                                       required="">
                             </div>
 
                             <div class="col-lg-6">
-                                <textarea rows="15" class="business introduction" name="business introduction"
+                                <textarea rows="15" class="business introduction goadd" name="sponsornote"
                                           placeholder="Please describe your business and attach related links"
                                           required=""></textarea>
                             </div>
 
-                            <input class="text-capitalize" type="submit" value="register">
-                        </form>
+                            <input class="text-capitalize addSponsor" type="submit" value="register">
+                        </div>
                     </div>
 
                 </div>
                 <div role="tabpanel" class="tab-pane fade" id="hackathon">
                     <div class="sign-up-agileinfo">
                         <h3>Hackathon</h3>
-                        <form action="#" method="post">
+                        <div>
                             <div class="col-lg-6">
-                                <input type="text" class="full name" name="full name" placeholder="Full Name"
+                                <input type="text" class="full name goadd" name="hackathonname" placeholder="Full Name"
                                        required="">
-                                <input type="text" class="country" name="country" placeholder="Country" required="">
-                                <input type="text" class="team text-capitalize" name="team"
+                                <input type="text" class="country goadd" name="hackathoncountry" placeholder="Country"
+                                       required="">
+                                <input type="text" class="team text-capitalize goadd" name="hackathoncompany"
                                        placeholder="Company / Project"
                                        required="">
-                                <input type="text" class="email" name="email" placeholder="Email" required="">
-                                <input type="text" class="phone" name="phone" placeholder="Phone" required="">
+                                <input type="text" class="email goadd" name="hackathonemail" placeholder="Email"
+                                       required="">
+                                <input type="text" class="phone goadd" name="hackathonphone" placeholder="Phone"
+                                       required="">
 
                             </div>
 
                             <div class="col-lg-6">
-                            <textarea rows="15" class="project" name="project"
+                            <textarea rows="15" class="project goadd" name="hackathonnote"
                                       placeholder="Please describe more about yourself, your research or project. Please also attach the links of your Linkedin and GitHub"
                                       required=""></textarea>
                             </div>
 
 
-                            <input type="submit" value="Register">
+                            <input type="submit" value="Register" class="addHackathon">
 
-                        </form>
+                        </div>
                     </div>
 
                 </div>
@@ -236,6 +251,61 @@
     </div>
 
 
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="success" tabindex="-1" role="dialog" aria-labelledby="successfulLabel">
+    <div class="modal-dialog modal-sm" role="document">
+        <div class="modal-content" style="color: #000">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span>
+                </button>
+                <h4 class="modal-title" id="successfulLabel">Successful</h4>
+            </div>
+            <div class="modal-body">
+                <p>Successful! We will contact you if necessary, thank you for your support!</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary" data-dismiss="modal">ok</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="failed" tabindex="-1" role="dialog" aria-labelledby="failedLabel">
+    <div class="modal-dialog modal-sm" role="document">
+        <div class="modal-content" style="color: #000">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span>
+                </button>
+                <h4 class="modal-title" id="failedLabel">Failed</h4>
+            </div>
+            <div class="modal-body">
+                <p>Failed! Please check your internet and try again later!</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary" data-dismiss="modal">ok</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="again" tabindex="-1" role="dialog" aria-labelledby="againLabel">
+    <div class="modal-dialog modal-sm" role="document">
+        <div class="modal-content" style="color: #000">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span>
+                </button>
+                <h4 class="modal-title" id="againLabel">Try again</h4>
+            </div>
+            <div class="modal-body">
+                <p>Please complete your information and try again later, all of the information are necessary!</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary" data-dismiss="modal">ok</button>
+            </div>
+        </div>
+    </div>
 </div>
 
 

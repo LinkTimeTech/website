@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="referrer" content="always">
+    <meta name="robots" content="index, follow">
+    <link rel="icon" href="about:blank" type="image/x-icon">
+
+    <title>
+        Raiden Network: Vision, Challenges and Roadmap
+    </title>
+
+    <meta name="title" content="Raiden Network: Vision, Challenges and Roadmap">
+    <meta name="description"
+          content="Our vision is to provide a global infrastructure for fast, scalable and cheap decentralized payments for machines as well as humans.">
+    <meta name="keywords" content="">
+
+    <link rel="stylesheet" type="text/css" href="../css/article-font.css">
+    <link rel="stylesheet" href="../css/article.min.css">        <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-109516558-1"></script>
+    <script>        window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+        dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+    gtag('config', 'UA-109516558-1');
+    var _hmt = _hmt || [];
+    (function () {
+        var hm = document.createElement("script");
+        hm.src = "https://hm.baidu.com/hm.js?dc9c3afdb0d4ee781a538922a7c9aaa9";
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(hm, s);
+    })();    </script>
+</head>
+
+<body class="browser-chrome os-mac is-withMagicUnderlines v-glyph v-glyph--m2 v-enableBrandingButtons is-js postShowScreen">
+<div class="site-main surface-container">
+    <div class="surface">
+        <div class="screenContent surface-content">
+            <div class="metabar u-clearfix  u-boxShadowBottomThinLighter u-textColorDarker u-fixed u-backgroundTransparentWhiteDarkest u-xs-sizeFullViewportWidth u-tintBgColor u-tintSpectrum">
+                <div class="metabar-inner u-marginAuto u-maxWidth1000 u-flexCenter u-justifyContentSpaceBetween u-paddingLeft20 u-paddingRight20 u-height65 u-xs-height56">
+                    <div class="metabar-block u-flex1 u-flexCenter">
+                        <a href="../index.html" class="link u-flex">
+                            <img src="../images/icon/logo_black.svg" height="25px">
+                        </a>
+                    </div>
+                    <div class="metabar-block u-flex0 u-flexCenter">
+                        <div class="u-alignMiddle u-inlineBlock u-verticalAlignTop u-height65 u-xs-height56">
+                            <div class="u-alignBlock">
+                                <div class="buttonSet buttonSet--wide u-lineHeightInherit">
+                                    <!--<a class="button button&#45;&#45;primary button&#45;&#45;dark button&#45;&#45;chromeless u-accentColor&#45;&#45;buttonDark is-inSiteNavBar u-xs-hide js-signInButton" href="#">-->
+                                    <!--中文</a>-->
+                                    <a class="button button--primary button--dark button--withChrome u-accentColor--buttonDark is-inSiteNavBar"
+                                       href="raiden_network_vision_challenges_and_roadmap_cn.html"
+                                       style="font-size: 14px">
+                                        中文</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="metabar-inner u-marginAuto u-maxWidth1000">
+                    <nav role="navigation" class="metabar-block metabar-block--below u-overflowHiddenY u-height40">
+                        <ul class="u-textAlignLeft u-noWrap u-overflowX u-paddingBottom100 u-sm-paddingLeft20 u-sm-paddingRight20">
+                            <li class="metabar-navItem u-uiTextMedium u-fontSize14 u-inlineBlock u-textUppercase u-letterSpacing003 u-textColorNormal u-xs-paddingRight12 u-xs-marginRight0 u-paddingTop5 u-xs-paddingTop10">
+                                <a class="link link--darken u-accentColor--textDarken  "
+                                   href="../unitalks.html"> Unitalks </a></li>
+                            <li class="metabar-navItem  u-uiTextMedium u-fontSize14 u-inlineBlock u-textUppercase u-letterSpacing003 u-textColorNormal u-xs-paddingRight12 u-xs-marginRight0 u-paddingTop5 u-xs-paddingTop10">
+                                <a class="link link--darken u-accentColor--textDarken link--noUnderline "
+                                   href="../news.html"> News </a></li>
+                            <li class="metabar-navItem  u-uiTextMedium u-fontSize14 u-inlineBlock u-textUppercase u-letterSpacing003 u-textColorNormal u-xs-paddingRight12 u-xs-marginRight0 u-paddingTop5 u-xs-paddingTop10">
+                                <a class="link link--darker link--darken u-accentColor--textDarken link--noUnderline "
+                                   href="../knowledge.html"> Knowledge </a></li>
+                            <li class="metabar-navItem  u-uiTextMedium u-fontSize14 u-inlineBlock u-textUppercase u-letterSpacing003 u-textColorNormal u-xs-paddingRight12 u-xs-marginRight0 u-paddingTop5 u-xs-paddingTop10">
+                                <a class="link link--darken u-accentColor--textDarken link--noUnderline "
+                                   href="../events.html"> Events </a></li>
+                            <span class="u-borderLeft1 u-paddingLeft22 u-xs-paddingLeft12 u-baseColor--borderLight"></span>
+                            <li class="metabar-navItem  is-external u-uiTextMedium u-fontSize14 u-inlineBlock u-textUppercase u-letterSpacing003 u-textColorNormal u-xs-paddingRight12 u-xs-marginRight0 u-paddingTop5 u-xs-paddingTop10">
+                                <a class="link link--darken u-accentColor--textDarken link--noUnderline "
+                                   href="../index.html"> Home </a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+            <div class="metabar metabar--spacer u-tintBgColor u-height105 u-xs-height95"></div>
+            <main role="main">
+                <article
+                        class="u-minHeight100vhOffset65 u-overflowHidden postArticle postArticle--full is-withAccentColors"
+                        lang="en" data-scroll="native">
+                    <header class="container u-maxWidth740">
+                        <div class="uiScale uiScale-ui--regular uiScale-caption--regular postMetaHeader u-paddingBottom10 row">
+                            <div class="col u-size12of12">
+                                <div class="uiScale uiScale-ui--regular uiScale-caption--regular postMetaLockup postMetaLockup--authorWithBio u-flexCenter">
+                                    <div class="u-flex0">
+                                        <!--<a class="link avatar u-baseColor&#45;&#45;link ui-linkSubtle" href="#">-->
+                                        <img src="../images/knowledge/raiden_Network_head.png" width="50px"
+                                             height="50px" class="avatar-image">
+                                        <!--</a>-->
+                                    </div>
+                                    <div class="u-flex1 u-paddingLeft15 u-overflowHidden">
+                                        <div class="u-lineHeightTightest">
+                                            Raiden Network
+                                        </div>
+                                        <div class="ui-caption postMetaInline">
+                                            <time>Nov 16, 2017</time>
+                                            <!--<span class="middotDivider u-fontSize12"></span>-->
+                                            <!--<span class="readingTime"title="3 min read"></span>-->
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </header>
+                    <div class="postArticle-content" data-scroll="native">
+                        <section class="section section--body section--first">
+                            <div class="section-content">
+                                <div class="section-inner sectionLayout--insetColumn">
+                                    <h1 class="graf graf--h3 graf--leading graf--title">
+                                        Raiden Network: Vision, Challenges and Roadmap
+
+                                    </h1>
+
+                                    <img class="graf--p graf-image u-marginTop40"
+                                         src="../images/knowledge/1_jY4AFeMneGOZANXoPezGlw(1).jpeg"
+                                         width="100%">
+
+                                    <h3 class="graf graf--h3 graf-after--figure">Vision</h3>
+                                    <p class="graf graf--p graf-after--h3">Blockchains are
+                                        awesome, but they are rather slow.</p>
+                                    <p class="graf graf--p graf-after--p">Imagine you are paying
+                                        for groceries and it takes 10 seconds after you swiped your card until the
+                                        cashier receives a confirmation of the payment and lets you leave. <strong
+                                                class="markup--strong markup--p-strong">That’s roughly nine seconds too
+                                            long.</strong></p>
+                                    <p class="graf graf--p graf-after--p">Now imagine you are a
+                                        process running on a computer. You want to sell content, data, bandwidth,
+                                        processing time, storage or access to infrastructure. Imagine it would take 10
+                                        seconds to get confirmation of a payment from another process. That’s orders of
+                                        magnitude off from your standards. It’s insane. The product you are selling
+                                        might be obsolete by the time you get confirmation of a payment.</p>
+                                    <p class="graf graf--p graf-after--p">The upcoming
+                                        machine-to-machine (M2M) economy in which software autonomously engages in trade
+                                        with other software is set to constitute a significant part of future global
+                                        commerce. But the machines are demanding. They want quick transfers and plenty
+                                        thereof at almost zero cost. Therefore fast and low fee (micro-)payments will be
+                                        a crucial building block of an M2M economy.</p>
+                                    <p class="graf graf--p graf-after--p">Blockchains are a hot
+                                        candidate to become the payment infrastructure for IoT and the M2M economy.
+                                        Combined with stable coins, the technology also becomes a viable candidate for
+                                        everyday payments by machines and humans.</p>
+                                    <p class="graf graf--p graf-after--p">But in order to be
+                                        viable, blockchain-based payment systems need to be fast, cheap and scalable.
+                                        Those are properties that current blockchains are not particularly good at.</p>
+                                    <p class="graf graf--p graf-after--p">There are plenty of
+                                        scalability approaches like sharding, side chains, interactive verification
+                                        protocols or state channels. While all of these can potentially scale overall
+                                        transaction capacity, <strong class="markup--strong markup--p-strong">only
+                                            payment channel networks like Raiden seem to be adding </strong>the<strong
+                                                class="markup--strong markup--p-strong"> low cost and low
+                                            latency </strong>properties at the same time.</p>
+
+                                    <img class="graf--p graf-image"
+                                         src="../images/knowledge/0_xF0QLL7XpSsaLKre(1).jpg"
+                                         width="100%">
+
+                                    <p class="graf graf--p graf-after--figure"><strong
+                                            class="markup--strong markup--p-strong">Our vision</strong> is to provide a
+                                        global infrastructure for fast, scalable and cheap decentralized payments for
+                                        machines as well as humans. This is basically Satoshi Nakamoto’s initial vision
+                                        but extended to be scalable and ready to support a world with thousands of
+                                        different specialized tokens.</p>
+                                    <p class="graf graf--p graf-after--p"><strong
+                                            class="markup--strong markup--p-strong">But how could it look like in
+                                        practice?</strong>&nbsp;
+                                        <br><em class="markup--em markup--p-em">Note, the following is a randomly made
+                                            up story!</em>
+                                        <br>Fast forward five years to Bob buying a coffee. From his perspective he
+                                        simply uses his smart phone to pay for a coffee as he’s used to. In the
+                                        background though, his wallet carries out multiple tasks to facilitate the
+                                        payment. It sends some Moonbucks voucher tokens, plus the user’s preferred
+                                        stable coin to pay for the coffee. The merchant sends back some FairCoffeeBuyer
+                                        reputation tokens which the wallet automatically atomically swaps off-chain for
+                                        the local StreetWorkersFund tokens. The wallet sends some AwesomeWalletCreator
+                                        tokens to its developers to pay for it’s usage. To interact with the Raiden
+                                        Network without running an always-online full Ethereum and Raiden client, Bob’s
+                                        app also automatically pays reliable nodes for their services with RDN tokens as
+                                        an entrypoint to the Ethereum ecosystem.</p>
+                                    <p class="graf graf--p graf-after--p">So while the machines in
+                                        the background carry out exchange in a complex network of commerce and services
+                                        based on a zoo of tokens, the user still has a flawless experience.</p>
+                                    <h3 class="graf graf--h3 graf-after--p">Challenges</h3>
+                                    <p class="graf graf--p graf-after--h3">Payment channel
+                                        networks are a very young idea and technology. They have only first been
+                                        proposed roughly two years ago, whereas in comparison blockchains are known for
+                                        more than 8 years now. On top, they are a quite complicated technology, with
+                                        respect to both conception and implementation. This is emphasized by the fact
+                                        that neither the Lightning Network teams nor the Raiden Network team set on a
+                                        final specification.&nbsp;
+                                        <br>Below we address some of the topics that still need work. While we keep
+                                        describing them on a high level in this post, each of them definitely deserves
+                                        their own future blog post.</p>
+                                    <h4 class="graf graf--h4 graf-after--p">Scalable Routing</h4>
+                                    <p class="graf graf--p graf-after--h4">
+                                        One of the biggest problems is how to find a path from sender to receiver,
+                                        without a global view of all channels and their availability and capacity.
+                                        An efficient but centralized solution would be to have all participants
+                                        continuously report their channel capacities to a central service and query it
+                                        to get a path. A decentralized but inefficient alternative is to brute force a
+                                        path by trial and error or broadcast channel updates to all participants.
+                                        Efficient routing models through so called small-world networks exist but
+                                        require dynamic connectivity between nodes. A viable system needs to find a
+                                        balance between these approaches.</p>
+                                    <h4 class="graf graf--h4 graf-after--p">Maintaining a balanced
+                                        Network /&nbsp;Fees</h4>
+                                    <p class="graf graf--p graf-after--h4">Pathfinding algorithms
+                                        should not come up with just any path, but ideally one that decreases or at
+                                        least avoids adding imbalances in mediating channels. This can be accomplished
+                                        by participants announcing fees that incentivize finding the cheapest path that
+                                        implicitly helps to keep the network balanced. Simulations have shown that
+                                        increasing fees proportional to added channel imbalances greatly increases
+                                        channel longevity.</p>
+                                    <h4 class="graf graf--h4 graf-after--p">Maintaining privacy
+                                        while providing low latency messaging</h4>
+                                    <p class="graf graf--p graf-after--h4">Another big issue is
+                                        preserving endpoint privacy of all participants. In order to help mediate
+                                        multihop transfers, participants need to have a hot wallet. In such a setup you
+                                        preferably don’t want to expose your endpoint publicly. Therefore a passive
+                                        messaging protocol like Whisper is required, but at the same time needs to be
+                                        able to scale to millions of users.</p>
+                                    <h4 class="graf graf--h4 graf-after--p">Light Clients</h4>
+                                    <p class="graf graf--p graf-after--h4">We assume, that 99% of
+                                        all participants will access the system using Raiden light clients instead of
+                                        full nodes. Similar to how users are using Metamask to access Dapps currently.
+                                        This requires a protocol that effectively supports weakly connected and rarely
+                                        available nodes at the leaves of the network.</p>
+                                    <h4 class="graf graf--h4 graf-after--p">Delegate Challengers
+                                        while&nbsp;offline</h4>
+                                    <p class="graf graf--p graf-after--h4">Payment channels should
+                                        allow any party to close the channel at any time. However, both parties need to
+                                        be online during a channel’s settlement period to claim their received tokens.
+                                        This becomes logistically infeasible for most common use-cases, people go
+                                        offline more often than not. Therefore we need a system of decentralized third
+                                        parties who are incentivized to settle on behalf of the offline party.</p>
+                                    <h4 class="graf graf--h4 graf-after--p">Upgradability /
+                                        Governance</h4>
+                                    <p class="graf graf--p graf-after--h4">An upgrade of the
+                                        protocol potentially affects millions of payment channels and their funds. It’s
+                                        impractical to expect millions of end-users to vote on some technical protocol
+                                        update proposal. Therefore, we need an effective governance mechanism that
+                                        allows to delegate voting right to groups of experts.</p>
+                                    <h4 class="graf graf--h4 graf-after--p">Setting the incentives
+                                        right to have a lively&nbsp;backbone</h4>
+                                    <p class="graf graf--p graf-after--h4">We need a decentralized
+                                        network of pathfinding, monitoring and full node services as the backbone of the
+                                        system. The providers of these services need to be compensated in order to have
+                                        the right incentives to provide the service. At the same time, the core of the
+                                        protocol should not have any fees other than those necessary to guarantee a
+                                        balanced network.</p>
+                                    <h4 class="graf graf--h4 graf-after--p">Testing</h4>
+                                    <p class="graf graf--p graf-after--h4">Testing a
+                                        decentralized, scalable peer-to-peer system is difficult. End-to-end testing
+                                        with thousands of nodes is hard. Addressing all possible attack vectors is even
+                                        harder. Testing is and remains a large part of the Raiden Network’s development
+                                        process.</p>
+                                    <h3 class="graf graf--h3 graf-after--p">Roadmap</h3>
+                                    <p class="graf graf--p graf-after--h3">Instead of boring you
+                                        with details of a roadmap let’s look at the <strong
+                                                class="markup--strong markup--p-strong">obvious question: when is it
+                                            ready?</strong></p>
+                                    <p class="graf graf--p graf-after--p">We consider <a
+                                            href="https://raiden.network/micro.html"
+                                            data-href="https://raiden.network/micro.html"
+                                            class="markup--anchor markup--p-anchor" rel="nofollow noopener"
+                                            target="_blank">µRaiden</a> to be ready and good to use for many
+                                        applications already.</p>
+                                    <p class="graf graf--p graf-after--p">For the <a
+                                            href="https://raiden.network/101.html"
+                                            data-href="https://raiden.network/101.html"
+                                            class="markup--anchor markup--p-anchor" rel="nofollow noopener"
+                                            target="_blank">Raiden Network</a> the answer is more complicated, but
+                                        according to the initial Raiden concept would be: “It’s ready once it supports
+                                        transfers between participants that don’t have a direct payment channel with
+                                        each other and the software had a security audit and is deployed on the main
+                                        chain”. It took us two years, but we are almost there. Add a security audit,
+                                        deploy on the mainnet and we are done.</p>
+                                    <p class="graf graf--p graf-after--p">But you know the 80/20
+                                        rule. You can get 80% done in 20% of the time and the remaining 20% take another
+                                        80% of the time. Successful projects are going the lengths of also delivering as
+                                        much as possible of the last 20% in order to gain adoption and stay
+                                        competitive.</p>
+                                    <p class="graf graf--p graf-after--p">There are still many
+                                        dimensions on which the Raiden Network can and should be improved. For example
+                                        privacy, efficiency of finding a path, longevity of channels, accessibility
+                                        through light clients, shorter settlement periods, governance mechanisms,
+                                        usability etc. And some of them are must haves to satisfy our standards
+                                        regarding a Minimal Viable Product.</p>
+                                    <img class="graf--p graf-image"
+                                         src="../images/knowledge/1_DdkFNl-PEzeIX61BNrisNw(1).jpg"
+                                         width="100%">
+
+                                    <p class="graf graf--p graf-after--figure">Fortunately, the
+                                        Raiden Network is built for continuous development with abstractions designed to
+                                        allow for parallelized progress on many of the components that can be improved.
+                                        Nonetheless this will take time, require research and hard work. But it’s worth
+                                        it.</p>
+                                    <p class="graf graf--p graf-after--p">So far we have only
+                                        addressed the protocols and the software. But in order to see widespread
+                                        adoption, an even greater endeavor is to <strong
+                                                class="markup--strong markup--p-strong">bootstrap a healthy
+                                            ecosystem</strong> around the Raiden Network to make it a developer’s first
+                                        choice when deciding on a payment infrastructure. Being able to set dedicated
+                                        incentives to third parties via the RDN External Developer Program will be a key
+                                        to success.</p>
+                                    <h3 class="graf graf--h3 graf-after--p">Conclusion</h3>
+                                    <p class="graf graf--p graf-after--h3">The Raiden team is
+                                        growing. We have been hiring talented people from all over the world and will
+                                        keep on doing so. The Raiden Network is an enormous endeavor attempting to
+                                        become a viable backbone for decentralized global scalable payments.</p>
+                                    <p class="graf graf--p graf-after--p">Development of this
+                                        exciting new technology will take sweat, time, and effort, but we are dedicated
+                                        on making our vision of fast, cheap and scalable blockchain based payments a
+                                        reality.</p>
+                                    <p class="graf graf--p graf-after--p graf--trailing"><em
+                                            class="markup--em markup--p-em">The Raiden project is led by </em><a
+                                            href="https://brainbot.li/" data-href="https://brainbot.li/"
+                                            class="markup--anchor markup--p-anchor" rel="nofollow noopener"
+                                            target="_blank"><em class="markup--em markup--p-em">brainbot labs
+                                        Est</em></a>.</p>
+                                </div>
+                            </div>
+                        </section>
+                        <!--<section name="5e3a"class="section section&#45;&#45;body section&#45;&#45;last"></section>-->
+                    </div>
+                    <footer class="u-paddingTop30">
+                        <div class="streamItem streamItem--placementCardGrid">
+                            <div class="u-clearfix u-backgroundGrayLightest">
+                                <div class="row u-marginAuto u-maxWidth1000 u-paddingTop30 u-paddingBottom20">
+
+                                    <div class="col u-padding8 u-xs-size12of12 u-size4of12">
+                                        <div class="uiScale uiScale-ui--small uiScale-caption--regular u-height280 u-sizeFullWidth u-backgroundWhite u-borderCardBorder u-boxShadow u-borderBox u-borderRadius4"
+                                             data-scroll="native">
+                                            <a class="link link--noUnderline "
+                                               href="an_update_on_Integrating.html">
+                                                <div class="u-backgroundCover u-backgroundColorGrayLight u-height100 u-sizeFullWidth u-borderBottomLight u-borderRadiusTop4"
+                                                     style="background-image: url('../images/knowledge/z5-thumb.jpg');"></div>
+                                            </a>
+                                            <div class="u-padding15 u-borderBox u-flexColumn u-height180">
+                                                <a class="link link--noUnderline u-flex1 "
+                                                   href="an_update_on_Integrating.html">
+                                                    <div class="ui-caption postMetaInline u-noWrapWithEllipsis u-marginBottom7">
+                                                        Knowledge
+                                                    </div>
+                                                    <div class="ui-heading ui-clamp2 u-textColorDarkest u-contentSansBold u-fontSize24 u-maxHeight2LineHeightTighter u-lineClamp2 u-textOverflowEllipsis u-letterSpacingTight u-paddingBottom2">
+                                                        An Update on Integrating Zcash on Ethereum (ZoE)
+                                                    </div>
+                                                </a>
+                                                <div class="u-paddingTop10 u-flex0 u-flexCenter">
+                                                    <div class="u-flex1 u-minWidth0 u-marginRight10">
+                                                        <div class="u-flexCenter">
+                                                            <div class="postMetaInline-avatar u-flex0">
+                                                                <!--<a class="link avatar u-baseColor&#45;&#45;link ui-linkSubtle" href="#">-->
+                                                                <img src="../images/knowledge/Christian-Reitwiessner.jpeg"
+                                                                     class="avatar-image u-size36x36 u-xs-size32x32">
+                                                                <!--</a>-->
+                                                            </div>
+                                                            <div class="postMetaInline postMetaInline-authorLockup u-flex1 u-noWrapWithEllipsis">
+                                                                <!--<a class="link link link&#45;&#45;darken link&#45;&#45;darker u-baseColor&#45;&#45;link ui-linkSubtle" href="#">-->
+                                                                Christian Reitwiessner
+                                                                <!--</a>-->
+                                                                <div class="u-fontSize12 u-baseColor--textNormal u-textColorNormal">
+                                                                    <time>9 Mar, 2017</time>
+                                                                    <!--<span class="readingTime u-textColorNormal" title="1 min read"></span>-->
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col u-padding8 u-xs-size12of12 u-size4of12">
+                                        <div class="uiScale uiScale-ui--small uiScale-caption--regular u-height280 u-sizeFullWidth u-backgroundWhite u-borderCardBorder u-boxShadow u-borderBox u-borderRadius4"
+                                             data-scroll="native"><a
+                                                class="link link--noUnderline "
+                                                href="../news/ethereum_erc-20_token_standard.html">
+                                            <div class="u-backgroundCover u-backgroundColorGrayLight u-height100 u-sizeFullWidth u-borderBottomLight u-borderRadiusTop4"
+                                                 style="background-image: url('../images/news/w4-thumb.jpg');"></div>
+                                        </a>
+                                            <div class="u-padding15 u-borderBox u-flexColumn u-height180"><a
+                                                    class="link link--noUnderline u-flex1 "
+                                                    href="../news/ethereum_erc-20_token_standard.html">
+                                                <div class="ui-caption postMetaInline u-noWrapWithEllipsis u-marginBottom7">
+                                                    News
+                                                </div>
+                                                <div class="ui-heading ui-clamp2 u-textColorDarkest u-contentSansBold u-fontSize24 u-maxHeight2LineHeightTighter u-lineClamp2 u-textOverflowEllipsis u-letterSpacingTight u-paddingBottom2">
+                                                    Ethereum's ERC-20 Token Standard Has Been Finalized
+                                                </div>
+                                            </a>
+                                                <div class="u-paddingTop10 u-flex0 u-flexCenter">
+                                                    <div class="u-flex1 u-minWidth0 u-marginRight10">
+                                                        <div class="u-flexCenter">
+                                                            <div class="postMetaInline-avatar u-flex0">
+                                                                <!--<a class="link avatar u-baseColor&#45;&#45;link ui-linkSubtle" href="#">-->
+                                                                <img src="../images/dog.jpg"
+                                                                     class="avatar-image u-size36x36 u-xs-size32x32">
+                                                                <!--</a>-->
+                                                            </div>
+                                                            <div class="postMetaInline postMetaInline-authorLockup u-flex1 u-noWrapWithEllipsis">
+                                                                <!--<a class="link link link&#45;&#45;darken link&#45;&#45;darker u-baseColor&#45;&#45;link ui-linkSubtle" href="#">-->
+                                                                Qianxi
+                                                                <!--</a>-->
+                                                                <div class="u-fontSize12 u-baseColor--textNormal u-textColorNormal">
+                                                                    <time>11 Sept, 2017</time>
+                                                                    <!--<span class="readingTime u-textColorNormal" title="1 min read"></span>-->
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col u-padding8 u-xs-size12of12 u-size4of12">
+                                        <div class="uiScale uiScale-ui--small uiScale-caption--regular u-height280 u-sizeFullWidth u-backgroundWhite u-borderCardBorder u-boxShadow u-borderBox u-borderRadius4"
+                                             data-scroll="native">
+                                            <a class="link link--noUnderline "
+                                               href="explaining_the_ethereum_namespace_auction.html">
+                                                <div class="u-backgroundCover u-backgroundColorGrayLight u-height100 u-sizeFullWidth u-borderBottomLight u-borderRadiusTop4"
+                                                     style="background-image: url('../images/knowledge/information_technology_767x400.jpg');"></div>
+                                            </a>
+                                            <div class="u-padding15 u-borderBox u-flexColumn u-height180">
+                                                <a class="link link--noUnderline u-flex1 "
+                                                   href="explaining_the_ethereum_namespace_auction.html">
+                                                    <div class="ui-caption postMetaInline u-noWrapWithEllipsis u-marginBottom7">
+                                                        Knowledge
+                                                    </div>
+                                                    <div class="ui-heading ui-clamp2 u-textColorDarkest u-contentSansBold u-fontSize24 u-maxHeight2LineHeightTighter u-lineClamp2 u-textOverflowEllipsis u-letterSpacingTight u-paddingBottom2">
+                                                        Explaining The Ethereum Namespace Auction
+                                                    </div>
+                                                </a>
+                                                <div class="u-paddingTop10 u-flex0 u-flexCenter">
+                                                    <div class="u-flex1 u-minWidth0 u-marginRight10">
+                                                        <div class="u-flexCenter">
+                                                            <div class="postMetaInline-avatar u-flex0">
+                                                                <!--<a class="link avatar u-baseColor&#45;&#45;link ui-linkSubtle" href="#">-->
+                                                                <img src="../images/knowledge/1-AW1mbHWcIh7sSOj4XJboOw(2).jpeg"
+                                                                     class="avatar-image u-size36x36 u-xs-size32x32">
+                                                                <!--</a>-->
+                                                            </div>
+                                                            <div class="postMetaInline postMetaInline-authorLockup u-flex1 u-noWrapWithEllipsis">
+                                                                <!--<a class="link link link&#45;&#45;darken link&#45;&#45;darker u-baseColor&#45;&#45;link ui-linkSubtle" href="#">-->
+                                                                Maurelian
+                                                                <!--</a>-->
+                                                                <div class="u-fontSize12 u-baseColor--textNormal u-textColorNormal">
+                                                                    <time>25 Oct, 2017</time>
+                                                                    <!--<span class="readingTime u-textColorNormal" title="1 min read"></span>-->
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <div class="u-textAlignCenter u-paddingBottom20 u-xs-fontSize10">&copy; UNITIMES. All
+                                    Rights Reserved.
+                                </div>
+                            </div>
+                        </div>
+                    </footer>
+                </article>
+            </main>
+        </div>
+    </div>
+</div>
+<div class="surface-scrollOverlay"></div>
+</body>
+
+</html>

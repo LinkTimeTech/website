@@ -1,11 +1,50 @@
 var data = {
     contents: [
+        // {
+        //     top: '1',
+        //     id: '',
+        //     date: 'July 27, 2017',
+        //     datecn: '2017.07.27',
+        //     cover: 'images/knowledge/'+'',
+        //     title: '',
+        //     titlecn: '',
+        //     intro: '',
+        //     introcn: '',
+        //     url: 'knowledge/'+'' + '.html',
+        //     urlcn: 'knowledge/'+'' + '_cn.html'
+        // },
         {
             top: '1',
+            id: '',
+            date: 'Nov 16, 2017',
+            datecn: '2017.11.16',
+            cover: 'images/knowledge/' + '1_jY4AFeMneGOZANXoPezGlw.jpg',
+            title: 'Raiden Network: Vision, Challenges and Roadmap',
+            titlecn: '雷电网络：愿景，挑战与路线',
+            intro: 'Our vision is to provide a global infrastructure for fast, scalable and cheap decentralized payments for machines as well as humans. ',
+            introcn: '我们的愿景是为机器和人类提供快速、可扩展、低成本的无中心化支付的全球基础设施。',
+            url: 'knowledge/' + 'raiden_network_vision_challenges_and_roadmap' + '.html',
+            urlcn: 'knowledge/' + 'raiden_network_vision_challenges_and_roadmap' + '_cn.html'
+        },
+        {
+            top: '1',
+            id: '',
+            date: 'Nov 16, 2017',
+            datecn: '2017.11.16',
+            cover: 'images/knowledge/' + '1_ys24uI7K_dbxRU4Fddfkow.jpg',
+            title: 'Blockchain Underpinnings: Hashing',
+            titlecn: '区块链基础：散列法 (Hashing)',
+            intro: 'You may have heard that all data in computers, is either 0 or 1. The smallest piece of data is a bit, and is either a 0 or 1.',
+            introcn: '你可能知道计算机中所有的数据都是由0或1组成的，最小的数据单位就是一个比特（bit，或位），它也是0或者1...',
+            url: 'knowledge/' + 'blockchain_underpinnings_hashing' + '.html',
+            urlcn: 'knowledge/' + 'blockchain_underpinnings_hashing' + '_cn.html'
+        },
+        {
             id: '13',
-            date: '',
+            date: 'July 27, 2017',
+            datecn: '2017.07.27',
             cover: 'images/knowledge/chain_Relays.jpg',
-            title: 'Chain Relays or a Practical Approach for Cross-chain Trades',
+            title: 'Chain Relays or A Practical Approach for Cross-chain Trades',
             titlecn: '链中继技术：实现跨链交易的实用方案',
             intro: 'A chain relay for a blockchain X, or X-relay for brevity, is a way to implement and maintain light client for blockchain X within an Ethereum smart contract. The contract essentially stores all block headers which are much lighter than the size of the chain state or the entire blockchain, hence the term light client. With the block headers, it is sufficient to verify if a transaction has been included, or even the blockchain state, depending on what are stored in a block header. Thus, X-relay allows any contract in Ethereum to verify transactions, and sometimes even account states of the blockchain X via the implemented light client.',
             introcn: '用于区块链X的链中继技术，简称X-Relay，是在以太坊智能合约中实施和维护区块链X轻客户端的一种方式',
@@ -13,7 +52,6 @@ var data = {
             urlcn: 'knowledge/chain_relays_or_a_practical_approach_for_cross_chain_trades' + '_cn.html'
         },
         {
-            top: '1',
             id: '12',
             date: '',
             cover: 'images/knowledge/what_is_ethereum_metropolis.jpg',
@@ -42,7 +80,7 @@ var data = {
             title: '',
             titlecn: '智能合约',
             intro: '',
-            introcn: '智能合约是 1990s 年代由尼克萨博提出的理念，几乎与互联网同龄。由于缺少可信的执行环境，智能合约并没有被应用到实际产业中，自比特币诞生后，人们认识到比特币的底层技术区块链天生可以为智能合约提供可信的执行环境，以太坊首先看到了区块链和智能合约的契合，发布了白皮书《以太坊：下一代智能合约和去中心话应用平台》，并一直致力于将以太坊打造成最佳智能合约平台，所以比特币引领区块链，以太坊复活智能合约。',
+            introcn: '智能合约是 1990s 年代由尼克萨博提出的理念，几乎与互联网同龄。由于缺少可信的执行环境，智能合约并没有被应用到实际产业中，自比特币诞生后，人们认识到比特币的底层技术区块链天生可以为智能合约提供可信的执行环境...',
             url: 'knowledge/' + '.html',
             urlcn: 'knowledge/smart_contract' + '_cn.html'
         },
@@ -116,7 +154,7 @@ var data = {
             id: '4',
             date: '',
             cover: 'images/knowledge/z4-thumb.jpg',
-            title: 'Zk-SNARKs: Under the Hall Hood.',
+            title: 'Zk-SNARKs: Under The Hall Hood.',
             titlecn: '最新以太坊｜零知识证明专题系列报告（四）： 算法迷踪',
             intro: 'This is the third part of a series of' +
             '                                    articles explaining how the technology behind zk-SNARKs works; the' +
@@ -132,7 +170,7 @@ var data = {
             id: '3',
             date: '',
             cover: 'images/knowledge/z1-thumb.jpg',
-            title: 'A Prehistory of the Ethereum Protocol',
+            title: 'A Prehistory of The Ethereum Protocol',
             titlecn: '以太坊协议的发展历程',
             intro: 'Although the ideas behind the current' +
             '                                    Ethereum protocol have largely been stable for two years, Ethereum' +
@@ -160,7 +198,7 @@ var data = {
             id: '1',
             date: '',
             cover: 'images/knowledge/information_technology_thumb.jpg',
-            title: 'Explaining the Ethereum Namespace Auction',
+            title: 'Explaining The Ethereum Namespace Auction',
             titlecn: '最新以太坊 | 以太坊命名空间拍卖',
             intro: 'The first portion of the post provides the motivation, if you just want the nitty' +
             '                                    gritty, skip ahead to “Ownership of names”.',

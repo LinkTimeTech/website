@@ -1,0 +1,319 @@
+<!DOCTYPE HTML>
+<!--@以太坊社区交流会报名-->
+<!--@author ZaneYule <contact@zaneyule.com>-->
+<!--@2017-->
+<!--db-->
+<html>
+
+<head>
+    <title>以太坊社区交流活动报名</title>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"/>
+    <link rel="stylesheet" href="assets/css/main.css"/>
+    <link rel="SHORTCUT ICON" href="images/meetup.ico">
+    <!--[if lte IE 9]>
+    <link rel="stylesheet" href="assets/css/ie9.css"/><![endif]-->
+    <noscript>
+        <link rel="stylesheet" href="assets/css/noscript.css"/>
+    </noscript>
+    <!-- baidu Map api -->
+    <script type="text/javascript"
+            src="http://api.map.baidu.com/api?v=2.0&ak=DD279b2a90afdf0ae7a3796787a0742e"></script>
+</head>
+<style>
+    #agenda p {
+        font-weight: normal;
+        text-transform: none;
+        margin-bottom: 5px;
+    }
+
+    #guests p {
+        font-weight: normal;
+        text-transform: none;
+        margin-bottom: 8px;
+    }
+</style>
+
+<body>
+<!-- Wrapper -->
+<div id="wrapper">
+
+    <!-- Header -->
+    <header id="header">
+        <div class="logo">
+            <span class="icon fa-bell-o"></span>
+        </div>
+        <div class="content">
+            <div class="inner">
+                <h1 style="text-transform:none;letter-spacing:10px">亚太区以太坊社区培训</h1>
+                <h1 style="text-transform:none">暨交流活动</h1>
+                <!--<h3 style="margin-bottom:0">活动介绍:
+                    <a href="https://html5up.net">主办公司网址</a>
+                </h3>-->
+                <h3>时间: 2017/12/3</h3>
+                <h3>坐标: 深圳</h3>
+            </div>
+        </div>
+        <nav>
+            <ul>
+                <li>
+                    <a href="#intro">活动介绍</a>
+                </li>
+                <li>
+                    <a href="#agenda">日程安排</a>
+                </li>
+                <li>
+                    <a href="#information">活动地点</a>
+                </li>
+                <li>
+                    <a href="#registration">购买门票</a>
+                </li>
+                <!--<li><a href="#elements">Elements</a></li>-->
+            </ul>
+        </nav>
+    </header>
+    <!-- Main -->
+    <div id="main">
+
+        <!-- Intro -->
+        <article id="intro">
+            <h2 class="major">活动介绍</h2>
+            <p style="margin-bottom:0;text-indent:2em">
+                亚太区以太坊社区活动是由灵钛科技主办，以区块链技术交流为目的，为社区成员与以太坊开发者搭建沟通的桥梁。活动嘉宾包括以太坊创始人，以太坊开发者，以太坊社区代表（亚太区），优秀以太坊项目创始人，业界知名投资人及行业知名企业代表等。
+            </p>
+            <p style="text-indent:2em">
+                活动地点位于深圳市南山区侨香路4068号智慧广场A栋1单元19F。邻近世界之窗，欢乐谷，锦绣中华民俗村。为了满足不同语种的需求，我们配备了同声传译设备，由专业翻译人员实时进行中英文广播。另外，活动现场还准备了精美的茶歇供参会人员品尝。
+            </p>
+        </article>
+        <!-- Work -->
+        <article id="agenda">
+            <h2 class="major">日程安排</h2>
+            <table border="1" style="font-size: 13px">
+                <tr>
+                    <td></td>
+                    <td>演讲人</td>
+                    <td>职位</td>
+                    <td>演讲主题</td>
+                </tr>
+                <template v-for="content in contents">
+                    <tr v-if="content.date == 'AM' && content.breakcol != 1">
+                        <td v-if="content.side == 1" rowspan="6" style="vertical-align:middle">{{ content.datecn }}</td>
+                        <td>{{ content.speakercn }}</td>
+                        <td>{{ content.titlecn }}</td>
+                        <td>{{ content.topic }}</td>
+                    </tr>
+                    <tr v-if="content.breakcol == 1">
+                        <td colspan="3" style="text-align:center">茶歇</td>
+                    </tr>
+                    <tr v-if="content.break == 1">
+                        <td>{{ content.speakercn }}</td>
+                        <td>{{ content.titlecn }}</td>
+                        <td>{{ content.topic }}</td>
+                    </tr>
+                </template>
+
+                <tr>
+                    <td colspan="4" style="text-align:center"></td>
+                </tr>
+                <tr>
+                    <td rowspan="11" style="vertical-align:middle">下午</td>
+                    <td>Jim Bai</td>
+                    <td>EverMarkets创始人</td>
+                    <td>区块链上的期货交易</td>
+                </tr>
+                <tr>
+                    <td>Thomas Greco</td>
+                    <td>OmiseGo特别顾问</td>
+                    <td>开放的金融网络价值(OMG!)</td>
+                </tr>
+                <tr>
+                    <td>Loi Luu</td>
+                    <td>Kyber创始人</td>
+                    <td>什么是真正的链上去中心化交易所？
+                        -在经济系统中的角色
+                    </td>
+                </tr>
+                <tr>
+                    <td>Kai Chen</td>
+                    <td>Olympus Labs创始人</td>
+                    <td>作为资产类别的加密货币：从2000亿美元到20万亿美元</td>
+                </tr>
+                <tr>
+                    <td>Kevin Serrano</td>
+                    <td>ConsenSys-MetaMask<br/>硬件工程师</td>
+                    <td>对分散式应用的采用和趋势的洞察</td>
+                </tr>
+                <tr>
+                    <td>Michael Wuehler</td>
+                    <td>ConsenSys-区块链基础设施领导人</td>
+                    <td>用INFURA开发分散式应用</td>
+                </tr>
+                <tr>
+                    <td>Michael Sena</td>
+                    <td>ConsenSys-Uport产品领导人</td>
+                    <td>自我主权身份</td>
+                </tr>
+
+                <tr>
+                    <td colspan="3" style="text-align:center">茶歇</td>
+                </tr>
+                <tr>
+                    <td>朱嘉伟</td>
+                    <td>火币网CEO</td>
+                    <td>从数字货币到区块链</td>
+                </tr>
+                <tr>
+                    <td>Jehan Chu</td>
+                    <td>Kenetic Capital合伙人</td>
+                    <td>基于区块链的融资模型</td>
+                </tr>
+                <tr>
+                    <td>Pavel Bains</td>
+                    <td>Bluzelle创始人</td>
+                    <td>区块链如何解决数据管理问题</td>
+                </tr>
+                <tr>
+                    <td>Vitalik Buterin</td>
+                    <td>以太坊创始人</td>
+                    <td>以太坊将如何保护隐私</td>
+                </tr>
+            </table>
+        </article>
+
+        <!-- About -->
+        <article id="information">
+            <h2 class="major">活动地点</h2>
+            <p>深圳市南山区侨香路4068号智慧广场A栋1单元19F。</p>
+            <span class="image main"><div id="baiduMap" style="width:100%;height:300px"></div></span>
+        </article>
+
+        <!-- Contact -->
+        <article id="registration">
+            <!--<p style="text-align: center;font-size:36px;">-->
+            <!--报名已截止-->
+            <!--</p>-->
+            <h2 class="major">购买门票</h2>
+            <div style="text-align:center;">
+                <img src="images/qr.jpg" style="width:300px;height:400px">
+            </div>
+            <p align="center"><br/>此付款码仅限成功报名后购买门票使用。<br/>门票200元/人，扫描二维码请<b style="color:#337ab7;">备注姓名</b>。</p>
+            <!--<p style="text-indent:2em">-->
+            <!--请正确填写以下信息，我们将以此作为联系方式及个人报名信息以便入场登记，请勿重复报名，感谢配合。活动最新进展我们会邮件或电话告知，请随时关注。如报名时遇到问题，请联系<a href="mailto:contact@linktimetech.com">contact@linktimetech.com</a>-->
+            <!--</p>-->
+            <!--<form method="post" action="#">-->
+            <!--<div class="field half first">-->
+            <!--<label for="name">姓名</label>-->
+            <!--<input type="text" name="name" id="name" />-->
+            <!--</div>-->
+            <!--<div class="field half">-->
+            <!--<label for="company">公司</label>-->
+            <!--<input type="text" name="company" id="company" />-->
+            <!--</div>-->
+            <!--<div class="field half first">-->
+            <!--<label for="mobile">电话</label>-->
+            <!--<input type="text" name="mobile" id="mobile" />-->
+            <!--</div>-->
+            <!--<div class="field half">-->
+            <!--<label for="email">邮箱</label>-->
+            <!--<input type="text" name="email" id="email" />-->
+            <!--</div>-->
+            <!--<div class="field">-->
+            <!--<label for="note">备注(选填)</label>-->
+            <!--<textarea name="note" id="note" rows="4"></textarea>-->
+            <!--</div>-->
+            <!--<ul class="actions">-->
+            <!--<li><input type="button" value="发送" class="special" onclick="sendmsg()" /></li>-->
+            <!--<li><input type="reset" value="重置" /></li>-->
+            <!--</ul>-->
+            <!--</form>-->
+
+            <!--<ul class="icons">
+                <li>
+                    <a href="https://www.twitter.com/linktimetech" target="_blank" class="icon fa-twitter"><span class="label">Twitter</span></a>
+                </li>
+                <li>
+                    <a target="_blank" href="" target="_blank" class="icon fa-envelope"><span class="label">email</span></a>
+                </li>
+                <li>
+                    <a href="#" target="_blank" class="icon fa-wechat"><span class="label">wechat</span></a>
+                </li>
+            </ul>-->
+        </article>
+    </div>
+    <!-- Footer -->
+    <footer id="footer">
+        <h4 style="text-transform:none">&copy; <a href="http://www.linktimetech.com" target="_blank">LinkTime</a> |
+            Switch into <a href="index-en.html" style="color:#337ab7;">English Version</a>.</h4>
+    </footer>
+</div>
+
+<!-- BG -->
+<div id="bg"></div>
+<!-- Scripts -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.3/jquery.min.js"></script>
+<script src="assets/js/skel.min.js"></script>
+<script src="assets/js/util.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/vue"></script>
+<script src="assets/js/content.js"></script>
+
+<script src="assets/js/main.js"></script>
+
+<script type="text/javascript">
+    var map = new BMap.Map("baiduMap");
+    var point = new BMap.Point(113.98876, 22.556458);
+    map.centerAndZoom(point, 20);
+    var marker = new BMap.Marker(point); // 创建标注
+    map.addOverlay(marker); // 将标注添加到地图中
+    marker.setAnimation(BMAP_ANIMATION_BOUNCE); //跳动的动画
+    map.enableScrollWheelZoom(true);
+</script>
+<!-- <script type="text/javascript">
+
+	function sendmsg() {
+        var name = $("#name").val();
+        var company = $("#company").val();
+        var mobile = $("#mobile").val();
+        var email = $("#email").val();
+        var note = $("#note").val();
+        if(name==""||company==""||mobile==""||email==""){
+            alert("请完善信息后再次提交，姓名、公司、电话、邮箱为必填项。");
+		}
+		else {
+            $.ajax({
+                type: "post",
+                url: "../phalapi/public/?service=App.Examples_CURD.Insert",
+                data: {
+                    name: name,
+                    company: company,
+                    mobile: mobile,
+                    email: email,
+                    note: note
+                },
+                timeout: 5000,    //超时时间
+                dataType: 'json',    //返回的数据格式：json/xml/html/script/jsonp/text
+                success: function (data) {
+                    if (data.ret == 200) {
+                        $("#name").val("");
+                        $("#company").val("");
+                        $("#mobile").val("");
+                        $("#email").val("");
+                        $("#note").val("");
+                        alert("信息提交成功，我们会尽快与你取得联系。");
+                    }else {
+                        alert("信息提交失败，请核对所填的信息或稍后再试。");
+					}
+                },
+                error: function (xhr, textStatus) {
+                    console.log('错误')
+                    console.log(xhr)
+                    console.log(textStatus)
+                    alert("信息提交失败，请检查你的网络。");
+                }
+            })
+        }
+	}
+</script>-->
+</body>
+
+</html>

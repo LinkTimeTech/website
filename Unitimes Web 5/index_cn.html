@@ -25,12 +25,21 @@
     <link href="//vjs.zencdn.net/5.19/video-js.min.css" rel="stylesheet">
 
     <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style.css">    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-109516558-1"></script>
+    <script>        window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+        dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+    gtag('config', 'UA-109516558-1');    </script>
 
 </head>
 <body class="v-enableBrandingButtons">
 
-<div class="gtco-loader"></div>
+
 
 <div id="page">
 
@@ -172,11 +181,16 @@
             <div class="row row-pb-md">
                 <div class="col-md-12">
                     <ul id="gtco-post-list">
-                        <li class="full entry">
+
+
+                        <li class="two-third entry" style="width: 100%">
                             <a href="unitalk/welcome_to_unitimes_cn.html">
-                                <div class="entry-img lozad" data-background-image="images/interview/welcome.jpg"></div>
+
+                                <div class="entry-img lozad" style="min-height: 300px;"
+                                     data-background-image="images/interview/welcome.jpg"></div>
                                 <div class="entry-desc">
-                                    <h3 class="u-marginTop15">Unitimes正式上线运营！！</h3>
+                                    <h3 class="u-marginTop15">欢迎来到Unitimes</h3>
+
                                     <div>
                                         <p class="u-marginTop15">Unitimes 终于和大家见面了！ 在这个特别的日子，我们很高兴地宣布，Unitimes
                                             官方网站正式开放并上线运营！</p>
@@ -186,13 +200,14 @@
                                         <p> • 新闻资讯</p>
                                         <p> • 知识库 - 技术相关文章</p>
                                         <p> • 活动信息 - 峰会，线下见面会，国际活动等</p>
+                                        <p>......</p>
 
                                     </div>
                                 </div>
                             </a>
-
                             <a href="unitalks_cn.html" class="post-meta">独角访谈<span
-                                    class="date-posted">2017.11.11</span></a></li>
+                                    class="date-posted">Nov 11, 2017</span></a>
+                        </li>
 
                         <template v-for="content in contents">
 
@@ -268,7 +283,7 @@
 </div>
 
 <div class="gototop js-top">
-    <a href="#" class="js-gotop"><i class="fa fa-arrow-up"></i></a>
+    <a data-scroll href="#page" class="js-gotop"><i class="fa fa-arrow-up"></i></a>
 </div>
 
 <script src="https://cdn.jsdelivr.net/npm/vue"></script>
@@ -287,6 +302,7 @@
 <script src="https://cdn.jsdelivr.net/npm/lozad/dist/lozad.min.js"></script>
 
 <!-- Main -->
+<script src="https://cdn.bootcss.com/smooth-scroll/12.1.5/js/smooth-scroll.min.js"></script>
 <script src="js/main.js"></script>
 
 <script src="//cdn.jsdelivr.net/npm/theaterjs@latest/dist/theater.min.js"></script>

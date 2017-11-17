@@ -33,7 +33,16 @@
 
 
     <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style.css">    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-109516558-1"></script>
+    <script>        window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+        dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+    gtag('config', 'UA-109516558-1');    </script>
 
     <style>
         .col-lg-8 b {
@@ -44,7 +53,7 @@
 </head>
 <body>
 
-<div class="gtco-loader"></div>
+
 
 <div id="page">
     <nav class="gtco-nav" role="navigation">
@@ -172,7 +181,7 @@
 </div>
 
 <div class="gototop js-top">
-    <a href="#" class="js-gotop"><i class="fa fa-arrow-up"></i></a>
+    <a data-scroll href="#page" class="js-gotop"><i class="fa fa-arrow-up"></i></a>
 </div>
 
 <!-- jQuery -->
@@ -180,6 +189,7 @@
 <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"
         integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
         crossorigin="anonymous"></script><!-- Main -->
+<script src="https://cdn.bootcss.com/smooth-scroll/12.1.5/js/smooth-scroll.min.js"></script>
 <script src="js/main.js"></script>
 </body>
 </html>
