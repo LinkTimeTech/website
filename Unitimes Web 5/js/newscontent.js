@@ -3,8 +3,8 @@ var data = {
         // {
         //     top: '1',
         //     id: '',
-        //     date: 'Nov 19, 2017',
-        //     datecn: '2017.11.19',
+        //     date: 'Nov 20, 2017',
+        //     datecn: '2017.11.20',
         //     cover: 'images/news/'+'',
         //     title: '',
         //     titlecn: '',
@@ -13,9 +13,57 @@ var data = {
         //     url: 'news/'+''+'.html',
         //     urlcn: 'news/'+''+'_cn.html'
         // },
-
         {
             top: '1',
+            id: '',
+            date: 'Nov 19, 2017',
+            datecn: '2017.11.19',
+            cover: 'images/news/' + 'twenty_banks_join_s.jpg',
+            title: 'Twenty Banks Join Hong Kong-Singapore Blockchain Partnership',
+            titlecn: '又添新成员！20家银行加入香港新加坡区块链联盟',
+            intro: 'The message is that when you work with one of us, you work with both of us.',
+            introcn: '我们传递的信息是，如果你和我们其中一个国家合作，你就是在和两个国家一起合作。',
+            url: 'news/' + 'twenty_banks_join_hong_kong_singapore_blockchain_partnership' + '.html',
+            urlcn: 'news/' + 'twenty_banks_join_hong_kong_singapore_blockchain_partnership' + '_cn.html'
+        },
+        {
+            top: '1',
+            id: '',
+            date: 'Nov 19, 2017',
+            datecn: '2017.11.19',
+            cover: 'images/news/' + 'ubs_remarks.jpg',
+            title: 'UBS Remarks that Bitcoin Is Unstable Due to the Lack of Government Oversight',
+            titlecn: '瑞银表示比特币因缺乏政府监管而不稳定',
+            intro: 'Mark Haefele, CIO of UBS also added that cryptocurrencies are unstable due to relatively few users, as compared to traditional currencies',
+            introcn: '瑞银全球首席投资官Mark Haefele也表示，与传统货币相比，加密货币因其用户相对较少而不稳定。',
+            url: 'news/' + 'ubs_remarks_that_bitcoin_is_unstable_due_to_the_lack_of_government_oversight' + '.html',
+            urlcn: 'news/' + 'ubs_remarks_that_bitcoin_is_unstable_due_to_the_lack_of_government_oversight' + '_cn.html'
+        },
+        {
+            id: '',
+            date: 'Nov 18, 2017',
+            datecn: '2017.11.18',
+            cover: 'images/news/' + 'vontobel_and_Leonteq.jpg',
+            title: 'Vontobel and Leonteq Securities AG Launch Their Respective Futures Products to Allow Hedging of Bitcoin',
+            titlecn: 'Vontobel和Leonteq Securities AG推出各自版本的期货产品，允许对冲比特币',
+            intro: 'Investors can now also bet on the rise and fall of bitcoin prices under these newly launched futures products',
+            introcn: '投资者现在也可以下注这些新推出期货产品下比特币价格的涨跌',
+            url: 'news/' + 'vontobel_and_leonteq_securities_ag_launch_their_respective_futures_products' + '.html',
+            urlcn: 'news/' + 'vontobel_and_leonteq_securities_ag_launch_their_respective_futures_products' + '_cn.html'
+        },
+        {
+            id: '',
+            date: 'Nov 18, 2017',
+            datecn: '2017.11.18',
+            cover: 'images/news/' + 'square_Has_Quietly.jpg',
+            title: 'Square Has Quietly Allowed Some Customers to Buy and Sell Bitcoin on Their Payments App Cash',
+            titlecn: 'Square已悄然允许一些用户在其支付应用程序Cash上买卖比特币',
+            intro: 'This support for bitcoin represents the first time Square is implementing cryptocurrency in their offerings',
+            introcn: '此次对比特币的支持是Square首次在其产品中实现加密货币功能',
+            url: 'news/' + 'square_has_quietly_allowed_some_customers_to_buy_and_sell_bitcoin' + '.html',
+            urlcn: 'news/' + 'square_has_quietly_allowed_some_customers_to_buy_and_sell_bitcoin' + '_cn.html'
+        },
+        {
             id: '',
             date: 'Nov 17, 2017',
             datecn: '2017.11.17',
@@ -27,9 +75,19 @@ var data = {
             url: 'news/' + 'amex_and_santander_partners_ripple_to_transfer_funds_on_blockchain_platform' + '.html',
             urlcn: 'news/' + 'amex_and_santander_partners_ripple_to_transfer_funds_on_blockchain_platform' + '_cn.html'
         },
-
         {
-            top: '1',
+            id: '',
+            date: 'Nov 17, 2017',
+            datecn: '2017.11.17',
+            cover: 'images/news/' + 'bch_btc.jpg',
+            title: 'BCH=BTC？While Ethereum Founder Vitalik Buterin Doesn\'t Think So！',
+            titlecn: 'BCH=BTC？以太坊创始人Vitalik Buterin并不这么认为',
+            intro: 'Between BTC and BCH, a seemingly white war is at a trigger. Both blockchains are seeking for establishing dominance. For a long time to come, BCH will remain controversial. And what might happen in the future, let’s go and see. ',
+            introcn: 'BTC与BCH之间，一场看似没有硝烟的战争一触即发，两条链都在争取主导地位。在未来很长一段时间，BCH仍将具有争议性，后事的发展如何，需待我们且行且观察。',
+            url: 'news/' + 'bch_btc_while_ethereum_founder_vitalik_buterin' + '.html',
+            urlcn: 'news/' + 'bch_btc_while_ethereum_founder_vitalik_buterin' + '_cn.html'
+        },
+        {
             id: '',
             date: 'Nov 17, 2017',
             datecn: '2017.11.17',
@@ -40,18 +98,6 @@ var data = {
             introcn: '随着比特币受到投资银行业的追捧，并引起CEO和国家元首越来越多的关注，无法追踪的加密货币交易可能不会赢得太多关注。然而对于匿名虚拟货币交易，我们有合理和正当的理由认为它是可取的。',
             url: 'news/' + 'confidential_transactions_could_add_anonymityto_bitcoin_and_litecoin' + '.html',
             urlcn: 'news/' + 'confidential_transactions_could_add_anonymityto_bitcoin_and_litecoin' + '_cn.html'
-        },
-        {
-            id: '',
-            date: 'Nov 17, 2017',
-            datecn: '2017.11.17',
-            cover: 'images/news/' + 'bch_btc.jpg',
-            title: '',
-            titlecn: 'BCH=BTC？以太坊创始人Vitalik Buterin并不这么认为',
-            intro: '',
-            introcn: 'BTC与BCH之间，一场看似没有硝烟的战争一触即发，两条链都在争取主导地位。在未来很长一段时间，BCH仍将具有争议性，后事的发展如何，需待我们且行且观察。',
-            url: 'news/' + 'bch_btc_while_ethereum_founder_vitalik_buterin' + '.html',
-            urlcn: 'news/' + 'bch_btc_while_ethereum_founder_vitalik_buterin' + '_cn.html'
         },
         {
             id: '',
@@ -806,11 +852,11 @@ var data = {
 
     ]
 
-}
+};
 
 var vm = new Vue({
     el: '#gtco-maine',
     data: data
-})
+});
 
 
