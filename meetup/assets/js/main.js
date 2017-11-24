@@ -17,6 +17,14 @@
 
     $(function () {
 
+        $('.payokcn').click(function () {
+            alert('感谢您的参与，12月3日深圳见！')
+        })
+
+        $('.payok').click(function () {
+            alert('Thank you for your participation! See you in Shenzhen (December 3)!!!')
+        })
+
         var $window = $(window),
             $body = $('body'),
             $wrapper = $('#wrapper'),

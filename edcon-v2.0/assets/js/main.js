@@ -66,3 +66,48 @@ $('#registration-form').submit(function (e) {
  */
 
 var scroll = new SmoothScroll('a[href*="#"]')
+
+/*
+ * SmoothScroll
+ */
+
+var showweixin = function () {
+    $('.weixinlink').click(function () {
+
+        if ($('.weixincode').hasClass('hide')) {
+            $('.weixincode').removeClass('hide').addClass('show')
+        } else {
+            $('.weixincode').removeClass('show').addClass('hide')
+
+        }
+
+    })
+}
+
+var agenda = function () {
+    $('.nav-tabs a[href="#fday"]').click(function (e) {
+        e.preventDefault()
+        $(this).tab('show')
+    })
+
+    $('.nav-tabs a[href="#sday"]').click(function (e) {
+        e.preventDefault()
+        $(this).tab('show')
+    })
+
+    $('.nav-tabs a[href="#tday"]').click(function (e) {
+        e.preventDefault()
+        $(this).tab('show')
+    })
+
+    $('.nav-tabs a[href="#zday"]').click(function (e) {
+        e.preventDefault()
+        $(this).tab('show')
+    })
+
+
+}
+
+
+showweixin()
+agenda()

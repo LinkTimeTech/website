@@ -660,6 +660,7 @@ ul li {
 .social-block {
     list-style-type: none;
     padding: 0;
+    margin: 10px 0 0 0;
 }
 
 .social-block li {
@@ -668,8 +669,8 @@ ul li {
 
 .social-block li a {
     display: inline-block;
-    height: 40px;
-    width: 40px;
+    height: 30px;
+    width: 30px;
     color: #4e4e4e;
 }
 
@@ -2041,7 +2042,7 @@ Guest section
 }
 
 .w3_banner_bottom_icons1 {
-    border: 1px solid #f5f5f5;
+    /*border: 1px solid #f5f5f5;*/
     /*border-top: 1px solid #f5f5f5;*/
     margin-top: -1px;
     margin-left: -1px;
@@ -2062,6 +2063,10 @@ Guest section
     line-height: 2.5em;
 }
 
+.superdemoicons {
+    width: 20px;
+    text-align: center;
+}
 .fa-table:before {
     content: "\f0ce";
 }

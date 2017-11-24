@@ -9,16 +9,15 @@
     <title>Registration for Ethereum Meetup</title>
     <meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"/>
+
     <link rel="stylesheet" href="assets/css/main.css"/>
-    <link rel="SHORTCUT ICON" href="images/meetup.ico">
+    <link rel="SHORTCUT ICON" href="images/meetup.png">
     <!--[if lte IE 9]>
     <link rel="stylesheet" href="assets/css/ie9.css"/><![endif]-->
     <noscript>
         <link rel="stylesheet" href="assets/css/noscript.css"/>
     </noscript>
-    <!-- baidu Map api -->
-    <script type="text/javascript"
-            src="http://api.map.baidu.com/api?v=2.0&ak=DD279b2a90afdf0ae7a3796787a0742e"></script>
+
 </head>
 
 <style>
@@ -51,7 +50,7 @@
                 <!--<h3 style="margin-bottom:0">活动介绍:
                     <a href="https://html5up.net">主办公司网址</a>
                 </h3>-->
-                <h3 style="text-transform:none">Time: Dec 3, 2017</h3>
+                <h3 style="text-transform:none">Time: 8:30-18:00 Dec 3, 2017</h3>
                 <h3 style="text-transform:none">Location: Shenzhen, China</h3>
             </div>
         </div>
@@ -64,7 +63,7 @@
                     <a href="#agenda">Agenda</a>
                 </li>
                 <li>
-                    <a href="#information">Venue</a>
+                    <a href="#information">Info</a>
                 </li>
                 <li>
                     <a href="#registration">Pay</a>
@@ -79,18 +78,20 @@
         <!-- Intro -->
         <article id="intro">
             <h2 class="major">About</h2>
-            <p style="text-align:justify;margin-bottom:0;text-transform:none">
-                Asia-Pacific Ethereum Community Meetup is organized by Linktime. It aims at promoting technology
-                exchange and connecting Ethereum developers to community members. The guests we invited include the
-                founder of Ethereum, Ethereum developers, Ethereum reseacher, founders of
-                excellent Ethereum-based projects, noted investors and enterprise representatives in this space, etc.
+            <p style="text-align:justify;text-transform:none">
+                The meetup is organized by LinkTime(<a href="www.limktimetech.com">www.limktimetech.com</a>), who is one
+                of the representatives of Ethereum
+                Community in China. It aims at promoting technology exchange and connecting Ethereum developers with
+                community members, as well as creating opportunities for users to know more about the Ethereum-based
+                projects.
             </p>
             <p style="text-align:justify;text-transform:none">
-                The meetup is specifically located in 19F, Unit 1, Building A, Smart Plaza, 4068 Qiaoxiang Road, Nanshan
-                District, Shenzhen, China. The Window of the Word, Happy Valley, Splendid China Folk Culture Village are
-                featured attractions around the location. Besides, we have prepared professional simultaneous
-                interpretation during the event for the needs of different languages, and a tea break is also available
-                during the event.
+                The event covers the Ethereum-based technology training, excellent use case discussion, and the current
+                development discussion of Asia-Pacific Ethereum communities, etc. The confirmed guests include the
+                founder
+                of Ethereum, Ethereum developers, various Ethereum community representatives (China, Korea, Singapore,
+                America, Japan etc.), founders of excellent Ethereum-based projects, noted investors and enterprise
+                representatives in this space.
             </p>
         </article>
         <!-- Work -->
@@ -103,156 +104,79 @@
                     <td>Title</td>
                     <td>Topic</td>
                 </tr>
-                <tr>
-                    <td rowspan="7" style="vertical-align:middle">A<br/>M</td>
-                    <td>Pandia Jiang</td>
-                    <td>Founder of Linktime&Justfund</td>
-                    <td>Opening Speech</td>
-                </tr>
-                <tr>
-                    <td>Hsiao-wei Wang</td>
-                    <td>Ethereum reseacher</td>
-                    <td>Ethereum and scalability technology
-                        （ Sharding）
-                    </td>
-                </tr>
-                <tr>
-                    <td>Nicolas Lin</td>
-                    <td>Ethereum reseacher</td>
-                    <td>Ethereum Wallet and Analyses on Parity Issue</td>
-                </tr>
-                <tr>
-                    <td colspan="3" style="text-align:center">Break</td>
-                </tr>
-                <tr>
-                    <td>Jon Choi</td>
-                    <td>Ethereum reseacher</td>
-                    <td>Cryptoeconomics in Casper</td>
-                </tr>
-                <tr>
-                    <td>Thomas Greco</td>
-                    <td>Special adviser of OmiseGo</td>
-                    <td>The Value of Open Financial Networks (OMG!)</td>
-                </tr>
-                <tr>
-                    <td>Simon Kim</td>
-                    <td>Partner of Hashed（Korea）</td>
-                    <td>How I am Building Ethereum Community？</td>
-                </tr>
 
-                <tr>
-                    <td colspan="4"></td>
-                </tr>
-                <tr>
-                    <td rowspan="11" style="vertical-align:middle">P<br/>M</td>
-                    <td>Jim Bai</td>
-                    <td>Founder of EverMarket</td>
-                    <td>Futures Trading on Blockchain</td>
-                </tr>
+                <template v-for="content in contents">
+                    <tr>
+                        <td v-if="content.amside == 1 || content.pmside == 1" :rowspan="content.timerow"
+                            style="vertical-align:middle">{{ content.date }}
+                        </td>
 
-                <tr>
-                    <td>Loi Luu</td>
-                    <td>Founder of Kybernetwork</td>
-                    <td>"What Does An On-chain Exchange Entail?"
-                        Subtopic: Its Roles In the Ecosystem
-                    </td>
-                </tr>
-                <tr>
-                    <td>Kai Chen</td>
-                    <td>Founder of Olympus Labs</td>
-                    <td>Cryptocurrency as An Asset Class: from $200 Billion to $20 Trillion</td>
-                </tr>
-                <tr>
-                    <td>Kevin Serrano</td>
-                    <td>Consensys-MetaMask Software Engineer</td>
-                    <td>Insights to Decentralized Apps' Adoption and Trend</td>
-                </tr>
-                <tr>
-                    <td>Michael Wuehler</td>
-                    <td>Consensys-Head of Blockchain Infrastructure</td>
-                    <td>Developing Decentralized Application with INFURA</td>
-                </tr>
-                <tr>
-                    <td>Michael Sena</td>
-                    <td>Consensys-Uport Product Lead</td>
-                    <td>Self-sovereign Identity</td>
-                </tr>
-                <tr>
-                    <td colspan="3" style="text-align:center">Break</td>
-                </tr>
-                <tr>
-                    <td>Robin Zhu</td>
-                    <td>CEO of Huobi</td>
-                    <td>From Digital Currency to Blockchain</td>
-                </tr>
-                <tr>
-                    <td>Jehan Chu</td>
-                    <td>Partner of Kenetic Capital</td>
-                    <td>Crypto funding models and the future of Venture Capital</td>
-                </tr>
-                <tr>
-                    <td>Pavel Bains</td>
-                    <td>Founder of Bluzelle</td>
-                    <td>How Blockchain can Solve the Coming
-                        Data Management Problem
-                    </td>
-                </tr>
-                <tr>
-                    <td>Vitalik Buterin</td>
-                    <td>Founder of Ethereum</td>
-                    <td>How Will Ethereum Protect Privacy?</td>
-                </tr>
+                        <td v-if="content.break == 1" :colspan="content.breakcol" style="text-align:center">{{
+                            content.breaktext }}
+                        </td>
+
+                        <td v-if="content.empty == 1" :colspan="content.colspan" style="text-align:center"></td>
+
+                        <td v-if="content.type == 'agenda' ">{{ content.speaker }}</td>
+                        <td v-if="content.type == 'agenda' ">{{ content.title }}</td>
+                        <td v-if="content.type == 'agenda' ">{{ content.topic }}</td>
+
+                    </tr>
+
+                </template>
             </table>
         </article>
 
         <!-- About -->
         <article id="information">
-            <h2 class="major">Venue</h2>
-            <p>19F, Unit 1, Building A, Smart Plaza, 4068 Qiaoxiang Road, Nanshan District, Shenzhen, China.</p>
-            <span class="image main"><div id="baiduMap" style="width:100%;height:300px"></div></span>
+            <h2 class="major">Info</h2>
+            <p>Location: 19F, Unit 1, Block A, Smart Plaza, 4068 Qiaoxiang Road, Nanshan District, Shenzhen, China.
+                <br>Time: 8:30-18:00, December 3, 2017
+                <br>Registration: 7:30-8:30, December 3, 2017. Please get to the venue earlier for registration.</p>
+            <div class="image main">
+                <div id="baiduMap" style="width:100%;height:300px"></div>
+            </div>
         </article>
 
         <!-- Contact -->
         <article id="registration">
-            <h2 class="major">Pay</h2>
-            <div style="text-align:center;">
-                <img src="images/qr.jpg" style="width:300px;height:400px">
-            </div>
-            <p><br/>This QR code is only for those who registered successfully to buy the ticket. the price is ￥200 /
-                per person, <b style="color:#337ab7;">Please attach your name when purchase.</b>
-                <br>Payment only valid for people who has already registered, there will be no auto-refund if you pay by
-                mistake.</p>
-            <!--<p style="text-align: center;font-size:36px;">-->
-            <!--Registration channel has been closed.-->
-            <!--</p>-->
-            <!--<h2 class="major">Register</h2>-->
+            <!--<h2 class="major">Pay</h2>-->
+
+            <h2 class="major">Register</h2>
+            <p style="text-align: center;font-size:36px;">
+                Registration channel has been closed.
+            </p>
+
             <!--<p style="text-transform:none">-->
-            <!--Please enter the correct information, we will use it as the only contact and registration proof for the activity. Please do not register repeatedly, thank you for your cooperation. The latest progress will be sent to your email; you may also receive our calls if necessary. If there is any problem when registering, please contact: <a href="mailto:contact@linktimetech.com">contact@linktimetech.com</a>-->
+            <!--Please enter the correct information, we will use it as the only contact and registration proof for the-->
+            <!--activity. Please do not register repeatedly, thank you for your cooperation. The latest progress will be-->
+            <!--sent to your email; you may also receive our calls if necessary. If there is any problem when-->
+            <!--registering, please contact: <a href="mailto:contact@linktimetech.com">contact@linktimetech.com</a>-->
             <!--</p>-->
             <!--<form method="post" action="#">-->
             <!--<div class="field half first">-->
             <!--<label for="name">Full Name</label>-->
-            <!--<input type="text" name="name" id="name" />-->
+            <!--<input type="text" name="name" id="name"/>-->
             <!--</div>-->
             <!--<div class="field half">-->
             <!--<label for="company">Company</label>-->
-            <!--<input type="text" name="company" id="company" />-->
+            <!--<input type="text" name="company" id="company"/>-->
             <!--</div>-->
             <!--<div class="field half first">-->
             <!--<label for="mobile">Phone</label>-->
-            <!--<input type="text" name="mobile" id="mobile" />-->
+            <!--<input type="text" name="mobile" id="mobile"/>-->
             <!--</div>-->
             <!--<div class="field half">-->
             <!--<label for="email">Email</label>-->
-            <!--<input type="text" name="email" id="email" />-->
+            <!--<input type="text" name="email" id="email"/>-->
             <!--</div>-->
             <!--<div class="field">-->
             <!--<label for="note">Notes</label>-->
             <!--<textarea name="note" id="note" rows="4"></textarea>-->
             <!--</div>-->
             <!--<ul class="actions">-->
-            <!--<li><input type="button" value="send" class="special" onclick="sendmsg()" /></li>-->
-            <!--<li><input type="reset" value="reset" /></li>-->
+            <!--<li><input type="button" value="send" class="special" onclick="sendmsg()"/></li>-->
+            <!--<li><input type="reset" value="reset"/></li>-->
             <!--</ul>-->
             <!--</form>-->
 
@@ -276,16 +200,52 @@
     </footer>
 </div>
 
+<div class="modal fade" id="success" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span>
+                </button>
+                <h4 class="modal-title" id="myModalLabel" style="font-size: 1.8rem;">Pay</h4>
+            </div>
+            <div class="modal-body">
+                <div style="text-align:center;">
+                    <img src="images/qr.jpg" style="width:300px;height:400px">
+                </div>
+                <p><br/>The price is ￥200 /
+                    per person, <b style="color:#337ab7;">Please attach your name when purchase.</b>
+                </p>
+
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+                <button type="button" class="btn btn-primary payok" data-dismiss="modal">Paid</button>
+            </div>
+        </div>
+    </div>
+</div>
+
 <!-- BG -->
 <div id="bg"></div>
+
+<!-- baidu Map api -->
+<script type="text/javascript"
+        src="http://api.map.baidu.com/api?v=2.0&ak=DD279b2a90afdf0ae7a3796787a0742e"></script>
+
 <!-- Scripts -->
-<script src="assets/js/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.3/jquery.min.js"></script>
+<script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"
+        integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+        crossorigin="anonymous"></script>
+
 <script src="assets/js/skel.min.js"></script>
 <script src="assets/js/util.js"></script>
-<script src="assets/js/main.js"></script>
-</body>
 
-</html>
+<script src="https://cdn.jsdelivr.net/npm/vue"></script>
+<script src="assets/js/content.js"></script>
+
+<script src="assets/js/main.js"></script>
+
 <script type="text/javascript">
     var map = new BMap.Map("baiduMap");
     var point = new BMap.Point(113.98876, 22.556458);
@@ -295,6 +255,7 @@
     marker.setAnimation(BMAP_ANIMATION_BOUNCE); //跳动的动画
     map.enableScrollWheelZoom(true);
 </script>
+<!--
 <script type="text/javascript">
 
     function sendmsg() {
@@ -326,18 +287,23 @@
                         $("#mobile").val("");
                         $("#email").val("");
                         $("#note").val("");
-                        alert("Successful! We will contact you soon!");
+                        $('#success').modal('show')
+//                        alert("Successful! We will contact you soon!");
                     } else {
                         alert("Failed! Please check your information and try again.");
                     }
                 },
                 error: function (xhr, textStatus) {
-                    console.log('错误');
-                    console.log(xhr);
-                    console.log(textStatus);
+                    console.log('错误')
+                    console.log(xhr)
+                    console.log(textStatus)
                     alert("Failed! Please check your internet.");
                 }
             })
         }
     }
-</script>
+</script> -->
+
+</body>
+
+</html>

@@ -1,16 +1,17 @@
 var data = {
     contents: [
         {
-            type: 'agenda',
-            side: '1',
+            amside: '1',
+            timerow: '7',
             date: 'AM',
             datecn: '上午',
+            type: 'agenda',
             speakercn: '姜英英',
             speaker: 'Pandia Jiang',
-            titlecn: '灵钛科技&JUSTFUND创始人',
+            titlecn: '灵钛科技 & JUSTFUND创始人',
             title: 'Founder of Linktime & Justfund',
             topiccn: '开篇演讲',
-            topic: 'Opening speech'
+            topic: 'Opening Speech'
         },
         {
             type: 'agenda',
@@ -19,10 +20,9 @@ var data = {
             speakercn: '王筱維',
             speaker: 'Hsiao-wei Wang',
             titlecn: '以太坊研究者（台湾）',
-            title: 'Ethereum reseacher',
+            title: 'Ethereum Reseacher',
             topiccn: '以太坊及其扩展性技术（分片技术）',
-            topic: 'Ethereum and scalability technology\n' +
-            '（Sharding）'
+            topic: 'Ethereum and Scalability Technology（Sharding）'
         },
         {
             type: 'agenda',
@@ -31,39 +31,39 @@ var data = {
             speakercn: '林修平',
             speaker: 'Nicolas Lin',
             titlecn: '以太坊研究者（台湾）',
-            title: 'Ethereum reseacher',
+            title: 'Ethereum Reseacher',
             topiccn: '以太坊钱包与Parity事件解析',
-            topic: 'Ethereum Wallet and analyses on Parity Issue'
-        },
-        {
-            breakcol: '1'
+            topic: 'Ethereum Wallet and Analyses on Parity Issue'
         },
         {
             break: '1',
+            breakcol: '3',
+            breaktextcn: '茶歇',
+            breaktext: 'break'
+        },
+        {
             type: 'agenda',
             date: 'AM',
             datecn: '上午',
             speakercn: 'Jon Choi',
             speaker: 'Jon Choi',
             titlecn: '以太坊研究者（美国）',
-            title: 'Ethereum reseacher',
-            topiccn: 'PoW与PoS',
-            topic: 'PoW&PoS'
+            title: 'Ethereum Reseacher',
+            topiccn: 'Casper的密码经济学',
+            topic: 'Cryptoeconomics in Casper'
         },
         {
-            break: '1',
             type: 'agenda',
             date: 'AM',
             datecn: '上午',
             speakercn: 'Thomas Greco',
             speaker: 'Thomas Greco',
             titlecn: 'OmiseGo特别顾问',
-            title: 'Special adviser of OmiseGo Network',
-            topiccn: '开放的金融网络价值(OMG !)',
+            title: 'Special Adviser of OmiseGo Network',
+            topiccn: '开放的金融网络价值(OMG!)',
             topic: 'The Value of Open Financial Networks (OMG!)'
         },
         {
-            break: '1',
             type: 'agenda',
             date: 'AM',
             datecn: '上午',
@@ -72,9 +72,15 @@ var data = {
             titlecn: 'Hashed合伙人（韩国）',
             title: 'Partner of Hashed（Korea）',
             topiccn: '如何搭建以太坊社区',
-            topic: 'How I am building Ethereum community？'
+            topic: 'How I Am Building Ethereum Community？'
         },
         {
+            empty: '1',
+            colspan: '4'
+        },
+        {
+            pmside: '1',
+            timerow: '12',
             type: 'agenda',
             date: 'PM',
             datecn: '下午',
@@ -93,10 +99,8 @@ var data = {
             speaker: 'Loi Luu',
             titlecn: 'Kyber创始人',
             title: 'Founder of Kybernetwork',
-            topiccn: '什么是真正的链上去中心化交易所？\n' +
-            '-在经济系统中的角色',
-            topic: '“what does an on-chain chain exchange entail?" \n' +
-            'Subtopic: its roles in the ecosystem'
+            topiccn: '什么是真正的链上去中心化交易所？-在经济系统中的角色',
+            topic: '“What Does An On-chain Exchange Entail?" Subtopic: Its Roles in the Ecosystem'
         },
         {
             type: 'agenda',
@@ -140,23 +144,37 @@ var data = {
             titlecn: 'ConsenSys-Uport产品领导人',
             title: 'Consensys-Uport Product Lead',
             topiccn: '自我主权身份',
-            topic: 'Self-sovereign identity'
+            topic: 'Self-sovereign Identity'
         },
         {
             break: '1',
+            breakcol: '3',
+            breaktextcn: '茶歇',
+            breaktext: 'break'
+        },
+        {
             type: 'agenda',
             date: 'PM',
             datecn: '下午',
             speakercn: '朱嘉伟',
             speaker: 'Robin Zhu',
-            titlecn: '火币网CEO',
-            title: 'CEO of Huobi ',
+            titlecn: '火币网COO',
+            title: 'COO of Huobi ',
             topiccn: '从数字货币到区块链',
-            topic: 'From\n' +
-            '  Digital Currency to Blockchain'
+            topic: 'From Digital Currency to Blockchain'
         },
         {
-            break: '1',
+            type: 'agenda',
+            date: 'PM',
+            datecn: '下午',
+            speakercn: '潘超',
+            speaker: 'Chao Pan',
+            titlecn: '经济研究员，MakerDAO',
+            title: 'Economic Researcher, MakerDAO',
+            topiccn: '探索更稳定的货币',
+            topic: 'In Search of a More Stable Coin'
+        },
+        {
             type: 'agenda',
             date: 'PM',
             datecn: '下午',
@@ -165,10 +183,9 @@ var data = {
             titlecn: 'Kenetic Capital合伙人',
             title: 'Partner of Kenetic Capital',
             topiccn: '基于区块链的融资模型',
-            topic: 'Crypto funding models and the future of Venture Capital'
+            topic: 'Crypto Funding Models and the Future of Venture Capital'
         },
         {
-            break: '1',
             type: 'agenda',
             date: 'PM',
             datecn: '下午',
@@ -180,7 +197,6 @@ var data = {
             topic: 'How Blockchain can Solve the Coming Data Management Problem'
         },
         {
-            break: '1',
             type: 'agenda',
             date: 'PM',
             datecn: '下午',

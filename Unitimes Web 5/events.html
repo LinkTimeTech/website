@@ -110,54 +110,48 @@
         <div class="container u-maxWidth1000">
             <div class="cards-box">
 
-                <div class="col-lg-6 col-md-6 col-sm-6 wow fadeInUp card-box-md" data-wow-offset="30"
-                     data-wow-delay="0.3s">
-
-                    <a href="events/devcon3_2017_conference.html" class="fh5co-project-item image-popup">
-
-                        <figure>
-                            <div class="overlay item-center">
-                                <p class="card-intro">
-                                    For those of you who have experienced Devcon in the past and are looking forward to
-                                    this year’s event, it should be the best one to date! This year, the Ethereum
-                                    Foundation(organizer) has dedicated convention center space that accommodates close
-                                    to double the capacity as last year as well as a second hall to allow for more
-                                    presentations and formats.
-                                </p>
+                <template v-for="content in contents">
+                    <div class="col-lg-6 col-md-6 col-sm-6 wow fadeInUp card-box-md" data-wow-offset="30"
+                         v-if="content.top == 1">
+                        <a :href="content.url"
+                           class="fh5co-project-item image-popup">
+                            <figure>
+                                <div class="overlay item-center">
+                                    <p class="card-intro">
+                                        {{ content.intro }}
+                                    </p>
+                                </div>
+                                <img :data-src="content.cover" class="img-responsive lozad">
+                            </figure>
+                            <div class="fh5co-text">
+                                <h2 class="content-two-line">
+                                    {{ content.title }}
+                                </h2>
                             </div>
-                            <img data-src="images/events/devcon3-crop-1200.jpg" class="img-responsive lozad">
-                        </figure>
+                        </a>
+                    </div>
 
-                        <div class="fh5co-text">
-                            <h2 class="content-two-line">
-                                Devcon3 | 2017 Conference Overview
-                            </h2>
-                        </div>
-
-                    </a>
-                </div>
-
-                <div class="col-lg-4 col-md-4 col-sm-6 card-box" style="visibility: hidden">
-                    <a href="events/devcon3_2017_conference.html" class="fh5co-project-item image-popup">
-
-                        <figure>
-                            <div class="overlay item-center">
-                                <p class="card-intro">
-                                    We are honored to interview this “boy genius” founder of Ethereum,
-                                    Vitalik Buterin, and introduce his life story with our audience.
-                                </p>
+                    <div class="col-lg-4 col-md-4 col-sm-6 wow fadeInUp card-box" data-wow-offset="30"
+                         v-if="content.title.length>0 && content.top != 1">
+                        <a :href="content.url"
+                           class="fh5co-project-item image-popup">
+                            <figure>
+                                <div class="overlay item-center">
+                                    <p class="card-intro">
+                                        {{ content.intro }}
+                                    </p>
+                                </div>
+                                <img :data-src="content.cover" class="img-responsive lozad">
+                            </figure>
+                            <div class="fh5co-text">
+                                <h2 class="content-two-line">
+                                    {{ content.title }}
+                                </h2>
                             </div>
-                            <img data-src="images/tc.jpg" class="img-responsive lozad">
-                        </figure>
+                        </a>
+                    </div>
+                </template>
 
-                        <div class="fh5co-text">
-                            <h2 class="content-two-line">
-                                THE BOY GENIUS: VITALIK BUTERIN
-                            </h2>
-                        </div>
-
-                    </a>
-                </div>
 
             </div>
         </div>
@@ -189,10 +183,13 @@
     <a data-scroll href="#page" class="js-gotop"><i class="fa fa-arrow-up"></i></a>
 </div>
 
-<!-- jQuery -->
+<script src="https://cdn.jsdelivr.net/npm/vue"></script>
+<script src="js/eventcontent.js"></script>
+
+
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
 
-<!-- Bootstrap -->
+
 <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"
         integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
         crossorigin="anonymous"></script>
@@ -203,7 +200,7 @@
 <script>
     new WOW().init();
 </script>
-<!-- Main -->
+
 <script src="https://cdn.bootcss.com/smooth-scroll/12.1.5/js/smooth-scroll.min.js"></script>
 <script src="js/main.js"></script>
 

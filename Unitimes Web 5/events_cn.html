@@ -110,51 +110,47 @@
         <div class="container u-maxWidth1000">
             <div class="cards-box">
 
-                <div class="col-lg-6 col-md-6 col-sm-6 wow fadeInUp card-box-md" data-wow-offset="30"
-                     data-wow-delay="0.3s">
-
-                    <a href="events/devcon3_2017_conference_cn.html" class="fh5co-project-item image-popup">
-
-                        <figure>
-                            <div class="overlay item-center">
-                                <p class="card-intro">
-                                    对于参加过Devcon以往大会并期待今年活动的人来说，这会是迄今为止最棒的一次开发者大会！今年，会议主办方准备了专门的会议中心，可容纳较去年近多一倍的人数，并且另外准备了大厅来支持更多的演示并且用于其他安排。
-                                </p>
+                <template v-for="content in contents">
+                    <div class="col-lg-6 col-md-6 col-sm-6 wow fadeInUp card-box-md" data-wow-offset="30"
+                         v-if="content.top == 1">
+                        <a :href="content.urlcn"
+                           class="fh5co-project-item image-popup">
+                            <figure>
+                                <div class="overlay item-center">
+                                    <p class="card-intro">
+                                        {{ content.introcn }}
+                                    </p>
+                                </div>
+                                <img :data-src="content.cover" class="img-responsive lozad">
+                            </figure>
+                            <div class="fh5co-text">
+                                <h2 class="content-two-line">
+                                    {{ content.titlecn }}
+                                </h2>
                             </div>
-                            <img data-src="images/events/devcon3-crop-1200.jpg" class="img-responsive lozad">
-                        </figure>
+                        </a>
+                    </div>
 
-                        <div class="fh5co-text">
-                            <h2 class="content-two-line">
-                                Devcon3 | 2017 以太坊开发者大会
-                            </h2>
-                        </div>
-
-                    </a>
-
-                </div>
-
-                <div class="col-lg-4 col-md-4 col-sm-6 card-box" style="visibility: hidden">
-                    <a href="events/devcon3_2017_conference_cn.html" class="fh5co-project-item image-popup">
-
-                        <figure>
-                            <div class="overlay item-center">
-                                <p class="card-intro">
-                                    对于参加过Devcon以往大会并期待今年活动的人来说，这会是迄今为止最棒的一次开发者大会！
-                                    今年，会议主办方准备了专门的会议中心，可容纳较去年近多一倍的人数，并且另外准备了大厅来支持更多的演示并且用于其他安排。
-                                </p>
+                    <div class="col-lg-4 col-md-4 col-sm-6 wow fadeInUp card-box" data-wow-offset="30" v-else>
+                        <a :href="content.urlcn"
+                           class="fh5co-project-item image-popup">
+                            <figure>
+                                <div class="overlay item-center">
+                                    <p class="card-intro">
+                                        {{ content.introcn }}
+                                    </p>
+                                </div>
+                                <img :data-src="content.cover" class="img-responsive lozad">
+                            </figure>
+                            <div class="fh5co-text">
+                                <h2 class="content-two-line">
+                                    {{ content.titlecn }}
+                                </h2>
                             </div>
-                            <img data-src="images/events/devcon3-crop-1200.jpg" class="img-responsive lozad">
-                        </figure>
+                        </a>
+                    </div>
+                </template>
 
-                        <div class="fh5co-text">
-                            <h2 class="content-two-line">
-                                Devcon3 | 2017 以太坊开发者大会
-                            </h2>
-                        </div>
-
-                    </a>
-                </div>
 
             </div>
         </div>
@@ -184,10 +180,13 @@
     <a data-scroll href="#page" class="js-gotop"><i class="fa fa-arrow-up"></i></a>
 </div>
 
-<!-- jQuery -->
+<script src="https://cdn.jsdelivr.net/npm/vue"></script>
+<script src="js/eventcontent.js"></script>
+
+
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
 
-<!-- Bootstrap -->
+
 <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"
         integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
         crossorigin="anonymous"></script>
@@ -198,7 +197,7 @@
 <script>
     new WOW().init();
 </script>
-<!-- Main -->
+
 <script src="https://cdn.bootcss.com/smooth-scroll/12.1.5/js/smooth-scroll.min.js"></script>
 <script src="js/main.js"></script>
 

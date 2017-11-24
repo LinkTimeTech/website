@@ -41,7 +41,7 @@
     <!-- Header -->
     <header id="header">
         <div class="logo">
-            <span class="icon fa-bell-o"></span>
+            <!--<span class="icon fa-bell-o"></span>-->
         </div>
         <div class="content">
             <div class="inner">
@@ -79,7 +79,7 @@
         <article id="intro">
             <h2 class="major">活动介绍</h2>
             <p style="margin-bottom:0;text-indent:2em">
-                亚太区以太坊社区活动是由灵钛科技主办，以区块链技术交流为目的，为社区成员与以太坊开发者搭建沟通的桥梁。活动嘉宾包括以太坊创始人，以太坊开发者，以太坊社区代表（亚太区），优秀以太坊项目创始人，业界知名投资人及行业知名企业代表等。
+                亚太区以太坊社区活动是由灵钛科技主办，以区块链技术交流为目的，为社区成员与以太坊开发者搭建沟通的桥梁。活动嘉宾包括以太坊创始人，以太坊开发者，以太坊研究者，优秀以太坊项目创始人，业界知名投资人及行业知名企业代表等。
             </p>
             <p style="text-indent:2em">
                 活动地点位于深圳市南山区侨香路4068号智慧广场A栋1单元19F。邻近世界之窗，欢乐谷，锦绣中华民俗村。为了满足不同语种的需求，我们配备了同声传译设备，由专业翻译人员实时进行中英文广播。另外，活动现场还准备了精美的茶歇供参会人员品尝。
@@ -95,23 +95,40 @@
                     <td>职位</td>
                     <td>演讲主题</td>
                 </tr>
-                <template v-for="content in contents">
-                    <tr v-if="content.date == 'AM' && content.breakcol != 1">
-                        <td v-if="content.side == 1" rowspan="6" style="vertical-align:middle">{{ content.datecn }}</td>
-                        <td>{{ content.speakercn }}</td>
-                        <td>{{ content.titlecn }}</td>
-                        <td>{{ content.topic }}</td>
-                    </tr>
-                    <tr v-if="content.breakcol == 1">
-                        <td colspan="3" style="text-align:center">茶歇</td>
-                    </tr>
-                    <tr v-if="content.break == 1">
-                        <td>{{ content.speakercn }}</td>
-                        <td>{{ content.titlecn }}</td>
-                        <td>{{ content.topic }}</td>
-                    </tr>
-                </template>
-
+                <tr>
+                    <td rowspan="7" style="vertical-align:middle">上午</td>
+                    <td>姜英英</td>
+                    <td>灵钛科技&<br/>Justfund创始人</td>
+                    <td>开篇演讲</td>
+                </tr>
+                <tr>
+                    <td>王筱維</td>
+                    <td>以太坊研究者(台湾)</td>
+                    <td>以太坊及其扩展性技术（分片技术）</td>
+                </tr>
+                <tr>
+                    <td>林修平</td>
+                    <td>以太坊研究者(台湾)</td>
+                    <td>以太坊钱包与Parity事件解析</td>
+                </tr>
+                <tr>
+                    <td colspan="3" style="text-align:center">茶歇</td>
+                </tr>
+                <tr>
+                    <td>Jon Choi</td>
+                    <td>以太坊研究者(美国)</td>
+                    <td>Casper的密码经济学</td>
+                </tr>
+                <tr>
+                    <td>Thomas Greco</td>
+                    <td>OmiseGo特别顾问</td>
+                    <td>开放的金融网络价值(OMG !)</td>
+                </tr>
+                <tr>
+                    <td>Simon Kim</td>
+                    <td>Hashed合伙人(韩国)</td>
+                    <td>如何搭建以太坊社区</td>
+                </tr>
                 <tr>
                     <td colspan="4" style="text-align:center"></td>
                 </tr>
@@ -120,11 +137,6 @@
                     <td>Jim Bai</td>
                     <td>EverMarkets创始人</td>
                     <td>区块链上的期货交易</td>
-                </tr>
-                <tr>
-                    <td>Thomas Greco</td>
-                    <td>OmiseGo特别顾问</td>
-                    <td>开放的金融网络价值(OMG!)</td>
                 </tr>
                 <tr>
                     <td>Loi Luu</td>
@@ -196,7 +208,8 @@
             <div style="text-align:center;">
                 <img src="images/qr.jpg" style="width:300px;height:400px">
             </div>
-            <p align="center"><br/>此付款码仅限成功报名后购买门票使用。<br/>门票200元/人，扫描二维码请<b style="color:#337ab7;">备注姓名</b>。</p>
+            <p align="center"><br/>此付款码仅限成功报名后购买门票使用。<br/>门票200元/人，扫描二维码请<b style="color:#337ab7;">备注姓名</b>。
+                <br>如果您未报名，请勿付费。否则概不退换。</p>
             <!--<p style="text-indent:2em">-->
             <!--请正确填写以下信息，我们将以此作为联系方式及个人报名信息以便入场登记，请勿重复报名，感谢配合。活动最新进展我们会邮件或电话告知，请随时关注。如报名时遇到问题，请联系<a href="mailto:contact@linktimetech.com">contact@linktimetech.com</a>-->
             <!--</p>-->
@@ -255,10 +268,11 @@
 <script src="assets/js/util.js"></script>
 
 <script src="https://cdn.jsdelivr.net/npm/vue"></script>
-<script src="assets/js/content.js"></script>
 
 <script src="assets/js/main.js"></script>
+</body>
 
+</html>
 <script type="text/javascript">
     var map = new BMap.Map("baiduMap");
     var point = new BMap.Point(113.98876, 22.556458);
@@ -268,18 +282,18 @@
     marker.setAnimation(BMAP_ANIMATION_BOUNCE); //跳动的动画
     map.enableScrollWheelZoom(true);
 </script>
-<!-- <script type="text/javascript">
+<script type="text/javascript">
 
-	function sendmsg() {
+    function sendmsg() {
         var name = $("#name").val();
         var company = $("#company").val();
         var mobile = $("#mobile").val();
         var email = $("#email").val();
         var note = $("#note").val();
-        if(name==""||company==""||mobile==""||email==""){
+        if (name == "" || company == "" || mobile == "" || email == "") {
             alert("请完善信息后再次提交，姓名、公司、电话、邮箱为必填项。");
-		}
-		else {
+        }
+        else {
             $.ajax({
                 type: "post",
                 url: "../phalapi/public/?service=App.Examples_CURD.Insert",
@@ -300,20 +314,17 @@
                         $("#email").val("");
                         $("#note").val("");
                         alert("信息提交成功，我们会尽快与你取得联系。");
-                    }else {
+                    } else {
                         alert("信息提交失败，请核对所填的信息或稍后再试。");
-					}
+                    }
                 },
                 error: function (xhr, textStatus) {
-                    console.log('错误')
-                    console.log(xhr)
-                    console.log(textStatus)
+                    console.log('错误');
+                    console.log(xhr);
+                    console.log(textStatus);
                     alert("信息提交失败，请检查你的网络。");
                 }
             })
         }
-	}
-</script>-->
-</body>
-
-</html>
+    }
+</script>
