@@ -3,6 +3,32 @@ var data = {
         {
             top: '1',
             id: '',
+            date: 'Nov 26, 2017',
+            datecn: '2017.11.26',
+            cover: 'images/news/' + 'the_philippines_considers.jpg',
+            title: 'The Philippines Considers Treating All Future Icos as Securities',
+            titlecn: '菲律宾考虑将ICO视为证券',
+            intro: 'This move will see ICOs governed under the Securities Regulation Code, which will limit financial risk for Filipinos investing in cryptocurrencies',
+            introcn: '此举将使ICO受《证券监管法》管制，限制菲律宾人投资加密货币的财务风险',
+            url: 'news/' + 'the_philippines_considers_treating_all_future_icos_as_securities' + '.html',
+            urlcn: 'news/' + 'the_philippines_considers_treating_all_future_icos_as_securities' + '_cn.html'
+        },
+        {
+            top: '1',
+            id: '',
+            date: 'Nov 25, 2017',
+            datecn: '2017.11.25',
+            cover: 'images/news/' + 'chairman_of_swiss.jpg',
+            title: 'Chairman of Swiss National Bank Says Cryptocurrencies Are An Investment, Not A Currency',
+            titlecn: '瑞士国家银行行长：加密货币是一种投资，而非货币',
+            intro: 'Thomas Jordan also said that cryptocurrencies can ‘ potentially strongly affect the financial system ’ ',
+            introcn: '瑞士央行行长Thomas Jordan还表示，加密货币 ‘可能会对金融体系产生巨大影响’',
+            url: 'news/' + 'chairman_of_swiss_national_bank_says_cryptocurrencies_are_an_investment' + '.html',
+            urlcn: 'news/' + 'chairman_of_swiss_national_bank_says_cryptocurrencies_are_an_investment' + '_cn.html'
+        },
+        {
+            top: '1',
+            id: '',
             date: 'Nov 24, 2017',
             datecn: '2017.11.24',
             cover: 'images/news/' + 'central_bank_of_malaysia.jpg',
@@ -85,30 +111,6 @@ var data = {
             introcn: '区块链可以大幅度减少后端操作成本，加速交易结算时间。银行在等待交易结算时必须储备资金，所以一旦几天甚至几周的交易时间缩短到几分钟，就可以释放几十亿美元的资金用于其他地方。',
             url: 'news/' + 'wall_street_now_we_blockchain_is_useful' + '.html',
             urlcn: 'news/' + 'wall_street_now_we_blockchain_is_useful' + '_cn.html'
-        },
-        {
-            id: '',
-            date: 'Nov 22, 2017',
-            datecn: '2017.11.22',
-            cover: 'images/news/' + 'experts_caution_investors.jpg',
-            title: 'Experts Caution Investors Against Cash Grab ICOs, Buterin Speaks Out',
-            titlecn: 'Vitalik：ICO是否适合，唯一评判标准在于代币在系统中的必要性',
-            intro: 'This week several prominent venture capital investors, experts and developers including Jason Calacanis and Ethereum co-founder Vitalik Buterin spoke out against initial coin offering (ICO) pump and dump schemes.',
-            introcn: '本周，以太坊联合创始人之一Vitalik Buterin针对目前的ICO热再度发声，明确表示反对ICO项目中恶意炒作和虚假宣传导致的哄抬价格的行为',
-            url: 'news/' + 'experts_caution_investors_against_cash_grab_icos_buterin_speaks_out' + '.html',
-            urlcn: 'news/' + 'experts_caution_investors_against_cash_grab_icos_buterin_speaks_out' + '_cn.html'
-        },
-        {
-            id: '',
-            date: 'Nov 22, 2017',
-            datecn: '2017.11.22',
-            cover: 'images/news/' + 'russian_minister_of.jpg',
-            title: 'Russian Minister of Communications and Mass Media Believes that Russia is Unlikely to Legalize Bitcoin',
-            titlecn: '俄罗斯通信和传媒部长：国家不会考虑比特币合法化',
-            intro: 'it is reported that a senior official at Russia\'s central bank said  initial coin offerings (ICOs) could drive funding opportunities for startups. And, a week prior, the head of Russia’s Federal Agency for Tourism predicted that blockchain could transform the country\'s tourism industry',
-            introcn: '据悉就在一周前，俄罗斯央行一位高级官员表示，首次代币发行（ICO）可能会为创业公司带来融资机会。而且，一周前，俄罗斯联邦旅游局负责人也预测说区块链可以改变该国的旅游业',
-            url: 'news/' + 'russian_minister_of_communications_and_mass_media' + '.html',
-            urlcn: 'news/' + 'russian_minister_of_communications_and_mass_media' + '_cn.html'
         },
         {
             top: '1',

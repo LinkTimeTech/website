@@ -3,8 +3,8 @@ var data = {
         // {
         //     top: '1',
         //     id: '',
-        //     date: 'Nov 24, 2017',
-        //     datecn: '2017.11.24',
+        //     date: 'Nov 25, 2017',
+        //     datecn: '2017.11.25',
         //     cover: 'images/news/'+'',
         //     title: '',
         //     titlecn: '',
@@ -15,6 +15,31 @@ var data = {
         // },
         {
             top: '1',
+            id: '',
+            date: 'Nov 26, 2017',
+            datecn: '2017.11.26',
+            cover: 'images/news/' + 'the_philippines_considers.jpg',
+            title: 'The Philippines Considers Treating All Future Icos as Securities',
+            titlecn: '菲律宾考虑将ICO视为证券',
+            intro: 'This move will see ICOs governed under the Securities Regulation Code, which will limit financial risk for Filipinos investing in cryptocurrencies',
+            introcn: '此举将使ICO受《证券监管法》管制，限制菲律宾人投资加密货币的财务风险',
+            url: 'news/' + 'the_philippines_considers_treating_all_future_icos_as_securities' + '.html',
+            urlcn: 'news/' + 'the_philippines_considers_treating_all_future_icos_as_securities' + '_cn.html'
+        },
+        {
+            top: '1',
+            id: '',
+            date: 'Nov 25, 2017',
+            datecn: '2017.11.25',
+            cover: 'images/news/' + 'chairman_of_swiss.jpg',
+            title: 'Chairman of Swiss National Bank Says Cryptocurrencies Are An Investment, Not A Currency',
+            titlecn: '瑞士国家银行行长：加密货币是一种投资，而非货币',
+            intro: 'Thomas Jordan also said that cryptocurrencies can ‘ potentially strongly affect the financial system ’ ',
+            introcn: '瑞士央行行长Thomas Jordan还表示，加密货币 ‘可能会对金融体系产生巨大影响’',
+            url: 'news/' + 'chairman_of_swiss_national_bank_says_cryptocurrencies_are_an_investment' + '.html',
+            urlcn: 'news/' + 'chairman_of_swiss_national_bank_says_cryptocurrencies_are_an_investment' + '_cn.html'
+        },
+        {
             id: '',
             date: 'Nov 24, 2017',
             datecn: '2017.11.24',
@@ -27,7 +52,6 @@ var data = {
             urlcn: 'news/' + 'central_bank_of_malaysia_introduces_first_regulatory_move' + '_cn.html'
         },
         {
-            top: '1',
             id: '',
             date: 'Nov 24, 2017',
             datecn: '2017.11.24',
