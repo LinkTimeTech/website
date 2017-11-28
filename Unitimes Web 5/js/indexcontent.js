@@ -3,6 +3,43 @@ var data = {
         {
             top: '1',
             id: '',
+            date: 'Nov 28, 2017',
+            datecn: '2017.11.28',
+            cover: 'images/news/' + 'samsung_sds_cooperates.jpg',
+            title: 'Samsung SDS Cooperates with Seoul Government for Blockchain Platform',
+            titlecn: '三星SDS与首尔政府合作，共同打造区块链平台',
+            intro: 'Samsung SDS has signed a deal with the Seoul Metropolitan Government to jointly develop its "information strategy" plan. It has been nearly seven months since Samsung unveiled Nexledger – an enterprise-grade blockchain platform hosted in the cloud',
+            introcn: '三星SDS已经与首尔市政府签署了一项合作协议，共同制定一个“信息战略”计划。这一合作距其推出基于云端的企业级区块链平台Nexledger已过去近七个月。',
+            url: 'news/' + 'samsung_sds_cooperates_with_seoul_government_for_blockchain_platform' + '.html',
+            urlcn: 'news/' + 'samsung_sds_cooperates_with_seoul_government_for_blockchain_platform' + '_cn.html'
+        },
+        {
+            top: '1',
+            id: '',
+            date: 'Nov 28, 2017',
+            datecn: '2017.11.28',
+            cover: 'images/news/' + 'iran_welcomes_bitcoin.jpg',
+            title: 'Samsung SDS Cooperates with Seoul Government for Blockchain Platform',
+            titlecn: '伊朗欢迎比特币和虚拟货币，但称其必须遵守法规',
+            intro: 'Samsung SDS has signed a deal with the Seoul Metropolitan Government to jointly develop its "information strategy" plan. It has been nearly seven months since Samsung unveiled Nexledger – an enterprise-grade blockchain platform hosted in the cloud',
+            introcn: '伊朗网络空间高级理事会正与伊朗中央银行协力研究加密货币',
+            url: 'news/' + 'iran_welcomes_bitcoin_and_virtual_currencies_in_the_country' + '.html',
+            urlcn: 'news/' + 'iran_welcomes_bitcoin_and_virtual_currencies_in_the_country' + '_cn.html'
+        },
+        {
+            id: '',
+            date: 'Nov 28, 2017',
+            datecn: '2017.11.28',
+            cover: 'images/news/' + 'bitcoin_prices_at_several.jpg',
+            title: 'Bitcoin Exceeds $ 10,000 at Bithum and Keeps up All the Way',
+            titlecn: '韩国Bithumb领先，全球多个交易平台比特币价格今日相继突破1万美元大关',
+            intro: 'This means that some of the biggest Bitcoin bulls have already been proven right with their long term price predictions. As 2017 coming to an end, a widespread price of $10,000 + is looking a lot more like a case of “when” rather than “if” now',
+            introcn: '这个消息意味着那些看涨比特币的人作出的长期价格预测是正确的。伴随着2017年的结束，比特币突破1万美元+的价格不再是神话，而是时间问题。',
+            url: 'news/' + 'bitcoin_prices_at_several_global_trading_platforms_exceed_the_10000_mark' + '.html',
+            urlcn: 'news/' + 'bitcoin_prices_at_several_global_trading_platforms_exceed_the_10000_mark' + '_cn.html'
+        },
+        {
+            id: '',
             date: 'Nov 27, 2017',
             datecn: '2017.11.27',
             cover: 'images/news/' + 'shinhan_bank_looking.jpg',
@@ -14,7 +51,6 @@ var data = {
             urlcn: 'news/' + 'shinhan_bank_looking_to_launch_a_secure_cryptocurrency_wallet_for_its_customers' + '_cn.html'
         },
         {
-            top: '1',
             id: '',
             date: 'Nov 27, 2017',
             datecn: '2017.11.27',
@@ -73,42 +109,6 @@ var data = {
             introcn: '马来西亚的加密货币交易所需要在2018年之前披露用户信息',
             url: 'news/' + 'central_bank_of_malaysia_introduces_first_regulatory_move' + '.html',
             urlcn: 'news/' + 'central_bank_of_malaysia_introduces_first_regulatory_move' + '_cn.html'
-        },
-        {
-            id: '',
-            date: 'Nov 24, 2017',
-            datecn: '2017.11.24',
-            cover: 'images/news/' + 'air_new_zealand.jpg',
-            title: 'Air New Zealand Works with Winding Tree to Explore Applications of Blockchain Technology in Aviation Sector',
-            titlecn: '新西兰航空联手Winding Tree，探索区块链在航空领域的应用潜力',
-            intro: 'Aviation industry is a data-intensive industry with complex procedures, which can gain a lot from blockchain technology.',
-            introcn: '航空业是一个程序复杂、数据密集型的行业，可以从区块链技术中获益良多。',
-            url: 'news/' + 'air_new_zealand_winding_tree_team_up_for_blockchain_exploration' + '.html',
-            urlcn: 'news/' + 'air_new_zealand_winding_tree_team_up_for_blockchain_exploration' + '_cn.html'
-        },
-        {
-            id: '',
-            date: 'Nov 24, 2017',
-            datecn: '2017.11.24',
-            cover: 'images/news/' + 'ethereum_transaction_volume.jpg',
-            title: 'Ethereum’s Transaction Volume Doubles That of Bitcoin; Also Reaching Record High Prices Above $420',
-            titlecn: '以太坊交易量超越比特币两倍，创420美元历史新高 ',
-            intro: 'Founder of Ethereum Vitalik Buterin has previously expressed that Ethereum will match the scale and capacity of Visa in ‘a couple of years’ ',
-            introcn: '以太坊创始人Vitalik Buterin曾表示，以太坊将在‘未来几年内’达到与Visa相当的规模和容量',
-            url: 'news/' + 'ethereum_transaction_volume_doubles_that_of_bitcoin' + '.html',
-            urlcn: 'news/' + 'ethereum_transaction_volume_doubles_that_of_bitcoin' + '_cn.html'
-        },
-        {
-            id: '',
-            date: 'Nov 23, 2017',
-            datecn: '2017.11.23',
-            cover: 'images/news/' + 'australia_awards.jpg',
-            title: 'Australia Awards US$6 Million in Grants to Blockchain-powered Energy Pilot Project',
-            titlecn: '澳大利亚向区块链能源试点项目提供600万美元奖励',
-            intro: 'Power Ledger, who previously raised the token POWR, will develop the underlying blockchain technology enabling peer-to-peer energy and water transactions',
-            introcn: '之前筹集代币POWR的区块链公司Power Ledger 将开发底层区块链技术,以实现点对点的水和能源交易',
-            url: 'news/' + 'australia_awards_us_6_million_in_grants' + '.html',
-            urlcn: 'news/' + 'australia_awards_us_6_million_in_grants' + '_cn.html'
         },
         {
             top: '1',
