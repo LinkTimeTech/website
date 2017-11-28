@@ -71,8 +71,8 @@ var data = {
             speaker: 'Simon Kim',
             titlecn: 'Hashed合伙人（韩国）',
             title: 'Partner of Hashed（Korea）',
-            topiccn: '如何搭建以太坊社区',
-            topic: 'How I Am Building Ethereum Community？'
+            topiccn: '建设韩国以太坊社区',
+            topic: 'Building the Korean Ethereum Comminity'
         },
         {
             empty: '1',
@@ -87,7 +87,7 @@ var data = {
             speakercn: 'Jim Bai',
             speaker: 'Jim Bai',
             titlecn: 'EverMarkets创始人',
-            title: 'Founder of EverMarket',
+            title: 'Founder of EverMarkets',
             topiccn: '区块链上的期货交易',
             topic: 'Futures Trading on Blockchain'
         },
@@ -99,8 +99,8 @@ var data = {
             speaker: 'Loi Luu',
             titlecn: 'Kyber创始人',
             title: 'Founder of Kybernetwork',
-            topiccn: '什么是真正的链上去中心化交易所？-在经济系统中的角色',
-            topic: '“What Does An On-chain Exchange Entail?" Subtopic: Its Roles in the Ecosystem'
+            topiccn: 'Kyber网络与链上去中心化交易所的应用',
+            topic: 'KyberNetwork And Applications of On-chain Decentralized Exchange'
         },
         {
             type: 'agenda',

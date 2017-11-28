@@ -3,6 +3,43 @@ var data = {
         {
             top: '1',
             id: '',
+            date: 'Nov 27, 2017',
+            datecn: '2017.11.27',
+            cover: 'images/news/' + 'shinhan_bank_looking.jpg',
+            title: 'Shinhan Bank Looking to Launch a Secure Cryptocurrency Wallet for Its Customers',
+            titlecn: '韩国新韩银行希望为客户推出安全的加密货币钱包\n',
+            intro: 'Wallet will help users keep cryptocurrency holdings secure, even if blockchain key is compromised',
+            introcn: '即使区块链密钥泄露，该钱包也能帮助用户保护加密货币的安全',
+            url: 'news/' + 'shinhan_bank_looking_to_launch_a_secure_cryptocurrency_wallet_for_its_customers' + '.html',
+            urlcn: 'news/' + 'shinhan_bank_looking_to_launch_a_secure_cryptocurrency_wallet_for_its_customers' + '_cn.html'
+        },
+        {
+            top: '1',
+            id: '',
+            date: 'Nov 27, 2017',
+            datecn: '2017.11.27',
+            cover: 'images/news/' + 'putting_singapore_dollar.jpg',
+            title: 'Putting Singapore\'s Dollar on Blockchain May Prove It\'s the Most Crypto Friendly Place on Earth\n',
+            titlecn: '福布斯：新加坡可能是全球加密货币友好型程度最高的国家\n',
+            intro: 'Singapore is widely regarded as one of the most crypto-friendly countries in the world, largely due to its stable politics, reliable infrastructure, and favorable business environment.',
+            introcn: '新加坡因政治稳定、基础设施可靠且商业环境良好，被广泛认为是世界上对加密货币最友好的国家之一。\n',
+            url: 'news/' + 'putting_singapore_dollar__blockchain_may_prove' + '.html',
+            urlcn: 'news/' + 'putting_singapore_dollar__blockchain_may_prove' + '_cn.html'
+        },
+        {
+            id: '',
+            date: 'Nov 27, 2017',
+            datecn: '2017.11.27',
+            cover: 'images/news/' + 'parity_bugs_still_exists.jpg',
+            title: 'Parity Bugs Still Exists with no Ideal Solutions Currently',
+            titlecn: '以太坊Parity钱包漏洞仍在,重挫之后如何解决尚存争议\n',
+            intro: 'The dark history: The Parity team has been looking for ideal solutions for the issue since the bug was disclosed on November 7.',
+            introcn: '以太坊黑暗历史：自11月7日以太坊Parity钱包被爆出现重大安全漏洞，官方至今还未确定理想的解决方案',
+            url: 'news/' + 'parity_bugs_still_exists_with_no_ideal_solutions_currently' + '.html',
+            urlcn: 'news/' + 'parity_bugs_still_exists_with_no_ideal_solutions_currently' + '_cn.html'
+        },
+        {
+            id: '',
             date: 'Nov 26, 2017',
             datecn: '2017.11.26',
             cover: 'images/news/' + 'the_philippines_considers.jpg',
@@ -14,7 +51,6 @@ var data = {
             urlcn: 'news/' + 'the_philippines_considers_treating_all_future_icos_as_securities' + '_cn.html'
         },
         {
-            top: '1',
             id: '',
             date: 'Nov 25, 2017',
             datecn: '2017.11.25',
@@ -27,7 +63,6 @@ var data = {
             urlcn: 'news/' + 'chairman_of_swiss_national_bank_says_cryptocurrencies_are_an_investment' + '_cn.html'
         },
         {
-            top: '1',
             id: '',
             date: 'Nov 24, 2017',
             datecn: '2017.11.24',
@@ -40,7 +75,6 @@ var data = {
             urlcn: 'news/' + 'central_bank_of_malaysia_introduces_first_regulatory_move' + '_cn.html'
         },
         {
-            top: '1',
             id: '',
             date: 'Nov 24, 2017',
             datecn: '2017.11.24',
@@ -75,42 +109,6 @@ var data = {
             introcn: '之前筹集代币POWR的区块链公司Power Ledger 将开发底层区块链技术,以实现点对点的水和能源交易',
             url: 'news/' + 'australia_awards_us_6_million_in_grants' + '.html',
             urlcn: 'news/' + 'australia_awards_us_6_million_in_grants' + '_cn.html'
-        },
-        {
-            id: '',
-            date: 'Nov 23, 2017',
-            datecn: '2017.11.23',
-            cover: 'images/news/' + 'cboe_announces_bitcoin.jpg',
-            title: 'CBOE Announces Bitcoin Futures Specs, Can the “Runaway Horse” Be Reined?',
-            titlecn: 'CBOE公布比特币期货规格，“脱缰野马”能否被拴？',
-            intro: 'Times are not what they used to be: There were people who used 10000 bitcoins in exchange for two pizzas, while now, the price of a bitcoin has surpassed 8000 US dollars. The people would probably feel quite regretful. CBOE, the largest options exchange in the US, has recently announced its futures specs. Can the ‘runaway horse’, Bitcoin , be reined?',
-            introcn: '三十年河东，三十年河西：曾有人用10000枚比特币换了两块披萨，而如今，一枚比特币的价格就高逾8000美元，不知换披萨的人作何感想，恐怕相当追悔莫及。美国最大的期权交易所CBOE近期公布其期货规格，比特币这匹“脱缰野马”究竟能否被拴？',
-            url: 'news/' + 'cboe_announces_bitcoin_futures_specs' + '.html',
-            urlcn: 'news/' + 'cboe_announces_bitcoin_futures_specs' + '_cn.html'
-        },
-        {
-            id: '',
-            date: 'Nov 23, 2017',
-            datecn: '2017.11.23',
-            cover: 'images/news/' + 'lightening_network_expands.jpg',
-            title: 'Lightening Network Expands the Scale of Bitcoin Transactions, Are Large Transactions a Barrier?',
-            titlecn: '闪电网络可扩大比特币交易规模，大额交易或成障碍？',
-            intro: 'Many developers believe that the Lightning Network is the best way to increase the number of transactions handled by bitcoin network. While can the Lightning Network live up to its ambition? The answer remains controversial.',
-            introcn: '许多开发人员都相信闪电网络是增加比特币网络处理交易数量的最佳方式。那么闪电网络究竟能否达到其雄心壮志呢？答案尚存争议。',
-            url: 'news/' + 'lightening_network_expands_the_scale_of_bitcoin_transactions' + '.html',
-            urlcn: 'news/' + 'lightening_network_expands_the_scale_of_bitcoin_transactions' + '_cn.html'
-        },
-        {
-            id: '',
-            date: 'Nov 22, 2017',
-            datecn: '2017.11.22',
-            cover: 'images/news/' + 'wall_street_now.jpg',
-            title: 'Wall Street: "Now We Know Blockchain is Useful!"',
-            titlecn: '华尔街：“现在我们知道区块链有用了！”',
-            intro: 'Blockchain can dramatically reduce back-end operation costs and speed up the pace of transaction settlement. Banks must have funds in reserve while waiting for deals to close, so billions of dollars can be released and used elsewhere once the transaction time lasted for days or weeks is reduced to minutes. ',
-            introcn: '区块链可以大幅度减少后端操作成本，加速交易结算时间。银行在等待交易结算时必须储备资金，所以一旦几天甚至几周的交易时间缩短到几分钟，就可以释放几十亿美元的资金用于其他地方。',
-            url: 'news/' + 'wall_street_now_we_blockchain_is_useful' + '.html',
-            urlcn: 'news/' + 'wall_street_now_we_blockchain_is_useful' + '_cn.html'
         },
         {
             top: '1',

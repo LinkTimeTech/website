@@ -521,6 +521,25 @@ ul li {
 
 }
 
+.supersponsor {
+    height: 100px !important;
+    width: 150px !important;
+}
+
+.goldsponsor, .superdemosponsor, .partysponsor {
+    /*height: 100px !important;*/
+    /*width: 150px !important;*/
+}
+
+.silversponsor {
+    height: 100px !important;
+    width: 150px !important;
+}
+
+.communitysponsor {
+    height: 100px !important;
+    width: 150px !important;
+}
 .partner .partner-box:hover {
     opacity: 1;
 }
