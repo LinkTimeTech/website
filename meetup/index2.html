@@ -6,7 +6,7 @@
 <html>
 
 <head>
-    <title>Registration for Ethereum Meetup</title>
+    <title>以太坊社区交流活动报名</title>
     <meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"/>
 
@@ -18,8 +18,8 @@
         <link rel="stylesheet" href="assets/css/noscript.css"/>
     </noscript>
 
-</head>
 
+</head>
 <style>
     #agenda p {
         font-weight: normal;
@@ -42,31 +42,31 @@
     <header id="header">
         <div class="logo">
             <!--<span class="icon fa-bell-o"></span>-->
-            <!--<span style="font-size:25px;font-weight: bold">Ch⇛En</span>-->
         </div>
         <div class="content">
             <div class="inner">
-                <h1 style="text-transform:none;letter-spacing:4px">Asia-Pacific Ethereum Community Meetup</h1>
+                <h1 style="text-transform:none;letter-spacing:10px">亚太以太坊社区技术培训</h1>
+                <h1 style="text-transform:none">暨交流</h1>
                 <!--<h3 style="margin-bottom:0">活动介绍:
                     <a href="https://html5up.net">主办公司网址</a>
                 </h3>-->
-                <h3 style="text-transform:none">Time: 8:30-18:00 Dec 3, 2017</h3>
-                <h3 style="text-transform:none">Location: Shenzhen, China</h3>
+                <h3>时间: 2017年12月3日8:30-18:00 </h3>
+                <h3>坐标: 深圳</h3>
             </div>
         </div>
         <nav>
             <ul>
                 <li>
-                    <a href="#intro">About</a>
+                    <a href="#intro">活动介绍</a>
                 </li>
                 <li>
-                    <a href="#agenda">Agenda</a>
+                    <a href="#agenda">日程安排</a>
                 </li>
                 <li>
-                    <a href="#information">Info</a>
+                    <a href="#information">活动信息</a>
                 </li>
                 <li>
-                    <a href="#registration">Pay</a>
+                    <a href="#registration">购买门票</a>
                 </li>
                 <!--<li><a href="#elements">Elements</a></li>-->
             </ul>
@@ -77,64 +77,57 @@
 
         <!-- Intro -->
         <article id="intro">
-            <h2 class="major">About</h2>
-            <p style="text-align:justify;text-transform:none">
-                The meetup is organized by LinkTime(<a href="www.limktimetech.com">www.limktimetech.com</a>), who is one
-                of the representatives of Ethereum
-                Community in China. It aims at promoting technology exchange and connecting Ethereum developers with
-                community members, as well as creating opportunities for users to know more about the Ethereum-based
-                projects.
+            <h2 class="major">活动介绍</h2>
+            <p style="text-indent:2em">
+                此次活动由以太坊中国社区代表之一灵钛科技（<a href="www.limktimetech.com">www.limktimetech.com</a>）发起，以以太坊技术交流为目的，为社区成员与以太坊开发者搭建沟通的桥梁，为在以太坊上开发项目的公司与用户创造沟通的机会。
             </p>
-            <p style="text-align:justify;text-transform:none">
-                The event covers the Ethereum-based technology training, excellent use case discussion, and the current
-                development discussion of Asia-Pacific Ethereum communities, etc. The confirmed guests include the
-                founder
-                of Ethereum, Ethereum developers, various Ethereum community representatives (China, Korea, Singapore,
-                America, Japan etc.), founders of excellent Ethereum-based projects, noted investors and enterprise
-                representatives in this space.
+            <p style="text-indent:2em">
+                活动内容涵盖以太坊技术培训，优秀应用交流，亚太区各国以太坊社区发展情况讨论等。活动嘉宾包括以太坊创始人Vitalik
+                Buterin，以太坊开发者，以太坊研究者（中国、韩国、新加坡、美国、日本等），国际国内优秀项目创始人，业界知名投资人及行业知名企业代表等。
             </p>
         </article>
         <!-- Work -->
         <article id="agenda">
-            <h2 class="major">Agenda</h2>
+            <h2 class="major">日程安排</h2>
             <table border="1" style="font-size: 13px">
                 <tr>
                     <td></td>
-                    <td>Time</td>
-                    <td>Speaker</td>
-                    <td>Title</td>
-                    <td>Topic</td>
+                    <td>时间</td>
+                    <td>演讲人</td>
+                    <td>职位</td>
+                    <td>演讲主题</td>
                 </tr>
-
                 <template v-for="content in contents">
                     <tr>
                         <td v-if="content.amside == 1 || content.pmside == 1" :rowspan="content.timerow"
-                            style="vertical-align:middle">{{ content.date }}
+                            style="vertical-align:middle">{{ content.datecn }}
                         </td>
 
                         <td v-if="content.break == 1" :colspan="content.breakcol" style="text-align:center">{{
-                            content.breaktext }}
+                            content.breaktextcn }}
                         </td>
 
                         <td v-if="content.empty == 1" :colspan="content.colspan" style="text-align:center"></td>
 
                         <td v-if="content.type == 'agenda' ">{{ content.time }}</td>
-                        <td v-if="content.type == 'agenda' ">{{ content.speaker }}</td>
-                        <td v-if="content.type == 'agenda' ">{{ content.title }}</td>
-                        <td v-if="content.type == 'agenda' ">{{ content.topic }}</td>
+                        <td v-if="content.type == 'agenda' ">{{ content.speakercn }}</td>
+                        <td v-if="content.type == 'agenda' ">{{ content.titlecn }}</td>
+                        <td v-if="content.type == 'agenda' ">{{ content.topiccn }}</td>
 
                     </tr>
 
                 </template>
+
             </table>
         </article>
 
         <!-- About -->
         <article id="information">
-            <h2 class="major">Info</h2>
-            <p>Location: 19F, Unit 1, Block A, Smart Plaza, 4068 Qiaoxiang Road, Nanshan District, Shenzhen, China.
-                <br>Time: 8:30-18:00, December 3, 2017
-                <br>Registration: 7:30-8:30, December 3, 2017. Please get to the venue earlier for registration.</p>
+            <h2 class="major">活动信息</h2>
+            <p>活动地点：深圳市南山区侨香路4068号智慧广场A栋1单元19F
+                <br>活动时间：2017年12月3日8:30-18:00
+
+                <br>签到时间：2017年12月3日7:30-8:30，请大家提前签到</p>
             <div class="image main">
                 <div id="baiduMap" style="width:100%;height:300px"></div>
             </div>
@@ -142,43 +135,41 @@
 
         <!-- Contact -->
         <article id="registration">
-            <!--<h2 class="major">Pay</h2>-->
 
-            <h2 class="major">Register</h2>
+            <h2 class="major">购买门票</h2>
+
             <p style="text-align: center;font-size:36px;">
-                Registration channel has been closed.
+                门票已售罄
             </p>
 
-            <!--<p style="text-transform:none">-->
-            <!--Please enter the correct information, we will use it as the only contact and registration proof for the-->
-            <!--activity. Please do not register repeatedly, thank you for your cooperation. The latest progress will be-->
-            <!--sent to your email; you may also receive our calls if necessary. If there is any problem when-->
-            <!--registering, please contact: <a href="mailto:contact@linktimetech.com">contact@linktimetech.com</a>-->
+            <!--<p style="text-indent:2em">-->
+            <!--请正确填写以下信息，提交后购买门票。我们将以此作为报名信息以便入场登记，请勿重复报名，感谢配合。活动最新进展我们将通过邮件告知，请随时关注。报名遇到问题，请联系-->
+            <!--<a href="mailto:contact@linktimetech.com">contact@linktimetech.com</a>-->
             <!--</p>-->
             <!--<form method="post" action="#">-->
             <!--<div class="field half first">-->
-            <!--<label for="name">Full Name</label>-->
+            <!--<label for="name">姓名</label>-->
             <!--<input type="text" name="name" id="name"/>-->
             <!--</div>-->
             <!--<div class="field half">-->
-            <!--<label for="company">Company</label>-->
+            <!--<label for="company">公司</label>-->
             <!--<input type="text" name="company" id="company"/>-->
             <!--</div>-->
             <!--<div class="field half first">-->
-            <!--<label for="mobile">Phone</label>-->
+            <!--<label for="mobile">电话</label>-->
             <!--<input type="text" name="mobile" id="mobile"/>-->
             <!--</div>-->
             <!--<div class="field half">-->
-            <!--<label for="email">Email</label>-->
+            <!--<label for="email">邮箱</label>-->
             <!--<input type="text" name="email" id="email"/>-->
             <!--</div>-->
             <!--<div class="field">-->
-            <!--<label for="note">Notes</label>-->
+            <!--<label for="note">备注(选填)</label>-->
             <!--<textarea name="note" id="note" rows="4"></textarea>-->
             <!--</div>-->
             <!--<ul class="actions">-->
-            <!--<li><input type="button" value="send" class="special" onclick="sendmsg()"/></li>-->
-            <!--<li><input type="reset" value="reset"/></li>-->
+            <!--<li><input type="button" value="提交" class="special" onclick="sendmsg()"/></li>-->
+            <!--<li><input type="reset" value="重置"/></li>-->
             <!--</ul>-->
             <!--</form>-->
 
@@ -197,8 +188,8 @@
     </div>
     <!-- Footer -->
     <footer id="footer">
-        <h4 style="text-transform:none">&copy; <a href="http://www.linktimetech.com" target="_blank">LinkTime</a> | 点击切换<a
-                href="index.html" style="color:#337ab7;">中文版</a>.</h4>
+        <h4 style="text-transform:none">&copy; <a href="http://www.linktimetech.com" target="_blank">LinkTime</a> |
+            Switch into <a href="index-en.html" style="color:#337ab7;">English Version</a>.</h4>
     </footer>
 </div>
 
@@ -208,20 +199,19 @@
             <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span>
                 </button>
-                <h4 class="modal-title" id="myModalLabel" style="font-size: 1.8rem;">Pay</h4>
+                <h4 class="modal-title" id="myModalLabel" style="font-size: 1.3rem;">购买门票</h4>
             </div>
             <div class="modal-body">
                 <div style="text-align:center;">
                     <img src="images/qr.jpg" style="width:300px;height:400px">
                 </div>
-                <p><br/>The price is ￥200 /
-                    per person, <b style="color:#337ab7;">Please attach your name when purchase.</b>
+                <p align="center"><br/>门票200元/人，扫描二维码请<b style="color:#337ab7;">备注姓名</b>。
                 </p>
 
             </div>
             <div class="modal-footer">
-                <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
-                <button type="button" class="btn btn-primary payok" data-dismiss="modal">Paid</button>
+                <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+                <button type="button" class="btn btn-primary payokcn" data-dismiss="modal">已支付</button>
             </div>
         </div>
     </div>
@@ -231,6 +221,11 @@
 <div id="bg"></div>
 
 <!-- baidu Map api -->
+
+<script>
+    top.location = '#agenda';
+</script>
+
 <script type="text/javascript"
         src="http://api.map.baidu.com/api?v=2.0&ak=DD279b2a90afdf0ae7a3796787a0742e"></script>
 
@@ -239,7 +234,6 @@
 <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"
         integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
         crossorigin="anonymous"></script>
-
 <script src="assets/js/skel.min.js"></script>
 <script src="assets/js/util.js"></script>
 
@@ -267,7 +261,7 @@
         var email = $("#email").val();
         var note = $("#note").val();
         if (name == "" || company == "" || mobile == "" || email == "") {
-            alert("Please complete the information and submit again. Full name, company, telephone and email are necessary.");
+            alert("请完善信息后再次提交，姓名、公司、电话、邮箱为必填项。");
         }
         else {
             $.ajax({
@@ -290,22 +284,21 @@
                         $("#email").val("");
                         $("#note").val("");
                         $('#success').modal('show')
-//                        alert("Successful! We will contact you soon!");
+//                        alert("信息提交成功，我们会尽快与你取得联系。");
                     } else {
-                        alert("Failed! Please check your information and try again.");
+                        alert("信息提交失败，请核对所填的信息或稍后再试。");
                     }
                 },
                 error: function (xhr, textStatus) {
                     console.log('错误')
                     console.log(xhr)
                     console.log(textStatus)
-                    alert("Failed! Please check your internet.");
+                    alert("信息提交失败，请检查你的网络。");
                 }
             })
         }
     }
 </script> -->
-
 </body>
 
 </html>

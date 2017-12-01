@@ -2,50 +2,46 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2f6dbdce-d305-42a2-bb00-5d9377a6eac7" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Unitimes Web 5/images/news/cambridge_professor.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Unitimes Web 5/images/news/casper_testnet.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Unitimes Web 5/images/news/central_bank_of_russia.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Unitimes Web 5/images/news/ethereum_proof_of_stake.jpeg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Unitimes Web 5/images/news/from_evolution_theory.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Unitimes Web 5/images/news/import_9ffGf3OoX24ZLDWm.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Unitimes Web 5/images/news/import_BsygkjEXTysCvTZ3.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Unitimes Web 5/images/news/import_KjZy1Towgys9MIiz.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Unitimes Web 5/images/news/import_Y5vjWz16trmQvOQ9.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Unitimes Web 5/images/news/import_ady8N6YmuDYGg7Nj.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Unitimes Web 5/images/news/import_ceTENtKh6wxyESrQ.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Unitimes Web 5/images/news/import_fUMsVErBpg9gicmO.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Unitimes Web 5/images/news/import_rxKikXrkOCaoji0h.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Unitimes Web 5/images/news/import_uXWFZq0BuP7nSWHP.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Unitimes Web 5/images/news/import_v36KYBvwobojji7m.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Unitimes Web 5/images/news/paxful_we_plan_to.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Unitimes Web 5/images/news/vitalik_buterin_lays.jpeg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Unitimes Web 5/images/unitimes.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Unitimes Web 5/js/knowledgecontent的副本.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Unitimes Web 5/js/newscontent的副本 2.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Unitimes Web 5/news/cambridge_professor_bitcoin_is_an_economic_miracle.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Unitimes Web 5/news/cambridge_professor_bitcoin_is_an_economic_miracle_cn.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Unitimes Web 5/news/central_bank_of_russia_says_cryptocurrencies_market_may_be_facing_a_bubble.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Unitimes Web 5/news/central_bank_of_russia_says_cryptocurrencies_market_may_be_facing_a_bubble_cn.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Unitimes Web 5/news/ethereum_proof_of_stake_casper_testnet_nears_launch.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Unitimes Web 5/news/ethereum_proof_of_stake_casper_testnet_nears_launch_cn.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Unitimes Web 5/news/from_evolution_theory_is_blockchain_fork_a_matter_of_technology_or_consensus.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Unitimes Web 5/news/from_evolution_theory_is_blockchain_fork_a_matter_of_technology_or_consensus_cn.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Unitimes Web 5/news/paxful_we_plan_to_build_100_schools_in_africa_with_bitcoin.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Unitimes Web 5/news/paxful_we_plan_to_build_100_schools_in_africa_with_bitcoin_cn.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Unitimes Web 5/news/vitalik_buterin_lays_roadmap_for_ethereum_visa_levels_quadratic_sharding.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Unitimes Web 5/news/vitalik_buterin_lays_roadmap_for_ethereum_visa_levels_quadratic_sharding_cn.html" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Unitimes Web 5/js/newscontent副本.js" afterPath="" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Unitimes Web 5/images/news/blockchain_drives_artificial.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Unitimes Web 5/images/news/forbes_5_predictions.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Unitimes Web 5/images/news/sberbank_successfully.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Unitimes Web 5/news/blockchain_drives_artificial_intelligence.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Unitimes Web 5/news/blockchain_drives_artificial_intelligence_cn.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Unitimes Web 5/news/forbes_5_predictions_on_how_blockchain_will_drive_digital_transformation.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Unitimes Web 5/news/forbes_5_predictions_on_how_blockchain_will_drive_digital_transformation_cn.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Unitimes Web 5/news/sberbank_successfully_completes_its_first_blockchain_powered_payment_transaction.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Unitimes Web 5/news/sberbank_successfully_completes_its_first_blockchain_powered_payment_transaction_cn.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/meetup/index2.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/meetup/index的副本无vue.html" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/meetup/index的副本.html" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Unitimes Web 5/images/news/casper_testnet.png" afterPath="$PROJECT_DIR$/Unitimes Web 5/images/news/casper_testnet.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Unitimes Web 5/images/news/ethereum_proof_of_stake.jpeg" afterPath="$PROJECT_DIR$/Unitimes Web 5/images/news/ethereum_proof_of_stake.jpeg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Unitimes Web 5/images/news/from_evolution_theory.png" afterPath="$PROJECT_DIR$/Unitimes Web 5/images/news/from_evolution_theory.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Unitimes Web 5/images/news/import_9ffGf3OoX24ZLDWm.png" afterPath="$PROJECT_DIR$/Unitimes Web 5/images/news/import_9ffGf3OoX24ZLDWm.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Unitimes Web 5/images/news/import_BsygkjEXTysCvTZ3.png" afterPath="$PROJECT_DIR$/Unitimes Web 5/images/news/import_BsygkjEXTysCvTZ3.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Unitimes Web 5/images/news/import_KjZy1Towgys9MIiz.png" afterPath="$PROJECT_DIR$/Unitimes Web 5/images/news/import_KjZy1Towgys9MIiz.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Unitimes Web 5/images/news/import_Y5vjWz16trmQvOQ9.png" afterPath="$PROJECT_DIR$/Unitimes Web 5/images/news/import_Y5vjWz16trmQvOQ9.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Unitimes Web 5/images/news/import_ady8N6YmuDYGg7Nj.png" afterPath="$PROJECT_DIR$/Unitimes Web 5/images/news/import_ady8N6YmuDYGg7Nj.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Unitimes Web 5/images/news/import_ceTENtKh6wxyESrQ.png" afterPath="$PROJECT_DIR$/Unitimes Web 5/images/news/import_ceTENtKh6wxyESrQ.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Unitimes Web 5/images/news/import_fUMsVErBpg9gicmO.png" afterPath="$PROJECT_DIR$/Unitimes Web 5/images/news/import_fUMsVErBpg9gicmO.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Unitimes Web 5/images/news/import_rxKikXrkOCaoji0h.png" afterPath="$PROJECT_DIR$/Unitimes Web 5/images/news/import_rxKikXrkOCaoji0h.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Unitimes Web 5/images/news/import_uXWFZq0BuP7nSWHP.png" afterPath="$PROJECT_DIR$/Unitimes Web 5/images/news/import_uXWFZq0BuP7nSWHP.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Unitimes Web 5/images/news/import_v36KYBvwobojji7m.png" afterPath="$PROJECT_DIR$/Unitimes Web 5/images/news/import_v36KYBvwobojji7m.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Unitimes Web 5/images/news/vitalik_buterin_lays.jpeg" afterPath="$PROJECT_DIR$/Unitimes Web 5/images/news/vitalik_buterin_lays.jpeg" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Unitimes Web 5/css/sign_in.css" afterPath="$PROJECT_DIR$/Unitimes Web 5/css/sign_in.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Unitimes Web 5/forgot.html" afterPath="$PROJECT_DIR$/Unitimes Web 5/forgot.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Unitimes Web 5/js/indexcontent.js" afterPath="$PROJECT_DIR$/Unitimes Web 5/js/indexcontent.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Unitimes Web 5/js/knowledgecontent.js" afterPath="$PROJECT_DIR$/Unitimes Web 5/js/knowledgecontent.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Unitimes Web 5/js/newscontent.js" afterPath="$PROJECT_DIR$/Unitimes Web 5/js/newscontent.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Unitimes Web 5/news/development_of_fiat_digital_currency_should_keep_up_with_times.html" afterPath="$PROJECT_DIR$/Unitimes Web 5/news/development_of_fiat_digital_currency_should_keep_up_with_times.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Unitimes Web 5/news/ethereum_proof_of_stake_casper_testnet_nears_launch.html" afterPath="$PROJECT_DIR$/Unitimes Web 5/news/ethereum_proof_of_stake_casper_testnet_nears_launch.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Unitimes Web 5/news/from_evolution_theory_is_blockchain_fork_a_matter_of_technology_or_consensus.html" afterPath="$PROJECT_DIR$/Unitimes Web 5/news/from_evolution_theory_is_blockchain_fork_a_matter_of_technology_or_consensus.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Unitimes Web 5/sign-up.html" afterPath="$PROJECT_DIR$/Unitimes Web 5/sign-up.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Unitimes Web 5/sign_in.html" afterPath="$PROJECT_DIR$/Unitimes Web 5/sign_in.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/edcon-v2.0/assets/css/registration.css" afterPath="$PROJECT_DIR$/edcon-v2.0/assets/css/registration.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/edcon-v2.0/registration.html" afterPath="$PROJECT_DIR$/edcon-v2.0/registration.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/meetup/assets/js/content.js" afterPath="$PROJECT_DIR$/meetup/assets/js/content.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/meetup/index-en.html" afterPath="$PROJECT_DIR$/meetup/index-en.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/meetup/index.html" afterPath="$PROJECT_DIR$/meetup/index.html" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -56,49 +52,24 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="newscontent.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="newscontent.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Unitimes Web 5/js/newscontent.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="422">
-              <caret line="46" column="113" lean-forward="false" selection-start-line="46" selection-start-column="113" selection-end-line="46" selection-end-column="113" />
+            <state relative-caret-position="355">
+              <caret line="23" column="64" lean-forward="false" selection-start-line="23" selection-start-column="64" selection-end-line="23" selection-end-column="64" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="from_evolution_theory_is_blockchain_fork_a_matter_of_technology_or_consensus.html" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Unitimes Web 5/news/from_evolution_theory_is_blockchain_fork_a_matter_of_technology_or_consensus.html">
+      <file leaf-file-name="index2.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/meetup/index2.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="100">
-              <caret line="5" column="21" lean-forward="true" selection-start-line="5" selection-start-column="21" selection-end-line="5" selection-end-column="21" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ethereum_proof_of_stake_casper_testnet_nears_launch_cn.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Unitimes Web 5/news/ethereum_proof_of_stake_casper_testnet_nears_launch_cn.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="65">
-              <caret line="130" column="45" lean-forward="true" selection-start-line="130" selection-start-column="45" selection-end-line="130" selection-end-column="45" />
+            <state relative-caret-position="567">
+              <caret line="221" column="0" lean-forward="true" selection-start-line="221" selection-start-column="0" selection-end-line="221" selection-end-column="0" />
               <folding>
-                <element signature="n#style#0;n#p#2;n#div#0;n#div#0;n#section#0;n#div#0;n#article#0;n#main#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#p#3;n#div#0;n#div#0;n#section#0;n#div#0;n#article#0;n#main#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#p#4;n#div#0;n#div#0;n#section#0;n#div#0;n#article#0;n#main#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#p#5;n#div#0;n#div#0;n#section#0;n#div#0;n#article#0;n#main#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#p#6;n#div#0;n#div#0;n#section#0;n#div#0;n#article#0;n#main#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#p#7;n#div#0;n#div#0;n#section#0;n#div#0;n#article#0;n#main#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#p#8;n#div#0;n#div#0;n#section#0;n#div#0;n#article#0;n#main#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#p#9;n#div#0;n#div#0;n#section#0;n#div#0;n#article#0;n#main#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#p#10;n#div#0;n#div#0;n#section#0;n#div#0;n#article#0;n#main#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#p#11;n#div#0;n#div#0;n#section#0;n#div#0;n#article#0;n#main#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#p#12;n#div#0;n#div#0;n#section#0;n#div#0;n#article#0;n#main#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#p#13;n#div#0;n#div#0;n#section#0;n#div#0;n#article#0;n#main#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#p#14;n#div#0;n#div#0;n#section#0;n#div#0;n#article#0;n#main#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#p#15;n#div#0;n#div#0;n#section#0;n#div#0;n#article#0;n#main#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#p#16;n#div#0;n#div#0;n#section#0;n#div#0;n#article#0;n#main#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#p#17;n#div#0;n#div#0;n#section#0;n#div#0;n#article#0;n#main#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#p#18;n#div#0;n#div#0;n#section#0;n#div#0;n#article#0;n#main#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#h1#0;n#div#0;n#div#1;n#header#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#h1#1;n#div#0;n#div#1;n#header#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -118,6 +89,13 @@
       <find>进化论的角度看进化论的角度看进化论的角度看区块链分叉问题，是技术还是共识？</find>
       <find>进化论的角度看进化论的角度看区块链分叉问题，是技术还是共识？</find>
       <find>sper开发中的测试网</find>
+      <find>estnet in deve</find>
+      <find>据其官网上的</find>
+      <find>ng to its website, it “is</find>
+      <find>Michael Wuehler</find>
+      <find>type: 'agenda',</find>
+      <find>class=&quot;close&quot;</find>
+      <find>产地到货架</find>
     </findStrings>
     <replaceStrings>
       <replace>&lt;/p&gt;&lt;p</replace>
@@ -135,9 +113,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Unitimes Web 5/index.html" />
-        <option value="$PROJECT_DIR$/Unitimes Web 5/index_cn.html" />
-        <option value="$PROJECT_DIR$/Unitimes Web 5/news/unified_signal_and_burstiq_partners_to_launch_crypto_wallet.html" />
         <option value="$PROJECT_DIR$/Unitimes Web 5/news/unified_signal_and_burstiq_partners_to_launch_crypto_wallet_cn.html" />
         <option value="$PROJECT_DIR$/Unitimes Web 5/news/only_8%_of_26,000_blockchain_projects_started.html" />
         <option value="$PROJECT_DIR$/Unitimes Web 5/news/only_8%_of_26,000_blockchain_projects_started_cn.html" />
@@ -148,8 +123,6 @@
         <option value="$PROJECT_DIR$/Unitimes Web 5/news/vontobel_and_leonteq_securities_ag_launch_their_respective_futures_products_cn.html" />
         <option value="$PROJECT_DIR$/Unitimes Web 5/news/square_has_quietly_allowed_some_customers_to_buy_and_sell_bitcoin.html" />
         <option value="$PROJECT_DIR$/Unitimes Web 5/news/square_has_quietly_allowed_some_customers_to_buy_and_sell_bitcoin_cn.html" />
-        <option value="$PROJECT_DIR$/meetup/index.html" />
-        <option value="$PROJECT_DIR$/meetup/index-en.html" />
         <option value="$PROJECT_DIR$/Unitimes Web 5/news/ubs_remarks_that_bitcoin_is_unstable_due_to_the_lack_of_government_oversight_cn.html" />
         <option value="$PROJECT_DIR$/Unitimes Web 5/news/ubs_remarks_that_bitcoin_is_unstable_due_to_the_lack_of_government_oversight.html" />
         <option value="$PROJECT_DIR$/Unitimes Web 5/news/twenty_banks_join_hong_kong_singapore_blockchain_partnership_cn.html" />
@@ -173,13 +146,24 @@
         <option value="$PROJECT_DIR$/Unitimes Web 5/news/paxful_we_plan_to_build_100_schools_in_africa_with_bitcoin.html" />
         <option value="$PROJECT_DIR$/Unitimes Web 5/news/central_bank_of_russia_says_cryptocurrencies_market_may_be_facing_a_bubble.html" />
         <option value="$PROJECT_DIR$/Unitimes Web 5/news/cambridge_professor_bitcoin_is_an_economic_miracle.html" />
-        <option value="$PROJECT_DIR$/Unitimes Web 5/js/indexcontent.js" />
         <option value="$PROJECT_DIR$/Unitimes Web 5/news/vitalik_buterin_lays_roadmap_for_ethereum_visa_levels_quadratic_sharding_cn.html" />
         <option value="$PROJECT_DIR$/Unitimes Web 5/news/from_evolution_theory_is_blockchain_fork_a_matter_of_technology_or_consensus_cn.html" />
         <option value="$PROJECT_DIR$/Unitimes Web 5/news/ethereum_proof_of_stake_casper_testnet_nears_launch_cn.html" />
         <option value="$PROJECT_DIR$/Unitimes Web 5/news/vitalik_buterin_lays_roadmap_for_ethereum_visa_levels_quadratic_sharding.html" />
-        <option value="$PROJECT_DIR$/Unitimes Web 5/js/newscontent.js" />
         <option value="$PROJECT_DIR$/Unitimes Web 5/news/from_evolution_theory_is_blockchain_fork_a_matter_of_technology_or_consensus.html" />
+        <option value="$PROJECT_DIR$/Unitimes Web 5/js/indexcontent.js" />
+        <option value="$PROJECT_DIR$/Unitimes Web 5/news/ethereum_proof_of_stake_casper_testnet_nears_launch.html" />
+        <option value="$PROJECT_DIR$/Unitimes Web 5/news/sberbank_successfully_completes_its_first_blockchain_powered_payment_transaction_cn.html" />
+        <option value="$PROJECT_DIR$/Unitimes Web 5/news/sberbank_successfully_completes_its_first_blockchain_powered_payment_transaction.html" />
+        <option value="$PROJECT_DIR$/meetup/index-en.html" />
+        <option value="$PROJECT_DIR$/meetup/index.html" />
+        <option value="$PROJECT_DIR$/meetup/assets/js/content.js" />
+        <option value="$PROJECT_DIR$/Unitimes Web 5/news/blockchain_drives_artificial_intelligence_cn.html" />
+        <option value="$PROJECT_DIR$/Unitimes Web 5/news/article_demo_cn的副本.html" />
+        <option value="$PROJECT_DIR$/meetup/index2.html" />
+        <option value="$PROJECT_DIR$/Unitimes Web 5/news/forbes_5_predictions_on_how_blockchain_will_drive_digital_transformation_cn.html" />
+        <option value="$PROJECT_DIR$/Unitimes Web 5/news/blockchain_drives_artificial_intelligence.html" />
+        <option value="$PROJECT_DIR$/Unitimes Web 5/js/newscontent.js" />
       </list>
     </option>
   </component>
@@ -328,7 +312,7 @@
       <workItem from="1511603051442" duration="2329000" />
       <workItem from="1511670057295" duration="952000" />
       <workItem from="1511845368557" duration="3988000" />
-      <workItem from="1511916889587" duration="19355000" />
+      <workItem from="1511916889587" duration="27964000" />
     </task>
     <task id="LOCAL-00001" summary="11.19">
       <created>1511095872161</created>
@@ -344,16 +328,23 @@
       <option name="project" value="LOCAL" />
       <updated>1511713167366</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="11.27">
+      <created>1512041656810</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1512041656810</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="41353000" />
+    <option name="totallyTimeSpent" value="49962000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="485" y="23" width="1124" height="1022" extended-state="0" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19217081" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19217081" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -384,13 +375,13 @@
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329602" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.15" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19217081" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32947367" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="CSS-X-Fire" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="CSS-X-Fire" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
     </layout-to-restore>
@@ -416,101 +407,10 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Unitimes Web 5/news/unified_signal_and_burstiq_partners_to_launch_crypto_wallet.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="520">
-          <caret line="156" column="63" lean-forward="false" selection-start-line="156" selection-start-column="63" selection-end-line="156" selection-end-column="63" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Unitimes Web 5/news/unified_signal_and_burstiq_partners_to_launch_crypto_wallet_cn.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="316">
-          <caret line="89" column="58" lean-forward="false" selection-start-line="89" selection-start-column="58" selection-end-line="89" selection-end-column="58" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Unitimes Web 5/news/only_8%_of_26,000_blockchain_projects_started.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="334">
-          <caret line="115" column="204" lean-forward="false" selection-start-line="115" selection-start-column="204" selection-end-line="115" selection-end-column="204" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Unitimes Web 5/news/only_8%_of_26,000_blockchain_projects_started_cn.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2620">
-          <caret line="131" column="81" lean-forward="false" selection-start-line="131" selection-start-column="81" selection-end-line="131" selection-end-column="81" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Unitimes Web 5/news/devcon3_sees_an_end.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="20">
-          <caret line="89" column="55" lean-forward="false" selection-start-line="89" selection-start-column="55" selection-end-line="89" selection-end-column="55" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Unitimes Web 5/news/devcon3_sees_an_end_cn.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="20">
-          <caret line="30" column="83" lean-forward="false" selection-start-line="30" selection-start-column="83" selection-end-line="30" selection-end-column="83" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Unitimes Web 5/news/bch_btc_while_ethereum_founder_vitalik_buterin_cn.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="309">
-          <caret line="159" column="115" lean-forward="false" selection-start-line="159" selection-start-column="92" selection-end-line="159" selection-end-column="115" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Unitimes Web 5/news/bch_btc_while_ethereum_founder_vitalik_buterin.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="253">
-          <caret line="162" column="65" lean-forward="true" selection-start-line="162" selection-start-column="65" selection-end-line="162" selection-end-column="65" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Unitimes Web 5/news/vontobel_and_leonteq_securities_ag_launch_their_respective_futures_products.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="440">
-          <caret line="132" column="98" lean-forward="false" selection-start-line="132" selection-start-column="98" selection-end-line="132" selection-end-column="98" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Unitimes Web 5/news/vontobel_and_leonteq_securities_ag_launch_their_respective_futures_products_cn.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="442">
-          <caret line="145" column="161" lean-forward="false" selection-start-line="145" selection-start-column="161" selection-end-line="145" selection-end-column="161" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Unitimes Web 5/news/square_has_quietly_allowed_some_customers_to_buy_and_sell_bitcoin.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="623">
-          <caret line="138" column="206" lean-forward="false" selection-start-line="138" selection-start-column="206" selection-end-line="138" selection-end-column="206" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Unitimes Web 5/news/state_bank_of_vietnam_announces_prohibition_of_bitcoin_payment.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Unitimes Web 5/news/square_has_quietly_allowed_some_customers_to_buy_and_sell_bitcoin_cn.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="254">
           <caret line="133" column="110" lean-forward="false" selection-start-line="133" selection-start-column="110" selection-end-line="133" selection-end-column="110" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/meetup/index-en.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="383">
-          <caret line="217" column="44" lean-forward="true" selection-start-line="217" selection-start-column="44" selection-end-line="217" selection-end-column="44" />
         </state>
       </provider>
     </entry>
@@ -633,10 +533,10 @@
         <state relative-caret-position="156">
           <caret line="145" column="47" lean-forward="false" selection-start-line="145" selection-start-column="47" selection-end-line="145" selection-end-column="47" />
           <folding>
-            <marker date="1511937986000" expanded="false" signature="18225:18278" ph="..." />
-            <marker date="1511937986000" expanded="false" signature="22434:22487" ph="..." />
-            <marker date="1511937986000" expanded="false" signature="26541:26594" ph="..." />
-            <marker date="1511937986000" expanded="false" signature="29984:29990" ph="©" />
+            <marker date="1512041656000" expanded="false" signature="18549:18602" ph="..." />
+            <marker date="1512041656000" expanded="false" signature="22758:22811" ph="..." />
+            <marker date="1512041656000" expanded="false" signature="26865:26918" ph="..." />
+            <marker date="1512041656000" expanded="false" signature="30308:30314" ph="©" />
           </folding>
         </state>
       </provider>
@@ -711,26 +611,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Unitimes Web 5/js/indexcontent.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2220">
-          <caret line="111" column="10" lean-forward="false" selection-start-line="111" selection-start-column="10" selection-end-line="111" selection-end-column="10" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Unitimes Web 5/news/paxful_we_plan_to_build_100_schools_in_africa_with_bitcoin.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="296">
           <caret line="22" column="40" lean-forward="true" selection-start-line="22" selection-start-column="40" selection-end-line="22" selection-end-column="40" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/meetup/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1692">
-          <caret line="204" column="24" lean-forward="true" selection-start-line="204" selection-start-column="24" selection-end-line="204" selection-end-column="24" />
           <folding />
         </state>
       </provider>
@@ -756,36 +640,36 @@
         <state relative-caret-position="202">
           <caret line="118" column="78" lean-forward="true" selection-start-line="118" selection-start-column="78" selection-end-line="118" selection-end-column="78" />
           <folding>
-            <element signature="n#style#0;n#p#2;n#div#0;n#div#0;n#section#0;n#div#0;n#article#0;n#main#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#p#3;n#div#0;n#div#0;n#section#0;n#div#0;n#article#0;n#main#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#p#4;n#div#0;n#div#0;n#section#0;n#div#0;n#article#0;n#main#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#p#5;n#div#0;n#div#0;n#section#0;n#div#0;n#article#0;n#main#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#p#6;n#div#0;n#div#0;n#section#0;n#div#0;n#article#0;n#main#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#p#7;n#div#0;n#div#0;n#section#0;n#div#0;n#article#0;n#main#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#p#8;n#div#0;n#div#0;n#section#0;n#div#0;n#article#0;n#main#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#p#9;n#div#0;n#div#0;n#section#0;n#div#0;n#article#0;n#main#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#p#10;n#div#0;n#div#0;n#section#0;n#div#0;n#article#0;n#main#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#p#11;n#div#0;n#div#0;n#section#0;n#div#0;n#article#0;n#main#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#p#12;n#div#0;n#div#0;n#section#0;n#div#0;n#article#0;n#main#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#p#13;n#div#0;n#div#0;n#section#0;n#div#0;n#article#0;n#main#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#p#14;n#div#0;n#div#0;n#section#0;n#div#0;n#article#0;n#main#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#p#15;n#div#0;n#div#0;n#section#0;n#div#0;n#article#0;n#main#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#p#16;n#div#0;n#div#0;n#section#0;n#div#0;n#article#0;n#main#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#p#17;n#div#0;n#div#0;n#section#0;n#div#0;n#article#0;n#main#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#p#18;n#div#0;n#div#0;n#section#0;n#div#0;n#article#0;n#main#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#p#19;n#div#0;n#div#0;n#section#0;n#div#0;n#article#0;n#main#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#p#20;n#div#0;n#div#0;n#section#0;n#div#0;n#article#0;n#main#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#p#21;n#div#0;n#div#0;n#section#0;n#div#0;n#article#0;n#main#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#p#22;n#div#0;n#div#0;n#section#0;n#div#0;n#article#0;n#main#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#p#23;n#div#0;n#div#0;n#section#0;n#div#0;n#article#0;n#main#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#p#24;n#div#0;n#div#0;n#section#0;n#div#0;n#article#0;n#main#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#p#25;n#div#0;n#div#0;n#section#0;n#div#0;n#article#0;n#main#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#p#26;n#div#0;n#div#0;n#section#0;n#div#0;n#article#0;n#main#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#p#27;n#div#0;n#div#0;n#section#0;n#div#0;n#article#0;n#main#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#p#28;n#div#0;n#div#0;n#section#0;n#div#0;n#article#0;n#main#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#p#29;n#div#0;n#div#0;n#section#0;n#div#0;n#article#0;n#main#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#p#30;n#div#0;n#div#0;n#section#0;n#div#0;n#article#0;n#main#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#p#31;n#div#0;n#div#0;n#section#0;n#div#0;n#article#0;n#main#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#p#2;n#div#0;n#div#0;n#section#0;n#div#0;n#article#0;n#main#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#p#3;n#div#0;n#div#0;n#section#0;n#div#0;n#article#0;n#main#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#p#4;n#div#0;n#div#0;n#section#0;n#div#0;n#article#0;n#main#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#p#5;n#div#0;n#div#0;n#section#0;n#div#0;n#article#0;n#main#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#p#6;n#div#0;n#div#0;n#section#0;n#div#0;n#article#0;n#main#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#p#7;n#div#0;n#div#0;n#section#0;n#div#0;n#article#0;n#main#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#p#8;n#div#0;n#div#0;n#section#0;n#div#0;n#article#0;n#main#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#p#9;n#div#0;n#div#0;n#section#0;n#div#0;n#article#0;n#main#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#p#10;n#div#0;n#div#0;n#section#0;n#div#0;n#article#0;n#main#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#p#11;n#div#0;n#div#0;n#section#0;n#div#0;n#article#0;n#main#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#p#12;n#div#0;n#div#0;n#section#0;n#div#0;n#article#0;n#main#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#p#13;n#div#0;n#div#0;n#section#0;n#div#0;n#article#0;n#main#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#p#14;n#div#0;n#div#0;n#section#0;n#div#0;n#article#0;n#main#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#p#15;n#div#0;n#div#0;n#section#0;n#div#0;n#article#0;n#main#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#p#16;n#div#0;n#div#0;n#section#0;n#div#0;n#article#0;n#main#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#p#17;n#div#0;n#div#0;n#section#0;n#div#0;n#article#0;n#main#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#p#18;n#div#0;n#div#0;n#section#0;n#div#0;n#article#0;n#main#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#p#19;n#div#0;n#div#0;n#section#0;n#div#0;n#article#0;n#main#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#p#20;n#div#0;n#div#0;n#section#0;n#div#0;n#article#0;n#main#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#p#21;n#div#0;n#div#0;n#section#0;n#div#0;n#article#0;n#main#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#p#22;n#div#0;n#div#0;n#section#0;n#div#0;n#article#0;n#main#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#p#23;n#div#0;n#div#0;n#section#0;n#div#0;n#article#0;n#main#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#p#24;n#div#0;n#div#0;n#section#0;n#div#0;n#article#0;n#main#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#p#25;n#div#0;n#div#0;n#section#0;n#div#0;n#article#0;n#main#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#p#26;n#div#0;n#div#0;n#section#0;n#div#0;n#article#0;n#main#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#p#27;n#div#0;n#div#0;n#section#0;n#div#0;n#article#0;n#main#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#p#28;n#div#0;n#div#0;n#section#0;n#div#0;n#article#0;n#main#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#p#29;n#div#0;n#div#0;n#section#0;n#div#0;n#article#0;n#main#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#p#30;n#div#0;n#div#0;n#section#0;n#div#0;n#article#0;n#main#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#p#31;n#div#0;n#div#0;n#section#0;n#div#0;n#article#0;n#main#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -803,21 +687,13 @@
         <state relative-caret-position="268">
           <caret line="121" column="79" lean-forward="false" selection-start-line="121" selection-start-column="79" selection-end-line="121" selection-end-column="79" />
           <folding>
-            <element signature="n#style#0;n#p#1;n#div#0;n#div#0;n#section#0;n#div#0;n#article#0;n#main#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#p#2;n#div#0;n#div#0;n#section#0;n#div#0;n#article#0;n#main#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#p#3;n#div#0;n#div#0;n#section#0;n#div#0;n#article#0;n#main#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#p#4;n#div#0;n#div#0;n#section#0;n#div#0;n#article#0;n#main#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#p#5;n#div#0;n#div#0;n#section#0;n#div#0;n#article#0;n#main#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#p#6;n#div#0;n#div#0;n#section#0;n#div#0;n#article#0;n#main#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#p#1;n#div#0;n#div#0;n#section#0;n#div#0;n#article#0;n#main#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#p#2;n#div#0;n#div#0;n#section#0;n#div#0;n#article#0;n#main#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#p#3;n#div#0;n#div#0;n#section#0;n#div#0;n#article#0;n#main#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#p#4;n#div#0;n#div#0;n#section#0;n#div#0;n#article#0;n#main#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#p#5;n#div#0;n#div#0;n#section#0;n#div#0;n#article#0;n#main#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#p#6;n#div#0;n#div#0;n#section#0;n#div#0;n#article#0;n#main#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Unitimes Web 5/news/ethereum_proof_of_stake_casper_testnet_nears_launch.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="320">
-          <caret line="16" column="37" lean-forward="true" selection-start-line="16" selection-start-column="37" selection-end-line="16" selection-end-column="37" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -829,10 +705,152 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Unitimes Web 5/news/ethereum_transaction_volume_doubles_that_of_bitcoin_cn.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Unitimes Web 5/news/ethereum_transaction_volume_doubles_that_of_bitcoin.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Unitimes Web 5/news/ethereum_proof_of_stake_casper_testnet_nears_launch_cn.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="65">
-          <caret line="130" column="45" lean-forward="true" selection-start-line="130" selection-start-column="45" selection-end-line="130" selection-end-column="45" />
+          <caret line="130" column="45" lean-forward="false" selection-start-line="130" selection-start-column="45" selection-end-line="130" selection-end-column="45" />
+          <folding>
+            <element signature="n#style#0;n#p#2;n#div#0;n#div#0;n#section#0;n#div#0;n#article#0;n#main#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#p#3;n#div#0;n#div#0;n#section#0;n#div#0;n#article#0;n#main#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#p#4;n#div#0;n#div#0;n#section#0;n#div#0;n#article#0;n#main#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#p#5;n#div#0;n#div#0;n#section#0;n#div#0;n#article#0;n#main#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#p#6;n#div#0;n#div#0;n#section#0;n#div#0;n#article#0;n#main#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#p#7;n#div#0;n#div#0;n#section#0;n#div#0;n#article#0;n#main#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#p#8;n#div#0;n#div#0;n#section#0;n#div#0;n#article#0;n#main#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#p#9;n#div#0;n#div#0;n#section#0;n#div#0;n#article#0;n#main#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#p#10;n#div#0;n#div#0;n#section#0;n#div#0;n#article#0;n#main#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#p#11;n#div#0;n#div#0;n#section#0;n#div#0;n#article#0;n#main#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#p#12;n#div#0;n#div#0;n#section#0;n#div#0;n#article#0;n#main#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#p#13;n#div#0;n#div#0;n#section#0;n#div#0;n#article#0;n#main#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#p#14;n#div#0;n#div#0;n#section#0;n#div#0;n#article#0;n#main#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#p#15;n#div#0;n#div#0;n#section#0;n#div#0;n#article#0;n#main#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#p#16;n#div#0;n#div#0;n#section#0;n#div#0;n#article#0;n#main#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#p#17;n#div#0;n#div#0;n#section#0;n#div#0;n#article#0;n#main#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#p#18;n#div#0;n#div#0;n#section#0;n#div#0;n#article#0;n#main#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Unitimes Web 5/js/indexcontent.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="166">
+          <caret line="77" column="19" lean-forward="true" selection-start-line="77" selection-start-column="19" selection-end-line="77" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Unitimes Web 5/news/from_evolution_theory_is_blockchain_fork_a_matter_of_technology_or_consensus.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="327">
+          <caret line="129" column="45" lean-forward="true" selection-start-line="129" selection-start-column="45" selection-end-line="129" selection-end-column="45" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Unitimes Web 5/news/ethereum_proof_of_stake_casper_testnet_nears_launch.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="402">
+          <caret line="178" column="45" lean-forward="true" selection-start-line="178" selection-start-column="45" selection-end-line="178" selection-end-column="45" />
+          <folding>
+            <element signature="n#style#0;n#p#3;n#div#0;n#div#0;n#section#0;n#div#0;n#article#0;n#main#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Unitimes Web 5/news/sberbank_successfully_completes_its_first_blockchain_powered_payment_transaction_cn.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="217">
+          <caret line="178" column="60" lean-forward="true" selection-start-line="178" selection-start-column="60" selection-end-line="178" selection-end-column="60" />
+          <folding>
+            <element signature="n#style#0;n#p#2;n#div#0;n#div#0;n#section#0;n#div#0;n#article#0;n#main#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#p#3;n#div#0;n#div#0;n#section#0;n#div#0;n#article#0;n#main#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#p#4;n#div#0;n#div#0;n#section#0;n#div#0;n#article#0;n#main#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#p#5;n#div#0;n#div#0;n#section#0;n#div#0;n#article#0;n#main#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#p#6;n#div#0;n#div#0;n#section#0;n#div#0;n#article#0;n#main#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#p#7;n#div#0;n#div#0;n#section#0;n#div#0;n#article#0;n#main#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#p#8;n#div#0;n#div#0;n#section#0;n#div#0;n#article#0;n#main#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Unitimes Web 5/news/article_demo的副本.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="637">
+          <caret line="144" column="41" lean-forward="true" selection-start-line="142" selection-start-column="35" selection-end-line="144" selection-end-column="41" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Unitimes Web 5/news/sberbank_successfully_completes_its_first_blockchain_powered_payment_transaction.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3367">
+          <caret line="191" column="53" lean-forward="true" selection-start-line="191" selection-start-column="53" selection-end-line="191" selection-end-column="53" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/meetup/index-en.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="707">
+          <caret line="120" column="76" lean-forward="false" selection-start-line="120" selection-start-column="76" selection-end-line="120" selection-end-column="76" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/meetup/assets/js/content.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="146">
+          <caret line="27" column="10" lean-forward="true" selection-start-line="27" selection-start-column="10" selection-end-line="27" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Unitimes Web 5/news/article_demo_cn的副本.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="236">
+          <caret line="69" column="49" lean-forward="false" selection-start-line="69" selection-start-column="49" selection-end-line="69" selection-end-column="49" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Unitimes Web 5/news/blockchain_drives_artificial_intelligence_cn.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="506">
+          <caret line="109" column="63" lean-forward="true" selection-start-line="109" selection-start-column="63" selection-end-line="109" selection-end-column="63" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/meetup/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="140">
+          <caret line="79" column="39" lean-forward="true" selection-start-line="79" selection-start-column="39" selection-end-line="79" selection-end-column="39" />
+          <folding>
+            <element signature="n#style#0;n#td#1;n#tr#0;n#template#0;n#table#0;n#article#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Unitimes Web 5/news/forbes_5_predictions_on_how_blockchain_will_drive_digital_transformation_cn.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="151" column="102" lean-forward="true" selection-start-line="151" selection-start-column="102" selection-end-line="151" selection-end-column="102" />
           <folding>
             <element signature="n#style#0;n#p#2;n#div#0;n#div#0;n#section#0;n#div#0;n#article#0;n#main#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#p#3;n#div#0;n#div#0;n#section#0;n#div#0;n#article#0;n#main#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -842,31 +860,41 @@
             <element signature="n#style#0;n#p#7;n#div#0;n#div#0;n#section#0;n#div#0;n#article#0;n#main#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#p#8;n#div#0;n#div#0;n#section#0;n#div#0;n#article#0;n#main#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#p#9;n#div#0;n#div#0;n#section#0;n#div#0;n#article#0;n#main#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#p#10;n#div#0;n#div#0;n#section#0;n#div#0;n#article#0;n#main#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#p#11;n#div#0;n#div#0;n#section#0;n#div#0;n#article#0;n#main#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#p#12;n#div#0;n#div#0;n#section#0;n#div#0;n#article#0;n#main#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#p#13;n#div#0;n#div#0;n#section#0;n#div#0;n#article#0;n#main#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#p#14;n#div#0;n#div#0;n#section#0;n#div#0;n#article#0;n#main#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#p#15;n#div#0;n#div#0;n#section#0;n#div#0;n#article#0;n#main#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#p#16;n#div#0;n#div#0;n#section#0;n#div#0;n#article#0;n#main#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#p#17;n#div#0;n#div#0;n#section#0;n#div#0;n#article#0;n#main#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#p#18;n#div#0;n#div#0;n#section#0;n#div#0;n#article#0;n#main#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Unitimes Web 5/news/forbes_5_predictions_on_how_blockchain_will_drive_digital_transformation.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="160">
+          <caret line="8" column="60" lean-forward="true" selection-start-line="8" selection-start-column="60" selection-end-line="8" selection-end-column="60" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Unitimes Web 5/news/blockchain_drives_artificial_intelligence.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-8">
+          <caret line="142" column="66" lean-forward="true" selection-start-line="142" selection-start-column="66" selection-end-line="142" selection-end-column="66" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/meetup/index2.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="567">
+          <caret line="221" column="0" lean-forward="true" selection-start-line="221" selection-start-column="0" selection-end-line="221" selection-end-column="0" />
+          <folding>
+            <element signature="n#style#0;n#h1#0;n#div#0;n#div#1;n#header#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#h1#1;n#div#0;n#div#1;n#header#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Unitimes Web 5/js/newscontent.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="422">
-          <caret line="46" column="113" lean-forward="false" selection-start-line="46" selection-start-column="113" selection-end-line="46" selection-end-column="113" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Unitimes Web 5/news/from_evolution_theory_is_blockchain_fork_a_matter_of_technology_or_consensus.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="100">
-          <caret line="5" column="21" lean-forward="true" selection-start-line="5" selection-start-column="21" selection-end-line="5" selection-end-column="21" />
+        <state relative-caret-position="355">
+          <caret line="23" column="64" lean-forward="false" selection-start-line="23" selection-start-column="64" selection-end-line="23" selection-end-column="64" />
           <folding />
         </state>
       </provider>

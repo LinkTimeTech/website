@@ -3,6 +3,43 @@ var data = {
         {
             top: '1',
             id: '',
+            date: 'Nov 30, 2017',
+            datecn: '2017.11.30',
+            cover: 'images/news/' + 'ethereum_proof_of_stake.jpeg',
+            title: 'Ethereum’s Proof of Stake Casper Testnet Nears Launch\n',
+            titlecn: '以太坊重大升级将来临：权益证明系统Casper测试网络即将启动',
+            intro: 'One of the biggest upgrade in ethereum, and perhaps in the entire ecosystem, might be closer to implementation than previously thought',
+            introcn: '以太坊权益证明机制Casper的测试网络即将启动，本文作者预测，这将对以太坊可扩展性和用户体验上带来极大提升，其被认为是以太坊最为重大的升级之一。',
+            url: 'news/' + 'ethereum_proof_of_stake_casper_testnet_nears_launch' + '.html',
+            urlcn: 'news/' + 'ethereum_proof_of_stake_casper_testnet_nears_launch' + '_cn.html'
+        },
+        {
+            top: '1',
+            id: '',
+            date: 'Nov 30, 2017',
+            datecn: '2017.11.30',
+            cover: 'images/news/' + 'vitalik_buterin_lays.jpeg',
+            title: 'Vitalik Buterin Lays Roadmap for Ethereum Visa Levels Quadratic Sharding\n',
+            titlecn: 'Vitalik 公布以太坊 2.0 路线图：通过二次分片来匹配Visa交易规模\n',
+            intro: 'The ethereum killer is ethereum, the ethereum of China is ethereum, the ethereum of Taiwan is ethereum… 2.0.',
+            introcn: '能消灭以太坊的将是以太坊本身，以太坊在中国大陆仍旧是以太坊，但在台湾，以太坊2.0将从这里开始诞生。',
+            url: 'news/' + 'vitalik_buterin_lays_roadmap_for_ethereum_visa_levels_quadratic_sharding' + '.html',
+            urlcn: 'news/' + 'vitalik_buterin_lays_roadmap_for_ethereum_visa_levels_quadratic_sharding' + '_cn.html'
+        },
+        {
+            id: '',
+            date: 'Nov 30, 2017',
+            datecn: '2017.11.30',
+            cover: 'images/news/' + 'from_evolution_theory.png',
+            title: 'From the Perspective of Evolutionism, Is Blockchain Fork a Matter of Technology or Consensus?',
+            titlecn: '进化论的角度看区块链分叉问题，是技术还是共识？\n',
+            intro: 'Evolution  showcased changes from unicellular organisms to multicellular organisms, and from neurons to neural networks. In this process, the ability of organisms to adapt to the environment was also growing. So what will it be like when looking at the blockchain fork from the perspective of evolutioism?',
+            introcn: '生物进化的方向是从单细胞到多细胞、从神经元到神经网络，在此过程中其适应环境的能力也在不断增强。那么如果从进化论的角度看区块链的分叉问题又是如何呢？',
+            url: 'news/' + 'from_evolution_theory_is_blockchain_fork_a_matter_of_technology_or_consensus' + '.html',
+            urlcn: 'news/' + 'from_evolution_theory_is_blockchain_fork_a_matter_of_technology_or_consensus' + '_cn.html'
+        },
+        {
+            id: '',
             date: 'Nov 29, 2017',
             datecn: '2017.11.29',
             cover: 'images/news/' + 'paxful_we_plan_to.jpg',
@@ -14,7 +51,6 @@ var data = {
             urlcn: 'news/' + 'paxful_we_plan_to_build_100_schools_in_africa_with_bitcoin' + '_cn.html'
         },
         {
-            top: '1',
             id: '',
             date: 'Nov 29, 2017',
             datecn: '2017.11.29',
@@ -73,42 +109,6 @@ var data = {
             introcn: '这个消息意味着那些看涨比特币的人作出的长期价格预测是正确的。伴随着2017年的结束，比特币突破1万美元+的价格不再是神话，而是时间问题。',
             url: 'news/' + 'bitcoin_prices_at_several_global_trading_platforms_exceed_the_10000_mark' + '.html',
             urlcn: 'news/' + 'bitcoin_prices_at_several_global_trading_platforms_exceed_the_10000_mark' + '_cn.html'
-        },
-        {
-            id: '',
-            date: 'Nov 27, 2017',
-            datecn: '2017.11.27',
-            cover: 'images/news/' + 'shinhan_bank_looking.jpg',
-            title: 'Shinhan Bank Looking to Launch a Secure Cryptocurrency Wallet for Its Customers',
-            titlecn: '韩国新韩银行希望为客户推出安全的加密货币钱包',
-            intro: 'Wallet will help users keep cryptocurrency holdings secure, even if blockchain key is compromised',
-            introcn: '即使区块链密钥泄露，该钱包也能帮助用户保护加密货币的安全',
-            url: 'news/' + 'shinhan_bank_looking_to_launch_a_secure_cryptocurrency_wallet_for_its_customers' + '.html',
-            urlcn: 'news/' + 'shinhan_bank_looking_to_launch_a_secure_cryptocurrency_wallet_for_its_customers' + '_cn.html'
-        },
-        {
-            id: '',
-            date: 'Nov 27, 2017',
-            datecn: '2017.11.27',
-            cover: 'images/news/' + 'putting_singapore_dollar.jpg',
-            title: 'Putting Singapore\'s Dollar on Blockchain May Prove It\'s the Most Crypto Friendly Place on Earth',
-            titlecn: '福布斯：新加坡可能是全球加密货币友好型程度最高的国家',
-            intro: 'Singapore is widely regarded as one of the most crypto-friendly countries in the world, largely due to its stable politics, reliable infrastructure, and favorable business environment.',
-            introcn: '新加坡因政治稳定、基础设施可靠且商业环境良好，被广泛认为是世界上对加密货币最友好的国家之一。',
-            url: 'news/' + 'putting_singapore_dollar__blockchain_may_prove' + '.html',
-            urlcn: 'news/' + 'putting_singapore_dollar__blockchain_may_prove' + '_cn.html'
-        },
-        {
-            id: '',
-            date: 'Nov 27, 2017',
-            datecn: '2017.11.27',
-            cover: 'images/news/' + 'parity_bugs_still_exists.jpg',
-            title: 'Parity Bugs Still Exists with no Ideal Solutions Currently',
-            titlecn: '以太坊Parity钱包漏洞仍在,重挫之后如何解决尚存争议',
-            intro: 'The dark history: The Parity team has been looking for ideal solutions for the issue since the bug was disclosed on November 7.',
-            introcn: '以太坊黑暗历史：自11月7日以太坊Parity钱包被爆出现重大安全漏洞，官方至今还未确定理想的解决方案',
-            url: 'news/' + 'parity_bugs_still_exists_with_no_ideal_solutions_currently' + '.html',
-            urlcn: 'news/' + 'parity_bugs_still_exists_with_no_ideal_solutions_currently' + '_cn.html'
         },
         {
             top: '1',

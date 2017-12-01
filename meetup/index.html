@@ -91,6 +91,7 @@
             <table border="1" style="font-size: 13px">
                 <tr>
                     <td></td>
+                    <td>时间</td>
                     <td>演讲人</td>
                     <td>职位</td>
                     <td>演讲主题</td>
@@ -107,6 +108,7 @@
 
                         <td v-if="content.empty == 1" :colspan="content.colspan" style="text-align:center"></td>
 
+                        <td v-if="content.type == 'agenda' ">{{ content.time }}</td>
                         <td v-if="content.type == 'agenda' ">{{ content.speakercn }}</td>
                         <td v-if="content.type == 'agenda' ">{{ content.titlecn }}</td>
                         <td v-if="content.type == 'agenda' ">{{ content.topiccn }}</td>

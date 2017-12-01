@@ -6,6 +6,7 @@ var data = {
             date: 'AM',
             datecn: '上午',
             type: 'agenda',
+            time: '08:50-09:15',
             speakercn: '姜英英',
             speaker: 'Pandia Jiang',
             titlecn: '灵钛科技 & JUSTFUND创始人',
@@ -15,6 +16,7 @@ var data = {
         },
         {
             type: 'agenda',
+            time: '09:15-09:55',
             date: 'AM',
             datecn: '上午',
             speakercn: '王筱維',
@@ -26,6 +28,7 @@ var data = {
         },
         {
             type: 'agenda',
+            time: '09:55-10:35',
             date: 'AM',
             datecn: '上午',
             speakercn: '林修平',
@@ -37,12 +40,14 @@ var data = {
         },
         {
             break: '1',
-            breakcol: '3',
-            breaktextcn: '茶歇',
-            breaktext: 'break'
+            breakcol: '4',
+            time: '10:35-10:50',
+            breaktextcn: '茶歇 (10:35-10:50)',
+            breaktext: 'break (10:35-10:50)'
         },
         {
             type: 'agenda',
+            time: '10:50-11:30',
             date: 'AM',
             datecn: '上午',
             speakercn: 'Jon Choi',
@@ -54,6 +59,7 @@ var data = {
         },
         {
             type: 'agenda',
+            time: '11:30-11:55',
             date: 'AM',
             datecn: '上午',
             speakercn: 'Thomas Greco',
@@ -65,6 +71,7 @@ var data = {
         },
         {
             type: 'agenda',
+            time: '11:55-12:10',
             date: 'AM',
             datecn: '上午',
             speakercn: 'Simon Kim',
@@ -82,6 +89,7 @@ var data = {
             pmside: '1',
             timerow: '12',
             type: 'agenda',
+            time: '13:30-13:55',
             date: 'PM',
             datecn: '下午',
             speakercn: 'Jim Bai',
@@ -93,6 +101,7 @@ var data = {
         },
         {
             type: 'agenda',
+            time: '13:55-14:20',
             date: 'PM',
             datecn: '下午',
             speakercn: 'Loi Luu',
@@ -104,6 +113,7 @@ var data = {
         },
         {
             type: 'agenda',
+            time: '14:20-14:45',
             date: 'PM',
             datecn: '下午',
             speakercn: 'Kai Chen',
@@ -115,6 +125,7 @@ var data = {
         },
         {
             type: 'agenda',
+            time: '14:45-15:35',
             date: 'PM',
             datecn: '下午',
             speakercn: 'Kevin Serrano',
@@ -126,17 +137,7 @@ var data = {
         },
         {
             type: 'agenda',
-            date: 'PM',
-            datecn: '下午',
-            speakercn: 'Michael Wuehler',
-            speaker: 'Michael Wuehler',
-            titlecn: 'ConsenSys-区块链基础设施领导人',
-            title: 'Consensys-Head of Blockchain Infrastructure',
-            topiccn: '用INFURA开发分散式应用',
-            topic: 'Developing Decentralized Application with INFURA'
-        },
-        {
-            type: 'agenda',
+            time: '14:45-15:35',
             date: 'PM',
             datecn: '下午',
             speakercn: 'Michael Sena',
@@ -148,12 +149,13 @@ var data = {
         },
         {
             break: '1',
-            breakcol: '3',
-            breaktextcn: '茶歇',
-            breaktext: 'break'
+            breakcol: '4',
+            breaktextcn: '茶歇 (15:35-15:50)',
+            breaktext: 'break (15:35-15:50)'
         },
         {
             type: 'agenda',
+            time: '15:50-16:15',
             date: 'PM',
             datecn: '下午',
             speakercn: '朱嘉伟',
@@ -165,6 +167,7 @@ var data = {
         },
         {
             type: 'agenda',
+            time: '16:15-16:40',
             date: 'PM',
             datecn: '下午',
             speakercn: '潘超',
@@ -176,6 +179,7 @@ var data = {
         },
         {
             type: 'agenda',
+            time: '16:40-17:05',
             date: 'PM',
             datecn: '下午',
             speakercn: 'Jehan Chu',
@@ -187,6 +191,7 @@ var data = {
         },
         {
             type: 'agenda',
+            time: '17:05-17:30',
             date: 'PM',
             datecn: '下午',
             speakercn: 'Pavel Bains',
@@ -198,6 +203,7 @@ var data = {
         },
         {
             type: 'agenda',
+            time: '17:30-18:00',
             date: 'PM',
             datecn: '下午',
             speakercn: 'Vitalik Buterin',
@@ -210,9 +216,9 @@ var data = {
 
     ]
 
-}
+};
 
 var vm = new Vue({
     el: '#wrapper',
     data: data
-})
+});
