@@ -3,8 +3,8 @@ var data = {
         // {
         //     top: '1',
         //     id: '',
-        //     date: 'Dec 1, 2017',
-        //     datecn: '2017.12.01',
+        //     date: 'Dec 3, 2017',
+        //     datecn: '2017.12.03',
         //     cover: 'images/news/'+'',
         //     title: '',
         //     titlecn: '',
@@ -15,6 +15,55 @@ var data = {
         // },
         {
             top: '1',
+            id: '',
+            date: 'Dec 3, 2017',
+            datecn: '2017.12.03',
+            cover: 'images/news/' + 'professor_at_cmu.jpg',
+            title: 'Professor at CMU Predicts Ethereum Will Overtake Bitcoin as The Number One Cryptocurrency',
+            titlecn: 'CMU的教授预测以太坊将超越比特币成为第一大加密货币',
+            intro: 'According to Professor Vipul Goyal, Ethereum’s main edge over Bitcoin is its powerful and versatile blockchain platform that goes beyond the facilitation of payments',
+            introcn: '根据Vipul Goyal教授的说法，与比特币相比，以太坊的主要优势在于其强大且多功能的区块链平台。这一平台提供的不仅仅只是支付的便利性。',
+            url: 'news/' + 'professor_at_cmu_ethereum_will_overtake_bitcoin' + '.html',
+            urlcn: 'news/' + 'professor_at_cmu_ethereum_will_overtake_bitcoin' + '_cn.html'
+        },
+        {
+            top: '1',
+            id: '',
+            date: 'Dec 3, 2017',
+            datecn: '2017.12.03',
+            cover: 'images/news/' + 'kyber_network_partners.jpg',
+            title: 'Kyber Network Partners with Imtoken',
+            titlecn: 'Kyber Netwok将与imToken合作',
+            intro: '',
+            introcn: '中国领先的移动端钱包应用程序刚刚取得了更加显著的发展。',
+            url: 'news/' + 'kyber_network_partners_with_imtoken' + '.html',
+            urlcn: 'news/' + 'kyber_network_partners_with_imtoken' + '_cn.html'
+        },
+        {
+            id: '',
+            date: 'Dec 2, 2017',
+            datecn: '2017.12.02',
+            cover: 'images/news/' + 'san_francisco_federal.png',
+            title: 'San Francisco Federal Reserve Bank President Says No to Native Digital Currency, While Counterpart in New York Says Yes',
+            titlecn: '旧金山联邦储备银行行长不同意推出银行自身的数字货币，而纽约联邦储备银行行长则持相反态度',
+            intro: 'Remarks by John Williams also reaffirm confidence in blockchain technology, in the U.S.',
+            introcn: 'John Williams在讲话中也重申了对美国采用区块链技术的信心。',
+            url: 'news/' + 'san_francisco_federal_reserve_president_says_no_to_native_digital_currency' + '.html',
+            urlcn: 'news/' + 'san_francisco_federal_reserve_president_says_no_to_native_digital_currency' + '_cn.html'
+        },
+        {
+            id: '',
+            date: 'Dec 2, 2017',
+            datecn: '2017.12.02',
+            cover: 'images/news/' + 'top_religious_body.jpg',
+            title: 'Top religious body in Turkey denounces cryptocurrencies as incompatible with Islam',
+            titlecn: '土耳其最高宗教团体谴责加密货币与伊斯兰教不相容',
+            intro: 'Reasons include the volatility of cryptocurrencies, the lack of a central authority, and possible uses for money laundering',
+            introcn: '其原因包括加密货币的波动性，缺乏国家中央机构的监督以及可能用于洗钱活动',
+            url: 'news/' + 'top_religious_body_in_turkey__cryptocurrencies_as_incompatible_with_islam' + '.html',
+            urlcn: 'news/' + 'top_religious_body_in_turkey__cryptocurrencies_as_incompatible_with_islam' + '_cn.html'
+        },
+        {
             id: '',
             date: 'Dec 1, 2017',
             datecn: '2017.12.01',
@@ -27,14 +76,13 @@ var data = {
             urlcn: 'news/' + 'sberbank_successfully_completes_its_first_blockchain_powered_payment_transaction' + '_cn.html'
         },
         {
-            top: '1',
             id: '',
             date: 'Dec 1, 2017',
             datecn: '2017.12.01',
             cover: 'images/news/' + 'forbes_5_predictions.jpg',
-            title: '',
+            title: 'Forbes: 5 Predictions On How Blockchain Will Drive Digital Transformation',
             titlecn: '福布斯：区块链使数字变革发展到更高程度的预测\n',
-            intro: '',
+            intro: 'The technology that once was the lesser known force behind Bitcoin is now seeing its own day in the sun. There will be a time when it seems impossible that we ever survived without blockchain technology.',
             introcn: '曾经，比特币背后的区块链技术鲜为人知，如今它已大放异彩。将来终会有一天我们根本离不开区块链技术！',
             url: 'news/' + 'forbes_5_predictions_on_how_blockchain_will_drive_digital_transformation' + '.html',
             urlcn: 'news/' + 'forbes_5_predictions_on_how_blockchain_will_drive_digital_transformation' + '_cn.html'

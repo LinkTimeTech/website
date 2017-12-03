@@ -3,6 +3,67 @@ var data = {
         {
             top: '1',
             id: '',
+            date: 'Dec 2, 2017',
+            datecn: '2017.12.02',
+            cover: 'images/news/' + 'san_francisco_federal.png',
+            title: 'San Francisco Federal Reserve Bank President Says No to Native Digital Currency, While Counterpart in New York Says Yes',
+            titlecn: '旧金山联邦储备银行行长不同意推出银行自身的数字货币，而纽约联邦储备银行行长则持相反态度',
+            intro: 'Remarks by John Williams also reaffirm confidence in blockchain technology, in the U.S.',
+            introcn: 'John Williams在讲话中也重申了对美国采用区块链技术的信心。',
+            url: 'news/' + 'san_francisco_federal_reserve_president_says_no_to_native_digital_currency' + '.html',
+            urlcn: 'news/' + 'san_francisco_federal_reserve_president_says_no_to_native_digital_currency' + '_cn.html'
+        },
+        {
+            top: '1',
+            id: '',
+            date: 'Dec 2, 2017',
+            datecn: '2017.12.02',
+            cover: 'images/news/' + 'top_religious_body.jpg',
+            title: 'Top religious body in Turkey denounces cryptocurrencies as incompatible with Islam',
+            titlecn: '土耳其最高宗教团体谴责加密货币与伊斯兰教不相容',
+            intro: 'Reasons include the volatility of cryptocurrencies, the lack of a central authority, and possible uses for money laundering',
+            introcn: '其原因包括加密货币的波动性，缺乏国家中央机构的监督以及可能用于洗钱活动',
+            url: 'news/' + 'top_religious_body_in_turkey__cryptocurrencies_as_incompatible_with_islam' + '.html',
+            urlcn: 'news/' + 'top_religious_body_in_turkey__cryptocurrencies_as_incompatible_with_islam' + '_cn.html'
+        },
+        {
+            id: '',
+            date: 'Dec 1, 2017',
+            datecn: '2017.12.01',
+            cover: 'images/news/' + 'sberbank_successfully.jpg',
+            title: 'Sberbank Successfully Completes Its First Blockchain-powered Payment Transaction\n',
+            titlecn: 'Sberbank成功完成了首次区块链支付交易\n',
+            intro: 'Conducted under the IBM Blockchain Platform, the transaction was reported to be a lot quicker as compared to traditional methods of money transfer',
+            introcn: '据悉，与传统的转账方式相比，在IBM区块链平台上进行交易要快得多',
+            url: 'news/' + 'sberbank_successfully_completes_its_first_blockchain_powered_payment_transaction' + '.html',
+            urlcn: 'news/' + 'sberbank_successfully_completes_its_first_blockchain_powered_payment_transaction' + '_cn.html'
+        },
+        {
+            id: '',
+            date: 'Dec 1, 2017',
+            datecn: '2017.12.01',
+            cover: 'images/news/' + 'forbes_5_predictions.jpg',
+            title: 'Forbes: 5 Predictions On How Blockchain Will Drive Digital Transformation',
+            titlecn: '福布斯：区块链使数字变革发展到更高程度的预测\n',
+            intro: 'The technology that once was the lesser known force behind Bitcoin is now seeing its own day in the sun. There will be a time when it seems impossible that we ever survived without blockchain technology.',
+            introcn: '曾经，比特币背后的区块链技术鲜为人知，如今它已大放异彩。将来终会有一天我们根本离不开区块链技术！',
+            url: 'news/' + 'forbes_5_predictions_on_how_blockchain_will_drive_digital_transformation' + '.html',
+            urlcn: 'news/' + 'forbes_5_predictions_on_how_blockchain_will_drive_digital_transformation' + '_cn.html'
+        },
+        {
+            id: '',
+            date: 'Dec 1, 2017',
+            datecn: '2017.12.01',
+            cover: 'images/news/' + 'blockchain_drives_artificial.jpg',
+            title: 'Blockchain Drives Artificial Intelligence? NEO Announces Its Strategic Investment in Deep Brain Chain\n',
+            titlecn: '区块链驱动人工智能？NEO战略投资深脑链\n',
+            intro: 'From Go to human speech recognition, researchers in the field of artificial intelligence (AI) have made great achievements in recent years. In short, big data has changed AI, and blockchain technology also expects to transform AI in its own way.',
+            introcn: '从围棋到人类级别的语音识别，近年来人工智能领域的研究人员已攻克了诸多问题。简言之，大数据改变了人工智能，区块链技术也有望以自己独特的方式彻底改变人工智能。',
+            url: 'news/' + 'blockchain_drives_artificial_intelligence' + '.html',
+            urlcn: 'news/' + 'blockchain_drives_artificial_intelligence' + '_cn.html'
+        },
+        {
+            id: '',
             date: 'Nov 30, 2017',
             datecn: '2017.11.30',
             cover: 'images/news/' + 'ethereum_proof_of_stake.jpeg',
@@ -14,7 +75,6 @@ var data = {
             urlcn: 'news/' + 'ethereum_proof_of_stake_casper_testnet_nears_launch' + '_cn.html'
         },
         {
-            top: '1',
             id: '',
             date: 'Nov 30, 2017',
             datecn: '2017.11.30',
@@ -49,66 +109,6 @@ var data = {
             introcn: '不止于投资，比特币能做的还有慈善：目前，大型比特币市场Paxful宣布将使用比特币在非洲创办学校，帮助当地人早日摆脱贫困落后的局面。',
             url: 'news/' + 'paxful_we_plan_to_build_100_schools_in_africa_with_bitcoin' + '.html',
             urlcn: 'news/' + 'paxful_we_plan_to_build_100_schools_in_africa_with_bitcoin' + '_cn.html'
-        },
-        {
-            id: '',
-            date: 'Nov 29, 2017',
-            datecn: '2017.11.29',
-            cover: 'images/news/' + 'central_bank_of_russia.jpg',
-            title: 'Central Bank of Russia Says Cryptocurrencies Market May Be Facing A “Bubble”',
-            titlecn: '俄罗斯央行称加密货币市场可能面临“泡沫”',
-            intro: 'According to the regulator’s Financial Stability Report, Russia will also develop a regulatory framework to protect consumers and prevent illegal activities funded by cryptocurrencies',
-            introcn: '根据监管机构的金融稳定分析报告, 俄罗斯还将制定出一个监管框架以保护消费者, 并且防止发生加密货币资助的非法活动。',
-            url: 'news/' + 'central_bank_of_russia_says_cryptocurrencies_market_may_be_facing_a_bubble' + '.html',
-            urlcn: 'news/' + 'central_bank_of_russia_says_cryptocurrencies_market_may_be_facing_a_bubble' + '_cn.html'
-        },
-        {
-            id: '',
-            date: 'Nov 29, 2017',
-            datecn: '2017.11.29',
-            cover: 'images/news/' + 'cambridge_professor.jpg',
-            title: 'Cambridge Professor: Bitcoin is an Economic Miracle',
-            titlecn: '剑桥教授：比特币是经济奇迹',
-            intro: 'If you\'re only paying a $2 transaction fee on a piece of art that\'s worth tens of thousands, the fee is basically zero. But if you\'re paying two or three percent on a piece of art of that value, then the numbers can go up quite a bit.',
-            introcn: '如果你需要为一件价值好几万的艺术品支付2美元手续费，这个费用少的可以忽略不计。然而，如果让你为同样的艺术品支付2%或3%的手续费，那这个费用就大得多了。',
-            url: 'news/' + 'cambridge_professor_bitcoin_is_an_economic_miracle' + '.html',
-            urlcn: 'news/' + 'cambridge_professor_bitcoin_is_an_economic_miracle' + '_cn.html'
-        },
-        {
-            id: '',
-            date: 'Nov 28, 2017',
-            datecn: '2017.11.28',
-            cover: 'images/news/' + 'samsung_sds_cooperates.jpg',
-            title: 'Samsung SDS Cooperates with Seoul Government for Blockchain Platform',
-            titlecn: '三星SDS与首尔政府合作，共同打造区块链平台',
-            intro: 'Samsung SDS has signed a deal with the Seoul Metropolitan Government to jointly develop its "information strategy" plan. It has been nearly seven months since Samsung unveiled Nexledger – an enterprise-grade blockchain platform hosted in the cloud',
-            introcn: '三星SDS已经与首尔市政府签署了一项合作协议，共同制定一个“信息战略”计划。这一合作距其推出基于云端的企业级区块链平台Nexledger已过去近七个月。',
-            url: 'news/' + 'samsung_sds_cooperates_with_seoul_government_for_blockchain_platform' + '.html',
-            urlcn: 'news/' + 'samsung_sds_cooperates_with_seoul_government_for_blockchain_platform' + '_cn.html'
-        },
-        {
-            id: '',
-            date: 'Nov 28, 2017',
-            datecn: '2017.11.28',
-            cover: 'images/news/' + 'iran_welcomes_bitcoin.jpg',
-            title: 'Iran Welcomes Bitcoin and Virtual Currencies in the Country, Says They Must Follow Regulations',
-            titlecn: '伊朗欢迎比特币和虚拟货币，但称其必须遵守法规',
-            intro: 'The High Council of Cyberspace (HCC) in Iran is also studying cryptocurrencies in conjunction with the Central Bank of Iran (CBI)',
-            introcn: '伊朗网络空间高级理事会正与伊朗中央银行协力研究加密货币',
-            url: 'news/' + 'iran_welcomes_bitcoin_and_virtual_currencies_in_the_country' + '.html',
-            urlcn: 'news/' + 'iran_welcomes_bitcoin_and_virtual_currencies_in_the_country' + '_cn.html'
-        },
-        {
-            id: '',
-            date: 'Nov 28, 2017',
-            datecn: '2017.11.28',
-            cover: 'images/news/' + 'bitcoin_prices_at_several.jpg',
-            title: 'Bitcoin Exceeds $ 10,000 at Bithum and Keeps up All the Way',
-            titlecn: '韩国Bithumb领先，全球多个交易平台比特币价格今日相继突破1万美元大关',
-            intro: 'This means that some of the biggest Bitcoin bulls have already been proven right with their long term price predictions. As 2017 coming to an end, a widespread price of $10,000 + is looking a lot more like a case of “when” rather than “if” now',
-            introcn: '这个消息意味着那些看涨比特币的人作出的长期价格预测是正确的。伴随着2017年的结束，比特币突破1万美元+的价格不再是神话，而是时间问题。',
-            url: 'news/' + 'bitcoin_prices_at_several_global_trading_platforms_exceed_the_10000_mark' + '.html',
-            urlcn: 'news/' + 'bitcoin_prices_at_several_global_trading_platforms_exceed_the_10000_mark' + '_cn.html'
         },
         {
             top: '1',
