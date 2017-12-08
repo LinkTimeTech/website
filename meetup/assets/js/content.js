@@ -132,7 +132,7 @@ var data = {
             speaker: 'Kevin Serrano',
             titlecn: 'ConsenSys-MetaMask硬件工程师',
             title: 'Consensys-MetaMask Software Engineer',
-            topiccn: '对分散式应用的采用和趋势的洞察',
+            topiccn: '对分布式应用的采用和趋势的洞察',
             topic: 'Insights to Decentralized Apps\' Adoption and Trend  '
         },
         {
