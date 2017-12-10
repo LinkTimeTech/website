@@ -3,6 +3,32 @@ var data = {
         {
             top: '1',
             id: '',
+            date: 'Dec 10, 2017',
+            datecn: '2017.12.10',
+            cover: 'images/news/' + 'france_makes_it.jpg',
+            title: 'France Makes It Legal for Use of Blockchain to Trade Non-listed Securities',
+            titlecn: '法国规定用区块链交易未上市证券是合法行为',
+            intro: 'Reportedly, blockchain will pave the way for a quicker, more secure and cost-effective mode for securities exchanges',
+            introcn: '据报道，区块链将有助于建立更快、更安全、更划算的证券交易模式',
+            url: 'news/' + 'france_makes_it_legal_for_use_of_blockchain' + '.html',
+            urlcn: 'news/' + 'france_makes_it_legal_for_use_of_blockchain' + '_cn.html'
+        },
+        {
+            top: '1',
+            id: '',
+            date: 'Dec 9, 2017',
+            datecn: '2017.12.09',
+            cover: 'images/news/' + 'indonesia_bans_Fintech.jpg',
+            title: 'Indonesia Bans Fintech Companies from Receiving Payments via Cryptocurrencies',
+            titlecn: '印度尼西亚禁止金融科技公司通过加密货币接收付款',
+            intro: 'Exchange and trading of cryptocurrencies, however, is not banned',
+            introcn: '然而，加密货币的兑换和交易并没有被禁止',
+            url: 'news/' + 'indonesia_bans_Fintech_Companies_from_Receiving_Payments_via_Cryptocurrencies' + '.html',
+            urlcn: 'news/' + 'indonesia_bans_Fintech_Companies_from_Receiving_Payments_via_Cryptocurrencies' + '_cn.html'
+        },
+        {
+            top: '1',
+            id: '',
             date: 'Dec 8, 2017',
             datecn: '2017.12.08',
             cover: 'images/news/' + 'australia_is__first.jpg',
@@ -86,30 +112,7 @@ var data = {
             url: 'news/' + 'ukraine_bank_expands_its_research_team_to_move_national_currency_to_blockchain' + '.html',
             urlcn: 'news/' + 'ukraine_bank_expands_its_research_team_to_move_national_currency_to_blockchain' + '_cn.html'
         },
-        {
-            id: '',
-            date: 'Dec 6, 2017',
-            datecn: '2017.12.06',
-            cover: 'images/news/' + 'weekly_tracker_state.jpg',
-            title: 'Weekly Tracker, Russia and Ukraine Government Seeks Further Use of Blockchain in Public Sector',
-            titlecn: '每周追踪报道：俄罗斯和乌克兰政府进一步研究将区块链用在公共部门\n',
-            intro: 'This week, Russia looks to blockchain for voting technology and Ukraine central bank expands its research team to move its currency – hyrvnia – to blockchain.',
-            introcn: '本周，俄罗斯政府寻求利用区块链进行投票，与此同时，乌克兰中央银行扩大其研究团队，旨在将该国的国家货币-hyrvnia-转移至区块链上。',
-            url: 'news/' + 'weekly_tracker_russia_and_ukraine_government_seeks_further_use_of_blockchain_in_public_sector' + '.html',
-            urlcn: 'news/' + 'weekly_tracker_russia_and_ukraine_government_seeks_further_use_of_blockchain_in_public_sector' + '_cn.html'
-        },
-        {
-            id: '',
-            date: 'Dec 6, 2017',
-            datecn: '2017.12.06',
-            cover: 'images/news/' + 'ethereum_founder_vitalik.jpg',
-            title: 'Ethereum Founder Vitalik Buterin Was named as One of Bloomberg’s Top 50 Most Influential People\n',
-            titlecn: '以太坊创始人Vitalik Buterin入选彭博社全球50位最具影响力人物\n',
-            intro: '“From finance and politics to technology and culture, there is always people to promote the whole industry development from all walks of life. Among the 50 top influential figures released by the Bloomberg, Vitalik Buterin, the founder of Ethereum , takes one of the seats.”\n',
-            introcn: '从金融、政治到技术、文化领域，各行各业都不乏对整个行业起到推动作用的人物。此次彭博社发布的最具影响力的50位人物中，以太坊创始人Vitalik Buterin榜上有名。',
-            url: 'news/' + 'ethereum_founder_vitalik_buterin_one_of_bloomberg_50_most_influential_people' + '.html',
-            urlcn: 'news/' + 'ethereum_founder_vitalik_buterin_one_of_bloomberg_50_most_influential_people' + '_cn.html'
-        },
+
         {
             top: '1',
             id: '',

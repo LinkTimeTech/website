@@ -3,8 +3,8 @@ var data = {
         // {
         //     top: '1',
         //     id: '',
-        //     date: 'Dec 8, 2017',
-        //     datecn: '2017.12.08',
+        //     date: 'Dec 10, 2017',
+        //     datecn: '2017.12.10',
         //     cover: 'images/news/'+'',
         //     title: '',
         //     titlecn: '',
@@ -13,8 +13,34 @@ var data = {
         //     url: 'news/'+''+'.html',
         //     urlcn: 'news/'+''+'_cn.html'
         // },
+
         {
             top: '1',
+            id: '',
+            date: 'Dec 10, 2017',
+            datecn: '2017.12.10',
+            cover: 'images/news/' + 'france_makes_it.jpg',
+            title: 'France Makes It Legal for Use of Blockchain to Trade Non-listed Securities',
+            titlecn: '法国规定用区块链交易未上市证券是合法行为',
+            intro: 'Reportedly, blockchain will pave the way for a quicker, more secure and cost-effective mode for securities exchanges',
+            introcn: '据报道，区块链将有助于建立更快、更安全、更划算的证券交易模式',
+            url: 'news/' + 'france_makes_it_legal_for_use_of_blockchain' + '.html',
+            urlcn: 'news/' + 'france_makes_it_legal_for_use_of_blockchain' + '_cn.html'
+        },
+        {
+            top: '1',
+            id: '',
+            date: 'Dec 9, 2017',
+            datecn: '2017.12.09',
+            cover: 'images/news/' + 'indonesia_bans_Fintech.jpg',
+            title: 'Indonesia Bans Fintech Companies from Receiving Payments via Cryptocurrencies',
+            titlecn: '印度尼西亚禁止金融科技公司通过加密货币接收付款',
+            intro: 'Exchange and trading of cryptocurrencies, however, is not banned',
+            introcn: '然而，加密货币的兑换和交易并没有被禁止',
+            url: 'news/' + 'indonesia_bans_Fintech_Companies_from_Receiving_Payments_via_Cryptocurrencies' + '.html',
+            urlcn: 'news/' + 'indonesia_bans_Fintech_Companies_from_Receiving_Payments_via_Cryptocurrencies' + '_cn.html'
+        },
+        {
             id: '',
             date: 'Dec 8, 2017',
             datecn: '2017.12.08',
@@ -27,7 +53,6 @@ var data = {
             urlcn: 'news/' + 'australia_is__first_to_replace_existing_technology' + '_cn.html'
         },
         {
-            top: '1',
             id: '',
             date: 'Dec 8, 2017',
             datecn: '2017.12.08',
