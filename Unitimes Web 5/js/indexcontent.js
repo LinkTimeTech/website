@@ -1,7 +1,46 @@
 var data = {
     contents: [
+
         {
             top: '1',
+            id: '',
+            date: 'Dec 11, 2017',
+            datecn: '2017.12.11',
+            cover: 'images/news/' + 'un_appoints_new.jpg',
+            title: 'UN Appoints New Member to Its Blockchain Commission for Sustainable Development\n',
+            titlecn: '联合国区块链可持续发展委员会增加新成员',
+            intro: 'The United Nations has been actively promoting the application of blockchain technology in various projects including food distribution system, climate change, identity authentication and financial remittance.',
+            introcn: '联合国一直积极推动区块链技术在分发援助、气候变化、身份证明和金融汇款等各类项目上的应用。',
+            url: 'news/' + 'un_appoints_new_member_to_its_blockchain_commission_for_sustainable_development' + '.html',
+            urlcn: 'news/' + 'un_appoints_new_member_to_its_blockchain_commission_for_sustainable_development' + '_cn.html'
+        },
+        {
+            top: '1',
+            id: '',
+            date: 'Dec 11, 2017',
+            datecn: '2017.12.11',
+            cover: 'images/news/' + 'craigslist_users.jpg',
+            title: 'Craigslist Users Can Now Indicate They Want  to Transact via Cryptocurrency\n',
+            titlecn: 'Craigslist用户现在可以选择通过加密货币进行交易',
+            intro: 'Users can also filter their search results to show only sellers that accept cryptocurrency payments',
+            introcn: '用户也可以筛选他们的搜索结果，使其只显示接受加密货币支付的卖家',
+            url: 'news/' + 'craigslist_users_can_now_indicate_they_want_to_transact_via_cryptocurrency' + '.html',
+            urlcn: 'news/' + 'craigslist_users_can_now_indicate_they_want_to_transact_via_cryptocurrency' + '_cn.html'
+        },
+        {
+            id: '',
+            date: 'Dec 11, 2017',
+            datecn: '2017.12.11',
+            cover: 'images/news/' + 'russia_telegram.jpg',
+            title: 'Russia Telegram Group: Bittrex Users Information Probably Leaked\n',
+            titlecn: '俄罗斯电报：Bittrex交易所用户信息可能遭泄露\n',
+            intro: 'For digital currency investors, asset security is their most concerned issue, followed by the protection of personal information.',
+            introcn: '对于数字货币投资者而言，资产的安全问题最为重要，其次就是个人信息的保护，加密货币交易目前仍是网络罪犯的主要目标。',
+            url: 'news/' + 'russia_telegram_group_bittrex_users_information_probably_leaked' + '.html',
+            urlcn: 'news/' + 'russia_telegram_group_bittrex_users_information_probably_leaked' + '_cn.html'
+        },
+
+        {
             id: '',
             date: 'Dec 10, 2017',
             datecn: '2017.12.10',
@@ -14,7 +53,6 @@ var data = {
             urlcn: 'news/' + 'france_makes_it_legal_for_use_of_blockchain' + '_cn.html'
         },
         {
-            top: '1',
             id: '',
             date: 'Dec 9, 2017',
             datecn: '2017.12.09',
@@ -27,7 +65,6 @@ var data = {
             urlcn: 'news/' + 'indonesia_bans_Fintech_Companies_from_Receiving_Payments_via_Cryptocurrencies' + '_cn.html'
         },
         {
-            top: '1',
             id: '',
             date: 'Dec 8, 2017',
             datecn: '2017.12.08',
@@ -40,7 +77,6 @@ var data = {
             urlcn: 'news/' + 'australia_is__first_to_replace_existing_technology' + '_cn.html'
         },
         {
-            top: '1',
             id: '',
             date: 'Dec 8, 2017',
             datecn: '2017.12.08',
@@ -57,7 +93,7 @@ var data = {
             date: 'Dec 8, 2017',
             datecn: '2017.12.08',
             cover: 'images/news/' + 'yahoo_co_founder.jpg',
-            title: 'Yahoo’sCo-founder Jerry Yang Is Positive  on Bitcoin\n',
+            title: 'Yahoo’s Co-founder Jerry Yang Is Positive  on Bitcoin\n',
             titlecn: '雅虎联合创始人杨致远对比特币持积极态度\n',
             intro: 'Bitcoin’s skyrocketing price has drawn attention from all walks of life and received mixed opinions. Yesterday, Yahoo’s co-founder Jerry Yang said Bitcoin would be beneficial to the society',
             introcn: '比特币价格的疯涨吸引了各界的关注，其受到的评价也褒贬不一。昨日，雅虎联合创始人杨致远表示比特币将对社会有益。',
@@ -75,42 +111,6 @@ var data = {
             introcn: '欧洲最大的金融控股集团——瑞士联合银行集团目前正在研究创建更安全的计算机系统，为智能合约区块链验证申请专利保护。',
             url: 'news/' + 'ubs_applies_for_intellectual_property_protection_for_smart_contract_blockchain_validation' + '.html',
             urlcn: 'news/' + 'ubs_applies_for_intellectual_property_protection_for_smart_contract_blockchain_validation' + '_cn.html'
-        },
-        {
-            id: '',
-            date: 'Dec 7, 2017',
-            datecn: '2017.12.07',
-            cover: 'images/news/' + 'nokia_looks_to_blockchain.jpg',
-            title: 'Nokia Looks to Blockchain Technology for Users to Share Health Data Securely',
-            titlecn: '诺基亚寻求运用区块链技术使用户安全分享健康数据\n',
-            intro: 'Nokia is partnering with OP Financial Group to launch a blockchain pilot program, aimed at boosting customer confidence in sharing health data securely',
-            introcn: '诺基亚正与OP金融集团合作开启区块链试点项目，旨在增强用户对安全分享健康数据的信心',
-            url: 'news/' + 'nokia_looks_to_blockchain_technology_for_users_to_share_health_data_securely' + '.html',
-            urlcn: 'news/' + 'nokia_looks_to_blockchain_technology_for_users_to_share_health_data_securely' + '_cn.html'
-        },
-        {
-            id: '',
-            date: 'Dec 7, 2017',
-            datecn: '2017.12.07',
-            cover: 'images/news/' + 'blockchain_new.jpg',
-            title: 'Blockchain New Use: CryptoKitties\n',
-            titlecn: '区块链新应用，养一只别人抢不走还能赚钱的喵星人！\n',
-            intro: 'The combination of game application and blockchain marks that the blockchain industry has entered a historic phase',
-            introcn: '游戏应用和区块链的成功结合，说明区块链行业进入了一个新的阶段，这也是一次历史性的事件。',
-            url: 'news/' + 'blockchain_new_use_cryptokitties' + '.html',
-            urlcn: 'news/' + 'blockchain_new_use_cryptokitties' + '_cn.html'
-        },
-        {
-            id: '',
-            date: 'Dec 6, 2017',
-            datecn: '2017.12.06',
-            cover: 'images/news/' + 'ukraine_bank_expands.jpg',
-            title: 'Ukraine’s Central Bank Expands its Research Team to Move National Currency to Blockchain\n',
-            titlecn: '乌克兰央行扩建区块链研究团队，拟推出国家数字货币\n',
-            intro: 'Bring your vision closer to reality: In recent years, central banks around the world have been exploring blockchain technology, while the Ukraine central bank took the lead in making a more detailed plan of creating ‘national digital currency’ with the intention of launching e-hryvnia. ',
-            introcn: '让理想更贴近现实：近年来，全球各国央行一直在探索区块链技术，但乌克兰央行率先对创建“国家数字货币”作出了更详细的设想，打算推出电子格里夫纳(e-hryvnia)。',
-            url: 'news/' + 'ukraine_bank_expands_its_research_team_to_move_national_currency_to_blockchain' + '.html',
-            urlcn: 'news/' + 'ukraine_bank_expands_its_research_team_to_move_national_currency_to_blockchain' + '_cn.html'
         },
 
         {

@@ -2,9 +2,8 @@ var data = {
     contents: [
         // {
         //     top: '1',
-        //     id: '',
-        //     date: 'Dec 10, 2017',
-        //     datecn: '2017.12.10',
+        //     date: 'Dec 12, 2017',
+        //     datecn: '2017.12.12',
         //     cover: 'images/news/'+'',
         //     title: '',
         //     titlecn: '',
@@ -13,9 +12,82 @@ var data = {
         //     url: 'news/'+''+'.html',
         //     urlcn: 'news/'+''+'_cn.html'
         // },
-
         {
             top: '1',
+            date: 'Dec 12, 2017',
+            datecn: '2017.12.12',
+            cover: 'images/news/' + 'deutsche_bank_voices.jpg',
+            title: 'Deutsche Bank Voices High Confidence in Blockchain Technology to Change Financial Sector',
+            titlecn: '德意志银行：对区块链技术改变金融业充满信心\n',
+            intro: 'Stance on cryptocurrencies is more conservative, and Deutsche Bank noted that digital currencies may develop into a new asset class with more governmental regulations',
+            introcn: '德意志银行对加密货币持保守态度，并指出随着更多政府监管政策的出台，数字货币可能会成为一种新的资产类别',
+            url: 'news/' + 'deutsche_bank_voices_high_confidence_in_blockchain_technology_to_change_financial_sector' + '.html',
+            urlcn: 'news/' + 'deutsche_bank_voices_high_confidence_in_blockchain_technology_to_change_financial_sector' + '_cn.html'
+        },
+        {
+            top: '1',
+            date: 'Dec 12, 2017',
+            datecn: '2017.12.12',
+            cover: 'images/news/' + 'cryptokitties_could.jpg',
+            title: '',
+            titlecn: '销售额破1200万美元，“加密猫”或成为以太坊杀手级APP\n',
+            intro: '',
+            introcn: '一只卖到12万，两周交易7万只，截止昨日加密猫销售额破1200万美元，CryptoKitties证明了无摩擦和无缝数字资产交易的可能性',
+            url: 'news/' + 'cryptokitties_could_be_ethereum_killer_app' + '.html',
+            urlcn: 'news/' + 'cryptokitties_could_be_ethereum_killer_app' + '_cn.html'
+        },
+        {
+            top: '1',
+            date: 'Dec 12, 2017',
+            datecn: '2017.12.12',
+            cover: 'images/news/' + 'cboe_bitcoin_futures.jpg',
+            title: '',
+            titlecn: 'CBOE比特币期货首秀收涨20%，两小时内熔断两次 \n',
+            intro: '',
+            introcn: '昨日，比特币期货合约正式在CBOE上线交易。至今可以看出，其展现出的话题性和波动性，并不逊于现货市场。',
+            url: 'news/' + 'cboe_bitcoin_futures_started_so_hot_in_its_debut' + '.html',
+            urlcn: 'news/' + 'cboe_bitcoin_futures_started_so_hot_in_its_debut' + '_cn.html'
+        },
+        {
+            top: '1',
+            id: '',
+            date: 'Dec 11, 2017',
+            datecn: '2017.12.11',
+            cover: 'images/news/' + 'un_appoints_new.jpg',
+            title: 'UN Appoints New Member to Its Blockchain Commission for Sustainable Development\n',
+            titlecn: '联合国区块链可持续发展委员会增加新成员',
+            intro: 'The United Nations has been actively promoting the application of blockchain technology in various projects including food distribution system, climate change, identity authentication and financial remittance.',
+            introcn: '联合国一直积极推动区块链技术在分发援助、气候变化、身份证明和金融汇款等各类项目上的应用。',
+            url: 'news/' + 'un_appoints_new_member_to_its_blockchain_commission_for_sustainable_development' + '.html',
+            urlcn: 'news/' + 'un_appoints_new_member_to_its_blockchain_commission_for_sustainable_development' + '_cn.html'
+        },
+        {
+            top: '1',
+            id: '',
+            date: 'Dec 11, 2017',
+            datecn: '2017.12.11',
+            cover: 'images/news/' + 'craigslist_users.jpg',
+            title: 'Craigslist Users Can Now Indicate They Want  to Transact via Cryptocurrency\n',
+            titlecn: 'Craigslist用户现在可以选择通过加密货币进行交易',
+            intro: 'Users can also filter their search results to show only sellers that accept cryptocurrency payments',
+            introcn: '用户也可以筛选他们的搜索结果，使其只显示接受加密货币支付的卖家',
+            url: 'news/' + 'craigslist_users_can_now_indicate_they_want_to_transact_via_cryptocurrency' + '.html',
+            urlcn: 'news/' + 'craigslist_users_can_now_indicate_they_want_to_transact_via_cryptocurrency' + '_cn.html'
+        },
+        {
+            id: '',
+            date: 'Dec 11, 2017',
+            datecn: '2017.12.11',
+            cover: 'images/news/' + 'russia_telegram.jpg',
+            title: 'Russia Telegram Group: Bittrex Users Information Probably Leaked\n',
+            titlecn: '俄罗斯电报：Bittrex交易所用户信息可能遭泄露\n',
+            intro: 'For digital currency investors, asset security is their most concerned issue, followed by the protection of personal information.',
+            introcn: '对于数字货币投资者而言，资产的安全问题最为重要，其次就是个人信息的保护，加密货币交易目前仍是网络罪犯的主要目标。',
+            url: 'news/' + 'russia_telegram_group_bittrex_users_information_probably_leaked' + '.html',
+            urlcn: 'news/' + 'russia_telegram_group_bittrex_users_information_probably_leaked' + '_cn.html'
+        },
+
+        {
             id: '',
             date: 'Dec 10, 2017',
             datecn: '2017.12.10',
@@ -28,7 +100,6 @@ var data = {
             urlcn: 'news/' + 'france_makes_it_legal_for_use_of_blockchain' + '_cn.html'
         },
         {
-            top: '1',
             id: '',
             date: 'Dec 9, 2017',
             datecn: '2017.12.09',
@@ -69,7 +140,7 @@ var data = {
             date: 'Dec 8, 2017',
             datecn: '2017.12.08',
             cover: 'images/news/' + 'yahoo_co_founder.jpg',
-            title: 'Yahoo’sCo-founder Jerry Yang Is Positive  on Bitcoin\n',
+            title: 'Yahoo’s Co-founder Jerry Yang Is Positive  on Bitcoin\n',
             titlecn: '雅虎联合创始人杨致远对比特币持积极态度\n',
             intro: 'Bitcoin’s skyrocketing price has drawn attention from all walks of life and received mixed opinions. Yesterday, Yahoo’s co-founder Jerry Yang said Bitcoin would be beneficial to the society',
             introcn: '比特币价格的疯涨吸引了各界的关注，其受到的评价也褒贬不一。昨日，雅虎联合创始人杨致远表示比特币将对社会有益。',
