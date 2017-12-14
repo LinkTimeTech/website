@@ -18,15 +18,14 @@
     <!-- css -->
     <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css"
           integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-    <link rel="stylesheet" href="//code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
-    <link rel="stylesheet" href="bower_components/css/animate.css">
+    <link href="https://cdn.bootcss.com/animate.css/3.5.2/animate.min.css" rel="stylesheet">
     <link href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/main.css">
 
 </head>
 <body data-spy="scroll" data-target="#site-nav" data-offset="0">
 
-<div>
+<div class="wrap">
     <nav id="site-nav" class="navbar navbar-fixed-top navbar-custom">
         <div class="container">
             <div class="navbar-header">
@@ -57,13 +56,13 @@
                 <ul class="nav navbar-nav navbar-right">
 
                     <!-- navigation menu -->
-                    <li class="active"><a data-scroll href="#site-header">Home</a></li>
-                    <li><a data-scroll href="#highlights">HIGHLIGHTS</a></li>
-                    <li><a data-scroll href="#guest">SPEAKERS</a></li>
-                    <li><a data-scroll href="#agenda">Agenda</a></li>
-                    <li><a data-scroll href="#registration">Registration</a></li>
-                    <li><a data-scroll href="#guide">Guide</a></li>
-                    <li><a data-scroll href="#partner">SUPPORTS</a></li>
+                    <li class="active gohome"><a>Home</a></li>
+                    <li class="gohightlight"><a>HIGHLIGHTS</a></li>
+                    <li class="gospeaker"><a>SPEAKERS</a></li>
+                    <li class="goagenda"><a>Agenda</a></li>
+                    <li class="goregistration"><a>Registration</a></li>
+                    <li class="goguide"><a>Guide</a></li>
+                    <li class="gosupport"><a>SUPPORTS</a></li>
                     <!--<li class="ul_li"><a class="scrolla register" href="download.html">EDCON Presentations</a></li>-->
 
                 </ul>
@@ -74,12 +73,14 @@
 
     <div>
 
-        <header id="site-header" class="site-header valign-center">
+        <header id="site-header" class="site-header valign-center lozad"
+                data-background-image="assets/images/backgrounds/header5.jpg">
+
             <div class="intro">
 
-                <h2>May 3-May 5 / TORONTO</h2>
+                <h2>May 3 - 5, 2018 / TORONTO </h2>
 
-                <h1>Community Ethereum Development Conference 2018</h1>
+                <h1>Community Ethereum Development Conference</h1>
 
                 <p>never forget why you started</p>
 
@@ -115,9 +116,8 @@
                                 <br><br>The conference will cover the latest in Ethereum Blockchain technology and
                                 research (PoS
                                 / Casper, scalability, cryptography / privacy, security, etc), current trends as well as
-                                Ethereum and blockchain based projects and applications. There will also be a superdemo
-                                as part
-                                of the event.
+                                Ethereum and blockchain based projects and applications and community building and
+                                development. There will also be a superdemo as part of the event.
 
                                 <br><br>We sincerely welcome and invite friends from Ethereum communities worldwide to
                                 participate in this event. We welcome anyone to register to speak, and the topics
@@ -190,25 +190,25 @@
                 <div class="row">
                     <div class="col-sm-3">
 
-                        <i class="ion-ios-calendar"></i>
+                        <i class="fa fa-calendar-o" aria-hidden="true"></i>
                         <h3>2018<br>May 3 - May 5</h3>
 
                     </div>
                     <div class="col-sm-3">
 
-                        <i class="ion-ios-location"></i>
+                        <i class="fa fa-map-marker"></i>
                         <h3>Toronto<br>Canada</h3>
 
                     </div>
                     <div class="col-sm-3">
 
-                        <i class="ion-pricetags"></i>
+                        <i class="fa fa-tags" aria-hidden="true"></i>
                         <h3>600<br>Tickets</h3>
 
                     </div>
                     <div class="col-sm-3">
 
-                        <i class="ion-speakerphone"></i>
+                        <i class="fa fa-users" aria-hidden="true"></i>
                         <h3>12<br>Speakers</h3>
 
                     </div>
@@ -258,18 +258,20 @@
                                 <p class="text-left">
                                     <span class="superdemoicons fa fa-clock-o" style="font-size: 19px"
                                           aria-hidden="true"></span>
-                                    Time: Afternoon, May 5, 2018. Superdemo + Award ceremony
-                                    <br><span class="superdemoicons fa fa-users" aria-hidden="true"></span>
-                                    Size: 10 demos in total
-                                    <br><span class="superdemoicons fa fa-flag-checkered" aria-hidden="true"></span>
-                                    Subject: Self-determined subject
-                                    <br><span class="superdemoicons fa fa-map-o" aria-hidden="true"></span>
-                                    Venue: Main conference room, one classroom for preparation
-                                    <br><span class="superdemoicons fa fa-diamond" aria-hidden="true"></span>
-                                    Award: Ether + Membership in the Blockgeeks platform
-                                    <br><span class="superdemoicons fa fa-ticket" aria-hidden="true"></span>
-                                    Added extras: Free EDCON ticket is available to the final 10 winners to participate
-                                    in the contest and the event
+                                    Time
+                                    <span class="superdemooverview">Afternoon, May 5, 2018. Superdemo + Award ceremony</span>
+                                    <span class="superdemoicons fa fa-users" aria-hidden="true"></span>
+                                    Size <span class="superdemooverview">10 demos in total</span>
+                                    <span class="superdemoicons fa fa-flag-checkered" aria-hidden="true"></span>
+                                    Subject <span class="superdemooverview">Self-determined subject</span>
+                                    <span class="superdemoicons fa fa-map-o" aria-hidden="true"></span>
+                                    Venue <span class="superdemooverview">Main conference room, one classroom for preparation</span>
+                                    <span class="superdemoicons fa fa-diamond" aria-hidden="true"></span>
+                                    Award <span
+                                        class="superdemooverview">Ether + Membership in the Blockgeeks platform</span>
+                                    <span class="superdemoicons fa fa-ticket" aria-hidden="true"></span>
+                                    Added extras<span class="superdemooverview">Free EDCON ticket is available to the final 10 winners to participate
+                                    in the contest and the event</span>
                                 </p>
                             </div>
                         </div>
@@ -282,21 +284,25 @@
                                 <p class="text-left">
                                     <span class="superdemoicons fa fa-link" aria-hidden="true"></span>
                                     Source of participants
-                                    <br>Online registration: Register as a team or individual, 30 teams will be selected
-                                    after the preliminary review
-                                    <br>Further-selection: Upload related proof to EDCON website for another review, 10
-                                    teams will be selected and announced on the website
-                                    <br><span class="superdemoicons fa fa-bolt" style="font-size: 18px"
-                                              aria-hidden="true"></span>
+                                    <span class="superdemooverview">Newly built startups and project teams</span>
+                                    <span class="superdemoicons fa fa-sitemap" style="font-size: 18px"
+                                          aria-hidden="true"></span>
+                                    Registration and selection
+                                    <span class="superdemooverview">Online registration: Register as a team or individual, 30 teams will be selected
+                                    after the preliminary review</span>
+                                    <span class="superdemooverview">Further-selection: Upload related proof to EDCON website for another review, 10
+                                    teams will be selected and announced on the website</span>
+                                    <span class="superdemoicons fa fa-bolt" style="font-size: 18px"
+                                          aria-hidden="true"></span>
                                     Final competition
-                                    <br>The demos will be evaluated according to the votes of all sponsors
-                                    <br><span class="superdemoicons fa fa-star" aria-hidden="true"></span>
+                                    <span class="superdemooverview">The demos will be evaluated according to the votes of all sponsors</span>
+                                    <span class="superdemoicons fa fa-star" aria-hidden="true"></span>
                                     Awards
-                                    <br>Awards will be given based on the number of votes received by each project
-                                    <br><span class="superdemoicons fa fa-money" aria-hidden="true"></span>
-                                    How to get the money award?
-                                    <br>After the event, exchange the vote ticket you won with the EDCON organizer for
-                                    ether award
+                                    <span class="superdemooverview">Awards will be given based on the number of votes received by each project</span>
+                                    <span class="superdemoicons fa fa-money" aria-hidden="true"></span>
+                                    How to get the ether award?
+                                    <span class="superdemooverview">After the event, exchange the vote ticket you won with the EDCON organizer for
+                                    ether award</span>
                             </div>
                         </div>
 
@@ -714,12 +720,12 @@
                     <div class="col-md-3 animate-box">
                         <a class="item-grid text-center" data-toggle="modal"
                            data-target="#myModal">
-                            <div class="image" style="background-image: url(assets/images/icon/earlybird.svg)"></div>
+                            <div class="image lozad" data-background-image="assets/images/icon/earlybird.svg"></div>
                             <div class="v-align">
                                 <div class="v-align-middle">
                                     <h3 class="title">
                                         US$560
-                                        <br>(TAX included)
+                                        <br>(Tax Included)
                                     </h3>
                                     <h5 class="category">
                                         Early Bird Ticket, 100 ONLY
@@ -732,12 +738,12 @@
                     <div class="col-md-3 animate-box">
                         <a class="item-grid text-center" data-toggle="modal"
                            data-target="#myModal">
-                            <div class="image" style="background-image: url(assets/images/icon/standard.svg)"></div>
+                            <div class="image lozad" data-background-image="assets/images/icon/standard.svg"></div>
                             <div class="v-align">
                                 <div class="v-align-middle">
                                     <h3 class="title">
                                         US$700
-                                        <br>(TAX included)
+                                        <br>(Tax Included)
                                     </h3>
                                     <h5 class="category">
                                         Standard Ticket
@@ -749,12 +755,12 @@
                     <div class="col-md-3 animate-box">
                         <a class="item-grid text-center" data-toggle="modal"
                            data-target="#myModal">
-                            <div class="image" style="background-image: url(assets/images/icon/developer.svg)"></div>
+                            <div class="image lozad" data-background-image="assets/images/icon/developer.svg"></div>
                             <div class="v-align">
                                 <div class="v-align-middle">
                                     <h3 class="title">
                                         US$350
-                                        <br>(TAX included)
+                                        <br>(Tax Included)
 
                                     </h3>
                                     <h5 class="category">
@@ -767,12 +773,12 @@
                     <div class="col-md-3 animate-box">
                         <a class="item-grid text-center" data-toggle="modal"
                            data-target="#myModal">
-                            <div class="image" style="background-image: url(assets/images/icon/student.svg)"></div>
+                            <div class="image lozad" data-background-image="assets/images/icon/student.svg"></div>
                             <div class="v-align">
                                 <div class="v-align-middle">
                                     <h3 class="title">
                                         US$140
-                                        <br>(TAX included)
+                                        <br>(Tax Included)
 
                                     </h3>
                                     <h5 class="category">
@@ -821,50 +827,50 @@
                 <div class="row">
                     <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
                         <div class="col-md-6">
-                            <div class="panel panel-default">
-                                <div class="panel-heading" role="tab" id="headingOne">
-                                    <h4 class="panel-title">
-                                        <a class="faq-toggle collapsed" role="button" data-toggle="collapse"
-                                           data-parent="#accordion" href="#collapseOne" aria-expanded="true"
-                                           aria-controls="collapseOne">
-                                            How many tickets are available in total?
-                                        </a>
-                                    </h4>
-                                </div>
 
-                                <div id="collapseOne" class="panel-collapse collapse" role="tabpanel"
-                                     aria-labelledby="headingOne">
-                                    <div class="panel-body">
-                                        <p>
-                                            We plan to have up to 600 participants in total, including EDCON staff and
-                                            volunteers. An early registration and purchase for the ticket is highly
-                                            recommended
-                                            as you can get a good discount if you are an early bird.
-                                        </p>
+                            <template v-for="content in faq">
+                                <div class="panel panel-default">
+                                    <div class="panel-heading" role="tab" :id="content.quesid">
+                                        <h4 class="panel-title">
+                                            <a role="button" data-toggle="collapse" data-parent="#accordion"
+                                               :href="content.url" aria-expanded="false" :aria-controls="content.ansid"
+                                               class="faq-toggle collapsed">
+                                                {{ content.question }}
+                                            </a>
+                                        </h4>
+                                    </div>
+                                    <div :id="content.ansid" class="panel-collapse collapse" role="tabpanel"
+                                         :aria-labelledby="content.quesid" aria-expanded="false" style="height: 0px;">
+                                        <div class="panel-body">
+                                            <p>{{ content.ans }}</p>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
+                            </template>
 
-                            <div class="panel panel-default">
-                                <div class="panel-heading" role="tab" id="headingTwo">
-                                    <h4 class="panel-title">
-                                        <a class="faq-toggle collapsed" role="button" data-toggle="collapse"
-                                           data-parent="#accordion" href="#collapseTwo" aria-expanded="false"
-                                           aria-controls="collapseTwo">
-                                            How can I buy tickets?
-                                        </a>
-                                    </h4>
-                                </div>
+                        </div>
 
-                                <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel"
-                                     aria-labelledby="headingTwo">
-                                    <div class="panel-body">
-                                        <p>
-                                            Purchase will be open on January 1, 2018. Please stay tuned.
-                                        </p>
+                        <div class="col-md-6 gorow">
+
+                            <template v-for="content in faq2">
+                                <div class="panel panel-default">
+                                    <div class="panel-heading" role="tab" :id="content.quesid">
+                                        <h4 class="panel-title">
+                                            <a role="button" data-toggle="collapse" data-parent="#accordion"
+                                               :href="content.url" aria-expanded="false" :aria-controls="content.ansid"
+                                               class="faq-toggle collapsed">
+                                                {{ content.question }}
+                                            </a>
+                                        </h4>
+                                    </div>
+                                    <div :id="content.ansid" class="panel-collapse collapse" role="tabpanel"
+                                         :aria-labelledby="content.quesid" aria-expanded="false" style="height: 0px;">
+                                        <div class="panel-body">
+                                            <p>{{ content.ans }}</p>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
+                            </template>
 
                             <div class="panel panel-default">
                                 <div class="panel-heading" role="tab" id="headingThree">
@@ -892,132 +898,6 @@
                                 </div>
                             </div>
 
-
-                        </div>
-
-                        <div class="col-md-6 gorow">
-                            <div class="panel panel-default">
-                                <div class="panel-heading" role="tab" id="headingFour">
-                                    <h4 class="panel-title">
-                                        <a class="faq-toggle collapsed" role="button" data-toggle="collapse"
-                                           data-parent="#accordion" href="#collapseFour" aria-expanded="false"
-                                           aria-controls="collapseFour">
-                                            Are there any good places to visit around the venue?
-                                        </a>
-                                    </h4>
-                                </div>
-
-                                <div id="collapseFour" class="panel-collapse collapse" role="tabpanel"
-                                     aria-labelledby="headingFour">
-                                    <div class="panel-body">
-                                        <p>
-                                            Toronto, the capital of the Ontario province, is a major Canadian city along
-                                            Lake
-                                            Ontario’s northwestern shore. It's a dynamic metropolis with a core of
-                                            soaring
-                                            skyscrapers, all dwarfed by the iconic, free-standing CN Tower. Toronto also
-                                            has
-                                            many green spaces, from the orderly oval of Queen’s Park to 400-acre High
-                                            Park and
-                                            its trails, sports facilities and zoo. Ryerson University is located in the
-                                            center
-                                            of Toronto, surrounding by the central shopping mall, CF Toronto Eaton
-                                            Centre, which
-                                            is just a step away from Ryerson University. There are full of Hotels and
-                                            Restaurants near by and the CN tower is only 1.7 km away from Ryerson
-                                            University.
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="panel panel-default">
-                                <div class="panel-heading" role="tab" id="headingFive">
-                                    <h4 class="panel-title">
-                                        <a class="faq-toggle collapsed" role="button" data-toggle="collapse"
-                                           data-parent="#accordion" href="#collapseFive" aria-expanded="false"
-                                           aria-controls="collapseFive">
-                                            Will there be any video recordings of the event?
-                                        </a>
-                                    </h4>
-                                </div>
-
-                                <div id="collapseFive" class="panel-collapse collapse" role="tabpanel"
-                                     aria-labelledby="headingFive">
-                                    <div class="panel-body">
-                                        <p>
-                                            Yes, there will be video recordings of the wonderful presentations / demos /
-                                            activities, and they will be uploaded to the website, you can check after
-                                            the event.
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="panel panel-default">
-                                <div class="panel-heading" role="tab" id="headingSix">
-                                    <h4 class="panel-title">
-                                        <a class="faq-toggle collapsed" role="button" data-toggle="collapse"
-                                           data-parent="#accordion" href="#collapseSix" aria-expanded="false"
-                                           aria-controls="collapseSix">
-                                            Can I watch the live stream of the conference online?
-                                        </a>
-                                    </h4>
-                                </div>
-
-                                <div id="collapseSix" class="panel-collapse collapse" role="tabpanel"
-                                     aria-labelledby="headingSix">
-                                    <div class="panel-body">
-                                        <p>
-                                            Yes, there will be live stream from beginning to the end!
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!--  <div class="panel panel-default">
-                                 <div class="panel-heading" role="tab" id="headingSeven">
-                                     <h4 class="panel-title">
-                                         <a class="faq-toggle collapsed" role="button" data-toggle="collapse"
-                                            data-parent="#accordion" href="#collapseSeven" aria-expanded="false"
-                                            aria-controls="collapseSeven">
-                                             Where can I download the presentations from the speakers?
-                                         </a>
-                                     </h4>
-                                 </div>
-
-                                 <div id="collapseSeven" class="panel-collapse collapse" role="tabpanel"
-                                      aria-labelledby="headingSeven">
-                                     <div class="panel-body">
-                                         <p>
-                                             you can download from our website; the link is…
-
-                                         </p>
-                                     </div>
-                                 </div>
-                             </div>
-
-                             <div class="panel panel-default">
-                                 <div class="panel-heading" role="tab" id="headingEight">
-                                     <h4 class="panel-title">
-                                         <a class="faq-toggle collapsed" role="button" data-toggle="collapse"
-                                            data-parent="#accordion" href="#collapseEight" aria-expanded="false"
-                                            aria-controls="collapseEight">
-                                             How to register the talent database?
-                                         </a>
-                                     </h4>
-                                 </div>
-
-                                 <div id="collapseEight" class="panel-collapse collapse" role="tabpanel"
-                                      aria-labelledby="headingEight">
-                                     <div class="panel-body">
-                                         <p>
-                                             TBD
-                                         </p>
-                                     </div>
-                                 </div>
-                             </div> -->
-
                         </div>
 
 
@@ -1036,11 +916,15 @@
                     </div>
                     <div class="col-md-6 col-sm-12">
                         <address>
-                            <p> Ryerson University, <br> 350 Victoria Street, <br> Toronto, Ontario M5B 2K3
+                            <p>
+                                Ted Rogers School of Management,
+                                Ryerson University
+                                <br>55 Dundas St W, Toronto, ON M5G 2C3, Canada
+
                             </p>
                         </address>
                         <p>
-                            The Ted Rogers School of Management（TRSM） at Ryerson University is Canada's leading diverse,
+                            The Ted Rogers School of Management（TRSM）at Ryerson University is Canada's leading diverse,
                             entrepreneurial business school centered in an urban learning environment.TRSM is developing
                             collaborative, creative leaders who will drive 21st century business forward while making a
                             positive impact on society.
@@ -1060,7 +944,8 @@
 
                     </div>
                     <div class="col-md-6 col-sm-12">
-                        <iframe src="https://www.google.com/maps/embed/v1/place?q=Ryerson+University+-+Ted+Rogers+School+of+Management,+Dundas+Street+West,+Toronto,+ON,+Canada&key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8"
+                        <iframe class="lozad"
+                                data-src="https://www.google.com/maps/embed/v1/place?q=Ryerson+University+-+Ted+Rogers+School+of+Management,+Dundas+Street+West,+Toronto,+ON,+Canada&key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8"
                                 width="100%" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
                     </div>
                 </div>
@@ -1157,7 +1042,8 @@
                                 <br><br>Now just imagine the one in your mind, and let’s make it real! If you finish
                                 designing,
                                 please send your work to
-                                <a href="souvenir@linktimetech.com">souvenir@linktimetech.com</a>, we will send back our
+                                <a href="mailto:souvenir@linktimetech.com">souvenir@linktimetech.com</a>, we will send
+                                back our
                                 feedback
                                 as soon as possible.
 
@@ -1219,10 +1105,14 @@
                     </div>
 
                 </div>
+
                 <div class="row">
                     <div class="col-md-12">
                         <h4 class="section-title" style="margin: 30px 0">Sponsors</h4>
                     </div>
+                </div>
+
+                <div class="row">
 
                     <div class="col-md-12">
                         <h5 class="section-title noMargin">Super Sponsor</h5>
@@ -1235,7 +1125,9 @@
                         <a class="lozad partner-box supersponsor"
                            data-background-image="assets/images/partner/coming_soon_wh.jpg"></a>
                     </div>
+                </div>
 
+                <div class="row">
                     <div class="col-md-12">
                         <h5 class="section-title noMargin">Superdemo sponsor</h5>
                     </div>
@@ -1244,7 +1136,8 @@
                            style="width: 300px;height: 200px"
                            data-background-image="assets/images/partner/blockgeeks.png"></a>
                     </div>
-
+                </div>
+                <div class="row">
                     <div class="col-md-12">
                         <h5 class="section-title noMargin">Party sponsor</h5>
                     </div>
@@ -1252,27 +1145,26 @@
                         <a class="lozad partner-box partysponsor"
                            data-background-image="assets/images/partner/coming_soon_wh.jpg"></a>
                     </div>
-
+                </div>
+                <div class="row">
                     <div class="col-md-12">
                         <h5 class="section-title noMargin">Gold Sponsor</h5>
                     </div>
-                    <div class="col-sm-3">
+                    <div class="col-sm-4">
                         <a class="lozad partner-box goldsponsor"
                            data-background-image="assets/images/partner/coming_soon_wh.jpg"></a>
                     </div>
-                    <div class="col-sm-3">
+                    <div class="col-sm-4">
                         <a class="lozad partner-box goldsponsor"
                            data-background-image="assets/images/partner/coming_soon_wh.jpg"></a>
                     </div>
-                    <div class="col-sm-3">
-                        <a class="lozad partner-box goldsponsor"
-                           data-background-image="assets/images/partner/coming_soon_wh.jpg"></a>
-                    </div>
-                    <div class="col-sm-3">
+                    <div class="col-sm-4">
                         <a class="lozad partner-box goldsponsor"
                            data-background-image="assets/images/partner/coming_soon_wh.jpg"></a>
                     </div>
 
+                </div>
+                <div class="row">
                     <div class="col-md-12">
                         <h5 class="section-title noMargin">Silver sponsor</h5>
                     </div>
@@ -1292,7 +1184,9 @@
                         <a class="lozad partner-box silversponsor"
                            data-background-image="assets/images/partner/coming_soon_wh.jpg"></a>
                     </div>
+                </div>
 
+                <div class="row">
                     <div class="col-md-12">
                         <h5 class="section-title noMargin">Community Sponsor</h5>
                     </div>
@@ -1313,8 +1207,6 @@
                         <a class="lozad partner-box communitysponsor"
                            data-background-image="assets/images/partner/coming_soon_wh.jpg"></a>
                     </div>
-
-
                 </div>
 
                 <div class="row">
@@ -1327,20 +1219,30 @@
                     </div>
                     <div class="col-sm-3">
                         <a class="lozad partner-box" data-background-image="assets/images/partner/ethfans_logo.jpg"
-                           href="http://ethfans.org"></a>
+                           href="http://ethfans.org" style="position: relative;left: 57px"></a>
                     </div>
+                    <div class="col-sm-3">
+                        <a class="lozad partner-box" data-background-image="assets/images/partner/hongkong_eth.jpg"
+                           href="https://www.meetup.com/Ethereum-Hong-Kong/" style="width: 75px"></a>
+                    </div>
+                    <div class="col-sm-3">
+                        <a class="lozad partner-box" data-background-image="assets/images/partner/taipei_eth.png"
+                           style="width: 90px" href="https://www.meetup.com/Taipei-Ethereum-Meetup/"></a>
+                    </div>
+
                     <div class="col-sm-3">
                         <a class="lozad partner-box" data-background-image="assets/images/partner/asseth-logo.jpg"
-                           href="http://www.asseth.fr/" style="width: 110px;"></a>
-                    </div>
-                    <div class="col-sm-3">
-                        <a class="lozad partner-box" data-background-image="assets/images/partner/meetupko.svg"
-                           href="https://www.meetup.com/ko-KR/Seoul-Ethereum-Meetup/" style="width: 60px"></a>
+                           href="http://www.asseth.fr/" style="width: 110px;position: relative;left: 38px"></a>
                     </div>
                     <div class="col-sm-3">
                         <a class="lozad partner-box" href="https://www.meetup.com/Ethereum-Singapore/"
                            data-background-image="assets/images/partner/ethereum-Singapore.jpg" style="width: 75px"></a>
                     </div>
+                    <div class="col-sm-3">
+                        <a class="lozad partner-box" data-background-image="assets/images/partner/meetupko.svg"
+                           href="https://www.meetup.com/ko-KR/Seoul-Ethereum-Meetup/" style="width: 60px"></a>
+                    </div>
+
 
                 </div>
                 <div class="row">
@@ -1371,7 +1273,7 @@
                     </p>
                     <p class="site-info text-left">
                         <i class="fa fa-map-marker fa-lg content-text" aria-hidden="true"></i>
-                        <span class="content-text">Beijing.Shenzhen.Chengdu.Singapore</span>
+                        <span class="content-text">Beijing. Shenzhen. Chengdu. HongKong. Singapore</span>
                     </p>
                     <!--<p class="site-info text-left">-->
                     <!--<i class="fa fa-phone fa-lg" aria-hidden="true"></i><span-->
@@ -1379,7 +1281,7 @@
                     <!--</p>-->
                     <p class="site-info text-left">
                         <i class="fa fa-envelope content-text" aria-hidden="true"></i>
-                        <a href="contact@linktimetech.com" class="content-text">contact@linktimetech.com</a>
+                        <a href="mailto:contact@linktimetech.com" class="content-text">contact@linktimetech.com</a>
                     </p>
                     <p class="site-info text-left">
                         <i class="fa fa-globe fa-lg content-text"></i>
@@ -1401,7 +1303,7 @@
                                 class="fa fa-twitter" aria-hidden="true"></i></a></li>
                         <li><a href="https://www.reddit.com/user/LinkTimeTech/" title="reddit" class="social-link"><i
                                 class="fa fa-reddit-alien" aria-hidden="true"></i></a></li>
-                        <li><a href="contact@linktime.com" title="email" class="social-link"><i
+                        <li><a href="mailto:contact@linktimetech.com" title="email" class="social-link"><i
                                 class="fa fa-envelope" aria-hidden="true"></i></a></li>
                     </ul>
 
@@ -1421,8 +1323,10 @@
                 class="fa fa-twitter" aria-hidden="true"></i></a></li>
         <li><a href="https://www.reddit.com/user/LinkTimeTech/" title="reddit" class="social-link"><i
                 class="fa fa-reddit-alien" aria-hidden="true"></i></a></li>
-        <li><a href="contact@linktime.com" title="email" class="social-link"><i
+        <li><a href="mailto:contact@linktimetech.com" title="email" class="social-link"><i
                 class="fa fa-envelope" aria-hidden="true"></i></a></li>
+        <li class="gohome"><a class="social-link"><i
+                class="fa fa-angle-double-up" aria-hidden="true"></i></a></li>
 
 
         <!--<li><a href="" class="social-link"><i class="fa fa-whatsapp" aria-hidden="true" style="font-size: 1.6em"></i></a></li>-->
@@ -1432,17 +1336,20 @@
 
 
 <!-- script -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.3/jquery.min.js"></script>
+<script src="https://cdn.bootcss.com/vue/2.5.9/vue.min.js"></script>
 
-<!-- jQuery Easing -->
+<script src="assets/js/content.js"></script>
+
+<!--<script src="bower_components/jquery/dist/jquery.min.js"></script>-->
+<script src="https://cdn.bootcss.com/jquery/2.2.3/jquery.min.js"></script>
+
 <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"
         integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
         crossorigin="anonymous"></script>
-<script src="https://cdn.bootcss.com/smooth-scroll/12.1.5/js/smooth-scroll.min.js"></script>
 
-<script src="https://cdn.jsdelivr.net/npm/lozad/dist/lozad.min.js"></script>
+<script src="https://cdn.bootcss.com/lozad.js/1.0.9/lozad.min.js"></script>
 
-<script src="https://cdn.bootcss.com/wow/1.1.2/wow.min.js"></script>
+<!--<script src="https://cdn.bootcss.com/wow/1.1.2/wow.min.js"></script>-->
 <script>
     const observer = lozad();
     observer.observe();

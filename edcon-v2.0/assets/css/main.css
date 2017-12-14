@@ -255,7 +255,7 @@ ul li {
     margin: 0;
     padding-top: 10px;
     padding-bottom: 10px;
-    background-color: #002d72;
+    background-color: #073bab;
     -webkit-transition: all 0.2s linear 0s;
     transition: all 0.2s linear 0s;
 }
@@ -271,6 +271,7 @@ ul li {
     font-weight: 400;
     border-bottom: 1px solid transparent;
     padding-top: 20px;
+    cursor: pointer;
 }
 
 .navbar-custom .navbar-nav > li > a:focus, .navbar-custom .navbar-nav > li > a:hover {
@@ -293,7 +294,8 @@ ul li {
 }
 
 .navbar-solid {
-    background-color: #002d72 !important;
+    /*background-color: #073bab !important;*/
+    background-color: #073bab !important;
     padding: 0 !important;
     -webkit-transition: all 0.2s linear 0s;
     transition: all 0.2s linear 0s;
@@ -339,8 +341,7 @@ ul li {
     right: 0;
     bottom: 0;
     left: 0;
-    background-color: rgba(0, 0, 0, 0.3);
-    /*background-color: rgba(0, 0, 0, 0.5);*/
+    /*background-color: rgba(0, 0, 0, 0.3);*/
 }
 
 .site-header-tran {
@@ -360,8 +361,7 @@ ul li {
     right: 0;
     bottom: 0;
     left: 0;
-    background-color: rgba(0, 0, 0, 0.3);
-    /*background-color: rgba(0, 0, 0, 0.5);*/
+    /*background-color: rgba(0, 0, 0, 0.3);*/
 }
 
 .site-header-tran .intro {
@@ -374,8 +374,8 @@ ul li {
     padding: 0 15px;
     display: table-cell;
     vertical-align: middle;
-    height: 35vh;
-    top: 20px;
+    height: 75vh;
+    top: 20vh;
 }
 
 .site-header .intro {
@@ -389,6 +389,7 @@ ul li {
     display: table-cell;
     vertical-align: middle;
     height: 100vh;
+    top: 29vh;
 }
 
 .site-header .intro h2 {
@@ -555,8 +556,8 @@ ul li {
 }
 
 .faq .faq-toggle.collapsed::before {
-    font-family: "Ionicons";
-    content: "\f218";
+    /*font-family: "Ionicons";*/
+    content: "\f055";
     -webkit-transition: 0.5s linear ease-out;
     transition: 0.5s linear ease-out;
     position: absolute;
@@ -566,8 +567,9 @@ ul li {
 .faq .faq-toggle::before {
     position: absolute;
     left: 15px;
-    font-family: "Ionicons";
-    content: "\f209";
+    font-family: 'FontAwesome';
+    /*font-family: "Ionicons";*/
+    content: "\f056";
 }
 
 .faq .panel-group .panel + .panel {
@@ -576,10 +578,11 @@ ul li {
 
 .faq .panel-default > .panel-heading {
     color: #FFF;
-    background-color: #002d72;
-    border-color: #002d72;
-    border-radius: 0;
+    background-color: #073bab;
+    /*border-color: ##002d72;*/
+    /*border-radius: 0;*/
     padding: 0;
+
 }
 
 .faq .panel-default > .panel-heading a {
@@ -656,7 +659,7 @@ ul li {
  * 7.0 Site-footer
  */
 .site-footer {
-    background-color: #002d72;
+    background-color: #073bab;
     color: #fff;
     text-align: center;
     padding: 30px 0;
@@ -721,7 +724,7 @@ ul li {
 }
 
 .social-block li a:hover {
-    background: #002d72;
+    background: #073bab;
 }
 
 .social-block li a i, .social-block-inline li a i {
@@ -818,7 +821,7 @@ ul li {
     width: 60px;
     text-align: center;
     position: relative;
-    background: #002d72;
+    background: #073bab;
     border: 0;
 }
 
@@ -836,7 +839,7 @@ img.img-circle.team-img {
 }
 
 #guest .team .thumbnail:hover > img.img-circle.team-img {
-    border: 4px solid #002d72;
+    border: 4px solid #073bab;
     font-size: medium;
 }
 
@@ -867,11 +870,11 @@ img.img-circle.team-img {
 .owl-theme .owl-controls .owl-page.active span, .owl-theme .owl-controls.clickable .owl-page:hover span {
     filter: Alpha(Opacity=100);
     opacity: 1;
-    background: #002d72;
+    background: #073bab;
 }
 
 .owl-theme .owl-controls .owl-page.active span {
-    background: #002d72;
+    background: #073bab;
 }
 
 .copyrights {
@@ -2114,7 +2117,8 @@ Guest section
     border-radius: 50px;
     font-style: normal;
     display: inline-block;
-    background: #004c9b;
+    background: #073bab;
+    /*background: #004c9b;*/
     line-height: 2.5em;
 }
 
@@ -2138,6 +2142,10 @@ Guest section
     content: "\f007";
 }
 
+.superdemooverview {
+    display: block;
+    padding-left: 23px;
+}
 .w3_banner_bottom_icons1 h3 {
     font-size: 1.2em;
     color: #212121;
@@ -2149,7 +2157,7 @@ Guest section
 
 .w3_banner_bottom_icons1 h3:before {
     content: '';
-    background: #004c9b;
+    background: #073bab;
     width: 25%;
     height: 2px;
     position: absolute;
@@ -2302,6 +2310,28 @@ and (max-device-width: 1024px) {
     .team {
         height: 318px;
     }
+}
+
+/* 判断iphone */
+@media only screen
+and (min-device-width: 320px)
+and (max-device-width: 767px) {
+    .site-header .intro h1 {
+        font-size: 28px;
+    }
+
+    .site-header .intro h2 {
+        font-size: 26px;
+    }
+
+    .site-header .intro p {
+        font-size: 24px;
+    }
+
+    .site-header-tran .intro h1 {
+        font-size: 28px;
+    }
+
 }
 
 /*-- //banner-bottom-icons --*/

@@ -18,8 +18,9 @@
     <!-- css -->
     <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css"
           integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-    <link rel="stylesheet" href="bower_components/ionicons/css/ionicons.min.css">
-    <link rel="stylesheet" href="bower_components/css/animate.css">
+    <link rel="stylesheet" href="//code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+
+    <link href="https://cdn.bootcss.com/animate.css/3.5.2/animate.min.css" rel="stylesheet">
     <link href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/main.css">
 
@@ -54,20 +55,21 @@
             <ul class="nav navbar-nav navbar-right">
 
                 <!-- navigation menu -->
-                <li><a href="http://edcon.io/">Home</a></li>
-                <li class="active"><a data-scroll href="#venue">VENUE</a></li>
-                <li><a data-scroll href="#ttc">TTC</a></li>
-                <li><a data-scroll href="#vehicle">vehicle</a></li>
-                <!--<li><a data-scroll href="#registration">Registration</a></li>-->
+                <li><a href="https://edcon.io/">Home</a></li>
+                <li class="active govenue"><a>VENUE</a></li>
+                <li class="gottc"><a>TTC</a></li>
+                <li class="govehicle"><a>vehicle</a></li>
+                <!--<li><a  href="#registration">Registration</a></li>-->
 
             </ul>
         </div>
     </div><!-- /.container -->
 </nav>
 
-<header id="site-header" class="site-header-tran valign-center">
+<header id="site-header" class="site-header-tran valign-center lozad"
+        data-background-image="assets/images/backgrounds/header5.jpg">
 
-    <div class="intro">
+    <div class="intro introtrans">
 
         <h1>Community Ethereum Development Conference 2018</h1>
 
@@ -85,8 +87,12 @@
                 </div>
                 <div class="col-md-3 col-sm-12">
                     <address>
-                        <p> Ryerson University, <br> 350 Victoria Street, <br> Toronto, Ontario M5B 2K3
+                        <p>
+                            Ted Rogers School of Management,
+                            <br>Ryerson University
+                            <br>55 Dundas St W, Toronto, ON M5G 2C3, Canada
                         </p>
+
                     </address>
 
                 </div>
@@ -119,8 +125,10 @@
                         Toronto has a public transit system, complete with underground subways, rapid transit (RT),
                         streetcars and buses. The Toronto Transit Commission (TTC) operates this system and publishes a
                         free transit map that is available from any subway station, at ISS in POD-61, or click <a
-                            href="www.toronto.ca/ttc/schedules/index.htm">here</a> to download a copy.
-                        <br><br>The cash fare for an adult is $3.00 cash per person per ride. You can also purchase
+                            href="https://www.ttc.ca/PDF/Maps/TTC_SubwayMap_2017-10.pdf">here</a> to download a copy.
+                        <br><br>The cash fare for an adult is $3.25 <a
+                            href="https://www.ttc.ca/Fares_and_passes/Prices/Prices.jsp">cash per</a> person per ride.
+                        You can also purchase
                         prepaid fares such as tokens, tickets or monthly passes that are slightly cheaper than the cash
                         fare. If paying by cash, exact change is required on buses and streetcars.
 
@@ -148,7 +156,7 @@
                     <p>
                         The TTC has a route information service that can help you find out how to get to a particular
                         address via subways, streetcars or buses. The TTC's customer information phone number is (416)
-                        393-4636. Visit the TTC website for more information.
+                        393-4636. Visit the <a href="http://www.ttc.ca/">TTC</a> website for more information.
                     </p>
 
 
@@ -165,7 +173,7 @@
 
                     <p>
                         For travel between Metro-Toronto and surrounding areas, use GO Transit at: <a
-                            href="www.gotransit.com">www.gotransit.com</a>.
+                            href="http://www.gotransit.com">www.gotransit.com</a>.
                     </p>
 
 
@@ -188,7 +196,7 @@
                     <h3>Greyhound Bus
                     </h3>
                     <p>Greyhound is the largest bus company in Canada and offers service from Toronto to many cities and
-                        towns. Visit the Greyhound website for more information.
+                        towns. Visit the <a href="http://greyhound.ca/">Greyhound</a> website for more information.
                     </p>
                 </div>
 
@@ -201,7 +209,7 @@
                         discount
                         to travelers less than 25 years old. For schedules and other route and ticket information,
                         please
-                        call 411 or visit the VIA website at <a href="www.viarail.ca">www.viarail.ca</a>
+                        call 411 or visit the VIA website at <a href="http://www.viarail.ca/en">www.viarail.ca</a>
                     </p>
                 </div>
 
@@ -225,7 +233,9 @@
                         restrictions. Purchase of a road map is advisable. Driving licenses are required and there are
                         free Driving Regulations books available from most Ministry of Transportation offices (consult
                         blue section of white pages for phone numbers).
-                        <br><br>If you have a valid Driver's License and wish to rent a car, there are many car rental
+                        <br><br>If you have a valid <a
+                            href="https://www.canada.ca/en/immigration-refugees-citizenship/services/new-immigrants/new-life-canada/driving.html">Driver's
+                        License</a> and wish to rent a car, there are many car rental
                         businesses providing that service in Toronto. For a typical day rental, the rate is generally
                         $50 a day (including insurance and sometimes mileage). The absolute minimum car rental age is 21
                         years old and all businesses require a credit card as a deposit.
@@ -270,13 +280,13 @@
 </footer>
 
 <!-- script -->
-<script src="bower_components/jquery/dist/jquery.min.js"></script>
+<script src="https://cdn.bootcss.com/jquery/2.2.3/jquery.min.js"></script>
 <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"
         integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
         crossorigin="anonymous"></script>
-<script src="bower_components/smooth-scroll/dist/js/smooth-scroll.min.js"></script>
-<script src="bower_components/jquery.parallax.js"></script>
-<script src="https://cdn.bootcss.com/wow/1.1.2/wow.min.js"></script>
+<!--<script src="https://cdn.bootcss.com/wow/1.1.2/wow.min.js"></script>-->
+<script src="https://cdn.jsdelivr.net/npm/lozad/dist/lozad.min.js"></script>
+
 <script src="assets/js/main.js"></script>
 </body>
 </html>

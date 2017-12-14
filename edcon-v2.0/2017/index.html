@@ -10,8 +10,11 @@
 
     <link rel="icon" href="img/favicon.ico" type="image/x-icon">
 
+    <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css"
+          integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
     <link rel="stylesheet" href="css/style.css"/>
-    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css"/>
+
     <link rel="stylesheet" href="css/main.css"/>
 
 </head>
@@ -38,16 +41,15 @@
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav ul_l" id="mainmenu">
                 <li class="ul_li"><a class="scrolla" href="../index.html">EDCON 2018</a></li>
-                <li class="ul_li"><a class="scrolla" href="#main">Agenda</a></li>
-                <li class="ul_li"><a class="scrolla" href="#vip">Speakers</a></li>
-                <li class="ul_li"><a class="scrolla" href="#venue">Venue</a></li>
-                <li class="ul_li"><a class="scrolla" href="#organizers">Org.</a></li>
-                <li class="ul_li"><a class="scrolla register" href="#download">EDCON Presentations</a></li>
+                <li class="ul_li goagenda"><a class="scrolla" href="#main">Agenda</a></li>
+                <li class="ul_li gospeaker"><a class="scrolla" href="#vip">Speakers</a></li>
+                <li class="ul_li govenue"><a class="scrolla" href="#venue">Venue</a></li>
+                <li class="ul_li goorg"><a class="scrolla" href="#organizers">Org.</a></li>
+                <li class="ul_li gopres"><a class="scrolla register" href="#download">EDCON Presentations</a></li>
                 <!--<li class="ul_li"><a class="scrolla" href="download.html">EDCON.Share</a></li>-->
             </ul>
         </div><!-- /.navbar-collapse -->
     </div><!-- /.container-fluid -->
-
 </nav>
 
 <div>
@@ -1353,7 +1355,29 @@
     </div>
 </div>
 
-<script src="js/jquery-3.1.1.js" type="text/javascript" charset="utf-8"></script>
-<script src="js/bootstrap.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="https://cdn.bootcss.com/jquery/2.2.3/jquery.min.js"></script>
+
+<script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"
+        integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+        crossorigin="anonymous"></script>
+
+<script>
+    // smooth going
+    $('.goagenda').click(function () {
+        $('html,body').animate({scrollTop: $('#main').offset().top}, 800);
+    });
+    $('.gospeaker').click(function () {
+        $('html,body').animate({scrollTop: $('#vip').offset().top}, 800);
+    });
+    $('.govenue').click(function () {
+        $('html,body').animate({scrollTop: $('#venue').offset().top}, 800);
+    });
+    $('.goorg').click(function () {
+        $('html,body').animate({scrollTop: $('#organizers').offset().top}, 800);
+    });
+    $('.gopres').click(function () {
+        $('html,body').animate({scrollTop: $('#download').offset().top}, 800);
+    });
+</script>
 </body>
 </html>

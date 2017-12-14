@@ -35,82 +35,61 @@ function handleTopNavAnimation() {
         $('.social-block-fix').fadeOut()
     }
 
-
-
 }
 
 /*
- * Registration Form
+ * hide the right side social block if using phone
  */
 
-// $('#registration-form').submit(function (e) {
-//     e.preventDefault();
-//
-//     var postForm = { //Fetch form data
-//         'fname': $('#registration-form #fname').val(),
-//         'lname': $('#registration-form #lname').val(),
-//         'email': $('#registration-form #email').val(),
-//         'cell': $('#registration-form #cell').val(),
-//         'address': $('#registration-form #address').val(),
-//         'zip': $('#registration-form #zip').val(),
-//         'city': $('#registration-form #city').val(),
-//         'program': $('#registration-form #program').val()
-//     };
-//
-//     $.ajax({
-//         type: 'POST',
-//         url: './assets/php/contact.php',
-//         data: postForm,
-//         dataType: 'json',
-//         success: function (data) {
-//             if (data.success) {
-//                 $('#registration-msg .alert').html("Registration Successful");
-//                 $('#registration-msg .alert').removeClass("alert-danger");
-//                 $('#registration-msg .alert').addClass("alert-success");
-//                 $('#registration-msg').show();
-//             }
-//             else {
-//                 $('#registration-msg .alert').html("Registration Failed");
-//                 $('#registration-msg .alert').removeClass("alert-success");
-//                 $('#registration-msg .alert').addClass("alert-danger");
-//                 $('#registration-msg').show();
-//             }
-//         }
-//     });
-// });
+function loadCSS() {
+    if ((navigator.userAgent.match(/(phone|pad|pod|iPhone|iPod|ios|iPad|Android|wOSBrowser|BrowserNG|WebOS)/i))) {
+        $('.social-block-fix').addClass('hide')
+    }
+
+}
+
+loadCSS();
+
 
 /*
  * SmoothScroll
  */
+// index
+$('.gohome').click(function () {
+    $('html,body').animate({scrollTop: $('#site-header').offset().top}, 800);
+});
 
-var scroll = new SmoothScroll('a[href*="#"]');
+$('.gohightlight').click(function () {
+    $('html,body').animate({scrollTop: $('#highlights').offset().top}, 800);
+});
 
-/*
- * change agenda
- */
+$('.gospeaker').click(function () {
+    $('html,body').animate({scrollTop: $('#guest').offset().top}, 800);
+});
 
-var agenda = function () {
-    $('.nav-tabs a[href="#fday"]').click(function (e) {
-        e.preventDefault();
-        $(this).tab('show')
-    });
+$('.goagenda').click(function () {
+    $('html,body').animate({scrollTop: $('#agenda').offset().top}, 800);
+});
 
-    $('.nav-tabs a[href="#sday"]').click(function (e) {
-        e.preventDefault();
-        $(this).tab('show')
-    });
+$('.goregistration').click(function () {
+    $('html,body').animate({scrollTop: $('#registration').offset().top}, 800);
+});
+$('.goguide').click(function () {
+    $('html,body').animate({scrollTop: $('#guide').offset().top}, 800);
+});
+$('.gosupport').click(function () {
+    $('html,body').animate({scrollTop: $('#partner').offset().top}, 800);
+});
 
-    $('.nav-tabs a[href="#tday"]').click(function (e) {
-        e.preventDefault();
-        $(this).tab('show')
-    });
+// transportation
+$('.govenue').click(function () {
+    $('html,body').animate({scrollTop: $('#venue').offset().top}, 800);
+});
+$('.gottc').click(function () {
+    $('html,body').animate({scrollTop: $('#ttc').offset().top}, 800);
+});
+$('.govehicle').click(function () {
+    $('html,body').animate({scrollTop: $('#vehicle').offset().top}, 800);
+});
 
-    $('.nav-tabs a[href="#zday"]').click(function (e) {
-        e.preventDefault();
-        $(this).tab('show')
-    })
 
-
-};
-
-agenda();
