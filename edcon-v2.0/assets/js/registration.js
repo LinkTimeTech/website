@@ -19,7 +19,7 @@ var verifyId = function () {
     });
 
 
-}
+};
 
 
 function bindAvatar() {
@@ -130,7 +130,7 @@ $('.addSpeaker').click(function sendSpeaker() {
             }
         })
     }
-})
+});
 
 
 $('.addSponsor').click(function sendSponsor() {
@@ -169,15 +169,15 @@ $('.addSponsor').click(function sendSponsor() {
                 }
             },
             error: function (xhr, textStatus) {
-                console.log('错误')
-                console.log(xhr)
-                console.log(textStatus)
+                console.log('错误');
+                console.log(xhr);
+                console.log(textStatus);
                 $('#failed').modal('show');
             }
         })
 
     }
-})
+});
 
 
 $('.addHackathon').click(function sendHackathon() {
@@ -217,15 +217,15 @@ $('.addHackathon').click(function sendHackathon() {
                 }
             },
             error: function (xhr, textStatus) {
-                console.log('错误')
-                console.log(xhr)
-                console.log(textStatus)
+                console.log('错误');
+                console.log(xhr);
+                console.log(textStatus);
                 $('#failed').modal('show');
             }
         })
 
     }
-})
+});
 
 function sendParticipant(name, country, company, position, email, phone, note) {
 
@@ -262,15 +262,38 @@ function sendParticipant(name, country, company, position, email, phone, note) {
                 }
             },
             error: function (xhr, textStatus) {
-                console.log('错误')
-                console.log(xhr)
-                console.log(textStatus)
+                console.log('错误');
+                console.log(xhr);
+                console.log(textStatus);
                 alert("信息提交失败，请检查你的网络。");
             }
         })
 
     }
 }
+
+// omise
+
+// Set default config.默认设置
+OmiseCard.configure({
+    publicKey: 'pkey_test_5aaqj86dqmypbrccuyy',
+    currency: 'usd',
+    image: '../images/linktime_logo.svg',
+    frameLabel: 'Linktime',
+    frameDescription: 'Merchant description',
+    submitLabel: 'Pay',
+    buttonLabel: 'Pay with Omise',
+    submitFormTarget: null,
+});
+
+// 自定义设置
+OmiseCard.configureButton('#checkout-button', {
+    amount: 99500,
+});
+
+// Attach configuration to all target buttons
+// OmiseCard.attach();
+
 
 $(function () {
     verifyId();

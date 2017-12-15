@@ -8,8 +8,8 @@
 
     <meta name="title" content="EDCON REGISTRATION">
     <meta name="description"
-          content="The EDCON (Community Ethereum Development Conference) is the global conference organized by LinkTime, a company that is part of the Ethereum community in China. The purpose of the conference is to improve communication and integration between the various global Ethereum communities. EDCON is organized as a conference series, and happens once a year in different countries. The first EDCON was held successfully in ESCP Europe, Paris, France on February 17-18, 2017, and this time, the event will be taking place in Ryerson University, Toronto, Canada on May 3-5, 2018.">
-    <meta name="keywords" content="EDCON, Toronto"/>
+          content="">
+    <meta name="keywords" content="edcon"/>
     <link rel="icon" href="assets/images/favicon.ico" type="image/x-icon">
 
     <title>REGISTRATION</title>
@@ -49,11 +49,11 @@
 
         <div class="">
             <ul class="nav nav-tabs" role="tablist">
-                <!-- <li role="presentation" class="active"><a href="#participant" aria-controls="home" role="tab"
+                <li role="presentation" class="active"><a href="#participant" aria-controls="home" role="tab"
                                                           data-toggle="tab">Participant</a>
-                </li> -->
-                <li role="presentation" class="active"><a href="#speaker" aria-controls="profile" role="tab"
-                                                          data-toggle="tab">Speaker</a></li>
+                </li>
+                <li role="presentation"><a href="#speaker" aria-controls="profile" role="tab"
+                                           data-toggle="tab">Speaker</a></li>
                 <li role="presentation"><a href="#sponsor" aria-controls="messages" role="tab"
                                            data-toggle="tab">Sponsor</a></li>
                 <li role="presentation"><a href="#Superdemo" aria-controls="settings" role="tab" data-toggle="tab">Superdemo</a>
@@ -62,7 +62,7 @@
 
             <!-- Tab panes -->
             <div class="tab-content">
-                <!-- <div role="tabpanel" class="tab-pane fade in active" id="participant">
+                <div role="tabpanel" class="tab-pane fade in active" id="participant">
                     <div class="sign-up-agileinfo participant-box">
                         <h3>Participant</h3>
                         <form action="#" method="post">
@@ -82,7 +82,17 @@
                                         <input type="radio" name="tickets" id="bird" value="560"
                                                checked>
                                         <span class="input-text">
-                                        Standard Ticket: <span class="text-de">$700</span> $560 ( Early Bird )
+                                        Early Bird Ticket: $560
+                                        </span>
+                                        <img src="assets/images/icon/card-ye.svg" alt="" height="25px">
+                                    </label>
+                                </div>
+                                <div class="radio">
+                                    <label>
+                                        <input type="radio" name="tickets" id="Standard" value="700"
+                                        >
+                                        <span class="input-text">
+                                        Standard Ticket: $700
                                         </span>
                                         <img src="assets/images/icon/card-ye.svg" alt="" height="25px">
                                     </label>
@@ -100,7 +110,7 @@
                                     <label>
                                         <input type="radio" name="tickets" id="student" value="210">
                                         <span class="input-text">
-                                        Student Ticket: $210
+                                        Student Ticket: $140
                                         </span>
                                         <img src="assets/images/icon/card-ye.svg" alt="" height="25px">
                                     </label>
@@ -121,42 +131,50 @@
                                 </div>
 
                                 <div class="checkdev">
-                                    <input type="text" class="repository" name="repository" placeholder="Repository"
-                                           required="">
+                                    <textarea rows="6" class="project goadd" name="hackathonnote"
+                                              placeholder="Please describe more about yourself, your research or project. Please also attach the links of your Linkedin and GitHub"
+                                              required=""></textarea>
 
                                 </div>
 
-                                <h4 class="paytype">Payment type</h4>
-                                <div class="radio">
-                                    <label>
-                                        <input type="radio" name="payment" id="visa" value="visa"
-                                               checked>
-                                        <img height="25px" src="assets/images/icon/aa1.jpg" alt="VISA">
-                                    </label>
-                                </div>
-                                <div class="radio">
-                                    <label>
-                                        <input type="radio" name="payment" id="bitcooin" value="bitcooin">
-                                        <img height="25px" src="assets/images/icon/aa2.jpg" alt="bitcoin">
-                                    </label>
-                                </div>
-                                <div class="radio">
-                                    <label>
-                                        <input type="radio" name="payment" id="ether" value="ether">
-                                        <img height="25px" src="assets/images/icon/aa3.jpg" alt="Ether">
-                                    </label>
-                                </div>
+                                <!--<h4 class="paytype">Payment type</h4>-->
+                                <!--<div class="radio">-->
+                                <!--<label>-->
+                                <!--<input type="radio" name="payment" id="visa" value="visa"-->
+                                <!--checked>-->
+                                <!--<img height="25px" src="assets/images/icon/aa1.jpg" alt="VISA">-->
+                                <!--</label>-->
+                                <!--</div>-->
+                                <!--<div class="radio">-->
+                                <!--<label>-->
+                                <!--<input type="radio" name="payment" id="bitcooin" value="bitcooin">-->
+                                <!--<img height="25px" src="assets/images/icon/aa2.jpg" alt="bitcoin">-->
+                                <!--</label>-->
+                                <!--</div>-->
+                                <!--<div class="radio">-->
+                                <!--<label>-->
+                                <!--<input type="radio" name="payment" id="ether" value="ether">-->
+                                <!--<img height="25px" src="assets/images/icon/aa3.jpg" alt="Ether">-->
+                                <!--</label>-->
+                                <!--</div>-->
 
                             </div>
 
                             <p class="col-lg-12">If you have any questions, please feel free to contact us at
-                                contact@linktimetech.com.</p>
+                                <a href="mailto:contact@linktimetech.com.">contact@linktimetech.com.</a></p>
                             <input type="submit" value="Pay">
+
+                            <form class="checkout-form" name="checkoutForm" method="POST" action="/checkout">
+                                <script type="text/javascript" src="https://cdn.omise.co/omise.js"
+                                        data-key="YOUR_PUBLIC_KEY"
+                                        data-button-label="pay">
+                                </script>
+                            </form>
                         </form>
                     </div>
 
-                </div> -->
-                <div role="tabpanel" class="tab-pane fade in active" id="speaker">
+                </div>
+                <div role="tabpanel" class="tab-pane fade" id="speaker">
                     <div class="sign-up-agileinfo">
                         <h3>Speaker</h3>
                         <div>
@@ -324,6 +342,8 @@
 <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"
         integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
         crossorigin="anonymous"></script>
+
+<!--<script src="https://cdn.omise.co/omise.js"></script>-->
 
 <script src="assets/js/registration.js"></script>
 </body>
