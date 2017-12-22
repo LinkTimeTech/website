@@ -1,0 +1,58 @@
+.wrap {
+    width: 649px;
+    height: 978px;
+}
+
+.noteDiv, .contactDiv {
+    font-size: 20px;
+}
+
+article {
+    border-left: 1px solid #073bab;
+    border-right: 1px solid #073bab;
+    background-color: #fff;
+}
+
+.qrDiv {
+    padding: 45px;
+    display: flex;
+    align-items: center;
+}
+
+.qrCode, .qrimg {
+    width: 150px;
+
+}
+
+.qrimg {
+    display: inline-block;
+}
+
+.ticketinfo {
+    display: inline-block;
+    font-weight: 900;
+    font-size: 23px;
+    margin-left: 10px;
+}
+
+.noteDiv {
+    padding: 0 45px 45px 55px;
+}
+
+.contactDiv {
+    text-align: right;
+    padding: 0 45px 20px 0;
+
+}
+
+.justify {
+    text-align: justify;
+}
+
+.name {
+    white-space: nowrap;
+}
+
+p {
+    margin: 0 0 5px;
+}

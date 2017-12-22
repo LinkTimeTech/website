@@ -169,7 +169,11 @@ h4 {
     font-size: 22px;
 }
 
-input[type="text"], textarea {
+.ticketstype {
+    padding: 15px;
+}
+
+input[type="text"], input[type="email"], textarea {
     padding: 13px;
     background: none;
     border: none;
@@ -179,7 +183,7 @@ input[type="text"], textarea {
     color: #fff;
 }
 
-input[type="text"] {
+input[type="text"], input[type="email"], textarea {
     border-bottom: 1px solid #37b8df;
     width: 93%;
 
@@ -187,7 +191,7 @@ input[type="text"] {
 
 textarea {
     border: 1px solid #37b8df;
-    width: 90%;
+    width: 100%;
 }
 
 input[type="password"] {
@@ -245,13 +249,13 @@ ul.check li input[type="checkbox"]:checked + label span:first-child:before {
     height: 10px;
 }
 
-form a {
-    color: #EEE;
-    float: right;
-    font-size: 13px;
-    margin: 20px 0;
+/*form a {*/
+/*color: #EEE;*/
+/*float: right;*/
+/*font-size: 13px;*/
+/*margin: 20px 0;*/
 
-}
+/*}*/
 
 input[type="submit"] {
     background: rgba(55, 184, 223, 0.54);
@@ -363,12 +367,13 @@ input::-webkit-input-placeholder, textarea::-webkit-input-placeholder {
 
 /*--Responsive--*/
 @media (max-width: 1440px) {
-    input[type="text"], input[type="password"] {
+    input[type="text"], input[type="email"], input[type="password"], textarea {
         width: 92%;
     }
 }
 
 @media (max-width: 1080px) {
+
     h1 {
         font-size: 45px;
         margin: 50px 0;
@@ -383,7 +388,7 @@ input::-webkit-input-placeholder, textarea::-webkit-input-placeholder {
         font-size: 18px;
     }
 
-    input[type="text"], input[type="password"] {
+    input[type="text"], input[type="email"], input[type="password"], textarea {
         padding: 12px;
         width: 91%;
     }
@@ -397,10 +402,17 @@ input::-webkit-input-placeholder, textarea::-webkit-input-placeholder {
     .container {
         width: 85%;
     }
+
+}
+
+@media (max-width: 991px) {
+    .ticketstype {
+        margin-left: 5%;
+    }
 }
 
 @media (max-width: 900px) {
-    input[type="text"], input[type="password"] {
+    input[type="text"], input[type="email"], input[type="password"], textarea {
         width: 90%;
     }
 
@@ -409,12 +421,15 @@ input::-webkit-input-placeholder, textarea::-webkit-input-placeholder {
         width: 18px;
         height: 18px;
     }
+
 }
 
 @media (max-width: 800px) {
+
     .container {
         width: 85%;
     }
+
 
     .socialicons .fa {
         font-size: 16px;
@@ -423,7 +438,7 @@ input::-webkit-input-placeholder, textarea::-webkit-input-placeholder {
     }
 
     ul.check li input[type="checkbox"] + label, form a {
-        font-size: 12px;
+        /*font-size: 12px;*/
     }
 
     .socialicons h2 {
@@ -465,12 +480,12 @@ input::-webkit-input-placeholder, textarea::-webkit-input-placeholder {
     }
 
     .sign-up-agileinfo {
-        width: 40%;
+        /*width: 40%;*/
         /*margin-right: 4%;*/
     }
 
     .sign-in-w3ls {
-        ` width: 40%;
+        width: 40%;
     }
 
 }
@@ -489,7 +504,7 @@ input::-webkit-input-placeholder, textarea::-webkit-input-placeholder {
         width: 92%;
     }
 
-    input[type="text"], input[type="password"] {
+    input[type="text"], input[type="email"], input[type="password"], textarea {
         width: 95%;
     }
 
@@ -499,7 +514,7 @@ input::-webkit-input-placeholder, textarea::-webkit-input-placeholder {
 }
 
 @media (max-width: 600px) {
-    input[type="text"], input[type="password"] {
+    input[type="text"], input[type="email"], input[type="password"], textarea {
         width: 94%;
     }
 }
@@ -512,7 +527,7 @@ input::-webkit-input-placeholder, textarea::-webkit-input-placeholder {
 }
 
 @media (max-width: 480px) {
-    input[type="text"], input[type="password"] {
+    input[type="text"], input[type="email"], input[type="password"], textarea {
         width: 93%;
     }
 }
@@ -523,7 +538,7 @@ input::-webkit-input-placeholder, textarea::-webkit-input-placeholder {
         padding: 7%;
     }
 
-    input[type="text"], input[type="password"], textarea {
+    input[type="text"], input[type="email"], input[type="password"], textarea, textarea {
         width: 91%;
         font-size: 12px;
     }
@@ -582,7 +597,7 @@ input::-webkit-input-placeholder, textarea::-webkit-input-placeholder {
         font-size: 14px;
     }
 
-    input[type="text"], input[type="password"] {
+    input[type="text"], input[type="email"], input[type="password"], textarea {
         width: 89%;
         padding: 5px;
     }
@@ -662,15 +677,172 @@ input[type=radio]:checked ~ label {
 .img-input {
     opacity: 0;
     position: absolute;
-    width: 355px;
+    width: 100%;
     height: 130px;
 }
 
 .stucard {
     height: 110px;
+    display: none;
+}
+
+.stucardcue {
+    height: 110px;
+}
+
+.stucardcue::-webkit-input-placeholder {
+    top: 35%;
+    position: relative;
+    text-align: center;
+}
+
+/* 使用webkit内核的浏览器 */
+.stucardcue:-moz-placeholder {
+    top: 35%;
+    position: relative;
+    text-align: center;
+}
+
+/* Firefox版本4-18 */
+.stucardcue::-moz-placeholder {
+    top: 35%;
+    position: relative;
+    text-align: center;
+}
+
+/* Firefox版本19+ */
+.stucardcue:-ms-input-placeholder {
+    top: 35%;
+    position: relative;
+    text-align: center;
 }
 
 .stucard-info {
     font-size: 14px;
-    margin-bottom: 20px;
+    /*margin-bottom: 20px;*/
+}
+
+.ticketradio {
+    width: 20px;
+    height: 0px;
+    background-color: #000;
+    margin-right: 30px;
+    border-radius: 50%;
+    position: relative;
+}
+
+.ticketradio:before, .ticketradio:after {
+    content: '';
+    display: block;
+    position: absolute;
+    border-radius: 50%;
+    transition: .3s ease;
+}
+
+.ticketradio:before {
+    top: 0px;
+    left: 0px;
+    width: 18px;
+    height: 18px;
+    background-color: #fff;
+    /*border: 1px solid #000;*/
+}
+
+.ticketradio:after {
+    top: 6px;
+    left: 6px;
+    width: 8px;
+    height: 8px;
+    background-color: #fff;
+}
+
+.ticketradio:checked:after {
+    top: 3px;
+    left: 3px;
+    width: 12px;
+    height: 12px;
+    background-color: #37b8df;
+}
+
+.ticketradio:checked:before {
+    border-color: #37b8df;
+}
+
+.radiodisable:before, .radiodisable:after {
+    background-color: #b5b4b4;
+}
+
+.noticket {
+    text-decoration: line-through;
+}
+
+.nostudentticket, .noallticket, .noearlyticket {
+    display: none;
+}
+
+input[disabled],
+input[disabled]:hover {
+    background-color: rgba(55, 184, 223, 0.54);
+
+}
+
+/*
+ * loading
+ */
+.loading {
+    width: 150px;
+    height: 15px;
+    margin: 0 auto;
+    margin-top: 100px;
+    text-align: center;
+
+    position: absolute;
+    top: 40%;
+    left: 45%;
+
+    display: none;
+}
+
+.loading span {
+    display: inline-block;
+    width: 15px;
+    height: 100%;
+    margin-right: 5px;
+    background: rgb(55, 184, 223);
+    -webkit-animation: load 1.25s ease infinite;
+}
+
+.loading span:last-child {
+    margin-right: 0px;
+}
+
+@-webkit-keyframes load {
+    0% {
+        opacity: 1;
+        -webkit-transform: scale(1.2);
+    }
+    100% {
+        opacity: .2;
+        -webkit-transform: scale(.2);
+    }
+}
+
+.loading span:nth-child(1) {
+    -webkit-animation-delay: 0.18s;
+}
+
+.loading span:nth-child(2) {
+    -webkit-animation-delay: 0.36s;
+}
+
+.loading span:nth-child(3) {
+    -webkit-animation-delay: 0.54s;
+}
+
+.loading span:nth-child(4) {
+    -webkit-animation-delay: 0.72s;
+}
+
+.loading span:nth-child(5) {
+    -webkit-animation-delay: 0.90s;
 }

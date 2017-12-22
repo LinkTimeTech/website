@@ -54,7 +54,89 @@ var data = {
             question: 'Can I watch the live stream of the conference online?',
             ans: 'Yes, there will be live stream from beginning to the end!'
         },
-    ]
+    ],
+
+
+    goldsponsor: [
+        {
+            imgurl: 'assets/images/partner/' + 'kyber_logo-2.svg',
+            website: 'width: 210px',
+            imgwidth: 'https://kyber.network/'
+        },
+        {
+            imgurl: 'assets/images/partner/' + 'coming_soon_wh.jpg',
+        },
+        {
+            imgurl: 'assets/images/partner/' + 'coming_soon_wh.jpg',
+        }
+    ],
+    silversponsor: [
+        {
+            imgurl: 'assets/images/partner/' + 'coming_soon_wh.jpg',
+
+        },
+        {
+            imgurl: 'assets/images/partner/' + 'coming_soon_wh.jpg',
+        },
+        {
+            imgurl: 'assets/images/partner/' + 'coming_soon_wh.jpg',
+        },
+        {
+            imgurl: 'assets/images/partner/' + 'coming_soon_wh.jpg',
+        }
+    ],
+    communitySponsor: [
+        {
+            imgurl: 'assets/images/partner/' + 'f2pool.jpg',
+            website: 'https://www.f2pool.com',
+        },
+        {
+            imgurl: 'assets/images/partner/' + 'coming_soon_wh.jpg',
+        },
+        {
+            imgurl: 'assets/images/partner/' + 'coming_soon_wh.jpg',
+        },
+        {
+            imgurl: 'assets/images/partner/' + 'coming_soon_wh.jpg',
+        }
+    ],
+    communitySupports: [
+        {
+            imgurl: 'assets/images/partner/' + 'ethfans_logo.jpg',
+            website: 'http://ethfans.org',
+            imgwidth: 'position: relative;left: 57px'
+        },
+        {
+            imgurl: 'assets/images/partner/' + 'hongkong_eth.jpg',
+            website: 'https://www.meetup.com/Ethereum-Hong-Kong/',
+            imgwidth: 'width: 75px'
+        },
+        {
+            imgurl: 'assets/images/partner/' + 'taipei_eth.png',
+            website: 'https://www.meetup.com/Taipei-Ethereum-Meetup/',
+            imgwidth: 'width: 90px'
+        },
+        {
+            imgurl: 'assets/images/partner/' + 'asseth-logo.jpg',
+            website: 'http://www.asseth.fr/',
+            imgwidth: 'width: 110px;position: relative;left: 38px'
+        },
+        {
+            imgurl: 'assets/images/partner/' + 'ethereum-Singapore.jpg',
+            website: 'https://www.meetup.com/Ethereum-Singapore/',
+            imgwidth: 'width: 75px'
+        },
+        {
+            imgurl: 'assets/images/partner/' + 'meetupko.svg',
+            website: 'https://www.meetup.com/ko-KR/Seoul-Ethereum-Meetup/',
+            imgwidth: 'width: 60px'
+        },
+        // {
+        //     imgurl:'assets/images/partner/'+'',
+        //     website:'',
+        //     imgwidth:''
+        // }
+    ],
 
 };
 
