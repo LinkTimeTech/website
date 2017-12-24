@@ -2316,8 +2316,12 @@ and (max-device-width: 1024px) {
 @media only screen
 and (min-device-width: 320px)
 and (max-device-width: 767px) {
+    .site-header .intro {
+        top: 60vh;
+    }
     .site-header .intro h1 {
         font-size: 28px;
+        margin-bottom: 0;
     }
 
     .site-header .intro h2 {
@@ -2326,6 +2330,7 @@ and (max-device-width: 767px) {
 
     .site-header .intro p {
         font-size: 24px;
+        margin-bottom: 0;
     }
 
     .site-header-tran .intro h1 {

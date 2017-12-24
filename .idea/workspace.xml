@@ -1,47 +1,557 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="2f6dbdce-d305-42a2-bb00-5d9377a6eac7" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Unitimes Web 5/images/news/blockchain_drives_artificial.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Unitimes Web 5/images/news/forbes_5_predictions.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Unitimes Web 5/images/news/sberbank_successfully.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Unitimes Web 5/news/blockchain_drives_artificial_intelligence.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Unitimes Web 5/news/blockchain_drives_artificial_intelligence_cn.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Unitimes Web 5/news/forbes_5_predictions_on_how_blockchain_will_drive_digital_transformation.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Unitimes Web 5/news/forbes_5_predictions_on_how_blockchain_will_drive_digital_transformation_cn.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Unitimes Web 5/news/sberbank_successfully_completes_its_first_blockchain_powered_payment_transaction.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Unitimes Web 5/news/sberbank_successfully_completes_its_first_blockchain_powered_payment_transaction_cn.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/meetup/index2.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/meetup/index的副本无vue.html" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/meetup/index的副本.html" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Unitimes Web 5/images/news/casper_testnet.png" afterPath="$PROJECT_DIR$/Unitimes Web 5/images/news/casper_testnet.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Unitimes Web 5/images/news/ethereum_proof_of_stake.jpeg" afterPath="$PROJECT_DIR$/Unitimes Web 5/images/news/ethereum_proof_of_stake.jpeg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Unitimes Web 5/images/news/from_evolution_theory.png" afterPath="$PROJECT_DIR$/Unitimes Web 5/images/news/from_evolution_theory.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Unitimes Web 5/images/news/import_9ffGf3OoX24ZLDWm.png" afterPath="$PROJECT_DIR$/Unitimes Web 5/images/news/import_9ffGf3OoX24ZLDWm.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Unitimes Web 5/images/news/import_BsygkjEXTysCvTZ3.png" afterPath="$PROJECT_DIR$/Unitimes Web 5/images/news/import_BsygkjEXTysCvTZ3.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Unitimes Web 5/images/news/import_KjZy1Towgys9MIiz.png" afterPath="$PROJECT_DIR$/Unitimes Web 5/images/news/import_KjZy1Towgys9MIiz.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Unitimes Web 5/images/news/import_Y5vjWz16trmQvOQ9.png" afterPath="$PROJECT_DIR$/Unitimes Web 5/images/news/import_Y5vjWz16trmQvOQ9.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Unitimes Web 5/images/news/import_ady8N6YmuDYGg7Nj.png" afterPath="$PROJECT_DIR$/Unitimes Web 5/images/news/import_ady8N6YmuDYGg7Nj.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Unitimes Web 5/images/news/import_ceTENtKh6wxyESrQ.png" afterPath="$PROJECT_DIR$/Unitimes Web 5/images/news/import_ceTENtKh6wxyESrQ.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Unitimes Web 5/images/news/import_fUMsVErBpg9gicmO.png" afterPath="$PROJECT_DIR$/Unitimes Web 5/images/news/import_fUMsVErBpg9gicmO.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Unitimes Web 5/images/news/import_rxKikXrkOCaoji0h.png" afterPath="$PROJECT_DIR$/Unitimes Web 5/images/news/import_rxKikXrkOCaoji0h.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Unitimes Web 5/images/news/import_uXWFZq0BuP7nSWHP.png" afterPath="$PROJECT_DIR$/Unitimes Web 5/images/news/import_uXWFZq0BuP7nSWHP.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Unitimes Web 5/images/news/import_v36KYBvwobojji7m.png" afterPath="$PROJECT_DIR$/Unitimes Web 5/images/news/import_v36KYBvwobojji7m.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Unitimes Web 5/images/news/vitalik_buterin_lays.jpeg" afterPath="$PROJECT_DIR$/Unitimes Web 5/images/news/vitalik_buterin_lays.jpeg" />
+    <list default="true" id="2f6dbdce-d305-42a2-bb00-5d9377a6eac7" name="Default" comment="12.24">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/edcon-v2.0/admin/production/images/american-express.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/edcon-v2.0/admin/production/images/cropper.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/edcon-v2.0/admin/production/images/img.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/edcon-v2.0/admin/production/images/inbox.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/edcon-v2.0/admin/production/images/mastercard.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/edcon-v2.0/admin/production/images/media.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/edcon-v2.0/admin/production/images/paypal.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/edcon-v2.0/admin/production/images/picture.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/edcon-v2.0/admin/production/images/prod-1.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/edcon-v2.0/admin/production/images/prod-2.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/edcon-v2.0/admin/production/images/prod-3.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/edcon-v2.0/admin/production/images/prod-4.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/edcon-v2.0/admin/production/images/prod-5.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/edcon-v2.0/admin/production/images/user.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/edcon-v2.0/admin/production/images/visa.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/edcon-v2.0/admin/build/css/custom.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/edcon-v2.0/admin/build/css/custom.min.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/edcon-v2.0/admin/build/js/custom.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/edcon-v2.0/admin/build/js/custom.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/edcon-v2.0/admin/css/index.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/edcon-v2.0/admin/css/login.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/edcon-v2.0/admin/gulpfile.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/edcon-v2.0/admin/js/index.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/edcon-v2.0/admin/login.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/edcon-v2.0/admin/package.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/edcon-v2.0/admin/production/calendar.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/edcon-v2.0/admin/production/chartjs.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/edcon-v2.0/admin/production/chartjs2.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/edcon-v2.0/admin/production/contacts.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/edcon-v2.0/admin/production/css/maps/jquery-jvectormap-2.0.3.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/edcon-v2.0/admin/production/e_commerce.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/edcon-v2.0/admin/production/echarts.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/edcon-v2.0/admin/production/fixed_footer.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/edcon-v2.0/admin/production/fixed_sidebar.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/edcon-v2.0/admin/production/form.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/edcon-v2.0/admin/production/form_advanced.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/edcon-v2.0/admin/production/form_buttons.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/edcon-v2.0/admin/production/form_upload.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/edcon-v2.0/admin/production/form_validation.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/edcon-v2.0/admin/production/form_wizards.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/edcon-v2.0/admin/production/general_elements.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/edcon-v2.0/admin/production/glyphicons.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/edcon-v2.0/admin/production/icons.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/edcon-v2.0/admin/production/inbox.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/edcon-v2.0/admin/production/index.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/edcon-v2.0/admin/production/index2.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/edcon-v2.0/admin/production/index3.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/edcon-v2.0/admin/production/invoice.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/edcon-v2.0/admin/production/js/datepicker/daterangepicker.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/edcon-v2.0/admin/production/js/moment/moment.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/edcon-v2.0/admin/production/level2.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/edcon-v2.0/admin/production/login.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/edcon-v2.0/admin/production/map.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/edcon-v2.0/admin/production/media_gallery.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/edcon-v2.0/admin/production/morisjs.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/edcon-v2.0/admin/production/other_charts.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/edcon-v2.0/admin/production/page_403.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/edcon-v2.0/admin/production/page_404.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/edcon-v2.0/admin/production/page_500.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/edcon-v2.0/admin/production/plain_page.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/edcon-v2.0/admin/production/pricing_tables.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/edcon-v2.0/admin/production/profile.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/edcon-v2.0/admin/production/project_detail.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/edcon-v2.0/admin/production/projects.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/edcon-v2.0/admin/production/tables.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/edcon-v2.0/admin/production/tables_dynamic.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/edcon-v2.0/admin/production/tickets.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/edcon-v2.0/admin/production/typography.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/edcon-v2.0/admin/production/widgets.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/edcon-v2.0/admin/production/xx.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/edcon-v2.0/admin/src/js/custom.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/edcon-v2.0/admin/src/js/helpers/smartresize.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/edcon-v2.0/admin/src/scss/custom.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/edcon-v2.0/admin/src/scss/daterangepicker.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/edcon-v2.0/assets/php/application/.htaccess" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/edcon-v2.0/assets/php/application/admin/config.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/edcon-v2.0/assets/php/application/admin/controller/Edcon.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/edcon-v2.0/assets/php/application/admin/tags.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/edcon-v2.0/assets/php/application/command.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/edcon-v2.0/assets/php/application/common.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/edcon-v2.0/assets/php/application/config.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/edcon-v2.0/assets/php/application/database.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/edcon-v2.0/assets/php/application/extra/queue.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/edcon-v2.0/assets/php/application/index/controller/Index.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/edcon-v2.0/assets/php/application/route.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/edcon-v2.0/assets/php/application/tags.php" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/edcon-v2.0/assets/php/tp/.gitignore" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/edcon-v2.0/assets/php/tp/.travis.yml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/edcon-v2.0/assets/php/tp/LICENSE.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/edcon-v2.0/assets/php/tp/README.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/edcon-v2.0/assets/php/tp/application/.htaccess" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/edcon-v2.0/assets/php/tp/application/admin/config.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/edcon-v2.0/assets/php/tp/application/admin/controller/Edcon.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/edcon-v2.0/assets/php/tp/application/admin/tags.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/edcon-v2.0/assets/php/tp/application/command.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/edcon-v2.0/assets/php/tp/application/common.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/edcon-v2.0/assets/php/tp/application/config.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/edcon-v2.0/assets/php/tp/application/database.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/edcon-v2.0/assets/php/tp/application/extra/queue.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/edcon-v2.0/assets/php/tp/application/index/controller/Index.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/edcon-v2.0/assets/php/tp/application/route.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/edcon-v2.0/assets/php/tp/application/tags.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/edcon-v2.0/assets/php/tp/build.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/edcon-v2.0/assets/php/tp/composer.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/edcon-v2.0/assets/php/tp/extend/.gitignore" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/edcon-v2.0/assets/php/tp/lib/qrcode.zip" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/edcon-v2.0/assets/php/tp/lib/qrcode/composer.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/edcon-v2.0/assets/php/tp/lib/qrcode/qrcode.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/edcon-v2.0/assets/php/tp/lib/qrcode/vendor/autoload.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/edcon-v2.0/assets/php/tp/lib/qrcode/vendor/bacon/bacon-qr-code/.gitignore" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/edcon-v2.0/assets/php/tp/lib/qrcode/vendor/bacon/bacon-qr-code/.travis.yml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/edcon-v2.0/assets/php/tp/lib/qrcode/vendor/bacon/bacon-qr-code/LICENSE" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/edcon-v2.0/assets/php/tp/lib/qrcode/vendor/bacon/bacon-qr-code/Module.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/edcon-v2.0/assets/php/tp/lib/qrcode/vendor/bacon/bacon-qr-code/README.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/edcon-v2.0/assets/php/tp/lib/qrcode/vendor/bacon/bacon-qr-code/autoload_classmap.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/edcon-v2.0/assets/php/tp/lib/qrcode/vendor/bacon/bacon-qr-code/autoload_function.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/edcon-v2.0/assets/php/tp/lib/qrcode/vendor/bacon/bacon-qr-code/autoload_register.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/edcon-v2.0/assets/php/tp/lib/qrcode/vendor/bacon/bacon-qr-code/composer.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/edcon-v2.0/assets/php/tp/lib/qrcode/vendor/bacon/bacon-qr-code/src/BaconQrCode/Common/AbstractEnum.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/edcon-v2.0/assets/php/tp/lib/qrcode/vendor/bacon/bacon-qr-code/src/BaconQrCode/Common/BitArray.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/edcon-v2.0/assets/php/tp/lib/qrcode/vendor/bacon/bacon-qr-code/src/BaconQrCode/Common/BitMatrix.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/edcon-v2.0/assets/php/tp/lib/qrcode/vendor/bacon/bacon-qr-code/src/BaconQrCode/Common/BitUtils.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/edcon-v2.0/assets/php/tp/lib/qrcode/vendor/bacon/bacon-qr-code/src/BaconQrCode/Common/CharacterSetEci.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/edcon-v2.0/assets/php/tp/lib/qrcode/vendor/bacon/bacon-qr-code/src/BaconQrCode/Common/EcBlock.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/edcon-v2.0/assets/php/tp/lib/qrcode/vendor/bacon/bacon-qr-code/src/BaconQrCode/Common/EcBlocks.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/edcon-v2.0/assets/php/tp/lib/qrcode/vendor/bacon/bacon-qr-code/src/BaconQrCode/Common/ErrorCorrectionLevel.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/edcon-v2.0/assets/php/tp/lib/qrcode/vendor/bacon/bacon-qr-code/src/BaconQrCode/Common/FormatInformation.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/edcon-v2.0/assets/php/tp/lib/qrcode/vendor/bacon/bacon-qr-code/src/BaconQrCode/Common/Mode.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/edcon-v2.0/assets/php/tp/lib/qrcode/vendor/bacon/bacon-qr-code/src/BaconQrCode/Common/ReedSolomonCodec.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/edcon-v2.0/assets/php/tp/lib/qrcode/vendor/bacon/bacon-qr-code/src/BaconQrCode/Common/Version.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/edcon-v2.0/assets/php/tp/lib/qrcode/vendor/bacon/bacon-qr-code/src/BaconQrCode/Encoder/BlockPair.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/edcon-v2.0/assets/php/tp/lib/qrcode/vendor/bacon/bacon-qr-code/src/BaconQrCode/Encoder/ByteMatrix.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/edcon-v2.0/assets/php/tp/lib/qrcode/vendor/bacon/bacon-qr-code/src/BaconQrCode/Encoder/Encoder.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/edcon-v2.0/assets/php/tp/lib/qrcode/vendor/bacon/bacon-qr-code/src/BaconQrCode/Encoder/MaskUtil.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/edcon-v2.0/assets/php/tp/lib/qrcode/vendor/bacon/bacon-qr-code/src/BaconQrCode/Encoder/MatrixUtil.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/edcon-v2.0/assets/php/tp/lib/qrcode/vendor/bacon/bacon-qr-code/src/BaconQrCode/Encoder/QrCode.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/edcon-v2.0/assets/php/tp/lib/qrcode/vendor/bacon/bacon-qr-code/src/BaconQrCode/Exception/ExceptionInterface.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/edcon-v2.0/assets/php/tp/lib/qrcode/vendor/bacon/bacon-qr-code/src/BaconQrCode/Exception/InvalidArgumentException.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/edcon-v2.0/assets/php/tp/lib/qrcode/vendor/bacon/bacon-qr-code/src/BaconQrCode/Exception/OutOfBoundsException.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/edcon-v2.0/assets/php/tp/lib/qrcode/vendor/bacon/bacon-qr-code/src/BaconQrCode/Exception/RuntimeException.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/edcon-v2.0/assets/php/tp/lib/qrcode/vendor/bacon/bacon-qr-code/src/BaconQrCode/Exception/UnexpectedValueException.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/edcon-v2.0/assets/php/tp/lib/qrcode/vendor/bacon/bacon-qr-code/src/BaconQrCode/Exception/WriterException.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/edcon-v2.0/assets/php/tp/lib/qrcode/vendor/bacon/bacon-qr-code/src/BaconQrCode/Renderer/Color/Cmyk.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/edcon-v2.0/assets/php/tp/lib/qrcode/vendor/bacon/bacon-qr-code/src/BaconQrCode/Renderer/Color/ColorInterface.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/edcon-v2.0/assets/php/tp/lib/qrcode/vendor/bacon/bacon-qr-code/src/BaconQrCode/Renderer/Color/Gray.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/edcon-v2.0/assets/php/tp/lib/qrcode/vendor/bacon/bacon-qr-code/src/BaconQrCode/Renderer/Color/Rgb.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/edcon-v2.0/assets/php/tp/lib/qrcode/vendor/bacon/bacon-qr-code/src/BaconQrCode/Renderer/Image/AbstractRenderer.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/edcon-v2.0/assets/php/tp/lib/qrcode/vendor/bacon/bacon-qr-code/src/BaconQrCode/Renderer/Image/Decorator/DecoratorInterface.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/edcon-v2.0/assets/php/tp/lib/qrcode/vendor/bacon/bacon-qr-code/src/BaconQrCode/Renderer/Image/Decorator/FinderPattern.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/edcon-v2.0/assets/php/tp/lib/qrcode/vendor/bacon/bacon-qr-code/src/BaconQrCode/Renderer/Image/Eps.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/edcon-v2.0/assets/php/tp/lib/qrcode/vendor/bacon/bacon-qr-code/src/BaconQrCode/Renderer/Image/Png.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/edcon-v2.0/assets/php/tp/lib/qrcode/vendor/bacon/bacon-qr-code/src/BaconQrCode/Renderer/Image/RendererInterface.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/edcon-v2.0/assets/php/tp/lib/qrcode/vendor/bacon/bacon-qr-code/src/BaconQrCode/Renderer/Image/Svg.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/edcon-v2.0/assets/php/tp/lib/qrcode/vendor/bacon/bacon-qr-code/src/BaconQrCode/Renderer/RendererInterface.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/edcon-v2.0/assets/php/tp/lib/qrcode/vendor/bacon/bacon-qr-code/src/BaconQrCode/Renderer/Text/Html.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/edcon-v2.0/assets/php/tp/lib/qrcode/vendor/bacon/bacon-qr-code/src/BaconQrCode/Renderer/Text/Plain.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/edcon-v2.0/assets/php/tp/lib/qrcode/vendor/bacon/bacon-qr-code/src/BaconQrCode/Writer.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/edcon-v2.0/assets/php/tp/lib/qrcode/vendor/bacon/bacon-qr-code/tests/BaconQrCode/Common/BitArrayTest.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/edcon-v2.0/assets/php/tp/lib/qrcode/vendor/bacon/bacon-qr-code/tests/BaconQrCode/Common/BitMatrixTest.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/edcon-v2.0/assets/php/tp/lib/qrcode/vendor/bacon/bacon-qr-code/tests/BaconQrCode/Common/BitUtilsTest.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/edcon-v2.0/assets/php/tp/lib/qrcode/vendor/bacon/bacon-qr-code/tests/BaconQrCode/Common/ErrorCorrectionLevelTest.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/edcon-v2.0/assets/php/tp/lib/qrcode/vendor/bacon/bacon-qr-code/tests/BaconQrCode/Common/FormatInformationTest.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/edcon-v2.0/assets/php/tp/lib/qrcode/vendor/bacon/bacon-qr-code/tests/BaconQrCode/Common/ModeTest.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/edcon-v2.0/assets/php/tp/lib/qrcode/vendor/bacon/bacon-qr-code/tests/BaconQrCode/Common/ReedSolomonCodecTest.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/edcon-v2.0/assets/php/tp/lib/qrcode/vendor/bacon/bacon-qr-code/tests/BaconQrCode/Common/VersionTest.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/edcon-v2.0/assets/php/tp/lib/qrcode/vendor/bacon/bacon-qr-code/tests/BaconQrCode/Encoder/EncoderTest.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/edcon-v2.0/assets/php/tp/lib/qrcode/vendor/bacon/bacon-qr-code/tests/BaconQrCode/Encoder/MaskUtilTest.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/edcon-v2.0/assets/php/tp/lib/qrcode/vendor/bacon/bacon-qr-code/tests/BaconQrCode/Encoder/MatrixUtilTest.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/edcon-v2.0/assets/php/tp/lib/qrcode/vendor/bacon/bacon-qr-code/tests/BaconQrCode/Renderer/Text/HtmlTest.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/edcon-v2.0/assets/php/tp/lib/qrcode/vendor/bacon/bacon-qr-code/tests/BaconQrCode/Renderer/Text/TextTest.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/edcon-v2.0/assets/php/tp/lib/qrcode/vendor/bacon/bacon-qr-code/tests/bootstrap.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/edcon-v2.0/assets/php/tp/lib/qrcode/vendor/bacon/bacon-qr-code/tests/phpunit.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/edcon-v2.0/assets/php/tp/lib/qrcode/vendor/composer/ClassLoader.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/edcon-v2.0/assets/php/tp/lib/qrcode/vendor/composer/LICENSE" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/edcon-v2.0/assets/php/tp/lib/qrcode/vendor/composer/autoload_classmap.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/edcon-v2.0/assets/php/tp/lib/qrcode/vendor/composer/autoload_files.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/edcon-v2.0/assets/php/tp/lib/qrcode/vendor/composer/autoload_namespaces.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/edcon-v2.0/assets/php/tp/lib/qrcode/vendor/composer/autoload_psr4.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/edcon-v2.0/assets/php/tp/lib/qrcode/vendor/composer/autoload_real.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/edcon-v2.0/assets/php/tp/lib/qrcode/vendor/composer/autoload_static.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/edcon-v2.0/assets/php/tp/lib/qrcode/vendor/composer/installed.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/edcon-v2.0/assets/php/tp/lib/qrcode/vendor/endroid/qrcode/.gitignore" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/edcon-v2.0/assets/php/tp/lib/qrcode/vendor/endroid/qrcode/.travis.yml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/edcon-v2.0/assets/php/tp/lib/qrcode/vendor/endroid/qrcode/LICENSE" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/edcon-v2.0/assets/php/tp/lib/qrcode/vendor/endroid/qrcode/README.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/edcon-v2.0/assets/php/tp/lib/qrcode/vendor/endroid/qrcode/assets/noto_sans.otf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/edcon-v2.0/assets/php/tp/lib/qrcode/vendor/endroid/qrcode/assets/open_sans.ttf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/edcon-v2.0/assets/php/tp/lib/qrcode/vendor/endroid/qrcode/assets/symfony.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/edcon-v2.0/assets/php/tp/lib/qrcode/vendor/endroid/qrcode/composer.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/edcon-v2.0/assets/php/tp/lib/qrcode/vendor/endroid/qrcode/phpunit.xml.dist" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/edcon-v2.0/assets/php/tp/lib/qrcode/vendor/endroid/qrcode/src/Bundle/QrCodeBundle/Controller/QrCodeController.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/edcon-v2.0/assets/php/tp/lib/qrcode/vendor/endroid/qrcode/src/Bundle/QrCodeBundle/DependencyInjection/Compiler/WriterRegistryCompilerPass.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/edcon-v2.0/assets/php/tp/lib/qrcode/vendor/endroid/qrcode/src/Bundle/QrCodeBundle/DependencyInjection/Configuration.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/edcon-v2.0/assets/php/tp/lib/qrcode/vendor/endroid/qrcode/src/Bundle/QrCodeBundle/DependencyInjection/EndroidQrCodeExtension.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/edcon-v2.0/assets/php/tp/lib/qrcode/vendor/endroid/qrcode/src/Bundle/QrCodeBundle/EndroidQrCodeBundle.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/edcon-v2.0/assets/php/tp/lib/qrcode/vendor/endroid/qrcode/src/Bundle/QrCodeBundle/Resources/config/routing.yml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/edcon-v2.0/assets/php/tp/lib/qrcode/vendor/endroid/qrcode/src/Bundle/QrCodeBundle/Resources/config/services.yml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/edcon-v2.0/assets/php/tp/lib/qrcode/vendor/endroid/qrcode/src/Bundle/QrCodeBundle/Resources/views/QrCode/twigFunctions.html.twig" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/edcon-v2.0/assets/php/tp/lib/qrcode/vendor/endroid/qrcode/src/ErrorCorrectionLevel.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/edcon-v2.0/assets/php/tp/lib/qrcode/vendor/endroid/qrcode/src/Exception/InvalidPathException.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/edcon-v2.0/assets/php/tp/lib/qrcode/vendor/endroid/qrcode/src/Exception/InvalidWriterException.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/edcon-v2.0/assets/php/tp/lib/qrcode/vendor/endroid/qrcode/src/Exception/MissingFunctionException.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/edcon-v2.0/assets/php/tp/lib/qrcode/vendor/endroid/qrcode/src/Exception/QrCodeException.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/edcon-v2.0/assets/php/tp/lib/qrcode/vendor/endroid/qrcode/src/Exception/UnsupportedExtensionException.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/edcon-v2.0/assets/php/tp/lib/qrcode/vendor/endroid/qrcode/src/Exception/ValidationException.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/edcon-v2.0/assets/php/tp/lib/qrcode/vendor/endroid/qrcode/src/Factory/QrCodeFactory.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/edcon-v2.0/assets/php/tp/lib/qrcode/vendor/endroid/qrcode/src/LabelAlignment.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/edcon-v2.0/assets/php/tp/lib/qrcode/vendor/endroid/qrcode/src/QrCode.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/edcon-v2.0/assets/php/tp/lib/qrcode/vendor/endroid/qrcode/src/QrCodeInterface.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/edcon-v2.0/assets/php/tp/lib/qrcode/vendor/endroid/qrcode/src/StaticWriterRegistry.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/edcon-v2.0/assets/php/tp/lib/qrcode/vendor/endroid/qrcode/src/Twig/Extension/QrCodeExtension.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/edcon-v2.0/assets/php/tp/lib/qrcode/vendor/endroid/qrcode/src/Writer/AbstractBaconWriter.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/edcon-v2.0/assets/php/tp/lib/qrcode/vendor/endroid/qrcode/src/Writer/AbstractWriter.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/edcon-v2.0/assets/php/tp/lib/qrcode/vendor/endroid/qrcode/src/Writer/BinaryWriter.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/edcon-v2.0/assets/php/tp/lib/qrcode/vendor/endroid/qrcode/src/Writer/DebugWriter.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/edcon-v2.0/assets/php/tp/lib/qrcode/vendor/endroid/qrcode/src/Writer/EpsWriter.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/edcon-v2.0/assets/php/tp/lib/qrcode/vendor/endroid/qrcode/src/Writer/PngWriter.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/edcon-v2.0/assets/php/tp/lib/qrcode/vendor/endroid/qrcode/src/Writer/SvgWriter.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/edcon-v2.0/assets/php/tp/lib/qrcode/vendor/endroid/qrcode/src/Writer/WriterInterface.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/edcon-v2.0/assets/php/tp/lib/qrcode/vendor/endroid/qrcode/src/WriterRegistry.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/edcon-v2.0/assets/php/tp/lib/qrcode/vendor/endroid/qrcode/src/WriterRegistryInterface.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/edcon-v2.0/assets/php/tp/lib/qrcode/vendor/endroid/qrcode/tests/Bundle/Controller/QrCodeControllerTest.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/edcon-v2.0/assets/php/tp/lib/qrcode/vendor/endroid/qrcode/tests/Bundle/EndroidQrCodeBundleTest.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/edcon-v2.0/assets/php/tp/lib/qrcode/vendor/endroid/qrcode/tests/Bundle/app/.gitignore" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/edcon-v2.0/assets/php/tp/lib/qrcode/vendor/endroid/qrcode/tests/Bundle/app/AppKernel.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/edcon-v2.0/assets/php/tp/lib/qrcode/vendor/endroid/qrcode/tests/Bundle/app/bootstrap.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/edcon-v2.0/assets/php/tp/lib/qrcode/vendor/endroid/qrcode/tests/Bundle/app/config/config.yml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/edcon-v2.0/assets/php/tp/lib/qrcode/vendor/endroid/qrcode/tests/Bundle/app/config/routing.yml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/edcon-v2.0/assets/php/tp/lib/qrcode/vendor/endroid/qrcode/tests/QrCodeTest.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/edcon-v2.0/assets/php/tp/lib/qrcode/vendor/khanamiryan/qrcode-detector-decoder/.gitignore" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/edcon-v2.0/assets/php/tp/lib/qrcode/vendor/khanamiryan/qrcode-detector-decoder/README.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/edcon-v2.0/assets/php/tp/lib/qrcode/vendor/khanamiryan/qrcode-detector-decoder/composer.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/edcon-v2.0/assets/php/tp/lib/qrcode/vendor/khanamiryan/qrcode-detector-decoder/lib/Binarizer.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/edcon-v2.0/assets/php/tp/lib/qrcode/vendor/khanamiryan/qrcode-detector-decoder/lib/BinaryBitmap.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/edcon-v2.0/assets/php/tp/lib/qrcode/vendor/khanamiryan/qrcode-detector-decoder/lib/ChecksumException.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/edcon-v2.0/assets/php/tp/lib/qrcode/vendor/khanamiryan/qrcode-detector-decoder/lib/FormatException.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/edcon-v2.0/assets/php/tp/lib/qrcode/vendor/khanamiryan/qrcode-detector-decoder/lib/GDLuminanceSource.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/edcon-v2.0/assets/php/tp/lib/qrcode/vendor/khanamiryan/qrcode-detector-decoder/lib/IMagickLuminanceSource.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/edcon-v2.0/assets/php/tp/lib/qrcode/vendor/khanamiryan/qrcode-detector-decoder/lib/LuminanceSource.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/edcon-v2.0/assets/php/tp/lib/qrcode/vendor/khanamiryan/qrcode-detector-decoder/lib/NotFoundException.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/edcon-v2.0/assets/php/tp/lib/qrcode/vendor/khanamiryan/qrcode-detector-decoder/lib/PlanarYUVLuminanceSource.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/edcon-v2.0/assets/php/tp/lib/qrcode/vendor/khanamiryan/qrcode-detector-decoder/lib/QrReader.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/edcon-v2.0/assets/php/tp/lib/qrcode/vendor/khanamiryan/qrcode-detector-decoder/lib/RGBLuminanceSource.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/edcon-v2.0/assets/php/tp/lib/qrcode/vendor/khanamiryan/qrcode-detector-decoder/lib/Reader.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/edcon-v2.0/assets/php/tp/lib/qrcode/vendor/khanamiryan/qrcode-detector-decoder/lib/ReaderException.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/edcon-v2.0/assets/php/tp/lib/qrcode/vendor/khanamiryan/qrcode-detector-decoder/lib/Result.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/edcon-v2.0/assets/php/tp/lib/qrcode/vendor/khanamiryan/qrcode-detector-decoder/lib/ResultPoint.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/edcon-v2.0/assets/php/tp/lib/qrcode/vendor/khanamiryan/qrcode-detector-decoder/lib/common/AbstractEnum.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/edcon-v2.0/assets/php/tp/lib/qrcode/vendor/khanamiryan/qrcode-detector-decoder/lib/common/BitArray.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/edcon-v2.0/assets/php/tp/lib/qrcode/vendor/khanamiryan/qrcode-detector-decoder/lib/common/BitMatrix.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/edcon-v2.0/assets/php/tp/lib/qrcode/vendor/khanamiryan/qrcode-detector-decoder/lib/common/BitSource.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/edcon-v2.0/assets/php/tp/lib/qrcode/vendor/khanamiryan/qrcode-detector-decoder/lib/common/CharacterSetEci.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/edcon-v2.0/assets/php/tp/lib/qrcode/vendor/khanamiryan/qrcode-detector-decoder/lib/common/DecoderResult.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/edcon-v2.0/assets/php/tp/lib/qrcode/vendor/khanamiryan/qrcode-detector-decoder/lib/common/DefaultGridSampler.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/edcon-v2.0/assets/php/tp/lib/qrcode/vendor/khanamiryan/qrcode-detector-decoder/lib/common/DetectorResult.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/edcon-v2.0/assets/php/tp/lib/qrcode/vendor/khanamiryan/qrcode-detector-decoder/lib/common/GlobalHistogramBinarizer.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/edcon-v2.0/assets/php/tp/lib/qrcode/vendor/khanamiryan/qrcode-detector-decoder/lib/common/GridSampler.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/edcon-v2.0/assets/php/tp/lib/qrcode/vendor/khanamiryan/qrcode-detector-decoder/lib/common/HybridBinarizer.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/edcon-v2.0/assets/php/tp/lib/qrcode/vendor/khanamiryan/qrcode-detector-decoder/lib/common/PerspectiveTransform.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/edcon-v2.0/assets/php/tp/lib/qrcode/vendor/khanamiryan/qrcode-detector-decoder/lib/common/customFunctions.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/edcon-v2.0/assets/php/tp/lib/qrcode/vendor/khanamiryan/qrcode-detector-decoder/lib/common/detector/MathUtils.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/edcon-v2.0/assets/php/tp/lib/qrcode/vendor/khanamiryan/qrcode-detector-decoder/lib/common/detector/MonochromeRectangleDetector.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/edcon-v2.0/assets/php/tp/lib/qrcode/vendor/khanamiryan/qrcode-detector-decoder/lib/common/reedsolomon/GenericGF.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/edcon-v2.0/assets/php/tp/lib/qrcode/vendor/khanamiryan/qrcode-detector-decoder/lib/common/reedsolomon/GenericGFPoly.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/edcon-v2.0/assets/php/tp/lib/qrcode/vendor/khanamiryan/qrcode-detector-decoder/lib/common/reedsolomon/ReedSolomonDecoder.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/edcon-v2.0/assets/php/tp/lib/qrcode/vendor/khanamiryan/qrcode-detector-decoder/lib/common/reedsolomon/ReedSolomonException.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/edcon-v2.0/assets/php/tp/lib/qrcode/vendor/khanamiryan/qrcode-detector-decoder/lib/qrcode/QRCodeReader.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/edcon-v2.0/assets/php/tp/lib/qrcode/vendor/khanamiryan/qrcode-detector-decoder/lib/qrcode/decoder/BitMatrixParser.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/edcon-v2.0/assets/php/tp/lib/qrcode/vendor/khanamiryan/qrcode-detector-decoder/lib/qrcode/decoder/DataBlock.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/edcon-v2.0/assets/php/tp/lib/qrcode/vendor/khanamiryan/qrcode-detector-decoder/lib/qrcode/decoder/DataMask.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/edcon-v2.0/assets/php/tp/lib/qrcode/vendor/khanamiryan/qrcode-detector-decoder/lib/qrcode/decoder/DecodedBitStreamParser.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/edcon-v2.0/assets/php/tp/lib/qrcode/vendor/khanamiryan/qrcode-detector-decoder/lib/qrcode/decoder/Decoder.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/edcon-v2.0/assets/php/tp/lib/qrcode/vendor/khanamiryan/qrcode-detector-decoder/lib/qrcode/decoder/ErrorCorrectionLevel.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/edcon-v2.0/assets/php/tp/lib/qrcode/vendor/khanamiryan/qrcode-detector-decoder/lib/qrcode/decoder/FormatInformation.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/edcon-v2.0/assets/php/tp/lib/qrcode/vendor/khanamiryan/qrcode-detector-decoder/lib/qrcode/decoder/Mode.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/edcon-v2.0/assets/php/tp/lib/qrcode/vendor/khanamiryan/qrcode-detector-decoder/lib/qrcode/decoder/Version.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/edcon-v2.0/assets/php/tp/lib/qrcode/vendor/khanamiryan/qrcode-detector-decoder/lib/qrcode/detector/AlignmentPattern.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/edcon-v2.0/assets/php/tp/lib/qrcode/vendor/khanamiryan/qrcode-detector-decoder/lib/qrcode/detector/AlignmentPatternFinder.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/edcon-v2.0/assets/php/tp/lib/qrcode/vendor/khanamiryan/qrcode-detector-decoder/lib/qrcode/detector/Detector.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/edcon-v2.0/assets/php/tp/lib/qrcode/vendor/khanamiryan/qrcode-detector-decoder/lib/qrcode/detector/FinderPattern.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/edcon-v2.0/assets/php/tp/lib/qrcode/vendor/khanamiryan/qrcode-detector-decoder/lib/qrcode/detector/FinderPatternFinder.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/edcon-v2.0/assets/php/tp/lib/qrcode/vendor/khanamiryan/qrcode-detector-decoder/lib/qrcode/detector/FinderPatternInfo.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/edcon-v2.0/assets/php/tp/lib/qrcode/vendor/khanamiryan/qrcode-detector-decoder/phpunit.xml.dist" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/edcon-v2.0/assets/php/tp/lib/qrcode/vendor/khanamiryan/qrcode-detector-decoder/tests/QrReaderTest.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/edcon-v2.0/assets/php/tp/lib/qrcode/vendor/khanamiryan/qrcode-detector-decoder/tests/bootstrap.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/edcon-v2.0/assets/php/tp/lib/qrcode/vendor/khanamiryan/qrcode-detector-decoder/tests/qrcodes/hello_world.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/edcon-v2.0/assets/php/tp/lib/qrcode/vendor/myclabs/php-enum/.gitattributes" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/edcon-v2.0/assets/php/tp/lib/qrcode/vendor/myclabs/php-enum/.gitignore" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/edcon-v2.0/assets/php/tp/lib/qrcode/vendor/myclabs/php-enum/LICENSE" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/edcon-v2.0/assets/php/tp/lib/qrcode/vendor/myclabs/php-enum/README.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/edcon-v2.0/assets/php/tp/lib/qrcode/vendor/myclabs/php-enum/composer.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/edcon-v2.0/assets/php/tp/lib/qrcode/vendor/myclabs/php-enum/src/Enum.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/edcon-v2.0/assets/php/tp/lib/qrcode/vendor/paragonie/random_compat/LICENSE" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/edcon-v2.0/assets/php/tp/lib/qrcode/vendor/paragonie/random_compat/build-phar.sh" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/edcon-v2.0/assets/php/tp/lib/qrcode/vendor/paragonie/random_compat/composer.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/edcon-v2.0/assets/php/tp/lib/qrcode/vendor/paragonie/random_compat/dist/random_compat.phar.pubkey" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/edcon-v2.0/assets/php/tp/lib/qrcode/vendor/paragonie/random_compat/dist/random_compat.phar.pubkey.asc" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/edcon-v2.0/assets/php/tp/lib/qrcode/vendor/paragonie/random_compat/lib/byte_safe_strings.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/edcon-v2.0/assets/php/tp/lib/qrcode/vendor/paragonie/random_compat/lib/cast_to_int.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/edcon-v2.0/assets/php/tp/lib/qrcode/vendor/paragonie/random_compat/lib/error_polyfill.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/edcon-v2.0/assets/php/tp/lib/qrcode/vendor/paragonie/random_compat/lib/random.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/edcon-v2.0/assets/php/tp/lib/qrcode/vendor/paragonie/random_compat/lib/random_bytes_com_dotnet.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/edcon-v2.0/assets/php/tp/lib/qrcode/vendor/paragonie/random_compat/lib/random_bytes_dev_urandom.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/edcon-v2.0/assets/php/tp/lib/qrcode/vendor/paragonie/random_compat/lib/random_bytes_libsodium.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/edcon-v2.0/assets/php/tp/lib/qrcode/vendor/paragonie/random_compat/lib/random_bytes_libsodium_legacy.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/edcon-v2.0/assets/php/tp/lib/qrcode/vendor/paragonie/random_compat/lib/random_bytes_mcrypt.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/edcon-v2.0/assets/php/tp/lib/qrcode/vendor/paragonie/random_compat/lib/random_int.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/edcon-v2.0/assets/php/tp/lib/qrcode/vendor/paragonie/random_compat/other/build_phar.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/edcon-v2.0/assets/php/tp/lib/qrcode/vendor/paragonie/random_compat/psalm-autoload.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/edcon-v2.0/assets/php/tp/lib/qrcode/vendor/paragonie/random_compat/psalm.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/edcon-v2.0/assets/php/tp/lib/qrcode/vendor/symfony/inflector/Inflector.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/edcon-v2.0/assets/php/tp/lib/qrcode/vendor/symfony/inflector/LICENSE" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/edcon-v2.0/assets/php/tp/lib/qrcode/vendor/symfony/inflector/README.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/edcon-v2.0/assets/php/tp/lib/qrcode/vendor/symfony/inflector/Tests/InflectorTest.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/edcon-v2.0/assets/php/tp/lib/qrcode/vendor/symfony/inflector/composer.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/edcon-v2.0/assets/php/tp/lib/qrcode/vendor/symfony/inflector/phpunit.xml.dist" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/edcon-v2.0/assets/php/tp/lib/qrcode/vendor/symfony/options-resolver/.gitignore" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/edcon-v2.0/assets/php/tp/lib/qrcode/vendor/symfony/options-resolver/CHANGELOG.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/edcon-v2.0/assets/php/tp/lib/qrcode/vendor/symfony/options-resolver/Debug/OptionsResolverIntrospector.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/edcon-v2.0/assets/php/tp/lib/qrcode/vendor/symfony/options-resolver/Exception/AccessException.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/edcon-v2.0/assets/php/tp/lib/qrcode/vendor/symfony/options-resolver/Exception/ExceptionInterface.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/edcon-v2.0/assets/php/tp/lib/qrcode/vendor/symfony/options-resolver/Exception/InvalidArgumentException.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/edcon-v2.0/assets/php/tp/lib/qrcode/vendor/symfony/options-resolver/Exception/InvalidOptionsException.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/edcon-v2.0/assets/php/tp/lib/qrcode/vendor/symfony/options-resolver/Exception/MissingOptionsException.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/edcon-v2.0/assets/php/tp/lib/qrcode/vendor/symfony/options-resolver/Exception/NoConfigurationException.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/edcon-v2.0/assets/php/tp/lib/qrcode/vendor/symfony/options-resolver/Exception/NoSuchOptionException.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/edcon-v2.0/assets/php/tp/lib/qrcode/vendor/symfony/options-resolver/Exception/OptionDefinitionException.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/edcon-v2.0/assets/php/tp/lib/qrcode/vendor/symfony/options-resolver/Exception/UndefinedOptionsException.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/edcon-v2.0/assets/php/tp/lib/qrcode/vendor/symfony/options-resolver/LICENSE" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/edcon-v2.0/assets/php/tp/lib/qrcode/vendor/symfony/options-resolver/Options.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/edcon-v2.0/assets/php/tp/lib/qrcode/vendor/symfony/options-resolver/OptionsResolver.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/edcon-v2.0/assets/php/tp/lib/qrcode/vendor/symfony/options-resolver/README.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/edcon-v2.0/assets/php/tp/lib/qrcode/vendor/symfony/options-resolver/Tests/Debug/OptionsResolverIntrospectorTest.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/edcon-v2.0/assets/php/tp/lib/qrcode/vendor/symfony/options-resolver/Tests/OptionsResolverTest.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/edcon-v2.0/assets/php/tp/lib/qrcode/vendor/symfony/options-resolver/composer.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/edcon-v2.0/assets/php/tp/lib/qrcode/vendor/symfony/options-resolver/phpunit.xml.dist" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/edcon-v2.0/assets/php/tp/lib/qrcode/vendor/symfony/polyfill-php70/LICENSE" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/edcon-v2.0/assets/php/tp/lib/qrcode/vendor/symfony/polyfill-php70/Php70.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/edcon-v2.0/assets/php/tp/lib/qrcode/vendor/symfony/polyfill-php70/README.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/edcon-v2.0/assets/php/tp/lib/qrcode/vendor/symfony/polyfill-php70/Resources/stubs/ArithmeticError.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/edcon-v2.0/assets/php/tp/lib/qrcode/vendor/symfony/polyfill-php70/Resources/stubs/AssertionError.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/edcon-v2.0/assets/php/tp/lib/qrcode/vendor/symfony/polyfill-php70/Resources/stubs/DivisionByZeroError.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/edcon-v2.0/assets/php/tp/lib/qrcode/vendor/symfony/polyfill-php70/Resources/stubs/Error.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/edcon-v2.0/assets/php/tp/lib/qrcode/vendor/symfony/polyfill-php70/Resources/stubs/ParseError.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/edcon-v2.0/assets/php/tp/lib/qrcode/vendor/symfony/polyfill-php70/Resources/stubs/SessionUpdateTimestampHandlerInterface.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/edcon-v2.0/assets/php/tp/lib/qrcode/vendor/symfony/polyfill-php70/Resources/stubs/TypeError.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/edcon-v2.0/assets/php/tp/lib/qrcode/vendor/symfony/polyfill-php70/bootstrap.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/edcon-v2.0/assets/php/tp/lib/qrcode/vendor/symfony/polyfill-php70/composer.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/edcon-v2.0/assets/php/tp/lib/qrcode/vendor/symfony/property-access/.gitignore" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/edcon-v2.0/assets/php/tp/lib/qrcode/vendor/symfony/property-access/CHANGELOG.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/edcon-v2.0/assets/php/tp/lib/qrcode/vendor/symfony/property-access/Exception/AccessException.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/edcon-v2.0/assets/php/tp/lib/qrcode/vendor/symfony/property-access/Exception/ExceptionInterface.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/edcon-v2.0/assets/php/tp/lib/qrcode/vendor/symfony/property-access/Exception/InvalidArgumentException.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/edcon-v2.0/assets/php/tp/lib/qrcode/vendor/symfony/property-access/Exception/InvalidPropertyPathException.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/edcon-v2.0/assets/php/tp/lib/qrcode/vendor/symfony/property-access/Exception/NoSuchIndexException.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/edcon-v2.0/assets/php/tp/lib/qrcode/vendor/symfony/property-access/Exception/NoSuchPropertyException.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/edcon-v2.0/assets/php/tp/lib/qrcode/vendor/symfony/property-access/Exception/OutOfBoundsException.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/edcon-v2.0/assets/php/tp/lib/qrcode/vendor/symfony/property-access/Exception/RuntimeException.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/edcon-v2.0/assets/php/tp/lib/qrcode/vendor/symfony/property-access/Exception/UnexpectedTypeException.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/edcon-v2.0/assets/php/tp/lib/qrcode/vendor/symfony/property-access/LICENSE" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/edcon-v2.0/assets/php/tp/lib/qrcode/vendor/symfony/property-access/PropertyAccess.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/edcon-v2.0/assets/php/tp/lib/qrcode/vendor/symfony/property-access/PropertyAccessor.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/edcon-v2.0/assets/php/tp/lib/qrcode/vendor/symfony/property-access/PropertyAccessorBuilder.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/edcon-v2.0/assets/php/tp/lib/qrcode/vendor/symfony/property-access/PropertyAccessorInterface.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/edcon-v2.0/assets/php/tp/lib/qrcode/vendor/symfony/property-access/PropertyPath.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/edcon-v2.0/assets/php/tp/lib/qrcode/vendor/symfony/property-access/PropertyPathBuilder.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/edcon-v2.0/assets/php/tp/lib/qrcode/vendor/symfony/property-access/PropertyPathInterface.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/edcon-v2.0/assets/php/tp/lib/qrcode/vendor/symfony/property-access/PropertyPathIterator.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/edcon-v2.0/assets/php/tp/lib/qrcode/vendor/symfony/property-access/PropertyPathIteratorInterface.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/edcon-v2.0/assets/php/tp/lib/qrcode/vendor/symfony/property-access/README.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/edcon-v2.0/assets/php/tp/lib/qrcode/vendor/symfony/property-access/StringUtil.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/edcon-v2.0/assets/php/tp/lib/qrcode/vendor/symfony/property-access/Tests/Fixtures/NonTraversableArrayObject.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/edcon-v2.0/assets/php/tp/lib/qrcode/vendor/symfony/property-access/Tests/Fixtures/ReturnTyped.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/edcon-v2.0/assets/php/tp/lib/qrcode/vendor/symfony/property-access/Tests/Fixtures/TestClass.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/edcon-v2.0/assets/php/tp/lib/qrcode/vendor/symfony/property-access/Tests/Fixtures/TestClassIsWritable.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/edcon-v2.0/assets/php/tp/lib/qrcode/vendor/symfony/property-access/Tests/Fixtures/TestClassMagicCall.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/edcon-v2.0/assets/php/tp/lib/qrcode/vendor/symfony/property-access/Tests/Fixtures/TestClassMagicGet.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/edcon-v2.0/assets/php/tp/lib/qrcode/vendor/symfony/property-access/Tests/Fixtures/TestClassSetValue.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/edcon-v2.0/assets/php/tp/lib/qrcode/vendor/symfony/property-access/Tests/Fixtures/TestClassTypeErrorInsideCall.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/edcon-v2.0/assets/php/tp/lib/qrcode/vendor/symfony/property-access/Tests/Fixtures/Ticket5775Object.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/edcon-v2.0/assets/php/tp/lib/qrcode/vendor/symfony/property-access/Tests/Fixtures/TraversableArrayObject.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/edcon-v2.0/assets/php/tp/lib/qrcode/vendor/symfony/property-access/Tests/Fixtures/TypeHinted.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/edcon-v2.0/assets/php/tp/lib/qrcode/vendor/symfony/property-access/Tests/PropertyAccessorArrayAccessTest.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/edcon-v2.0/assets/php/tp/lib/qrcode/vendor/symfony/property-access/Tests/PropertyAccessorArrayObjectTest.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/edcon-v2.0/assets/php/tp/lib/qrcode/vendor/symfony/property-access/Tests/PropertyAccessorArrayTest.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/edcon-v2.0/assets/php/tp/lib/qrcode/vendor/symfony/property-access/Tests/PropertyAccessorBuilderTest.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/edcon-v2.0/assets/php/tp/lib/qrcode/vendor/symfony/property-access/Tests/PropertyAccessorCollectionTest.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/edcon-v2.0/assets/php/tp/lib/qrcode/vendor/symfony/property-access/Tests/PropertyAccessorNonTraversableArrayObjectTest.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/edcon-v2.0/assets/php/tp/lib/qrcode/vendor/symfony/property-access/Tests/PropertyAccessorTest.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/edcon-v2.0/assets/php/tp/lib/qrcode/vendor/symfony/property-access/Tests/PropertyAccessorTraversableArrayObjectTest.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/edcon-v2.0/assets/php/tp/lib/qrcode/vendor/symfony/property-access/Tests/PropertyPathBuilderTest.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/edcon-v2.0/assets/php/tp/lib/qrcode/vendor/symfony/property-access/Tests/PropertyPathTest.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/edcon-v2.0/assets/php/tp/lib/qrcode/vendor/symfony/property-access/Tests/StringUtilTest.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/edcon-v2.0/assets/php/tp/lib/qrcode/vendor/symfony/property-access/composer.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/edcon-v2.0/assets/php/tp/lib/qrcode/vendor/symfony/property-access/phpunit.xml.dist" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/edcon-v2.0/assets/php/tp/lib/vendor/autoload.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/edcon-v2.0/assets/php/tp/lib/vendor/composer/ClassLoader.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/edcon-v2.0/assets/php/tp/lib/vendor/composer/LICENSE" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/edcon-v2.0/assets/php/tp/lib/vendor/composer/autoload_classmap.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/edcon-v2.0/assets/php/tp/lib/vendor/composer/autoload_namespaces.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/edcon-v2.0/assets/php/tp/lib/vendor/composer/autoload_psr4.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/edcon-v2.0/assets/php/tp/lib/vendor/composer/autoload_real.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/edcon-v2.0/assets/php/tp/lib/vendor/composer/autoload_static.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/edcon-v2.0/assets/php/tp/lib/vendor/composer/installed.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/edcon-v2.0/assets/php/tp/lib/vendor/omise/omise-php/.gitignore" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/edcon-v2.0/assets/php/tp/lib/vendor/omise/omise-php/CHANGELOG.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/edcon-v2.0/assets/php/tp/lib/vendor/omise/omise-php/LICENSE" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/edcon-v2.0/assets/php/tp/lib/vendor/omise/omise-php/README.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/edcon-v2.0/assets/php/tp/lib/vendor/omise/omise-php/circle.yml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/edcon-v2.0/assets/php/tp/lib/vendor/omise/omise-php/composer.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/edcon-v2.0/assets/php/tp/lib/vendor/omise/omise-php/data/ca_certificates.pem" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/edcon-v2.0/assets/php/tp/lib/vendor/omise/omise-php/lib/Omise.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/edcon-v2.0/assets/php/tp/lib/vendor/omise/omise-php/lib/omise/OmiseAccount.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/edcon-v2.0/assets/php/tp/lib/vendor/omise/omise-php/lib/omise/OmiseBalance.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/edcon-v2.0/assets/php/tp/lib/vendor/omise/omise-php/lib/omise/OmiseCard.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/edcon-v2.0/assets/php/tp/lib/vendor/omise/omise-php/lib/omise/OmiseCardList.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/edcon-v2.0/assets/php/tp/lib/vendor/omise/omise-php/lib/omise/OmiseCharge.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/edcon-v2.0/assets/php/tp/lib/vendor/omise/omise-php/lib/omise/OmiseCustomer.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/edcon-v2.0/assets/php/tp/lib/vendor/omise/omise-php/lib/omise/OmiseDispute.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/edcon-v2.0/assets/php/tp/lib/vendor/omise/omise-php/lib/omise/OmiseEvent.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/edcon-v2.0/assets/php/tp/lib/vendor/omise/omise-php/lib/omise/OmiseForex.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/edcon-v2.0/assets/php/tp/lib/vendor/omise/omise-php/lib/omise/OmiseLink.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/edcon-v2.0/assets/php/tp/lib/vendor/omise/omise-php/lib/omise/OmiseOccurrence.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/edcon-v2.0/assets/php/tp/lib/vendor/omise/omise-php/lib/omise/OmiseOccurrenceList.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/edcon-v2.0/assets/php/tp/lib/vendor/omise/omise-php/lib/omise/OmiseRecipient.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/edcon-v2.0/assets/php/tp/lib/vendor/omise/omise-php/lib/omise/OmiseRefund.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/edcon-v2.0/assets/php/tp/lib/vendor/omise/omise-php/lib/omise/OmiseRefundList.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/edcon-v2.0/assets/php/tp/lib/vendor/omise/omise-php/lib/omise/OmiseSchedule.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/edcon-v2.0/assets/php/tp/lib/vendor/omise/omise-php/lib/omise/OmiseScheduleList.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/edcon-v2.0/assets/php/tp/lib/vendor/omise/omise-php/lib/omise/OmiseScheduler.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/edcon-v2.0/assets/php/tp/lib/vendor/omise/omise-php/lib/omise/OmiseSearch.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/edcon-v2.0/assets/php/tp/lib/vendor/omise/omise-php/lib/omise/OmiseSource.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/edcon-v2.0/assets/php/tp/lib/vendor/omise/omise-php/lib/omise/OmiseTest.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/edcon-v2.0/assets/php/tp/lib/vendor/omise/omise-php/lib/omise/OmiseToken.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/edcon-v2.0/assets/php/tp/lib/vendor/omise/omise-php/lib/omise/OmiseTransaction.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/edcon-v2.0/assets/php/tp/lib/vendor/omise/omise-php/lib/omise/OmiseTransfer.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/edcon-v2.0/assets/php/tp/lib/vendor/omise/omise-php/lib/omise/exception/OmiseExceptions.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/edcon-v2.0/assets/php/tp/lib/vendor/omise/omise-php/lib/omise/res/OmiseApiResource.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/edcon-v2.0/assets/php/tp/lib/vendor/omise/omise-php/lib/omise/res/OmiseVaultResource.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/edcon-v2.0/assets/php/tp/lib/vendor/omise/omise-php/lib/omise/res/obj/OmiseObject.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/edcon-v2.0/assets/php/tp/lib/vendor/omise/omise-php/phpunit.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/edcon-v2.0/assets/php/tp/lib/vendor/omise/omise-php/tests/fixtures/api.omise.co/account-get.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/edcon-v2.0/assets/php/tp/lib/vendor/omise/omise-php/tests/fixtures/api.omise.co/balance-get.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/edcon-v2.0/assets/php/tp/lib/vendor/omise/omise-php/tests/fixtures/api.omise.co/charges-get.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/edcon-v2.0/assets/php/tp/lib/vendor/omise/omise-php/tests/fixtures/api.omise.co/charges-post.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/edcon-v2.0/assets/php/tp/lib/vendor/omise/omise-php/tests/fixtures/api.omise.co/charges/chrg_test_4zmrjgxdh4ycj2qncoj-get.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/edcon-v2.0/assets/php/tp/lib/vendor/omise/omise-php/tests/fixtures/api.omise.co/charges/chrg_test_4zmrjgxdh4ycj2qncoj-patch.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/edcon-v2.0/assets/php/tp/lib/vendor/omise/omise-php/tests/fixtures/api.omise.co/charges/chrg_test_4zmrjgxdh4ycj2qncoj/capture-post.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/edcon-v2.0/assets/php/tp/lib/vendor/omise/omise-php/tests/fixtures/api.omise.co/charges/chrg_test_4zmrjgxdh4ycj2qncoj/refunds-get.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/edcon-v2.0/assets/php/tp/lib/vendor/omise/omise-php/tests/fixtures/api.omise.co/charges/chrg_test_4zmrjgxdh4ycj2qncoj/refunds-post.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/edcon-v2.0/assets/php/tp/lib/vendor/omise/omise-php/tests/fixtures/api.omise.co/charges/chrg_test_4zmrjgxdh4ycj2qncoj/refunds/rfnd_test_4zmrjhlbqy587sw6fwt-get.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/edcon-v2.0/assets/php/tp/lib/vendor/omise/omise-php/tests/fixtures/api.omise.co/charges/chrg_test_53z5zoeovi39e1erbj0-get.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/edcon-v2.0/assets/php/tp/lib/vendor/omise/omise-php/tests/fixtures/api.omise.co/charges/chrg_test_53z5zoeovi39e1erbj0/reverse-post.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/edcon-v2.0/assets/php/tp/lib/vendor/omise/omise-php/tests/fixtures/api.omise.co/charges/schedules-get.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/edcon-v2.0/assets/php/tp/lib/vendor/omise/omise-php/tests/fixtures/api.omise.co/customers-get.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/edcon-v2.0/assets/php/tp/lib/vendor/omise/omise-php/tests/fixtures/api.omise.co/customers-post.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/edcon-v2.0/assets/php/tp/lib/vendor/omise/omise-php/tests/fixtures/api.omise.co/customers/cust_test_4zmrjg2hct06ybwobqc-delete.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/edcon-v2.0/assets/php/tp/lib/vendor/omise/omise-php/tests/fixtures/api.omise.co/customers/cust_test_4zmrjg2hct06ybwobqc-get.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/edcon-v2.0/assets/php/tp/lib/vendor/omise/omise-php/tests/fixtures/api.omise.co/customers/cust_test_4zmrjg2hct06ybwobqc-patch.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/edcon-v2.0/assets/php/tp/lib/vendor/omise/omise-php/tests/fixtures/api.omise.co/customers/cust_test_4zmrjg2hct06ybwobqc/cards/card_test_4zmrjfzf0spz3mh63cs-delete.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/edcon-v2.0/assets/php/tp/lib/vendor/omise/omise-php/tests/fixtures/api.omise.co/customers/cust_test_4zmrjg2hct06ybwobqc/cards/card_test_4zmrjfzf0spz3mh63cs-get.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/edcon-v2.0/assets/php/tp/lib/vendor/omise/omise-php/tests/fixtures/api.omise.co/customers/cust_test_4zmrjg2hct06ybwobqc/cards/card_test_4zmrjfzf0spz3mh63cs-patch.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/edcon-v2.0/assets/php/tp/lib/vendor/omise/omise-php/tests/fixtures/api.omise.co/customers/cust_test_5234fzk37pi2mz0cen3-get.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/edcon-v2.0/assets/php/tp/lib/vendor/omise/omise-php/tests/fixtures/api.omise.co/customers/cust_test_5234fzk37pi2mz0cen3/cards-bGltaXQ9MQ-get.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/edcon-v2.0/assets/php/tp/lib/vendor/omise/omise-php/tests/fixtures/api.omise.co/customers/cust_test_5234fzk37pi2mz0cen3/schedules-get.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/edcon-v2.0/assets/php/tp/lib/vendor/omise/omise-php/tests/fixtures/api.omise.co/disputes-get.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/edcon-v2.0/assets/php/tp/lib/vendor/omise/omise-php/tests/fixtures/api.omise.co/disputes/closed-get.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/edcon-v2.0/assets/php/tp/lib/vendor/omise/omise-php/tests/fixtures/api.omise.co/disputes/dspt_test_4zgf15h89w8t775kcm8-get.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/edcon-v2.0/assets/php/tp/lib/vendor/omise/omise-php/tests/fixtures/api.omise.co/disputes/dspt_test_4zgf15h89w8t775kcm8-patch.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/edcon-v2.0/assets/php/tp/lib/vendor/omise/omise-php/tests/fixtures/api.omise.co/disputes/open-get.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/edcon-v2.0/assets/php/tp/lib/vendor/omise/omise-php/tests/fixtures/api.omise.co/disputes/pending-get.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/edcon-v2.0/assets/php/tp/lib/vendor/omise/omise-php/tests/fixtures/api.omise.co/events-get.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/edcon-v2.0/assets/php/tp/lib/vendor/omise/omise-php/tests/fixtures/api.omise.co/events/evnt_test_531zv1nto0a5pimuiza-get.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/edcon-v2.0/assets/php/tp/lib/vendor/omise/omise-php/tests/fixtures/api.omise.co/forex/usd-get.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/edcon-v2.0/assets/php/tp/lib/vendor/omise/omise-php/tests/fixtures/api.omise.co/links-get.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/edcon-v2.0/assets/php/tp/lib/vendor/omise/omise-php/tests/fixtures/api.omise.co/links-post.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/edcon-v2.0/assets/php/tp/lib/vendor/omise/omise-php/tests/fixtures/api.omise.co/links/link_test_56bsanpa365jnlbc7rt-get.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/edcon-v2.0/assets/php/tp/lib/vendor/omise/omise-php/tests/fixtures/api.omise.co/occurrences/occu_test_58dt3strf4m1y7bqii8-get.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/edcon-v2.0/assets/php/tp/lib/vendor/omise/omise-php/tests/fixtures/api.omise.co/recipients-get.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/edcon-v2.0/assets/php/tp/lib/vendor/omise/omise-php/tests/fixtures/api.omise.co/recipients-post.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/edcon-v2.0/assets/php/tp/lib/vendor/omise/omise-php/tests/fixtures/api.omise.co/recipients/recp_test_508a9dytz793gxv9m77-delete.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/edcon-v2.0/assets/php/tp/lib/vendor/omise/omise-php/tests/fixtures/api.omise.co/recipients/recp_test_508a9dytz793gxv9m77-get.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/edcon-v2.0/assets/php/tp/lib/vendor/omise/omise-php/tests/fixtures/api.omise.co/recipients/recp_test_508a9dytz793gxv9m77-patch.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/edcon-v2.0/assets/php/tp/lib/vendor/omise/omise-php/tests/fixtures/api.omise.co/recipients/recp_test_508a9dytz793gxv9m77/schedules-get.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/edcon-v2.0/assets/php/tp/lib/vendor/omise/omise-php/tests/fixtures/api.omise.co/schedules-get.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/edcon-v2.0/assets/php/tp/lib/vendor/omise/omise-php/tests/fixtures/api.omise.co/schedules-post.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/edcon-v2.0/assets/php/tp/lib/vendor/omise/omise-php/tests/fixtures/api.omise.co/schedules/schd_test_585t7iomh2dte3ejxh5-delete.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/edcon-v2.0/assets/php/tp/lib/vendor/omise/omise-php/tests/fixtures/api.omise.co/schedules/schd_test_585t7iomh2dte3ejxh5-get.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/edcon-v2.0/assets/php/tp/lib/vendor/omise/omise-php/tests/fixtures/api.omise.co/schedules/schd_test_585t7iomh2dte3ejxh5/occurrences-get.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/edcon-v2.0/assets/php/tp/lib/vendor/omise/omise-php/tests/fixtures/api.omise.co/search-c2NvcGU9Y2hhcmdl-get.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/edcon-v2.0/assets/php/tp/lib/vendor/omise/omise-php/tests/fixtures/api.omise.co/search-c2NvcGU9Y2hhcmdlJnF1ZXJ5PW9yZGVyJmZpbHRlcnMlNUJjYXB0dXJlZCU1RD10cnVlJnBhZ2U9MSZvcmRlcj1yZXZlcnNlX2Nocm9ub2xvZ2ljYWw-get.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/edcon-v2.0/assets/php/tp/lib/vendor/omise/omise-php/tests/fixtures/api.omise.co/search-c2NvcGU9Y2hhcmdlJnF1ZXJ5PW9yZGVyJmZpbHRlcnMlNUJjYXB0dXJlZCU1RD10cnVlJnBhZ2U9MiZvcmRlcj1yZXZlcnNlX2Nocm9ub2xvZ2ljYWw-get.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/edcon-v2.0/assets/php/tp/lib/vendor/omise/omise-php/tests/fixtures/api.omise.co/search-c2NvcGU9Y2hhcmdlJnF1ZXJ5PWRlbW8-get.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/edcon-v2.0/assets/php/tp/lib/vendor/omise/omise-php/tests/fixtures/api.omise.co/search-c2NvcGU9Y2hhcmdlJnF1ZXJ5PWRlbW8mZmlsdGVycyU1QmNhcHR1cmVkJTVEPXRydWU-get.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/edcon-v2.0/assets/php/tp/lib/vendor/omise/omise-php/tests/fixtures/api.omise.co/search-c2NvcGU9Y2hhcmdlJnF1ZXJ5PWRlbW8mZmlsdGVycyU1QmNhcHR1cmVkJTVEPXRydWUmcGFnZT0xJm9yZGVyPXJldmVyc2VfY2hyb25vbG9naWNhbA-get.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/edcon-v2.0/assets/php/tp/lib/vendor/omise/omise-php/tests/fixtures/api.omise.co/search-c2NvcGU9Y2hhcmdlJnF1ZXJ5PWRlbW8mZmlsdGVycyU1QmNhcHR1cmVkJTVEPXRydWUmcGFnZT0y-get.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/edcon-v2.0/assets/php/tp/lib/vendor/omise/omise-php/tests/fixtures/api.omise.co/search-c2NvcGU9Y2hhcmdlJnF1ZXJ5PWRlbW8mZmlsdGVycyU1QmNhcHR1cmVkJTVEPXRydWUmcGFnZT0yJm9yZGVyPXJldmVyc2VfY2hyb25vbG9naWNhbA-get.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/edcon-v2.0/assets/php/tp/lib/vendor/omise/omise-php/tests/fixtures/api.omise.co/search-c2NvcGU9Y3VzdG9tZXImcXVlcnk9ZG9lJmZpbHRlcnMlNUJjcmVhdGVkJTVEPTIwMTctMDEtMDEuLjIwMTctMDgtMzA-get.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/edcon-v2.0/assets/php/tp/lib/vendor/omise/omise-php/tests/fixtures/api.omise.co/search-c2NvcGU9ZGlzcHV0ZSZxdWVyeT1kZW1vJmZpbHRlcnMlNUJjYXJkX2xhc3RfZGlnaXRzJTVEPTU0NTQ-get.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/edcon-v2.0/assets/php/tp/lib/vendor/omise/omise-php/tests/fixtures/api.omise.co/search-c2NvcGU9bGluayZxdWVyeT1kZW1vJmZpbHRlcnMlNUJ1c2VkJTVEPXRydWUmb3JkZXI9cmV2ZXJzZV9jaHJvbm9sb2dpY2Fs-get.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/edcon-v2.0/assets/php/tp/lib/vendor/omise/omise-php/tests/fixtures/api.omise.co/search-c2NvcGU9cmVjaXBpZW50JnF1ZXJ5PWRlbW8mZmlsdGVycyU1QmFjdGl2ZSU1RD10cnVl-get.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/edcon-v2.0/assets/php/tp/lib/vendor/omise/omise-php/tests/fixtures/api.omise.co/search-c2NvcGU9cmVmdW5kJnF1ZXJ5PSZmaWx0ZXJzJTVCdm9pZGVkJTVEPXRydWU-get.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/edcon-v2.0/assets/php/tp/lib/vendor/omise/omise-php/tests/fixtures/api.omise.co/search-c2NvcGU9dHJhbnNmZXImcXVlcnk9ZGVtbyU0MG9taXNlLmNvJmZpbHRlcnMlNUJjdXJyZW5jeSU1RD10aGI-get.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/edcon-v2.0/assets/php/tp/lib/vendor/omise/omise-php/tests/fixtures/api.omise.co/sources-post.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/edcon-v2.0/assets/php/tp/lib/vendor/omise/omise-php/tests/fixtures/api.omise.co/transactions-get.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/edcon-v2.0/assets/php/tp/lib/vendor/omise/omise-php/tests/fixtures/api.omise.co/transactions/trxn_test_4zmrjhlflnz6id6q0bo-get.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/edcon-v2.0/assets/php/tp/lib/vendor/omise/omise-php/tests/fixtures/api.omise.co/transfers-get.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/edcon-v2.0/assets/php/tp/lib/vendor/omise/omise-php/tests/fixtures/api.omise.co/transfers-post.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/edcon-v2.0/assets/php/tp/lib/vendor/omise/omise-php/tests/fixtures/api.omise.co/transfers/schedules-get.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/edcon-v2.0/assets/php/tp/lib/vendor/omise/omise-php/tests/fixtures/api.omise.co/transfers/trsf_test_4zmrjicrvw7j6uhv1l4-delete.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/edcon-v2.0/assets/php/tp/lib/vendor/omise/omise-php/tests/fixtures/api.omise.co/transfers/trsf_test_4zmrjicrvw7j6uhv1l4-get.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/edcon-v2.0/assets/php/tp/lib/vendor/omise/omise-php/tests/fixtures/api.omise.co/transfers/trsf_test_4zmrjicrvw7j6uhv1l4-patch.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/edcon-v2.0/assets/php/tp/lib/vendor/omise/omise-php/tests/fixtures/vault.omise.co/tokens-post.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/edcon-v2.0/assets/php/tp/lib/vendor/omise/omise-php/tests/fixtures/vault.omise.co/tokens/tokn_test_4zmrjhuk2rndz24a6x0-get.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/edcon-v2.0/assets/php/tp/lib/vendor/omise/omise-php/tests/omise/AccountTest.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/edcon-v2.0/assets/php/tp/lib/vendor/omise/omise-php/tests/omise/BalanceTest.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/edcon-v2.0/assets/php/tp/lib/vendor/omise/omise-php/tests/omise/CardTest.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/edcon-v2.0/assets/php/tp/lib/vendor/omise/omise-php/tests/omise/ChargeTest.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/edcon-v2.0/assets/php/tp/lib/vendor/omise/omise-php/tests/omise/ClassExistsTest.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/edcon-v2.0/assets/php/tp/lib/vendor/omise/omise-php/tests/omise/CustomerTest.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/edcon-v2.0/assets/php/tp/lib/vendor/omise/omise-php/tests/omise/DisputeTest.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/edcon-v2.0/assets/php/tp/lib/vendor/omise/omise-php/tests/omise/EventTest.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/edcon-v2.0/assets/php/tp/lib/vendor/omise/omise-php/tests/omise/ForexTest.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/edcon-v2.0/assets/php/tp/lib/vendor/omise/omise-php/tests/omise/LinkTest.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/edcon-v2.0/assets/php/tp/lib/vendor/omise/omise-php/tests/omise/OccurrenceTest.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/edcon-v2.0/assets/php/tp/lib/vendor/omise/omise-php/tests/omise/RecipientTest.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/edcon-v2.0/assets/php/tp/lib/vendor/omise/omise-php/tests/omise/RefundTest.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/edcon-v2.0/assets/php/tp/lib/vendor/omise/omise-php/tests/omise/ScheduleTest.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/edcon-v2.0/assets/php/tp/lib/vendor/omise/omise-php/tests/omise/SchedulerTest.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/edcon-v2.0/assets/php/tp/lib/vendor/omise/omise-php/tests/omise/SearchTest.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/edcon-v2.0/assets/php/tp/lib/vendor/omise/omise-php/tests/omise/SourceTest.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/edcon-v2.0/assets/php/tp/lib/vendor/omise/omise-php/tests/omise/TestConfig.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/edcon-v2.0/assets/php/tp/lib/vendor/omise/omise-php/tests/omise/TokenTest.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/edcon-v2.0/assets/php/tp/lib/vendor/omise/omise-php/tests/omise/TransactionTest.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/edcon-v2.0/assets/php/tp/lib/vendor/omise/omise-php/tests/omise/TransferTest.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/edcon-v2.0/assets/php/tp/lib/vendor/omise/omise-php/tests/omise/exception/OmiseExceptionTest.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/edcon-v2.0/assets/php/tp/lib/vendor/omise/omise-php/tests/omise/res/obj/OmiseObjectTest.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/edcon-v2.0/assets/php/tp/phpunit.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/edcon-v2.0/assets/php/tp/public/.htaccess" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/edcon-v2.0/assets/php/tp/public/error_log" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/edcon-v2.0/assets/php/tp/public/favicon.ico" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/edcon-v2.0/assets/php/tp/public/index.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/edcon-v2.0/assets/php/tp/public/robots.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/edcon-v2.0/assets/php/tp/public/router.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/edcon-v2.0/assets/php/tp/public/static/.gitignore" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/edcon-v2.0/assets/php/tp/runtime/.gitignore" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/edcon-v2.0/assets/php/tp/think" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/edcon-v2.0/assets/php/tp/vendor/.gitignore" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Unitimes Web 5/css/sign_in.css" afterPath="$PROJECT_DIR$/Unitimes Web 5/css/sign_in.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Unitimes Web 5/forgot.html" afterPath="$PROJECT_DIR$/Unitimes Web 5/forgot.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Unitimes Web 5/js/indexcontent.js" afterPath="$PROJECT_DIR$/Unitimes Web 5/js/indexcontent.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Unitimes Web 5/js/newscontent.js" afterPath="$PROJECT_DIR$/Unitimes Web 5/js/newscontent.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Unitimes Web 5/news/ethereum_proof_of_stake_casper_testnet_nears_launch.html" afterPath="$PROJECT_DIR$/Unitimes Web 5/news/ethereum_proof_of_stake_casper_testnet_nears_launch.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Unitimes Web 5/news/from_evolution_theory_is_blockchain_fork_a_matter_of_technology_or_consensus.html" afterPath="$PROJECT_DIR$/Unitimes Web 5/news/from_evolution_theory_is_blockchain_fork_a_matter_of_technology_or_consensus.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Unitimes Web 5/sign-up.html" afterPath="$PROJECT_DIR$/Unitimes Web 5/sign-up.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Unitimes Web 5/sign_in.html" afterPath="$PROJECT_DIR$/Unitimes Web 5/sign_in.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/edcon-v2.0/assets/css/registration.css" afterPath="$PROJECT_DIR$/edcon-v2.0/assets/css/registration.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/edcon-v2.0/registration.html" afterPath="$PROJECT_DIR$/edcon-v2.0/registration.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/meetup/assets/js/content.js" afterPath="$PROJECT_DIR$/meetup/assets/js/content.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/meetup/index-en.html" afterPath="$PROJECT_DIR$/meetup/index-en.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/meetup/index.html" afterPath="$PROJECT_DIR$/meetup/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/edcon-v2.0/assets/css/main.css" afterPath="$PROJECT_DIR$/edcon-v2.0/assets/css/main.css" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -50,32 +560,63 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="newscontent.js" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Unitimes Web 5/js/newscontent.js">
+      <file leaf-file-name="login.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/edcon-v2.0/admin/login.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="355">
-              <caret line="23" column="64" lean-forward="false" selection-start-line="23" selection-start-column="64" selection-end-line="23" selection-end-column="64" />
+            <state relative-caret-position="280">
+              <caret line="14" column="27" lean-forward="false" selection-start-line="14" selection-start-column="27" selection-end-line="14" selection-end-column="27" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index2.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/meetup/index2.html">
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/edcon-v2.0/admin/production/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="567">
-              <caret line="221" column="0" lean-forward="true" selection-start-line="221" selection-start-column="0" selection-end-line="221" selection-end-column="0" />
+            <state relative-caret-position="570">
+              <caret line="85" column="64" lean-forward="false" selection-start-line="85" selection-start-column="64" selection-end-line="85" selection-end-column="64" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="tables_dynamic.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/edcon-v2.0/admin/production/tables_dynamic.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="333">
+              <caret line="799" column="0" lean-forward="false" selection-start-line="799" selection-start-column="0" selection-end-line="1473" selection-end-column="0" />
               <folding>
-                <element signature="n#style#0;n#h1#0;n#div#0;n#div#1;n#header#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#h1#1;n#div#0;n#div#1;n#header#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#div#1;n#div#2;n#div#0;n#div#2;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="tickets.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/edcon-v2.0/admin/production/tickets.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="401">
+              <caret line="912" column="0" lean-forward="false" selection-start-line="912" selection-start-column="0" selection-end-line="912" selection-end-column="0" />
+              <folding>
+                <element signature="n#div#1;n#div#0;n#div#2;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
     </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="HTML File" />
+        <option value="CSS File" />
+        <option value="JavaScript File" />
+      </list>
+    </option>
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
@@ -96,10 +637,21 @@
       <find>type: 'agenda',</find>
       <find>class=&quot;close&quot;</find>
       <find>产地到货架</find>
+      <find>San Francisco Federal Reserve Bank President says no to native digital currency, while counterpart in New York says yes</find>
+      <find>udley said that they</find>
+      <find>接受博闻网的采访</find>
+      <find>howstuffworks, he ad</find>
+      <find>n Europe. Reportedly, the</find>
+      <find>getSoltInfo</find>
+      <find>registration</find>
+      <find>New to site?</find>
+      <find>site_title</find>
+      <find>datatable-checkbox</find>
     </findStrings>
     <replaceStrings>
       <replace>&lt;/p&gt;&lt;p</replace>
       <replace>进化论的角度看区块链分叉问题，是技术还是共识？</replace>
+      <replace>San Francisco Federal Reserve Bank President Says No to Native Digital Currency, While Counterpart in New York Says Yes</replace>
     </replaceStrings>
   </component>
   <component name="Git.Settings">
@@ -113,27 +665,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Unitimes Web 5/news/unified_signal_and_burstiq_partners_to_launch_crypto_wallet_cn.html" />
-        <option value="$PROJECT_DIR$/Unitimes Web 5/news/only_8%_of_26,000_blockchain_projects_started.html" />
-        <option value="$PROJECT_DIR$/Unitimes Web 5/news/only_8%_of_26,000_blockchain_projects_started_cn.html" />
-        <option value="$PROJECT_DIR$/Unitimes Web 5/news/devcon3_sees_an_end_cn.html" />
-        <option value="$PROJECT_DIR$/Unitimes Web 5/news/devcon3_sees_an_end.html" />
-        <option value="$PROJECT_DIR$/Unitimes Web 5/news/bch_btc_while_ethereum_founder_vitalik_buterin.html" />
-        <option value="$PROJECT_DIR$/Unitimes Web 5/news/vontobel_and_leonteq_securities_ag_launch_their_respective_futures_products.html" />
-        <option value="$PROJECT_DIR$/Unitimes Web 5/news/vontobel_and_leonteq_securities_ag_launch_their_respective_futures_products_cn.html" />
-        <option value="$PROJECT_DIR$/Unitimes Web 5/news/square_has_quietly_allowed_some_customers_to_buy_and_sell_bitcoin.html" />
-        <option value="$PROJECT_DIR$/Unitimes Web 5/news/square_has_quietly_allowed_some_customers_to_buy_and_sell_bitcoin_cn.html" />
-        <option value="$PROJECT_DIR$/Unitimes Web 5/news/ubs_remarks_that_bitcoin_is_unstable_due_to_the_lack_of_government_oversight_cn.html" />
-        <option value="$PROJECT_DIR$/Unitimes Web 5/news/ubs_remarks_that_bitcoin_is_unstable_due_to_the_lack_of_government_oversight.html" />
-        <option value="$PROJECT_DIR$/Unitimes Web 5/news/twenty_banks_join_hong_kong_singapore_blockchain_partnership_cn.html" />
-        <option value="$PROJECT_DIR$/Unitimes Web 5/news/twenty_banks_join_hong_kong_singapore_blockchain_partnership.html" />
-        <option value="$PROJECT_DIR$/Unitimes Web 5/news/chairman_of_swiss_national_bank_says_cryptocurrencies_are_an_investment_cn.html" />
-        <option value="$PROJECT_DIR$/Unitimes Web 5/news/chairman_of_swiss_national_bank_says_cryptocurrencies_are_an_investment.html" />
-        <option value="$PROJECT_DIR$/Unitimes Web 5/news/the_philippines_considers_treating_all_future_icos_as_securities_cn.html" />
-        <option value="$PROJECT_DIR$/Unitimes Web 5/news/the_philippines_considers_treating_all_future_icos_as_securities.html" />
-        <option value="$PROJECT_DIR$/Unitimes Web 5/news/samsung_sds_cooperates_with_seoul_government_for_blockchain_platform_cn.html" />
-        <option value="$PROJECT_DIR$/Unitimes Web 5/news/iran_welcomes_bitcoin_and_virtual_currencies_in_the_country_cn.html" />
-        <option value="$PROJECT_DIR$/Unitimes Web 5/news/article_demo_cn副本.html" />
         <option value="$PROJECT_DIR$/Unitimes Web 5/news/bitcoin_prices_at_several_global_trading_platforms_exceed_the_10000_mark_cn.html" />
         <option value="$PROJECT_DIR$/Unitimes Web 5/news/iran_welcomes_bitcoin_and_virtual_currencies_in_the_country.html" />
         <option value="$PROJECT_DIR$/Unitimes Web 5/news/samsung_sds_cooperates_with_seoul_government_for_blockchain_platform.html" />
@@ -151,7 +682,6 @@
         <option value="$PROJECT_DIR$/Unitimes Web 5/news/ethereum_proof_of_stake_casper_testnet_nears_launch_cn.html" />
         <option value="$PROJECT_DIR$/Unitimes Web 5/news/vitalik_buterin_lays_roadmap_for_ethereum_visa_levels_quadratic_sharding.html" />
         <option value="$PROJECT_DIR$/Unitimes Web 5/news/from_evolution_theory_is_blockchain_fork_a_matter_of_technology_or_consensus.html" />
-        <option value="$PROJECT_DIR$/Unitimes Web 5/js/indexcontent.js" />
         <option value="$PROJECT_DIR$/Unitimes Web 5/news/ethereum_proof_of_stake_casper_testnet_nears_launch.html" />
         <option value="$PROJECT_DIR$/Unitimes Web 5/news/sberbank_successfully_completes_its_first_blockchain_powered_payment_transaction_cn.html" />
         <option value="$PROJECT_DIR$/Unitimes Web 5/news/sberbank_successfully_completes_its_first_blockchain_powered_payment_transaction.html" />
@@ -163,7 +693,29 @@
         <option value="$PROJECT_DIR$/meetup/index2.html" />
         <option value="$PROJECT_DIR$/Unitimes Web 5/news/forbes_5_predictions_on_how_blockchain_will_drive_digital_transformation_cn.html" />
         <option value="$PROJECT_DIR$/Unitimes Web 5/news/blockchain_drives_artificial_intelligence.html" />
+        <option value="$PROJECT_DIR$/Unitimes Web 5/news/forbes_5_predictions_on_how_blockchain_will_drive_digital_transformation.html" />
+        <option value="$PROJECT_DIR$/Unitimes Web 5/news/san_francisco_federal_reserve_president_says_no_to_native_digital_currency_cn.html" />
+        <option value="$PROJECT_DIR$/Unitimes Web 5/news/top_religious_body_in_turkey__cryptocurrencies_as_incompatible_with_islam_cn.html" />
+        <option value="$PROJECT_DIR$/Unitimes Web 5/news/san_francisco_federal_reserve_president_says_no_to_native_digital_currency.html" />
+        <option value="$PROJECT_DIR$/Unitimes Web 5/news/article_demo_cn.html" />
+        <option value="$PROJECT_DIR$/Unitimes Web 5/news/article_demo.html" />
+        <option value="$PROJECT_DIR$/Unitimes Web 5/news/professor_at_cmu_ethereum_will_overtake_bitcoin_cn.html" />
+        <option value="$PROJECT_DIR$/Unitimes Web 5/news/professor_at_cmu_ethereum_will_overtake_bitcoin.html" />
+        <option value="$PROJECT_DIR$/Unitimes Web 5/news/kyber_network_partners_with_imtoken_cn.html" />
         <option value="$PROJECT_DIR$/Unitimes Web 5/js/newscontent.js" />
+        <option value="$PROJECT_DIR$/Unitimes Web 5/js/indexcontent.js" />
+        <option value="$PROJECT_DIR$/Unitimes Web 5/news/france_makes_it_legal_for_use_of_blockchain.html" />
+        <option value="$PROJECT_DIR$/Unitimes Web 5/news/france_makes_it_legal_for_use_of_blockchain_cn.html" />
+        <option value="$PROJECT_DIR$/Unitimes Web 5/news/australia_is__first_to_replace_existing_technology.html" />
+        <option value="$PROJECT_DIR$/edcon-v2.0/assets/css/main.css" />
+        <option value="$PROJECT_DIR$/edcon-v2.0/admin/index.html" />
+        <option value="$PROJECT_DIR$/edcon-v2.0/admin/assets/css/index.css" />
+        <option value="$PROJECT_DIR$/edcon-v2.0/admin/assets/js/index.js" />
+        <option value="$PROJECT_DIR$/edcon-v2.0/admin/login.html" />
+        <option value="$PROJECT_DIR$/edcon-v2.0/admin/production/login.html" />
+        <option value="$PROJECT_DIR$/edcon-v2.0/admin/production/index2.html" />
+        <option value="$PROJECT_DIR$/edcon-v2.0/admin/production/index.html" />
+        <option value="$PROJECT_DIR$/edcon-v2.0/admin/production/tickets.html" />
       </list>
     </option>
   </component>
@@ -178,10 +730,9 @@
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
   <component name="ProjectFrameBounds">
-    <option name="x" value="485" />
     <option name="y" value="23" />
-    <option name="width" value="1124" />
-    <option name="height" value="1022" />
+    <option name="width" value="1440" />
+    <option name="height" value="873" />
   </component>
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1">
@@ -198,23 +749,83 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
-          <expand>
-            <path>
-              <item name="website" type="b2602c69:ProjectViewProjectNode" />
-              <item name="website" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-          </expand>
-          <select />
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="website" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="website" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="website" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="website" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="edcon-v2.0" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="website" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="website" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="edcon-v2.0" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="admin" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="website" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="website" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="edcon-v2.0" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="admin" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="build" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
+      <pane id="Scratches" />
       <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="list.type.of.created.stylesheet" value="CSS" />
+    <property name="nodejs_interpreter_path" value="/usr/local/bin/node" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -229,14 +840,6 @@
     </option>
   </component>
   <component name="RunManager">
-    <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
-      <node-interpreter>project</node-interpreter>
-      <node-options />
-      <gulpfile />
-      <tasks />
-      <arguments />
-      <envs />
-    </configuration>
     <configuration default="true" type="CodeceptionConfigurationType" factoryName="Codeception">
       <PhpTestRunnerSettings />
       <method />
@@ -273,6 +876,15 @@
     </configuration>
     <configuration default="true" type="PhpSpecConfigurationType" factoryName="PHPSpec">
       <PhpTestRunnerSettings />
+      <method />
+    </configuration>
+    <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
+      <node-interpreter>project</node-interpreter>
+      <node-options />
+      <gulpfile />
+      <tasks />
+      <arguments />
+      <envs />
       <method />
     </configuration>
     <configuration default="true" type="js.build_tools.npm" factoryName="npm">
@@ -313,6 +925,12 @@
       <workItem from="1511670057295" duration="952000" />
       <workItem from="1511845368557" duration="3988000" />
       <workItem from="1511916889587" duration="27964000" />
+      <workItem from="1512199825398" duration="6662000" />
+      <workItem from="1512739831664" duration="217000" />
+      <workItem from="1512824652040" duration="6708000" />
+      <workItem from="1513348513401" duration="2224000" />
+      <workItem from="1513960009573" duration="1718000" />
+      <workItem from="1514123786707" duration="3112000" />
     </task>
     <task id="LOCAL-00001" summary="11.19">
       <created>1511095872161</created>
@@ -335,23 +953,38 @@
       <option name="project" value="LOCAL" />
       <updated>1512041656810</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="12.3">
+      <created>1512313022103</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1512313022103</updated>
+    </task>
+    <task id="LOCAL-00005" summary="12.10">
+      <created>1512883184942</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1512883184942</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="49962000" />
+    <option name="totallyTimeSpent" value="71124000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="485" y="23" width="1124" height="1022" extended-state="0" />
+    <frame x="0" y="23" width="1440" height="873" extended-state="6" />
     <layout>
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19217081" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22291666" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32947367" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3283582" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329602" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="CSS-X-Fire" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -362,7 +995,6 @@
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="CSS-X-Fire" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -375,19 +1007,19 @@
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329602" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19217081" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22291666" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32947367" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3283582" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="CSS-X-Fire" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
     </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="1" />
+    <option name="processedProjectFiles" value="true" />
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
@@ -398,7 +1030,10 @@
     <option name="CHECK_NEW_TODO" value="false" />
     <MESSAGE value="11.19" />
     <MESSAGE value="11.27" />
-    <option name="LAST_COMMIT_MESSAGE" value="11.27" />
+    <MESSAGE value="12.3" />
+    <MESSAGE value="12.10" />
+    <MESSAGE value="12.24" />
+    <option name="LAST_COMMIT_MESSAGE" value="12.24" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
@@ -407,409 +1042,10 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Unitimes Web 5/news/square_has_quietly_allowed_some_customers_to_buy_and_sell_bitcoin_cn.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="254">
-          <caret line="133" column="110" lean-forward="false" selection-start-line="133" selection-start-column="110" selection-end-line="133" selection-end-column="110" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Unitimes Web 5/news/ubs_remarks_that_bitcoin_is_unstable_due_to_the_lack_of_government_oversight_cn.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-361">
-          <caret line="133" column="103" lean-forward="false" selection-start-line="133" selection-start-column="103" selection-end-line="133" selection-end-column="103" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Unitimes Web 5/news/ubs_remarks_that_bitcoin_is_unstable_due_to_the_lack_of_government_oversight.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="566">
-          <caret line="130" column="99" lean-forward="false" selection-start-line="130" selection-start-column="88" selection-end-line="130" selection-end-column="99" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Unitimes Web 5/news/twenty_banks_join_hong_kong_singapore_blockchain_partnership_cn.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2160">
-          <caret line="108" column="60" lean-forward="false" selection-start-line="108" selection-start-column="60" selection-end-line="108" selection-end-column="60" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Unitimes Web 5/news/twenty_banks_join_hong_kong_singapore_blockchain_partnership.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="353">
-          <caret line="102" column="66" lean-forward="true" selection-start-line="102" selection-start-column="66" selection-end-line="102" selection-end-column="66" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Unitimes Web 5/news/chairman_of_swiss_national_bank_says_cryptocurrencies_are_an_investment_cn.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="438">
-          <caret line="152" column="196" lean-forward="false" selection-start-line="152" selection-start-column="93" selection-end-line="152" selection-end-column="196" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Unitimes Web 5/news/chairman_of_swiss_national_bank_says_cryptocurrencies_are_an_investment.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="15" column="141" lean-forward="true" selection-start-line="15" selection-start-column="38" selection-end-line="15" selection-end-column="141" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Unitimes Web 5/news/the_philippines_considers_treating_all_future_icos_as_securities_cn.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="846">
-          <caret line="204" column="54" lean-forward="false" selection-start-line="204" selection-start-column="54" selection-end-line="204" selection-end-column="54" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Unitimes Web 5/news/the_philippines_considers_treating_all_future_icos_as_securities.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3920">
-          <caret line="196" column="0" lean-forward="false" selection-start-line="196" selection-start-column="0" selection-end-line="196" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Unitimes Web 5/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="20">
-          <caret line="156" column="0" lean-forward="false" selection-start-line="156" selection-start-column="0" selection-end-line="156" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Unitimes Web 5/news/samsung_sds_cooperates_with_seoul_government_for_blockchain_platform_cn.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="15" column="114" lean-forward="true" selection-start-line="15" selection-start-column="38" selection-end-line="15" selection-end-column="114" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Unitimes Web 5/news/iran_welcomes_bitcoin_and_virtual_currencies_in_the_country_cn.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="15" column="66" lean-forward="true" selection-start-line="15" selection-start-column="39" selection-end-line="15" selection-end-column="66" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Unitimes Web 5/news/article_demo_cn副本.html" />
-    <entry file="file://$PROJECT_DIR$/Unitimes Web 5/news/bitcoin_prices_at_several_global_trading_platforms_exceed_the_10000_mark_cn.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="332">
-          <caret line="134" column="113" lean-forward="false" selection-start-line="134" selection-start-column="113" selection-end-line="134" selection-end-column="113" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Unitimes Web 5/news/article_demo.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="200">
-          <caret line="10" column="11" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="329" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Unitimes Web 5/news/iran_welcomes_bitcoin_and_virtual_currencies_in_the_country.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="301">
-          <caret line="170" column="65" lean-forward="true" selection-start-line="170" selection-start-column="65" selection-end-line="170" selection-end-column="65" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Unitimes Web 5/news/samsung_sds_cooperates_with_seoul_government_for_blockchain_platform.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="156" column="45" lean-forward="true" selection-start-line="156" selection-start-column="45" selection-end-line="156" selection-end-column="45" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Unitimes Web 5/news/bitcoin_prices_at_several_global_trading_platforms_exceed_the_10000_mark.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Unitimes Web 5/news/development_of_fiat_digital_currency_should_keep_up_with_times.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="156">
-          <caret line="145" column="47" lean-forward="false" selection-start-line="145" selection-start-column="47" selection-end-line="145" selection-end-column="47" />
-          <folding>
-            <marker date="1512041656000" expanded="false" signature="18549:18602" ph="..." />
-            <marker date="1512041656000" expanded="false" signature="22758:22811" ph="..." />
-            <marker date="1512041656000" expanded="false" signature="26865:26918" ph="..." />
-            <marker date="1512041656000" expanded="false" signature="30308:30314" ph="©" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Unitimes Web 5/js/newscontent的副本.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="513" column="20" lean-forward="false" selection-start-line="513" selection-start-column="20" selection-end-line="513" selection-end-column="20" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Unitimes Web 5/news/central_bank_of_russia_says_cryptocurrencies_market_may_be_facing_a_bubble_cn.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1495">
-          <caret line="173" column="57" lean-forward="true" selection-start-line="173" selection-start-column="57" selection-end-line="173" selection-end-column="57" />
-          <folding>
-            <element signature="n#style#0;n#p#2;n#div#0;n#div#0;n#section#0;n#div#0;n#article#0;n#main#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#style#0;n#p#3;n#div#0;n#div#0;n#section#0;n#div#0;n#article#0;n#main#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#style#0;n#p#4;n#div#0;n#div#0;n#section#0;n#div#0;n#article#0;n#main#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#style#0;n#p#5;n#div#0;n#div#0;n#section#0;n#div#0;n#article#0;n#main#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Unitimes Web 5/news/cambridge_professor_bitcoin_is_an_economic_miracle_cn.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3580">
-          <caret line="179" column="18" lean-forward="false" selection-start-line="179" selection-start-column="18" selection-end-line="179" selection-end-column="18" />
-          <folding>
-            <element signature="n#style#0;n#p#1;n#div#0;n#div#0;n#section#0;n#div#0;n#article#0;n#main#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#style#0;n#p#2;n#div#0;n#div#0;n#section#0;n#div#0;n#article#0;n#main#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#style#0;n#p#3;n#div#0;n#div#0;n#section#0;n#div#0;n#article#0;n#main#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#style#0;n#p#4;n#div#0;n#div#0;n#section#0;n#div#0;n#article#0;n#main#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#style#0;n#p#5;n#div#0;n#div#0;n#section#0;n#div#0;n#article#0;n#main#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#style#0;n#p#6;n#div#0;n#div#0;n#section#0;n#div#0;n#article#0;n#main#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#style#0;n#p#7;n#div#0;n#div#0;n#section#0;n#div#0;n#article#0;n#main#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#style#0;n#p#8;n#div#0;n#div#0;n#section#0;n#div#0;n#article#0;n#main#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#style#0;n#p#9;n#div#0;n#div#0;n#section#0;n#div#0;n#article#0;n#main#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#style#0;n#p#10;n#div#0;n#div#0;n#section#0;n#div#0;n#article#0;n#main#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#style#0;n#p#11;n#div#0;n#div#0;n#section#0;n#div#0;n#article#0;n#main#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#style#0;n#p#12;n#div#0;n#div#0;n#section#0;n#div#0;n#article#0;n#main#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#style#0;n#p#13;n#div#0;n#div#0;n#section#0;n#div#0;n#article#0;n#main#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#style#0;n#p#14;n#div#0;n#div#0;n#section#0;n#div#0;n#article#0;n#main#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#style#0;n#p#15;n#div#0;n#div#0;n#section#0;n#div#0;n#article#0;n#main#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#style#0;n#p#16;n#div#0;n#div#0;n#section#0;n#div#0;n#article#0;n#main#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$APPLICATION_HOME_DIR$/lib/phpstorm.jar!/resources/html5-schema/html5/common.rnc">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="302">
-          <caret line="124" column="18" lean-forward="false" selection-start-line="124" selection-start-column="18" selection-end-line="124" selection-end-column="18" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Unitimes Web 5/news/central_bank_of_russia_says_cryptocurrencies_market_may_be_facing_a_bubble.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1088">
-          <caret line="148" column="66" lean-forward="false" selection-start-line="148" selection-start-column="66" selection-end-line="148" selection-end-column="66" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Unitimes Web 5/news/cambridge_professor_bitcoin_is_an_economic_miracle.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="36">
-          <caret line="119" column="57" lean-forward="true" selection-start-line="119" selection-start-column="57" selection-end-line="119" selection-end-column="57" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Unitimes Web 5/news/paxful_we_plan_to_build_100_schools_in_africa_with_bitcoin.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="296">
-          <caret line="22" column="40" lean-forward="true" selection-start-line="22" selection-start-column="40" selection-end-line="22" selection-end-column="40" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Unitimes Web 5/js/newscontent的副本 2.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="578">
-          <caret line="865" column="25" lean-forward="true" selection-start-line="865" selection-start-column="25" selection-end-line="865" selection-end-column="25" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Unitimes Web 5/js/knowledgecontent.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="17" column="49" lean-forward="false" selection-start-line="17" selection-start-column="49" selection-end-line="17" selection-end-column="49" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Unitimes Web 5/news/vitalik_buterin_lays_roadmap_for_ethereum_visa_levels_quadratic_sharding_cn.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="202">
-          <caret line="118" column="78" lean-forward="true" selection-start-line="118" selection-start-column="78" selection-end-line="118" selection-end-column="78" />
-          <folding>
-            <element signature="n#style#0;n#p#2;n#div#0;n#div#0;n#section#0;n#div#0;n#article#0;n#main#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#style#0;n#p#3;n#div#0;n#div#0;n#section#0;n#div#0;n#article#0;n#main#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#style#0;n#p#4;n#div#0;n#div#0;n#section#0;n#div#0;n#article#0;n#main#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#style#0;n#p#5;n#div#0;n#div#0;n#section#0;n#div#0;n#article#0;n#main#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#style#0;n#p#6;n#div#0;n#div#0;n#section#0;n#div#0;n#article#0;n#main#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#style#0;n#p#7;n#div#0;n#div#0;n#section#0;n#div#0;n#article#0;n#main#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#style#0;n#p#8;n#div#0;n#div#0;n#section#0;n#div#0;n#article#0;n#main#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#style#0;n#p#9;n#div#0;n#div#0;n#section#0;n#div#0;n#article#0;n#main#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#style#0;n#p#10;n#div#0;n#div#0;n#section#0;n#div#0;n#article#0;n#main#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#style#0;n#p#11;n#div#0;n#div#0;n#section#0;n#div#0;n#article#0;n#main#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#style#0;n#p#12;n#div#0;n#div#0;n#section#0;n#div#0;n#article#0;n#main#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#style#0;n#p#13;n#div#0;n#div#0;n#section#0;n#div#0;n#article#0;n#main#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#style#0;n#p#14;n#div#0;n#div#0;n#section#0;n#div#0;n#article#0;n#main#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#style#0;n#p#15;n#div#0;n#div#0;n#section#0;n#div#0;n#article#0;n#main#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#style#0;n#p#16;n#div#0;n#div#0;n#section#0;n#div#0;n#article#0;n#main#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#style#0;n#p#17;n#div#0;n#div#0;n#section#0;n#div#0;n#article#0;n#main#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#style#0;n#p#18;n#div#0;n#div#0;n#section#0;n#div#0;n#article#0;n#main#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#style#0;n#p#19;n#div#0;n#div#0;n#section#0;n#div#0;n#article#0;n#main#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#style#0;n#p#20;n#div#0;n#div#0;n#section#0;n#div#0;n#article#0;n#main#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#style#0;n#p#21;n#div#0;n#div#0;n#section#0;n#div#0;n#article#0;n#main#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#style#0;n#p#22;n#div#0;n#div#0;n#section#0;n#div#0;n#article#0;n#main#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#style#0;n#p#23;n#div#0;n#div#0;n#section#0;n#div#0;n#article#0;n#main#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#style#0;n#p#24;n#div#0;n#div#0;n#section#0;n#div#0;n#article#0;n#main#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#style#0;n#p#25;n#div#0;n#div#0;n#section#0;n#div#0;n#article#0;n#main#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#style#0;n#p#26;n#div#0;n#div#0;n#section#0;n#div#0;n#article#0;n#main#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#style#0;n#p#27;n#div#0;n#div#0;n#section#0;n#div#0;n#article#0;n#main#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#style#0;n#p#28;n#div#0;n#div#0;n#section#0;n#div#0;n#article#0;n#main#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#style#0;n#p#29;n#div#0;n#div#0;n#section#0;n#div#0;n#article#0;n#main#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#style#0;n#p#30;n#div#0;n#div#0;n#section#0;n#div#0;n#article#0;n#main#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#style#0;n#p#31;n#div#0;n#div#0;n#section#0;n#div#0;n#article#0;n#main#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Unitimes Web 5/news/paxful_we_plan_to_build_100_schools_in_africa_with_bitcoin_cn.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="126" column="69" lean-forward="false" selection-start-line="126" selection-start-column="69" selection-end-line="126" selection-end-column="69" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Unitimes Web 5/news/from_evolution_theory_is_blockchain_fork_a_matter_of_technology_or_consensus_cn.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="268">
-          <caret line="121" column="79" lean-forward="false" selection-start-line="121" selection-start-column="79" selection-end-line="121" selection-end-column="79" />
-          <folding>
-            <element signature="n#style#0;n#p#1;n#div#0;n#div#0;n#section#0;n#div#0;n#article#0;n#main#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#style#0;n#p#2;n#div#0;n#div#0;n#section#0;n#div#0;n#article#0;n#main#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#style#0;n#p#3;n#div#0;n#div#0;n#section#0;n#div#0;n#article#0;n#main#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#style#0;n#p#4;n#div#0;n#div#0;n#section#0;n#div#0;n#article#0;n#main#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#style#0;n#p#5;n#div#0;n#div#0;n#section#0;n#div#0;n#article#0;n#main#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#style#0;n#p#6;n#div#0;n#div#0;n#section#0;n#div#0;n#article#0;n#main#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Unitimes Web 5/news/vitalik_buterin_lays_roadmap_for_ethereum_visa_levels_quadratic_sharding.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="93">
-          <caret line="165" column="70" lean-forward="true" selection-start-line="165" selection-start-column="70" selection-end-line="165" selection-end-column="70" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Unitimes Web 5/news/ethereum_transaction_volume_doubles_that_of_bitcoin_cn.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Unitimes Web 5/news/ethereum_transaction_volume_doubles_that_of_bitcoin.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Unitimes Web 5/news/ethereum_proof_of_stake_casper_testnet_nears_launch_cn.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="65">
-          <caret line="130" column="45" lean-forward="false" selection-start-line="130" selection-start-column="45" selection-end-line="130" selection-end-column="45" />
-          <folding>
-            <element signature="n#style#0;n#p#2;n#div#0;n#div#0;n#section#0;n#div#0;n#article#0;n#main#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#style#0;n#p#3;n#div#0;n#div#0;n#section#0;n#div#0;n#article#0;n#main#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#style#0;n#p#4;n#div#0;n#div#0;n#section#0;n#div#0;n#article#0;n#main#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#style#0;n#p#5;n#div#0;n#div#0;n#section#0;n#div#0;n#article#0;n#main#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#style#0;n#p#6;n#div#0;n#div#0;n#section#0;n#div#0;n#article#0;n#main#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#style#0;n#p#7;n#div#0;n#div#0;n#section#0;n#div#0;n#article#0;n#main#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#style#0;n#p#8;n#div#0;n#div#0;n#section#0;n#div#0;n#article#0;n#main#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#style#0;n#p#9;n#div#0;n#div#0;n#section#0;n#div#0;n#article#0;n#main#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#style#0;n#p#10;n#div#0;n#div#0;n#section#0;n#div#0;n#article#0;n#main#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#style#0;n#p#11;n#div#0;n#div#0;n#section#0;n#div#0;n#article#0;n#main#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#style#0;n#p#12;n#div#0;n#div#0;n#section#0;n#div#0;n#article#0;n#main#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#style#0;n#p#13;n#div#0;n#div#0;n#section#0;n#div#0;n#article#0;n#main#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#style#0;n#p#14;n#div#0;n#div#0;n#section#0;n#div#0;n#article#0;n#main#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#style#0;n#p#15;n#div#0;n#div#0;n#section#0;n#div#0;n#article#0;n#main#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#style#0;n#p#16;n#div#0;n#div#0;n#section#0;n#div#0;n#article#0;n#main#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#style#0;n#p#17;n#div#0;n#div#0;n#section#0;n#div#0;n#article#0;n#main#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#style#0;n#p#18;n#div#0;n#div#0;n#section#0;n#div#0;n#article#0;n#main#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Unitimes Web 5/js/indexcontent.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="166">
-          <caret line="77" column="19" lean-forward="true" selection-start-line="77" selection-start-column="19" selection-end-line="77" selection-end-column="19" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Unitimes Web 5/news/from_evolution_theory_is_blockchain_fork_a_matter_of_technology_or_consensus.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="327">
-          <caret line="129" column="45" lean-forward="true" selection-start-line="129" selection-start-column="45" selection-end-line="129" selection-end-column="45" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Unitimes Web 5/news/ethereum_proof_of_stake_casper_testnet_nears_launch.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="402">
-          <caret line="178" column="45" lean-forward="true" selection-start-line="178" selection-start-column="45" selection-end-line="178" selection-end-column="45" />
-          <folding>
-            <element signature="n#style#0;n#p#3;n#div#0;n#div#0;n#section#0;n#div#0;n#article#0;n#main#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Unitimes Web 5/news/sberbank_successfully_completes_its_first_blockchain_powered_payment_transaction_cn.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="217">
-          <caret line="178" column="60" lean-forward="true" selection-start-line="178" selection-start-column="60" selection-end-line="178" selection-end-column="60" />
-          <folding>
-            <element signature="n#style#0;n#p#2;n#div#0;n#div#0;n#section#0;n#div#0;n#article#0;n#main#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#style#0;n#p#3;n#div#0;n#div#0;n#section#0;n#div#0;n#article#0;n#main#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#style#0;n#p#4;n#div#0;n#div#0;n#section#0;n#div#0;n#article#0;n#main#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#style#0;n#p#5;n#div#0;n#div#0;n#section#0;n#div#0;n#article#0;n#main#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#style#0;n#p#6;n#div#0;n#div#0;n#section#0;n#div#0;n#article#0;n#main#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#style#0;n#p#7;n#div#0;n#div#0;n#section#0;n#div#0;n#article#0;n#main#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#style#0;n#p#8;n#div#0;n#div#0;n#section#0;n#div#0;n#article#0;n#main#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Unitimes Web 5/news/article_demo的副本.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="637">
-          <caret line="144" column="41" lean-forward="true" selection-start-line="142" selection-start-column="35" selection-end-line="144" selection-end-column="41" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Unitimes Web 5/news/sberbank_successfully_completes_its_first_blockchain_powered_payment_transaction.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3367">
-          <caret line="191" column="53" lean-forward="true" selection-start-line="191" selection-start-column="53" selection-end-line="191" selection-end-column="53" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/meetup/index-en.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="707">
           <caret line="120" column="76" lean-forward="false" selection-start-line="120" selection-start-column="76" selection-end-line="120" selection-end-column="76" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -817,23 +1053,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="146">
           <caret line="27" column="10" lean-forward="true" selection-start-line="27" selection-start-column="10" selection-end-line="27" selection-end-column="10" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Unitimes Web 5/news/article_demo_cn的副本.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="236">
-          <caret line="69" column="49" lean-forward="false" selection-start-line="69" selection-start-column="49" selection-end-line="69" selection-end-column="49" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/Unitimes Web 5/news/article_demo_cn的副本.html" />
     <entry file="file://$PROJECT_DIR$/Unitimes Web 5/news/blockchain_drives_artificial_intelligence_cn.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="506">
           <caret line="109" column="63" lean-forward="true" selection-start-line="109" selection-start-column="63" selection-end-line="109" selection-end-column="63" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -841,9 +1068,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="140">
           <caret line="79" column="39" lean-forward="true" selection-start-line="79" selection-start-column="39" selection-end-line="79" selection-end-column="39" />
-          <folding>
-            <element signature="n#style#0;n#td#1;n#tr#0;n#template#0;n#table#0;n#article#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -851,24 +1075,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="225">
           <caret line="151" column="102" lean-forward="true" selection-start-line="151" selection-start-column="102" selection-end-line="151" selection-end-column="102" />
-          <folding>
-            <element signature="n#style#0;n#p#2;n#div#0;n#div#0;n#section#0;n#div#0;n#article#0;n#main#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#p#3;n#div#0;n#div#0;n#section#0;n#div#0;n#article#0;n#main#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#p#4;n#div#0;n#div#0;n#section#0;n#div#0;n#article#0;n#main#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#p#5;n#div#0;n#div#0;n#section#0;n#div#0;n#article#0;n#main#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#p#6;n#div#0;n#div#0;n#section#0;n#div#0;n#article#0;n#main#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#p#7;n#div#0;n#div#0;n#section#0;n#div#0;n#article#0;n#main#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#p#8;n#div#0;n#div#0;n#section#0;n#div#0;n#article#0;n#main#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#p#9;n#div#0;n#div#0;n#section#0;n#div#0;n#article#0;n#main#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Unitimes Web 5/news/forbes_5_predictions_on_how_blockchain_will_drive_digital_transformation.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="160">
-          <caret line="8" column="60" lean-forward="true" selection-start-line="8" selection-start-column="60" selection-end-line="8" selection-end-column="60" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -876,7 +1082,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-8">
           <caret line="142" column="66" lean-forward="true" selection-start-line="142" selection-start-column="66" selection-end-line="142" selection-end-column="66" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -884,18 +1089,343 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="567">
           <caret line="221" column="0" lean-forward="true" selection-start-line="221" selection-start-column="0" selection-end-line="221" selection-end-column="0" />
-          <folding>
-            <element signature="n#style#0;n#h1#0;n#div#0;n#div#1;n#header#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#h1#1;n#div#0;n#div#1;n#header#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Unitimes Web 5/news/forbes_5_predictions_on_how_blockchain_will_drive_digital_transformation.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="71">
+          <caret line="160" column="6" lean-forward="true" selection-start-line="160" selection-start-column="6" selection-end-line="160" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Unitimes Web 5/news/bitcoin_prices_at_several_global_trading_platforms_exceed_the_10000_mark.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Unitimes Web 5/news/san_francisco_federal_reserve_president_says_no_to_native_digital_currency_cn.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="213">
+          <caret line="164" column="65" lean-forward="true" selection-start-line="164" selection-start-column="65" selection-end-line="164" selection-end-column="65" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Unitimes Web 5/news/top_religious_body_in_turkey__cryptocurrencies_as_incompatible_with_islam_cn.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="213">
+          <caret line="170" column="112" lean-forward="true" selection-start-line="170" selection-start-column="112" selection-end-line="170" selection-end-column="112" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Unitimes Web 5/news/top_religious_body_in_turkey__cryptocurrencies_as_incompatible_with_islam.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Unitimes Web 5/news/san_francisco_federal_reserve_president_says_no_to_native_digital_currency.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="235">
+          <caret line="158" column="220" lean-forward="false" selection-start-line="158" selection-start-column="220" selection-end-line="158" selection-end-column="220" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Unitimes Web 5/about.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="368">
+          <caret line="172" column="41" lean-forward="true" selection-start-line="170" selection-start-column="36" selection-end-line="172" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Unitimes Web 5/about_cn.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="241">
+          <caret line="153" column="41" lean-forward="true" selection-start-line="151" selection-start-column="35" selection-end-line="153" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Unitimes Web 5/news/article_demo_cn.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="325">
+          <caret line="114" column="88" lean-forward="false" selection-start-line="114" selection-start-column="88" selection-end-line="114" selection-end-column="88" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Unitimes Web 5/news/article_demo.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="121" column="102" lean-forward="true" selection-start-line="121" selection-start-column="102" selection-end-line="121" selection-end-column="102" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Unitimes Web 5/news/article_demo_cn副本.html" />
+    <entry file="file://$PROJECT_DIR$/Unitimes Web 5/news/professor_at_cmu_ethereum_will_overtake_bitcoin_cn.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1312">
+          <caret line="134" column="79" lean-forward="true" selection-start-line="134" selection-start-column="79" selection-end-line="134" selection-end-column="79" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Unitimes Web 5/news/professor_at_cmu_ethereum_will_overtake_bitcoin.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="251">
+          <caret line="116" column="138" lean-forward="false" selection-start-line="116" selection-start-column="138" selection-end-line="116" selection-end-column="138" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Unitimes Web 5/news/kyber_network_partners_with_imtoken_cn.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3080">
+          <caret line="154" column="102" lean-forward="false" selection-start-line="154" selection-start-column="102" selection-end-line="154" selection-end-column="102" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Unitimes Web 5/js/newscontent.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="355">
-          <caret line="23" column="64" lean-forward="false" selection-start-line="23" selection-start-column="64" selection-end-line="23" selection-end-column="64" />
+        <state relative-caret-position="63">
+          <caret line="16" column="8" lean-forward="true" selection-start-line="16" selection-start-column="8" selection-end-line="28" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Unitimes Web 5/js/indexcontent.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="117">
+          <caret line="114" column="6" lean-forward="false" selection-start-line="114" selection-start-column="6" selection-end-line="114" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Unitimes Web 5/news/france_makes_it_legal_for_use_of_blockchain.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="89">
+          <caret line="155" column="0" lean-forward="false" selection-start-line="155" selection-start-column="0" selection-end-line="155" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Unitimes Web 5/news/france_makes_it_legal_for_use_of_blockchain_cn.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="113">
+          <caret line="165" column="0" lean-forward="false" selection-start-line="165" selection-start-column="0" selection-end-line="165" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Unitimes Web 5/news/australia_is__first_to_replace_existing_technology.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="122" column="33" lean-forward="false" selection-start-line="122" selection-start-column="33" selection-end-line="122" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/edcon-v2.0/assets/php/tp/application/index/controller/Index.php" />
+    <entry file="file://$PROJECT_DIR$/edcon-v2.0/assets/php/application/admin/controller/Edcon.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/edcon-v2.0/assets/php/application/database.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/edcon-v2.0/assets/css/main.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="564">
+          <caret line="2337" column="5" lean-forward="false" selection-start-line="2337" selection-start-column="5" selection-end-line="2337" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/edcon-v2.0/assets/php/app/functions.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/edcon-v2.0/assets/php/app/Domain/Participant.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-312">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/edcon-v2.0/assets/php/app/Model/Participant.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-293">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/edcon-v2.0/assets/php/application/index/controller/Index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3380">
+          <caret line="173" column="33" lean-forward="false" selection-start-line="173" selection-start-column="33" selection-end-line="173" selection-end-column="33" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/edcon-v2.0/assets/php/app/Api/Participant.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="20">
+          <caret line="37" column="5" lean-forward="false" selection-start-line="37" selection-start-column="5" selection-end-line="37" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/edcon-v2.0/assets/js/buy.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="458">
+          <caret line="239" column="109" lean-forward="false" selection-start-line="239" selection-start-column="97" selection-end-line="239" selection-end-column="109" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/edcon-v2.0/assets/php/contact.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="440">
+          <caret line="22" column="2" lean-forward="false" selection-start-line="22" selection-start-column="2" selection-end-line="22" selection-end-column="2" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/edcon-v2.0/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="20">
+          <caret line="4" column="71" lean-forward="false" selection-start-line="4" selection-start-column="71" selection-end-line="4" selection-end-column="71" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/edcon-v2.0/admin/assets/js/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/edcon-v2.0/admin/assets/css/index.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/edcon-v2.0/admin/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="140">
+          <caret line="7" column="0" lean-forward="false" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/edcon-v2.0/admin/bower.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/edcon-v2.0/admin/gulpfile.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/edcon-v2.0/admin/login.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="280">
+          <caret line="14" column="27" lean-forward="false" selection-start-line="14" selection-start-column="27" selection-end-line="14" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/edcon-v2.0/admin/production/index2.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="380">
+          <caret line="19" column="4" lean-forward="true" selection-start-line="19" selection-start-column="4" selection-end-line="19" selection-end-column="4" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#1;n#div#2;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#2;n#div#0;n#div#0;n#div#1;n#div#2;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#1;n#div#1;n#div#2;n#div#0;n#div#0;n#div#1;n#div#2;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#2;n#div#2;n#div#0;n#div#0;n#div#1;n#div#2;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#1;n#div#2;n#div#2;n#div#0;n#div#0;n#div#1;n#div#2;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#0;n#div#3;n#div#2;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#1;n#div#1;n#div#1;n#div#0;n#div#0;n#div#3;n#div#2;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#1;n#div#2;n#div#1;n#div#0;n#div#0;n#div#3;n#div#2;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#1;n#div#3;n#div#1;n#div#0;n#div#0;n#div#3;n#div#2;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#1;n#div#4;n#div#1;n#div#0;n#div#0;n#div#3;n#div#2;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#table#0;n#div#1;n#div#0;n#div#1;n#div#3;n#div#2;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#th#0;n#tr#0;n#table#0;n#div#1;n#div#0;n#div#1;n#div#3;n#div#2;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#canvas#0;n#td#0;n#tr#1;n#table#0;n#div#1;n#div#0;n#div#1;n#div#3;n#div#2;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#canvas#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#2;n#div#3;n#div#2;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="e#31132#31138#0" expanded="false" />
+            <element signature="e#31617#31623#0" expanded="false" />
+            <element signature="e#32012#32018#0" expanded="false" />
+            <element signature="e#32497#32503#0" expanded="false" />
+            <element signature="e#32892#32898#0" expanded="false" />
+            <element signature="e#33377#33383#0" expanded="false" />
+            <element signature="e#33772#33778#0" expanded="false" />
+            <element signature="e#34257#34263#0" expanded="false" />
+            <element signature="n#style#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#1;n#div#4;n#div#2;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/edcon-v2.0/admin/production/login.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="71">
+          <caret line="40" column="19" lean-forward="false" selection-start-line="40" selection-start-column="19" selection-end-line="40" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/edcon-v2.0/admin/production/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="570">
+          <caret line="85" column="64" lean-forward="false" selection-start-line="85" selection-start-column="64" selection-end-line="85" selection-end-column="64" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/edcon-v2.0/admin/production/tables.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-6950">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/edcon-v2.0/admin/production/tables_dynamic.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="333">
+          <caret line="799" column="0" lean-forward="false" selection-start-line="799" selection-start-column="0" selection-end-line="1473" selection-end-column="0" />
+          <folding>
+            <element signature="n#div#1;n#div#2;n#div#0;n#div#2;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/edcon-v2.0/admin/production/tickets.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="401">
+          <caret line="912" column="0" lean-forward="false" selection-start-line="912" selection-start-column="0" selection-end-line="912" selection-end-column="0" />
+          <folding>
+            <element signature="n#div#1;n#div#0;n#div#2;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
