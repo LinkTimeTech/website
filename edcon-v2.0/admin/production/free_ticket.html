@@ -204,17 +204,9 @@
                                                         @click="Pass(free,row,row.id)"
                                                         v-if="row.pass == 0">Pass
                                                 </button>
-                                                <button type="button" class="btn btn-warning btn-xs"
-                                                        @click="Reject(free,row,row.id)" v-if="row.pass == 0">
-                                                    Reject
-                                                </button>
                                                 <button type="button" class="btn btn-success btn-xs"
                                                         v-if="row.pass == 1 ">Passed
                                                 </button>
-                                                <button type="button" class="btn btn-dark btn-xs"
-                                                        v-if="row.pass == 2">Rejected
-                                                </button>
-
                                             </td>
 
                                             <td>
