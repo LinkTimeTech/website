@@ -13,7 +13,7 @@ var data = {
             ansid: 'ansTwo',
             quesid: 'quesTwo',
             question: 'How can I buy tickets?',
-            ans: 'Purchase will be open on January 1, 2018. Please stay tuned.\n'
+            ans: 'Purchase will be open soon after new year. Please stay tuned.'
         },
         {
             url: '#ansThree',

@@ -49,13 +49,13 @@ $(function () {
                 if (type == "3") {
                     $('.ticketprice').text('140');
 
-                    $('.checkstudent').addClass('show');
+                    $('.checkstudent').fadeIn(500);
                     $('.school').attr('required', '');
 
                     $(".repo").val('')
 
                 } else {
-                    $('.checkstudent').removeClass('show');
+                    $('.checkstudent').fadeOut(50);
                     $('.school').removeAttr('required', '')
                 }
 
@@ -63,33 +63,33 @@ $(function () {
                 if (type == "2") {
                     $('.ticketprice').text('350');
 
-                    $('.checkdev').addClass('show');
+                    $('.checkdev').fadeIn(500);
                     $('.checkdevtext').attr('required', '');
 
                     $(".school").val('')
 
                 } else {
-                    $('.checkdev').removeClass('show');
+                    $('.checkdev').fadeOut(200);
                     $('.checkdevtext').removeAttr('required', '');
-
                 }
 
                 // 早鸟
                 if (type == "0") {
                     $('.ticketprice').text('560');
-
-                    $(".repo").val('');
-                    $(".school").val('')
-
                 }
 
                 // 标准
                 if (type == "1") {
                     $('.ticketprice').text('700');
+                }
 
+                // 早鸟或标准
+                if (type == "1" || type == "0") {
                     $(".repo").val('');
-                    $(".school").val('')
+                    $(".school").val('');
 
+                    $('.checkstudent').fadeOut(50);
+                    $('.checkdev').fadeOut(200);
                 }
 
             });
@@ -207,11 +207,12 @@ $(function () {
 
 // Submit handler for checkout form.
     Omise.setPublicKey("pkey_test_5acsuittt50wpshlf49");
+    // Omise.setPublicKey("pkey_5af2oawcv1t31tqg8xg");
 
     $('.creatToken').click(function (event) {
         event.preventDefault();
 
-        $('.loading').fadeIn();
+        $('.loading,.loading-mask').fadeIn(100);
 
         /*
         NOTE: Using `data-name` to prevent sending credit card information fields to the backend server via HTTP Post
@@ -229,6 +230,8 @@ $(function () {
             if (statusCode === 200) {
                 // Success: send back the TOKEN_ID to your server. The TOKEN_ID can be
                 // found in `response.id`.
+
+                console.log(response);
 
                 /*
                    提交买票者信息
@@ -251,14 +254,18 @@ $(function () {
 
                     // 支付成功
                     if (isPay === 0) {
-                        $('.loading').fadeOut();
+                        $('.loading,.loading-mask').fadeOut();
+                        console.log(response);
+
                         $('#paysucc').modal('show');
                         document.getElementById("checkout-form").reset()
                     }
 
                     // 支付失败
                     else if (isPay === 2) {
-                        $('.loading').fadeOut();
+                        $('.loading,.loading-mask').fadeOut();
+                        console.log(response);
+
                         $('#payfail').modal('show');
                         document.getElementById("checkout-form").reset()
                     }
@@ -269,6 +276,9 @@ $(function () {
                 // Error: display an error message. Note that `response.message` contains
                 // a preformatted error message. Also note that `response.code` will be
                 // "invalid_card" in case of validation error on the card.
+                $('.loading,.loading-mask').fadeOut();
+                $('#payfail').modal('show');
+                console.log(response)
             }
         });
     })

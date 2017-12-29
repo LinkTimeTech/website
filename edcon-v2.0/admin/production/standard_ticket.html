@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <!-- Meta, title, CSS, favicons, etc. -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>EDCON</title>
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+
+    <!-- Custom Theme Style -->
+    <link href="../build/css/custom.min.css" rel="stylesheet">
+</head>
+
+<body class="nav-md">
+<div class="container body " id="app">
+    <div class="main_container">
+        <div class="col-md-3 left_col">
+            <div class="left_col scroll-view">
+                <div class="navbar nav_title" style="border: 0;">
+                    <a href="index.html" class="site_title">
+                        <span>EDCON</span></a>
+                </div>
+
+                <div class="clearfix"></div>
+
+                <!-- menu profile quick info -->
+                <div class="profile clearfix">
+                    <div class="profile_pic">
+                        <img src="https://edcon.io/assets/images/favicon.png" alt="..." class="img-circle profile_img">
+                    </div>
+                    <div class="profile_info">
+                        <span>Welcome,</span>
+                        <h2>Admin</h2>
+                    </div>
+                </div>
+                <!-- /menu profile quick info -->
+
+                <br/>
+
+                <!-- sidebar menu -->
+                <div id="sidebar-menu" class="main_menu_side hidden-print main_menu">
+                    <div class="menu_section">
+                        <ul class="nav side-menu">
+                            <li><a><i class="fa fa-home"></i> Home <span class="fa fa-chevron-down"></span></a>
+                                <ul class="nav child_menu">
+                                    <li><a href="index.html">Dashboard</a></li>
+                                </ul>
+                            </li>
+                            <li><a><i class="fa fa-table"></i> Registration <span class="fa fa-chevron-down"></span></a>
+                                <ul class="nav child_menu">
+                                    <li><a>Tickets<span class="fa fa-chevron-down"></span></a>
+                                        <ul class="nav child_menu">
+                                            <li class="sub_menu"><a href="early_bird_ticket.html">Early Bird Ticket</a>
+                                            </li>
+                                            <li>
+                                                <a href="student_ticket.html">Student Ticket</a>
+                                            </li>
+                                            <li><a href="standard_ticket.html">Standard Ticket</a>
+                                            </li>
+                                            <li><a href="developer_ticket.html">Developer Ticket</a>
+                                            </li>
+                                            <li><a href="free_ticket.html">Free Ticket</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="speaker.html">Speaker</a></li>
+                                    <li><a href="sponsor.html">Sponsor</a></li>
+                                    <li><a href="media.html">Media</a></li>
+                                    <li><a href="community.html">Community</a></li>
+                                    <li><a href="superdemo.html">Superdemo</a></li>
+
+                                </ul>
+                            </li>
+
+                            <li><a><i class="fa fa-desktop"></i> 签到 <span
+                                    class="fa fa-chevron-down"></span></a>
+                                <ul class="nav child_menu">
+                                    <li><a href="checkin.html">Check In</a></li>
+
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+
+                </div>
+                <!-- /sidebar menu -->
+
+
+            </div>
+        </div>
+
+        <!-- top navigation -->
+        <div class="top_nav">
+            <div class="nav_menu">
+                <nav>
+                    <div class="nav toggle">
+                        <a id="menu_toggle"><i class="fa fa-bars"></i></a>
+                    </div>
+
+                    <ul class="nav navbar-nav navbar-right">
+                        <li class="">
+                            <a href="javascript:" class="user-profile dropdown-toggle" data-toggle="dropdown"
+                               aria-expanded="false">
+                                <img src="https://edcon.io/assets/images/favicon.png" alt="">Admin
+                                <span class=" fa fa-angle-down"></span>
+                            </a>
+                            <ul class="dropdown-menu dropdown-usermenu pull-right">
+
+                                <li><a href="login.html"><i class="fa fa-sign-out pull-right"></i> Log Out</a></li>
+                            </ul>
+                        </li>
+
+                    </ul>
+                </nav>
+            </div>
+        </div>
+        <!-- /top navigation -->
+
+        <!-- page content -->
+        <div class="right_col" role="main">
+            <div class="">
+                <div class="page-title">
+                    <div class="title_left">
+                        <h3>Tickets
+                        </h3>
+                    </div>
+
+                    <div class="title_right">
+                        <div class="col-md-5 col-sm-5 col-xs-12 form-group pull-right top_search">
+                            <div class="input-group">
+                                <input type="text" class="form-control" placeholder="Search for...">
+                                <span class="input-group-btn">
+                    <button class="btn btn-default" type="button" @click="Search">Go!</button>
+                    </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="clearfix"></div>
+
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="x_panel">
+                            <div class="x_title">
+                                <h2>Standard Ticket</h2>
+                                <ul class="nav navbar-right panel_toolbox">
+                                    <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+                                    </li>
+
+                                </ul>
+                                <div class="clearfix"></div>
+                            </div>
+                            <div class="x_content">
+                                <!--<button class="btn btn-primary" @click="SendAllSelectedEmail(standard)"> Send All Selected Person's Email-->
+                                <!--</button>-->
+                                <!--<input type="text" placeholder="search" @input="search" class="search">-->
+                                <!-- start project list -->
+                                <table class="table table-striped projects">
+                                    <thead>
+                                    <tr>
+                                        <!--<th><input type="checkbox" class="" v-model="allData.parCheck" @change="allSelect(standard)"></th>-->
+                                        <th style="width: 1%">NO.</th>
+                                        <th style="width: 1%">Ticket Num</th>
+                                        <th>Name</th>
+                                        <th>Country</th>
+                                        <th>Company</th>
+                                        <th>Position</th>
+                                        <th>Email</th>
+                                        <th>Phone</th>
+                                        <th>Email Status</th>
+
+                                        <!--<th>Send Email</th>-->
+                                        <th>Edit</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    <template v-for="(row, index) in standard">
+                                        <tr>
+                                            <!--<td><input type="checkbox" class="" :class="{ 'hide': row.noCheck == 1 }" @change="singleSelect(standard)" v-model="row.isCheck"></td>-->
+                                            <td>{{row.id}}</td>
+                                            <td>{{row.ticket_no}}</td>
+                                            <td>{{row.name}}</td>
+                                            <td>{{row.country}}</td>
+                                            <td>{{row.company}}</td>
+                                            <td>{{row.position}}</td>
+                                            <td>{{row.email}}</td>
+                                            <td>{{row.phone}}</td>
+                                            <td v-if="row.send == 0">waiting</td>
+                                            <td v-if="row.send == 1">succeed</td>
+
+
+                                            <!--<td>-->
+                                            <!--<button type="button" class="btn btn-info btn-xs" @click="SendEmail(standard,row,row.id)"-->
+                                            <!--v-if="row.send == 0">Send Email-->
+                                            <!--</button>-->
+                                            <!--<button type="button" class="btn btn-success btn-xs"-->
+                                            <!--v-if="row.send == 1">Email Sent-->
+                                            <!--</button>-->
+
+                                            <!--</td>-->
+                                            <td>
+                                                <a href="#" class="btn btn-info btn-xs" @click="Edit(row)"><i
+                                                        class="fa fa-pencil"></i> Edit
+                                                </a>
+                                                <a href="#" class="btn btn-danger btn-xs" v-if="row.send == 0"
+                                                   @click="Delete(standard,row,row.id,index)"><i
+                                                        class="fa fa-trash-o"></i>
+                                                    Delete </a>
+
+                                            </td>
+
+                                        </tr>
+                                    </template>
+
+
+                                    </tbody>
+                                    <tfoot></tfoot>
+                                </table>
+                                <!-- end project list -->
+                                <nav style="float:right;">
+                                    <ul class="pagination ">
+                                        <template v-for="page in totalPage">
+                                            <li v-on:click="PrePage(standard)" id="prepage" v-if="page==1"
+                                                :class="{ 'disabled': curpage == 1 }"><a
+                                            >上一页</a></li>
+
+                                            <li v-if="page==1" v-on:click="NumPage(page, $event)"
+                                                :class="{ 'active': page == curpage }"><a
+                                            >{{page}}</a></li>
+                                            <li v-else v-on:click="NumPage(page, $event)"
+                                                :class="{ 'active': page == curpage }"><a>{{page}}</a></li>
+                                            <li id="nextpage" v-on:click="NextPage(standard)"
+                                                v-if="page==totalPage"
+                                                :class="{ 'disabled': curpage == Math.ceil(standard.length / pagesize) }">
+                                                <a>下一页</a></li>
+                                        </template>
+                                    </ul>
+                                </nav>
+                            </div>
+
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+        <!-- /page content -->
+
+        <!-- footer content -->
+        <footer>
+            <div class="pull-right">
+
+            </div>
+            <div class="clearfix"></div>
+        </footer>
+        <!-- /footer content -->
+    </div>
+
+    <div class="modal fade editIt" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title" id="myModalLabel">Edit</h4>
+                </div>
+                <div class="modal-body">
+
+                    <div class="row">
+                        <div class="col-md-12">
+                            <h5>Country</h5>
+                        </div>
+                        <div class="col-md-12">
+                            <input type="text" class="form-control" placeholder='Country'
+                                   v-model="rowtemplate.country"/>
+                        </div>
+
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-12">
+                            <h5>Company</h5>
+                        </div>
+                        <div class="col-md-12">
+                            <input type="text" class="form-control" placeholder='Company'
+                                   v-model="rowtemplate.company"/>
+                        </div>
+
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-12">
+                            <h5>Position</h5>
+                        </div>
+                        <div class="col-md-12">
+                            <input type="text" class="form-control" placeholder='Position'
+                                   v-model="rowtemplate.position"/>
+                        </div>
+
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-12">
+                            <h5>Email</h5>
+                        </div>
+                        <div class="col-md-12">
+                            <input type="text" class="form-control" placeholder='Email' v-model="rowtemplate.email"/>
+                        </div>
+
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-12">
+                            <h5>Phone</h5>
+                        </div>
+                        <div class="col-md-12">
+                            <input type="text" class="form-control" placeholder='Phone' v-model="rowtemplate.phone"/>
+                        </div>
+
+                    </div>
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" @click="closeEdit">Close</button>
+                    <button type="button" class="btn btn-primary" @click="Add(standard)"
+                            v-if="isAdd==1">Add!
+                    </button>
+                    <button type="button" class="btn btn-primary" @click="Save"
+                            v-else>Save
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+
+<script src="https://cdn.bootcss.com/vue/2.5.9/vue.js"></script>
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+
+<script src="../build/js/app.js"></script>
+
+<!-- jQuery -->
+<script src="https://cdn.bootcss.com/jquery/2.2.1/jquery.min.js"></script>
+<!-- Bootstrap -->
+<script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+<script src="../build/js/index.js"></script>
+
+</body>
+</html>

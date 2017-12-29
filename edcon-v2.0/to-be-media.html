@@ -59,37 +59,45 @@
                 <div role="tabpanel" class="tab-pane fade in active" id="Media">
                     <div class="sign-up-agileinfo">
                         <h3>Get Media pass</h3>
-                        <div class="row">
-                            <div class="col-lg-6">
-                                <input type="text" class="full name goadd" name="name" placeholder="Full Name"
-                                       required="">
-                                <input type="text" class="country goadd" name="country" placeholder="Country"
-                                       required="">
-                                <input type="text" class="company goadd" name="company" placeholder="Company"
-                                       required="">
-                                <input type="text" class="company goadd" name="press" placeholder="Media/Press"
-                                       required="">
-                                <input type="email" class="email goadd" name="email" placeholder="Email"
-                                       required="">
-                                <input type="text" class="phone goadd" name="phone" placeholder="Phone"
-                                       required="">
-                            </div>
+                        <form id="media-form">
+                            <div class="row">
+                                <div class="col-lg-6">
+                                    <input type="text" class="full name goadd Medianame" name="name"
+                                           placeholder="Full Name"
+                                           required="">
+                                    <input type="text" class="country goadd Mediacountry" name="country"
+                                           placeholder="Country"
+                                           required="">
+                                    <input type="text" class="company goadd Mediacompany" name="company"
+                                           placeholder="Company"
+                                           required="">
+                                    <input type="text" class="press goadd Mediapress" name="media"
+                                           placeholder="Media/Press"
+                                           required="">
+                                    <input type="email" class="email goadd Mediaemail" name="email" placeholder="Email"
+                                           required="">
+                                    <input type="text" class="phone goadd Mediaphone" name="phone" placeholder="Phone"
+                                           required="">
+                                </div>
 
-                            <div class="col-lg-6">
-                                <textarea rows="15" class="business introduction goadd" name="medianote"
+                                <div class="col-lg-6">
+                                <textarea rows="15" class="business introduction goadd Medianote" name="note"
                                           placeholder="Please provide media description and attach the link of website."
                                           required=""></textarea>
+                                </div>
+
                             </div>
 
-                        </div>
-
-                        <div class="row">
-                            <p class="col-lg-12">Notes:
-                                If you are a Fintech-related media, focusing on cutting-edge technology, and want to be
-                                our partner, please register and contact us. A free pass is available and we’ll try our
-                                best to assist.</p>
-                        </div>
-                        <input class="text-capitalize addMedia" type="submit" value="register">
+                            <div class="row">
+                                <p class="col-lg-12">Notes:
+                                    If you are a Fintech-related media, focusing on cutting-edge technology, and want to
+                                    be
+                                    our partner, please register and contact us. A free pass is available and we’ll try
+                                    our
+                                    best to assist.</p>
+                            </div>
+                            <input class="text-capitalize addMedia" type="submit" value="register">
+                        </form>
                     </div>
 
                 </div>
@@ -110,7 +118,7 @@
                 <h4 class="modal-title" id="successfulLabel">Successful</h4>
             </div>
             <div class="modal-body">
-                <p>Successful! We will contact you if necessary, thank you for your support!</p>
+                <p>You have registered successfully! We will get back to you as soon as possible if necessary!</p>
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-primary" data-dismiss="modal">ok</button>
@@ -164,7 +172,15 @@
 <!--</p>-->
 <!--</div>-->
 <!--</div>-->
-
+<div class="loading-mask">
+</div>
+<div class="loading">
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+</div>
 
 <script src="https://cdn.bootcss.com/jquery/2.2.3/jquery.min.js"></script>
 <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"

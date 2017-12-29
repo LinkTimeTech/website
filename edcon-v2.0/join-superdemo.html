@@ -58,32 +58,39 @@
                 <div role="tabpanel" class="tab-pane fade in active" id="Superdemo">
                     <div class="sign-up-agileinfo">
                         <h3>Superdemo</h3>
-                        <div>
-                            <div class="col-lg-6">
-                                <input type="text" class="full name goadd" name="hackathonname" placeholder="Full Name"
-                                       required="">
-                                <input type="text" class="country goadd" name="hackathoncountry" placeholder="Country"
-                                       required="">
-                                <input type="text" class="team text-capitalize goadd" name="hackathoncompany"
-                                       placeholder="Company / Project"
-                                       required="">
-                                <input type="email" class="email goadd" name="hackathonemail" placeholder="Email"
-                                       required="">
-                                <input type="text" class="phone goadd" name="hackathonphone" placeholder="Phone"
-                                       required="">
+                        <form id="superdemo-form">
 
-                            </div>
+                            <div class="row">
+                                <div class="col-lg-6">
+                                    <input type="text" class="full name goadd Superdemoname" name="name"
+                                           placeholder="Full Name"
+                                           required="">
+                                    <input type="text" class="country goadd Superdemocountry" name="country"
+                                           placeholder="Country"
+                                           required="">
+                                    <input type="text" class="team text-capitalize goadd Superdemocompany"
+                                           name="company"
+                                           placeholder="Company / Project"
+                                           required="">
+                                    <input type="email" class="email goadd Superdemoemail" name="email"
+                                           placeholder="Email"
+                                           required="">
+                                    <input type="text" class="phone goadd Superdemophone" name="phone"
+                                           placeholder="Phone"
+                                           required="">
 
-                            <div class="col-lg-6">
-                            <textarea rows="15" class="project goadd" name="hackathonnote"
+                                </div>
+
+                                <div class="col-lg-6">
+                            <textarea rows="15" class="project goadd Superdemonote" name="note"
                                       placeholder="Please describe more about yourself, your research or project. Please also attach the links of your Linkedin and GitHub"
                                       required=""></textarea>
+                                </div>
+
+
                             </div>
-
-
-                            <input type="submit" value="Register" class="addHackathon">
-
-                        </div>
+                            <input type="submit" value="Register" class="addSuperdemo">
+                        </form>
                     </div>
 
                 </div>
@@ -104,7 +111,7 @@
                 <h4 class="modal-title" id="successfulLabel">Successful</h4>
             </div>
             <div class="modal-body">
-                <p>Successful! We will contact you if necessary, thank you for your support!</p>
+                <p>You have registered successfully! We will get back to you as soon as possible if necessary!</p>
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-primary" data-dismiss="modal">ok</button>
@@ -158,6 +165,15 @@
 <!--</p>-->
 <!--</div>-->
 <!--</div>-->
+<div class="loading-mask">
+</div>
+<div class="loading">
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+</div>
 
 <script src="https://cdn.bootcss.com/jquery/2.2.3/jquery.min.js"></script>
 <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"

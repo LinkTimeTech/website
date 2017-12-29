@@ -57,32 +57,36 @@
                 <div role="tabpanel" class="tab-pane fade in active" id="speaker">
                     <div class="sign-up-agileinfo">
                         <h3>Speaker</h3>
-                        <div>
+                        <form id="speaker-form">
+                            <div class="row">
                             <div class="col-lg-6">
-                                <input type="text" class="name goadd" name="speakername" placeholder="Full Name"
+                                <input type="text" class="name goadd speakername" name="name" placeholder="Full Name"
                                        required="">
-                                <input type="text" class="country goadd" name="speakercountry" placeholder="Country"
+                                <input type="text" class="country goadd speakercountry" name="country"
+                                       placeholder="Country"
                                        required="">
-                                <input type="text" class="company text-capitalize goadd" name="speakercompany"
+                                <input type="text" class="company text-capitalize goadd speakercompany" name="company"
                                        placeholder="company"
                                        required="">
-                                <input type="text" class="Position goadd" name="speakerposition" placeholder="Position"
+                                <input type="text" class="Position goadd speakerposition" name="position"
+                                       placeholder="Position"
                                        required="">
-                                <input type="email" class="email goadd" name="speakeremail" placeholder="Email"
+                                <input type="email" class="email goadd speakeremail" name="email" placeholder="Email"
                                        required="">
-                                <input type="text" class="phone goadd" name="speakerphone" placeholder="Phone"
+                                <input type="text" class="phone goadd speakerphone" name="phone" placeholder="Phone"
                                        required="">
                             </div>
 
                             <div class="col-lg-6">
-                                <textarea rows="16" class="project goadd" name="speakernote"
+                                <textarea rows="16" class="project goadd speakernote" name="note"
                                           placeholder="Please attach the topic/scope you want to speak and give some descriptions, also please attach links of your company/Linkedin/Github"
                                           required=""></textarea>
                             </div>
 
-                            <input class="text-capitalize addSpeaker" type="submit" value="register">
 
-                        </div>
+                            </div>
+                            <input class="text-capitalize addSpeaker" type="submit" value="register">
+                        </form>
                     </div>
 
                 </div>
@@ -95,15 +99,21 @@
 
 <!-- Modal -->
 <div class="modal fade" id="success" tabindex="-1" role="dialog" aria-labelledby="successfulLabel">
-    <div class="modal-dialog modal-sm" role="document">
+    <div class="modal-dialog modal-md" role="document">
         <div class="modal-content" style="color: #000">
             <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span>
                 </button>
-                <h4 class="modal-title" id="successfulLabel">Successful</h4>
+                <h4 class="modal-title" id="successfulLabel">Successful！
+                </h4>
             </div>
             <div class="modal-body">
-                <p>Successful! We will contact you if necessary, thank you for your support!</p>
+                <p>Thank you for participating in EDCON and registering to be a speaker.
+                    <br><br>We will send your topic/topic scope to our consulting team for reference in order to make
+                    the event high-valued. This process may take a while, and we will send you feedback as soon as
+                    possible. Thank you for your understanding.
+                    <br><br>Please stay tuned to the updates on our website.
+                    <br><br>Have a nice day!</p>
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-primary" data-dismiss="modal">ok</button>
@@ -157,6 +167,16 @@
 <!--</p>-->
 <!--</div>-->
 <!--</div>-->
+
+<div class="loading-mask">
+</div>
+<div class="loading">
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+</div>
 
 <script src="https://cdn.bootcss.com/jquery/2.2.3/jquery.min.js"></script>
 <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"

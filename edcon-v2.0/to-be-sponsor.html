@@ -59,28 +59,34 @@
                 <div role="tabpanel" class="tab-pane fade in active" id="sponsor">
                     <div class="sign-up-agileinfo">
                         <h3>Sponsor</h3>
-                        <div>
+                        <form id="sponsor-form">
+                            <div class="row">
                             <div class="col-lg-6">
-                                <input type="text" class="full name goadd" name="sponsorname" placeholder="Full Name"
+                                <input type="text" class="full name goadd sponsorname" name="name"
+                                       placeholder="Full Name"
                                        required="">
-                                <input type="text" class="country goadd" name="sponsorcountry" placeholder="Country"
+                                <input type="text" class="country goadd sponsorcountry" name="country"
+                                       placeholder="Country"
                                        required="">
-                                <input type="text" class="company goadd" name="sponsorcompany" placeholder="Company"
+                                <input type="text" class="company goadd sponsorcompany" name="company"
+                                       placeholder="Company"
                                        required="">
-                                <input type="email" class="email goadd" name="sponsoremail" placeholder="Email"
+                                <input type="email" class="email goadd sponsoremail" name="email" placeholder="Email"
                                        required="">
-                                <input type="text" class="phone goadd" name="sponsorphone" placeholder="Phone"
+                                <input type="text" class="phone goadd sponsorphone" name="phone" placeholder="Phone"
                                        required="">
                             </div>
 
                             <div class="col-lg-6">
-                                <textarea rows="15" class="business introduction goadd" name="sponsornote"
+                                <textarea rows="15" class="business introduction goadd sponsornote" name="note"
                                           placeholder="Please describe your business and attach related links"
                                           required=""></textarea>
                             </div>
 
+
+                            </div>
                             <input class="text-capitalize addSponsor" type="submit" value="register">
-                        </div>
+                        </form>
                     </div>
 
                 </div>
@@ -93,15 +99,19 @@
 
 <!-- Modal -->
 <div class="modal fade" id="success" tabindex="-1" role="dialog" aria-labelledby="successfulLabel">
-    <div class="modal-dialog modal-sm" role="document">
+    <div class="modal-dialog modal-md" role="document">
         <div class="modal-content" style="color: #000">
             <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span>
                 </button>
-                <h4 class="modal-title" id="successfulLabel">Successful</h4>
+                <h4 class="modal-title" id="successfulLabel">Successful！
+                </h4>
             </div>
             <div class="modal-body">
-                <p>Successful! We will contact you if necessary, thank you for your support!</p>
+                <p>Thanks for supporting us!
+                    <br><br>We will collect your information and send you sponsorship package as soon as possible.
+                    Please stay tuned!
+                    <br><br>Thanks again! Have a nice day!</p>
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-primary" data-dismiss="modal">ok</button>
@@ -155,7 +165,15 @@
 <!--</p>-->
 <!--</div>-->
 <!--</div>-->
-
+<div class="loading-mask">
+</div>
+<div class="loading">
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+</div>
 
 <script src="https://cdn.bootcss.com/jquery/2.2.3/jquery.min.js"></script>
 <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"
