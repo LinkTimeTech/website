@@ -103,6 +103,7 @@ var data = {
         parCheck: false
     },
 };
+let saveInfo, name, phone, email, position, country;
 //ViewModel
 let vue = new Vue({
     el: '#app',
@@ -127,12 +128,34 @@ let vue = new Vue({
 
             // if (this.rowtemplate.id != '' && this.rowtemplate.name != '' && this.rowtemplate.country != '' && this.rowtemplate.company != '' && this.rowtemplate.position != '' && this.rowtemplate.email != '' && this.rowtemplate.phone != '') {
 
+
+            $('.editIt').modal('hide');
+
             var time1 = new Date().Format("yyyy-MM-dd hh:mm:ss");
             this.rowtemplate.time = time1;
 
-            type.push(this.rowtemplate);
+            email = this.rowtemplate.email;
+            name = this.rowtemplate.name;
+            country = this.rowtemplate.country;
+            position = this.rowtemplate.position;
+            phone = this.rowtemplate.phone;
 
-            $('.editIt').modal('hide');
+            axios.post('addFreeTicket', {
+                email: email,
+                name: name,
+                country: country,
+                position: position,
+                phone: phone,
+            })
+                .then((response) => {
+
+                    type.push(this.rowtemplate);
+
+
+                })
+                .catch(function (error) {
+                    console.log(error);
+                });
 
             //还原模板
             this.rowtemplate = {
@@ -151,10 +174,6 @@ let vue = new Vue({
                 student_card: "",
 
             }
-
-
-            // }
-
 
         },
 
@@ -179,42 +198,13 @@ let vue = new Vue({
                 student_card: "",
             }
         },
-
-        Save: function (event) {
-
-            $('.editIt').modal('hide');
-
-            //还原模板
-            this.rowtemplate = {
-                id: "",
-                ticket_no: "",
-                company: "",
-                country: "",
-                email: "",
-                name: "",
-                phone: "",
-                position: "",
-
-                repo: "",
-
-                school: "",
-                student_card: "",
-            }
-        },
-
-
-        Delete: function (type, info, id, i) {
-
-            type.splice(i, 1);
-
-        },
-
         Edit: function (info) {
 
             this.isAdd = 0;
 
             $('.editIt').modal('show');
 
+            saveInfo = info;
             //学生
             this.studenttemplate = info;
 
@@ -225,6 +215,59 @@ let vue = new Vue({
             this.rowtemplate = info;
 
         },
+        Save: function (type) {
+
+            $('.editIt').modal('hide');
+
+            axios.post('editParticipantInfo', {
+                id: saveInfo.id,
+            })
+                .then((response) => {
+
+                    //还原模板
+                    this.rowtemplate = {
+                        id: "",
+                        ticket_no: "",
+                        company: "",
+                        country: "",
+                        email: "",
+                        name: "",
+                        phone: "",
+                        position: "",
+
+                        repo: "",
+
+                        school: "",
+                        student_card: "",
+                    }
+
+                })
+                .catch(function (error) {
+                    console.log(error);
+                });
+
+
+        },
+
+
+        Delete: function (type, info, id, i) {
+
+
+            axios.post('deleteParticipant', {
+                id: id,
+            })
+                .then((response) => {
+
+                    type.splice(i, 1);
+
+                })
+                .catch(function (error) {
+                    console.log(error);
+                });
+
+        },
+
+
         Search: function (e) {
 
 
