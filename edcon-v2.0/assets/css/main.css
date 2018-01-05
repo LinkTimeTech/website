@@ -222,7 +222,7 @@ ul li {
 }
 
 .bg-image-1::before {
-    background-color: rgba(0, 0, 0, 0.7);
+    background-color: rgba(0, 0, 0, 0.25);
 }
 
 .bg-image-2 {
@@ -525,7 +525,7 @@ ul li {
 /*最大*/
 .supersponsor {
     height: 200px !important;
-    width: 260px !important;
+    width: 300px !important;
     /*height: 100px !important;*/
     /*width: 150px !important;*/
 }

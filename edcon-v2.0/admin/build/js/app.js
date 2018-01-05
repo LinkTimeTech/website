@@ -14,7 +14,7 @@ Date.prototype.Format = function (fmt) { //author: meizz
     return fmt;
 };
 
-axios.defaults.timeout = 5000;
+// axios.defaults.timeout = 5000;
 axios.defaults.baseURL = 'https://edcon.io/tp/public/index.php/admin/edcon/';
 
 var data = {
@@ -45,21 +45,8 @@ var data = {
     ],
 
     rowtemplate: {
-        name: '',
+        id: '',
         ticket_no: '',
-        country: '',
-        company: '',
-        position: '',
-        email: '',
-        phone: '',
-
-        pass: "0",
-        send: "0",
-    },
-
-    devtemplate: {
-        id: "",
-        ticket_no: "",
         company: "",
         country: "",
         email: "",
@@ -69,26 +56,20 @@ var data = {
 
         repo: "",
 
-        pass: "0",
-        send: "0",
-
-    },
-    studenttemplate: {
-        id: "",
-        ticket_no: "",
-        company: "",
-        country: "",
-        email: "",
-        name: "",
-        phone: "",
-        position: "",
-
         school: "",
         student_card: "",
 
+        size: "",
+        media: "",
+        note: "",
+
         pass: "0",
         send: "0",
     },
+
+    keyword: '',
+    isSearch: 0,
+    searchPage: 1,
 
     pagesize: 20,
     curpage: 0, //初始化页码
@@ -102,19 +83,98 @@ var data = {
     allData: {
         parCheck: false
     },
+
+    Username: '',
+    Password: '',
+    newPassword: '',
+    oldPassword: '',
+
+    needEditor: 0,
+    emailSubject: '',
+    emailContent: ''
+
 };
-let saveInfo, name, phone, email, position, country;
+let saveInfo, emailType, editor, name, phone, email, position, country, note, company, size, media;
+
 //ViewModel
 let vue = new Vue({
     el: '#app',
     data: data,
     mounted() {
 
-        this.curpage = 1; //当前页码为1
+        axios.post('getLoginStatus', {})
+            .then((response) => {
 
+                if (window.location.pathname != '/preview/admin/production/login.html' && response.data.status == 127) {
+                    top.location = 'login.html';
+
+                }
+            })
+            .catch(function (error) {
+                console.log(error);
+                top.location = location.href;
+
+            });
+
+
+        this.curpage = 1; //后端拿数据
+
+        if (window.location.pathname == '/preview/admin/production/editemail.html') {
+            this.loading = 0;
+
+            this.needEditor = 1;
+        }
     },
 
     methods: {
+
+        login: function () {
+            let username = this.Username,
+                password = this.Password;
+            axios.post('login', {
+                username: username,
+                password: password
+            })
+                .then((response) => {
+
+                    top.location = 'index.html';
+
+                })
+                .catch(function (error) {
+                    console.log(error);
+                });
+        },
+
+
+        signout: function () {
+
+            axios.post('logout', {})
+                .then((response) => {
+                    top.location = 'login.html';
+                })
+                .catch(function (error) {
+                    console.log(error);
+                });
+        },
+
+
+        changePassword: function () {
+            let newPassword = this.newPassword,
+                oldPassword = this.oldPassword;
+            axios.post('login', {
+                oldPassword: oldPassword,
+                newPassword: newPassword
+            })
+                .then((response) => {
+
+                    alert('密码修改成功')
+
+                })
+                .catch(function (error) {
+                    console.log(error);
+                });
+        },
+
 
         goAdd: function (e) {
             $('.editIt').modal('show');
@@ -123,11 +183,10 @@ let vue = new Vue({
 
         },
 
+
         Add: function (type) {
             var vm = this;
-
-            // if (this.rowtemplate.id != '' && this.rowtemplate.name != '' && this.rowtemplate.country != '' && this.rowtemplate.company != '' && this.rowtemplate.position != '' && this.rowtemplate.email != '' && this.rowtemplate.phone != '') {
-
+            this.loading = 1;
 
             $('.editIt').modal('hide');
 
@@ -139,65 +198,293 @@ let vue = new Vue({
             country = this.rowtemplate.country;
             position = this.rowtemplate.position;
             phone = this.rowtemplate.phone;
+            company = this.rowtemplate.company;
+            note = this.rowtemplate.note;
+            size = this.rowtemplate.size;
+            media = this.rowtemplate.media;
 
-            axios.post('addFreeTicket', {
-                email: email,
-                name: name,
-                country: country,
-                position: position,
-                phone: phone,
-            })
-                .then((response) => {
+            //添加免费票
+            if (window.location.pathname == '/preview/admin/production/free_ticket.html') {
 
-                    type.push(this.rowtemplate);
-
-
+                axios.post('addFreeTicket', {
+                    email: email,
+                    name: name,
+                    country: country,
+                    company: company,
+                    position: position,
+                    phone: phone,
                 })
-                .catch(function (error) {
-                    console.log(error);
-                });
+                    .then((response) => {
 
-            //还原模板
-            this.rowtemplate = {
-                id: "",
-                ticket_no: "",
-                company: "",
-                country: "",
-                email: "",
-                name: "",
-                phone: "",
-                position: "",
+                        this.rowtemplate.ticket_no = response.data.data.ticket_no;
+                        this.rowtemplate.id = response.data.data.id;
+                        this.loading = 0;
 
-                repo: "",
+                        type.push(this.rowtemplate);
+                        // 还原模板
+                        this.rowtemplate = {
+                            id: '',
+                            ticket_no: '',
+                            company: "",
+                            country: "",
+                            email: "",
+                            name: "",
+                            phone: "",
+                            position: "",
+                            repo: "",
+                            school: "",
+                            student_card: "",
+                            size: "",
+                            media: "",
+                            note: "",
+                            pass: "0",
+                            send: "0",
+                        }
 
-                school: "",
-                student_card: "",
-
+                    })
+                    .catch(function (error) {
+                        console.log(error);
+                    });
             }
 
+            //添加speaker
+            if (window.location.pathname == '/preview/admin/production/speaker.html') {
+
+
+                axios.post('addSpeaker', {
+                    email: email,
+                    name: name,
+                    country: country,
+                    position: position,
+                    phone: phone,
+                    company: company,
+                    note: note
+                })
+                    .then((response) => {
+                        this.rowtemplate.id = response.data.data.id;
+                        this.loading = 0;
+
+                        type.push(this.rowtemplate);
+                        // 还原模板
+                        this.rowtemplate = {
+                            id: '',
+                            ticket_no: '',
+                            company: "",
+                            country: "",
+                            email: "",
+                            name: "",
+                            phone: "",
+                            position: "",
+                            repo: "",
+                            school: "",
+                            student_card: "",
+                            size: "",
+                            media: "",
+                            note: "",
+                            pass: "0",
+                            send: "0",
+                        }
+
+                    })
+                    .catch(function (error) {
+                        console.log(error);
+                    });
+            }
+
+            //添加Sponsor
+            if (window.location.pathname == '/preview/admin/production/sponsor.html') {
+
+
+                axios.post('addSponsor', {
+                    email: email,
+                    name: name,
+                    country: country,
+                    phone: phone,
+                    company: company,
+                    note: note
+                })
+                    .then((response) => {
+                        this.rowtemplate.id = response.data.data.id;
+                        this.loading = 0;
+
+                        type.push(this.rowtemplate);
+                        // 还原模板
+                        this.rowtemplate = {
+                            id: '',
+                            ticket_no: '',
+                            company: "",
+                            country: "",
+                            email: "",
+                            name: "",
+                            phone: "",
+                            position: "",
+                            repo: "",
+                            school: "",
+                            student_card: "",
+                            size: "",
+                            media: "",
+                            note: "",
+                            pass: "0",
+                            send: "0",
+                        }
+
+                    })
+                    .catch(function (error) {
+                        console.log(error);
+                    });
+            }
+
+            //添加Superdemo
+            if (window.location.pathname == '/preview/admin/production/superdemo.html') {
+
+
+                axios.post('addSuperdemo', {
+                    email: email,
+                    name: name,
+                    country: country,
+                    phone: phone,
+                    company: company,
+                    note: note
+                })
+                    .then((response) => {
+                        this.rowtemplate.id = response.data.data.id;
+                        this.loading = 0;
+
+                        type.push(this.rowtemplate);
+                        // 还原模板
+                        this.rowtemplate = {
+                            id: '',
+                            ticket_no: '',
+                            company: "",
+                            country: "",
+                            email: "",
+                            name: "",
+                            phone: "",
+                            position: "",
+                            repo: "",
+                            school: "",
+                            student_card: "",
+                            size: "",
+                            media: "",
+                            note: "",
+                            pass: "0",
+                            send: "0",
+                        }
+
+                    })
+                    .catch(function (error) {
+                        console.log(error);
+                    });
+            }
+
+            //添加community
+            if (window.location.pathname == '/preview/admin/production/community.html') {
+
+
+                axios.post('addCommunity', {
+                    email: email,
+                    name: name,
+                    country: country,
+                    size: size,
+                    phone: phone,
+                    company: company,
+                    note: note
+                })
+                    .then((response) => {
+                        this.rowtemplate.id = response.data.data.id;
+                        this.loading = 0;
+
+                        type.push(this.rowtemplate);
+                        // 还原模板
+                        this.rowtemplate = {
+                            id: '',
+                            ticket_no: '',
+                            company: "",
+                            country: "",
+                            email: "",
+                            name: "",
+                            phone: "",
+                            position: "",
+                            repo: "",
+                            school: "",
+                            student_card: "",
+                            size: "",
+                            media: "",
+                            note: "",
+                            pass: "0",
+                            send: "0",
+                        }
+
+                    })
+                    .catch(function (error) {
+                        console.log(error);
+                    });
+            }
+
+            //添加media
+            if (window.location.pathname == '/preview/admin/production/media.html') {
+
+
+                axios.post('addMedia', {
+                    email: email,
+                    name: name,
+                    country: country,
+                    media: media,
+                    phone: phone,
+                    company: company,
+                    note: note
+                })
+                    .then((response) => {
+                        this.rowtemplate.id = response.data.data.id;
+                        this.loading = 0;
+
+                        type.push(this.rowtemplate);
+
+                        // 还原模板
+                        this.rowtemplate = {
+                            id: '',
+                            ticket_no: '',
+                            company: "",
+                            country: "",
+                            email: "",
+                            name: "",
+                            phone: "",
+                            position: "",
+                            repo: "",
+                            school: "",
+                            student_card: "",
+                            size: "",
+                            media: "",
+                            note: "",
+                            pass: "0",
+                            send: "0",
+                        }
+
+                    })
+                    .catch(function (error) {
+                        console.log(error);
+                    });
+            }
+
+
         },
+
 
         closeEdit: function () {
 
             $('.editIt').modal('hide');
 
-            //还原模板
+            // 还原模板
             this.rowtemplate = {
-                id: "",
-                ticket_no: "",
-                company: "",
-                country: "",
-                email: "",
-                name: "",
-                phone: "",
-                position: "",
-
+                id: '', ticket_no: '', company: "", country: "", email: "", name: "", phone: "", position: "",
                 repo: "",
-
-                school: "",
-                student_card: "",
+                school: "", student_card: "",
+                size: "", media: "", note: "",
+                pass: "0", send: "0",
             }
         },
+
+
         Edit: function (info) {
 
             this.isAdd = 0;
@@ -205,58 +492,333 @@ let vue = new Vue({
             $('.editIt').modal('show');
 
             saveInfo = info;
-            //学生
-            this.studenttemplate = info;
 
-            //开发
-            this.devtemplate = info;
-
-            //早鸟，标准，免费
+            //显示要编辑的信息
             this.rowtemplate = info;
 
         },
+
+
         Save: function (type) {
+            this.loading = 1;
+
 
             $('.editIt').modal('hide');
 
-            axios.post('editParticipantInfo', {
-                id: saveInfo.id,
-            })
-                .then((response) => {
+            email = this.rowtemplate.email;
+            name = this.rowtemplate.name;
+            country = this.rowtemplate.country;
+            position = this.rowtemplate.position;
+            phone = this.rowtemplate.phone;
+            company = this.rowtemplate.company;
+            note = this.rowtemplate.note;
+            size = this.rowtemplate.size;
+            media = this.rowtemplate.media;
 
-                    //还原模板
-                    this.rowtemplate = {
-                        id: "",
-                        ticket_no: "",
-                        company: "",
-                        country: "",
-                        email: "",
-                        name: "",
-                        phone: "",
-                        position: "",
+            //保存编辑票种信息
+            if (window.location.pathname == '/preview/admin/production/early_bird_ticket.html' || window.location.pathname == '/preview/admin/production/student_ticket.html' || window.location.pathname == '/preview/admin/production/standard_ticket.html' || window.location.pathname == '/preview/admin/production/developer_ticket.html' || window.location.pathname == '/preview/admin/production/free_ticket.html') {
 
-                        repo: "",
 
-                        school: "",
-                        student_card: "",
-                    }
-
+                axios.post('editTicket', {
+                    id: saveInfo.id,
+                    email: email,
+                    name: name,
+                    country: country,
+                    position: position,
+                    phone: phone,
+                    company: company
                 })
-                .catch(function (error) {
-                    console.log(error);
-                });
+                    .then((response) => {
+                        this.loading = 0;
 
+                        //还原模板
+                        this.rowtemplate = {
+                            id: '',
+                            ticket_no: '',
+                            company: "",
+                            country: "",
+                            email: "",
+                            name: "",
+                            phone: "",
+                            position: "",
+                            repo: "",
+                            school: "",
+                            student_card: "",
+                            size: "",
+                            media: "",
+                            note: "",
+                            pass: "0",
+                            send: "0",
+                        }
+
+                    })
+                    .catch(function (error) {
+                        console.log(error);
+                    });
+            }
+
+            //保存编辑speaker
+            if (window.location.pathname == '/preview/admin/production/speaker.html') {
+
+
+                axios.post('editSpeaker', {
+                    id: saveInfo.id,
+                    email: email,
+                    name: name,
+                    country: country,
+                    position: position,
+                    phone: phone,
+                    company: company,
+                    note: note
+                })
+                    .then((response) => {
+                        this.loading = 0;
+
+                        //还原模板
+                        this.rowtemplate = {
+                            id: '',
+                            ticket_no: '',
+                            company: "",
+                            country: "",
+                            email: "",
+                            name: "",
+                            phone: "",
+                            position: "",
+                            repo: "",
+                            school: "",
+                            student_card: "",
+                            size: "",
+                            media: "",
+                            note: "",
+                            pass: "0",
+                            send: "0",
+                        }
+                    })
+                    .catch(function (error) {
+                        console.log(error);
+                    });
+            }
+
+            //保存编辑Sponsor
+            if (window.location.pathname == '/preview/admin/production/sponsor.html') {
+
+
+                axios.post('editSponsor', {
+                    id: saveInfo.id,
+                    email: email,
+                    name: name,
+                    country: country,
+                    phone: phone,
+                    company: company,
+                    note: note
+                })
+                    .then((response) => {
+                        this.loading = 0;
+
+                        //还原模板
+                        this.rowtemplate = {
+                            id: '',
+                            ticket_no: '',
+                            company: "",
+                            country: "",
+                            email: "",
+                            name: "",
+                            phone: "",
+                            position: "",
+                            repo: "",
+                            school: "",
+                            student_card: "",
+                            size: "",
+                            media: "",
+                            note: "",
+                            pass: "0",
+                            send: "0",
+                        }
+                    })
+                    .catch(function (error) {
+                        console.log(error);
+                    });
+            }
+
+            //保存编辑Superdemo
+            if (window.location.pathname == '/preview/admin/production/superdemo.html') {
+
+                axios.post('editSuperdemo', {
+                    id: saveInfo.id,
+                    email: email,
+                    name: name,
+                    country: country,
+                    phone: phone,
+                    company: company,
+                    note: note
+                })
+                    .then((response) => {
+                        this.loading = 0;
+
+                        //还原模板
+                        this.rowtemplate = {
+                            id: '',
+                            ticket_no: '',
+                            company: "",
+                            country: "",
+                            email: "",
+                            name: "",
+                            phone: "",
+                            position: "",
+                            repo: "",
+                            school: "",
+                            student_card: "",
+                            size: "",
+                            media: "",
+                            note: "",
+                            pass: "0",
+                            send: "0",
+                        }
+                    })
+                    .catch(function (error) {
+                        console.log(error);
+                    });
+            }
+
+            //保存编辑community
+            if (window.location.pathname == '/preview/admin/production/community.html') {
+
+
+                axios.post('editCommunity', {
+                    id: saveInfo.id,
+                    email: email,
+                    name: name,
+                    country: country,
+                    size: size,
+                    phone: phone,
+                    company: company,
+                    note: note
+                })
+                    .then((response) => {
+                        this.loading = 0;
+
+                        //还原模板
+                        this.rowtemplate = {
+                            id: '',
+                            ticket_no: '',
+                            company: "",
+                            country: "",
+                            email: "",
+                            name: "",
+                            phone: "",
+                            position: "",
+                            repo: "",
+                            school: "",
+                            student_card: "",
+                            size: "",
+                            media: "",
+                            note: "",
+                            pass: "0",
+                            send: "0",
+                        }
+
+                    })
+                    .catch(function (error) {
+                        console.log(error);
+                    });
+            }
+
+            //保存编辑media
+            if (window.location.pathname == '/preview/admin/production/media.html') {
+
+
+                axios.post('editMedia', {
+                    id: saveInfo.id,
+                    email: email,
+                    name: name,
+                    country: country,
+                    media: media,
+                    phone: phone,
+                    company: company,
+                    note: note
+                })
+                    .then((response) => {
+                        this.loading = 0;
+
+                        //还原模板
+                        this.rowtemplate = {
+                            id: '',
+                            ticket_no: '',
+                            company: "",
+                            country: "",
+                            email: "",
+                            name: "",
+                            phone: "",
+                            position: "",
+                            repo: "",
+                            school: "",
+                            student_card: "",
+                            size: "",
+                            media: "",
+                            note: "",
+                            pass: "0",
+                            send: "0",
+                        }
+                    })
+                    .catch(function (error) {
+                        console.log(error);
+                    });
+            }
 
         },
 
 
         Delete: function (type, info, id, i) {
+            this.loading = 1;
+
+            let deleteUrl;
+
+            //可以删除所有票种，但是现在前端显示只能删除免费票
+            if (window.location.pathname == '/preview/admin/production/free_ticket.html') {
+
+                deleteUrl = 'deleteTicket'
+            }
+
+            //删除speaker
+            if (window.location.pathname == '/preview/admin/production/speaker.html') {
+
+                deleteUrl = 'deleteSpeaker'
+            }
+
+            //删除Sponsor
+            if (window.location.pathname == '/preview/admin/production/sponsor.html') {
+
+                deleteUrl = 'deleteSponsor'
+
+            }
+
+            //删除Superdemo
+            if (window.location.pathname == '/preview/admin/production/superdemo.html') {
+
+                deleteUrl = 'deleteSuperdemo'
+
+            }
+
+            //删除community
+            if (window.location.pathname == '/preview/admin/production/community.html') {
+
+                deleteUrl = 'deleteCommunity'
+
+            }
+
+            //删除media
+            if (window.location.pathname == '/preview/admin/production/media.html') {
+
+                deleteUrl = 'deleteMedia'
+
+            }
 
 
-            axios.post('deleteParticipant', {
+            axios.post(deleteUrl, {
                 id: id,
             })
                 .then((response) => {
+                    this.loading = 0;
 
                     type.splice(i, 1);
 
@@ -264,39 +826,272 @@ let vue = new Vue({
                 .catch(function (error) {
                     console.log(error);
                 });
-
         },
 
 
         Search: function (e) {
+            this.loading = 1;
+            this.isSearch = 1;
+            this.searchPage = 1;
 
+            let keyword = this.keyword,
+                page = this.searchPage - 1;
+
+            //搜索早鸟票0:早鸟 1:标准 2:开发者 3:学生 4:免费
+            if (window.location.pathname == '/preview/admin/production/early_bird_ticket.html') {
+
+                axios.post('ticketSearch', {
+                    keyword: keyword,
+                    page: page,
+                    type: '0'
+                })
+                    .then((response) => {
+
+                        var dataStr = response.data;
+                        this.loading = 0;
+                        this.bird = dataStr.data;
+                        this.totalPage = dataStr.totalPage;
+                    })
+                    .catch(function (error) {
+                        console.log(error);
+                    });
+            }
+
+            //搜索standard的票
+            if (window.location.pathname == '/preview/admin/production/standard_ticket.html') {
+
+                axios.post('ticketSearch', {
+                    keyword: keyword,
+                    page: page,
+                    type: '1'
+                })
+                    .then((response) => {
+                        var dataStr = response.data;
+                        this.loading = 0;
+                        this.standard = dataStr.data;
+                        this.totalPage = dataStr.totalPage;
+
+
+                    })
+                    .catch(function (error) {
+                        console.log(error);
+                    });
+
+            }
+
+            //搜索developer的票
+            if (window.location.pathname == '/preview/admin/production/developer_ticket.html') {
+
+                axios.post('ticketSearch', {
+                    keyword: keyword,
+                    page: page,
+                    type: '2'
+                })
+                    .then((response) => {
+                        var dataStr = response.data;
+                        this.loading = 0;
+                        this.developer = dataStr.data;
+                        this.totalPage = dataStr.totalPage;
+
+                    })
+                    .catch(function (error) {
+                        console.log(error);
+                    });
+
+            }
+
+            //搜索student的票
+            if (window.location.pathname == '/preview/admin/production/student_ticket.html') {
+
+                axios.post('ticketSearch', {
+                    keyword: keyword,
+                    page: page,
+                    type: '3'
+                })
+                    .then((response) => {
+                        var dataStr = response.data;
+                        this.loading = 0;
+                        this.student = dataStr.data;
+                        this.totalPage = dataStr.totalPage;
+
+                    })
+                    .catch(function (error) {
+                        console.log(error);
+                    });
+
+            }
+
+            //搜索free的票
+            if (window.location.pathname == '/preview/admin/production/free_ticket.html') {
+
+                axios.post('ticketSearch', {
+                    keyword: keyword,
+                    page: page,
+                    type: '4'
+                })
+                    .then((response) => {
+                        var dataStr = response.data;
+                        this.loading = 0;
+                        this.free = dataStr.data;
+                        this.totalPage = dataStr.totalPage;
+
+                    })
+                    .catch(function (error) {
+                        console.log(error);
+                    });
+
+            }
+
+            //搜索speaker
+            if (window.location.pathname == '/preview/admin/production/speaker.html') {
+
+
+                axios.post('speakerSearch', {
+                    keyword: keyword,
+                    page: page
+                })
+                    .then((response) => {
+
+                        var dataStr = response.data;
+                        this.loading = 0;
+                        this.speakers = dataStr.data;
+                        this.totalPage = dataStr.totalPage;
+                    })
+                    .catch(function (error) {
+                        console.log(error);
+                    });
+            }
+
+            //搜索Sponsor
+            if (window.location.pathname == '/preview/admin/production/sponsor.html') {
+
+                axios.post('sponsorSearch', {
+                    keyword: keyword,
+                    page: page
+                })
+                    .then((response) => {
+
+                        var dataStr = response.data;
+                        this.loading = 0;
+                        this.sponsors = dataStr.data;
+                        this.totalPage = dataStr.totalPage;
+                    })
+                    .catch(function (error) {
+                        console.log(error);
+                    });
+
+            }
+
+            //搜索Superdemo
+            if (window.location.pathname == '/preview/admin/production/superdemo.html') {
+
+                axios.post('superdemoSearch', {
+                    keyword: keyword,
+                    page: page
+                })
+                    .then((response) => {
+
+                        var dataStr = response.data;
+                        this.loading = 0;
+                        this.superdemos = dataStr.data;
+                        this.totalPage = dataStr.totalPage;
+                    })
+                    .catch(function (error) {
+                        console.log(error);
+                    });
+
+            }
+
+            //搜索community
+            if (window.location.pathname == '/preview/admin/production/community.html') {
+
+
+                axios.post('communitySearch', {
+                    keyword: keyword,
+                    page: page
+                })
+                    .then((response) => {
+
+                        var dataStr = response.data;
+                        this.loading = 0;
+                        this.communityList = dataStr.data;
+                        this.totalPage = dataStr.totalPage;
+                    })
+                    .catch(function (error) {
+                        console.log(error);
+                    });
+
+            }
+
+            //搜索media
+            if (window.location.pathname == '/preview/admin/production/media.html') {
+
+                axios.post('mediaSearch', {
+                    keyword: keyword,
+                    page: page
+                })
+                    .then((response) => {
+
+                        var dataStr = response.data;
+                        this.loading = 0;
+                        this.mediaList = dataStr.data;
+                        this.totalPage = dataStr.totalPage;
+                    })
+                    .catch(function (error) {
+                        console.log(error);
+                    });
+
+            }
 
         },
+
 
         //上一页方法
         PrePage: function (type) {
-            if (this.curpage !== 1) {
-                this.curpage = this.curpage - 1
+
+            if (this.isSearch == 1) {
+                if (this.searchPage !== 1) {
+                    this.searchPage = this.searchPage - 1
+                }
+            } else {
+                if (this.curpage !== 1) {
+                    this.curpage = this.curpage - 1
+                }
             }
+
         },
+
 
         //下一页方法
         NextPage: function (type) {
 
-            if (this.curpage !== this.totalPage) {
-
-                this.curpage = this.curpage + 1
-
+            if (this.isSearch == 1) {
+                if (this.searchPage !== this.totalPage) {
+                    this.searchPage = this.searchPage + 1
+                }
+            } else {
+                if (this.curpage !== this.totalPage) {
+                    this.curpage = this.curpage + 1
+                }
             }
 
 
         },
+
+
         //点击页码的方法
         NumPage: function (num, event) {
 
-            this.curpage = num;
+
+            if (this.isSearch == 1) {
+                this.searchPage = num;
+            } else {
+                this.curpage = num;
+
+            }
 
         },
+
 
         //多选
         // allSelect: function (type) {
@@ -347,27 +1142,41 @@ let vue = new Vue({
         //     }
         // },
 
+
         //通过审核
         Pass: function (type, info, id) {
-            // console.log(info)
-
+            // console.log(info);
+            var CancelToken = axios.CancelToken;
+            var source = CancelToken.source();
+            info.pass = 1;
             axios.post('pass', {
                 id: id,
+                cancelToken: source.token
+            }).catch(function (thrown) {
+                if (axios.isCancel(thrown)) {
+                    console.log('Request canceled', thrown.message);
+
+                } else {
+                    // 处理错误
+                }
             })
                 .then((response) => {
-
-                    info.pass = 0;
+                    console.log(response);
 
                 })
                 .catch(function (error) {
                     console.log(error);
                 });
 
+            // 取消请求（message 参数是可选的）
+            source.cancel('取消请求');
 
         },
+
         //不通过审核
         Reject: function (type, info, id) {
             // console.log(info)
+            this.loading = 1;
 
             axios.post('reject', {
                 id: id,
@@ -375,6 +1184,7 @@ let vue = new Vue({
                 .then((response) => {
 
                     info.pass = 2;
+                    this.loading = 0;
 
                 })
                 .catch(function (error) {
@@ -384,13 +1194,11 @@ let vue = new Vue({
 
         },
 
+
         changePage: function () {
 
-            let page = this.curpage - 1,
-                type,
-                api,
-                baseUrl = '',
-                dataStr;
+            let page = this.curpage - 1;
+
             /*
             *  票
             */
@@ -593,12 +1401,91 @@ let vue = new Vue({
              */
 
 
+        },
+
+
+        getEamil: function (type) {
+            var that = this;
+            this.loading = 1;
+
+            editor.txt.html('<p></p>');
+            this.emailSubject = '';
+
+            emailType = type;
+
+            axios.post('getMail', {
+                type: type,
+
+            })
+                .then((response) => {
+
+                    this.emailContent = response.data.data.body;
+                    this.emailSubject = response.data.data.subject;
+                    this.loading = 0;
+
+                    // console.log('emailContent', that.emailContent)
+                    // console.log('decodeURIemailContent', decodeURI(that.emailContent))
+                    editor.txt.html(that.emailContent);
+
+                })
+                .catch(function (error) {
+                    console.log(error);
+                });
+        },
+
+
+        saveEamilContent: function () {
+            this.loading = 1;
+
+            let body = this.emailContent,
+                subject = this.emailSubject;
+
+            axios.post('editMail', {
+                type: emailType,
+                body: body,
+                subject: subject,
+
+            })
+                .then((response) => {
+
+                    editor.txt.html('<p></p>');
+
+                    this.emailSubject = '';
+                    this.loading = 0;
+
+                    alert('保存成功');
+
+
+                })
+                .catch(function (error) {
+                    console.log(error);
+                });
+        },
+
+        createAEditor: function () {
+            var _this = this;
+
+            var E = window.wangEditor;
+
+            editor = new E('#editor');
+
+            editor.customConfig.onchange = (html) => {
+
+                _this.emailContent = html;
+
+            };
+
+            editor.create();
         }
+
 
     },
 
+
     watch: {
-        curpage: 'changePage',
+        curpage: 'changePage',//监测当前页码的变化
+        searchPage: 'Search',//监测搜索的页码的变化
+        needEditor: 'createAEditor'//监测当前页面是否是editemail，是就创建editor
     }
 });
 

@@ -11,11 +11,6 @@
 
     <!-- Bootstrap -->
     <link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Font Awesome -->
-    <link href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
-
-    <!-- Animate.css -->
-    <link href="https://cdn.bootcss.com/animate.css/3.5.2/animate.min.css" rel="stylesheet">
 
     <!-- Custom Theme Style -->
     <link href="../build/css/custom.min.css" rel="stylesheet">
@@ -26,19 +21,21 @@
     <a class="hiddenanchor" id="signup"></a>
     <a class="hiddenanchor" id="signin"></a>
 
-    <div class="login_wrapper">
+    <div class="login_wrapper" id="app">
         <div class="animate form login_form">
             <section class="login_content">
                 <form>
                     <h1>Login Form</h1>
                     <div>
-                        <input type="text" class="form-control" placeholder="Username" required=""/>
+                        <input type="text" class="form-control" placeholder="Username" required="" v-model="Username"
+                               name="username"/>
                     </div>
                     <div>
-                        <input type="password" class="form-control" placeholder="Password" required=""/>
+                        <input type="password" class="form-control" placeholder="Password" required=""
+                               v-model="Password" name="password"/>
                     </div>
                     <div>
-                        <a class="btn btn-default submit" href="index.html">Log in</a>
+                        <a class="btn btn-default submit" @click="login">Log in</a>
                         <!--<a class="reset_pass" href="#">Lost your password?</a>-->
                     </div>
 
@@ -97,6 +94,14 @@
         <!--</section>-->
         <!--</div>-->
     </div>
+    <div class="loading-mask" v-if="loading == 1"></div>
+    <div class="loading" v-if="loading == 1"><span></span> <span></span> <span></span> <span></span> <span></span></div>
 </div>
+<script src="https://cdn.bootcss.com/vue/2.5.9/vue.js"></script>
+
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+
+<script src="../build/js/app.js"></script>
+
 </body>
 </html>

@@ -134,19 +134,9 @@ $(function () {
                 $('#imagetolarge').modal('show')
             } else {
 
-                /*
-                 *   图片预览
-                 */
                 if (!this.value) {
                     return;
                 }
-                var fr = new FileReader();
-                fr.onload = function () {
-                    $('.stucardcue').css('display', 'none');
-                    $('#avatarPreview').css('display', 'block').attr('src', this.result);
-                    $('.stucard-info').css('margin-top', '10px')
-                };
-                fr.readAsDataURL(this.files[0]);
 
                 /*
                     图片上传
@@ -162,6 +152,16 @@ $(function () {
                 xhr.open('post', 'https://edcon.io/tp/public/index.php/index/index/uploadfile');
                 xhr.send(fm);
 
+                /*
+                 *   图片预览
+                 */
+                var fr = new FileReader();
+                fr.onload = function () {
+                    $('.stucardcue').css('display', 'none');
+                    $('#avatarPreview').css('display', 'block').attr('src', this.result);
+                    $('.stucard-info').css('margin-top', '10px')
+                };
+                fr.readAsDataURL(this.files[0]);
             }
 
         } else {
@@ -206,11 +206,14 @@ $(function () {
 
 
 // Submit handler for checkout form.
-    Omise.setPublicKey("pkey_test_5acsuittt50wpshlf49");
-    // Omise.setPublicKey("pkey_5af2oawcv1t31tqg8xg");
+//     Omise.setPublicKey("pkey_test_5abmx0y59wgx8ynuis5");
+    Omise.setPublicKey("pkey_test_56bod6t9yl5li6whpfa"); //linktime
+    // Omise.setPublicKey("pkey_5af2oawcv1t31tqg8xg"); //linktime
 
     $('.creatToken').click(function (event) {
         event.preventDefault();
+
+        $('#chargecard').modal('hide');
 
         $('.loading,.loading-mask').fadeIn(100);
 
@@ -243,7 +246,6 @@ $(function () {
                 sendPurchaserInfo.open('post', 'https://edcon.io/tp/public/index.php/index/index/registration');
                 sendPurchaserInfo.send(purchaser);
 
-                $('#chargecard').modal('hide');
 
                 sendPurchaserInfo.onload = function () {
                     var json = JSON.parse(this.response);
@@ -262,12 +264,18 @@ $(function () {
                     }
 
                     // 支付失败
-                    else if (isPay === 2) {
+                    else if (isPay === 1) {
                         $('.loading,.loading-mask').fadeOut();
                         console.log(response);
 
                         $('#payfail').modal('show');
                         document.getElementById("checkout-form").reset()
+                    }
+                    //失败
+                    else {
+                        $('.loading,.loading-mask').fadeOut();
+                        $('#failed').modal('show');
+
                     }
                 };
 

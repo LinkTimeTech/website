@@ -16,6 +16,8 @@
 
     <!-- Custom Theme Style -->
     <link href="../build/css/custom.min.css" rel="stylesheet">
+    <link href="../build/css/index.css" rel="stylesheet">
+
 </head>
 
 <body class="nav-md">
@@ -79,11 +81,14 @@
                                 </ul>
                             </li>
 
-                            <li><a><i class="fa fa-desktop"></i> 签到 <span
-                                    class="fa fa-chevron-down"></span></a>
+                            <li><a><i class="fa fa-edit"></i> 签到 <span class="fa fa-chevron-down"></span></a>
                                 <ul class="nav child_menu">
                                     <li><a href="checkin.html">Check In</a></li>
-
+                                </ul>
+                            </li>
+                            <li><a><i class="fa fa-desktop"></i>Setting<span class="fa fa-chevron-down"></span></a>
+                                <ul class="nav child_menu">
+                                    <li><a href="editemail.html">Emails</a></li>
                                 </ul>
                             </li>
                         </ul>
@@ -113,7 +118,9 @@
                             </a>
                             <ul class="dropdown-menu dropdown-usermenu pull-right">
 
-                                <li><a href="login.html"><i class="fa fa-sign-out pull-right"></i> Log Out</a></li>
+                                <li><a data-toggle="modal" data-target="#changethepass"><i
+                                        class="fa fa-cog pull-right"></i>Change Password</a></li>
+                                <li><a @click="signout"><i class="fa fa-sign-out pull-right"></i> Log Out</a></li>
                             </ul>
                         </li>
 
@@ -135,7 +142,7 @@
                     <div class="title_right">
                         <div class="col-md-5 col-sm-5 col-xs-12 form-group pull-right top_search">
                             <div class="input-group">
-                                <input type="text" class="form-control" placeholder="Search for...">
+                                <input type="text" class="form-control" placeholder="Search for..." v-model="keyword">
                                 <span class="input-group-btn">
                     <button class="btn btn-default" type="button" @click="Search">Go!</button>
                     </span>
@@ -147,7 +154,7 @@
                 <div class="clearfix"></div>
 
                 <div class="row">
-                    <div class="col-md-12">
+                    <div class="">
                         <div class="x_panel">
                             <div class="x_title">
                                 <h2 class="pageId">Sponsor</h2>
@@ -163,52 +170,54 @@
                                 </button>
                                 <!--<input type="text" placeholder="search" @input="search" class="search">-->
                                 <!-- start project list -->
-                                <table class="table table-striped projects">
-                                    <thead>
-                                    <tr>
-                                        <th style="width: 1%">NO.</th>
-                                        <th>Name</th>
-                                        <th>Country</th>
-                                        <th>Company</th>
-                                        <th>Email</th>
-                                        <th>Phone</th>
-                                        <th>Note</th>
-                                        <th>Time</th>
-                                        <th>Edit</th>
-                                    </tr>
-                                    </thead>
-                                    <tbody>
-                                    <template v-for="(row, index) in sponsors">
+                                <div class="table-responsive">
+
+                                    <table class="table table-striped projects">
+                                        <thead>
                                         <tr>
-                                            <td>{{row.id}}</td>
-                                            <td>{{row.name}}</td>
-                                            <td>{{row.country}}</td>
-                                            <td>{{row.company}}</td>
-                                            <td>{{row.email}}</td>
-                                            <td>{{row.phone}}</td>
-                                            <td>{{row.note}}</td>
-                                            <td>{{row.time}}</td>
-
-
-                                            <td>
-                                                <a href="#" class="btn btn-info btn-xs" @click="Edit(row)"><i
-                                                        class="fa fa-pencil"></i> Edit
-                                                </a>
-                                                <a href="#" class="btn btn-danger btn-xs"
-                                                   @click="Delete(sponsors,row,row.id,index)"><i
-                                                        class="fa fa-trash-o"></i>
-                                                    Delete </a>
-
-                                            </td>
-
+                                            <th style="width: 1%">NO.</th>
+                                            <th>Name</th>
+                                            <th>Country</th>
+                                            <th>Company</th>
+                                            <th>Email</th>
+                                            <th>Phone</th>
+                                            <th>Note</th>
+                                            <th>Time</th>
+                                            <th>Edit</th>
                                         </tr>
-                                    </template>
+                                        </thead>
+                                        <tbody>
+                                        <template v-for="(row, index) in sponsors">
+                                            <tr>
+                                                <td>{{row.id}}</td>
+                                                <td>{{row.name}}</td>
+                                                <td>{{row.country}}</td>
+                                                <td>{{row.company}}</td>
+                                                <td class="emailTextRow">{{row.email}}</td>
+                                                <td>{{row.phone}}</td>
+                                                <td>{{row.note}}</td>
+                                                <td>{{row.time}}</td>
 
 
-                                    </tbody>
-                                    <tfoot></tfoot>
-                                </table>
+                                                <td>
+                                                    <a class="btn btn-info btn-xs" @click="Edit(row)"><i
+                                                            class="fa fa-pencil"></i> Edit
+                                                    </a>
+                                                    <a class="btn btn-danger btn-xs"
+                                                       @click="Delete(sponsors,row,row.id,index)"><i
+                                                            class="fa fa-trash-o"></i>
+                                                        Delete </a>
 
+                                                </td>
+
+                                            </tr>
+                                        </template>
+
+
+                                        </tbody>
+                                        <tfoot></tfoot>
+                                    </table>
+                                </div>
                                 <!-- end project list -->
                                 <nav style="float:right;">
                                     <ul class="pagination ">
@@ -328,17 +337,41 @@
                     <button type="button" class="btn btn-primary" @click="Add(sponsors)"
                             v-if="isAdd==1">Add!
                     </button>
-                    <button type="button" class="btn btn-primary" @click="Save"
-                            v-else>Save
+                    <button type="button" class="btn btn-primary" @click="Save(sponsors)" v-else>Save</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="changethepass" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog modal-sm" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                            aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title">Change Password</h4></div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-md-12"><h5>Old Password</h5></div>
+                        <div class="col-md-12"><input type="text" class="form-control" v-model="oldPassword"/></div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12"><h5>New Password</h5></div>
+                        <div class="col-md-12"><input type="text" class="form-control" v-model="newPassword"/></div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary" @click="changePassword()" data-dismiss="modal">Save
+                        changes
                     </button>
                 </div>
             </div>
         </div>
     </div>
 
+    <div class="loading-mask" v-if="loading == 1"></div>
+    <div class="loading" v-if="loading == 1"><span></span> <span></span> <span></span> <span></span> <span></span></div>
 </div>
-
-
 <script src="https://cdn.bootcss.com/vue/2.5.9/vue.js"></script>
 
 <script src="https://unpkg.com/axios/dist/axios.min.js"></script>

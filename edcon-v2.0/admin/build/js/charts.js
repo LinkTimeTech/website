@@ -6,7 +6,7 @@ function init_echarts() {
     if (typeof (echarts) === 'undefined') {
         return;
     }
-    console.log('init_echarts');
+    // console.log('init_echarts');
 
 
     var theme = {
@@ -225,10 +225,13 @@ function init_echarts() {
 
     if ($('#ticket_pie').length) {
 
+        var ticket_pie = echarts.init(document.getElementById('ticket_pie'), theme);
+
+        var ticketsData, birdVal, standardVal, devVal, studentVal, freeVal, TotalTicketNum;
+
         /*
          *  拿ticket_pie数据
          */
-        var ticketStatistic;
         var getticketStatistics = new XMLHttpRequest();
         getticketStatistics.open('post', 'https://edcon.io/tp/public/index.php/admin/edcon/ticketStatistics');
         getticketStatistics.send();
@@ -236,66 +239,89 @@ function init_echarts() {
         getticketStatistics.onload = function () {
 
             var json = JSON.parse(this.response);
-            // console.log(json);
-            // console.log(json.status);
-            var status = json.status;
-            if (status == 0) {
-                console.log(this.response);
-                console.log(this.response.data);
 
-                ticketStatistic = this.response.data
-            } else {
-                alert('error')
-            }
+            // console.log('json: ', json)
+            // console.log('json.data: ', json.data)
+
+            var status = this.response.status;
+            ticketsData = json.data.ticket;
+            birdVal = ticketsData[0].value;
+            standardVal = ticketsData[1].value;
+            devVal = ticketsData[2].value;
+            studentVal = ticketsData[3].value;
+            freeVal = ticketsData[4].value;
+            TotalTicketNum = json.data.total;
+
+            // console.log('registration: ', json.data.registration);
+
+            ticket_pie.setOption({
+                title: {
+                    text: 'Tickets Data',
+                    subtext: 'Total: ' + TotalTicketNum,
+                    x: 'center'
+                },
+                tooltip: {
+                    trigger: 'item',
+                    formatter: "{a} <br/>{b} : {c} ({d}%)"
+                },
+                legend: {
+                    x: 'center',
+                    y: 'bottom',
+                    data: ['Early Bird Ticket', 'Standard Ticket', 'Developer Ticket', 'Student Ticket', 'Free Ticket']
+                },
+                toolbox: {
+                    show: true,
+                    feature: {
+                        magicType: {
+                            show: true,
+                            type: ['pie', 'funnel'],
+                            option: {
+                                funnel: {
+                                    x: '25%',
+                                    width: '50%',
+                                    funnelAlign: 'left',
+                                    max: 1548
+                                }
+                            }
+                        },
+                        restore: {
+                            show: true,
+                            title: "Restore"
+                        },
+                        saveAsImage: {
+                            show: true,
+                            title: "Save Image"
+                        }
+                    }
+                },
+                calculable: true,
+                series: [{
+                    name: 'Tickets',
+                    type: 'pie',
+                    radius: '55%',
+                    center: ['50%', '48%'],
+                    data: [{
+                        value: birdVal,
+                        name: 'Early Bird Ticket'
+                    }, {
+                        value: standardVal,
+                        name: 'Standard Ticket'
+                    }, {
+                        value: devVal,
+                        name: 'Developer Ticket'
+                    }, {
+                        value: studentVal,
+                        name: 'Student Ticket'
+                    }, {
+                        value: freeVal,
+                        name: 'Free Ticket'
+                    }]
+                }]
+            });
+
 
         };
 
-        var echartPie = echarts.init(document.getElementById('ticket_pie'), theme);
-
-        echartPie.setOption({
-            tooltip: {
-                trigger: 'item',
-                formatter: "{a} <br/>{b} : {c} ({d}%)"
-            },
-            legend: {
-                x: 'center',
-                y: 'bottom',
-                data: ['Early Bird Ticket', 'Standard Ticket', 'Developer Ticket', 'Student Ticket', 'Free Ticket']
-            },
-            toolbox: {
-                show: true,
-                feature: {
-                    magicType: {
-                        show: true,
-                        type: ['pie', 'funnel'],
-                        option: {
-                            funnel: {
-                                x: '25%',
-                                width: '50%',
-                                funnelAlign: 'left',
-                                max: 1548
-                            }
-                        }
-                    },
-                    restore: {
-                        show: true,
-                        title: "Restore"
-                    },
-                    saveAsImage: {
-                        show: true,
-                        title: "Save Image"
-                    }
-                }
-            },
-            calculable: true,
-            series: [{
-                name: '访问来源',
-                type: 'pie',
-                radius: '55%',
-                center: ['50%', '48%'],
-                data: ticketStatistic
-            }]
-        });
 
         var dataStyle = {
             normal: {
@@ -327,67 +353,102 @@ function init_echarts() {
 
     if ($('#register_pie').length) {
 
-        var echartPie = echarts.init(document.getElementById('register_pie'));
+        var registrationData, speakerVal, sponsorVal, mediaVal, superdemoVal, communityVal, TotalRegistNum;
 
-        echartPie.setOption({
-            tooltip: {
-                trigger: 'item',
-                formatter: "{a} <br/>{b} : {c} ({d}%)"
-            },
-            legend: {
-                x: 'center',
-                y: 'bottom',
-                data: ['Speaker', 'Sponsor', 'Media', 'Community', 'Superdemo']
-            },
-            toolbox: {
-                show: true,
-                feature: {
-                    magicType: {
-                        show: true,
-                        type: ['pie', 'funnel'],
-                        option: {
-                            funnel: {
-                                x: '25%',
-                                width: '50%',
-                                funnelAlign: 'left',
-                                max: 1548
+
+        var register_pie = echarts.init(document.getElementById('register_pie'));
+
+        /*
+         *  拿register_pie数据
+         */
+        // var registrationStatistics;
+        var getRegistrationStatistics = new XMLHttpRequest();
+        getRegistrationStatistics.open('post', 'https://edcon.io/tp/public/index.php/admin/edcon/registrationStatistics');
+        getRegistrationStatistics.send();
+
+        getRegistrationStatistics.onload = function () {
+
+            var json = JSON.parse(this.response);
+
+            var status = this.response.status;
+            registrationData = json.data.registration;
+            speakerVal = registrationData[0].value;
+            sponsorVal = registrationData[1].value;
+            mediaVal = registrationData[2].value;
+            superdemoVal = registrationData[3].value;
+            communityVal = registrationData[4].value;
+            TotalRegistNum = json.data.total;
+
+            // console.log('registration: ', json.data.registration);
+
+            register_pie.setOption({
+                title: {
+                    text: 'Registration Data',
+                    subtext: 'Total: ' + TotalRegistNum,
+                    x: 'center'
+                },
+                tooltip: {
+                    trigger: 'item',
+                    formatter: "{a} <br/>{b} : {c} ({d}%)"
+                },
+                legend: {
+                    x: 'center',
+                    y: 'bottom',
+                    data: ['Speaker', 'Sponsor', 'Media', 'Community', 'Superdemo']
+                },
+                toolbox: {
+                    show: true,
+                    feature: {
+                        magicType: {
+                            show: true,
+                            type: ['pie', 'funnel'],
+                            option: {
+                                funnel: {
+                                    x: '25%',
+                                    width: '50%',
+                                    funnelAlign: 'left',
+                                    max: 1548
+                                }
                             }
+                        },
+                        restore: {
+                            show: true,
+                            title: "Restore"
+                        },
+                        saveAsImage: {
+                            show: true,
+                            title: "Save Image"
                         }
-                    },
-                    restore: {
-                        show: true,
-                        title: "Restore"
-                    },
-                    saveAsImage: {
-                        show: true,
-                        title: "Save Image"
                     }
-                }
-            },
-            calculable: true,
-            series: [{
-                name: '访问来源',
-                type: 'pie',
-                radius: '55%',
-                center: ['50%', '48%'],
-                data: [{
-                    value: 335,
-                    name: 'Speaker'
-                }, {
-                    value: 310,
-                    name: 'Sponsor'
-                }, {
-                    value: 234,
-                    name: 'Media'
-                }, {
-                    value: 135,
-                    name: 'Community'
-                }, {
-                    value: 1548,
-                    name: 'Superdemo'
+                },
+                calculable: true,
+                series: [{
+                    name: 'Registration',
+                    type: 'pie',
+                    radius: '55%',
+                    center: ['50%', '48%'],
+                    data:
+                        [{
+                            value: speakerVal,
+                            name: 'Speaker'
+                        }, {
+                            value: sponsorVal,
+                            name: 'Sponsor'
+                        }, {
+                            value: mediaVal,
+                            name: 'Media'
+                        }, {
+                            value: communityVal,
+                            name: 'Community'
+                        }, {
+                            value: superdemoVal,
+                            name: 'Superdemo'
+                        }]
                 }]
-            }]
-        });
+            });
+
+        };
+
 
         var dataStyle = {
             normal: {
