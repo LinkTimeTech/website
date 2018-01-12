@@ -92,3 +92,8 @@
     word-break: break-all;
     width: 100px;
 }
+
+.w-e-toolbar {
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+}

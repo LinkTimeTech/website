@@ -20,7 +20,10 @@
           integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <link href="https://cdn.bootcss.com/animate.css/3.5.2/animate.min.css" rel="stylesheet">
     <link href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="assets/css/main.css">
+
+    <link href="https://cdn.bootcss.com/fancybox/3.2.5/jquery.fancybox.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="assets/css/main.min.css">
 
 </head>
 <body data-spy="scroll" data-target="#site-nav" data-offset="0">
@@ -129,7 +132,7 @@
                                 and can
                                 be as inclusive and fair as possible. We hope that we can make EDCON Toronto even more
                                 of a
-                                success than EDCON Paris last year. Still, the profits if we received form the event,
+                                success than EDCON Paris last year. Still, the profits if we received from the event,
                                 will be used in the future Ethereum meetups and other releated events to support our
                                 communities.
                             </p>
@@ -142,9 +145,8 @@
                                 To register as a participant, you will be able to click <a class="goregistration">registration</a>
                                 to see the standard ticket price as well as the available developer and student
                                 discounts.
-                                Purchasing tickets will become available soon; once purchases open, we encourage
-                                everyone to
-                                register as soon as possible to take advantage of the special early bird rates.For those
+                                Purchasing tickets already available, we encourage everyone to register as soon as
+                                possible to take advantage of the special early bird rates. For those
                                 wishing
                                 to present, please click <a href="to-be-speaker.html">here</a> to register. For those
                                 having
@@ -466,6 +468,17 @@
                         </div>
                     </div>
 
+                    <!--Thomas Greco-->
+                    <div class="col-md-3 col-sm-6 team">
+                        <div class="thumbnail"><img data-src="assets/images/speakers/2471509672536_.pic.jpg" alt="..."
+                                                    class="lozad img-circle team-img">
+                            <div class="caption">
+                                <h3>Thomas Greco</h3>
+                                <p>Special Advisor of Omise<br><br><br></p>
+                            </div>
+                        </div>
+                    </div>
+
                     <!--Matthew Spoke-->
                     <div class="col-md-3 col-sm-6 team">
                         <div class="thumbnail"><img data-src="assets/images/speakers/matthew_Spoke.jpg" alt="..."
@@ -478,13 +491,26 @@
                         </div>
                     </div>
 
-                    <!--Thomas Greco-->
+                    <!--Kai Chen-->
                     <div class="col-md-3 col-sm-6 team">
-                        <div class="thumbnail"><img data-src="assets/images/speakers/2471509672536_.pic.jpg" alt="..."
+                        <div class="thumbnail"><img data-src="assets/images/speakers/KaiChen.jpg" alt="..."
                                                     class="lozad img-circle team-img">
                             <div class="caption">
-                                <h3>Thomas Greco</h3>
-                                <p>Special Advisor of Omise<br><br></p>
+                                <h3>Kai Chen</h3>
+                                <p>Founder & CEO of Olympus Labs
+                                    <br><br><br></p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--Andy Milenius-->
+                    <div class="col-md-3 col-sm-6 team">
+                        <div class="thumbnail"><img data-src="assets/images/speakers/milenius.jpg" alt="..."
+                                                    class="lozad img-circle team-img">
+                            <div class="caption">
+                                <h3>Andy Milenius</h3>
+                                <p>CTO of MakerDAO
+                                    <br><br><br></p>
                             </div>
                         </div>
                     </div>
@@ -729,15 +755,13 @@
                 <div class="row">
                     <div class="col-md-12 animate-box">
                         <h3 class="section-title">REGISTRATION</h3>
-                        <p class="text-uppercase">Coming Soon...</p>
 
                     </div>
                 </div>
 
                 <div class="row">
                     <div class="col-md-3 animate-box">
-                        <a class="item-grid text-center" data-toggle="modal"
-                           data-target="#myModal">
+                        <a class="item-grid text-center" href="buy-ticket.html">
                             <div class="image lozad" data-background-image="assets/images/icon/earlybird.svg"></div>
                             <div class="v-align">
                                 <div class="v-align-middle">
@@ -754,8 +778,7 @@
                         </a>
                     </div>
                     <div class="col-md-3 animate-box">
-                        <a class="item-grid text-center" data-toggle="modal"
-                           data-target="#myModal">
+                        <a class="item-grid text-center" href="buy-ticket.html">
                             <div class="image lozad" data-background-image="assets/images/icon/standard.svg"></div>
                             <div class="v-align">
                                 <div class="v-align-middle">
@@ -771,8 +794,7 @@
                         </a>
                     </div>
                     <div class="col-md-3 animate-box">
-                        <a class="item-grid text-center" data-toggle="modal"
-                           data-target="#myModal">
+                        <a class="item-grid text-center" href="buy-ticket.html">
                             <div class="image lozad" data-background-image="assets/images/icon/developer.svg"></div>
                             <div class="v-align">
                                 <div class="v-align-middle">
@@ -789,8 +811,7 @@
                         </a>
                     </div>
                     <div class="col-md-3 animate-box">
-                        <a class="item-grid text-center" data-toggle="modal"
-                           data-target="#myModal">
+                        <a class="item-grid text-center" href="buy-ticket.html">
                             <div class="image lozad" data-background-image="assets/images/icon/student.svg"></div>
                             <div class="v-align">
                                 <div class="v-align-middle">
@@ -1049,6 +1070,8 @@
                         <iframe class="lozad"
                                 data-src="https://www.google.com/maps/embed/v1/place?q=Ryerson+University+-+Ted+Rogers+School+of+Management,+Dundas+Street+West,+Toronto,+ON,+Canada&key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8"
                                 width="100%" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+
+
                     </div>
                 </div>
             </div>
@@ -1071,48 +1094,69 @@
                         <ul class="grid">
 
                             <li class="grid-item grid-item-sm-6">
-                                <img class="lozad img-responsive center-block"
-                                     data-src="assets/images/photos/France-meeting3.jpg">
+                                <a href="assets/images/photos/France-meeting3.jpg" data-fancybox="photoGroup">
+                                    <img class="lozad img-responsive center-block"
+                                         data-src="assets/images/photos/France-meeting3.jpg">
+                                </a>
+                            </li>
+
+
+                            <li class="grid-item grid-item-sm-3">
+                                <a href="assets/images/photos/France-meeting6.jpg" data-fancybox="photoGroup">
+                                    <img class="lozad img-responsive center-block"
+                                         data-src="assets/images/photos/France-meeting6.jpg">
+                                </a>
                             </li>
 
                             <li class="grid-item grid-item-sm-3">
-                                <img class="lozad img-responsive center-block"
-                                     data-src="assets/images/photos/France-meeting6.jpg">
+                                <a href="assets/images/photos/France-meeting1.jpg" data-fancybox="photoGroup">
+                                    <img class="lozad img-responsive center-block"
+                                         data-src="assets/images/photos/France-meeting1.jpg">
+                                </a>
                             </li>
 
                             <li class="grid-item grid-item-sm-3">
-                                <img class="lozad img-responsive center-block"
-                                     data-src="assets/images/photos/France-meeting1.jpg">
+                                <a href="assets/images/photos/France-meeting4.jpg" data-fancybox="photoGroup">
+                                    <img class="lozad img-responsive center-block"
+                                         data-src="assets/images/photos/France-meeting4.jpg">
+                                </a>
                             </li>
 
                             <li class="grid-item grid-item-sm-3">
-                                <img class="lozad img-responsive center-block"
-                                     data-src="assets/images/photos/France-meeting4.jpg">
+                                <a href="assets/images/photos/491508836053_.pic.jpg" data-fancybox="photoGroup">
+                                    <img class="lozad img-responsive center-block"
+                                         data-src="assets/images/photos/491508836053_.pic.jpg">
+                                </a>
                             </li>
 
                             <li class="grid-item grid-item-sm-3">
-                                <img class="lozad img-responsive center-block"
-                                     data-src="assets/images/photos/491508836053_.pic.jpg">
+                                <a href="assets/images/photos/France-meeting21.jpg" data-fancybox="photoGroup">
+                                    <img class="lozad img-responsive center-block"
+                                         data-src="assets/images/photos/France-meeting21.jpg">
+                                </a>
                             </li>
 
                             <li class="grid-item grid-item-sm-3">
-                                <img class="lozad img-responsive center-block"
-                                     data-src="assets/images/photos/France-meeting21.jpg">
+                                <a href="assets/images/photos/5115088SSS36055_.pic.jpg" data-fancybox="photoGroup">
+                                    <img class="lozad img-responsive center-block"
+                                         data-src="assets/images/photos/5115088SSS36055_.pic.jpg">
+                                </a>
                             </li>
 
                             <li class="grid-item grid-item-sm-3">
-                                <img class="lozad img-responsive center-block"
-                                     data-src="assets/images/photos/5115088SSS36055_.pic.jpg">
+                                <a href="assets/images/photos/50150SSS8836054_.pic_hd.jpg" data-fancybox="photoGroup">
+                                    <img class="lozad img-responsive center-block"
+                                         data-src="assets/images/photos/50150SSS8836054_.pic_hd.jpg">
+                                </a>
+
                             </li>
 
                             <li class="grid-item grid-item-sm-3">
-                                <img class="lozad img-responsive center-block"
-                                     data-src="assets/images/photos/50150SSS8836054_.pic_hd.jpg">
-                            </li>
+                                <a href="assets/images/photos/France-meeting51.jpg" data-fancybox="photoGroup">
+                                    <img class="lozad img-responsive center-block"
+                                         data-src="assets/images/photos/France-meeting51.jpg">
+                                </a>
 
-                            <li class="grid-item grid-item-sm-3">
-                                <img class="lozad img-responsive center-block"
-                                     data-src="assets/images/photos/France-meeting51.jpg">
                             </li>
                         </ul>
                     </div>
@@ -1172,7 +1216,7 @@
                     <div class="col-sm-12 col-md-3">
                         <!--linktime_logo-->
                         <a class="lozad partner-box " data-background-image="assets/images/linktime_logo.svg"
-                           href="http://www.linktimetech.com/" style="width: 240px;"></a>
+                           href="http://www.linktimetech.com/" style="width: 255px;"></a>
                     </div>
                     <div class="col-sm-12 col-md-9">
                         <p class="site-info text-left " style="margin:30px 25px;font-size: 17px">
@@ -1197,12 +1241,13 @@
                     <div class="col-md-12">
                         <h4 class="section-title noMargin">Partners</h4>
                     </div>
-                    <div class="col-sm-3">
-                        <a class="lozad partner-box " data-background-image="assets/images/partner/ryerson_logo.svg"
+                    <div class="col-sm-4">
+                        <a class="lozad partner-box normals"
+                           data-background-image="assets/images/partner/ryerson_logo.svg"
                            href="http://www.ryerson.ca/"></a>
                     </div>
-                    <div class="col-sm-3">
-                        <a class="lozad partner-box " data-background-image="assets/images/partner/L4logo.svg"
+                    <div class="col-sm-4">
+                        <a class="lozad partner-box normals" data-background-image="assets/images/partner/L4logo.svg"
                            href="http://l4v.io/"></a>
                     </div>
 
@@ -1213,17 +1258,39 @@
                         <h4 class="section-title" style="margin: 30px 0">Sponsors</h4>
                     </div>
                 </div>
+                <div class="row">
+
+                    <div class="col-md-12">
+                        <h5 class="section-title noMargin">Special Sponsor</h5>
+                    </div>
+                    <div class="col-sm-4">
+                        <a class="lozad partner-box supersponsor"
+                           data-background-image="assets/images/partner/coming_soon_wh.jpg"></a>
+                    </div>
+                    <div class="col-sm-4">
+                        <a class="lozad partner-box supersponsor"
+                           data-background-image="assets/images/partner/coming_soon_wh.jpg"></a>
+                    </div>
+                    <div class="col-sm-4">
+                        <a class="lozad partner-box supersponsor"
+                           data-background-image="assets/images/partner/coming_soon_wh.jpg"></a>
+                    </div>
+                </div>
 
                 <div class="row">
 
                     <div class="col-md-12">
                         <h5 class="section-title noMargin">Super Sponsor</h5>
                     </div>
-                    <div class="col-sm-6">
+                    <div class="col-sm-4">
                         <a class="lozad partner-box supersponsor"
                            data-background-image="assets/images/partner/aion-Logo.png" href="https://aion.network"></a>
                     </div>
-                    <div class="col-sm-6">
+                    <div class="col-sm-4">
+                        <a class="lozad partner-box supersponsor"
+                           data-background-image="assets/images/partner/coming_soon_wh.jpg"></a>
+                    </div>
+                    <div class="col-sm-4">
                         <a class="lozad partner-box supersponsor"
                            data-background-image="assets/images/partner/coming_soon_wh.jpg"></a>
                     </div>
@@ -1233,9 +1300,9 @@
                     <div class="col-md-12">
                         <h5 class="section-title noMargin">Superdemo sponsor</h5>
                     </div>
-                    <div class="col-sm-6">
+                    <div class="col-sm-4">
                         <a class="lozad partner-box superdemosponsor" href="https://blockgeeks.com/"
-                           style="width: 300px;height: 200px"
+                           style="width: 260px;height: 200px"
                            data-background-image="assets/images/partner/blockgeeks.png"></a>
                     </div>
                 </div>
@@ -1243,7 +1310,7 @@
                     <div class="col-md-12">
                         <h5 class="section-title noMargin">Party sponsor</h5>
                     </div>
-                    <div class="col-sm-6">
+                    <div class="col-sm-4">
                         <a class="lozad partner-box partysponsor"
                            data-background-image="assets/images/partner/coming_soon_wh.jpg"></a>
                     </div>
@@ -1268,7 +1335,7 @@
                     </div>
                     <template v-for="content in silversponsor">
                         <div class="col-sm-3">
-                            <a class="lozad partner-box communitysponsor"
+                            <a class="lozad partner-box silversponsor"
                                :data-background-image="content.imgurl"
                                :href="content.website" :style="content.imgwidth"></a>
                         </div>
@@ -1294,10 +1361,7 @@
                     <div class="col-md-12">
                         <h4 class="section-title noMargin">Community supports</h4>
                     </div>
-                    <div class="col-sm-3">
-                        <a class="lozad partner-box communitysponsor"
-                           data-background-image="assets/images/partner/apec.svg" style="width: 80px"></a>
-                    </div>
+
                     <template v-for="content in communitySupports">
                         <div class="col-sm-3">
                             <a class="lozad partner-box communitysponsor"
@@ -1313,7 +1377,8 @@
                     </div>
                     <div class="col-sm-3">
                         <!--unitimes-->
-                        <a class="lozad partner-box" data-background-image="assets/images/partner/unitimes_logo.svg"
+                        <a class="lozad partner-box normals"
+                           data-background-image="assets/images/partner/unitimes_logo.svg"
                            href="http://unitimes.media/"></a>
                     </div>
                 </div>
@@ -1403,10 +1468,9 @@
 <!-- script -->
 <script src="https://cdn.bootcss.com/vue/2.5.9/vue.min.js"></script>
 
-<script src="assets/js/content.js"></script>
+<script src="assets/js/content.min.js"></script>
 
-<!--<script src="bower_components/jquery/dist/jquery.min.js"></script>-->
-<script src="https://cdn.bootcss.com/jquery/2.2.3/jquery.min.js"></script>
+<script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
 
 <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"
         integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
@@ -1423,6 +1487,11 @@
 
     //    new WOW().init();
 </script>
-<script src="assets/js/main.js"></script>
+
+<script src="https://cdn.bootcss.com/fancybox/3.2.5/jquery.fancybox.min.js"></script>
+
+<script src="assets/js/main.min.js"></script>
+
+
 </body>
 </html>

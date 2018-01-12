@@ -30,19 +30,7 @@ var data = {
     communityList: [],
     mediaList: [],
 
-    checkInList: [
-        {
-            id: '100',
-            name: 'Joe',
-            ticket_no: '9000',
-            company: 'Linktime',
-            position: 'web',
-            email: '11@qq.com',
-            phone: '123467454',
-            time: '2017-12-25 19:37:47',
-            ticket_used: '0'
-        }
-    ],
+    checkInList: [],
 
     rowtemplate: {
         id: '',
@@ -67,6 +55,7 @@ var data = {
         send: "0",
     },
 
+    //搜索
     keyword: '',
     isSearch: 0,
     searchPage: 1,
@@ -75,6 +64,7 @@ var data = {
     curpage: 0, //初始化页码
     totalPage: 1,
 
+    // 添加新信息
     isAdd: 0, //初始化Add
 
     loading: 1,//一进入页面就显示loading
@@ -84,28 +74,46 @@ var data = {
         parCheck: false
     },
 
+    // 登录
     Username: '',
     Password: '',
     newPassword: '',
     oldPassword: '',
 
+    // 编辑器
     needEditor: 0,
     emailSubject: '',
-    emailContent: ''
+    emailContent: '',
+
+    // 新消息通知
+    newSpeakerNum: '',
+    newSponsorNum: '',
+    newMediaNum: '',
+    newCommunityNum: '',
+    newSuperdemoNum: '',
+    newStudentNum: '',
+    newDevNum: '',
+
+    // 签到页面
+    isCheckList: 0,
+    totalTicketsNum: '',
+    totalCheckNum: ''
 
 };
-let saveInfo, emailType, editor, name, phone, email, position, country, note, company, size, media;
+var saveInfo, emailType, editor, name, phone, email, position, country, note, company, size, media, role;
 
 //ViewModel
-let vue = new Vue({
+var vue = new Vue({
     el: '#app',
     data: data,
     mounted() {
 
+        //监测登录状态
         axios.post('getLoginStatus', {})
             .then((response) => {
 
                 if (window.location.pathname != '/preview/admin/production/login.html' && response.data.status == 127) {
+                    alert('用户未登录');
                     top.location = 'login.html';
 
                 }
@@ -116,28 +124,40 @@ let vue = new Vue({
 
             });
 
+        //后端拿列表数据
+        this.curpage = 1;
 
-        this.curpage = 1; //后端拿数据
-
+        // 创建编辑器
         if (window.location.pathname == '/preview/admin/production/editemail.html') {
             this.loading = 0;
 
             this.needEditor = 1;
+        }
+
+
+        if (window.location.pathname == '/preview/admin/production/checkin.html') {
+            this.loading = 0;
+
+            this.isCheckList = 1;
         }
     },
 
     methods: {
 
         login: function () {
-            let username = this.Username,
+            var username = this.Username,
                 password = this.Password;
             axios.post('login', {
                 username: username,
                 password: password
             })
                 .then((response) => {
+                    if (response.data.status == 0) {
+                        top.location = 'index.html';
 
-                    top.location = 'index.html';
+                    } else if (response.data.status == 1) {
+                        alert('用户名或密码不正确');
+                    }
 
                 })
                 .catch(function (error) {
@@ -159,16 +179,27 @@ let vue = new Vue({
 
 
         changePassword: function () {
-            let newPassword = this.newPassword,
+            var newPassword = this.newPassword,
                 oldPassword = this.oldPassword;
-            axios.post('login', {
+            axios.post('password', {
                 oldPassword: oldPassword,
                 newPassword: newPassword
             })
                 .then((response) => {
 
-                    alert('密码修改成功')
+                    console.log(response);
 
+                    if (response.data.status == 0) {
+
+                        alert('密码已修改, 请重新登录');
+                        this.newPassword = '';
+                        this.oldPassword = '';
+                        top.location = 'login.html';
+
+                    } else if (response.data.status == 1) {
+                        alert('旧密码错误')
+
+                    }
                 })
                 .catch(function (error) {
                     console.log(error);
@@ -184,7 +215,7 @@ let vue = new Vue({
         },
 
 
-        Add: function (type) {
+        Add: function (type, ticketType) {
             var vm = this;
             this.loading = 1;
 
@@ -202,6 +233,53 @@ let vue = new Vue({
             note = this.rowtemplate.note;
             size = this.rowtemplate.size;
             media = this.rowtemplate.media;
+            role = this.rowtemplate.role;
+
+            //添加票s
+            if (window.location.pathname == '/preview/admin/production/early_bird_ticket.html' || window.location.pathname == '/preview/admin/production/student_ticket.html' || window.location.pathname == '/preview/admin/production/standard_ticket.html' || window.location.pathname == '/preview/admin/production/developer_ticket.html') {
+
+                axios.post('addTicket', {
+                    type: ticketType,
+                    name: name,
+                    country: country,
+                    company: company,
+                    position: position,
+                    email: email,
+                    phone: phone
+                })
+                    .then((response) => {
+
+                        this.rowtemplate.ticket_no = response.data.data.ticket_no;
+                        this.rowtemplate.id = response.data.data.id;
+                        this.loading = 0;
+
+                        type.push(this.rowtemplate);
+                        // 还原模板
+                        this.rowtemplate = {
+                            id: '',
+                            ticket_no: '',
+                            company: "",
+                            country: "",
+                            email: "",
+                            name: "",
+                            phone: "",
+                            position: "",
+                            repo: "",
+                            school: "",
+                            student_card: "",
+                            size: "",
+                            media: "",
+                            note: "",
+                            pass: "0",
+                            send: "0",
+                        }
+
+                    })
+                    .catch(function (error) {
+                        console.log(error);
+                    });
+            }
+
 
             //添加免费票
             if (window.location.pathname == '/preview/admin/production/free_ticket.html') {
@@ -213,6 +291,7 @@ let vue = new Vue({
                     company: company,
                     position: position,
                     phone: phone,
+                    role: role,
                 })
                     .then((response) => {
 
@@ -771,50 +850,50 @@ let vue = new Vue({
         Delete: function (type, info, id, i) {
             this.loading = 1;
 
-            let deleteUrl;
+            var DeleteUrl;
 
             //可以删除所有票种，但是现在前端显示只能删除免费票
             if (window.location.pathname == '/preview/admin/production/free_ticket.html') {
 
-                deleteUrl = 'deleteTicket'
+                DeleteUrl = 'DeleteTicket'
             }
 
             //删除speaker
             if (window.location.pathname == '/preview/admin/production/speaker.html') {
 
-                deleteUrl = 'deleteSpeaker'
+                DeleteUrl = 'DeleteSpeaker'
             }
 
             //删除Sponsor
             if (window.location.pathname == '/preview/admin/production/sponsor.html') {
 
-                deleteUrl = 'deleteSponsor'
+                DeleteUrl = 'DeleteSponsor'
 
             }
 
             //删除Superdemo
             if (window.location.pathname == '/preview/admin/production/superdemo.html') {
 
-                deleteUrl = 'deleteSuperdemo'
+                DeleteUrl = 'DeleteSuperdemo'
 
             }
 
             //删除community
             if (window.location.pathname == '/preview/admin/production/community.html') {
 
-                deleteUrl = 'deleteCommunity'
+                DeleteUrl = 'DeleteCommunity'
 
             }
 
             //删除media
             if (window.location.pathname == '/preview/admin/production/media.html') {
 
-                deleteUrl = 'deleteMedia'
+                DeleteUrl = 'DeleteMedia'
 
             }
 
 
-            axios.post(deleteUrl, {
+            axios.post(DeleteUrl, {
                 id: id,
             })
                 .then((response) => {
@@ -834,7 +913,7 @@ let vue = new Vue({
             this.isSearch = 1;
             this.searchPage = 1;
 
-            let keyword = this.keyword,
+            var keyword = this.keyword,
                 page = this.searchPage - 1;
 
             //搜索早鸟票0:早鸟 1:标准 2:开发者 3:学生 4:免费
@@ -1043,6 +1122,22 @@ let vue = new Vue({
 
             }
 
+            if (window.location.pathname == '/preview/admin/production/checkin.html') {
+                axios.post('searchCheckTicket', {
+                    keyword: keyword,
+                    page: page
+                })
+                    .then((response) => {
+                        var dataStr = response.data.data;
+                        this.loading = 0;
+                        this.checkInList = dataStr.ticket_list;
+                        this.totalPage = dataStr.total_page;
+                    })
+                    .catch(function (error) {
+                        console.log(error);
+                    });
+            }
+
         },
 
 
@@ -1090,6 +1185,37 @@ let vue = new Vue({
 
             }
 
+        },
+
+
+        registPage: function (id) {
+
+            axios.post('clearNew', {
+                id: id
+            })
+                .then((response) => {
+
+                    // console.log(response)
+
+                })
+                .catch(function (error) {
+                    console.log(error);
+                });
+        },
+
+
+        ticketPage: function (id) {
+            axios.post('clearNewTicket', {
+                id: id
+            })
+                .then((response) => {
+
+                    // console.log(response)
+
+                })
+                .catch(function (error) {
+                    console.log(error);
+                });
         },
 
 
@@ -1143,7 +1269,7 @@ let vue = new Vue({
         // },
 
 
-        //通过审核
+        //学生和开发通过审核
         Pass: function (type, info, id) {
             // console.log(info);
             var CancelToken = axios.CancelToken;
@@ -1173,31 +1299,86 @@ let vue = new Vue({
 
         },
 
-        //不通过审核
-        Reject: function (type, info, id) {
-            // console.log(info)
-            this.loading = 1;
+        //媒体，社区，demo通过审核
+        PassFree: function (type, info, id) {
+            // console.log(info);
+            var CancelToken = axios.CancelToken,
+                source = CancelToken.source(),
+                apiURL;
 
-            axios.post('reject', {
+            if (window.location.pathname == '/preview/admin/production/community.html') {
+                apiURL = 'communityPass';
+            }
+
+            if (window.location.pathname == '/preview/admin/production/media.html') {
+                apiURL = 'mediaPass';
+            }
+
+            if (window.location.pathname == '/preview/admin/production/superdemo.html') {
+                apiURL = 'superdemoPass';
+            }
+
+            axios.post(apiURL, {
                 id: id,
+                cancelToken: source.token
+            }).catch(function (thrown) {
+                if (axios.isCancel(thrown)) {
+                    console.log('Request canceled', thrown.message);
+
+                } else {
+                    // 处理错误
+                }
             })
                 .then((response) => {
-
-                    info.pass = 2;
-                    this.loading = 0;
+                    console.log(response);
 
                 })
                 .catch(function (error) {
                     console.log(error);
                 });
 
+            info.pass = 1;
+
+            // 取消请求（message 参数是可选的）
+            source.cancel('取消请求');
+
+        },
+
+        //不通过审核
+        Reject: function (type, info, id) {
+            // console.log(info)
+            var CancelToken = axios.CancelToken;
+            var source = CancelToken.source();
+            info.pass = 2;
+
+            axios.post('reject', {
+                id: id,
+                cancelToken: source.token
+            }).catch(function (thrown) {
+                if (axios.isCancel(thrown)) {
+                    console.log('Request canceled', thrown.message);
+
+                } else {
+                    // 处理错误
+                }
+            })
+                .then((response) => {
+                    console.log(response);
+
+                })
+                .catch(function (error) {
+                    console.log(error);
+                });
+
+            // 取消请求（message 参数是可选的）
+            source.cancel('取消请求');
 
         },
 
 
         changePage: function () {
 
-            let page = this.curpage - 1;
+            var page = this.curpage - 1;
 
             /*
             *  票
@@ -1396,6 +1577,29 @@ let vue = new Vue({
 
             }
 
+            //拿check in的数据
+            if (window.location.pathname == '/preview/admin/production/checkin.html') {
+
+                axios.post('checkInList', {
+                    page: page,
+                })
+                    .then((response) => {
+
+                        console.log(response);
+                        this.loading = 0;
+                        var dataStr = response.data.data;
+                        this.totalTicketsNum = dataStr.total;
+                        this.totalCheckNum = dataStr.check_in_total;
+                        this.checkInList = dataStr.ticket_list;
+                        this.totalPage = dataStr.total_page;
+
+                    })
+                    .catch(function (error) {
+                        console.log(error);
+                    });
+
+            }
+
             /*
              *  //结束
              */
@@ -1437,7 +1641,7 @@ let vue = new Vue({
         saveEamilContent: function () {
             this.loading = 1;
 
-            let body = this.emailContent,
+            var body = this.emailContent,
                 subject = this.emailSubject;
 
             axios.post('editMail', {
@@ -1462,6 +1666,7 @@ let vue = new Vue({
                 });
         },
 
+
         createAEditor: function () {
             var _this = this;
 
@@ -1476,16 +1681,56 @@ let vue = new Vue({
             };
 
             editor.create();
-        }
+        },
 
+
+        getRemind: function () {
+
+            function getNewRegistration() {
+                return axios.get('newRegistration');
+            }
+
+            function getNewTicket() {
+                return axios.get('newTicket');
+            }
+
+            axios.all([getNewRegistration(), getNewTicket()])
+                .then(axios.spread((NewRegistrationNum, NewTicketNum) => {
+
+                    // 两个请求现在都执行完成
+                    // console.log('NewRegistrationNum: ', NewRegistrationNum)
+                    var registerAlertStr = NewRegistrationNum.data.data;
+                    this.newCommunityNum = registerAlertStr.new_community;
+                    this.newSpeakerNum = registerAlertStr.new_speaker;
+                    this.newSponsorNum = registerAlertStr.new_sponsor;
+                    this.newSuperdemoNum = registerAlertStr.new_superdemo;
+                    this.newMediaNum = registerAlertStr.new_media;
+
+                    // console.log('NewTicketNum: ', NewTicketNum)
+
+                    var ticketAlertStr = NewTicketNum.data.data;
+                    this.newStudentNum = ticketAlertStr.new_student;
+                    this.newDevNum = ticketAlertStr.new_developer;
+
+                }));
+
+        },
+
+
+        checkList: function () {
+
+
+        }
 
     },
 
 
     watch: {
         curpage: 'changePage',//监测当前页码的变化
+        loading: 'getRemind',//监测loading的变化
         searchPage: 'Search',//监测搜索的页码的变化
-        needEditor: 'createAEditor'//监测当前页面是否是editemail，是就创建editor
+        needEditor: 'createAEditor',//监测当前页面是否是editemail，是就创建editor
+        isCheckList: 'checkList'//
     }
 });
 

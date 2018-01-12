@@ -7,6 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
     <title>EDCON</title>
 
     <!-- Bootstrap -->
@@ -61,22 +62,32 @@
                                         <ul class="nav child_menu">
                                             <li class="sub_menu"><a href="early_bird_ticket.html">Early Bird Ticket</a>
                                             </li>
-                                            <li>
-                                                <a href="student_ticket.html">Student Ticket</a>
+                                            <li><a href="student_ticket.html" @click="ticketPage(1)">Student Ticket<span
+                                                    class="badge bg-red pull-right" v-if="newStudentNum > 0">{{newStudentNum}}</span></a>
                                             </li>
-                                            <li><a href="standard_ticket.html">Standard Ticket</a>
-                                            </li>
-                                            <li><a href="developer_ticket.html">Developer Ticket</a>
+                                            <li><a href="standard_ticket.html">Standard Ticket</a></li>
+                                            <li><a href="developer_ticket.html" @click="ticketPage(2)">Developer
+                                                Ticket<span class="badge bg-red pull-right" v-if="newDevNum > 0">{{newDevNum}}</span></a>
                                             </li>
                                             <li><a href="free_ticket.html">Free Ticket</a>
                                             </li>
                                         </ul>
                                     </li>
-                                    <li><a href="speaker.html">Speaker</a></li>
-                                    <li><a href="sponsor.html">Sponsor</a></li>
-                                    <li><a href="media.html">Media</a></li>
-                                    <li><a href="community.html">Community</a></li>
-                                    <li><a href="superdemo.html">Superdemo</a></li>
+                                    <li><a href="speaker.html" @click="registPage(3)">Speaker<span
+                                            class="badge bg-red pull-right"
+                                            v-if="newSpeakerNum > 0">{{newSpeakerNum}}</span></a></li>
+                                    <li><a href="sponsor.html" @click="registPage(4)">Sponsor<span
+                                            class="badge bg-red pull-right"
+                                            v-if="newSponsorNum > 0">{{newSponsorNum}}</span></a></li>
+                                    <li><a href="media.html" @click="registPage(2)">Media<span
+                                            class="badge bg-red pull-right"
+                                            v-if="newMediaNum > 0">{{newMediaNum}}</span></a></li>
+                                    <li><a href="community.html" @click="registPage(1)">Community<span
+                                            class="badge bg-red pull-right" v-if="newCommunityNum > 0">{{newCommunityNum}}</span></a>
+                                    </li>
+                                    <li><a href="superdemo.html" @click="registPage(5)">Superdemo<span
+                                            class="badge bg-red pull-right" v-if="newSuperdemoNum > 0">{{newSuperdemoNum}}</span></a>
+                                    </li>
 
                                 </ul>
                             </li>
@@ -168,7 +179,8 @@
                             <div class="x_content">
                                 <!--<button class="btn btn-primary" @click="SendAllSelectedEmail(standard)"> Send All Selected Person's Email-->
                                 <!--</button>-->
-                                <!--<input type="text" placeholder="search" @input="search" class="search">-->
+                                <button class="btn btn-primary" @click="goAdd()"> Add
+                                </button>
                                 <!-- start project list -->
                                 <div class="table-responsive">
 
@@ -185,8 +197,8 @@
                                             <th>Email</th>
                                             <th>Phone</th>
                                             <th>Email Status</th>
+                                            <!--<th>Status</th>-->
 
-                                            <!--<th>Send Email</th>-->
                                             <th>Edit</th>
                                         </tr>
                                         </thead>
@@ -208,12 +220,15 @@
 
 
                                                 <!--<td>-->
-                                                <!--<button type="button" class="btn btn-info btn-xs" @click="SendEmail(standard,row,row.id)"-->
-                                                <!--v-if="row.send == 0">Send Email-->
+                                                <!--<button type="button" class="btn btn-info btn-xs"-->
+                                                <!--@click="Pass(standard,row,row.id)"-->
+                                                <!--v-if="row.pass == '0' && row.send == 0">Pass-->
                                                 <!--</button>-->
+
                                                 <!--<button type="button" class="btn btn-success btn-xs"-->
-                                                <!--v-if="row.send == 1">Email Sent-->
+                                                <!--v-if="row.pass == '1' || row.send == 1">Passed-->
                                                 <!--</button>-->
+                                                <!--</td>-->
 
                                                 <!--</td>-->
                                                 <td>
@@ -284,6 +299,16 @@
                 </div>
                 <div class="modal-body">
 
+                    <div class="row" v-if="isAdd==1">
+                        <div class="col-md-12">
+                            <h5>Name</h5>
+                        </div>
+                        <div class="col-md-12">
+                            <input type="text" class="form-control" placeholder='Name' v-model="rowtemplate.name"/>
+                        </div>
+
+                    </div>
+
                     <div class="row">
                         <div class="col-md-12">
                             <h5>Country</h5>
@@ -340,7 +365,7 @@
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-default" @click="closeEdit">Close</button>
-                    <button type="button" class="btn btn-primary" @click="Add(standard)"
+                    <button type="button" class="btn btn-primary" @click="Add(standard,1)"
                             v-if="isAdd==1">Add!
                     </button>
                     <button type="button" class="btn btn-primary" @click="Save(standard)" v-else>Save</button>
@@ -395,7 +420,7 @@
 <!-- Bootstrap -->
 <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
-<script src="../build/js/index.js"></script>
+<script src="../build/js/index.min.js"></script>
 
 </body>
 </html>

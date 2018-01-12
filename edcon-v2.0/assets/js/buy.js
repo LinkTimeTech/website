@@ -8,7 +8,7 @@ $(function () {
     getTicketInfo.send();
     getTicketInfo.onload = function () {
         var json = JSON.parse(this.response);
-        console.log(json);
+        // console.log(json);
 
         var hvEarlyTicket = json.early_solt_out;
         var hvstandardAndDeveloperTicket = json.standardAndDeveloper_solt_out;
@@ -51,12 +51,14 @@ $(function () {
 
                     $('.checkstudent').fadeIn(500);
                     $('.school').attr('required', '');
+                    $('.paysuccBody').text('Congratulations! You have successfully paid for EDCON, we will review and send you E-ticket in one week, please check your email then.');
 
                     $(".repo").val('')
 
                 } else {
                     $('.checkstudent').fadeOut(50);
                     $('.school').removeAttr('required', '')
+
                 }
 
                 // 开发者
@@ -65,6 +67,7 @@ $(function () {
 
                     $('.checkdev').fadeIn(500);
                     $('.checkdevtext').attr('required', '');
+                    $('.paysuccBody').text('Congratulations! You have successfully paid for EDCON, we will review and send you E-ticket in one week, please check your email then.');
 
                     $(".school").val('')
 
@@ -87,6 +90,7 @@ $(function () {
                 if (type == "1" || type == "0") {
                     $(".repo").val('');
                     $(".school").val('');
+                    $('.paysuccBody').text('Congratulations! You have successfully paid for EDCON, please check your email for E-ticket.');
 
                     $('.checkstudent').fadeOut(50);
                     $('.checkdev').fadeOut(200);
@@ -124,7 +128,7 @@ $(function () {
      */
     $('#avatarSlect').change(function () {
 
-        console.log('%O', this);
+        // console.log('%O', this);
 
         var fileType = $('#avatarSlect')[0].files[0].type,
             fileSize = $('#avatarSlect')[0].files[0].size;
@@ -146,7 +150,7 @@ $(function () {
                 var xhr = new XMLHttpRequest();
                 xhr.onload = function () {
                     var json = JSON.parse(this.response);
-                    console.log(json);
+                    // console.log(json);
                     $('#avatarSrc').val(json.data.src);
                 };
                 xhr.open('post', 'https://edcon.io/tp/public/index.php/index/index/uploadfile');
@@ -207,8 +211,8 @@ $(function () {
 
 // Submit handler for checkout form.
 //     Omise.setPublicKey("pkey_test_5abmx0y59wgx8ynuis5");
-    Omise.setPublicKey("pkey_test_56bod6t9yl5li6whpfa"); //linktime
-    // Omise.setPublicKey("pkey_5af2oawcv1t31tqg8xg"); //linktime
+//     Omise.setPublicKey("pkey_test_56bod6t9yl5li6whpfa"); //linktime
+    Omise.setPublicKey("pkey_5af2oawcv1t31tqg8xg"); //linktime
 
     $('.creatToken').click(function (event) {
         event.preventDefault();
@@ -234,7 +238,7 @@ $(function () {
                 // Success: send back the TOKEN_ID to your server. The TOKEN_ID can be
                 // found in `response.id`.
 
-                console.log(response);
+                // console.log(response);
 
                 /*
                    提交买票者信息
@@ -246,7 +250,6 @@ $(function () {
                 sendPurchaserInfo.open('post', 'https://edcon.io/tp/public/index.php/index/index/registration');
                 sendPurchaserInfo.send(purchaser);
 
-
                 sendPurchaserInfo.onload = function () {
                     var json = JSON.parse(this.response);
                     // console.log(json);
@@ -257,7 +260,10 @@ $(function () {
                     // 支付成功
                     if (isPay === 0) {
                         $('.loading,.loading-mask').fadeOut();
-                        console.log(response);
+                        $('.checkstudent').fadeOut(50);
+                        $('.school').removeAttr('required', '');
+                        $('.checkdev').fadeOut(200);
+                        $('.checkdevtext').removeAttr('required', '');
 
                         $('#paysucc').modal('show');
                         document.getElementById("checkout-form").reset()
@@ -266,14 +272,28 @@ $(function () {
                     // 支付失败
                     else if (isPay === 1) {
                         $('.loading,.loading-mask').fadeOut();
-                        console.log(response);
+                        $('.checkstudent').fadeOut(50);
+                        $('.school').removeAttr('required', '');
+                        $('.checkdev').fadeOut(200);
+                        $('.checkdevtext').removeAttr('required', '');
 
+                        // console.log(json.message)
+
+                        if (json.message == 'failed fraud check') {
+                            $('.payfailText').text('Payment failed because of too frequent use of the card. To complete the payment, please change another card.');
+                        }
                         $('#payfail').modal('show');
+
                         document.getElementById("checkout-form").reset()
                     }
                     //失败
                     else {
                         $('.loading,.loading-mask').fadeOut();
+                        $('.checkstudent').fadeOut(50);
+                        $('.school').removeAttr('required', '');
+                        $('.checkdev').fadeOut(200);
+                        $('.checkdevtext').removeAttr('required', '');
+
                         $('#failed').modal('show');
 
                     }
@@ -285,8 +305,13 @@ $(function () {
                 // a preformatted error message. Also note that `response.code` will be
                 // "invalid_card" in case of validation error on the card.
                 $('.loading,.loading-mask').fadeOut();
+                $('.loading,.loading-mask').fadeOut();
+                $('.checkstudent').fadeOut(50);
+                $('.school').removeAttr('required', '');
+                $('.checkdev').fadeOut(200);
+                $('.checkdevtext').removeAttr('required', '');
+
                 $('#payfail').modal('show');
-                console.log(response)
             }
         });
     })

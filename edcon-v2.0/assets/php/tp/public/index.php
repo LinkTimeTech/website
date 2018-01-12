@@ -11,11 +11,11 @@
 
 // [ 应用入口文件 ]
 ini_set('date.timezone', 'Asia/Shanghai');
-define('OMISE_PUBLIC_KEY', 'pkey_test_56bod6t9yl5li6whpfa');
+define('OMISE_PUBLIC_KEY', 'pkey_5af2oawcv1t31tqg8xg');
 //pkey_5af2oawcv1t31tqg8xg
 //pkey_test_5acsuittt50wpshlf49
 //pkey_test_5abmx0y59wgx8ynuis5
-define('OMISE_SECRET_KEY', 'skey_test_56bod6tahnicxrvrxxq');
+define('OMISE_SECRET_KEY', 'skey_5af2osj87h3wu6v1cfp');
 //skey_5af2osj87h3wu6v1cfp
 //skey_test_5aaqj86dz4wq716mo0m
 //skey_test_5abmvviayyjvuy0ztg2

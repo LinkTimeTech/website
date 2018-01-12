@@ -13,7 +13,7 @@ var data = {
             ansid: 'ansTwo',
             quesid: 'quesTwo',
             question: 'How can I buy tickets?',
-            ans: 'Purchase will be open soon after new year. Please stay tuned.'
+            ans: 'Ticket purchase is open now, you can register and pay via the website link directly. If you want to pay with Ether, please email at contact@linktimetech.com'
         },
         {
             url: '#ansThree',
@@ -102,34 +102,38 @@ var data = {
     ],
     communitySupports: [
         {
+            imgurl: 'assets/images/partner/' + 'apec.svg',
+            imgwidth: 'width: 55px'
+        },
+        {
             imgurl: 'assets/images/partner/' + 'ethfans_logo.jpg',
             website: 'http://ethfans.org',
-            imgwidth: 'position: relative;left: 57px'
+            imgwidth: 'position: relative;left: 40px'
         },
         {
             imgurl: 'assets/images/partner/' + 'hongkong_eth.jpg',
             website: 'https://www.meetup.com/Ethereum-Hong-Kong/',
-            imgwidth: 'width: 75px'
+            imgwidth: 'width: 50px'
         },
         {
             imgurl: 'assets/images/partner/' + 'taipei_eth.png',
             website: 'https://www.meetup.com/Taipei-Ethereum-Meetup/',
-            imgwidth: 'width: 90px'
+            imgwidth: 'width: 60px'
         },
-        {
-            imgurl: 'assets/images/partner/' + 'asseth-logo.jpg',
-            website: 'http://www.asseth.fr/',
-            imgwidth: 'width: 110px;position: relative;left: 38px'
-        },
+        // {
+        //     imgurl: 'assets/images/partner/' + 'asseth-logo.jpg',
+        //     website: 'http://www.asseth.fr/',
+        //     imgwidth: 'width: 110px;position: relative;left: 38px'
+        // },
         {
             imgurl: 'assets/images/partner/' + 'ethereum-Singapore.jpg',
             website: 'https://www.meetup.com/Ethereum-Singapore/',
-            imgwidth: 'width: 75px'
+            imgwidth: 'width: 55px'
         },
         {
             imgurl: 'assets/images/partner/' + 'meetupko.svg',
             website: 'https://www.meetup.com/ko-KR/Seoul-Ethereum-Meetup/',
-            imgwidth: 'width: 60px'
+            imgwidth: 'width: 45px'
         },
         // {
         //     imgurl:'assets/images/partner/'+'',

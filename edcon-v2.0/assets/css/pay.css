@@ -33,62 +33,27 @@
     }
 }
 
-@-moz-keyframes tada {
-    0% {
-        -moz-transform: scale(1)
-    }
-    20% {
-        -moz-transform: scale(.99) rotate(-.4deg)
-    }
-    40%,
-    60%,
-    80% {
-        -moz-transform: scale(1.01) rotate(.4deg)
-    }
-    60% {
-        -moz-transform: scale(1.01) rotate(-.4deg)
-    }
-    to {
-        -moz-transform: scale(1) rotate(0)
-    }
-}
-
 @keyframes tada {
     0% {
         -webkit-transform: scale(1);
-        -moz-transform: scale(1);
-        -ms-transform: scale(1);
-        -o-transform: scale(1);
         transform: scale(1)
     }
     20% {
         -webkit-transform: scale(.99) rotate(-.4deg);
-        -moz-transform: scale(.99) rotate(-.4deg);
-        -ms-transform: scale(.99) rotate(-.4deg);
-        -o-transform: scale(.99) rotate(-.4deg);
         transform: scale(.99) rotate(-.4deg)
     }
     40%,
     60%,
     80% {
         -webkit-transform: scale(1.01) rotate(.4deg);
-        -moz-transform: scale(1.01) rotate(.4deg);
-        -ms-transform: scale(1.01) rotate(.4deg);
-        -o-transform: scale(1.01) rotate(.4deg);
         transform: scale(1.01) rotate(.4deg)
     }
     60% {
         -webkit-transform: scale(1.01) rotate(-.4deg);
-        -moz-transform: scale(1.01) rotate(-.4deg);
-        -ms-transform: scale(1.01) rotate(-.4deg);
-        -o-transform: scale(1.01) rotate(-.4deg);
         transform: scale(1.01) rotate(-.4deg)
     }
     to {
         -webkit-transform: scale(1) rotate(0);
-        -moz-transform: scale(1) rotate(0);
-        -ms-transform: scale(1) rotate(0);
-        -o-transform: scale(1) rotate(0);
         transform: scale(1) rotate(0)
     }
 }
@@ -97,6 +62,7 @@
 * :after,
 * :before,
 html {
+    -webkit-box-sizing: border-box;
     box-sizing: border-box
 }
 
@@ -125,7 +91,6 @@ body {
 
 .OmiseCheckoutForm_body.shake {
     -webkit-animation: tada .4s;
-    -moz-animation: tada .4s;
     animation: tada .4s
 }
 
@@ -138,15 +103,19 @@ body {
     border: 1px solid #dadfe6;
     border-radius: 8px;
     opacity: 0;
+    -webkit-box-shadow: 0 0 30px rgba(4, 41, 68, .3);
     box-shadow: 0 0 30px rgba(4, 41, 68, .3);
+    -webkit-transform: translateY(10%) scale(.9);
     transform: translateY(10%) scale(.9);
     -webkit-transition: opacity .2s, -webkit-transform .4s cubic-bezier(.175, .885, .32, 1.275);
-    -moz-transition: opacity .2s, -moz-transform .4s cubic-bezier(.175, .885, .32, 1.275);
-    transition: opacity .2s, transform .4s cubic-bezier(.175, .885, .32, 1.275)
+    transition: opacity .2s, -webkit-transform .4s cubic-bezier(.175, .885, .32, 1.275);
+    transition: opacity .2s, transform .4s cubic-bezier(.175, .885, .32, 1.275);
+    transition: opacity .2s, transform .4s cubic-bezier(.175, .885, .32, 1.275), -webkit-transform .4s cubic-bezier(.175, .885, .32, 1.275)
 }
 
 .OmiseCheckoutForm_container.open {
     opacity: 1;
+    -webkit-transform: translateY(0) scale(1);
     transform: translateY(0) scale(1)
 }
 
@@ -230,7 +199,6 @@ body {
     outline: none;
     -webkit-appearance: none;
     -webkit-transition: background-color .2s, border .2s;
-    -moz-transition: background-color .2s, border .2s;
     transition: background-color .2s, border .2s
 }
 
@@ -287,6 +255,7 @@ body {
 
 .OmiseCheckoutForm_formItem input[type^=te]:invalid,
 .OmiseCheckoutForm_formItem input[type^=te]:required {
+    -webkit-box-shadow: none;
     box-shadow: none
 }
 
@@ -330,9 +299,6 @@ body {
     overflow: hidden;
     pointer-events: none;
     -webkit-transform: translateY(-50%);
-    -moz-transform: translateY(-50%);
-    -ms-transform: translateY(-50%);
-    -o-transform: translateY(-50%);
     transform: translateY(-50%)
 }
 
@@ -343,21 +309,14 @@ body {
     height: 100%;
     opacity: 0;
     -webkit-transform: scale(.8);
-    -moz-transform: scale(.8);
-    -ms-transform: scale(.8);
-    -o-transform: scale(.8);
     transform: scale(.8);
     -webkit-transition: .2s;
-    -moz-transition: .2s;
     transition: .2s
 }
 
 .OmiseCheckoutForm_cardTypeImage > img.active {
     opacity: 1;
     -webkit-transform: scale(1);
-    -moz-transform: scale(1);
-    -ms-transform: scale(1);
-    -o-transform: scale(1);
     transform: scale(1)
 }
 
@@ -412,7 +371,6 @@ body {
     top: 50%;
     left: 50%;
     -webkit-transform: translateX(-50%) translateY(-50%);
-    -ms-transform: translateX(-50%) translateY(-50%);
     transform: translateX(-50%) translateY(-50%);
 }
 
@@ -531,7 +489,6 @@ body {
     -ms-user-select: none;
     user-select: none;
     -webkit-transform: translateX(-50%) translateY(-50%);
-    -ms-transform: translateX(-50%) translateY(-50%);
     transform: translateX(-50%) translateY(-50%);
 }
 
@@ -555,13 +512,12 @@ body {
     background-color: white;
     text-align: center;
     border-radius: 4px;
+    -webkit-box-shadow: 0 2px 4px rgba(68, 75, 81, 0.25);
     box-shadow: 0 2px 4px rgba(68, 75, 81, 0.25);
     opacity: 0;
     -webkit-transform: scale(0);
-    -ms-transform: scale(0);
     transform: scale(0);
     -webkit-transform-origin: center left;
-    -ms-transform-origin: center left;
     transform-origin: center left;
     -webkit-transition: .1s ease-out;
     transition: .1s ease-out;

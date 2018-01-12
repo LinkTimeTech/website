@@ -1,5 +1,4 @@
 <?php
-
 namespace app\index\controller;
 
 use think\Db;
@@ -81,7 +80,7 @@ class Index extends Controller
             }
         }
         $chargeInfo = [
-            'currency' => 'sgd',
+            'currency' => 'usd',
             'card' => $param['token'],
             'description' => 'EDCON charge info.',
         ];

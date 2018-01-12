@@ -10,13 +10,21 @@
     <meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"/>
 
-    <link rel="stylesheet" href="assets/css/main.css"/>
     <link rel="SHORTCUT ICON" href="images/meetup.png">
+
+    <link rel="stylesheet" href="assets/css/loaders.min.css"/>
+
+    <link rel="stylesheet" href="assets/css/main.css"/>
+
     <!--[if lte IE 9]>
     <link rel="stylesheet" href="assets/css/ie9.css"/><![endif]-->
+
     <noscript>
         <link rel="stylesheet" href="assets/css/noscript.css"/>
     </noscript>
+
+    <script src="assets/js/skel.min.js"></script>
+
 
 </head>
 <style>
@@ -128,7 +136,22 @@
 
                 <br>签到时间：2017年12月3日7:30-8:30，请大家提前签到</p>
             <div class="image main">
-                <div id="baiduMap" style="width:100%;height:300px"></div>
+                <!--<div id="baiduMap" style="width:100%;height:300px"></div>-->
+                <div style="overflow:hidden;max-width:100%;width:560px;height:300px;">
+                    <div id="gmapcanvas" style="height:100%; width:100%;max-width:100%;">
+                        <iframe style="height:100%;width:100%;border:0;" frameborder="0"
+                                src="https://www.google.com/maps/embed/v1/place?q=深圳市南山区侨香路4068号智慧广场A栋1单元19F&key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8"></iframe>
+                    </div>
+
+                    <!--<style>#gmapcanvas img.text-marker {-->
+                    <!--max-width: none !important;-->
+                    <!--background: none !important;-->
+                    <!--}-->
+
+                    <!--img {-->
+                    <!--max-width: none-->
+                    <!--}</style>-->
+                </div>
             </div>
         </article>
 
@@ -190,61 +213,77 @@
         <h4 style="text-transform:none">&copy; <a href="http://www.linktimetech.com" target="_blank">LinkTime</a> |
             Switch into <a href="index-en.html" style="color:#337ab7;">English Version</a>.</h4>
     </footer>
-</div>
 
-<div class="modal fade" id="success" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-    <div class="modal-dialog" role="document">
-        <div class="modal-content">
-            <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span>
-                </button>
-                <h4 class="modal-title" id="myModalLabel" style="font-size: 1.3rem;">购买门票</h4>
-            </div>
-            <div class="modal-body">
-                <div style="text-align:center;">
-                    <img src="images/qr.jpg" style="width:300px;height:400px">
+
+    <div class="modal fade" id="success" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                            aria-hidden="true">&times;</span>
+                    </button>
+                    <h4 class="modal-title" id="myModalLabel" style="font-size: 1.3rem;">购买门票</h4>
                 </div>
-                <p align="center"><br/>门票200元/人，扫描二维码请<b style="color:#337ab7;">备注姓名</b>。
-                </p>
+                <div class="modal-body">
+                    <div style="text-align:center;">
+                        <img src="images/qr.jpg" style="width:300px;height:400px">
+                    </div>
+                    <p align="center"><br/>门票200元/人，扫描二维码请<b style="color:#337ab7;">备注姓名</b>。
+                    </p>
 
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
-                <button type="button" class="btn btn-primary payokcn" data-dismiss="modal">已支付</button>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+                    <button type="button" class="btn btn-primary payokcn" data-dismiss="modal">已支付</button>
+                </div>
             </div>
         </div>
     </div>
+
+    <div class="loading-mask">
+    </div>
+    <div class="loader loading">
+        <div class="pacman">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>
+
 </div>
+
 
 <!-- BG -->
 <div id="bg"></div>
 
+
 <!-- baidu Map api -->
-<script type="text/javascript"
-        src="http://api.map.baidu.com/api?v=2.0&ak=DD279b2a90afdf0ae7a3796787a0742e"></script>
+<!--<script type="text/javascript"-->
+<!--src="http://api.map.baidu.com/api?v=2.0&ak=DD279b2a90afdf0ae7a3796787a0742e"></script>-->
 
 <!-- Scripts -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.3/jquery.min.js"></script>
 <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"
         integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
         crossorigin="anonymous"></script>
-<script src="assets/js/skel.min.js"></script>
-<script src="assets/js/util.js"></script>
+<!--<script src="assets/js/util.js"></script>-->
 
 <script src="https://cdn.jsdelivr.net/npm/vue"></script>
 <script src="assets/js/content.js"></script>
 
-<script src="assets/js/main.js"></script>
+<script src="assets/js/main.min.js"></script>
 
-<script type="text/javascript">
-    var map = new BMap.Map("baiduMap");
-    var point = new BMap.Point(113.98876, 22.556458);
-    map.centerAndZoom(point, 20);
-    var marker = new BMap.Marker(point); // 创建标注
-    map.addOverlay(marker); // 将标注添加到地图中
-    marker.setAnimation(BMAP_ANIMATION_BOUNCE); //跳动的动画
-    map.enableScrollWheelZoom(true);
-</script>
+<!--<script type="text/javascript">-->
+<!--var map = new BMap.Map("baiduMap");-->
+<!--var point = new BMap.Point(113.98876, 22.556458);-->
+<!--map.centerAndZoom(point, 20);-->
+<!--var marker = new BMap.Marker(point); // 创建标注-->
+<!--map.addOverlay(marker); // 将标注添加到地图中-->
+<!--marker.setAnimation(BMAP_ANIMATION_BOUNCE); //跳动的动画-->
+<!--map.enableScrollWheelZoom(true);-->
+<!--</script>-->
 <!--
 <script type="text/javascript">
 

@@ -17,13 +17,20 @@
 
     $(function () {
 
+        //打开网站2sloading
+        function hideLoading() {
+            var t = setTimeout("$('.loading,.loading-mask').fadeOut();", 2000)
+        }
+
+        hideLoading();
+
         $('.payokcn').click(function () {
             alert('感谢您的参与，12月3日深圳见！')
-        })
+        });
 
         $('.payok').click(function () {
             alert('Thank you for your participation! See you in Shenzhen (December 3)!!!')
-        })
+        });
 
         var $window = $(window),
             $body = $('body'),
@@ -33,17 +40,42 @@
             $main = $('#main'),
             $main_articles = $main.children('article');
 
-        // Disable animations/transitions until the page has loaded.
-        $body.addClass('is-loading');
+        /*
+         * 页面加载完成前一直loading
+         */
 
-        $window.on('load', function () {
-            window.setTimeout(function () {
-                $body.removeClass('is-loading');
-            }, 100);
-        });
+        function browserSupportsCSSProperty(propertyName) {
+            var elm = document.createElement('div');
+            propertyName = propertyName.toLowerCase();
+
+            if (elm.style[propertyName] != undefined)
+                return true;
+
+            var propertyNameCapital = propertyName.charAt(0).toUpperCase() + propertyName.substr(1),
+                domPrefixes = 'Webkit Moz ms O'.split(' ');
+
+            for (var i = 0; i < domPrefixes.length; i++) {
+                if (elm.style[domPrefixes[i] + propertyNameCapital] != undefined)
+                    return true;
+            }
+
+            return false;
+        }
+
+        if (!browserSupportsCSSProperty('animation')) {
+            // fallback…
+            $('.loading,.loading-mask').fadeOut();
+        }
+
+
+        //页面加载完成
+        // $(window).on('load',function(){
+        //     $('.loading,.loading-mask').fadeOut();
+        //
+        // });
 
         // Fix: Placeholder polyfill.
-        $('form').placeholder();
+        // $('form').placeholder();
 
         // Fix: Flexbox min-height bug on IE.
         if (skel.vars.IEVersion < 12) {

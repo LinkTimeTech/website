@@ -91,17 +91,19 @@ ul li {
     -webkit-transition-duration: 0.3s;
     transition-duration: 0.3s;
     -webkit-transition-property: -webkit-transform;
+    transition-property: -webkit-transform;
     transition-property: transform;
+    transition-property: transform, -webkit-transform;
 }
 
 .btn:hover {
     -webkit-transform: scale(0.9);
-    -ms-transform: scale(0.9);
     transform: scale(0.9);
 }
 
 .form-control {
     border-radius: 0;
+    -webkit-box-shadow: none;
     box-shadow: none;
     height: 48px;
     padding: 10px 12px;
@@ -110,6 +112,7 @@ ul li {
 }
 
 .form-control:focus {
+    -webkit-box-shadow: none;
     box-shadow: none;
     border-color: #ccc;
     background-color: #f8f8f8;
@@ -117,11 +120,9 @@ ul li {
 
 .valign-center {
     display: -webkit-box;
-    display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
     -webkit-box-align: center;
-    -webkit-align-items: center;
     -ms-flex-align: center;
     align-items: center;
 }
@@ -513,7 +514,7 @@ ul li {
     display: block;
     /*opacity: 0.3;*/
     height: 100px;
-    width: 150px;
+    width: 100px;
     margin: 25px auto;
     -webkit-transition: 0.5s all linear;
     transition: 0.5s all linear;
@@ -525,7 +526,7 @@ ul li {
 /*最大*/
 .supersponsor {
     height: 200px !important;
-    width: 300px !important;
+    width: 245px !important;
     /*height: 100px !important;*/
     /*width: 150px !important;*/
 }
@@ -533,15 +534,15 @@ ul li {
 /*大*/
 .goldsponsor, .partysponsor {
     height: 150px !important;
-    width: 230px !important;
+    width: 200px !important;
     /*height: 100px !important;*/
     /*width: 150px !important;*/
 }
 
 /*中*/
-.silversponsor {
+.silversponsor, .normals {
     height: 120px !important;
-    width: 170px !important;
+    width: 160px !important;
 }
 
 .partner .partner-box:hover {
@@ -736,6 +737,8 @@ ul li {
 }
 
 .social-block-inline {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
 
 }
@@ -835,6 +838,7 @@ img.img-circle.team-img {
     width: 120px;
     height: 120px;
     border: 4px solid transparent;
+    -webkit-transition: all 0.5s;
     transition: all 0.5s;
 }
 
@@ -860,10 +864,9 @@ img.img-circle.team-img {
     margin: 5px 7px;
     filter: Alpha(Opacity=1);
     opacity: 1;
-    -webkit-border-radius: 0;
-    -moz-border-radius: 20px;
     border-radius: 0;
     background: #FFFFFF;
+    -webkit-transition: all 0.5s;
     transition: all 0.5s;
 }
 
@@ -912,9 +915,6 @@ img.img-circle.team-img {
     display: inline-block;
     zoom: 1;
     *display: inline;
-    -webkit-border-radius: 7px;
-    -moz-border-radius: 7px;
-    -ms-border-radius: 7px;
     border-radius: 7px;
 }
 
@@ -981,9 +981,6 @@ img.img-circle.team-img {
     padding-right: 20px;
     float: left;
     width: 100%;
-    -webkit-border-radius: 7px;
-    -moz-border-radius: 7px;
-    -ms-border-radius: 7px;
     border-radius: 7px;
 }
 
@@ -1017,9 +1014,6 @@ img.img-circle.team-img {
     width: 8px;
     height: 8px;
     background: #27E1CE;
-    -webkit-border-radius: 50%;
-    -moz-border-radius: 50%;
-    -ms-border-radius: 50%;
     border-radius: 50%;
 }
 
@@ -1060,7 +1054,6 @@ img.img-circle.team-img {
     padding: 10px;
     position: relative;
     -webkit-transition: 0.2s;
-    -o-transition: 0.2s;
     transition: 0.2s;
 }
 
@@ -1081,14 +1074,8 @@ img.img-circle.team-img {
     background-color: #27E1CE;
     visibility: hidden;
     -webkit-transform: scaleX(0);
-    -moz-transform: scaleX(0);
-    -ms-transform: scaleX(0);
-    -o-transform: scaleX(0);
     transform: scaleX(0);
     -webkit-transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-    -moz-transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-    -ms-transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-    -o-transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
     transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
@@ -1100,9 +1087,6 @@ img.img-circle.team-img {
 #fh5co-header nav ul li a:hover:after {
     visibility: visible;
     -webkit-transform: scaleX(1);
-    -moz-transform: scaleX(1);
-    -ms-transform: scaleX(1);
-    -o-transform: scaleX(1);
     transform: scaleX(1);
 }
 
@@ -1122,9 +1106,6 @@ img.img-circle.team-img {
     padding-bottom: 7px !important;
     border: 2px solid #27e1ce;
     color: #27E1CE;
-    -webkit-border-radius: 30px;
-    -moz-border-radius: 30px;
-    -ms-border-radius: 30px;
     border-radius: 30px;
 }
 
@@ -1145,9 +1126,6 @@ img.img-circle.team-img {
 #fh5co-header nav ul li.active a:after {
     visibility: visible;
     -webkit-transform: scaleX(1);
-    -moz-transform: scaleX(1);
-    -ms-transform: scaleX(1);
-    -o-transform: scaleX(1);
     transform: scaleX(1);
 }
 
@@ -1189,6 +1167,7 @@ img.img-circle.team-img {
 
 #fh5co-hero .flexslider .flex-control-nav li a {
     background: rgba(255, 255, 255, 0.2);
+    -webkit-box-shadow: none;
     box-shadow: none;
     width: 12px;
     height: 12px;
@@ -1288,10 +1267,8 @@ img.img-circle.team-img {
     background: #fff;
     margin-bottom: 50px;
     -webkit-box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.11);
-    -moz-box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.11);
     box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.11);
     -webkit-transition: 0.3s;
-    -o-transition: 0.3s;
     transition: 0.3s;
     top: 2px;
     border: none;
@@ -1321,7 +1298,6 @@ img.img-circle.team-img {
 #registration .item-grid:hover, #registration .item-grid:focus {
     text-decoration: none;
     -webkit-box-shadow: 0px 14px 25px -2px rgba(0, 0, 0, 0.14);
-    -moz-box-shadow: 0px 14px 25px -2px rgba(0, 0, 0, 0.14);
     box-shadow: 0px 14px 25px -2px rgba(0, 0, 0, 0.14);
     top: -2px;
 }
@@ -1356,9 +1332,6 @@ img.img-circle.team-img {
 .wrap-testimony .testimony-slide figure img {
     width: 120px;
     height: 120px;
-    -webkit-border-radius: 50%;
-    -moz-border-radius: 50%;
-    -ms-border-radius: 50%;
     border-radius: 50%;
 }
 
@@ -1414,10 +1387,8 @@ img.img-circle.team-img {
     background: #fff;
     margin-bottom: 50px;
     -webkit-box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.11);
-    -moz-box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.11);
     box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.11);
     -webkit-transition: 0.3s;
-    -o-transition: 0.3s;
     transition: 0.3s;
     top: 2px;
 }
@@ -1450,7 +1421,6 @@ img.img-circle.team-img {
 #fh5co-blog-section .item-grid:hover, #fh5co-blog-section .item-grid:focus {
     text-decoration: none;
     -webkit-box-shadow: 0px 14px 25px -2px rgba(0, 0, 0, 0.14);
-    -moz-box-shadow: 0px 14px 25px -2px rgba(0, 0, 0, 0.14);
     box-shadow: 0px 14px 25px -2px rgba(0, 0, 0, 0.14);
     top: -2px;
 }
@@ -1713,7 +1683,6 @@ img.img-circle.team-img {
 
 #fh5co-offcanvas, .fh5co-nav-toggle, #fh5co-page {
     -webkit-transition: 0.5s;
-    -o-transition: 0.5s;
     transition: 0.5s;
 }
 
@@ -1724,15 +1693,11 @@ img.img-circle.team-img {
 #fh5co-page {
     z-index: 2;
     -webkit-transition: 0.5s;
-    -o-transition: 0.5s;
     transition: 0.5s;
 }
 
 .offcanvas-visible #fh5co-page {
-    -moz-transform: translateX(-275px);
     -webkit-transform: translateX(-275px);
-    -ms-transform: translateX(-275px);
-    -o-transform: translateX(-275px);
     transform: translateX(-275px);
 }
 
@@ -1794,9 +1759,6 @@ img.img-circle.team-img {
     padding-top: 7px !important;
     padding-bottom: 7px !important;
     border: 2px solid rgba(255, 255, 255, 0.7);
-    -webkit-border-radius: 30px;
-    -moz-border-radius: 30px;
-    -ms-border-radius: 30px;
     border-radius: 30px;
 }
 
@@ -1840,6 +1802,7 @@ img.img-circle.team-img {
     text-transform: uppercase;
     text-indent: -55px;
     background: #000;
+    -webkit-transition: all .2s ease-out;
     transition: all .2s ease-out;
 }
 
@@ -1851,7 +1814,6 @@ img.img-circle.team-img {
     position: absolute;
     left: 0;
     -webkit-transition: 0.2s;
-    -o-transition: 0.2s;
     transition: 0.2s;
 }
 
@@ -1859,13 +1821,13 @@ img.img-circle.team-img {
     position: relative;
     color: #000;
     background: #000;
+    -webkit-transition: all .2s ease-out;
     transition: all .2s ease-out;
 }
 
 .fh5co-nav-toggle.dark i::before, .fh5co-nav-toggle.dark i::after {
     background: #000;
     -webkit-transition: 0.2s;
-    -o-transition: 0.2s;
     transition: 0.2s;
 }
 
@@ -1892,18 +1854,12 @@ img.img-circle.team-img {
 .fh5co-nav-toggle.active i::before {
     top: 0;
     -webkit-transform: rotateZ(45deg);
-    -moz-transform: rotateZ(45deg);
-    -ms-transform: rotateZ(45deg);
-    -o-transform: rotateZ(45deg);
     transform: rotateZ(45deg);
 }
 
 .fh5co-nav-toggle.active i::after {
     bottom: 0;
     -webkit-transform: rotateZ(-45deg);
-    -moz-transform: rotateZ(-45deg);
-    -ms-transform: rotateZ(-45deg);
-    -o-transform: rotateZ(-45deg);
     transform: rotateZ(-45deg);
 }
 
@@ -1949,11 +1905,9 @@ img.img-circle.team-img {
     margin-bottom: 40px;
     position: relative;
     -webkit-box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.11);
-    -moz-box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.11);
     box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.11);
     top: 2px;
     -webkit-transition: 0.3s;
-    -o-transition: 0.3s;
     transition: 0.3s;
 }
 
@@ -1973,7 +1927,6 @@ img.img-circle.team-img {
 
 #fh5co-pricing-section .price-box:hover, #fh5co-pricing-section .price-box:focus {
     -webkit-box-shadow: 0px 14px 25px -2px rgba(0, 0, 0, 0.14);
-    -moz-box-shadow: 0px 14px 25px -2px rgba(0, 0, 0, 0.14);
     box-shadow: 0px 14px 25px -2px rgba(0, 0, 0, 0.14);
     top: -2px;
 }
@@ -2040,9 +1993,6 @@ Guest section
     margin-bottom: 20px;
     background: #13b3bb;
     position: relative;
-    -webkit-border-radius: 30px;
-    -moz-border-radius: 30px;
-    -ms-border-radius: 30px;
     border-radius: 30px;
 }
 
@@ -2070,9 +2020,6 @@ Guest section
     position: relative;
     float: left;
     margin-right: 20px;
-    -webkit-border-radius: 50%;
-    -moz-border-radius: 50%;
-    -ms-border-radius: 50%;
     border-radius: 50%;
 }
 
@@ -2174,8 +2121,6 @@ Guest section
     position: relative;
     overflow: hidden;
     display: inline-block;
-    -moz-transition: ease-out 0.3s;
-    -o-transition: ease-out 0.3s;
     -webkit-transition: ease-out 0.3s;
     transition: ease-out 0.3s;
     padding: 1em;
@@ -2191,8 +2136,6 @@ Guest section
     top: 0;
     border-right: 2px solid #b1b1b1;
     border-top: 2px solid #b1b1b1;
-    -moz-transition: 0.3s;
-    -o-transition: 0.3s;
     -webkit-transition: 0.3s;
     transition: 0.3s;
     opacity: 0;
@@ -2208,8 +2151,6 @@ Guest section
     bottom: 0;
     border-left: 2px solid #b1b1b1;
     border-bottom: 2px solid #b1b1b1;
-    -moz-transition: 0.3s;
-    -o-transition: 0.3s;
     -webkit-transition: 0.3s;
     transition: 0.3s;
     opacity: 0;

@@ -24,9 +24,9 @@
     <link href='//fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300italic,400italic,500,500italic,700,900,700italic,900italic'
           rel='stylesheet' type='text/css'>
 
-    <link rel="stylesheet" href="assets/css/pay.css">
+    <link rel="stylesheet" href="assets/css/pay.min.css">
 
-    <link rel="stylesheet" href="assets/css/registration.css">
+    <link rel="stylesheet" href="assets/css/registration.min.css">
 
 
     <!-- For-Mobile-Apps-and-Meta-Tags -->
@@ -106,7 +106,7 @@
                                             <input type="radio" name="type" id="developers" value="2"
                                                    class="ticketradio">
                                             <span class="input-text">
-                                        Developers Ticket: $350 <span class="noallticket">(Sold Out)</span>
+                                        Developer Ticket: $350 <span class="noallticket">(Sold Out)</span>
                                         </span>
                                             <img src="assets/images/icon/card-blue.svg" alt="" height="25px">
                                         </label>
@@ -275,7 +275,7 @@
                                             </div>
                                             <div class="OmiseCheckoutForm_formItem -submit">
                                                 <div class="sc-bxivhb kGUhKf">
-                                                    <button class="sc-htpNat FaWeu creatToken" font-size="18px">Checkout
+                                                    <button class="sc-htpNat FaWeu creatToken" font-size="18px">Pay
                                                         $<span class="ticketprice">560.00</span></button>
                                                 </div>
                                             </div>
@@ -407,9 +407,8 @@
                 </button>
                 <h4 class="modal-title">Successful! </h4>
             </div>
-            <div class="modal-body">
-                <p>Congratulations! You have successfully paid for EDCON, we will send you E-ticket soon, please check
-                    your email then.
+            <div class="modal-body paysuccBody">
+                <p>Congratulations! You have successfully paid for EDCON, please check your email for E-ticket.
                 </p>
             </div>
             <div class="modal-footer">
@@ -428,7 +427,7 @@
                 <h4 class="modal-title">Failed!</h4>
             </div>
             <div class="modal-body">
-                <p>Alert！Please enter the valid information and try again later.
+                <p class="payfailText">Alert！Please enter the valid information and try again later.
                 </p>
             </div>
             <div class="modal-footer">
@@ -467,7 +466,7 @@
 
 <!--<script src="assets/js/pay.js"></script>-->
 
-<script src="assets/js/buy.js"></script>
-<script src="assets/js/registration.js"></script>
+<script src="assets/js/buy.min.js"></script>
+<script src="assets/js/registration.min.js"></script>
 </body>
 </html>

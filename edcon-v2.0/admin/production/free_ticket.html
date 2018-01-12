@@ -7,6 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
     <title>EDCON</title>
 
     <!-- Bootstrap -->
@@ -61,22 +62,32 @@
                                         <ul class="nav child_menu">
                                             <li class="sub_menu"><a href="early_bird_ticket.html">Early Bird Ticket</a>
                                             </li>
-                                            <li>
-                                                <a href="student_ticket.html">Student Ticket</a>
+                                            <li><a href="student_ticket.html" @click="ticketPage(1)">Student Ticket<span
+                                                    class="badge bg-red pull-right" v-if="newStudentNum > 0">{{newStudentNum}}</span></a>
                                             </li>
-                                            <li><a href="standard_ticket.html">Standard Ticket</a>
-                                            </li>
-                                            <li><a href="developer_ticket.html">Developer Ticket</a>
+                                            <li><a href="standard_ticket.html">Standard Ticket</a></li>
+                                            <li><a href="developer_ticket.html" @click="ticketPage(2)">Developer
+                                                Ticket<span class="badge bg-red pull-right" v-if="newDevNum > 0">{{newDevNum}}</span></a>
                                             </li>
                                             <li><a href="free_ticket.html">Free Ticket</a>
                                             </li>
                                         </ul>
                                     </li>
-                                    <li><a href="speaker.html">Speaker</a></li>
-                                    <li><a href="sponsor.html">Sponsor</a></li>
-                                    <li><a href="media.html">Media</a></li>
-                                    <li><a href="community.html">Community</a></li>
-                                    <li><a href="superdemo.html">Superdemo</a></li>
+                                    <li><a href="speaker.html" @click="registPage(3)">Speaker<span
+                                            class="badge bg-red pull-right"
+                                            v-if="newSpeakerNum > 0">{{newSpeakerNum}}</span></a></li>
+                                    <li><a href="sponsor.html" @click="registPage(4)">Sponsor<span
+                                            class="badge bg-red pull-right"
+                                            v-if="newSponsorNum > 0">{{newSponsorNum}}</span></a></li>
+                                    <li><a href="media.html" @click="registPage(2)">Media<span
+                                            class="badge bg-red pull-right"
+                                            v-if="newMediaNum > 0">{{newMediaNum}}</span></a></li>
+                                    <li><a href="community.html" @click="registPage(1)">Community<span
+                                            class="badge bg-red pull-right" v-if="newCommunityNum > 0">{{newCommunityNum}}</span></a>
+                                    </li>
+                                    <li><a href="superdemo.html" @click="registPage(5)">Superdemo<span
+                                            class="badge bg-red pull-right" v-if="newSuperdemoNum > 0">{{newSuperdemoNum}}</span></a>
+                                    </li>
 
                                 </ul>
                             </li>
@@ -186,6 +197,8 @@
                                             <th>Position</th>
                                             <th>Email</th>
                                             <th>Phone</th>
+                                            <th>Type</th>
+
                                             <th>Email Status</th>
 
                                             <th>Status</th>
@@ -205,6 +218,10 @@
                                                 <td>{{row.position}}</td>
                                                 <td class="emailTextRow">{{row.email}}</td>
                                                 <td>{{row.phone}}</td>
+
+                                                <td v-if="row.role == 0">普通</td>
+                                                <td v-if="row.role == 1">嘉宾</td>
+
                                                 <td v-if="row.send == '0'">waiting</td>
                                                 <td v-if="row.send == '1'">succeed</td>
                                                 <td v-if="row.send == '2'">failed</td>
@@ -290,6 +307,27 @@
 
                     <div class="row">
                         <div class="col-md-12">
+                            <h5>Type</h5>
+                        </div>
+                        <div class="col-md-12">
+                                <span class="col-sm-6">
+                                <label>
+                                    <input type="radio" class="" checked="checked" name="role" value="0"
+                                           v-model="rowtemplate.role"> 普通
+                                </label>
+                                </span>
+                            <span class="col-sm-6">
+                                <label>
+                                    <input type="radio" class="" name="role" value="1" v-model="rowtemplate.role"> 嘉宾
+                                </label>
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-12">
                             <h5>Name</h5>
                         </div>
                         <div class="col-md-12">
@@ -351,6 +389,7 @@
 
                     </div>
 
+
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-default" @click="closeEdit">Close</button>
@@ -403,7 +442,7 @@
 <!-- Bootstrap -->
 <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
-<script src="../build/js/index.js"></script>
+<script src="../build/js/index.min.js"></script>
 
 </body>
 </html>

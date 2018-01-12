@@ -3,6 +3,7 @@
 namespace app\admin\controller;
 
 use think\Db;
+use Endroid\QrCode\QrCode;
 use think\Controller;
 
 class Edcon extends Controller
@@ -12,8 +13,41 @@ class Edcon extends Controller
     {
         config('default_return_type', 'json');
         define('PAGE_LIMIT', 20);
+        $username = session('username');
+        $id = session('id');
+        if (empty($username) || empty($id)) {
+            // echo json_encode([
+            // 'status' => 127,
+            // 'message' => '未登陆'
+            // ],256);
+            // exit;
+        }
+        $where = [
+            'username' => $username,
+            'id' => $id
+        ];
+        $exists = Db::table('Edcon_Administrators')->where($where)->find();
+        if ($exists) {
+            return;
+        }
+        $module = strtolower($this->request->module());
+        $controller = strtolower($this->request->controller());
+        $action = strtolower($this->request->action());
+        $route = $module . '/' . $controller . '/' . $action;
+        $allowList = [
+            'admin/edcon/login',
+            'admin/edcon/getloginstatus'
+        ];
+        if (in_array($route, $allowList)) {
+            return;
+        }
+        // echo json_encode([
+        // 'status' => 127,
+        // 'message' => '未登陆'
+        // ],256);
+        // exit;
     }
-
+	
     public function index()
     {
 
@@ -22,29 +56,32 @@ class Edcon extends Controller
     public function registrationStatistics() // 五张表count
     {
         $registration = [];
+        $where = [
+            'del' => 0
+        ];
         $registration[] = [
             'name' => 'speaker',
-            'value' => Db::table('Edcon_Speaker')->count()
+            'value' => Db::table('Edcon_Speaker')->where($where)->count()
         ];
 
         $registration[] = [
             'name' => 'sponsor',
-            'value' => Db::table('Edcon_Sponsor')->count()
+            'value' => Db::table('Edcon_Sponsor')->where($where)->count()
         ];
 
         $registration[] = [
             'name' => 'media',
-            'value' => Db::table('Edcon_Media')->count()
+            'value' => Db::table('Edcon_Media')->where($where)->count()
         ];
 
         $registration[] = [
             'name' => 'superdemo',
-            'value' => Db::table('Edcon_Superdemo')->count()
+            'value' => Db::table('Edcon_Superdemo')->where($where)->count()
         ];
 
         $registration[] = [
             'name' => 'community',
-            'value' => Db::table('Edcon_Community')->count()
+            'value' => Db::table('Edcon_Community')->where($where)->count()
         ];
         $total = 0;
         foreach ($registration as $reg) {
@@ -63,26 +100,26 @@ class Edcon extends Controller
     public function ticketStatistics()  //五种type count
     {
         $ticket = [];//0:早鸟 1:标准 2:开发者 3:学生 4:免费
-        $ticket[] = [
-            'name' => 'early',
-            'value' => Db::table('Edcon_Ticket')->where(['type' => 0])->count()
-        ];
 
         $ticket[] = [
+            'name' => 'early',
+            'value' => Db::table('Edcon_True_Participant')->where(['type' => 0, 'del' => 0])->count()
+        ];
+        $ticket[] = [
             'name' => 'standard',
-            'value' => Db::table('Edcon_Ticket')->where(['type' => 1])->count()
+            'value' => Db::table('Edcon_True_Participant')->where(['type' => 1, 'del' => 0])->count()
         ];
         $ticket[] = [
             'name' => 'developer',
-            'value' => Db::table('Edcon_Ticket')->where(['type' => 2])->count()
+            'value' => Db::table('Edcon_True_Participant')->where(['type' => 2, 'del' => 0])->count()
         ];
         $ticket[] = [
             'name' => 'student',
-            'value' => Db::table('Edcon_Ticket')->where(['type' => 3])->count()
+            'value' => Db::table('Edcon_True_Participant')->where(['type' => 3, 'del' => 0])->count()
         ];
         $ticket[] = [
             'name' => 'free',
-            'value' => Db::table('Edcon_Ticket')->where(['type' => 4])->count()
+            'value' => Db::table('Edcon_True_Participant')->where(['type' => 4, 'del' => 0])->count()
         ];
         $total = 0;
         foreach ($ticket as $t) {
@@ -107,11 +144,11 @@ class Edcon extends Controller
                 'message' => '缺少参数page'
             ];
         }
-        $totalPage = ceil(Db::table('Edcon_True_Participant')->count() / PAGE_LIMIT);
+        $totalPage = ceil(Db::table('Edcon_True_Participant')->where(['type' => 0, 'del' => 0])->count() / PAGE_LIMIT);
         $param['page'] = intval($param['page']);
         $start = $param['page'] * PAGE_LIMIT;
         $data = Db::table('Edcon_True_Participant')->
-        where(['type' => 0])->
+        where(['type' => 0, 'del' => 0])->
         limit($start, PAGE_LIMIT)->
         select();
         return [
@@ -132,11 +169,11 @@ class Edcon extends Controller
                 'message' => '缺少参数page'
             ];
         }
-        $totalPage = ceil(Db::table('Edcon_True_Participant')->count() / PAGE_LIMIT);
+        $totalPage = ceil(Db::table('Edcon_True_Participant')->where(['type' => 3, 'del' => 0])->count() / PAGE_LIMIT);
         $param['page'] = intval($param['page']);
         $start = $param['page'] * PAGE_LIMIT;
         $data = Db::table('Edcon_True_Participant')->
-        where(['type' => 1])->
+        where(['type' => 3, 'del' => 0])->
         limit($start, PAGE_LIMIT)->
         select();
         return [
@@ -156,11 +193,11 @@ class Edcon extends Controller
                 'message' => '缺少参数page'
             ];
         }
-        $totalPage = ceil(Db::table('Edcon_True_Participant')->count() / PAGE_LIMIT);
+        $totalPage = ceil(Db::table('Edcon_True_Participant')->where(['type' => 1, 'del' => 0])->count() / PAGE_LIMIT);
         $param['page'] = intval($param['page']);
         $start = $param['page'] * PAGE_LIMIT;
         $data = Db::table('Edcon_True_Participant')->
-        where(['type' => 2])->
+        where(['type' => 1, 'del' => 0])->
         limit($start, PAGE_LIMIT)->
         select();
         return [
@@ -180,11 +217,11 @@ class Edcon extends Controller
                 'message' => '缺少参数page'
             ];
         }
-        $totalPage = ceil(Db::table('Edcon_True_Participant')->count() / PAGE_LIMIT);
+        $totalPage = ceil(Db::table('Edcon_True_Participant')->where(['type' => 2, 'del' => 0])->count() / PAGE_LIMIT);
         $param['page'] = intval($param['page']);
         $start = $param['page'] * PAGE_LIMIT;
         $data = Db::table('Edcon_True_Participant')->
-        where(['type' => 3])->
+        where(['type' => 2, 'del' => 0])->
         limit($start, PAGE_LIMIT)->
         select();
         return [
@@ -204,11 +241,11 @@ class Edcon extends Controller
                 'message' => '缺少参数page'
             ];
         }
-        $totalPage = ceil(Db::table('Edcon_True_Participant')->count() / PAGE_LIMIT);
+        $totalPage = ceil(Db::table('Edcon_True_Participant')->where(['type' => 4, 'del' => 0])->count() / PAGE_LIMIT);
         $param['page'] = intval($param['page']);
         $start = $param['page'] * PAGE_LIMIT;
         $data = Db::table('Edcon_True_Participant')->
-        where(['type' => 4])->
+        where(['type' => 4, 'del' => 0])->
         limit($start, PAGE_LIMIT)->
         select();
         return [
@@ -228,11 +265,15 @@ class Edcon extends Controller
                 'message' => '缺少参数page'
             ];
         }
-        $totalPage = ceil(Db::table('Edcon_Speaker')->count() / PAGE_LIMIT);
+        $where = [
+            'del' => 0
+        ];
+        $totalPage = ceil(Db::table('Edcon_Speaker')->where($where)->count() / PAGE_LIMIT);
         $param['page'] = intval($param['page']);
         $start = $param['page'] * PAGE_LIMIT;
         $data = Db::table('Edcon_Speaker')->
         limit($start, PAGE_LIMIT)->
+        where($where)->
         select();
         return [
             'status' => 0,
@@ -251,11 +292,15 @@ class Edcon extends Controller
                 'message' => '缺少参数page'
             ];
         }
+        $where = [
+            'del' => 0
+        ];
         $totalPage = ceil(Db::table('Edcon_Sponsor')->count() / PAGE_LIMIT);
         $param['page'] = intval($param['page']);
         $start = $param['page'] * PAGE_LIMIT;
         $data = Db::table('Edcon_Sponsor')->
         limit($start, PAGE_LIMIT)->
+        where($where)->
         select();
         return [
             'status' => 0,
@@ -274,11 +319,15 @@ class Edcon extends Controller
                 'message' => '缺少参数page'
             ];
         }
+        $where = [
+            'del' => 0
+        ];
         $totalPage = ceil(Db::table('Edcon_Media')->count() / PAGE_LIMIT);
         $param['page'] = intval($param['page']);
         $start = $param['page'] * PAGE_LIMIT;
         $data = Db::table('Edcon_Media')->
         limit($start, PAGE_LIMIT)->
+        where($where)->
         select();
         return [
             'status' => 0,
@@ -297,11 +346,15 @@ class Edcon extends Controller
                 'message' => '缺少参数page'
             ];
         }
+        $where = [
+            'del' => 0
+        ];
         $totalPage = ceil(Db::table('Edcon_Superdemo')->count() / PAGE_LIMIT);
         $param['page'] = intval($param['page']);
         $start = $param['page'] * PAGE_LIMIT;
         $data = Db::table('Edcon_Superdemo')->
         limit($start, PAGE_LIMIT)->
+        where($where)->
         select();
         return [
             'status' => 0,
@@ -320,11 +373,15 @@ class Edcon extends Controller
                 'message' => '缺少参数page'
             ];
         }
+        $where = [
+            'del' => 0
+        ];
         $totalPage = ceil(Db::table('Edcon_Community')->count() / PAGE_LIMIT);
         $param['page'] = intval($param['page']);
         $start = $param['page'] * PAGE_LIMIT;
         $data = Db::table('Edcon_Community')->
         limit($start, PAGE_LIMIT)->
+        where($where)->
         select();
         return [
             'status' => 0,
@@ -334,8 +391,38 @@ class Edcon extends Controller
         ];
     }
 
+    public function getLoginStatus()
+    {
+        $username = session('username');
+        $id = session('id');
+        if (empty($username) || empty($id)) {
+            return [
+                'status' => 127,
+                'message' => 'no login'
+            ];
+        }
+        $where = [
+            'username' => $username,
+            'id' => $id
+        ];
+        $exists = Db::table('Edcon_Administrators')->where($where)->find();
+
+        if ($exists) {
+            return [
+                'status' => 0,
+                'message' => 'logged'
+            ];
+        } else {
+            return [
+                'status' => 127,
+                'message' => 'no login'
+            ];
+        }
+    }
+
     public function pass()
     {
+        ignore_user_abort(true);
         $param = $this->request->param();
         if (!isset($param['id'])) {
             return [
@@ -344,8 +431,10 @@ class Edcon extends Controller
             ];
         }
         try {
+            // SET SESSION wait_timeout = 28800;
+            Db::execute('SET SESSION wait_timeout = 28800;');
             $pass = Db::table('Edcon_True_Participant')->where(['id' => $param['id']])->find();
-            $ticketImage = paintTicket($pass['qrocde'], $pass['ticket_no'], $pass['name']);
+            $ticketImage = paintTicket($pass['qrcode'], $pass['ticket_no'], $pass['name']);
             sendTicketMail($pass['email'], $ticketImage, $pass['type']);
             Db::table('Edcon_True_Participant')->
             where(['id' => $param['id']])->
@@ -356,6 +445,14 @@ class Edcon extends Controller
             ];
 
         } catch (\Exception $e) {
+            $update = [
+                'send' => 2,
+                'send_mail_error_message' => $e->getMessage(),
+                'resend_count' => ++$pass['resend_count']
+            ];
+            Db::table('Edcon_True_Participant')->
+            where(['id' => $param['id']])->
+            update($update);
             $res = [
                 'status' => 1,
                 'message' => 'send mail fail'
@@ -376,7 +473,7 @@ class Edcon extends Controller
         try {
             $rej = Db::table('Edcon_True_Participant')->where(['id' => $param['id']])->find();
             sendRejectMail($rej['email']);
-            $charge = OmiseCharge::retrieve($rej['char_id']);
+            $charge = \OmiseCharge::retrieve($rej['char_id']);
             switch ($rej['type']) {
                 case '2':
                     $ammount = ['amount' => 350];
@@ -396,15 +493,21 @@ class Edcon extends Controller
         } catch (\Exception $e) {
             $res = [
                 'status' => 1,
-                'send mail fail'
+                'message' => 'send mail fail'
             ];
         }
         return $res;
     }
 
-    public function editParticipantInfo()
+    public function editTicket()
     {
-        $param = $this->request - param();
+        $param = $this->request->param();
+        if (!isset($param['id'])) {
+            return [
+                'status' => '1',
+                'message' => '缺少参数id'
+            ];
+        }
         Db::table('Edcon_True_Participant')->update($param);
         return [
             'status' => 0,
@@ -412,15 +515,15 @@ class Edcon extends Controller
         ];
     }
 
-    public function deleteParticipant()
-    {
-        $param = $this->request - param();
-        Db::table('Edcon_True_Participant')->where(['id' => $param['id']])->delete();
-        return [
-            'status' => 0,
-            'message' => 'success'
-        ];
-    }
+    // public function deleteParticipant()
+    // {
+    // $param = $this->request-param();
+    // Db::table('Edcon_True_Participant')->where(['id' => $param['id']])->delete();
+    // return [
+    // 'status' => 0,
+    // 'message' => 'success'
+    // ];
+    // }
 
     public function paint()
     {
@@ -449,21 +552,36 @@ class Edcon extends Controller
     {
         $where = [
             'ticket_status' => 1,
-            'send' => 0
+            'send' => ['IN', '0,2'],
+            'type' => ['IN', '0,1'],
+            'sending' => 0
         ];
+        Db::execute('SET SESSION wait_timeout = 28800;');
         $i = 0;
+        $j = 0;
         $sends = Db::table('Edcon_True_Participant')->where($where)->select();
         foreach ($sends as $s) {
             try {
-                sendTicketMail($s['email'], $s['ticket_image']);
-                Db::table('Edcon_True_Participant')->update(['send' => 1]);
+                Db::table('Edcon_True_Participant')->update(['sending' => 1, 'id' => $s['id']]);
+                sendTicketMail($s['email'], $s['ticket_image'], $s['type']);
+                Db::table('Edcon_True_Participant')->update(['send' => 1, 'id' => $s['id']]);
+                $j++;
             } catch (\Exception $e) {
+                $update = [
+                    'send' => 2,
+                    'id' => $s['id'],
+                    'send_mail_error_message' => $e->getMessage(),
+                    'resend_count' => ++$s['resend_count'],
+                    'sending' => 0
+                ];
+                Db::table('Edcon_True_Participant')->update($update);
                 $i++;
             }
         }
         return [
             'status' => 0,
             'message' => $i,
+            'count' => $j,
             'date' => date('Y-m-d H:i:s')
         ];
     }
@@ -478,9 +596,10 @@ class Edcon extends Controller
             'type' => 4,
             'country' => $param['country'],
             'position' => $param['position'],
-            'company' => $param['company'],
             'phone' => $param['phone'],
-            'ticket_no' => $no
+            'ticket_no' => $no,
+            'company' => $param['company'],
+            'time' => date('Y-m-d H:i:s')
         ];
         foreach ($insert as $k => $i) {
             if (strlen($i) < 1) {
@@ -490,41 +609,70 @@ class Edcon extends Controller
                 ];
             }
         }
-        Db::table('Edcon_True_Participant')->data($insert)->insert();
+        $id = Db::table('Edcon_True_Participant')->insertGetId($insert);
+        $data = Db::table('Edcon_True_Participant')->find($id);
         $no++;
         file_put_contents('../lib/ticket_no.log', $no);
+        $info = [
+            'id' => $id,
+            'name' => $insert['name'],
+            'email' => $insert['email'],
+            'type' => $insert['type'],
+        ];
+        $enInfo = [];
+        $enInfo['id'] = $info['id'];
+        $enInfo['sign'] = sha1(md5(json_encode($info, 256)));
+        $qrCode = new QrCode(json_encode($enInfo, 256));
+        $qrCode->setWriterByName('png');
+        $qrCode->setSize(227);
+        $qrCodeSavePath = '../../upload/image/' . date('Ymd') . '/';
+        if (!file_exists($qrCodeSavePath)) {
+            mkdir($qrCodeSavePath, 0777, true);
+        }
+        $qrCodeFn = md5($qrCode->writeString()) . '.png';
+        $qrAccessPath = '/upload/image/' . date('Ymd') . '/' . $qrCodeFn;
+        file_put_contents($qrCodeSavePath . $qrCodeFn, $qrCode->writeString());
+        $update = [
+            'id' => $id,
+            'qrcode' => $qrAccessPath,
+            'sign' => $enInfo['sign'],
+        ];
+        Db::table('Edcon_True_Participant')->update($update);
         return [
             'status' => 0,
-            'message' => 'success'
+            'message' => 'success',
+            'data' => $data
         ];
     }
 
     public function ticketSearch()
     {
         $param = $this->request->param();
-        if (strlen($param['page']) < 0) {
+        if (!isset($param['page'])) {
             return [
                 'status' => '1',
                 'message' => '缺少参数page'
             ];
         }
 
-        if (strlen($param['keyword']) < 0) {
+        if (!isset($param['keyword'])) {
             return [
                 'status' => '1',
                 'message' => '缺少参数keyword'
             ];
         }
-        if (strlen($param['type']) < 0) {
+        if (!isset($param['type'])) {
             return [
                 'status' => '1',
                 'message' => '缺少参数type'
             ];
         }
         $start = $param['page'] * PAGE_LIMIT;
+
         $where = [
-            'name|country|title|email|phone|school|company|time|position|ticket_no' => ['LIKE', "'%{$param['keyword']}%'", 'type' => $param['type']]
+            'name|country|email|phone|school|company|time|position|ticket_no' => ['LIKE', "%{$param['keyword']}%"], 'type' => $param['type'], 'del' => 0
         ];
+        $totalPage = ceil(Db::table('Edcon_True_Participant')->where($where)->count() / PAGE_LIMIT);
         $data = Db::table('Edcon_True_Participant')->
         limit($start, PAGE_LIMIT)->
         where($where)->
@@ -532,21 +680,22 @@ class Edcon extends Controller
         return [
             'status' => 0,
             'message' => 'success',
-            'data' => $data
+            'data' => $data,
+            'totalPage' => $totalPage
         ];
     }
 
     public function speakerSearch()
     {
         $param = $this->request->param();
-        if (strlen($param['page']) < 0) {
+        if (!isset($param['page'])) {
             return [
                 'status' => '1',
                 'message' => '缺少参数page'
             ];
         }
 
-        if (strlen($param['keyword']) < 0) {
+        if (!isset($param['keyword'])) {
             return [
                 'status' => '1',
                 'message' => '缺少参数keyword'
@@ -554,8 +703,10 @@ class Edcon extends Controller
         }
         $start = $param['page'] * PAGE_LIMIT;
         $where = [
-            'name|country|company|email|phone|note|time' => ['LIKE', "'%{$param['keyword']}%'"]
+            'name|country|company|email|phone|note|time' => ['LIKE', "%{$param['keyword']}%"],
+            'del' => 0
         ];
+        $totalPage = ceil(Db::table('Edcon_Speaker')->where($where)->count() / PAGE_LIMIT);
         $data = Db::table('Edcon_Speaker')->
         where($where)->
         limit($start, PAGE_LIMIT)->
@@ -563,21 +714,22 @@ class Edcon extends Controller
         return [
             'status' => 0,
             'message' => 'success',
-            'data' => $data
+            'data' => $data,
+            'totalPage' => $totalPage
         ];
     }
 
     public function sponsorSearch()
     {
         $param = $this->request->param();
-        if (strlen($param['page']) < 0) {
+        if (!isset($param['page'])) {
             return [
                 'status' => '1',
                 'message' => '缺少参数page'
             ];
         }
 
-        if (strlen($param['keyword']) < 0) {
+        if (!isset($param['keyword'])) {
             return [
                 'status' => '1',
                 'message' => '缺少参数keyword'
@@ -585,8 +737,10 @@ class Edcon extends Controller
         }
         $start = $param['page'] * PAGE_LIMIT;
         $where = [
-            'name|country|company|email|phone|note|time' => ['LIKE', "'%{$param['keyword']}%'"]
+            'name|country|company|email|phone|note|time' => ['LIKE', "%{$param['keyword']}%"],
+            'del' => 0
         ];
+        $totalPage = ceil(Db::table('Edcon_Sponsor')->where($where)->count() / PAGE_LIMIT);
         $data = Db::table('Edcon_Sponsor')->
         where($where)->
         limit($start, PAGE_LIMIT)->
@@ -594,21 +748,22 @@ class Edcon extends Controller
         return [
             'status' => 0,
             'message' => 'success',
-            'data' => $data
+            'data' => $data,
+            'totalPage' => $totalPage
         ];
     }
 
     public function mediaSearch()
     {
         $param = $this->request->param();
-        if (strlen($param['page']) < 0) {
+        if (!isset($param['page'])) {
             return [
                 'status' => '1',
                 'message' => '缺少参数page'
             ];
         }
 
-        if (strlen($param['keyword']) < 0) {
+        if (!isset($param['keyword'])) {
             return [
                 'status' => '1',
                 'message' => '缺少参数keyword'
@@ -616,8 +771,10 @@ class Edcon extends Controller
         }
         $start = $param['page'] * PAGE_LIMIT;
         $where = [
-            'name|country|company|email|phone|note|time' => ['LIKE', "'%{$param['keyword']}%'"]
+            'name|country|company|email|phone|note|time' => ['LIKE', "%{$param['keyword']}%"],
+            'del' => 0
         ];
+        $totalPage = ceil(Db::table('Edcon_Media')->where($where)->count() / PAGE_LIMIT);
         $data = Db::table('Edcon_Media')->
         where($where)->
         limit($start, PAGE_LIMIT)->
@@ -625,21 +782,22 @@ class Edcon extends Controller
         return [
             'status' => 0,
             'message' => 'success',
-            'data' => $data
+            'data' => $data,
+            'totalPage' => $totalPage
         ];
     }
 
     public function communitySearch()
     {
         $param = $this->request->param();
-        if (strlen($param['page']) < 0) {
+        if (!isset($param['page'])) {
             return [
                 'status' => '1',
                 'message' => '缺少参数page'
             ];
         }
 
-        if (strlen($param['keyword']) < 0) {
+        if (!isset($param['keyword'])) {
             return [
                 'status' => '1',
                 'message' => '缺少参数keyword'
@@ -647,8 +805,10 @@ class Edcon extends Controller
         }
         $start = $param['page'] * PAGE_LIMIT;
         $where = [
-            'name|country|company|email|phone|note|time' => ['LIKE', "'%{$param['keyword']}%'"]
+            'name|country|company|email|phone|note|time' => ['LIKE', "%{$param['keyword']}%"],
+            'del' => 0
         ];
+        $totalPage = ceil(Db::table('Edcon_Community')->where($where)->count() / PAGE_LIMIT);
         $data = Db::table('Edcon_Community')->
         where($where)->
         limit($start, PAGE_LIMIT)->
@@ -656,21 +816,22 @@ class Edcon extends Controller
         return [
             'status' => 0,
             'message' => 'success',
-            'data' => $data
+            'data' => $data,
+            'totalPage' => $totalPage
         ];
     }
 
     public function superdemoSearch()
     {
         $param = $this->request->param();
-        if (strlen($param['page']) < 0) {
+        if (!isset($param['page'])) {
             return [
                 'status' => '1',
                 'message' => '缺少参数page'
             ];
         }
 
-        if (strlen($param['keyword']) < 0) {
+        if (!isset($param['keyword'])) {
             return [
                 'status' => '1',
                 'message' => '缺少参数keyword'
@@ -678,8 +839,10 @@ class Edcon extends Controller
         }
         $start = $param['page'] * PAGE_LIMIT;
         $where = [
-            'name|country|company|email|phone|note|time' => ['LIKE', "'%{$param['keyword']}%'"]
+            'name|country|company|email|phone|note|time' => ['LIKE', "%{$param['keyword']}%"],
+            'del' => 0
         ];
+        $totalPage = ceil(Db::table('Edcon_Superdemo')->where($where)->count() / PAGE_LIMIT);
         $data = Db::table('Edcon_Superdemo')->
         where($where)->
         limit($start, PAGE_LIMIT)->
@@ -687,32 +850,32 @@ class Edcon extends Controller
         return [
             'status' => 0,
             'message' => 'success',
-            'data' => $data
+            'data' => $data,
+            'totalPage' => $totalPage
         ];
     }
 
     public function login()
     {
         $param = $this->request->param();
-        if (strlen($param['page']) < 0) {
+        if (!isset($param['username'])) {
             return [
                 'status' => '1',
-                'message' => '缺少参数page'
+                'message' => '缺少参数username'
             ];
         }
 
-        if (strlen($param['keyword']) < 0) {
+        if (!isset($param['password'])) {
             return [
                 'status' => '1',
-                'message' => '缺少参数keyword'
+                'message' => '缺少参数password'
             ];
         }
-        $start = $param['page'] * PAGE_LIMIT;
         $where = [
             'username' => $param['username'],
             'password' => md5($param['password'])
         ];
-        $exists = Db::table('Edcon_Administrators')->where()->find();
+        $exists = Db::table('Edcon_Administrators')->where($where)->find();
         if ($exists) {
             session('username', $exists['username']);
             session('id', $exists['id']);
@@ -740,13 +903,13 @@ class Edcon extends Controller
     public function password()
     {
         $param = $this->request->param();
-        if (strlen($param['oldPassword']) < 0) {
+        if (!isset($param['oldPassword'])) {
             return [
                 'status' => '1',
                 'message' => '缺少参数keyword'
             ];
         }
-        if (strlen($param['newPassword']) < 0) {
+        if (!isset($param['newPassword'])) {
             return [
                 'status' => '1',
                 'message' => '缺少参数keyword'
@@ -781,7 +944,8 @@ class Edcon extends Controller
             'email' => $param['email'],
             'phone' => $param['phone'],
             'note' => $param['note'],
-            'size' => $param['size']
+            'size' => $param['size'],
+            'time' => date('Y-m-d H:i:s')
         ];
         foreach ($insert as $k => $i) {
             if (strlen($i) < 0) {
@@ -791,10 +955,12 @@ class Edcon extends Controller
                 ];
             }
         }
-        Db::table('Edcon_Community')->data($insert)->insert();
+        $id = Db::table('Edcon_Community')->insertGetId($insert);
+        $data = Db::table('Edcon_Community')->find($id);
         return [
             'status' => 0,
-            'message' => 'success'
+            'message' => 'success',
+            'data' => $data
         ];
     }
 
@@ -808,7 +974,8 @@ class Edcon extends Controller
             'email' => $param['email'],
             'phone' => $param['phone'],
             'note' => $param['note'],
-            'media' => $param['media']
+            'media' => $param['media'],
+            'time' => date('Y-m-d H:i:s')
         ];
         foreach ($insert as $k => $i) {
             if (strlen($i) < 0) {
@@ -818,10 +985,12 @@ class Edcon extends Controller
                 ];
             }
         }
-        Db::table('Edcon_Media')->data($insert)->insert();
+        $id = Db::table('Edcon_Media')->insertGetId($insert);
+        $data = Db::table('Edcon_Media')->find($id);
         return [
             'status' => 0,
-            'message' => 'success'
+            'message' => 'success',
+            'data' => $data
         ];
     }
 
@@ -835,7 +1004,8 @@ class Edcon extends Controller
             'position' => $param['position'],
             'email' => $param['email'],
             'phone' => $param['phone'],
-            'note' => $param['note']
+            'note' => $param['note'],
+            'time' => date('Y-m-d H:i:s')
         ];
         foreach ($insert as $k => $i) {
             if (strlen($i) < 0) {
@@ -845,10 +1015,12 @@ class Edcon extends Controller
                 ];
             }
         }
-        Db::table('Edcon_Speaker')->data($insert)->insert();
+        $id = Db::table('Edcon_Speaker')->insertGetId($insert);
+        $data = Db::table('Edcon_Speaker')->find($id);
         return [
             'status' => 0,
-            'message' => 'success'
+            'message' => 'success',
+            'data' => $data
         ];
     }
 
@@ -861,7 +1033,8 @@ class Edcon extends Controller
             'company' => $param['company'],
             'email' => $param['email'],
             'phone' => $param['phone'],
-            'note' => $param['note']
+            'note' => $param['note'],
+            'time' => date('Y-m-d H:i:s')
         ];
         foreach ($insert as $k => $i) {
             if (strlen($i) < 0) {
@@ -871,10 +1044,12 @@ class Edcon extends Controller
                 ];
             }
         }
-        Db::table('Edcon_Sponsor')->data($insert)->insert();
+        $id = Db::table('Edcon_Sponsor')->insertGetId($insert);
+        $data = Db::table('Edcon_Sponsor')->find($id);
         return [
             'status' => 0,
-            'message' => 'success'
+            'message' => 'success',
+            'data' => $data
         ];
     }
 
@@ -888,7 +1063,8 @@ class Edcon extends Controller
             'company' => $param['company'],
             'email' => $param['email'],
             'phone' => $param['phone'],
-            'note' => $param['note']
+            'note' => $param['note'],
+            'time' => date('Y-m-d H:i:s')
         ];
         foreach ($insert as $k => $i) {
             if (strlen($i) < 0) {
@@ -898,10 +1074,12 @@ class Edcon extends Controller
                 ];
             }
         }
-        Db::table('Edcon_Superdemo')->data($insert)->insert();
+        $id = Db::table('Edcon_Superdemo')->insertGetId($insert);
+        $data = Db::table('Edcon_Superdemo')->find($id);
         return [
             'status' => 0,
-            'message' => 'success'
+            'message' => 'success',
+            'data' => $data
         ];
     }
 
@@ -917,7 +1095,10 @@ class Edcon extends Controller
         $where = [
             'id' => $param['id']
         ];
-        Db::table('Edcon_Community')->where($where)->delete();
+        $update = [
+            'del' => 1
+        ];
+        Db::table('Edcon_Community')->where($where)->update($update);
         return [
             'status' => 0,
             'message' => 'success'
@@ -936,7 +1117,10 @@ class Edcon extends Controller
         $where = [
             'id' => $param['id']
         ];
-        Db::table('Edcon_Media')->where($where)->delete();
+        $update = [
+            'del' => 1
+        ];
+        Db::table('Edcon_Media')->where($where)->update($update);
         return [
             'status' => 0,
             'message' => 'success'
@@ -955,7 +1139,10 @@ class Edcon extends Controller
         $where = [
             'id' => $param['id']
         ];
-        Db::table('Edcon_Speaker')->where($where)->delete();
+        $update = [
+            'del' => 1
+        ];
+        Db::table('Edcon_Speaker')->where($where)->update($update);
         return [
             'status' => 0,
             'message' => 'success'
@@ -974,7 +1161,10 @@ class Edcon extends Controller
         $where = [
             'id' => $param['id']
         ];
-        Db::table('Edcon_Sponsor')->where($where)->delete();
+        $update = [
+            'del' => 1
+        ];
+        Db::table('Edcon_Sponsor')->where($where)->update($update);
         return [
             'status' => 0,
             'message' => 'success'
@@ -993,7 +1183,10 @@ class Edcon extends Controller
         $where = [
             'id' => $param['id']
         ];
-        Db::table('Edcon_Superdemo')->where($where)->delete();
+        $update = [
+            'del' => 1
+        ];
+        Db::table('Edcon_Superdemo')->where($where)->update($update);
         return [
             'status' => 0,
             'message' => 'success'
@@ -1212,7 +1405,58 @@ class Edcon extends Controller
         $where = [
             'id' => $param['id']
         ];
-        Db::table('Edcon_True_Participant')->where($where)->delete();
+        $update = [
+            'del' => 1
+        ];
+        Db::table('Edcon_True_Participant')->where($where)->update($update);
+        return [
+            'status' => 0,
+            'message' => 'success',
+        ];
+    }
+
+    public function mailList()//0 :pass 1:reject 2:免费送
+    {
+        $data = Db::table('Edcon_Mail_template')->select();
+        return [
+            'status' => 0,
+            'message' => 'success',
+            'data' => $data
+        ];
+    }
+
+    public function editMail()
+    {
+        $param = $this->request->param();
+        if (!isset($param['type'])) {
+            return [
+                'status' => 0,
+                'message' => '缺少参数type'
+            ];
+        }
+        $where = [
+            'type' => $param['type']
+        ];
+        Db::table('Edcon_Mail_template')->where($where)->update($param);
+        return [
+            'status' => 0,
+            'message' => 'success',
+        ];
+    }
+
+    public function getMail()
+    {
+        $param = $this->request->param();
+        if (!isset($param['type'])) {
+            return [
+                'status' => 0,
+                'message' => '缺少参数type'
+            ];
+        }
+        $where = [
+            'type' => $param['type']
+        ];
+        $data = Db::table('Edcon_Mail_template')->where($where)->find();
         return [
             'status' => 0,
             'message' => 'success',
