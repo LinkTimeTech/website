@@ -60,8 +60,7 @@ var data = {
     goldsponsor: [
         {
             imgurl: 'assets/images/partner/' + 'kyber_logo-2.svg',
-            website: 'width: 210px',
-            imgwidth: 'https://kyber.network/'
+            website: 'https://kyber.network/'
         },
         {
             imgurl: 'assets/images/partner/' + 'coming_soon_wh.jpg',
@@ -72,11 +71,12 @@ var data = {
     ],
     silversponsor: [
         {
-            imgurl: 'assets/images/partner/' + 'coming_soon_wh.jpg',
-
+            imgurl: 'assets/images/partner/' + 'AKASHA.png',
+            website: 'https://akasha.world/'
         },
         {
-            imgurl: 'assets/images/partner/' + 'coming_soon_wh.jpg',
+            imgurl: 'assets/images/partner/' + 'BookLocal.png',
+            website: 'http://BookLocal.in'
         },
         {
             imgurl: 'assets/images/partner/' + 'coming_soon_wh.jpg',

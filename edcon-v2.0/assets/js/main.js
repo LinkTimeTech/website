@@ -9,6 +9,8 @@ $(window).scroll(function () {
 $(window).on('load', function () {
     handleTopNavAnimation();
 });
+console.log(window.location.pathname);
+
 
 function handleTopNavAnimation() {
     var top = $(window).scrollTop();

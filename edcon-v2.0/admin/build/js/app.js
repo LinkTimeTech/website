@@ -32,6 +32,8 @@ var data = {
 
     checkInList: [],
 
+    payFailList: [],
+
     rowtemplate: {
         id: '',
         ticket_no: '',
@@ -97,10 +99,19 @@ var data = {
     // 签到页面
     isCheckList: 0,
     totalTicketsNum: '',
-    totalCheckNum: ''
+    totalCheckNum: '',
+
+    newPayFailNum: '',
+
+    //支付失败
+    payFailTotalNum: '',
+    failed_fraud_check_num: '',
+    payment_rejected_num: '',
+    invalid_security_code_num: ''
+
 
 };
-var saveInfo, emailType, editor, name, phone, email, position, country, note, company, size, media, role;
+var saveInfo, emailType, editor, name, phone, email, position, country, note, company, size, media, repo, school, role;
 
 //ViewModel
 var vue = new Vue({
@@ -139,6 +150,11 @@ var vue = new Vue({
             this.loading = 0;
 
             this.isCheckList = 1;
+        }
+
+        if (window.location.pathname == '/preview/admin/production/index.html') {
+            this.loading = 0;
+
         }
     },
 
@@ -234,6 +250,9 @@ var vue = new Vue({
             size = this.rowtemplate.size;
             media = this.rowtemplate.media;
             role = this.rowtemplate.role;
+            repo = this.rowtemplate.repo;
+            school = this.rowtemplate.school;
+
 
             //添加票s
             if (window.location.pathname == '/preview/admin/production/early_bird_ticket.html' || window.location.pathname == '/preview/admin/production/student_ticket.html' || window.location.pathname == '/preview/admin/production/standard_ticket.html' || window.location.pathname == '/preview/admin/production/developer_ticket.html') {
@@ -245,7 +264,11 @@ var vue = new Vue({
                     company: company,
                     position: position,
                     email: email,
-                    phone: phone
+                    repo: repo,
+                    phone: phone,
+                    school: school,
+                    student_card: '/upload/image/20180110/3d404edae329741493d0fcba9e53c014.jpeg'
+
                 })
                     .then((response) => {
 
@@ -1122,6 +1145,7 @@ var vue = new Vue({
 
             }
 
+            //搜索签到
             if (window.location.pathname == '/preview/admin/production/checkin.html') {
                 axios.post('searchCheckTicket', {
                     keyword: keyword,
@@ -1137,6 +1161,24 @@ var vue = new Vue({
                         console.log(error);
                     });
             }
+
+            //搜错误信息
+            if (window.location.pathname == '/preview/admin/production/payfail.html') {
+                axios.post('searchPayFailList', {
+                    keyword: keyword,
+                    page: page
+                })
+                    .then((response) => {
+                        var dataStr = response.data.data;
+                        this.loading = 0;
+                        this.payFailList = dataStr.list;
+                        this.totalPage = dataStr.total_page;
+                    })
+                    .catch(function (error) {
+                        console.log(error);
+                    });
+            }
+
 
         },
 
@@ -1188,6 +1230,9 @@ var vue = new Vue({
         },
 
 
+        /*
+        *清除红点
+         */
         registPage: function (id) {
 
             axios.post('clearNew', {
@@ -1218,6 +1263,21 @@ var vue = new Vue({
                 });
         },
 
+        payFailPage: function () {
+            axios.post('clearNewFailPay', {})
+                .then((response) => {
+
+                    // console.log(response)
+
+                })
+                .catch(function (error) {
+                    console.log(error);
+                });
+        },
+
+        /*
+         * 清除红点end
+         */
 
         //多选
         // allSelect: function (type) {
@@ -1600,6 +1660,33 @@ var vue = new Vue({
 
             }
 
+            //拿pay fail的数据
+            if (window.location.pathname == '/preview/admin/production/payfail.html') {
+
+                axios.post('payFailList', {
+                    page: page,
+                })
+                    .then((response) => {
+
+                        console.log(response);
+                        this.loading = 0;
+                        var dataStr = response.data.data;
+                        this.totalTicketsNum = dataStr.total;
+                        // this.totalCheckNum = dataStr.check_in_total;
+                        this.payFailList = dataStr.list;
+                        this.totalPage = dataStr.total_page;
+                        this.payFailTotalNum = dataStr.total;
+                        this.failed_fraud_check_num = dataStr.failed_fraud_check;
+                        this.payment_rejected_num = dataStr.payment_rejected;
+                        this.invalid_security_code_num = dataStr.invalid_security_code;
+
+                    })
+                    .catch(function (error) {
+                        console.log(error);
+                    });
+
+            }
+
             /*
              *  //结束
              */
@@ -1694,8 +1781,12 @@ var vue = new Vue({
                 return axios.get('newTicket');
             }
 
-            axios.all([getNewRegistration(), getNewTicket()])
-                .then(axios.spread((NewRegistrationNum, NewTicketNum) => {
+            function getNewPayFail() {
+                return axios.get('newFailPay');
+            }
+
+            axios.all([getNewRegistration(), getNewTicket(), getNewPayFail()])
+                .then(axios.spread((NewRegistrationNum, NewTicketNum, NewPayFailNum) => {
 
                     // 两个请求现在都执行完成
                     // console.log('NewRegistrationNum: ', NewRegistrationNum)
@@ -1711,6 +1802,11 @@ var vue = new Vue({
                     var ticketAlertStr = NewTicketNum.data.data;
                     this.newStudentNum = ticketAlertStr.new_student;
                     this.newDevNum = ticketAlertStr.new_developer;
+
+                    // console.log('payFailAlertStr: ', NewPayFailNum)
+
+                    var payFailAlertStr = NewPayFailNum.data.data;
+                    this.newPayFailNum = payFailAlertStr.count;
 
                 }));
 

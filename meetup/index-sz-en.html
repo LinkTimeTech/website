@@ -1,0 +1,312 @@
+<!DOCTYPE HTML>
+<!--@以太坊社区交流会报名-->
+<!--@author ZaneYule <contact@zaneyule.com>-->
+<!--@2017-->
+<!--db-->
+<html>
+
+<head>
+    <title>Registration for Ethereum Meetup</title>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"/>
+
+    <link rel="stylesheet" href="assets/css/main.css"/>
+    <link rel="SHORTCUT ICON" href="images/meetup.png">
+    <!--[if lte IE 9]>
+    <link rel="stylesheet" href="assets/css/ie9.css"/><![endif]-->
+    <noscript>
+        <link rel="stylesheet" href="assets/css/noscript.css"/>
+    </noscript>
+
+</head>
+
+<style>
+    #agenda p {
+        font-weight: normal;
+        text-transform: none;
+        margin-bottom: 5px;
+    }
+
+    #guests p {
+        font-weight: normal;
+        text-transform: none;
+        margin-bottom: 8px;
+    }
+</style>
+
+<body>
+<!-- Wrapper -->
+<div id="wrapper">
+
+    <!-- Header -->
+    <header id="header">
+        <div class="logo">
+            <!--<span class="icon fa-bell-o"></span>-->
+            <!--<span style="font-size:25px;font-weight: bold">Ch⇛En</span>-->
+        </div>
+        <div class="content">
+            <div class="inner">
+                <h1 style="text-transform:none;letter-spacing:4px">Asia-Pacific Ethereum Community Meetup</h1>
+                <!--<h3 style="margin-bottom:0">活动介绍:
+                    <a href="https://html5up.net">主办公司网址</a>
+                </h3>-->
+                <h3 style="text-transform:none">Time: 8:30-18:00 Dec 3, 2017</h3>
+                <h3 style="text-transform:none">Location: Shenzhen, China</h3>
+            </div>
+        </div>
+        <nav>
+            <ul>
+                <li>
+                    <a href="#intro">About</a>
+                </li>
+                <li>
+                    <a href="#agenda">Agenda</a>
+                </li>
+                <li>
+                    <a href="#information">Info</a>
+                </li>
+                <li>
+                    <a href="#registration">Pay</a>
+                </li>
+                <!--<li><a href="#elements">Elements</a></li>-->
+            </ul>
+        </nav>
+    </header>
+    <!-- Main -->
+    <div id="main">
+
+        <!-- Intro -->
+        <article id="intro">
+            <h2 class="major">About</h2>
+            <p style="text-align:justify;text-transform:none">
+                The meetup is organized by LinkTime(<a href="http://www.linktimetech.com">www.linktimetech.com</a>), who
+                is one
+                of the representatives of Ethereum
+                Community in China. It aims at promoting technology exchange and connecting Ethereum developers with
+                community members, as well as creating opportunities for users to know more about the Ethereum-based
+                projects.
+            </p>
+            <p style="text-align:justify;text-transform:none">
+                The event covers the Ethereum-based technology training, excellent use case discussion, and the current
+                development discussion of Asia-Pacific Ethereum communities, etc. The confirmed guests include the
+                founder
+                of Ethereum, Ethereum developers, various Ethereum community representatives (China, Korea, Singapore,
+                America, Japan etc.), founders of excellent Ethereum-based projects, noted investors and enterprise
+                representatives in this space.
+            </p>
+        </article>
+        <!-- Work -->
+        <article id="agenda">
+            <h2 class="major">Agenda</h2>
+            <table border="1" style="font-size: 13px">
+                <tr>
+                    <td></td>
+                    <td>Time</td>
+                    <td>Speaker</td>
+                    <td>Title</td>
+                    <td>Topic</td>
+                </tr>
+
+                <template v-for="content in contents">
+                    <tr>
+                        <td v-if="content.amside == 1 || content.pmside == 1" :rowspan="content.timerow"
+                            style="vertical-align:middle">{{ content.date }}
+                        </td>
+
+                        <td v-if="content.break == 1" :colspan="content.breakcol" style="text-align:center">{{
+                            content.breaktext }}
+                        </td>
+
+                        <td v-if="content.empty == 1" :colspan="content.colspan" style="text-align:center"></td>
+
+                        <td v-if="content.type == 'agenda' ">{{ content.time }}</td>
+                        <td v-if="content.type == 'agenda' ">{{ content.speaker }}</td>
+                        <td v-if="content.type == 'agenda' ">{{ content.title }}</td>
+                        <td v-if="content.type == 'agenda' ">{{ content.topic }}</td>
+
+                    </tr>
+
+                </template>
+            </table>
+        </article>
+
+        <!-- About -->
+        <article id="information">
+            <h2 class="major">Info</h2>
+            <p>Location: 19F, Unit 1, Block A, Smart Plaza, 4068 Qiaoxiang Road, Nanshan District, Shenzhen, China.
+                <br>Time: 8:30-18:00, December 3, 2017
+                <br>Registration: 7:30-8:30, December 3, 2017. Please get to the venue earlier for registration.</p>
+            <div class="image main">
+                <div id="baiduMap" style="width:100%;height:300px"></div>
+            </div>
+        </article>
+
+        <!-- Contact -->
+        <article id="registration">
+            <!--<h2 class="major">Pay</h2>-->
+
+            <h2 class="major">Register</h2>
+            <p style="text-align: center;font-size:36px;">
+                Registration channel has been closed.
+            </p>
+
+            <!--<p style="text-transform:none">-->
+            <!--Please enter the correct information, we will use it as the only contact and registration proof for the-->
+            <!--activity. Please do not register repeatedly, thank you for your cooperation. The latest progress will be-->
+            <!--sent to your email; you may also receive our calls if necessary. If there is any problem when-->
+            <!--registering, please contact: <a href="mailto:contact@linktimetech.com">contact@linktimetech.com</a>-->
+            <!--</p>-->
+            <!--<form method="post" action="#">-->
+            <!--<div class="field half first">-->
+            <!--<label for="name">Full Name</label>-->
+            <!--<input type="text" name="name" id="name"/>-->
+            <!--</div>-->
+            <!--<div class="field half">-->
+            <!--<label for="company">Company</label>-->
+            <!--<input type="text" name="company" id="company"/>-->
+            <!--</div>-->
+            <!--<div class="field half first">-->
+            <!--<label for="mobile">Phone</label>-->
+            <!--<input type="text" name="mobile" id="mobile"/>-->
+            <!--</div>-->
+            <!--<div class="field half">-->
+            <!--<label for="email">Email</label>-->
+            <!--<input type="text" name="email" id="email"/>-->
+            <!--</div>-->
+            <!--<div class="field">-->
+            <!--<label for="note">Notes</label>-->
+            <!--<textarea name="note" id="note" rows="4"></textarea>-->
+            <!--</div>-->
+            <!--<ul class="actions">-->
+            <!--<li><input type="button" value="send" class="special" onclick="sendmsg()"/></li>-->
+            <!--<li><input type="reset" value="reset"/></li>-->
+            <!--</ul>-->
+            <!--</form>-->
+
+            <!--<ul class="icons">
+                <li>
+                    <a href="https://www.twitter.com/linktimetech" target="_blank" class="icon fa-twitter"><span class="label">Twitter</span></a>
+                </li>
+                <li>
+                    <a target="_blank" href="" target="_blank" class="icon fa-envelope"><span class="label">email</span></a>
+                </li>
+                <li>
+                    <a href="#" target="_blank" class="icon fa-wechat"><span class="label">wechat</span></a>
+                </li>
+            </ul>-->
+        </article>
+    </div>
+    <!-- Footer -->
+    <footer id="footer">
+        <h4 style="text-transform:none">&copy; <a href="http://www.linktimetech.com" target="_blank">LinkTime</a> | 点击切换<a
+                href="index.html" style="color:#337ab7;">中文版</a>.</h4>
+    </footer>
+</div>
+
+<div class="modal fade" id="success" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span>
+                </button>
+                <h4 class="modal-title" id="myModalLabel" style="font-size: 1.8rem;">Pay</h4>
+            </div>
+            <div class="modal-body">
+                <div style="text-align:center;">
+                    <img src="images/qr.jpg" style="width:300px;height:400px">
+                </div>
+                <p><br/>The price is ￥200 /
+                    per person, <b style="color:#337ab7;">Please attach your name when purchase.</b>
+                </p>
+
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+                <button type="button" class="btn btn-primary payok" data-dismiss="modal">Paid</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- BG -->
+<div id="bg"></div>
+
+<!-- baidu Map api -->
+<script type="text/javascript"
+        src="http://api.map.baidu.com/api?v=2.0&ak=DD279b2a90afdf0ae7a3796787a0742e"></script>
+
+<!-- Scripts -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.3/jquery.min.js"></script>
+<script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"
+        integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+        crossorigin="anonymous"></script>
+
+<script src="assets/js/skel.min.js"></script>
+<script src="assets/js/util.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/vue"></script>
+<script src="assets/js/content.js"></script>
+
+<script src="assets/js/main.js"></script>
+
+<script type="text/javascript">
+    var map = new BMap.Map("baiduMap");
+    var point = new BMap.Point(113.98876, 22.556458);
+    map.centerAndZoom(point, 20);
+    var marker = new BMap.Marker(point); // 创建标注
+    map.addOverlay(marker); // 将标注添加到地图中
+    marker.setAnimation(BMAP_ANIMATION_BOUNCE); //跳动的动画
+    map.enableScrollWheelZoom(true);
+</script>
+<!--
+<script type="text/javascript">
+
+    function sendmsg() {
+        var name = $("#name").val();
+        var company = $("#company").val();
+        var mobile = $("#mobile").val();
+        var email = $("#email").val();
+        var note = $("#note").val();
+        if (name == "" || company == "" || mobile == "" || email == "") {
+            alert("Please complete the information and submit again. Full name, company, telephone and email are necessary.");
+        }
+        else {
+            $.ajax({
+                type: "post",
+                url: "../phalapi/public/?service=App.Examples_CURD.Insert",
+                data: {
+                    name: name,
+                    company: company,
+                    mobile: mobile,
+                    email: email,
+                    note: note
+                },
+                timeout: 5000,    //超时时间
+                dataType: 'json',    //返回的数据格式：json/xml/html/script/jsonp/text
+                success: function (data) {
+                    if (data.ret == 200) {
+                        $("#name").val("");
+                        $("#company").val("");
+                        $("#mobile").val("");
+                        $("#email").val("");
+                        $("#note").val("");
+                        $('#success').modal('show')
+//                        alert("Successful! We will contact you soon!");
+                    } else {
+                        alert("Failed! Please check your information and try again.");
+                    }
+                },
+                error: function (xhr, textStatus) {
+                    console.log('错误')
+                    console.log(xhr)
+                    console.log(textStatus)
+                    alert("Failed! Please check your internet.");
+                }
+            })
+        }
+    }
+</script> -->
+
+</body>
+
+</html>

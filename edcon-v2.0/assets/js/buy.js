@@ -280,7 +280,13 @@ $(function () {
                         // console.log(json.message)
 
                         if (json.message == 'failed fraud check') {
-                            $('.payfailText').text('Payment failed because of too frequent use of the card. To complete the payment, please change another card.');
+                            $('.payfailText').text('Payment failed because of too frequent use of the card. To complete the payment, please use another card.');
+
+                        } else if (json.message == 'the security code is invalid') {
+                            $('.payfailText').text('Payment failed. Please make sure to enter the correct security code, if failed, please confirm the security code with your card issuing company.');
+                        } else if (json.message == 'payment rejected') {
+                            $('.payfailText').text('Payment failed. Please contact your card issuing company and describe the problem (when and where and what did you buy). The card issuer will solve this problem according to your description, and please try again several days later.');
+
                         }
                         $('#payfail').modal('show');
 
@@ -304,7 +310,6 @@ $(function () {
                 // Error: display an error message. Note that `response.message` contains
                 // a preformatted error message. Also note that `response.code` will be
                 // "invalid_card" in case of validation error on the card.
-                $('.loading,.loading-mask').fadeOut();
                 $('.loading,.loading-mask').fadeOut();
                 $('.checkstudent').fadeOut(50);
                 $('.school').removeAttr('required', '');

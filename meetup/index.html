@@ -1,31 +1,23 @@
 <!DOCTYPE HTML>
-<!--@以太坊社区交流会报名-->
-<!--@author ZaneYule <contact@zaneyule.com>-->
-<!--@2017-->
-<!--db-->
 <html>
 
 <head>
     <title>以太坊社区交流活动报名</title>
     <meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"/>
-
     <link rel="SHORTCUT ICON" href="images/meetup.png">
-
     <link rel="stylesheet" href="assets/css/loaders.min.css"/>
-
+    <link rel="stylesheet" href="assets/css/pay.css">
+    <link rel="stylesheet" href="assets/css/registration.min.css">
     <link rel="stylesheet" href="assets/css/main.css"/>
+
 
     <!--[if lte IE 9]>
     <link rel="stylesheet" href="assets/css/ie9.css"/><![endif]-->
-
     <noscript>
         <link rel="stylesheet" href="assets/css/noscript.css"/>
     </noscript>
-
     <script src="assets/js/skel.min.js"></script>
-
-
 </head>
 <style>
     #agenda p {
@@ -44,7 +36,6 @@
 <body>
 <!-- Wrapper -->
 <div id="wrapper">
-
     <!-- Header -->
     <header id="header">
         <div class="logo">
@@ -52,13 +43,13 @@
         </div>
         <div class="content">
             <div class="inner">
-                <h1 style="text-transform:none;letter-spacing:10px">亚太以太坊社区技术培训</h1>
-                <h1 style="text-transform:none">暨交流</h1>
+                <h1 style="text-transform:none;letter-spacing:10px">亚太以太坊社区Meet up</h1>
+                <!-- <h1 style="text-transform:none"></h1> -->
                 <!--<h3 style="margin-bottom:0">活动介绍:
-                    <a href="https://html5up.net">主办公司网址</a>
-                </h3>-->
-                <h3>时间: 2017年12月3日8:30-18:00 </h3>
-                <h3>坐标: 深圳</h3>
+                <a href="https://html5up.net">主办公司网址</a>
+            </h3>-->
+                <h3>时间: 2018年2月25日</h3>
+                <h3>坐标: 泰国曼谷</h3>
             </div>
         </div>
         <nav>
@@ -81,167 +72,148 @@
     </header>
     <!-- Main -->
     <div id="main">
-
         <!-- Intro -->
         <article id="intro">
             <h2 class="major">活动介绍</h2>
             <p style="text-indent:2em">
-                此次活动由以太坊中国社区代表之一灵钛科技（<a href="http://www.linktimetech.com">www.linktimetech.com</a>）发起，以以太坊技术交流为目的，为社区成员与以太坊开发者搭建沟通的桥梁，为在以太坊上开发项目的公司与用户创造沟通的机会。
+                亚太以太坊社区Meet up是由<a href="www.linktimetech.com">灵钛科技（LinkTime）</a>发起，以以太坊技术交流为宗旨，为广大社区成员与优秀开发者提供深度交流学习的机会，为优秀项目提供展示的舞台。活动内容涵盖以太坊技术培训，优秀应用交流，亚太区各国以太坊社区发展情况讨论等。
             </p>
             <p style="text-indent:2em">
-                活动内容涵盖以太坊技术培训，优秀应用交流，亚太区各国以太坊社区发展情况讨论等。活动嘉宾包括以太坊创始人Vitalik
-                Buterin，以太坊开发者，以太坊研究者（中国、韩国、新加坡、美国、日本等），国际国内优秀项目创始人，业界知名投资人及行业知名企业代表等。
+                活动嘉宾包括以太坊创始人Vitalik Buterin，以太坊开发者，以太坊研究者（中国、韩国、新加坡、美国、日本等），国际优秀项目创始人，业界知名投资机构及行业企业代表等。
             </p>
+            <p style="text-indent:2em">我们希望通过meetup与大家携手，为亚太以太坊社区尽绵薄之力，让世界变得更加美好！</p>
         </article>
         <!-- Work -->
         <article id="agenda">
             <h2 class="major">日程安排</h2>
-            <table border="1" style="font-size: 13px">
+            <p style="font-size: 22px;font-weight: bold;">Coming Soon ... </p>
+            <!-- <table border="1" style="font-size: 13px">
+            <tr>
+                <td></td>
+                <td>时间</td>
+                <td>演讲人</td>
+                <td>职位</td>
+                <td>演讲主题</td>
+            </tr>
+            <template v-for="content in contents">
                 <tr>
-                    <td></td>
-                    <td>时间</td>
-                    <td>演讲人</td>
-                    <td>职位</td>
-                    <td>演讲主题</td>
+                    <td v-if="content.amside == 1 || content.pmside == 1" :rowspan="content.timerow"
+                        style="vertical-align:middle">{{ content.datecn }}
+                    </td>
+
+                    <td v-if="content.break == 1" :colspan="content.breakcol" style="text-align:center">{{
+                        content.breaktextcn }}
+                    </td>
+
+                    <td v-if="content.empty == 1" :colspan="content.colspan" style="text-align:center"></td>
+
+                    <td v-if="content.type == 'agenda' ">{{ content.time }}</td>
+                    <td v-if="content.type == 'agenda' ">{{ content.speakercn }}</td>
+                    <td v-if="content.type == 'agenda' ">{{ content.titlecn }}</td>
+                    <td v-if="content.type == 'agenda' ">{{ content.topiccn }}</td>
+
                 </tr>
-                <template v-for="content in contents">
-                    <tr>
-                        <td v-if="content.amside == 1 || content.pmside == 1" :rowspan="content.timerow"
-                            style="vertical-align:middle">{{ content.datecn }}
-                        </td>
 
-                        <td v-if="content.break == 1" :colspan="content.breakcol" style="text-align:center">{{
-                            content.breaktextcn }}
-                        </td>
+            </template>
 
-                        <td v-if="content.empty == 1" :colspan="content.colspan" style="text-align:center"></td>
-
-                        <td v-if="content.type == 'agenda' ">{{ content.time }}</td>
-                        <td v-if="content.type == 'agenda' ">{{ content.speakercn }}</td>
-                        <td v-if="content.type == 'agenda' ">{{ content.titlecn }}</td>
-                        <td v-if="content.type == 'agenda' ">{{ content.topiccn }}</td>
-
-                    </tr>
-
-                </template>
-
-            </table>
+        </table> -->
         </article>
-
         <!-- About -->
         <article id="information">
             <h2 class="major">活动信息</h2>
-            <p>活动地点：深圳市南山区侨香路4068号智慧广场A栋1单元19F
-                <br>活动时间：2017年12月3日8:30-18:00
-
-                <br>签到时间：2017年12月3日7:30-8:30，请大家提前签到</p>
-            <div class="image main">
+            <p>活动地点：泰国曼谷
+                <br>活动时间：2018年2月25日
+                <!-- <br>签到时间：2017年12月3日7:30-8:30，请大家提前签到</p> -->
+                <!-- <div class="image main"> -->
                 <!--<div id="baiduMap" style="width:100%;height:300px"></div>-->
-                <div style="overflow:hidden;max-width:100%;width:560px;height:300px;">
-                    <div id="gmapcanvas" style="height:100%; width:100%;max-width:100%;">
-                        <iframe style="height:100%;width:100%;border:0;" frameborder="0"
-                                src="https://www.google.com/maps/embed/v1/place?q=深圳市南山区侨香路4068号智慧广场A栋1单元19F&key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8"></iframe>
-                    </div>
+                <!--  <div style="overflow:hidden;max-width:100%;width:560px;height:300px;">
+                <div id="gmapcanvas" style="height:100%; width:100%;max-width:100%;">
+                    <iframe style="height:100%;width:100%;border:0;" frameborder="0" class="lozad" allowfullscreen
+                            data-src="https://www.google.com/maps/embed/v1/place?q=深圳市南山区侨香路4068号智慧广场A栋1单元19F&key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8"></iframe>
 
+                </div> -->
                     <!--<style>#gmapcanvas img.text-marker {-->
                     <!--max-width: none !important;-->
                     <!--background: none !important;-->
                     <!--}-->
-
                     <!--img {-->
                     <!--max-width: none-->
                     <!--}</style>-->
-                </div>
-            </div>
+                <!-- </div> -->
+                <!-- </div> -->
         </article>
-
         <!-- Contact -->
         <article id="registration">
-
             <h2 class="major">购买门票</h2>
-
-            <p style="text-align: center;font-size:36px;">
-                门票已售罄
-            </p>
-
-            <!--<p style="text-indent:2em">-->
-            <!--请正确填写以下信息，提交后购买门票。我们将以此作为报名信息以便入场登记，请勿重复报名，感谢配合。活动最新进展我们将通过邮件告知，请随时关注。报名遇到问题，请联系-->
-            <!--<a href="mailto:contact@linktimetech.com">contact@linktimetech.com</a>-->
+            <!--<p style="text-align: center;font-size:36px;" >-->
+            <!--门票已售罄-->
             <!--</p>-->
-            <!--<form method="post" action="#">-->
-            <!--<div class="field half first">-->
-            <!--<label for="name">姓名</label>-->
-            <!--<input type="text" name="name" id="name"/>-->
-            <!--</div>-->
-            <!--<div class="field half">-->
-            <!--<label for="company">公司</label>-->
-            <!--<input type="text" name="company" id="company"/>-->
-            <!--</div>-->
-            <!--<div class="field half first">-->
-            <!--<label for="mobile">电话</label>-->
-            <!--<input type="text" name="mobile" id="mobile"/>-->
-            <!--</div>-->
-            <!--<div class="field half">-->
-            <!--<label for="email">邮箱</label>-->
-            <!--<input type="text" name="email" id="email"/>-->
-            <!--</div>-->
-            <!--<div class="field">-->
-            <!--<label for="note">备注(选填)</label>-->
-            <!--<textarea name="note" id="note" rows="4"></textarea>-->
-            <!--</div>-->
-            <!--<ul class="actions">-->
-            <!--<li><input type="button" value="提交" class="special" onclick="sendmsg()"/></li>-->
-            <!--<li><input type="reset" value="重置"/></li>-->
-            <!--</ul>-->
-            <!--</form>-->
+            <p style="text-indent:2em">
 
+                门票价格：35美金/人，包含茶歇和午餐。请正确填写以下信息，提交后购买门票，我们将以此作为入场登记凭据。请勿重复报名，感谢配合！
+                赞助合作请联系： <a href="mailto:meetup@linktimetech.com">meetup@linktimetech.com</a>
+            </p>
+            <form id="checkout-form" name="checkoutForm">
+                <div class="field half first">
+                    <label for="name">姓名</label>
+                    <input type="text" name="name" id="name" required/>
+                </div>
+                <div class="field half ">
+                    <label for="country">国家</label>
+                    <input type="text" name="country" id="country" required/>
+                </div>
+                <div class="field half first">
+                    <label for="company">公司</label>
+                    <input type="text" name="company" id="company" required/>
+                </div>
+                <div class="field half">
+                    <label for="position">职位</label>
+                    <input type="text" name="position" id="position" required/>
+                </div>
+                <div class="field half first">
+                    <label for="telephone">电话</label>
+                    <input type="text" name="telephone" id="telephone" required/>
+                </div>
+                <div class="field half">
+                    <label for="email">邮箱</label>
+                    <input type="text" name="email" id="email" required/>
+                </div>
+                <div class="field">
+                    <label for="note">备注(选填)</label>
+                    <textarea name="note" id="note" rows="4" maxlength="500"></textarea>
+                </div>
+                <ul class="actions">
+                    <li>
+                        <input type="button" value="提交" class="special gopay"/>
+                    </li>
+                    <li>
+                        <input type="reset" value="重置"/>
+                    </li>
+                </ul>
+            </form>
             <!--<ul class="icons">
-                <li>
-                    <a href="https://www.twitter.com/linktimetech" target="_blank" class="icon fa-twitter"><span class="label">Twitter</span></a>
-                </li>
-                <li>
-                    <a target="_blank" href="" target="_blank" class="icon fa-envelope"><span class="label">email</span></a>
-                </li>
-                <li>
-                    <a href="#" target="_blank" class="icon fa-wechat"><span class="label">wechat</span></a>
-                </li>
-            </ul>-->
+            <li>
+                <a href="https://www.twitter.com/linktimetech" target="_blank" class="icon fa-twitter"><span class="label">Twitter</span></a>
+            </li>
+            <li>
+                <a target="_blank" href="" target="_blank" class="icon fa-envelope"><span class="label">email</span></a>
+            </li>
+            <li>
+                <a href="#" target="_blank" class="icon fa-wechat"><span class="label">wechat</span></a>
+            </li>
+        </ul>-->
         </article>
     </div>
     <!-- Footer -->
     <footer id="footer">
         <h4 style="text-transform:none">&copy; <a href="http://www.linktimetech.com" target="_blank">LinkTime</a> |
             Switch into <a href="index-en.html" style="color:#337ab7;">English Version</a>.</h4>
+        <h4 style="text-transform:none">Telegram: <a style="color:#337ab7;" href="https://t.me/AsiaETHfans">https://t.me/AsiaETHfans</a>
+        </h4>
     </footer>
-
-
-    <div class="modal fade" id="success" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
-                            aria-hidden="true">&times;</span>
-                    </button>
-                    <h4 class="modal-title" id="myModalLabel" style="font-size: 1.3rem;">购买门票</h4>
-                </div>
-                <div class="modal-body">
-                    <div style="text-align:center;">
-                        <img src="images/qr.jpg" style="width:300px;height:400px">
-                    </div>
-                    <p align="center"><br/>门票200元/人，扫描二维码请<b style="color:#337ab7;">备注姓名</b>。
-                    </p>
-
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
-                    <button type="button" class="btn btn-primary payokcn" data-dismiss="modal">已支付</button>
-                </div>
-            </div>
-        </div>
-    </div>
-
     <div class="loading-mask">
     </div>
+
     <div class="loader loading">
         <div class="pacman">
             <div></div>
@@ -251,87 +223,89 @@
             <div></div>
         </div>
     </div>
-
 </div>
-
-
 <!-- BG -->
 <div id="bg"></div>
-
-
-<!-- baidu Map api -->
-<!--<script type="text/javascript"-->
-<!--src="http://api.map.baidu.com/api?v=2.0&ak=DD279b2a90afdf0ae7a3796787a0742e"></script>-->
-
+<div class="modal fade" id="failed" tabindex="-1" role="dialog" aria-labelledby="failedLabel">
+    <div class="modal-dialog modal-sm" role="document">
+        <div class="modal-content" style="color: #000">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                            aria-hidden="true">&times;</span>
+                    </button>
+                    <h4 class="modal-title" id="failedLabel">Failed</h4>
+                </div>
+                <div class="modal-body">
+                    <p>Failed! Please check your internet and try again later!</p>
+                </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary" data-dismiss="modal">ok</button>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal fade" id="again" tabindex="-1" role="dialog" aria-labelledby="againLabel">
+    <div class="modal-dialog modal-sm" role="document">
+        <div class="modal-content" style="color: #000">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span>
+                </button>
+                <h4 class="modal-title" id="againLabel">Incomplete Information</h4>
+            </div>
+            <div class="modal-body" id="againContent">
+                <p>Please complete your information and try again later, all of the information are necessary!</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary" data-dismiss="modal">ok</button>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal fade" id="paysucc" tabindex="-1" role="dialog" aria-labelledby="againLabel">
+    <div class="modal-dialog modal-sm" role="document">
+        <div class="modal-content" style="color: #000">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span>
+                </button>
+                <h4 class="modal-title">Successful! </h4>
+            </div>
+            <div class="modal-body paysuccBody">
+                <p>Congratulations! You have successfully paid for EDCON, please check your email for E-ticket.
+                    </p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" data-dismiss="modal">ok</button>
+                </div>
+            </div>
+        </div>
+    </div>
+<div class="modal fade" id="payfail" tabindex="-1" role="dialog" aria-labelledby="againLabel">
+    <div class="modal-dialog modal-sm" role="document">
+        <div class="modal-content" style="color: #000">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span>
+                </button>
+                <h4 class="modal-title">Failed!</h4>
+            </div>
+            <div class="modal-body">
+                <p class="payfailText">Alert！Please enter the valid information and try again later.
+                </p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary" data-dismiss="modal">ok</button>
+            </div>
+        </div>
+    </div>
+</div>
 <!-- Scripts -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.3/jquery.min.js"></script>
 <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"
         integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
         crossorigin="anonymous"></script>
-<!--<script src="assets/js/util.js"></script>-->
-
+<script src="assets/js/util.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/vue"></script>
 <script src="assets/js/content.js"></script>
-
-<script src="assets/js/main.min.js"></script>
-
-<!--<script type="text/javascript">-->
-<!--var map = new BMap.Map("baiduMap");-->
-<!--var point = new BMap.Point(113.98876, 22.556458);-->
-<!--map.centerAndZoom(point, 20);-->
-<!--var marker = new BMap.Marker(point); // 创建标注-->
-<!--map.addOverlay(marker); // 将标注添加到地图中-->
-<!--marker.setAnimation(BMAP_ANIMATION_BOUNCE); //跳动的动画-->
-<!--map.enableScrollWheelZoom(true);-->
-<!--</script>-->
-<!--
-<script type="text/javascript">
-
-    function sendmsg() {
-        var name = $("#name").val();
-        var company = $("#company").val();
-        var mobile = $("#mobile").val();
-        var email = $("#email").val();
-        var note = $("#note").val();
-        if (name == "" || company == "" || mobile == "" || email == "") {
-            alert("请完善信息后再次提交，姓名、公司、电话、邮箱为必填项。");
-        }
-        else {
-            $.ajax({
-                type: "post",
-                url: "../phalapi/public/?service=App.Examples_CURD.Insert",
-                data: {
-                    name: name,
-                    company: company,
-                    mobile: mobile,
-                    email: email,
-                    note: note
-                },
-                timeout: 5000,    //超时时间
-                dataType: 'json',    //返回的数据格式：json/xml/html/script/jsonp/text
-                success: function (data) {
-                    if (data.ret == 200) {
-                        $("#name").val("");
-                        $("#company").val("");
-                        $("#mobile").val("");
-                        $("#email").val("");
-                        $("#note").val("");
-                        $('#success').modal('show')
-//                        alert("信息提交成功，我们会尽快与你取得联系。");
-                    } else {
-                        alert("信息提交失败，请核对所填的信息或稍后再试。");
-                    }
-                },
-                error: function (xhr, textStatus) {
-                    console.log('错误')
-                    console.log(xhr)
-                    console.log(textStatus)
-                    alert("信息提交失败，请检查你的网络。");
-                }
-            })
-        }
-    }
-</script> -->
+<script src="assets/js/main.js"></script>
 </body>
 
 </html>

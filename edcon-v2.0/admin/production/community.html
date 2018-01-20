@@ -74,7 +74,9 @@
                                                         class="badge bg-red pull-right"
                                                         v-if="newDevNum > 0">{{newDevNum}}</span></a>
                                             </li>
-                                            <li><a href="free_ticket.html">Free Ticket</a>
+                                            <li><a href="free_ticket.html">Free Ticket</a></li>
+                                            <li><a href="payfail.html" @click="payFailPage()">Pay Fail Ticket<span
+                                                    class="badge bg-red pull-right" v-if="newPayFailNum > 0">{{newPayFailNum}}</span></a>
                                             </li>
                                         </ul>
                                     </li>

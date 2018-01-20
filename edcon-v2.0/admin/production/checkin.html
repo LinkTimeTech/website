@@ -69,6 +69,9 @@
                                             </li>
                                             <li><a href="free_ticket.html">Free Ticket</a>
                                             </li>
+                                            <li><a href="payfail.html" @click="payFailPage()">Pay Fail Ticket<span
+                                                    class="badge bg-red pull-right" v-if="newPayFailNum > 0">{{newPayFailNum}}</span></a>
+                                            </li>
                                         </ul>
                                     </li>
                                     <li><a href="speaker.html" @click="registPage(3)">Speaker<span
@@ -177,9 +180,9 @@
                             <div class="x_content">
                                 <p>Total: <span>{{totalTicketsNum}}</span></p>
                                 <p>Total Check In: <span>{{totalCheckNum}}</span></p>
-                                <!--<button class="btn btn-primary" @click="goAdd"> Add-->
+                                <!--<button class="btn btn-primary" href="scamer.html" > Start Check In-->
                                 <!--</button>-->
-                                <!--<input type="text" placeholder="search" @input="search" class="search">-->
+
                                 <!-- start project list -->
                                 <table class="table table-striped projects">
                                     <thead>

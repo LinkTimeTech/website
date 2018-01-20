@@ -1,7 +1,7 @@
 /*
-	Dimension by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+    Dimension by HTML5 UP
+    html5up.net | @ajlkn
+    Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 */
 
 (function ($) {
@@ -17,6 +17,16 @@
 
     $(function () {
 
+        //判断网站语言
+        var lang;
+        console.log(window.location.pathname);
+        if (window.location.pathname == '/') {
+            lang = cn;
+        } else if (window.location.pathname == '/index-en.html') {
+            lang = en;
+
+        }
+
         //打开网站2sloading
         function hideLoading() {
             var t = setTimeout("$('.loading,.loading-mask').fadeOut();", 2000)
@@ -24,12 +34,91 @@
 
         hideLoading();
 
-        $('.payokcn').click(function () {
-            alert('感谢您的参与，12月3日深圳见！')
-        });
+        /*
+         * 支付相关
+         */
+        // $('.payokcn').click(function () {
+        //     alert('感谢您的参与，12月3日深圳见！')
+        // });
 
-        $('.payok').click(function () {
-            alert('Thank you for your participation! See you in Shenzhen (December 3)!!!')
+        // $('.payok').click(function () {
+        //     alert('Thank you for your participation! See you in Shenzhen (December 3)!!!')
+        // });
+
+        /*
+         * 卖完票后不出现填信息的表单
+         */
+        // var getTicketInfo = new XMLHttpRequest();
+        // getTicketInfo.open('post', 'https://edcon.io/tp/public/index.php/index/index/getSoltInfo');
+        // getTicketInfo.send();
+        // getTicketInfo.onload = function () {
+        //     var json = JSON.parse(this.response);
+        // console.log(json);
+
+        //     var hvEarlyTicket = json.early_solt_out;
+        //
+        //     if (hvEarlyTicket === 1) {
+        //         $("#checkout-form").remove();
+
+        //     }
+        //
+        // };
+
+        $('.gopay').click(function (event) {
+
+            event.preventDefault();
+
+            var purchaserName = $('#name').val();
+            var purchaserCountry = $('#country').val();
+            var purchaserCompany = $('#company').val();
+            var purchaserPosition = $('#position').val();
+            var purchaserPhone = $('#telephone').val();
+            var purchaserEmail = $('#email').val();
+            var purchaserNote = $('#note').val();
+
+            $.ajax({
+                type: "post",
+                url: "https://api.baoming.in/omise/charges/accountInfo",
+                data: {
+                    name: purchaserName,
+                    country: purchaserCountry,
+                    company: purchaserCompany,
+                    position: purchaserPosition,
+                    telephone: purchaserPhone,
+                    email: purchaserEmail,
+                    note: purchaserNote,
+                    lang: lang
+
+                },
+                timeout: 5000, //超时时间
+                dataType: 'json', //返回的数据格式：json/xml/html/script/jsonp/text
+                success: function (data) {
+
+                    $("#name").val("");
+                    $("#country").val("");
+                    $("#company").val("");
+                    $("#position").val("");
+                    $("#mobile").val("");
+                    $("#email").val("");
+                    $("#note").val("");
+                    var para = data.para;
+                    top.location = 'buy.html?para=' + para;
+
+                },
+                error: function (xhr, textStatus) {
+                    // console.log(xhr)
+                    // console.log(textStatus)
+                    alert("信息提交失败，请检查你的网络。");
+                }
+            })
+
+            //     var json = JSON.parse(this.response);
+
+            // console.log(json);
+
+            // var para = json.para;
+
+
         });
 
         var $window = $(window),
@@ -252,8 +341,8 @@
                 return;
 
             // Add state?
-            if (typeof addState != 'undefined'
-                && addState === true)
+            if (typeof addState != 'undefined' &&
+                addState === true)
                 history.pushState(null, null, '#');
 
             // Handle lock.
@@ -382,8 +471,8 @@
         $window.on('hashchange', function (event) {
 
             // Empty hash?
-            if (location.hash == ''
-                || location.hash == '#') {
+            if (location.hash == '' ||
+                location.hash == '#') {
 
                 // Prevent default.
                 event.preventDefault();
@@ -438,8 +527,8 @@
         $main_articles.hide();
 
         // Initial article.
-        if (location.hash != ''
-            && location.hash != '#')
+        if (location.hash != '' &&
+            location.hash != '#')
             $window.on('load', function () {
                 $main._show(location.hash.substr(1), true);
             });
