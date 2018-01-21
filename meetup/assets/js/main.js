@@ -19,50 +19,40 @@
 
         //判断网站语言
         var lang;
-        console.log(window.location.pathname);
-        if (window.location.pathname == '/') {
-            lang = cn;
-        } else if (window.location.pathname == '/index-en.html') {
-            lang = en;
+        // console.log(window.location.pathname);
+        // if (window.location.pathname == '/') {
+        //     lang = 'cn';
+        // } else if (window.location.pathname == '/index-en.html') {
+        //     lang = 'en';
+        //
+        // }
+
+        if (window.location.pathname == '/preview/index.html') {
+            lang = 'cn';
+        } else if (window.location.pathname == '/preview/index-en.html') {
+            lang = 'en';
 
         }
-
-        //打开网站2sloading
-        function hideLoading() {
-            var t = setTimeout("$('.loading,.loading-mask').fadeOut();", 2000)
-        }
-
-        hideLoading();
 
         /*
          * 支付相关
          */
-        // $('.payokcn').click(function () {
-        //     alert('感谢您的参与，12月3日深圳见！')
-        // });
-
-        // $('.payok').click(function () {
-        //     alert('Thank you for your participation! See you in Shenzhen (December 3)!!!')
-        // });
 
         /*
          * 卖完票后不出现填信息的表单
          */
-        // var getTicketInfo = new XMLHttpRequest();
-        // getTicketInfo.open('post', 'https://edcon.io/tp/public/index.php/index/index/getSoltInfo');
-        // getTicketInfo.send();
-        // getTicketInfo.onload = function () {
-        //     var json = JSON.parse(this.response);
-        // console.log(json);
+        var getTicketInfo = new XMLHttpRequest();
+        getTicketInfo.open('get', 'https://api.baoming.in/omise/ticket/findNumber');
+        getTicketInfo.send();
+        getTicketInfo.onload = function () {
+            var json = JSON.parse(this.response);
+            var ticketNum = json.ticketNumber;
+            if (ticketNum == 0) {
+                $("#checkout-form,.payInfo").remove();
+                $('.payAllInfo').css('display', 'block')
+            }
 
-        //     var hvEarlyTicket = json.early_solt_out;
-        //
-        //     if (hvEarlyTicket === 1) {
-        //         $("#checkout-form").remove();
-
-        //     }
-        //
-        // };
+        };
 
         $('.gopay').click(function (event) {
 
@@ -101,25 +91,29 @@
                     $("#mobile").val("");
                     $("#email").val("");
                     $("#note").val("");
-                    var para = data.para;
-                    top.location = 'buy.html?para=' + para;
+                    var para = data.para,
+                        lang = data.lang;
+                    top.location = 'buy.html?para=' + para + '&lang=' + lang;
 
                 },
                 error: function (xhr, textStatus) {
                     // console.log(xhr)
                     // console.log(textStatus)
-                    alert("信息提交失败，请检查你的网络。");
+                    alert("Failed! Please check your internet and try again later!");
                 }
             })
 
-            //     var json = JSON.parse(this.response);
-
-            // console.log(json);
-
-            // var para = json.para;
-
 
         });
+
+
+        //打开网站2sloading
+        function hideLoading() {
+            var t = setTimeout("$('.loading,.loading-mask').fadeOut();", 2000)
+        }
+
+        hideLoading();
+
 
         var $window = $(window),
             $body = $('body'),

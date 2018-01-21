@@ -1,10 +1,6 @@
 $(function () {
 
-    $('.goback').click(function (event) {
 
-        top.location = 'index.html';
-
-    });
 
     /*
      * url 拿参数
@@ -41,10 +37,14 @@ $(function () {
 
     Request = GetRequest();
 
-    var para;
-    para = Request['para'];
+    var para = Request['para'],
+        lang = Request['lang'];
 
-    // console.log(para)
+    $('.goback').click(function (event) {
+
+        lang == 'cn' ? top.location = 'index.html' : top.location = 'index-en.html';
+
+    });
 
     /*
      * omise
@@ -95,46 +95,96 @@ $(function () {
             dataType: 'json', //返回的数据格式：json/xml/html/script/jsonp/text
             success: function (data) {
 
-                console.log(data);
-                console.log(data.state);
                 var isPay = data.state;
 
                 // 支付成功
-                if (isPay === 0) {
+                if (isPay == 0) {
                     $('.loading,.loading-mask').fadeOut();
-                    alert('Congratulations! You have successfully paid for EDCON, please check your email for E-ticket.')
 
-                    // top.location = 'index.html';
+                    if (lang == 'cn') {
+                        alert('购买成功。感谢您对亚太以太坊社区Meet up的支持。电子票已发到您的邮箱，请注意查收。');
+                        top.location = 'index.html';
+
+                    } else {
+                        alert('Congratulations! You have successfully paid for Asia-Pacific Ethereum Community Meetup, please check your email for E-ticket.');
+                        top.location = 'index-en.html';
+
+                    }
+
 
                 }
 
                 // 支付失败
-                else if (isPay === 1) {
+                else if (isPay == 1) {
                     $('.loading,.loading-mask').fadeOut();
 
                     // console.log(json.message)
 
                     if (data.failMessage == 'failed fraud check') {
-                        alert('Payment failed because of too frequent use of the card. To complete the payment, please use another card.');
+                        if (lang == 'cn') {
+                            alert('支付失败。请换张银行卡再进行支付操作。')
+
+                        } else {
+                            alert('Payment failed because of too frequent use of the card. To complete the payment, please use another card.');
+
+                        }
 
                     } else if (data.failMessage == 'the security code is invalid') {
-                        alert('Payment failed. Please make sure to enter the correct security code, if failed, please confirm the security code with your card issuing company.');
+
+                        if (lang == 'cn') {
+                            alert('支付失败。请输入正确的安全码。如若不确定安全码的位置，请致电银行卡开户行进行咨询。')
+
+                        } else {
+                            alert('Payment failed. Please make sure to enter the correct security code, if failed, please confirm the security code with your card issuing company.');
+
+                        }
 
                     } else if (data.failMessage == 'payment rejected') {
-                        alert('Payment failed. Please contact your card issuing company and describe the problem (when and where and what did you buy). The card issuer will solve this problem according to your description, and please try again several days later.');
+
+                        if (lang == 'cn') {
+                            alert('支付失败。银行拒绝此交易。请联系银行卡开户行询问具体解决方法。')
+
+                        } else {
+                            alert('Payment failed. Please contact your card issuing company and describe the problem (when and where and what did you buy). The card issuer will solve this problem according to your description, and please try again several days later.');
+
+                        }
+                    }
+                    if (lang == 'cn') {
+                        // top.location = 'index.html';
+
+                    } else {
+                        // top.location = 'index-en.html';
+
                     }
 
-                    // top.location = 'index.html';
 
+                }
 
+                else if (isPay == 3) {
+                    $('.loading,.loading-mask').fadeOut();
+                    if (lang == 'cn') {
+                        alert('支付失败，请重新提交交易信息');
+                        top.location = 'index.html';
+
+                    } else {
+                        alert('Failed! Please try again later!');
+                        top.location = 'index-en.html';
+
+                    }
                 }
                 //失败
                 else {
                     $('.loading,.loading-mask').fadeOut();
+                    if (lang == 'cn') {
+                        alert('支付失败。请输入正确的银行卡信息。');
+                        top.location = 'index.html';
 
-                    alert('Failed! Please check your internet and try again later!');
+                    } else {
+                        alert('Failed! Please check your internet and try again later!');
+                        top.location = 'index-en.html';
 
-                    // top.location = 'index.html';
+                    }
+
 
                 }
 
@@ -144,9 +194,16 @@ $(function () {
                 // console.log(textStatus)
 
                 $('.loading,.loading-mask').fadeOut();
+                if (lang == 'cn') {
+                    alert('网络错误，请检查您的网络，稍后再试。');
+                    top.location = 'index.html';
 
-                alert('Failed! Please check your internet and try again later!');
-                // top.location = 'index.html';
+                } else {
+
+                    alert('Failed! Please check your internet and try again later!');
+                    top.location = 'index-en.html';
+
+                }
 
             }
         })
