@@ -195,6 +195,7 @@
                                         <th>Phone</th>
                                         <th>Ticket Type</th>
                                         <th>Reason</th>
+                                        <th>次数</th>
                                         <th>Time</th>
                                     </tr>
                                     </thead>
@@ -213,6 +214,7 @@
                                             <td v-if="row.ticket_type == 3">学生票</td>
 
                                             <td>{{row.failure_message}}</td>
+                                            <td>{{row.fail_count}}</td>
                                             <td>{{row.time}}</td>
 
                                         </tr>

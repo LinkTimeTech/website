@@ -62,10 +62,13 @@
                     </a>
                   <ul class="dropdown-menu">
                     <li>
-                      <router-link :to="'ticket'"><i class="fa fa-caret-right"></i> 付费</router-link>
+                      <router-link :to="'ticket'"><i class="fa fa-caret-right"></i> 门票</router-link>
                     </li>
-                    <li>
+                    <!--  <li>
                       <router-link :to="'delivery'"><i class="fa fa-caret-right"></i> 免费</router-link>
+                    </li> -->
+                    <li>
+                      <router-link :to="'payfail'"><i class="fa fa-caret-right"></i> 失败</router-link>
                     </li>
                   </ul>
                 </li>
@@ -77,7 +80,7 @@
                       <i class="fa fa-list"></i> 编辑 <b class="fa fa-plus dropdown-plus"></b>
                     </a>
                   <ul class="dropdown-menu">
-                    <li>
+                    <!-- <li>
                       <a href="#">
                           <i class="fa fa-pencil-square-o"></i> 关于
                         </a>
@@ -86,7 +89,7 @@
                       <a href="#">
                           <i class="fa fa-pencil-square-o"></i> 时间
                         </a>
-                    </li>
+                    </li> -->
                     <li>
                       <router-link :to="'schedule'"><i class="fa fa-pencil-square-o"></i> 行程</router-link>
                     </li>
@@ -113,13 +116,13 @@
             <div class="row">
               <div class="form-group col-sm-12">
                 <label for="oldPass">旧密码</label>
-                <input type="oldPass" class="form-control" id="oldPass" placeholder="" v-model="oldPassword">
+                <input type="password" class="form-control" id="oldPass" placeholder="" v-model="oldPassword">
               </div>
             </div>
             <div class="row">
               <div class="form-group col-sm-12">
                 <label for="newPass">新密码</label>
-                <input type="newPass" class="form-control" id="newPass" placeholder="" v-model="newPassword">
+                <input type="password" class="form-control" id="newPass" placeholder="" v-model="newPassword">
               </div>
             </div>
           </div>
@@ -137,7 +140,6 @@
 export default {
   data() {
     return {
-      list: [],
       oldPassword: '',
       newPassword: ''
     }
@@ -145,12 +147,15 @@ export default {
   created() {
 
   },
+  mounted() {
+
+  },
   methods: {
     signout: function() {
 
-      axios.post('logout', {})
+      this.$http.post('manager/logout', {})
         .then((response) => {
-          top.location = 'login.html';
+          response.data.state == 0 ? this.$router.push({ path: '/login' }) : alert('退出失败，请重试');
         })
         .catch(function(error) {
           console.log(error);
@@ -161,22 +166,23 @@ export default {
 
       var newPassword = this.newPassword,
         oldPassword = this.oldPassword;
-      axios.post('password', {
-          oldPassword: oldPassword,
-          newPassword: newPassword
-        })
+
+      this.$http.post('manager/updatePWD', Qs.stringify({
+          oldPWD: oldPassword,
+          newPWD: newPassword
+        }))
         .then((response) => {
 
           console.log(response);
 
-          if (response.data.status == 0) {
+          if (response.data.state == 0) {
 
             alert('密码已修改, 请重新登录');
             this.newPassword = '';
             this.oldPassword = '';
-            top.location = 'login.html';
+            this.$router.push({ path: '/login' });
 
-          } else if (response.data.status == 1) {
+          } else if (response.data.state == 1) {
             alert('旧密码错误')
 
           }
@@ -186,6 +192,8 @@ export default {
         });
     }
   }
+
+
 }
 
 </script>

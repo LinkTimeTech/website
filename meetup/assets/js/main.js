@@ -20,19 +20,19 @@
         //判断网站语言
         var lang;
         // console.log(window.location.pathname);
-        // if (window.location.pathname == '/') {
-        //     lang = 'cn';
-        // } else if (window.location.pathname == '/index-en.html') {
-        //     lang = 'en';
-        //
-        // }
-
-        if (window.location.pathname == '/preview/index.html') {
+        if (window.location.pathname == '/' || window.location.pathname == '/index.html') {
             lang = 'cn';
-        } else if (window.location.pathname == '/preview/index-en.html') {
+        } else if (window.location.pathname == '/index-en.html') {
             lang = 'en';
 
         }
+
+        // if (window.location.pathname == '/preview/index.html') {
+        //     lang = 'cn';
+        // } else if (window.location.pathname == '/preview/index-en.html') {
+        //     lang = 'en';
+        //
+        // }
 
         /*
          * 支付相关
@@ -54,6 +54,10 @@
 
         };
 
+        /*
+         * 提交买票者信息
+         */
+
         $('.gopay').click(function (event) {
 
             event.preventDefault();
@@ -66,42 +70,69 @@
             var purchaserEmail = $('#email').val();
             var purchaserNote = $('#note').val();
 
-            $.ajax({
-                type: "post",
-                url: "https://api.baoming.in/omise/charges/accountInfo",
-                data: {
-                    name: purchaserName,
-                    country: purchaserCountry,
-                    company: purchaserCompany,
-                    position: purchaserPosition,
-                    telephone: purchaserPhone,
-                    email: purchaserEmail,
-                    note: purchaserNote,
-                    lang: lang
+            if (purchaserName == '' || purchaserCountry == '' || purchaserCompany == '' || purchaserPosition == '' || purchaserPhone == '' || purchaserEmail == '') {
+                if (lang == 'cn') {
+                    alert('请完成信息填写后再进行支付')
 
-                },
-                timeout: 5000, //超时时间
-                dataType: 'json', //返回的数据格式：json/xml/html/script/jsonp/text
-                success: function (data) {
+                } else {
+                    alert('Please complete your information and try again later, all of the information are necessary!')
 
-                    $("#name").val("");
-                    $("#country").val("");
-                    $("#company").val("");
-                    $("#position").val("");
-                    $("#mobile").val("");
-                    $("#email").val("");
-                    $("#note").val("");
-                    var para = data.para,
-                        lang = data.lang;
-                    top.location = 'buy.html?para=' + para + '&lang=' + lang;
-
-                },
-                error: function (xhr, textStatus) {
-                    // console.log(xhr)
-                    // console.log(textStatus)
-                    alert("Failed! Please check your internet and try again later!");
                 }
-            })
+            } else {
+
+                $.ajax({
+                    type: "post",
+                    url: "https://api.baoming.in/omise/charges/accountInfo",
+                    data: {
+                        name: purchaserName,
+                        country: purchaserCountry,
+                        company: purchaserCompany,
+                        position: purchaserPosition,
+                        telephone: purchaserPhone,
+                        email: purchaserEmail,
+                        note: purchaserNote,
+                        lang: lang
+
+                    },
+                    timeout: 5000, //超时时间
+                    dataType: 'json', //返回的数据格式：json/xml/html/script/jsonp/text
+                    success: function (data) {
+
+                        $("#name").val("");
+                        $("#country").val("");
+                        $("#company").val("");
+                        $("#position").val("");
+                        $("#mobile").val("");
+                        $("#email").val("");
+                        $("#note").val("");
+                        var para = data.para;
+                        lang = data.lang;
+                        // console.log(lang)
+
+                        if (lang == 'cn') {
+                            top.location = 'buy-cn.html?para=' + para + '&lang=' + lang;
+
+                        } else {
+                            top.location = 'buy.html?para=' + para + '&lang=' + lang;
+
+                        }
+
+                    },
+                    error: function (xhr, textStatus) {
+                        // console.log(xhr)
+                        // console.log(textStatus)
+
+                        if (lang == 'cn') {
+                            alert('信息提交失败，请检查您的网络。')
+
+                        } else {
+                            alert("Failed! Please check your internet and try again later!");
+
+                        }
+                    }
+                })
+
+            }
 
 
         });

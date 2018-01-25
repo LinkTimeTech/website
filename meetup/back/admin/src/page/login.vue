@@ -32,6 +32,8 @@
   </div>
 </template>
 <script>
+var Qs = require('qs');
+
 export default {
   data() {
     return {
@@ -45,25 +47,25 @@ export default {
   methods: {
 
     login: function() {
+      event.preventDefault()
+
       var username = this.Username,
         password = this.Password;
 
-        this.$http.post('login', {
-          username: username,
-          password: password
-        })
+      this.$http.post('manager/login',
+          Qs.stringify({
+            loginname: username,
+            loginpsw: password
+          }))
         .then((response) => {
-          // console.log('response:',response)
-          if (response.data.status == 0) {
-            this.$router.push({ path: '/' }) 
 
-          } else if (response.data.status == 1) {
-            alert('用户名或密码不正确');
-          }
+          response.data.state == 0 ? this.$router.push({ path: '/' }) : alert('登陆失败，请检查用户名或密码后再试');
 
         })
-        
+
     },
+
+
   }
 }
 

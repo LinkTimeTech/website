@@ -2,6 +2,7 @@
   <div>
     <myHeader></myHeader>
     <!-- Page content -->
+    <div class="row">
     <div id="content" class="col-md-12">
       <!-- page header -->
       <div class="pageheader">
@@ -25,9 +26,9 @@
               <div class="tile-body color transparent-white rounded-corners">
                 <div class="margin-bottom-20">
                   <div class="margin-bottom-20">
-                    <button type="button" class="btn btn-primary">购票</button>
+                    <button type="button" class="btn btn-primary">购票(中)</button>
                     <button type="button" class="btn btn-primary">购票(英)</button>
-                    <button type="button" class="btn btn-success">赠票</button>
+                    <button type="button" class="btn btn-success">赠票(中)</button>
                     <button type="button" class="btn btn-success">赠票(英)</button>
                   </div>
                   <div class="row">
@@ -51,6 +52,7 @@
         <!-- /row -->
       </div>
       <!-- /content container -->
+    </div>
     </div>
     <!-- Page content end -->
     <myFooter></myFooter>

@@ -488,7 +488,7 @@ input::-webkit-input-placeholder, textarea::-webkit-input-placeholder {
 
 .ighOYm {
     position: absolute;
-    top: 71%;
+    top: 72%;
     left: 30%;
     width: 16px;
     height: 16px;
@@ -750,11 +750,11 @@ input::-webkit-input-placeholder, textarea::-webkit-input-placeholder {
     background-color: #fff;
     border-radius: 15px;
     width: 330px;
-    position: fixed !important;
-
+    top: -10px;
 }
 
 .loading-mask {
-    background-color: #0b151c8f !important;
+    /*background-color: #0b151c8f !important;*/
+    background-color: #000 !important;
 }
 

@@ -3,7 +3,7 @@
 <html>
 
 <head>
-    <title>Registration for Ethereum Meetup</title>
+    <title>以太坊社区交流活动报名</title>
     <meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"/>
 
@@ -29,15 +29,16 @@
 
         <div class="OmiseCheckoutForm_header"><img src="images/meetup.png"
                                                    alt="" class="image">
-            <span class="title">Asia-Pacific Ethereum Community Meetup</span>
+            <!--<span class="title">亚太以太坊社区Meet up</span>-->
+            <p style="font-size: 20px;">亚太以太坊社区Meet up</p>
             <!--<p class="desc">Organized by LinkTime</p>-->
         </div>
-        <p class="desc" style="color: #0153ca;margin-bottom: 20px;text-align: center;">Visa &
+        <p class="desc" style="color: #0153ca;margin-bottom: 20px;text-align: center;">仅限 Visa &
             Mastercard
-            Only</p>
+        </p>
         <form id="omiseForm">
             <div class="OmiseCheckoutForm_formItem">
-                <label>Card number</label>
+                <label>卡号</label>
                 <div class="relative">
                     <input type="tel" placeholder="•••• •••• •••• ••••" value=""
                            name="cardNumber" class="" pattern="[0-9]*"
@@ -56,13 +57,13 @@
                 </div>
             </div>
             <div class="OmiseCheckoutForm_formItem">
-                <label>Name on card</label>
-                <input type="text" placeholder="Full name" value="" name="nameOnCard"
+                <label>姓名</label>
+                <input type="text" placeholder="全名" value="" name="nameOnCard"
                        class="" autocomplete="off">
             </div>
             <div class="OmiseCheckoutForm_formItemCol">
                 <div class="OmiseCheckoutForm_formItem">
-                    <label>Expiry date</label>
+                    <label>有效期</label>
                     <input type="tel" placeholder="MM" value="" name="expiryMonth"
                            class="exdate" autocomplete="off"
                            onkeyup="this.value=this.value.replace(/[^\d]/g,'') "
@@ -78,7 +79,7 @@
                 </div>
             </div>
             <div class="OmiseCheckoutForm_formItem">
-                <label>Security code <span style="font-size: 10px;color: #a1a7b3;">(The last three digits of the number in the authorized signature line on the back of the card)</span></label>
+                <label>安全码 <span style="font-size: 10px;color: #a1a7b3;">(信用卡背面签名栏上的最后三位数字)</span></label>
                 <div class="relative">
                     <input type="password" value="" name="securityCode"
                            placeholder="•••"
@@ -99,7 +100,7 @@
 
             <div class="OmiseCheckoutForm_formItem -submit">
                 <div class="sc-bxivhb kGUhKf">
-                    <button class="sc-htpNat FaWeu creatToken" font-size="18px">Pay
+                    <button class="sc-htpNat FaWeu creatToken" font-size="18px">付款
                         $<span class="ticketprice">35.00</span></button>
                 </div>
             </div>

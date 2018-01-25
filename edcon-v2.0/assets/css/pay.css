@@ -262,6 +262,7 @@ body {
 .OmiseCheckoutForm_formItem input[name=securityCode] {
     padding-right: 40px;
     border: 1px solid #dadfe6;
+    width: 100%;
 }
 
 .OmiseCheckoutForm_formItemCol {
@@ -475,7 +476,7 @@ body {
 
 .ighOYm {
     position: absolute;
-    top: 73%;
+    top: 74%;
     left: 30%;
     width: 16px;
     height: 16px;

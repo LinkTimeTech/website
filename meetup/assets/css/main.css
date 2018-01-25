@@ -2014,3 +2014,23 @@ body.is-article-visible #footer {
 body.is-loading #footer {
     opacity: 0;
 }
+
+/*speaker*/
+.speakerDiv {
+    display: inline-block;
+    margin: 0 0 10px 0;
+    height: 235px;
+    width: 185px;
+    float: left;
+}
+
+.speakerImg {
+    border-radius: 50%;
+    width: 135px;
+    display: block;
+    margin: 0 auto;
+}
+
+.speakerName {
+    text-align: center;
+}

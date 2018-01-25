@@ -43,23 +43,21 @@ export default {
       this.chart = echarts.init(this.$refs.myEchart);
       // 把配置和数据放这里
 
-//        this.$http.get('login', {
-//           username: username,
-//           password: password
-//         })
-//         .then((response) => {
-//           console.log('response:',response)
-//           if (response.data.status == 0) {
-// //   this.chart.setOption({
+       this.$http.get('charges/findAllCount')
+        .then((response) => {
+          console.log('response:',response)
+          console.log('response:',response.pp)
+          console.log('response:',response.zp)
+          console.log('response:',response.all)
 
-//       //   })
+//   this.chart.setOption({
+
+      //   })
 
 
-//           } else if (response.data.status == 1) {
 
-//           }
 
-//         })
+        })
 
 
       this.chart.setOption({

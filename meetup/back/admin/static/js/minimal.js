@@ -78,48 +78,49 @@ $(function () {
         var d = $(this).data("toggle");
         $(d).toggleClass("collapsed")
     });
-    $("#sidebar").niceScroll({
-        cursorcolor: "#000000",
-        zindex: 999999,
-        bouncescroll: true,
-        cursoropacitymax: 0.4,
-        cursorborder: "",
-        cursorborderradius: 0,
-        cursorwidth: "7px",
-        railalign: "left",
-        railoffset: {
-            top: 45,
-            left: 0
-        }
-    });
-    $("#content").niceScroll({
-        cursorcolor: "#000000",
-        zindex: 999999,
-        bouncescroll: true,
-        cursoropacitymax: 0.4,
-        cursorborder: "",
-        cursorborderradius: 7,
-        cursorwidth: "7px",
-        background: "rgba(0,0,0,.1)",
-        autohidemode: false,
-        railpadding: {
-            top: 0,
-            right: 2,
-            left: 2,
-            bottom: 0
-        }
-    });
-    $("#mmenu").on("opened.mm", function () {
-        $("#content").getNiceScroll().hide()
-    });
-    $("#mmenu").on("closed.mm", function () {
-        $("#content").getNiceScroll().show()
-    });
+  // $("#sidebar").niceScroll({
+  //     cursorcolor: "#000000",
+  //     zindex: 999999,
+  //     bouncescroll: true,
+  //     cursoropacitymax: 0.4,
+  //     cursorborder: "",
+  //     cursorborderradius: 0,
+  //     cursorwidth: "7px",
+  //     railalign: "left",
+  //     railoffset: {
+  //         top: 45,
+  //         left: 0
+  //     }
+  // });
+  // $("#content").niceScroll({
+  //     cursorcolor: "#000000",
+  //     zindex: 999999,
+  //     bouncescroll: true,
+  //     cursoropacitymax: 0.4,
+  //     cursorborder: "",
+  //     cursorborderradius: 7,
+  //     cursorwidth: "7px",
+  //     background: "rgba(0,0,0,.1)",
+  //     autohidemode: false,
+  //     railpadding: {
+  //         top: 0,
+  //         right: 2,
+  //         left: 2,
+  //         bottom: 0
+  //     }
+  // });
+  // $("#mmenu").on("opened.mm", function () {
+  //     $("#content").getNiceScroll().hide()
+  // });
+  // $("#mmenu").on("closed.mm", function () {
+  //     $("#content").getNiceScroll().show()
+  // });
     $("#navigation .dropdown.open").data("closable", false);
     $("#navigation .dropdown").on({
         "shown.bs.dropdown": function () {
             $(this).data("closable", false);
-            $("#sidebar").getNiceScroll().resize()
+          // $("#sidebar").getNiceScroll().resize()
+          $("#sidebar").resize()
         },
         click: function (d) {
             $(this).data("closable", true);
@@ -129,11 +130,13 @@ $(function () {
             if ($("#sidebar").hasClass("collapsed")) {
                 d.stopPropagation()
             }
-            $("#sidebar").getNiceScroll().resize()
+          // $("#sidebar").getNiceScroll().resize()
+          $("#sidebar").resize()
         },
         "hide.bs.dropdown": function () {
             return $(this).data("closable");
-            $("#sidebar").getNiceScroll().resize()
+          // $("#sidebar").getNiceScroll().resize()
+          $("#sidebar").resize()
         }
     });
     $(".sidebar-collapse a").on("click", function () {

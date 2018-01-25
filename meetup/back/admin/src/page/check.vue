@@ -74,7 +74,7 @@
                             </li>
                             <li v-if="page==1" v-on:click="$utils.NumPage(page, $event)" :class="{ 'active': page == curpage }"><a>{{page}}</a></li>
                             <li v-else v-on:click="$utils.NumPage(page, $event)" :class="{ 'active': page == curpage }"><a>{{page}}</a></li>
-                            <li class="next" id="nextpage" v-on:click="$utils.NextPage(tickets)" v-if="page==totalPage" :class="{ 'disabled': curpage == Math.ceil(tickets.length / pagesize) }"><a>下一页</a></li>
+                            <li class="next" id="nextpage" v-on:click="$utils.NextPage(tickets)" v-if="page==totalPage" :class="{ 'disabled': curpage == totalPage }"><a>下一页</a></li>
                           </template>
                         </ul>
                       </div>

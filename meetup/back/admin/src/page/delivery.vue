@@ -1,5 +1,10 @@
 <template>
   <div>
+    <!-- Preloader -->
+    <div class="mask" v-if="loading==1">
+      <div id="loader"></div>
+    </div>
+    <!--/Preloader -->
     <myHeader></myHeader>
     <!-- Page content -->
     <div id="content" class="col-md-12">
@@ -20,12 +25,12 @@
               <div class="tile-header transparent">
                 <h1><strong>赠票</strong> </h1>
                 <button type="button" class="btn btn-primary" @click="goAdd()">添加</button>
-                <div class="navbar tile color transparent pull-right">
+                <!-- <div class="navbar tile color transparent pull-right">
                   <div class="search" id="main-search">
                     <input type="" placeholder="Search..." v-model="keyword">
                     <a type="button" @click="Search"><i class="fa fa-search"></i></a>
                   </div>
-                </div>
+                </div> -->
               </div>
               <!-- /tile header -->
               <!-- tile body -->
@@ -34,7 +39,6 @@
                   <table class="table table-datatable table-custom" id="inlineEditDataTable">
                     <thead>
                       <tr>
-                        <th width="1%">No.</th>
                         <th width="1%">票号</th>
                         <th>姓名</th>
                         <th>国家</th>
@@ -42,37 +46,38 @@
                         <th>职位</th>
                         <th>邮箱</th>
                         <th>电话</th>
+                        <th>备注</th>
                         <th>邮件状态</th>
-                        <th>通过</th>
+                        <th>邮件</th>
                         <th>编辑</th>
                       </tr>
                     </thead>
                     <tbody>
-                      <template v-for="(row, index) in freeTicket">
+                      <template v-for="(row, index) in list">
                         <tr class="odd grade">
-                          <td>{{row.id}}</td>
-                          <td>{{row.ticket_no}}</td>
+                          <td>{{row.chargesId}}</td>
                           <td>{{row.name}}</td>
                           <td>{{row.country}}</td>
                           <td>{{row.company}}</td>
                           <td>{{row.position}}</td>
                           <td class="emailTextRow">{{row.email}}</td>
-                          <td>{{row.phone}}</td>
-                          <td v-if="row.send == '0'">待发</td>
-                          <td v-if="row.send == '1'">已发</td>
-                          <td v-if="row.send == '2'">失败</td>
+                          <td>{{row.telephone}}</td>
+                          <td>{{row.note}}</td>
+                          <td v-if="row.issendmail == '0'">待发</td>
+                          <td v-if="row.issendmail == '1'">已发</td>
+                          <td v-if="row.issendmail == '2'">失败</td>
                           <td>
-                            <button type="button" class="btn btn-info btn-xs" @click="PassFree(freeTicket,row,row.id)" v-if="row.send == '0'">发送
+                            <button type="button" class="btn btn-info btn-xs" @click="Pass(list,row,row.chargesId)" v-if="row.issendmail == '0'">发送
                             </button>
-                            <button type="button" class="btn btn-success btn-xs" v-if="row.send == '1' ">已发送
+                            <button type="button" class="btn btn-success btn-xs" v-if="row.issendmail == '1' ">已发送
                             </button>
                           </td>
                           <td>
-                            <a class="btn btn-primary btn-xs" @click="Edit(row)"><i class="fa fa-pencil"></i> Edit
+                            <a class="btn btn-primary btn-xs" @click="Edit(row)"><i class="fa fa-pencil"></i> 编辑
                                                     </a>
-                            <a class="btn btn-danger btn-xs" v-if="row.send == 0" @click="$utils.Delete(freeTicket,row,row.id,index)"><i
+                            <a class="btn btn-danger btn-xs" v-if="row.issendmail != 1" @click="Delete(list,row,row.chargesId,index)"><i
                                                             class="fa fa-trash-o"></i>
-                                                        Delete </a>
+                                                        删除 </a>
                           </td>
                         </tr>
                       </template>
@@ -86,12 +91,12 @@
                       <div class="dataTables_paginate paging_bootstrap paging_custombootstrap">
                         <ul class="pagination pagination-xs pagination-custom">
                           <template v-for="page in totalPage">
-                            <li class="prev" v-on:click="$utils.PrePage(freeTicket)" id="prepage" v-if="page==1" :class="{ 'disabled': curpage == 1 }">
+                            <li class="prev" v-on:click="PrePage(list)" id="prepage" v-if="page==1" :class="{ 'disabled': curpage == 1 }">
                               <a>上一页</a>
                             </li>
-                            <li v-if="page==1" v-on:click="$utils.NumPage(page, $event)" :class="{ 'active': page == curpage }"><a>{{page}}</a></li>
-                            <li v-else v-on:click="$utils.NumPage(page, $event)" :class="{ 'active': page == curpage }"><a>{{page}}</a></li>
-                            <li class="next" id="nextpage" v-on:click="$utils.NextPage(freeTicket)" v-if="page==totalPage" :class="{ 'disabled': curpage == Math.ceil(freeTicket.length / pagesize) }"><a>下一页</a></li>
+                            <li v-if="page==1" v-on:click="NumPage(page, $event)" :class="{ 'active': page == curpage }"><a>{{page}}</a></li>
+                            <li v-else v-on:click="NumPage(page, $event)" :class="{ 'active': page == curpage }"><a>{{page}}</a></li>
+                            <li class="next" id="nextpage" v-on:click="NextPage(list)" v-if="page==totalPage" :class="{ 'disabled': curpage == totalPage }"><a>下一页</a></li>
                           </template>
                         </ul>
                       </div>
@@ -110,7 +115,6 @@
       <!-- /content container -->
     </div>
     <!-- Page content end -->
-    <myFooter></myFooter>
     <div class="modal fade editIt tile color transparent-black" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
       <div class="modal-dialog" role="document">
         <div class="modal-content">
@@ -118,7 +122,25 @@
             <h2 class="modal-title" id="myModalLabel">编辑</h2>
           </div>
           <div class="modal-body">
-            <div class="row">
+            <div class="row" v-if="isAdd==1">
+              <div class="col-md-12">
+                <label>语言</label>
+              </div>
+              <div class="col-md-12">
+                <span class="col-sm-6">
+                  <label>
+                      <input type="radio" class="" checked="checked" name="lang" value="cn"
+                             v-model="rowtemplate.lang"> 中文
+                  </label>
+                  </span>
+                <span class="col-sm-6">
+                    <label>
+                        <input type="radio" class="" name="lang" value="en" v-model="rowtemplate.lang"> 英语
+                    </label>
+                </span>
+              </div>
+            </div>
+            <div class="row" v-if="isAdd==1">
               <div class="form-group col-sm-12">
                 <label for="name">姓名</label>
                 <input type="text" class="form-control" id="name" placeholder="" v-model="rowtemplate.name">
@@ -150,109 +172,191 @@
             </div>
             <div class="row">
               <div class="form-group col-sm-12">
-                <label for="phone">手机</label>
-                <input type="text" class="form-control" id="phone" placeholder="" v-model="rowtemplate.phone">
+                <label for="telephone">手机</label>
+                <input type="text" class="form-control" id="telephone" placeholder="" v-model="rowtemplate.telephone">
+              </div>
+            </div>
+            <div class="row">
+              <div class="form-group col-sm-12">
+                <label for="note">备注</label>
+                <textarea class="form-control" rows="5" placeholder='' id="note" v-model="rowtemplate.note"></textarea>
               </div>
             </div>
           </div>
           <div class="modal-footer">
-            <button type="button" class="btn btn-default" @click="$utils.closeEdit()">关闭</button>
-            <button type="button" class="btn btn-primary" @click="Add(freeTicket,0)" v-if="isAdd==1">添加
+            <button type="button" class="btn btn-default" @click="closeEdit()">关闭</button>
+            <button type="button" class="btn btn-primary" @click="Add(list)" v-if="isAdd==1">添加
             </button>
-            <button type="button" class="btn btn-primary" @click="Save(freeTicket)" v-else>保存
+            <button type="button" class="btn btn-primary" @click="Save(list)" v-else>保存
             </button>
           </div>
         </div>
       </div>
     </div>
+    <myFooter></myFooter>
   </div>
 </template>
 <script>
 import myHeader from '../components/header.vue'
 import myFooter from '../components/footer.vue'
-let saveInfo, email, name, country, position, phone, company, note
+
+let saveInfo, email, name, country, position, telephone, company, note, lang
+var Qs = require('qs');
 
 export default {
   components: { myHeader, myFooter },
   data() {
     return {
-      isAdd: 0,
+
       loading: 1, //一进入页面就显示loading
 
       //搜索
       keyword: '',
       isSearch: 0,
-      searchPage: 1,
+      searchPage: 0,
+
+      //数据
+      pagesize: 20,
+      curpage: 0, //初始化页码
+      totalPage: 1,
+
+
+      isAdd: 0, //初始化Add
 
       rowtemplate: {
-        id: '',
-        ticket_no: '',
+        chargesId: "",
         company: "",
         country: "",
         email: "",
         name: "",
-        phone: "",
+        telephone: "",
         position: "",
+        lang: "",
 
-        send: "0",
+        issendmail: "0",
       },
 
-      pagesize: 2,
-      curpage: 0, //初始化页码
-      totalPage: 1,
-
-      freeTicket: [{
-          id: '1',
-          ticket_no: '8888',
-          company: "link",
-          country: "china",
-          email: "1234567@qq.com",
-          name: "une",
-          phone: "123457",
-          position: "web",
-          send: "0"
-        },
-        {
-          id: '2',
-          ticket_no: '8890',
-          company: "link",
-          country: "china",
-          email: "1234567@qq.com",
-          name: "ne",
-          phone: "123457",
-          position: "web",
-          send: "0"
-        },
-        {
-          id: '3',
-          ticket_no: '8899',
-          company: "link",
-          country: "china",
-          email: "1234567@qq.com",
-          name: "June",
-          phone: "123457",
-          position: "web",
-          send: "0"
-        }
-      ]
+      list: []
     }
   },
   created() {
-    this.getData()
     this.curpage = 1
 
   },
   methods: {
-    getData() {
-
-
-    },
 
     goAdd: function(e) {
       $('.editIt').modal('show');
+      this.isAdd = 1
+    },
+
+    //添加赠票
+    Add: function(type, ticketType) {
+      var vm = this;
+      this.loading = 1;
+
+      $('.editIt').modal('hide');
+
+      email = this.rowtemplate.email;
+      name = this.rowtemplate.name;
+      country = this.rowtemplate.country;
+      position = this.rowtemplate.position;
+      telephone = this.rowtemplate.telephone;
+      company = this.rowtemplate.company;
+      note = this.rowtemplate.note;
+      lang = this.rowtemplate.lang;
+
+      this.$http.post('manager/giveTicket', Qs.stringify({
+          email: email,
+          name: name,
+          country: country,
+          company: company,
+          position: position,
+          telephone: telephone,
+          note: note,
+          lang: lang,
+          chargesRental: 0
+
+        }))
+        .then((response) => {
+          this.loading = 0;
+
+          this.rowtemplate.chargesId = response.data.chargesid;
+
+          type.push(this.rowtemplate);
+          // 还原模板
+          this.rowtemplate = {
+            chargesId: "",
+            company: "",
+            country: "",
+            email: "",
+            name: "",
+            telephone: "",
+            position: "",
+            lang: "",
+
+            issendmail: "0",
+          }
+
+        })
+        .catch(function(error) {
+          console.log(error);
+        });
+
 
     },
 
+    /*
+     * 表格
+     */
+    //上一页方法
+    PrePage: function(type) {
+
+      if (this.isSearch == 1) {
+        if (this.searchPage !== 1) {
+          this.searchPage = this.searchPage - 1
+        }
+      } else {
+        if (this.curpage !== 1) {
+          this.curpage = this.curpage - 1
+        }
+      }
+
+    },
+
+
+    //下一页方法
+    NextPage: function(type) {
+
+      if (this.isSearch == 1) {
+        if (this.searchPage !== this.totalPage) {
+          this.searchPage = this.searchPage + 1
+        }
+      } else {
+        if (this.curpage !== this.totalPage) {
+          this.curpage = this.curpage + 1
+        }
+      }
+
+
+    },
+
+
+    //点击页码的方法
+    NumPage: function(num, event) {
+
+
+      if (this.isSearch == 1) {
+        this.searchPage = num;
+      } else {
+        this.curpage = num;
+
+      }
+
+    },
+
+
+    //编辑
     Edit: function(info) {
 
       $('.editIt').modal('show');
@@ -264,95 +368,158 @@ export default {
 
     },
 
+  
+
+    //保存修改的信息
     Save: function(type) {
       this.loading = 1;
-
-      $('.editIt').modal('hide');
 
       email = this.rowtemplate.email;
       name = this.rowtemplate.name;
       country = this.rowtemplate.country;
       position = this.rowtemplate.position;
-      phone = this.rowtemplate.phone;
+      telephone = this.rowtemplate.telephone;
       company = this.rowtemplate.company;
       note = this.rowtemplate.note;
 
       //保存编辑的信息
-      axios.post('editTicket', {
-          id: saveInfo.id,
+      this.$http.post('manager/updateInfo', Qs.stringify({
+          chargesId: saveInfo.chargesId,
           email: email,
-          name: name,
           country: country,
           position: position,
-          phone: phone,
-          company: company
-        })
+          telephone: telephone,
+          company: company,
+          note: note
+        }))
         .then((response) => {
           this.loading = 0;
 
+          $('.editIt').modal('hide');
+          this.isAdd = 0
+
           //还原模板
           this.rowtemplate = {
-            id: '',
-            ticket_no: '',
+            chargesId: "",
             company: "",
             country: "",
             email: "",
             name: "",
-            phone: "",
+            telephone: "",
             position: "",
+            lang: "",
 
-            send: "0",
+            issendmail: "0",
           }
+
+        })
+        .catch(function(error) {
+          this.loading = 0;
+
+          console.log(error);
+        });
+
+    },
+
+    //关闭修改信息的窗口
+    closeEdit: function() {
+
+      $('.editIt').modal('hide');
+
+      // 还原模板
+      this.rowtemplate = {
+        chargesId: "",
+        company: "",
+        country: "",
+        email: "",
+        name: "",
+        telephone: "",
+        position: "",
+        lang: "",
+
+        issendmail: "0",
+      }
+
+    },
+
+
+    Pass: function(type, info, id) {
+
+      this.$http.post('charges/sendMailZP', Qs.stringify({
+          lang: info.lang,
+          chargesId: id
+        }))
+        .then((response) => {
+          // console.log(response.data.state);
+          info.issendmail = 1;
 
         })
         .catch(function(error) {
           console.log(error);
         });
 
-    },
-
-    PassFree: function(type, info, id) {
-      // console.log(info);
-
-      this.$api.post('topics', {
-        id: id,
-        // cancelToken: source.token
-      }, r => {
-
-        console.log(r)
-
-      })
-      info.send = 1;
-
 
     },
 
+    //搜索
     Search: function(e) {
-      this.isSearch = 1;
-      this.searchPage = 1;
+      this.isSearch = 1
 
       var keyword = this.keyword,
-        page = this.searchPage - 1;
+        page = this.searchPage,
+        ps = this.pagesize;
 
-      if (window.location.pathname == '/preview/admin/production/checkin.html') {
-        axios.post('searchCheckTicket', {
-            keyword: keyword,
-            page: page
-          })
-          .then((response) => {
-            var dataStr = response.data.data;
-            this.loading = 0;
-            this.checkInList = dataStr.ticket_list;
-            this.totalPage = dataStr.total_page;
-          })
-          .catch(function(error) {
-            console.log(error);
-          });
-      }
+      this.$http.post('charges/pageSpilt1', Qs.stringify({
+          select: keyword,
+          cp: page,
+          ps: ps
+
+        }))
+        .then((response) => {
+          console.log('SearchResponse', response)
+          this.loading = 0;
+          this.list = response.data.list
+          this.totalPage = response.data.allPage
+        })
+        .catch(function(error) {
+          console.log(error);
+        });
+
 
     },
 
+    /*
+     * 表格end
+     */
 
+
+    changePage: function() {
+      let page = this.curpage - 1,
+        ps = this.pagesize
+      this.$http.post('charges/pageSpiltZP', Qs.stringify({
+
+          cp: page,
+          ps: ps
+        }))
+        .then((response) => {
+
+          console.log('response', response)
+          this.list = response.data.list
+          this.totalPage = response.data.allPage
+          this.loading = 0;
+
+        })
+
+    },
+
+  },
+  watch: {
+    curpage: 'changePage', //监测当前页码的变化, 换页
+    searchPage: 'Search', //监测搜索的页码的变化, 换页
+
+    // loading: 'getRemind',//监测loading的变化
+    // needEditor: 'createAEditor',//监测当前页面是否是editemail，是就创建editor
+    // isCheckList: 'checkList'//
   }
 }
 

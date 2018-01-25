@@ -1,5 +1,5 @@
 // 配置API接口地址
-var root = 'https://edcon.io/tp/public/index.php/admin/edcon/';
+var root = 'https://api.baoming.in/omise/';
 // 引用axios
 var axios = require('axios');
 

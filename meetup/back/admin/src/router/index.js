@@ -10,6 +10,7 @@ import Schedule from '@/page/schedule'
 import Location from '@/page/location'
 import Email from '@/page/email'
 import Login from '@/page/login'
+import Payfail from '@/page/payfail'
 
 Vue.use(Router);
 
@@ -45,6 +46,9 @@ export default new Router({
         }, {
             path: '/login',
             component: Login
+      }, {
+        path: '/payfail',
+        component: Payfail
         }
     ]
 })

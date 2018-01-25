@@ -43,7 +43,7 @@ $(function () {
     $('.goback').click(function (event) {
 
         lang == 'cn' ? top.location = 'index.html' : top.location = 'index-en.html';
-
+        
     });
 
     /*
@@ -78,135 +78,150 @@ $(function () {
             security_code: $(" input[ name='securityCode' ] ").val()
         };
 
+        if (cardInformation.name == '' || cardInformation.number == '' || cardInformation.expiration_month == '' || cardInformation.expiration_year == '' || cardInformation.security_code == '') {
+            alert('请填写完整所需的银行卡信息');
+            $('.loading,.loading-mask').fadeOut();
 
-        $.ajax({
-            type: "post",
-            url: "https://api.baoming.in/omise/charges/pay",
-            data: {
-                para: para,
-                nameOnCard: cardInformation.name,
-                cardNumber: cardInformation.number,
-                expiryMonth: cardInformation.expiration_month,
-                expiryYear: cardInformation.expiration_year,
-                securityCode: cardInformation.security_code
+        } else {
+            $.ajax({
+                type: "post",
+                url: "https://api.baoming.in/omise/charges/pay",
+                data: {
+                    para: para,
+                    nameOnCard: cardInformation.name,
+                    cardNumber: cardInformation.number,
+                    expiryMonth: cardInformation.expiration_month,
+                    expiryYear: cardInformation.expiration_year,
+                    securityCode: cardInformation.security_code
 
-            },
-            timeout: 5000, //超时时间
-            dataType: 'json', //返回的数据格式：json/xml/html/script/jsonp/text
-            success: function (data) {
+                },
+                // timeout: 5000, //超时时间
+                dataType: 'json', //返回的数据格式：json/xml/html/script/jsonp/text
+                success: function (data) {
+                    // console.log(data)
 
-                var isPay = data.state;
+                    var isPay = data.state;
 
-                // 支付成功
-                if (isPay == 0) {
-                    $('.loading,.loading-mask').fadeOut();
+                    // 支付成功
+                    if (isPay == 0) {
+                        $('.loading,.loading-mask').fadeOut();
 
-                    if (lang == 'cn') {
-                        alert('购买成功。感谢您对亚太以太坊社区Meet up的支持。电子票已发到您的邮箱，请注意查收。');
-                        top.location = 'index.html';
-
-                    } else {
-                        alert('Congratulations! You have successfully paid for Asia-Pacific Ethereum Community Meetup, please check your email for E-ticket.');
-                        top.location = 'index-en.html';
-
-                    }
-
-
-                }
-
-                // 支付失败
-                else if (isPay == 1) {
-                    $('.loading,.loading-mask').fadeOut();
-
-                    // console.log(json.message)
-
-                    if (data.failMessage == 'failed fraud check') {
                         if (lang == 'cn') {
-                            alert('支付失败。请换张银行卡再进行支付操作。')
+                            alert('购买成功。感谢您对亚太以太坊社区Meet up的支持。电子票已发到您的邮箱，请注意查收。');
+                            top.location = 'index.html';
 
                         } else {
-                            alert('Payment failed because of too frequent use of the card. To complete the payment, please use another card.');
+                            alert('Congratulations! You have successfully paid for Asia-Pacific Ethereum Community Meetup, please check your email for E-ticket.');
+                            top.location = 'index-en.html';
 
                         }
 
-                    } else if (data.failMessage == 'the security code is invalid') {
+                    }
 
-                        if (lang == 'cn') {
-                            alert('支付失败。请输入正确的安全码。如若不确定安全码的位置，请致电银行卡开户行进行咨询。')
+                    // 输入信息错误
+                    else if (isPay == 1) {
+                        $('.loading,.loading-mask').fadeOut();
 
-                        } else {
-                            alert('Payment failed. Please make sure to enter the correct security code, if failed, please confirm the security code with your card issuing company.');
+                        if (data.failureMessage == 'failed fraud check') {
+                            if (lang == 'cn') {
+                                alert('支付失败。请换张银行卡再进行支付操作。')
+
+                            } else {
+                                alert('Payment failed because of too frequent use of the card. To complete the payment, please use another card.');
+
+                            }
 
                         }
 
-                    } else if (data.failMessage == 'payment rejected') {
+                        else if (data.failureMessage == 'the security code is invalid') {
 
+                            if (lang == 'cn') {
+                                alert('支付失败。请输入正确的安全码。如若不确定安全码的位置，请致电银行卡开户行进行咨询。')
+
+                            } else {
+                                alert('Payment failed. Please make sure to enter the correct security code, if failed, please confirm the security code with your card issuing company.');
+
+                            }
+
+                        }
+
+                        else if (data.failureMessage == 'payment rejected') {
+
+                            if (lang == 'cn') {
+                                alert('支付失败。银行拒绝此交易。请联系银行卡开户行询问具体解决方法。')
+
+                            } else {
+                                alert('Payment failed. Please contact your card issuing company and describe the problem (when and where and what did you buy). The card issuer will solve this problem according to your description, and please try again several days later.');
+
+                            }
+                        }
+
+                        else {
+                            $('.loading,.loading-mask').fadeOut();
+                            if (lang == 'cn') {
+                                alert('支付失败。请输入正确的银行卡信息。');
+                                top.location = 'index.html';
+
+                            } else {
+                                alert('Payment failed. Please check your internet and try again later!');
+                                top.location = 'index-en.html';
+
+                            }
+                        }
+
+                    }
+
+                    //过期或重复提交
+                    else if (isPay == 3) {
+                        $('.loading,.loading-mask').fadeOut();
                         if (lang == 'cn') {
-                            alert('支付失败。银行拒绝此交易。请联系银行卡开户行询问具体解决方法。')
+                            alert('支付失败，请重新提交交易信息');
+                            top.location = 'index.html';
 
                         } else {
-                            alert('Payment failed. Please contact your card issuing company and describe the problem (when and where and what did you buy). The card issuer will solve this problem according to your description, and please try again several days later.');
+                            alert('Payment failed. Please try again later!');
+                            top.location = 'index-en.html';
 
                         }
                     }
-                    if (lang == 'cn') {
-                        // top.location = 'index.html';
 
-                    } else {
-                        // top.location = 'index-en.html';
+                    //失败
+                    else {
+                        $('.loading,.loading-mask').fadeOut();
+                        if (lang == 'cn') {
+                            alert('支付失败。请使用VISA或Mastercard进行支付，并确认输入正确的银行卡信息。');
+                            top.location = 'index.html';
+
+                        } else {
+                            alert('Payment failed. Please Try again later!');
+                            top.location = 'index-en.html';
+
+                        }
+
 
                     }
 
+                },
+                error: function (xhr, textStatus) {
+                    // console.log(xhr)
+                    // console.log(textStatus)
 
-                }
-
-                else if (isPay == 3) {
                     $('.loading,.loading-mask').fadeOut();
                     if (lang == 'cn') {
-                        alert('支付失败，请重新提交交易信息');
+                        alert('网络错误，请检查您的网络，稍后再试。');
                         top.location = 'index.html';
 
                     } else {
-                        alert('Failed! Please try again later!');
-                        top.location = 'index-en.html';
 
-                    }
-                }
-                //失败
-                else {
-                    $('.loading,.loading-mask').fadeOut();
-                    if (lang == 'cn') {
-                        alert('支付失败。请输入正确的银行卡信息。');
-                        top.location = 'index.html';
-
-                    } else {
                         alert('Failed! Please check your internet and try again later!');
                         top.location = 'index-en.html';
 
                     }
 
-
                 }
+            })
 
-            },
-            error: function (xhr, textStatus) {
-                // console.log(xhr)
-                // console.log(textStatus)
-
-                $('.loading,.loading-mask').fadeOut();
-                if (lang == 'cn') {
-                    alert('网络错误，请检查您的网络，稍后再试。');
-                    top.location = 'index.html';
-
-                } else {
-
-                    alert('Failed! Please check your internet and try again later!');
-                    top.location = 'index-en.html';
-
-                }
-
-            }
-        })
+        }
 
 
     })

@@ -40,23 +40,45 @@ import '../static/css/font-awesome.min.css'
 // import '../static/css/jquery.mmenu.all.css'
 // import '../static/js/jquery.mmenu.min.js'
 
-// import 'nicescroll'
-import '../static/js/jquery.nicescroll.min.js'
-
+//axios
 import axios from 'axios'
-
 Vue.prototype.$http = axios;
-Vue.prototype.$http.defaults.baseURL = 'https://edcon.io/tp/public/index.php/admin/edcon/';
 
-//vue-dragging 拖拽表格
-// import VueDND from 'awe-dnd'
-// Vue.use(VueDND)
+//QS
+import Qs from 'qs'
 
 
 /* eslint-disable no-new */
 new Vue({
-    el: '#app',
-    router,
-    template: '<App/>',
-    components: {App}
+  el: '#app',
+  router,
+  template: '<App/>',
+  components: {App}
 });
+
+//测试环境：
+Vue.prototype.$http.defaults.baseURL = 'http://192.168.50.119:8080/omise/';
+
+
+// 正式环境：
+// Vue.prototype.$http.defaults.baseURL = 'https://api.baoming.in/omise/';
+// Vue.prototype.$http.defaults.withCredentials = true   //设置cookies
+
+// http response 服务器响应拦截器，这里拦截401错误，并重新跳入登页重新获取token
+// axios.interceptors.response.use(
+//   response => {
+//     return response;
+//   },
+//   error => {
+//     if (error.response) {
+//       switch (error.response.status) {
+//         case 401:
+//           // 这里写清除token的代码
+//           router.replace({
+//             path: '/login',
+//             query: { redirect: router.currentRoute.fullPath } //登录成功后跳入浏览的当前页面
+//           })
+//       }
+//     }
+//     return Promise.reject(error.response.data)
+//   });

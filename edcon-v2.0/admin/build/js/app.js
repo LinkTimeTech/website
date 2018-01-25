@@ -1436,6 +1436,23 @@ var vue = new Vue({
         },
 
 
+        RejectCommunity: function (type, info, id) {
+// console.log(info)
+            info.pass = 2;
+
+            axios.post('conmmunityReject', {
+                id: id,
+            }).then((response) => {
+                console.log(response);
+
+            })
+                .catch(function (error) {
+                    console.log(error);
+                });
+
+        },
+
+
         changePage: function () {
 
             var page = this.curpage - 1;
