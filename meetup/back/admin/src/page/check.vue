@@ -29,13 +29,12 @@
               <!-- /tile header -->
               <!-- tile body -->
               <div class="tile-body color transparent-white rounded-corners">
-                总人数：{{totalTicketsNum}}
+                总人数：{{totalNum}}
                 <br> 签到数：{{totalCheckNum}}
                 <div class="table-responsive">
                   <table class="table table-datatable table-custom" id="inlineEditDataTable">
                     <thead>
                       <tr>
-                        <th width="1%">No.</th>
                         <th width="1%">票号</th>
                         <th>姓名</th>
                         <th>公司</th>
@@ -46,17 +45,16 @@
                       </tr>
                     </thead>
                     <tbody>
-                      <template v-for="(row, index) in tickets">
+                      <template v-for="(row, index) in list">
                         <tr class="odd grade">
-                          <td>{{row.id}}</td>
-                          <td>{{row.ticket_no}}</td>
+                          <td>{{row.chargesId}}</td>
                           <td>{{row.name}}</td>
                           <td>{{row.company}}</td>
                           <td class="emailTextRow">{{row.email}}</td>
-                          <td>{{row.phone}}</td>
-                          <td>{{row.time}}</td>
-                          <td v-if="row.checkin == '0'">成功</td>
-                          <td v-if="row.checkin == '1'">失败</td>
+                          <td>{{row.telephone}}</td>
+                          <td>{{row.signTime}}</td>
+                          <td v-if="row.chargesState == '1'">成功</td>
+                          <td v-if="row.chargesState == '2'">失败</td>
                         </tr>
                       </template>
                     </tbody>
@@ -69,12 +67,12 @@
                       <div class="dataTables_paginate paging_bootstrap paging_custombootstrap">
                         <ul class="pagination pagination-xs pagination-custom">
                           <template v-for="page in totalPage">
-                            <li class="prev" v-on:click="$utils.PrePage(tickets)" id="prepage" v-if="page==1" :class="{ 'disabled': curpage == 1 }">
+                            <li class="prev" v-on:click="PrePage(list)" id="prepage" v-if="page==1" :class="{ 'disabled': curpage == 1 }">
                               <a>上一页</a>
                             </li>
-                            <li v-if="page==1" v-on:click="$utils.NumPage(page, $event)" :class="{ 'active': page == curpage }"><a>{{page}}</a></li>
-                            <li v-else v-on:click="$utils.NumPage(page, $event)" :class="{ 'active': page == curpage }"><a>{{page}}</a></li>
-                            <li class="next" id="nextpage" v-on:click="$utils.NextPage(tickets)" v-if="page==totalPage" :class="{ 'disabled': curpage == totalPage }"><a>下一页</a></li>
+                            <li v-if="page==1" v-on:click="NumPage(page, $event)" :class="{ 'active': page == curpage }"><a>{{page}}</a></li>
+                            <li v-else v-on:click="NumPage(page, $event)" :class="{ 'active': page == curpage }"><a>{{page}}</a></li>
+                            <li class="next" id="nextpage" v-on:click="NextPage(list)" v-if="page==totalPage" :class="{ 'disabled': curpage == totalPage }"><a>下一页</a></li>
                           </template>
                         </ul>
                       </div>
@@ -99,99 +97,153 @@
 <script>
 import myHeader from '../components/header.vue'
 import myFooter from '../components/footer.vue'
-let saveInfo, email, name, country, position, phone, company, note
+
+let saveInfo, email, name, country, position, telephone, company, note
+var Qs = require('qs');
 
 export default {
   components: { myHeader, myFooter },
   data() {
     return {
 
-      totalTicketsNum: 100,
-      totalCheckNum: 10,
-
       loading: 1, //一进入页面就显示loading
 
       //搜索
       keyword: '',
       isSearch: 0,
-      searchPage: 1,
+      searchPage: 0,
 
-      pagesize: 2,
+      pagesize: 20,
+
+      //签到列表数据
       curpage: 0, //初始化页码
       totalPage: 1,
+      list: [],
+      totalNum: 0,
+      totalCheckNum: 0,
 
-      tickets: [{
-          id: '1',
-          ticket_no: '8888',
-          company: "link",
-          email: "1234567@qq.com",
-          name: "JJune",
-          phone: "123457",
-          time: '2018-01-01',
-          checkin: "0"
-        },
-        {
-          id: '2',
-          ticket_no: '8888',
-          company: "link",
-          email: "1234567@qq.com",
-          name: "JJne",
-          phone: "123457",
-          time: '2018-01-01',
-
-          checkin: "0"
-        },
-        {
-          id: '3',
-          ticket_no: '8888',
-          company: "link",
-          email: "1234567@qq.com",
-          name: "JJnnne",
-          phone: "123457",
-          time: '2018-01-01',
-
-          checkin: "0"
-        }
-      ]
     }
   },
   created() {
-    this.getData()
-    this.curpage = 1
+    this.curpage = 1;
+    this.getNum();
 
   },
   methods: {
-    getData() {
 
+    getNum() {
 
+      this.$http.get('manager/accountQD')
+        .then((response) => {
+          this.totalNum = response.data.allCount
+          this.totalCheckNum = response.data.countQD
+        })
+        .catch(function(error) {
+          console.log(error);
+        });
     },
+    /*
+     * 表格
+     */
+    //上一页方法
+    PrePage: function(type) {
 
-    Search: function(e) {
-      this.isSearch = 1;
-      this.searchPage = 1;
+      if (this.isSearch == 1) {
 
-      var keyword = this.keyword,
-        page = this.searchPage - 1;
+        this.searchPage !== 1 ? this.searchPage = this.searchPage - 1 : ''
 
-      if (window.location.pathname == '/preview/admin/production/checkin.html') {
-        axios.post('searchCheckTicket', {
-            keyword: keyword,
-            page: page
-          })
-          .then((response) => {
-            var dataStr = response.data.data;
-            this.loading = 0;
-            this.checkInList = dataStr.ticket_list;
-            this.totalPage = dataStr.total_page;
-          })
-          .catch(function(error) {
-            console.log(error);
-          });
+      } else {
+
+        this.curpage !== 1 ? this.curpage = this.curpage - 1 : ''
+
       }
 
     },
 
 
+    //下一页方法
+    NextPage: function(type) {
+
+      if (this.isSearch == 1) {
+
+        this.searchPage !== this.totalPage ? this.searchPage = this.searchPage + 1 : ''
+
+      } else {
+
+        this.curpage !== this.totalPage ? this.curpage = this.curpage + 1 : ''
+
+      }
+
+    },
+
+
+    //点击页码的方法
+    NumPage: function(num, event) {
+
+      if (this.isSearch == 1) {
+        this.searchPage = num
+
+      } else {
+        this.curpage = num
+
+      }
+
+    },
+
+    //搜索
+    Search: function(e) {
+      this.isSearch = 1
+
+      var keyword = this.keyword,
+        page = this.searchPage,
+        ps = this.pagesize;
+
+      this.$http.post('manager/pageSpiltQD', Qs.stringify({
+          select: keyword,
+          cp: page,
+          ps: ps
+
+        }))
+        .then((response) => {
+          console.log('SearchResponse', response)
+          this.loading = 0;
+          this.list = response.data.list
+          this.totalPage = response.data.allPage
+        })
+        .catch(function(error) {
+          console.log(error);
+        });
+
+    },
+
+    /*
+     * 表格end
+     */
+
+
+    changePage: function() {
+      let page = this.curpage - 1,
+        ps = this.pagesize
+      this.$http.post('manager/pageSpiltQD', Qs.stringify({
+          cp: page,
+          ps: ps
+        }))
+        .then((response) => {
+          this.loading = 0;
+          this.list = response.data.list
+          this.totalPage = response.data.allPage
+
+        })
+
+    },
+
+
+  },
+  watch: {
+    curpage: 'changePage', //监测付费票表页码的变化, 换页
+    searchPage: 'Search', //监测搜索的页码的变化, 换页
+
+    // loading: 'getRemind',//监测loading的变化
   }
 }
 

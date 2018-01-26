@@ -1404,6 +1404,22 @@ var vue = new Vue({
 
         },
 
+
+        PassPayed: function (type, info, id) {
+            info.payed = 1;
+
+            axios.post('payFailToTicket', {
+                id: id,
+            }).then((response) => {
+                console.log(response);
+
+            })
+                .catch(function (error) {
+                    console.log(error);
+                });
+        },
+
+
         //不通过审核
         Reject: function (type, info, id) {
             // console.log(info)
@@ -1452,6 +1468,22 @@ var vue = new Vue({
 
         },
 
+
+        RejectMedia: function (type, info, id) {
+// console.log(info)
+            info.pass = 2;
+
+            axios.post('mediaReject', {
+                id: id,
+            }).then((response) => {
+                console.log(response);
+
+            })
+                .catch(function (error) {
+                    console.log(error);
+                });
+
+        },
 
         changePage: function () {
 

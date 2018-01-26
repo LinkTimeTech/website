@@ -143,8 +143,8 @@ $(function () {
                 }
 
                 /*
-                    图片上传
-                */
+                 图片上传
+                 */
                 var fm = new FormData();
                 fm.append('image', this.files[0]);
                 var xhr = new XMLHttpRequest();
@@ -222,9 +222,9 @@ $(function () {
         $('.loading,.loading-mask').fadeIn(100);
 
         /*
-        NOTE: Using `data-name` to prevent sending credit card information fields to the backend server via HTTP Post
-        (according to the security best practice https://www.omise.co/security-best-practices#never-send-card-data-through-your-servers).
-        */
+         NOTE: Using `data-name` to prevent sending credit card information fields to the backend server via HTTP Post
+         (according to the security best practice https://www.omise.co/security-best-practices#never-send-card-data-through-your-servers).
+         */
         var cardInformation = {
             name: $(" input[ name='nameOnCard' ] ").val(),
             number: $(" input[ name='cardNumber' ] ").val(),
@@ -241,8 +241,8 @@ $(function () {
                 // console.log(response);
 
                 /*
-                   提交买票者信息
-                */
+                 提交买票者信息
+                 */
                 var purchaser = new FormData($("#checkout-form").get(0));
                 purchaser.append('token', response.id);
 
@@ -279,15 +279,14 @@ $(function () {
 
                         // console.log(json.message)
 
-                        if (json.message == 'failed fraud check') {
-                            $('.payfailText').text('Payment failed because of too frequent use of the card. To complete the payment, please use another card.');
-
+                        if (json.message == 'insufficient funds in the account or the card has reached the credit limit') {
+                            $('.payfailText').text('Payment failed. You have insufficient funds in your account.');
                         } else if (json.message == 'the security code is invalid') {
                             $('.payfailText').text('Payment failed. Please make sure to enter the correct security code, if failed, please confirm the security code with your card issuing company.');
-                        } else if (json.message == 'payment rejected') {
-                            $('.payfailText').text('Payment failed. Please contact your card issuing company and describe the problem (when and where and what did you buy). The card issuer will solve this problem according to your description, and please try again several days later.');
-
+                        } else {
+                            $('.payfailText').text('Payment failed. Please check your email for detailed cause and solution.');
                         }
+
                         $('#payfail').modal('show');
 
                         document.getElementById("checkout-form").reset()

@@ -43,7 +43,7 @@ $(function () {
     $('.goback').click(function (event) {
 
         lang == 'cn' ? top.location = 'index.html' : top.location = 'index-en.html';
-        
+
     });
 
     /*
@@ -61,6 +61,9 @@ $(function () {
     });
 
 
+//     Omise.setPublicKey("pkey_test_56bod6t9yl5li6whpfa"); //linktime
+    Omise.setPublicKey("pkey_5af2oawcv1t31tqg8xg"); //linktime
+
     $('.creatToken').click(function (event) {
         event.preventDefault();
 
@@ -77,149 +80,149 @@ $(function () {
             expiration_year: $(" input[ name='expiryYear' ] ").val(),
             security_code: $(" input[ name='securityCode' ] ").val()
         };
-
+        var tokenId;
+        ;
+        ;
         if (cardInformation.name == '' || cardInformation.number == '' || cardInformation.expiration_month == '' || cardInformation.expiration_year == '' || cardInformation.security_code == '') {
             alert('请填写完整所需的银行卡信息');
             $('.loading,.loading-mask').fadeOut();
 
         } else {
-            $.ajax({
-                type: "post",
-                url: "https://api.baoming.in/omise/charges/pay",
-                data: {
-                    para: para,
-                    nameOnCard: cardInformation.name,
-                    cardNumber: cardInformation.number,
-                    expiryMonth: cardInformation.expiration_month,
-                    expiryYear: cardInformation.expiration_year,
-                    securityCode: cardInformation.security_code
 
-                },
-                // timeout: 5000, //超时时间
-                dataType: 'json', //返回的数据格式：json/xml/html/script/jsonp/text
-                success: function (data) {
-                    // console.log(data)
+            Omise.createToken('card', cardInformation, function (statusCode, response) {
+                if (statusCode === 200) {
+                    tokenId = response.id;
 
-                    var isPay = data.state;
+                    $.ajax({
+                        type: "post",
+                        url: "https://api.baoming.in/omise/charges/pay",
+                        data: {
+                            para: para,
+                            tokenId: tokenId
 
-                    // 支付成功
-                    if (isPay == 0) {
-                        $('.loading,.loading-mask').fadeOut();
+                        },
+                        // timeout: 5000, //超时时间
+                        dataType: 'json', //返回的数据格式：json/xml/html/script/jsonp/text
+                        success: function (data) {
+                            // console.log(data)
 
-                        if (lang == 'cn') {
-                            alert('购买成功。感谢您对亚太以太坊社区Meet up的支持。电子票已发到您的邮箱，请注意查收。');
-                            top.location = 'index.html';
+                            var isPay = data.state;
 
-                        } else {
-                            alert('Congratulations! You have successfully paid for Asia-Pacific Ethereum Community Meetup, please check your email for E-ticket.');
-                            top.location = 'index-en.html';
+                            // 支付成功
+                            if (isPay == 0) {
+                                $('.loading,.loading-mask').fadeOut();
 
-                        }
+                                if (lang == 'cn') {
+                                    alert('购买成功。感谢您对亚太以太坊社区Meet up的支持。电子票已发到您的邮箱，请注意查收。');
+                                    top.location = 'index.html';
 
-                    }
+                                } else {
+                                    alert('Congratulations! You have successfully paid for Asia-Pacific Ethereum Community Meetup, please check your email for E-ticket.');
+                                    top.location = 'index-en.html';
 
-                    // 输入信息错误
-                    else if (isPay == 1) {
-                        $('.loading,.loading-mask').fadeOut();
-
-                        if (data.failureMessage == 'failed fraud check') {
-                            if (lang == 'cn') {
-                                alert('支付失败。请换张银行卡再进行支付操作。')
-
-                            } else {
-                                alert('Payment failed because of too frequent use of the card. To complete the payment, please use another card.');
+                                }
 
                             }
 
-                        }
+                            // 输入信息错误
+                            else if (isPay == 1) {
+                                $('.loading,.loading-mask').fadeOut();
 
-                        else if (data.failureMessage == 'the security code is invalid') {
+                                if (data.failureMessage == 'failed fraud check') {
+                                    if (lang == 'cn') {
+                                        alert('支付失败。请联系管理员，微信号：maitreya0815。')
 
-                            if (lang == 'cn') {
-                                alert('支付失败。请输入正确的安全码。如若不确定安全码的位置，请致电银行卡开户行进行咨询。')
+                                    } else {
+                                        alert('Payment failed, please contact the manager, the wechat ID is: maitreya0815');
 
-                            } else {
-                                alert('Payment failed. Please make sure to enter the correct security code, if failed, please confirm the security code with your card issuing company.');
+                                    }
+
+                                } else if (data.failureMessage == 'the security code is invalid') {
+
+                                    if (lang == 'cn') {
+                                        alert('支付失败。请输入正确的安全码。若有问题，请联系管理员，微信号：maitreya0815。')
+
+                                    } else {
+                                        alert('Payment failed, please contact the manager, the wechat ID is: maitreya0815');
+
+                                    }
+
+                                } else if (data.failureMessage == 'payment rejected') {
+
+                                    if (lang == 'cn') {
+                                        alert('支付失败。银行拒绝此交易。请联系银行卡开户行询问具体解决方法。若还有问题，请联系管理员，微信号：maitreya0815。')
+
+                                    } else {
+                                        alert('Payment failed, please contact the manager, the wechat ID is: maitreya0815');
+
+                                    }
+                                } else {
+                                    $('.loading,.loading-mask').fadeOut();
+                                    if (lang == 'cn') {
+                                        alert('支付失败。请联系管理员，微信号：maitreya0815。');
+                                        top.location = 'index.html';
+
+                                    } else {
+                                        alert('Payment failed, please contact the manager, the wechat ID is: maitreya0815');
+                                        top.location = 'index-en.html';
+
+                                    }
+                                }
 
                             }
 
-                        }
+                            //过期或重复提交
+                            else if (isPay == 3) {
+                                $('.loading,.loading-mask').fadeOut();
+                                if (lang == 'cn') {
+                                    alert('支付失败，请重新提交交易信息');
+                                    top.location = 'index.html';
 
-                        else if (data.failureMessage == 'payment rejected') {
+                                } else {
+                                    alert('Payment failed. Please try again later!');
+                                    top.location = 'index-en.html';
 
-                            if (lang == 'cn') {
-                                alert('支付失败。银行拒绝此交易。请联系银行卡开户行询问具体解决方法。')
+                                }
+                            }
 
-                            } else {
-                                alert('Payment failed. Please contact your card issuing company and describe the problem (when and where and what did you buy). The card issuer will solve this problem according to your description, and please try again several days later.');
+                            //失败
+                            else {
+                                $('.loading,.loading-mask').fadeOut();
+                                if (lang == 'cn') {
+                                    alert('支付失败。请联系管理员，微信号：maitreya0815。');
+                                    top.location = 'index.html';
+
+                                } else {
+                                    alert('Payment failed, please contact the manager, the wechat ID is: maitreya0815');
+                                    top.location = 'index-en.html';
+
+                                }
+
 
                             }
-                        }
 
-                        else {
+                        },
+                        error: function (xhr, textStatus) {
+                            // console.log(xhr)
+                            // console.log(textStatus)
+
                             $('.loading,.loading-mask').fadeOut();
                             if (lang == 'cn') {
-                                alert('支付失败。请输入正确的银行卡信息。');
+                                alert('网络错误，请检查您的网络，稍后再试。');
                                 top.location = 'index.html';
 
                             } else {
-                                alert('Payment failed. Please check your internet and try again later!');
+
+                                alert('Failed! Please check your internet and try again later!');
                                 top.location = 'index-en.html';
 
                             }
-                        }
-
-                    }
-
-                    //过期或重复提交
-                    else if (isPay == 3) {
-                        $('.loading,.loading-mask').fadeOut();
-                        if (lang == 'cn') {
-                            alert('支付失败，请重新提交交易信息');
-                            top.location = 'index.html';
-
-                        } else {
-                            alert('Payment failed. Please try again later!');
-                            top.location = 'index-en.html';
 
                         }
-                    }
-
-                    //失败
-                    else {
-                        $('.loading,.loading-mask').fadeOut();
-                        if (lang == 'cn') {
-                            alert('支付失败。请使用VISA或Mastercard进行支付，并确认输入正确的银行卡信息。');
-                            top.location = 'index.html';
-
-                        } else {
-                            alert('Payment failed. Please Try again later!');
-                            top.location = 'index-en.html';
-
-                        }
-
-
-                    }
-
-                },
-                error: function (xhr, textStatus) {
-                    // console.log(xhr)
-                    // console.log(textStatus)
-
-                    $('.loading,.loading-mask').fadeOut();
-                    if (lang == 'cn') {
-                        alert('网络错误，请检查您的网络，稍后再试。');
-                        top.location = 'index.html';
-
-                    } else {
-
-                        alert('Failed! Please check your internet and try again later!');
-                        top.location = 'index-en.html';
-
-                    }
-
+                    })
                 }
             })
+
 
         }
 

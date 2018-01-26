@@ -197,6 +197,7 @@
                                         <th>Reason</th>
                                         <th>次数</th>
                                         <th>Time</th>
+                                        <th>处理</th>
                                     </tr>
                                     </thead>
                                     <tbody>
@@ -217,6 +218,16 @@
                                             <td>{{row.fail_count}}</td>
                                             <td>{{row.time}}</td>
 
+                                            <td>
+                                                <button type="button" class="btn btn-info btn-xs"
+                                                        @click="PassPayed(payFailList,row,row.id)"
+                                                        v-if="row.payed == 0">Payed
+                                                </button>
+
+                                                <button type="button" class="btn btn-success btn-xs"
+                                                        v-if="row.payed == 1 ">solved
+                                                </button>
+                                            </td>
                                         </tr>
                                     </template>
 

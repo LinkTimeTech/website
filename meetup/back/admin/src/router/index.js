@@ -15,40 +15,38 @@ import Payfail from '@/page/payfail'
 Vue.use(Router);
 
 export default new Router({
-    routes: [
-        {
-            path: '/',
-            component: Index
-        }, {
-            path: '/content/:id',
-            component: Content
-        }, {
-            path: '/ticket',
-            component: Ticket
-        }, {
-            path: '/delivery',
-            component: Delivery
-        }, {
-            path: '/check',
-            component: Check
-        }, {
-            path: '/about',
-            component: About
-        }, {
-            path: '/schedule',
-            component: Schedule
-        }, {
-            path: '/location',
-            component: Location
-        }, {
-            path: '/email',
-            component: Email
-        }, {
-            path: '/login',
-            component: Login
-      }, {
-        path: '/payfail',
-        component: Payfail
-        }
-    ]
+  routes: [{
+    path: '/',
+    component: Index
+  }, {
+    path: '/content/:id',
+    component: Content
+  }, {
+    path: '/ticket',
+    component: Ticket
+  }, {
+    path: '/delivery',
+    component: Delivery
+  }, {
+    path: '/check',
+    component: Check
+  }, {
+    path: '/about',
+    component: About
+  }, {
+    path: '/schedule',
+    component: Schedule
+  }, {
+    path: '/location',
+    component: Location
+  }, {
+    path: '/email',
+    component: Email
+  }, {
+    path: '/login',
+    component: Login
+  }, {
+    path: '/payfail',
+    component: Payfail
+  }]
 })

@@ -43,22 +43,10 @@
 import myHeader from '../components/header.vue'
 import myFooter from '../components/footer.vue'
 import Echart from '../components/indexChart.vue'
+
 export default {
   components: { myHeader, myFooter, Echart },
-  data() {
-    return {
-      list: []
-    }
-  },
-  created() {
-    this.getData()
-  },
-  methods: {
-    getData() {
 
-
-    }
-  }
 }
 
 </script>

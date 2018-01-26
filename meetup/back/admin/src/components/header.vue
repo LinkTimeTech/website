@@ -68,19 +68,19 @@
                       <router-link :to="'delivery'"><i class="fa fa-caret-right"></i> 免费</router-link>
                     </li> -->
                     <li>
-                      <router-link :to="'payfail'"><i class="fa fa-caret-right"></i> 失败</router-link>
+                      <router-link :to="'payfail'" @click="getPayFailNum"><i class="fa fa-caret-right"></i> 失败<span class="badge badge-red" v-if="payFailNum>0">{{payFailNum}}</span></router-link>
                     </li>
                   </ul>
                 </li>
-                <li>
+                <!--  <li>
                   <router-link :to="'check'"><i class="fa fa-th"></i> 签到</router-link>
-                </li>
-                <li class="dropdown">
+                </li> -->
+                <!--   <li class="dropdown">
                   <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                       <i class="fa fa-list"></i> 编辑 <b class="fa fa-plus dropdown-plus"></b>
                     </a>
                   <ul class="dropdown-menu">
-                    <!-- <li>
+                    <li>
                       <a href="#">
                           <i class="fa fa-pencil-square-o"></i> 关于
                         </a>
@@ -89,7 +89,7 @@
                       <a href="#">
                           <i class="fa fa-pencil-square-o"></i> 时间
                         </a>
-                    </li> -->
+                    </li>
                     <li>
                       <router-link :to="'schedule'"><i class="fa fa-pencil-square-o"></i> 行程</router-link>
                     </li>
@@ -97,7 +97,7 @@
                       <router-link :to="'email'"><i class="fa fa-pencil-square-o"></i> 邮件</router-link>
                     </li>
                   </ul>
-                </li>
+                </li> -->
               </ul>
             </li>
           </ul>
@@ -137,15 +137,18 @@
   </div>
 </template>
 <script>
+var Qs = require('qs');
+
 export default {
   data() {
     return {
       oldPassword: '',
-      newPassword: ''
+      newPassword: '',
+      payFailNum: 0
     }
   },
   created() {
-
+    this.getPayFailNum();
   },
   mounted() {
 
@@ -155,6 +158,7 @@ export default {
 
       this.$http.post('manager/logout', {})
         .then((response) => {
+
           response.data.state == 0 ? this.$router.push({ path: '/login' }) : alert('退出失败，请重试');
         })
         .catch(function(error) {
@@ -173,8 +177,6 @@ export default {
         }))
         .then((response) => {
 
-          console.log(response);
-
           if (response.data.state == 0) {
 
             alert('密码已修改, 请重新登录');
@@ -186,6 +188,17 @@ export default {
             alert('旧密码错误')
 
           }
+        })
+        .catch(function(error) {
+          console.log(error);
+        });
+    },
+
+    getPayFailNum() {
+      this.$http.post('manager/countNotRead', {})
+        .then((response) => {
+
+          this.payFailNum = response.data.notReadCount;
         })
         .catch(function(error) {
           console.log(error);

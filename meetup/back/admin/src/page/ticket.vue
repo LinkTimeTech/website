@@ -36,12 +36,10 @@
                 <div class="tile-body color transparent-white rounded-corners tab-pane active" role="tabpanel" id="paylist">
                   <div class="table-responsive">
                     <button type="button" class="btn btn-primary" @click="goAdd()">添加</button>
-                    <!-- <div class="navbar tile color transparent pull-right">
-                  <div class="search" id="main-search">
-                    <input type="" placeholder="Search..." v-model="keyword">
-                    <a type="button" @click="Search"><i class="fa fa-search"></i></a>
-                  </div>
-                </div> -->
+                    <div class="search" id="main-search">
+                      <input type="" placeholder="Search..." v-model="keyword">
+                      <a type="button" @click="Search"><i class="fa fa-search"></i></a>
+                    </div>
                     <table class="table table-datatable table-custom" id="inlineEditDataTable">
                       <thead>
                         <tr>
@@ -114,6 +112,10 @@
                 <div class="tile-body color transparent-white rounded-corners tab-pane" role="tabpanel" id="freelist">
                   <div class="table-responsive">
                     <button type="button" class="btn btn-primary" @click="goAddFree()">添加赠票</button>
+                    <div class="search" id="main-search">
+                      <input type="" placeholder="Search..." v-model="keyword">
+                      <a type="button" @click="SearchFreeTicket"><i class="fa fa-search"></i></a>
+                    </div>
                     <table class="table table-datatable table-custom" id="inlineEditDataTable">
                       <thead>
                         <tr>
@@ -203,7 +205,7 @@
           <div class="modal-body">
             <div class="row" v-if="isAdd==1">
               <div class="col-md-12">
-                <label>语言</label>
+                <label>邮件语言</label>
               </div>
               <div class="col-md-12">
                 <span class="col-sm-6">
@@ -337,15 +339,20 @@ export default {
 
   },
   methods: {
+
     goPayList: function() {
       this.isPaylist = 1
       this.isFreeList = 0
 
     },
+
+
     goFreeList: function() {
       this.isPaylist = 0
       this.isFreeList = 1
     },
+
+
     goAdd: function(e) {
       $('.editIt').modal('show');
       this.isAdd = 1
@@ -353,11 +360,13 @@ export default {
 
     },
 
+
     goAddFree: function(e) {
       $('.editIt').modal('show');
       this.isAdd = 1
       this.addFree = 1
     },
+
 
     Add: function(type) {
       var vm = this;
@@ -376,44 +385,51 @@ export default {
       note = this.rowtemplate.note;
       lang = this.rowtemplate.lang;
 
-      this.$http.post('/manager/giveTicket',
-          Qs.stringify({
-            email: email,
-            name: name,
-            country: country,
-            company: company,
-            position: position,
-            telephone: telephone,
-            lang: lang,
-            chargesRental: price
-          }))
-        .then((response) => {
-          console.log(response)
-          this.loading = 0;
-          this.rowtemplate.chargesId = response.data.chargesid;
+      if (email == '' || name == '' || lang == '' || telephone == '') {
+        this.loading = 0;
 
-          type.push(this.rowtemplate);
-          // 还原模板
-          this.rowtemplate = {
-            chargesId: "",
-            company: "",
-            country: "",
-            email: "",
-            name: "",
-            telephone: "",
-            position: "",
-            note: "",
-            lang: "",
+        alert('请选择邮件语言，填写好基本信息后再进行添加')
 
-            issendmail: "0",
-          }
+      } else {
+        this.$http.post('/manager/giveTicket',
+            Qs.stringify({
+              email: email,
+              name: name,
+              country: country,
+              company: company,
+              position: position,
+              telephone: telephone,
+              lang: lang,
+              chargesRental: price
+            }))
+          .then((response) => {
+            console.log(response)
+            this.loading = 0;
+            this.rowtemplate.chargesId = response.data.chargesid;
 
-        })
-        .catch(function(error) {
-          this.loading = 0;
-          // alert('出错了，请联系管理员解决')
-          console.log(error);
-        });
+            type.push(this.rowtemplate);
+            // 还原模板
+            this.rowtemplate = {
+              chargesId: "",
+              company: "",
+              country: "",
+              email: "",
+              name: "",
+              telephone: "",
+              position: "",
+              note: "",
+              lang: "",
+
+              issendmail: "0",
+            }
+
+          })
+          .catch(function(error) {
+            this.loading = 0;
+            alert('出错了，请联系管理员解决')
+            console.log(error);
+          });
+      }
 
     },
 
@@ -440,17 +456,29 @@ export default {
     //下一页方法
     NextPage: function(type) {
 
-      if (this.isSearch == 1) {
+      console.log('isSearch', this.isSearch)
+      console.log('searchPage', this.searchPage)
+      console.log('totalPage', this.totalPage)
+      console.log('totalFreePage', this.totalFreePage)
+      console.log('isPaylist', this.isPaylist)
+      console.log('isFreeList', this.isFreeList)
+      console.log('curpage', this.curpage)
+      console.log('curFreePage', this.curFreePage)
 
-        this.searchPage !== this.totalPage ? this.searchPage = this.searchPage + 1 : ''
-        this.searchPage !== this.totalFreePage ? this.searchPage = this.searchPage + 1 : ''
+      this.isPaylist == 1 && this.curpage !== this.totalPage ? this.curpage = this.curpage + 1 : ''
+      this.isFreeList == 1 && this.curFreePage !== this.totalFreePage ? this.curFreePage = this.curFreePage + 1 : ''
 
-      } else {
+      // if (this.isSearch == 1) {
 
-        this.isPaylist == 1 && this.curpage !== this.totalPage ? this.curpage = this.curpage + 1 : ''
-        this.isFreeList == 1 && this.curFreePage !== this.totalFreePage ? this.curFreePage = this.curFreePage + 1 : ''
+      //   this.searchPage !== this.totalPage ? this.searchPage = this.searchPage + 1 : ''
+      //   this.searchPage !== this.totalFreePage ? this.searchPage = this.searchPage + 1 : ''
 
-      }
+      // } else {
+
+      //   this.isPaylist == 1 && this.curpage !== this.totalPage ? this.curpage = this.curpage + 1 : ''
+      //   this.isFreeList == 1 && this.curFreePage !== this.totalFreePage ? this.curFreePage = this.curFreePage + 1 : ''
+
+      // }
 
     },
 
@@ -579,7 +607,7 @@ export default {
     },
 
     Pass: function(type, info, id) {
-          info.issendmail = 1;
+      info.issendmail = 1;
 
       this.$http.post('charges/sendMailZP', Qs.stringify({
           lang: info.lang,
@@ -597,7 +625,7 @@ export default {
     },
 
 
-    //搜索
+    //搜索普通票
     Search: function(e) {
       this.isSearch = 1
 
@@ -608,7 +636,7 @@ export default {
       this.$http.post('charges/pageSpilt1', Qs.stringify({
           select: keyword,
           cp: page,
-          ps: ps
+          ps: 5
 
         }))
         .then((response) => {
@@ -616,6 +644,32 @@ export default {
           this.loading = 0;
           this.list = response.data.list
           this.totalPage = response.data.allPage
+        })
+        .catch(function(error) {
+          console.log(error);
+        });
+
+    },
+
+    //搜索赠票
+    SearchFreeTicket: function(e) {
+      this.isSearch = 1
+
+      var keyword = this.keyword,
+        page = this.searchPage,
+        ps = this.pagesize;
+
+      this.$http.post('charges/pageSpiltZP', Qs.stringify({
+          select: keyword,
+          cp: page,
+          ps: ps
+
+        }))
+        .then((response) => {
+          console.log('SearchResponse', response)
+          this.loading = 0;
+          this.freelist = response.data.list
+          this.totalFreePage = response.data.allPage
         })
         .catch(function(error) {
           console.log(error);

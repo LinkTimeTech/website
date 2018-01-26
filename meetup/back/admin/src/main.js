@@ -23,7 +23,6 @@ import '../static/ue/lang/zh-cn/zh-cn.js'
 import '../static/ue/ueditor.parse.min.js'
 
 // import 'jquery'
-// import '../static/js/jquery-3.2.1.min.js'
 import $ from 'jquery'
 
 // import 'bootstrap'
@@ -47,14 +46,6 @@ Vue.prototype.$http = axios;
 //QS
 import Qs from 'qs'
 
-
-/* eslint-disable no-new */
-new Vue({
-  el: '#app',
-  router,
-  template: '<App/>',
-  components: {App}
-});
 
 //测试环境：
 Vue.prototype.$http.defaults.baseURL = 'http://192.168.50.119:8080/omise/';
@@ -82,3 +73,16 @@ Vue.prototype.$http.defaults.baseURL = 'http://192.168.50.119:8080/omise/';
 //     }
 //     return Promise.reject(error.response.data)
 //   });
+
+
+/* eslint-disable no-new */
+new Vue({
+  el: '#app',
+  router,
+  template: '<App/>',
+  components: {App},
+  // data: {
+  //   // 空的实例放到根组件下，所有的子组件都能调用
+  //   Bus: new Vue()
+  // }
+});
