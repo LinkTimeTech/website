@@ -38,7 +38,7 @@ global $current_user;
 		<a href=""><?php echo get_avatar(get_current_user_id());?></a>
 	</div>
 </div>
-<a id="userinfo_btn" href="javascript:;"><?php _e('登录','um')?></a>
+    <a id="userinfo_btn" href="javascript:"><?php _e('登录', 'um') ?></a>
 <?php endif;?>
 
 
@@ -53,8 +53,9 @@ global $current_user;
 		var left =(width-s_width)/2;
 		$('#userinfo_menu').css('left',left+'px');
 		$('#userinfo_menu').animate({'top':top+'px'},1000)
-	};
-	uimenu();
+    }
+
+    uimenu();
 	$('#userinfo_btn').click(function(){
 		var umHtml = '<div class="userinfo_layer"></div><div id="userinfo_menu" class="userinfo_menu"><div class="userinfo_main"><div class="userinfo_tit <?php echo get_locale();?>"></div><div class="userinfo_nav"><ul><li class="un_1 hide" style="display:none;"><a href=""><?php _e('微信登录','um');?></a></li><li class="un_2 hide" style="display:none;"><a href=""><?php _e('微博登录','um');?></a></li><li class="un_3 fb-login-button"><a  target="_top"  href="/wp-content/themes/um/login/fb.php"><?php _e('登录<span>Facebook</span>','um');?></a></li><li class="un_4"><a href="/wp-content/themes/um/login/twitter.php"><?php echo _e('登录<span>Twitter</span>','um');?></a></li><li class="un_5"><a href="/wp-content/themes/um/login/linked.php"><?php _e('登录<span>Linkedin</span>','um');?></a></li></ul></div></div><div class="userinfo_bg"></div><div class="userinfo_hide">X</div></div>';
 		$(document.body).append(umHtml);
@@ -121,6 +122,7 @@ function twonav() {
 		var t_menu= $('.metabar-twonavmenu').outerWidth(true);
 		var left = 0 - ((t_menu-t_nav+19.5)/2);
 		$('.metabar-twonavmenu').animate({'left':left+'px'})
-	};
-	twonav();
+}
+
+twonav();
 </script>

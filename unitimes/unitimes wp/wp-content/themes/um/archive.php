@@ -265,8 +265,9 @@ if($_SERVER['HTTP_X_REQUESTED_WITH'] == 'XMLHttpRequest'){
 							var b_h = $(window).height();
 							var c_h =b_h-229;
 							$('.cards-box').css('min-height',c_h+'px');
-						};
-						sm();
+                        }
+
+                        sm();
 						$(window).resize(function() { 
 							sm();
 						});
@@ -292,8 +293,9 @@ if($_SERVER['HTTP_X_REQUESTED_WITH'] == 'XMLHttpRequest'){
 		var b_h = $(window).height();
 		var c_h =b_h-229;
 		$('.search_mull').css('min-height',c_h+'px');
-	};
-	sm();
+    }
+
+    sm();
 	$(window).resize(function() {
 		sm();
 	});
@@ -335,7 +337,7 @@ if($_SERVER['HTTP_X_REQUESTED_WITH'] == 'XMLHttpRequest'){
                     url: url,
                     data: {posts_per_page: 18,cat: cat},
                     success: function(ret){
-                        console.log(typeof ret)
+                        console.log(typeof ret);
                         if(ret.code === 0){
                             $("#view-list").append(ret.data);
                             setTimeout(function(){

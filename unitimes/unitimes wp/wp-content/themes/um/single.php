@@ -133,7 +133,8 @@
 					<header class="container u-maxWidth740">
 						<div class="post_topshare_wrap jiathis_style_32x32">
 							<ul class="share_ul">
-								<li class="ptw_like <?php get_like_status();?>" data-id="<?php the_ID();?>" data-action="ding"><a href="javascript:;"></a></li>
+                                <li class="ptw_like <?php get_like_status(); ?>" data-id="<?php the_ID(); ?>"
+                                    data-action="ding"><a href="javascript:"></a></li>
                                     <li class="ptw_wx"><a class="jiathis_button_weixin"></a></li>
                                     <li class="ptw_wb"><a class="jiathis_button_tsina"></a></li>
                                     <li class="ptw_tw "><a  target="_blank" href="<?php echo $twitter;?>"></a></li>
@@ -206,7 +207,10 @@
                                         <?php endif;?>
                                         <div class="bott_btnbox jiathis_style_32x32">
                                             <ul class="share_ul">
-                                                <li class="ptw_like <?php get_like_status();?>" data-action="ding" data-id="<?php the_ID();?>"><span id="like_num"><?php echo (int)get_post_meta(get_the_ID(),'bigfa_ding',true);?></span><a href="javascript:;"></a></li>
+                                                <li class="ptw_like <?php get_like_status(); ?>" data-action="ding"
+                                                    data-id="<?php the_ID(); ?>"><span
+                                                            id="like_num"><?php echo (int)get_post_meta(get_the_ID(), 'bigfa_ding', true); ?></span><a
+                                                            href="javascript:"></a></li>
                                                 <li class="ptw_wx"><div><a class="jiathis_button_weixin"></a></div></li>
                                                 <li class="ptw_wb"><a class="jiathis_button_tsina"></a></li>
                                                 <li class="ptw_tw "><a target="_blank" href="<?php echo $twitter;?>"></a></li>
@@ -223,7 +227,9 @@
 							<div class="post_comment">
 								<div class="post_com_tit"> <?php _e('文章评论','um');?></div>
                                 <?php if(!is_user_logged_in()):?>
-								<div class="post_com_user"><a id="post_log_btn" href="javascript:;"><?php echo _e('登录','um');?></a>  <?php echo _e('后参与评论','um');?></div>
+                                    <div class="post_com_user"><a id="post_log_btn"
+                                                                  href="javascript:"><?php echo _e('登录', 'um'); ?></a> <?php echo _e('后参与评论', 'um'); ?>
+                                    </div>
                                 <?php else:?>
 								<div class="post_com_text">
 									<form action="<?php bloginfo('url');?>/wp-admin/admin-ajax.php" class="js-ajax-form" onsubmit="return false;" method="post">
@@ -574,7 +580,7 @@
         // $(".ptw_wx_hide").click(function() {
         //     $("#ptw_wx_menu").hide(0);
         // });
-    })
+    });
     $('#post_log_btn').click(function() {
        $('#userinfo_btn').trigger('click');
     });

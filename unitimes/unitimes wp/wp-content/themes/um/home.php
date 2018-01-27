@@ -12,7 +12,7 @@ get_header();
 ?>
 
 <div class="metabar metabar--spacer u-tintBgColor u-height75 u-xs-height95"></div>
-<a href="javascript:;">
+<a href="javascript:">
     <header id="gtco-header" class="gtco-cover" role="banner" style="background-image:url('<?php bloginfo('template_url'); ?>/images/bg01.jpg')"
             data-stellar-background-ratio="1">
         <div>
@@ -242,23 +242,23 @@ get_footer();
 
 <script src="<?php bloginfo('template_url'); ?>/js/theater.min.js"></script>
 <script>
-    var theater = theaterJS()
+    var theater = theaterJS();
     $(window).load(function () {
         
         theater
             .on('type:start, erase:start', function () {
                 // add a class to actor's dom element when he starts typing/erasing
-                var actor = theater.getCurrentActor()
+                var actor = theater.getCurrentActor();
                 actor.$element.classList.add('is-typing')
             })
             .on('type:end, erase:end', function () {
                 // and then remove it when he's done
-                var actor = theater.getCurrentActor()
+                var actor = theater.getCurrentActor();
                 actor.$element.classList.remove('is-typing')
-            })
+            });
         
         theater
-            .addActor('banner')
+            .addActor('banner');
         
         theater
             .addScene('banner: <?php echo um_get_index_dy_message(0);?>', 1500)

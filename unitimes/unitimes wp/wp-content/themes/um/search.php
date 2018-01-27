@@ -125,8 +125,9 @@
 							var b_h = $(window).height();
 							var c_h =b_h-229;
 							$('.cards-box').css('min-height',c_h+'px');
-						};
-						sm();
+                        }
+
+                        sm();
 						$(window).resize(function() { 
 							sm();
 						});
@@ -141,8 +142,9 @@
 						var b_h = $(window).height();
 						var c_h =b_h-229;
 						$('.search_mull').css('min-height',c_h+'px');
-					};
-					sm();
+                    }
+
+                    sm();
 					$(window).resize(function() { 
 						sm();
 					});

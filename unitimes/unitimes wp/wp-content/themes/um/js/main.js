@@ -48,10 +48,6 @@
             $('#gtco-main').css('padding-top', $('.metabar').height())
         })
     };
-    ;
-    ;
-
-
     /* var scrollNavBar = function () {
 
      $(window).scroll(function () {
@@ -104,18 +100,9 @@
                     $('.metabar')
                     // .removeClass('bluenav')
                         .addClass('u-textColorDarker u-backgroundTransparentWhiteDarkest u-boxShadowBottomThinLighter');
-                    ;
-                    ;
-
                     // $('.metabar-navItem').addClass('u-textColorNormal').removeClass('u-textColorWhite')
                     $('.metabar-navItem').addClass('u-textColorNormal').removeClass('u-textColorBlue');
-                    ;
-                    ;
-
                     $('.is-inSiteNavBar, .navlistborder').addClass('button--dark button--primary').removeClass('u-textColorBlue u-borderBlue');
-                    ;
-                    ;
-
                     // $('.navlist').addClass('metabar-block--below').removeClass('u-boxShadowWh')
 
                 } else {//到顶部
@@ -124,18 +111,9 @@
                     $('.metabar')
                     // .addClass('bluenav')
                         .removeClass('u-textColorDarker u-backgroundTransparentWhiteDarkest u-boxShadowBottomThinLighter');
-                    ;
-                    ;
-
                     // $('.metabar-navItem, .navlistborder').removeClass('u-textColorNormal').addClass('u-textColorWhite')
                     $('.metabar-navItem, .navlistborder').removeClass('u-textColorNormal').addClass('u-textColorBlue');
-                    ;
-                    ;
-
                     $('.is-inSiteNavBar').removeClass('button--dark button--primary').addClass('u-textColorBlue u-borderBlue');
-                    ;
-                    ;
-
                     // $('.navlist').removeClass('metabar-block--below').addClass('u-boxShadowWh')
 
                 }
